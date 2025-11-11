@@ -47,7 +47,10 @@
 		<SolidCP-dSHeuristicsSrc>$(TrunkFolder)\Sources\Tools\SolidCP-dSHeuristics</SolidCP-dSHeuristicsSrc>
 		<FixDefaultPublicFolderMailboxSrc>$(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox\bin\$(BuildConfiguration)</FixDefaultPublicFolderMailboxSrc>
 		<ProgramFiles64>$(ProgramFiles.Replace(" (x86)", ""))</ProgramFiles64>
-		<DevEnv>$(ProgramFiles64)\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.com</DevEnv>
+		<DevEnv>$(ProgramFiles64)\Microsoft Visual Studio\18\Community\Common7\IDE\devenv.com</DevEnv>
+		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\18\Professional\Common7\IDE\devenv.com</DevEnv>
+		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\18\Enterprise\Common7\IDE\devenv.com</DevEnv>
+		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.com</DevEnv>
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2022\Professional\Common7\IDE\devenv.com</DevEnv>
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.com</DevEnv>
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.com</DevEnv>
