@@ -214,7 +214,7 @@ public abstract partial class Installer
             </dependentAssembly>
             <dependentAssembly>
                 <assemblyIdentity name=""System.Collections.Immutable"" publicKeyToken=""b03f5f7f11d50a3a"" culture=""neutral"" />
-                <bindingRedirect oldVersion=""0.0.0.0-9.0.0.9"" newVersion=""9.0.0.9"" />
+                <bindingRedirect oldVersion=""0.0.0.0-10.0.0.0"" newVersion=""10.0.0.0"" />
             </dependentAssembly>
             <dependentAssembly>
                 <assemblyIdentity name=""System.Memory"" publicKeyToken=""cc7b13ffcd2ddd51"" culture=""neutral"" />

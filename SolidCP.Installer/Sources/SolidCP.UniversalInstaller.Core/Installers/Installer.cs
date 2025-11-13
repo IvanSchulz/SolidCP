@@ -87,8 +87,8 @@ public abstract partial class Installer
 		!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SSH_CLIENT")) ||
 		!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SSH_TTY"));
 
-	public bool NeedRemoveNet8Runtime = false;
-	public bool NeedRemoveNet8AspRuntime = false;
+	public bool NeedRemoveNet10Runtime = false;
+	public bool NeedRemoveNet10AspRuntime = false;
 	public virtual string InstallWebRootPath { get; set; } = null;
 	public virtual string InstallExeRootPath { get; set; } = null;
 	public abstract string WebsiteLogsPath { get; }
@@ -536,37 +536,37 @@ public abstract partial class Installer
 		Exit(success ? 0 : 1);
 	}
 
-	protected bool? Net8RuntimeInstalled { get; set; }
-	public bool CheckNet8RuntimeInstalled()
+	protected bool? Net10RuntimeInstalled { get; set; }
+	public bool CheckNet10RuntimeInstalled()
 	{
-		if (Net8RuntimeInstalled != null) return Net8RuntimeInstalled.Value;
+		if (Net10RuntimeInstalled != null) return Net10RuntimeInstalled.Value;
 
 		if (HasDotnet)
 		{
 			var output = Shell.Exec("dotnet --info").Output().Result ?? "";
-			NeedRemoveNet8AspRuntime = !output.Contains("Microsoft.AspNetCore.App 8.");
-			NeedRemoveNet8Runtime = !output.Contains("Microsoft.NETCore.App 8.");
-			var installed = !NeedRemoveNet8Runtime && !NeedRemoveNet8AspRuntime;
-			Net8RuntimeInstalled = installed;
+			NeedRemoveNet10AspRuntime = !output.Contains("Microsoft.AspNetCore.App 10.");
+			NeedRemoveNet10Runtime = !output.Contains("Microsoft.NETCore.App 10.");
+			var installed = !NeedRemoveNet10Runtime && !NeedRemoveNet10AspRuntime;
+			Net10RuntimeInstalled = installed;
 			return installed;
 		}
 		else
 		{
-			NeedRemoveNet8Runtime = NeedRemoveNet8AspRuntime = true;
-			Net8RuntimeInstalled = false;
+			NeedRemoveNet10Runtime = NeedRemoveNet10AspRuntime = true;
+			Net10RuntimeInstalled = false;
 			return false;
 		}
 	}
-	public abstract void InstallNet8Runtime();
-	public abstract void RemoveNet8AspRuntime();
-	public abstract void RemoveNet8NetRuntime();
-	public virtual void RemoveNet8Runtime()
+	public abstract void InstallNet10Runtime();
+	public abstract void RemoveNet10AspRuntime();
+	public abstract void RemoveNet10NetRuntime();
+	public virtual void RemoveNet10Runtime()
 	{
-		if (NeedRemoveNet8Runtime) RemoveNet8NetRuntime();
-		if (NeedRemoveNet8AspRuntime) RemoveNet8AspRuntime();
+		if (NeedRemoveNet10Runtime) RemoveNet10NetRuntime();
+		if (NeedRemoveNet10AspRuntime) RemoveNet10AspRuntime();
 
-		if (NeedRemoveNet8Runtime || NeedRemoveNet8AspRuntime)
-			InstallLog("Removed .NET 8 Runtime");
+		if (NeedRemoveNet10Runtime || NeedRemoveNet10AspRuntime)
+			InstallLog("Removed .NET 10 Runtime");
 	}
 	public virtual string[] UserIsMemeberOf(CommonSettings settings) => new string[0];
 	public virtual void SetFilePermissions(string folder, string user = null)
@@ -831,14 +831,14 @@ public abstract partial class Installer
 		file = SetupFilter(file);
 		return (file != null && !Regex.IsMatch(file, "(?:^|/)bin_dotnet(?:/|$)") && !Regex.IsMatch(file, "(?:^|/)appsettings.json$", RegexOptions.IgnoreCase)) ? file : null;
 	}
-	public virtual string Net8Filter(string file)
+	public virtual string Net10Filter(string file)
 	{
 		file = SetupFilter(file);
 		return (file != null && !Regex.IsMatch(file, "(?:^|/)bin/(?!netstandard(?:/|$))")) ? file : null;
 	}
 	public virtual string ConfigAndSetupFilter(string file)
 	{
-		file = OSInfo.IsWindows ? SetupFilter(file) : Net8Filter(file);
+		file = OSInfo.IsWindows ? SetupFilter(file) : Net10Filter(file);
 		return (file != null && !file.EndsWith("/web.config", StringComparison.OrdinalIgnoreCase) &&
 			!Regex.IsMatch(file, "(?:^|/)appsettings.json$", RegexOptions.IgnoreCase)) ? file : null;
 	}
@@ -855,7 +855,7 @@ public abstract partial class Installer
 	public virtual string StandaloneInstallFilter(string file) => CorrectEnterpriseServer(SetupFilter(file));
 	public virtual string StandaloneUpdateFiler(string file) => CorrectEnterpriseServer(ConfigAndSetupFilter(file));
 	public virtual string StandardUpdateFilter(string file) => ConfigAndSetupFilter(file);
-	public virtual string StandardInstallFilter(string file) => OSInfo.IsWindows ? SetupFilter(file) : Net8Filter(file);
+	public virtual string StandardInstallFilter(string file) => OSInfo.IsWindows ? SetupFilter(file) : Net10Filter(file);
 	public virtual void CopyFile(string source, string destination, bool settings = false)
 	{
 		if (File.Exists(source))

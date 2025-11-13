@@ -9,28 +9,28 @@ namespace SolidCP.UniversalInstaller
 	public class ArchInstaller : UnixInstaller
 	{
 
-		public override void InstallNet8Runtime()
+		public override void InstallNet10Runtime()
 		{
-			if (CheckNet8RuntimeInstalled()) return;
+			if (CheckNet10RuntimeInstalled()) return;
 
-			Info("Installing .NET 8 Runtime...");
+			Info("Installing .NET 10 Runtime...");
 
-			OSInstaller.Install("aspnetcore-runtime-8.0;dotnet-runtime-8.0");
+			OSInstaller.Install("aspnetcore-runtime-10.0;dotnet-runtime-10.0");
 
-			Net8RuntimeInstalled = true;
+			Net10RuntimeInstalled = true;
 
-			InstallLog("Installed .NET 8 Runtime.");
+			InstallLog("Installed .NET 10 Runtime.");
 
 			ResetHasDotnet();
 		}
 
-		public override void RemoveNet8NetRuntime()
+		public override void RemoveNet10NetRuntime()
 		{
 			OSInstaller.Remove("dotnet-runtime-8.0");
 
 			ResetHasDotnet();
 		}
-		public override void RemoveNet8AspRuntime()
+		public override void RemoveNet10AspRuntime()
 		{
 			OSInstaller.Remove("aspnetcore-runtime-8.0");
 

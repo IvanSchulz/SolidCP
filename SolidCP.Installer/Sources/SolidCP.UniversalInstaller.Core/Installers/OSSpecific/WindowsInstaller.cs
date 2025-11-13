@@ -26,7 +26,7 @@ namespace SolidCP.UniversalInstaller;
 
 public class WindowsInstaller : Installer
 {
-	const bool Net8RuntimeNeededOnWindows = true;
+	const bool Net10RuntimeNeededOnWindows = true;
 	public override string EnterpriseServerFolder => "Enterprise Server";
 	public override string InstallExeRootPath
 	{
@@ -53,18 +53,18 @@ Add-AppxPackage ""{tmpFile}""");
 			File.Delete(tmpFile);
 		}
 	}
-	public override void InstallNet8Runtime()
+	public override void InstallNet10Runtime()
 	{
-		if (Net8RuntimeNeededOnWindows)
+		if (Net10RuntimeNeededOnWindows)
 		{
-			if (CheckNet8RuntimeInstalled()) return;
+			if (CheckNet10RuntimeInstalled()) return;
 
 			var ver = OSInfo.WindowsVersion;
 			if (!(OSInfo.IsWindowsServer && ver >= WindowsVersion.WindowsServer2012 ||
 				!OSInfo.IsWindowsServer && ver >= WindowsVersion.Windows10))
-				throw new PlatformNotSupportedException("NET 8 is not supported on this OS.");
+				throw new PlatformNotSupportedException("NET 10 is not supported on this OS.");
 
-			Info("Installing .NET 8 Runtime...");
+			Info("Installing .NET 10 Runtime...");
 
 			InstallWinGet();
 
@@ -73,34 +73,34 @@ Add-AppxPackage ""{tmpFile}""");
 			{
 				if (OSInfo.Architecture == Architecture.X64)
 				{
-					var exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/8.0.21/aspnetcore-runtime-8.0.21-win-x64.exe");
+					var exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.0/aspnetcore-runtime-10.0.0-win-x64.exe");
 					Shell.Exec($"\"{exe}\" /install /quiet /norestart");
-					exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x64.exe");
+					exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-x64.exe");
 					Shell.Exec($"\"{exe}\" /install /quiet /norestart");
 				}
 				else if (OSInfo.Architecture == Architecture.Arm64)
 				{
-					var exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/8.0.21/aspnetcore-runtime-8.0.21-win-arm64.exe");
+					var exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.0/aspnetcore-runtime-10.0.0-win-arm64.exe");
 					Shell.Exec($"\"{exe}\" /install /quiet /norestart");
-					exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-arm64.exe");
+					exe = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-arm64.exe");
 					Shell.Exec($"\"{exe}\" /install /quiet /norestart");
 				}
 				else throw new NotSupportedException($"CPU architecture {OSInfo.Architecture} not supported.");
 			}
 
-			InstallLog("Installed .NET 8 Runtime.");
+			InstallLog("Installed .NET 10 Runtime.");
 
 			ResetHasDotnet();
 		}
 	}
 
-	public override void RemoveNet8AspRuntime()
+	public override void RemoveNet10AspRuntime()
 	{
 		WinGet.Remove("Microsoft.DotNet.AspNetCore.8");
 
 		ResetHasDotnet();
 	}
-	public override void RemoveNet8NetRuntime()
+	public override void RemoveNet10NetRuntime()
 	{
 		WinGet.Remove("Microsoft.DotNet.Runtime.8");
 
@@ -323,7 +323,7 @@ Add-AppxPackage ""{tmpFile}""");
 
     public override void InstallServerPrerequisites()
     {
-        //InstallNet8Runtime();
+        //InstallNet10Runtime();
         InstallNet48();
         ConfigureAspNetTempFolderPermissions();
         InstallWindowsFeatures();
@@ -331,14 +331,14 @@ Add-AppxPackage ""{tmpFile}""");
 
     public override void InstallStandaloneServerPrerequisites()
     {
-        if (Settings.EnterpriseServer.RunOnNetCore || Settings.WebPortal.RunOnNetCore) InstallNet8Runtime();
+        if (Settings.EnterpriseServer.RunOnNetCore || Settings.WebPortal.RunOnNetCore) InstallNet10Runtime();
         InstallNet48();
         ConfigureAspNetTempFolderPermissions();
         InstallWindowsFeatures();
     }
     public override void InstallEnterpriseServerPrerequisites()
     {
-        if (Settings.EnterpriseServer.RunOnNetCore) InstallNet8Runtime();
+        if (Settings.EnterpriseServer.RunOnNetCore) InstallNet10Runtime();
         InstallNet48();
         ConfigureAspNetTempFolderPermissions();
         InstallWindowsFeatures();
@@ -353,7 +353,7 @@ Add-AppxPackage ""{tmpFile}""");
     }
     public override void InstallWebPortalPrerequisites()
     {
-        if (Settings.WebPortal.RunOnNetCore) InstallNet8Runtime();
+        if (Settings.WebPortal.RunOnNetCore) InstallNet10Runtime();
         InstallNet48();
         ConfigureAspNetTempFolderPermissions();
         InstallWindowsFeatures();

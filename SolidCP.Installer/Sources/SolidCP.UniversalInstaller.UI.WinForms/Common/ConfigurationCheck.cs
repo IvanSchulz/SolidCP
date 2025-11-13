@@ -44,7 +44,7 @@ public enum CheckTypes
 	IISVersion,
 	InitSystem,
 	ApacheVersion,
-	Net8Runtime,
+	Net10Runtime,
 	ASPNET,
 	SCPServer,
 	SCPEnterpriseServer,

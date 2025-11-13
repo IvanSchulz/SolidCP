@@ -1949,7 +1949,7 @@ Checking System Requirements
 ============================
 
   [x] Operating System: [?OS                                ]
-  [x] .NET 8 Runtime:   [?NET                                ]
+  [x] .NET 10 Runtime:   [?NET                                ]
   [x] Init System:      [?SysD                                ]
 
   [    OK    ]
@@ -1964,7 +1964,7 @@ Checking System Requirements
 			}
 			form["OS"].Text = " " + OSInfo.Description;
 			form.Show();
-			if (Installer.CheckNet8RuntimeInstalled())
+			if (Installer.CheckNet10RuntimeInstalled())
 			{
 				form[2].Text = "x";
 				form["NET"].Text = " Installed";

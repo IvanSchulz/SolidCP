@@ -21,13 +21,13 @@ Debugging with net48 when running SolidCP.Server on Windows:
 
 Debugging on Linux:
 
-- For net8 & WSL set the correct certificate settings in launchSettings.json or appsettings.json to configure the
+- For net10 & WSL set the correct certificate settings in launchSettings.json or appsettings.json to configure the
   server certificate WCF should use, or run the server only over http.
   If the certificate is set or you only specified http url's in appsettings.json, you can debug the server from within
   Visual Stuido by clickng on the WSL debug button, to debug SolidCP.Server in WSL.
 
 
-The net8 version of the SolidCP.Server resides in the directory bin_dotnet. It can be started by excuting the command
+The net10 version of the SolidCP.Server resides in the directory bin_dotnet. It can be started by excuting the command
 
 dotnet SolidCP.Server.dll
 

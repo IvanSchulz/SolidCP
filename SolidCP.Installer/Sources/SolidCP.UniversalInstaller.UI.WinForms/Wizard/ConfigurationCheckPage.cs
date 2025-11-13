@@ -78,15 +78,14 @@ namespace SolidCP.UniversalInstaller.WinForms
 				checks.AddRange(new ConfigurationCheck[]
 				{
 					new ConfigurationCheck(CheckTypes.OperatingSystem, "Operating System Requirement"),
-					new ConfigurationCheck(CheckTypes.Net8Runtime, ".NET 8 Runtime Requirement"),
+					new ConfigurationCheck(CheckTypes.Net10Runtime, ".NET 10 Runtime Requirement"),
 					new ConfigurationCheck(CheckTypes.InitSystem, "Init System Requirement")
 				});
 			}
 
 		}
 
-		public List<ConfigurationCheck> Checks
-		{
+		public List<ConfigurationCheck> Checks {
 			get
 			{
 				return checks;
@@ -177,8 +176,8 @@ namespace SolidCP.UniversalInstaller.WinForms
                         case CheckTypes.SCPWebDavPortal:
                             status = CheckSCPWebDavPortal(out details);
                             break;
-						case CheckTypes.Net8Runtime:
-							status = CheckNet8Runtime(out details);
+						case CheckTypes.Net10Runtime:
+							status = CheckNet10Runtime(out details);
 							break;
 						case CheckTypes.ApacheVersion:
 							status = CheckApacheVersion(out details);
@@ -415,13 +414,13 @@ namespace SolidCP.UniversalInstaller.WinForms
 			details = "Init System not supported.";
 			return CheckStatuses.Error;
 		}
-		internal static CheckStatuses CheckNet8Runtime(out string details)
+		internal static CheckStatuses CheckNet10Runtime(out string details)
 		{
-			details = ".NET 8 Runtime is installed.";
+			details = ".NET 10 Runtime is installed.";
 			CheckStatuses ret = CheckStatuses.Success;
-			if (!UniversalInstaller.Installer.Current.CheckNet8RuntimeInstalled())
+			if (!UniversalInstaller.Installer.Current.CheckNet10RuntimeInstalled())
 			{
-				details = ".NET 8 Runtime not installed.";
+				details = ".NET 10 Runtime not installed.";
 				ret = CheckStatuses.Warning;
 			}
 			return ret;

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net48;net8.0</TargetFrameworks>
+		<TargetFrameworks>net48;net10.0</TargetFrameworks>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>11</LangVersion>
 		<Nullable>disable</Nullable>
@@ -8,20 +8,20 @@
 		<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFramework)'=='net8.0'">
+	<ItemGroup Condition="'$(TargetFramework)'=='net10.0'">
 		<PackageReference Include="CoreWCF.Http" Version="1.8.0" />
 		<PackageReference Include="CoreWCF.NetTcp" Version="1.8.0" />
 		<PackageReference Include="CoreWCF.Primitives" Version="1.8.0" />
 		<PackageReference Include="CoreWCF.NetFramingBase" Version="1.8.0" />
 		<PackageReference Include="CoreWCF.WebHttp" Version="1.8.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
-		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.4" />
-		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.4" />
-		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.4" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="9.0.9" />
-        <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="9.0.9" />
-        <PackageReference Include="System.ServiceProcess.ServiceController" Version="9.0.9" GeneratePathProperty="true" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.0.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="10.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="10.0.0" />
+        <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0" GeneratePathProperty="true" />
         <!--
 		<ProjectReference Include="..\..\Lib\CoreWCF\src\CoreWCF.Http\src\CoreWCF.Http.csproj" />
 		<ProjectReference Include="..\..\Lib\CoreWCF\src\CoreWCF.NetTcp\src\CoreWCF.NetTcp.csproj" />
@@ -38,7 +38,7 @@
 		<Reference Include="System.ServiceModel.Activation" />
 		<Reference Include="System.Threading.Tasks" />
 		<Reference Include="System.Web" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
 		<!--<PackageReference Include="KornSW.SwaggerWcf" Version="1.2.16.414" />-->
 		<Reference Include="SwaggerWcf">
 			<HintPath>..\..\Lib\SwaggerWcf.dll</HintPath>
@@ -52,9 +52,9 @@
 	  <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
 	</ItemGroup>
 
-    <Target Name="CopyServiceProcessRuntime" AfterTargets="Build"  Condition="'$(TargetFramework)' == 'net8.0'">
-        <Message Importance="high" Text="Copying $(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll"  />
-        <Copy SourceFiles="$(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll" DestinationFolder="$(OutputPath)" />
+    <Target Name="CopyServiceProcessRuntime" AfterTargets="Build"  Condition="'$(TargetFramework)' == 'net10.0'">
+        <Message Importance="high" Text="Copying $(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net10.0\System.ServiceProcess.ServiceController.dll"  />
+        <Copy SourceFiles="$(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net10.0\System.ServiceProcess.ServiceController.dll" DestinationFolder="$(OutputPath)" />
     </Target>
 
 </Project>

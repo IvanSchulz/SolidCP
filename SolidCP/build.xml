@@ -484,7 +484,7 @@
 
 		<PropertyGroup>
 			<InstallerProjectRoot>$(RootFolder)\SolidCP.Installer\Sources\</InstallerProjectRoot>
-			<InstallerProjectBin>$(InstallerProjectRoot)SolidCP.UniversalInstaller\bin\$(BuildConfiguration)\net8.0</InstallerProjectBin>
+			<InstallerProjectBin>$(InstallerProjectRoot)SolidCP.UniversalInstaller\bin\$(BuildConfiguration)\net10.0</InstallerProjectBin>
 		</PropertyGroup>
 
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)SolidCP.Installer.sln" />
@@ -511,7 +511,7 @@
         <ItemGroup>
             <InstallerMsi Include="$(InstallerProjectRoot)\SolidCP.UniversalInstaller.Msi\$(BuildConfiguration)\*.msi" />
         </ItemGroup>
-        <Copy SourceFiles="@(InstallerMsi)" DestinationFolder="$(InstallerBuild)" />
+        <Copy SourceFiles="@(InstallerMsi)" DestinationFolder="$(BuildFolder)" />
 
 	</Target>
 	
@@ -1050,10 +1050,10 @@
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-StandaloneServerSetup$(ZipExt)&quot; &quot;$(StandaloneInstall)\*&quot;" />
 
 		<ItemGroup>
-			<InstallerBuildMsiFile Include="$(InstallerBuild)\*.msi" />
+			<InstallerMsiFile Include="$(BuildFolder)\*.msi" />
 		</ItemGroup>
 		
-		<Copy SourceFiles="@(InstallerBuildMsiFile)" DestinationFiles="$(DeployFolder)\SolidCP.Installer-$(Version).msi" />
+		<Copy SourceFiles="@(InstallerMsiFile)" DestinationFiles="$(DeployFolder)\SolidCP.Installer-$(Version).msi" />
 
 		<!-- zip updates
 		<ItemGroup>
@@ -1192,9 +1192,8 @@
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-AWStatsViewer$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-AWStatsViewer$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-SCPTransportAgent$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-SCPTransportAgent$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP.LocalizationToolkit.msi" LocalFile="$(ToolsFolder)\SolidCP.LocalizationToolkit.msi" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP.Installer.msi" LocalFile="$(DeployFolder)\SolidCP.Installer.msi" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP.Installer-$(Version).msi" LocalFile="$(DeployFolder)\SolidCP.Installer-$(Version).msi" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCPInstaller.exe" LocalFile="$(DeployFolder)\SolidCP.Installer.exe" />
-    <!--<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCPInstaller-webpi.msi" LocalFile="$(DeployFolder)\SolidCP.Installer.msi" />-->
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-HyperVUtils$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-HyperVUtils$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-VMConfig$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-VMConfig$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/Manual-Update$(ZipExt)" LocalFile="$(DeployFolder)\Manual-Update$(ZipExt)" />

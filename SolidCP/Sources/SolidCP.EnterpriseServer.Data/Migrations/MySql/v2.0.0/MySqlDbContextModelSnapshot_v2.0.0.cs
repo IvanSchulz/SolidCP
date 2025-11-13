@@ -11,7 +11,7 @@ using SolidCP.EnterpriseServer.Data;
 namespace SolidCP.EnterpriseServer.Data.Migrations.MySql
 {
     [DbContext(typeof(MySqlDbContext))]
-    partial class MySqlDbContextModelSnapshot : ModelSnapshot
+    partial class MySqlDbContextModelSnapshot_RemovedOldWindowsProviders : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

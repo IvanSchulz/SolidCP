@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    <TargetFrameworks>net48;net10.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
@@ -11,14 +11,14 @@
     <DefineConstants Condition="'$(gRPC)' == 'true'">$(DefineConstants);gRPC</DefineConstants>
     <AssemblyOriginatorKeyFile>SolidCP.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
     <!--<PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
     <PackageReference Include="Grpc.Net.Client.Web" Version="2.59.0" />
     <PackageReference Include="protobuf-net.Grpc" Version="1.1.1" />-->
-    <PackageReference Include="System.ServiceModel.Http" Version="8.1.2" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.1.2" />
-    <PackageReference Include="System.ServiceModel.Primitives" Version="8.1.2" />
-    <PackageReference Include="System.ServiceModel.NetNamedPipe" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.Http" Version="10.0.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="10.0.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="10.0.0" />
+    <PackageReference Include="System.ServiceModel.NetNamedPipe" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
     <Reference Include="System.ServiceModel" />
@@ -32,7 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="SSH.NET" Version="2025.0.0" />
-    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="9.0.9" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />

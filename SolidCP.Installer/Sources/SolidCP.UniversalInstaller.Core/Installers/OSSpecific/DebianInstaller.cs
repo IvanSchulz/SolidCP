@@ -22,13 +22,13 @@ namespace SolidCP.UniversalInstaller
 			}
 		}
 
-		public override void InstallNet8Runtime()
+		public override void InstallNet10Runtime()
 		{
-			if (CheckNet8RuntimeInstalled()) return;
+			if (CheckNet10RuntimeInstalled()) return;
 
-			if (OSInfo.OSVersion.Major < 11) throw new PlatformNotSupportedException("Cannot install NET 8 on Debian below version 11.");
+			if (OSInfo.OSVersion.Major < 11) throw new PlatformNotSupportedException("Cannot install NET 10 on Debian below version 11.");
 
-			Info("Installing .NET 8 Runtime...");
+			Info("Installing .NET 10 Runtime...");
 
 			if (!HasDotnet)
 			{
@@ -47,23 +47,23 @@ Pin-Priority: -10
 				else File.AppendAllText(file, Environment.NewLine + text);
 			}
 
-			Apt.Install("aspnetcore-runtime-8.0 netcore-runtime-8.0");
+			Apt.Install("aspnetcore-runtime-10.0 netcore-runtime-10.0");
 
-			Net8RuntimeInstalled = true;
+			Net10RuntimeInstalled = true;
 
-			InstallLog("Installed .NET 8 Runtime.");
+			InstallLog("Installed .NET 10 Runtime.");
 
 			ResetHasDotnet();
 		}
 
-		public override void RemoveNet8NetRuntime()
+		public override void RemoveNet10NetRuntime()
 		{
-			Apt.Remove("netcore-runtime-8.0");
+			Apt.Remove("netcore-runtime-10.0");
 			ResetHasDotnet();
 		}
-		public override void RemoveNet8AspRuntime()
+		public override void RemoveNet10AspRuntime()
 		{
-			Apt.Remove("aspnetcore-runtime-8.0");
+			Apt.Remove("aspnetcore-runtime-10.0");
 			ResetHasDotnet();
 		}
 	}

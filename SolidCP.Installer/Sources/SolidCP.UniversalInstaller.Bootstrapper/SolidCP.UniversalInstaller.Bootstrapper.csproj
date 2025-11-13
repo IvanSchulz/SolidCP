@@ -12,7 +12,7 @@
         <DebugType>embedded</DebugType>
         <ApplicationIcon>..\SolidCP.UniversalInstaller\Resources\SolidCP.ico</ApplicationIcon>
         <ApplicationManifest>SolidCP.Installer.manifest</ApplicationManifest>
-        <!--<OutputPath>..\SolidCP.UniversalInstaller\bin\$(Configuration)\net8.0\</OutputPath>-->
+        <!--<OutputPath>..\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\</OutputPath>-->
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     </PropertyGroup>

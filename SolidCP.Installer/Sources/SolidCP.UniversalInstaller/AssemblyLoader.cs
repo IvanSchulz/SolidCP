@@ -257,24 +257,24 @@ public class AssemblyLoader
 		if (IsCore) {
 			if (IsWindows)
 			{
-				file = Path.Combine(AssembliesPath, "runtimes", "win", "lib", "net8.0", name);
+				file = Path.Combine(AssembliesPath, "runtimes", "win", "lib", "net10.0", name);
 				if (File.Exists(file)) return file;
 			}
 			else if (IsMac || IsLinux)
 			{
 				if (IsMac)
 				{
-					file = Path.Combine(AssembliesPath, "runtimes", "osx", "lib", "net8.0", name);
+					file = Path.Combine(AssembliesPath, "runtimes", "osx", "lib", "net10.0", name);
 					if (File.Exists(file)) return file;
 				} else {
-					file = Path.Combine(AssembliesPath, "runtimes", "linux", "lib", "net8.0", name);
+					file = Path.Combine(AssembliesPath, "runtimes", "linux", "lib", "net10.0", name);
 					if (File.Exists(file)) return file;
 				}
-				file = Path.Combine(AssembliesPath, "runtimes", "unix", "lib", "net8.0", name);
+				file = Path.Combine(AssembliesPath, "runtimes", "unix", "lib", "net10.0", name);
 				if (File.Exists(file)) return file;
 			} else
 			{
-				file = Path.Combine(AssembliesPath, "runtimes", "unix", "lib", "net8.0", name);
+				file = Path.Combine(AssembliesPath, "runtimes", "unix", "lib", "net10.0", name);
 				if (File.Exists(file)) return file;
 			}
 		}

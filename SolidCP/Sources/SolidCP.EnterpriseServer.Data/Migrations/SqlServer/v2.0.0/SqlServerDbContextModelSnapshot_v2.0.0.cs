@@ -11,7 +11,7 @@ using SolidCP.EnterpriseServer.Data;
 namespace SolidCP.EnterpriseServer.Data.Migrations.SqlServer
 {
     [DbContext(typeof(SqlServerDbContext))]
-    partial class SqlServerDbContextModelSnapshot : ModelSnapshot
+    partial class SqlServerDbContextModelSnapshot_Run_Migrate_msSQL_Script : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

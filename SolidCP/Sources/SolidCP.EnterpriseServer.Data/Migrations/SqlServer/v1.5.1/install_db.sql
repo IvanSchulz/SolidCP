@@ -1,5 +1,5 @@
-USE [${install.database}]
-GO
+--USE [${install.database}]
+--GO
 
 SET ANSI_NULLS ON
 GO

@@ -30,7 +30,7 @@ public abstract class UnixInstaller : Installer
 	{
 		Log.WriteStart("Install AspNetCoreSharedServer");
 
-		const string AspNetCoreSharedServerVersion = "1.2.1";
+		const string AspNetCoreSharedServerVersion = "1.3.0";
 
 		if (installedAspNetCoreSharedServer) return;
 		installedAspNetCoreSharedServer = true;
@@ -396,9 +396,9 @@ public abstract class UnixInstaller : Installer
 	//public override void ConfigureServerNetFX() { }
 	public override void InstallServerPrerequisites()
 	{
-		InstallNet8Runtime();
+		InstallNet10Runtime();
 	}
-	public override Func<string, string> UnzipFilter => Net8Filter;
+	public override Func<string, string> UnzipFilter => Net10Filter;
 	public override bool IsRunningAsAdmin
 	{
 		get

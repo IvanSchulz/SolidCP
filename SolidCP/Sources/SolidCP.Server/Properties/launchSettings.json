@@ -9,7 +9,7 @@
 			},
 			"distributionName": ""
 		},
-		"net8": {
+		"net10": {
 			"commandName": "Project",
 			"launchUrl": "https://localhost:9007",
 			"environmentVariables": {

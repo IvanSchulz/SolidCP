@@ -11,7 +11,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Systemd;
-using Microsoft.OpenApi.Models;
 using SolidCP.Providers;
 using SolidCP.Providers.OS;
 using SolidCP.Web.Services;

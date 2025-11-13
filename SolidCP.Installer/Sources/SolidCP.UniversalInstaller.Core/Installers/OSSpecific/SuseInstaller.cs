@@ -9,18 +9,18 @@ namespace SolidCP.UniversalInstaller
 	public class SuseInstaller : UnixInstaller
 	{
 
-		public override void InstallNet8Runtime()
+		public override void InstallNet10Runtime()
 		{
-			if (CheckNet8RuntimeInstalled()) return;
+			if (CheckNet10RuntimeInstalled()) return;
 
-			throw new NotSupportedException("NET 8 Runtime must be installed.");
+			throw new NotSupportedException("NET 10 Runtime must be installed.");
 		}
 
-		public override void RemoveNet8AspRuntime()
+		public override void RemoveNet10AspRuntime()
 		{
 			throw new NotImplementedException();
 		}
-		public override void RemoveNet8NetRuntime()
+		public override void RemoveNet10NetRuntime()
 		{
 			throw new NotImplementedException();
 		}

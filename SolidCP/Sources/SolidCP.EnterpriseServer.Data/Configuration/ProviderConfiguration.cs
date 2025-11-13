@@ -29,7 +29,7 @@ public partial class ProviderConfiguration: EntityTypeConfiguration<Provider>
 
 		#region Seed Data
 		HasData(() => new Provider[] {
-			new Provider() { ProviderId = 1, DisplayName = "Windows Server 2003", EditorControl = "Windows2003", GroupId = 1, ProviderName = "Windows2003", ProviderType = "SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003" },
+			//new Provider() { ProviderId = 1, DisplayName = "Windows Server 2003", EditorControl = "Windows2003", GroupId = 1, ProviderName = "Windows2003", ProviderType = "SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003" },
 			new Provider() { ProviderId = 2, DisplayName = "Internet Information Services 6.0", EditorControl = "IIS60", GroupId = 2, ProviderName = "IIS60", ProviderType = "SolidCP.Providers.Web.IIs60, SolidCP.Providers.Web.IIs60" },
 			new Provider() { ProviderId = 3, DisplayName = "Microsoft FTP Server 6.0", EditorControl = "MSFTP60", GroupId = 3, ProviderName = "MSFTP60", ProviderType = "SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs60" },
 			new Provider() { ProviderId = 4, DisplayName = "MailEnable Server 1.x - 7.x", EditorControl = "MailEnable", GroupId = 4, ProviderName = "MailEnable", ProviderType = "SolidCP.Providers.Mail.MailEnable, SolidCP.Providers.Mail.MailEnable" },
@@ -84,12 +84,12 @@ public partial class ProviderConfiguration: EntityTypeConfiguration<Provider>
 				"Exchange2016" },
 			new Provider() { ProviderId = 93, DisplayName = "Hosted Microsoft Exchange Server 2019", EditorControl = "Exchange", GroupId = 12, ProviderName = "Exchange2016", ProviderType = "SolidCP.Providers.HostedSolution.Exchange2019, SolidCP.Providers.HostedSolution." +
 				"Exchange2019" },
-			new Provider() { ProviderId = 100, DisplayName = "Windows Server 2008", EditorControl = "Windows2008", GroupId = 1, ProviderName = "Windows2008", ProviderType = "SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008" },
+			//new Provider() { ProviderId = 100, DisplayName = "Windows Server 2008", EditorControl = "Windows2008", GroupId = 1, ProviderName = "Windows2008", ProviderType = "SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008" },
 			new Provider() { ProviderId = 101, DisplayName = "Internet Information Services 7.0", EditorControl = "IIS70", GroupId = 2, ProviderName = "IIS70", ProviderType = "SolidCP.Providers.Web.IIs70, SolidCP.Providers.Web.IIs70" },
 			new Provider() { ProviderId = 102, DisplayName = "Microsoft FTP Server 7.0", EditorControl = "MSFTP70", GroupId = 3, ProviderName = "MSFTP70", ProviderType = "SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs70" },
 			new Provider() { ProviderId = 103, DisplayName = "Hosted Organizations", EditorControl = "Organizations", GroupId = 13, ProviderName = "Organizations", ProviderType = "SolidCP.Providers.HostedSolution.OrganizationProvider, SolidCP.Providers.HostedS" +
 				"olution" },
-			new Provider() { ProviderId = 104, DisplayName = "Windows Server 2012", EditorControl = "Windows2012", GroupId = 1, ProviderName = "Windows2012", ProviderType = "SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012" },
+			//new Provider() { ProviderId = 104, DisplayName = "Windows Server 2012", EditorControl = "Windows2012", GroupId = 1, ProviderName = "Windows2012", ProviderType = "SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012" },
 			new Provider() { ProviderId = 105, DisplayName = "Internet Information Services 8.0", EditorControl = "IIS70", GroupId = 2, ProviderName = "IIS80", ProviderType = "SolidCP.Providers.Web.IIs80, SolidCP.Providers.Web.IIs80" },
 			new Provider() { ProviderId = 106, DisplayName = "Microsoft FTP Server 8.0", EditorControl = "MSFTP70", GroupId = 3, ProviderName = "MSFTP80", ProviderType = "SolidCP.Providers.FTP.MsFTP80, SolidCP.Providers.FTP.IIs80" },
 			new Provider() { ProviderId = 110, DisplayName = "Cerberus FTP Server 6.x", EditorControl = "CerberusFTP6", GroupId = 3, ProviderName = "CerberusFTP6", ProviderType = "SolidCP.Providers.FTP.CerberusFTP6, SolidCP.Providers.FTP.CerberusFTP6" },

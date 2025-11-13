@@ -11,34 +11,34 @@ public class MacInstaller : UnixInstaller
 {
 	Brew Brew => (Brew)OSInfo.Unix.Brew;
 	public override string UnixAppRootPath => "/var/bin";
-	public override void InstallNet8Runtime()
+	public override void InstallNet10Runtime()
 	{
-		if (CheckNet8RuntimeInstalled()) return;
+		if (CheckNet10RuntimeInstalled()) return;
 
 		string tmp = null;
 
-		if (OSInfo.Architecture == Architecture.X64) tmp = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.408/dotnet-sdk-8.0.408-osx-x64.pkg");
-		else if (OSInfo.Architecture == Architecture.Arm64) tmp = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.408/dotnet-sdk-8.0.408-osx-arm64.pkg");
+		if (OSInfo.Architecture == Architecture.X64) tmp = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.0/dotnet-sdk-10.0.0-osx-x64.pkg");
+		else if (OSInfo.Architecture == Architecture.Arm64) tmp = DownloadFile("https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.0/dotnet-sdk-10.0.0-osx-arm64.pkg");
 		else throw new PlatformNotSupportedException("Only x64 and Arm64 architectures supported.");
 	
-		Info("Installing .NET 8 Runtime...");
+		Info("Installing .NET 10 Runtime...");
 
 		Shell.Exec($"installer -pkg \"{tmp}\" -target /");
 		Shell.Exec("brew update");
 		//Shell.Exec("brew install mono-libgdiplus");
 
-		Net8RuntimeInstalled = true;
+		Net10RuntimeInstalled = true;
 
-		InstallLog("Installed .NET 8 Runtime.");
+		InstallLog("Installed .NET 10 Runtime.");
 
 		ResetHasDotnet();
 	}
 
-	public override void RemoveNet8AspRuntime()
+	public override void RemoveNet10AspRuntime()
 	{
 		//throw new NotImplementedException();
 	}
-	public override void RemoveNet8NetRuntime()
+	public override void RemoveNet10NetRuntime()
 	{
 		//throw new NotImplementedException();
 	}

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net48</TargetFrameworks>
+        <TargetFrameworks>net10.0;net48</TargetFrameworks>
         <Nullable>disable</Nullable>
         <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
         <CompilerGeneratedFilesOutputPath>WebServices</CompilerGeneratedFilesOutputPath>
@@ -12,7 +12,7 @@
         <UserSecretsId>f2178b6b-fdfa-4b50-ba11-779a6fcd69f3</UserSecretsId>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
         <OutputPath>bin_dotnet</OutputPath>
         <StartupObject>SolidCP.Server.Program</StartupObject>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -33,7 +33,7 @@
         <Content Remove="bin_dotnet\**\*.*" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
         <None Include="Default.aspx.designer.cs" />
         <None Include="Default.aspx.cs" />
         <Compile Remove="Default.aspx.designer.cs" />
@@ -63,11 +63,11 @@
         <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.9" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     </ItemGroup>
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
-        <PackageReference Include="System.Collections.Immutable" Version="9.0.9" />
+        <PackageReference Include="System.Collections.Immutable" Version="10.0.0" />
         <PackageReference Include="System.Memory" Version="4.6.3" />
         <Reference Include="Microsoft.CSharp" />
         <Reference Include="System" />
@@ -85,11 +85,11 @@
             <HintPath>..\..\Lib\SwaggerWcf.dll</HintPath>
         </Reference>
     </ItemGroup>
-    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+    <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
         <PackageReference Include="CoreWCF.Primitives" Version="1.8.0" />
         <PackageReference Include="CoreWCF.WebHttp" Version="1.8.0" />
         <PackageReference Include="System.Net.Primitives" Version="4.3.1" />
-        <PackageReference Include="System.ServiceProcess.ServiceController" Version="9.0.9" GeneratePathProperty="true" />
+        <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0" GeneratePathProperty="true" />
         <!--<PackageReference Include="System.Management" Version="8.0.0" GeneratePathProperty="true"
             IncludeAssets="None" ExcludeAssets="All" PrivateAssets="None" />-->
     </ItemGroup>
@@ -150,14 +150,14 @@
 
     <!--<Target Name="CopySystemManagement" AfterTargets="Build">
         <ItemGroup>
-            <Dll Include="$(PkgSystem_Managemenet)\runtimes\win\lib\net8.0\System.Management.dll" />
+            <Dll Include="$(PkgSystem_Managemenet)\runtimes\win\lib\net10.0\System.Management.dll" />
         </ItemGroup>
         <Copy SourceFiles="@(Dll)" DestinationFolder="$(OutputDir)" />
     </Target>-->
     
-    <Target Name="CopyServiceProcessRuntime" AfterTargets="Build" Condition="'$(TargetFramework)' == 'net8.0'">
-        <Message Importance="high" Text="Copying $(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll" />
-        <Copy SourceFiles="$(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll" DestinationFolder="$(OutputPath)" />
+    <Target Name="CopyServiceProcessRuntime" AfterTargets="Build" Condition="'$(TargetFramework)' == 'net10.0'">
+        <Message Importance="high" Text="Copying $(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net10.0\System.ServiceProcess.ServiceController.dll" />
+        <Copy SourceFiles="$(PkgSystem_ServiceProcess_ServiceController)\runtimes\win\lib\net10.0\System.ServiceProcess.ServiceController.dll" DestinationFolder="$(OutputPath)" />
     </Target>
 
 </Project>

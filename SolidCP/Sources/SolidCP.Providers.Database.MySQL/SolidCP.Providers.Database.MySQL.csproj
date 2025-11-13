@@ -15,7 +15,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="MySql.Data" Version="9.4.0" GeneratePathProperty="true" />
-        <PackageReference Include="System.Security.Permissions" Version="9.0.9" GeneratePathProperty="true" />
+        <PackageReference Include="System.Security.Permissions" Version="10.0.0" GeneratePathProperty="true" />
         <PackageReference Include="System.Runtime.Loader" Version="4.3.0" GeneratePathProperty="true" />
     </ItemGroup>
 	<ItemGroup>
@@ -29,8 +29,8 @@
     <Target Name="CopyPackageReferences" AfterTargets="Build">
         <ItemGroup>
             <CopyToNetFX Include="$(PkgMySql_Data)\lib\net48\**\*.*" />
-            <CopyToNetCore Include="$(PkgMySql_Data)\lib\net8.0\**\*.*" />
-            <CopyToNetCore Include="$(PkgSystem_Security_Permissions)\lib\net8.0\**\*.*" />
+            <CopyToNetCore Include="$(PkgMySql_Data)\lib\net10.0\**\*.*" />
+            <CopyToNetCore Include="$(PkgSystem_Security_Permissions)\lib\net10.0\**\*.*" />
             <CopyToNetFX Include="$(PkgSystem_Security_Permissions)\lib\net462\**\*.*" />
             <CopyToNetFX Include="$(PkgSystem_Runtime_Loader)\lib\netstandard1.5\**\*.*" />
         </ItemGroup>
