@@ -11,30 +11,31 @@ IF not defined SolidCPVersion ( Set SolidCPVersion=2.0.0)
 IF not defined SolidCPFileVersion ( Set SolidCPFileVersion=2.0.0)
 IF not defined Configuration ( Set Configuration=Release)
 
-IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2026\Community\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2026\Community\MSBuild\Current\Bin\MSBuild.exe"
+IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Community\MSBuild\Current\bin\MSBuild.exe" (
+	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe"
 	Set SCPVSVer=18.0
 	Echo Found VS 2026 Community
 	GOTO Build 
  )
-IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2026\Professional\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2026\Professional\MSBuild\Current\Bin\MSBuild.exe"
+IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Professional\MSBuild\Current\bin\MSBuild.exe" (
+	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Professional\MSBuild\Current\Bin\MSBuild.exe"
 	Set SCPVSVer=18.0
 	Echo Found VS 2026 Professional
 	GOTO Build 
  )
-IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2026\Enterprise\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2026\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Enterprise\MSBuild\Current\bin\MSBuild.exe" (
+	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
 	Set SCPVSVer=18.0
 	Echo Found VS 2026 Enterprise
 	GOTO Build 
  )
-IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2026\Preview\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2026\Preview\MSBuild\Current\Bin\MSBuild.exe"
+IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Preview\MSBuild\Current\Bin\MSBuild.exe" (
+	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Preview\MSBuild\Current\Bin\MSBuild.exe"
 	Set SCPVSVer=18.0
 	Echo Found VS 2026 Preview
 	GOTO Build 
  )
+
 
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\MSBuild.exe" (
 	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
