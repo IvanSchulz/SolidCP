@@ -34,7 +34,9 @@
 		<ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
 		<ProjectReference Include="..\SolidCP.Providers.HostedSolution\SolidCP.Providers.HostedSolution.csproj" />
 		<ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
-	</ItemGroup>
+        <ProjectReference Include="..\SolidCP.Providers.HostedSolution.SharePoint2016\SolidCP.Providers.HostedSolution.SharePoint2016.csproj"
+			ReferenceOutputAssembly="false" />
+    </ItemGroup>
 
     <Target Name="DeleteUnusedDlls" AfterTargets="Build">
         <ItemGroup>
