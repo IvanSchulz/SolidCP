@@ -8254,5 +8254,48 @@ CREATE INDEX "WebDavPortalUsersSettingsIdx_AccountId" ON "WebDavPortalUsersSetti
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20251105040648_v2.0.0', '9.0.9');
 
+DELETE FROM "Quotas"
+WHERE "QuotaID" = 770;
+SELECT changes();
+
+
+DELETE FROM "Quotas"
+WHERE "QuotaID" = 771;
+SELECT changes();
+
+
+DELETE FROM "ServiceDefaultProperties"
+WHERE "PropertyName" = 'UsersHome' AND "ProviderID" = 1;
+SELECT changes();
+
+
+DELETE FROM "ServiceDefaultProperties"
+WHERE "PropertyName" = 'UsersHome' AND "ProviderID" = 100;
+SELECT changes();
+
+
+DELETE FROM "ServiceDefaultProperties"
+WHERE "PropertyName" = 'UsersHome' AND "ProviderID" = 104;
+SELECT changes();
+
+
+DELETE FROM "Providers"
+WHERE "ProviderID" = 1;
+SELECT changes();
+
+
+DELETE FROM "Providers"
+WHERE "ProviderID" = 100;
+SELECT changes();
+
+
+DELETE FROM "Providers"
+WHERE "ProviderID" = 104;
+SELECT changes();
+
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20251113211755_RemovedOldWindowsProviders', '9.0.9');
+
 COMMIT;
 
