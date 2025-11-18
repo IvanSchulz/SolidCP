@@ -27,7 +27,7 @@
 		<ProjectReference Include="..\..\Lib\CoreWCF\src\CoreWCF.NetTcp\src\CoreWCF.NetTcp.csproj" />
 		<ProjectReference Include="..\..\Lib\CoreWCF\src\CoreWCF.Primitives\src\CoreWCF.Primitives.csproj" />
 		-->
-		<FrameworkReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+		<!--<FrameworkReference Include="Microsoft.AspNetCore.App.Ref" Version="10.0.0" />-->
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)'=='net48'">
 		<Reference Include="System.Configuration" />
