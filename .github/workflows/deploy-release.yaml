@@ -103,10 +103,16 @@ jobs:
         wsl --distribution Ubuntu-24.04 echo '"rpmbuild: $(which rpmbuild)"'
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         fetch-depth: 0
         submodules: recursive
+
+    - name: Install NET 10
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: '10.0.x'
+
 
     - name: Sanitize Artifact Name
       id: sanitize_name_step
