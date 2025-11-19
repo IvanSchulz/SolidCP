@@ -71,3 +71,51 @@ DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 104
 DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 104 AND [DisplayName] = 'Windows Server 2012'
 END
 GO
+
+-- Removing MSFTP60
+-- ProviderID: 3
+
+IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = 3)
+BEGIN
+	UPDATE [Services] SET [ProviderID] = 113 WHERE [ProviderID] = 3
+END
+GO
+
+IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = 3 AND DisplayName = 'Microsoft FTP Server 6.0')
+BEGIN
+DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 3
+DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 3 AND [DisplayName] = 'Microsoft FTP Server 6.0'
+END
+GO
+
+-- Removing MSFTP70
+-- ProviderID: 102
+
+IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = 102)
+BEGIN
+	UPDATE [Services] SET [ProviderID] = 113 WHERE [ProviderID] = 102
+END
+GO
+
+IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = 102 AND DisplayName = 'Microsoft FTP Server 7.0')
+BEGIN
+DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 102
+DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 102 AND [DisplayName] = 'Microsoft FTP Server 7.0'
+END
+GO
+
+-- Removing MSFTP80
+-- ProviderID: 106
+
+IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = 106)
+BEGIN
+	UPDATE [Services] SET [ProviderID] = 113 WHERE [ProviderID] = 106
+END
+GO
+
+IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = 106 AND DisplayName = 'Microsoft FTP Server 8.0')
+BEGIN
+DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 106
+DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 106 AND [DisplayName] = 'Microsoft FTP Server 8.0'
+END
+GO
