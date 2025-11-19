@@ -76278,7 +76278,7 @@ BEGIN
     -- GroupID: 42
     -- ProviderID: 135
 
-    DELETE FROM [HostingPlanQuotas] WHERE [QuotaID] = '600'
+    DELETE FROM [HostingPlanQuotas] WHERE [QuotaID] = 600 -- TODO ?? There is no Quota with QuotaID 600 in 1.5.1
 END;
 
 IF NOT EXISTS (
@@ -76286,7 +76286,7 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    DELETE FROM [Quotas] WHERE [GroupID] = '42'
+    DELETE FROM [Quotas] WHERE [GroupID] = 42
 END;
 
 IF NOT EXISTS (
@@ -76294,7 +76294,7 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    DELETE FROM [ServiceDefaultProperties] WHERE [ProviderID] = '1550' -- TODO ?? Is this a bug, this is MariaDB 10.1 Provider
+    DELETE FROM [ServiceDefaultProperties] WHERE [ProviderID] = 135 -- 1550 TODO ?? Is this a bug, 1550 is MariaDB 10.1 Provider
 END;
 
 IF NOT EXISTS (
@@ -76302,7 +76302,7 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    DELETE FROM [ServiceItemTypes] WHERE [GroupID] = '42'
+    DELETE FROM [ServiceItemTypes] WHERE [GroupID] = 42
 END;
 
 IF NOT EXISTS (
@@ -76310,7 +76310,7 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    DELETE FROM [VirtualGroups] WHERE [GroupID] = '42'
+    DELETE FROM [VirtualGroups] WHERE [GroupID] = 42
 END;
 
 IF NOT EXISTS (
@@ -76318,7 +76318,7 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    DELETE FROM [dbo].[ResourceGroups] WHERE GroupID = '42'
+    DELETE FROM [dbo].[ResourceGroups] WHERE GroupID = 42
 END;
 
 IF NOT EXISTS (
@@ -76346,9 +76346,9 @@ BEGIN
     -- Removing Windows Server 2003
     -- ProviderID: 1
 
-    IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = '1')
+    IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = 1)
     BEGIN
-    	UPDATE [Services] SET [ProviderID]='111' WHERE [ProviderID] = '1'
+    	UPDATE [Services] SET [ProviderID]=111 WHERE [ProviderID] = 1
     END
 END;
 
@@ -76357,10 +76357,10 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = '1' AND DisplayName = 'Windows Server 2003')
+    IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = 1 AND DisplayName = 'Windows Server 2003')
     BEGIN
-    DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = '1'
-    DELETE FROM [dbo].[Providers] WHERE [ProviderID] = '1' AND DisplayName = 'Windows Server 2003'
+    DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 1
+    DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 1 AND DisplayName = 'Windows Server 2003'
     END
 END;
 
@@ -76372,9 +76372,9 @@ BEGIN
     -- Removing Windows Server 2008
     -- ProviderID: 100
 
-    IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = '100')
+    IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = 100)
     BEGIN
-    	UPDATE [Services] SET [ProviderID]='111' WHERE [ProviderID] = '100'
+    	UPDATE [Services] SET [ProviderID]=111 WHERE [ProviderID] = 100
     END
 END;
 
@@ -76383,10 +76383,10 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = '100' AND DisplayName = 'Windows Server 2008')
+    IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = 100 AND DisplayName = 'Windows Server 2008')
     BEGIN
-    DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = '100'
-    DELETE FROM [dbo].[Providers] WHERE [ProviderID] = '100' AND DisplayName = 'Windows Server 2008'
+    DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 100
+    DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 100 AND DisplayName = 'Windows Server 2008'
     END
 END;
 
@@ -76398,9 +76398,9 @@ BEGIN
     -- Removing Windows Server 2012
     -- ProviderID: 104
 
-    IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = '104')
+    IF EXISTS (SELECT * FROM [dbo].[Services] WHERE [ProviderID] = 104)
     BEGIN
-    	UPDATE [Services] SET [ProviderID]='111' WHERE [ProviderID] = '104'
+    	UPDATE [Services] SET [ProviderID]=111 WHERE [ProviderID] = 104
     END
 END;
 
@@ -76409,10 +76409,10 @@ IF NOT EXISTS (
     WHERE [MigrationId] = N'20251113211343_Run_Migrate_msSQL_Script'
 )
 BEGIN
-    IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = '104' AND DisplayName = 'Windows Server 2012')
+    IF EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = 104 AND DisplayName = 'Windows Server 2012')
     BEGIN
-    DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = '104'
-    DELETE FROM [dbo].[Providers] WHERE [ProviderID] = '104' AND DisplayName = 'Windows Server 2012'
+    DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 104
+    DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 104 AND DisplayName = 'Windows Server 2012'
     END
 END;
 

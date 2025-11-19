@@ -7349,5 +7349,77 @@ BEGIN
     VALUES ('20251105040715_v2.0.0', '9.0.9');
     END IF;
 END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."Quotas"
+    WHERE "QuotaID" = 770;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."Quotas"
+    WHERE "QuotaID" = 771;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."ServiceDefaultProperties"
+    WHERE "PropertyName" = 'UsersHome' AND "ProviderID" = 1;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."ServiceDefaultProperties"
+    WHERE "PropertyName" = 'UsersHome' AND "ProviderID" = 100;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."ServiceDefaultProperties"
+    WHERE "PropertyName" = 'UsersHome' AND "ProviderID" = 104;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."Providers"
+    WHERE "ProviderID" = 1;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."Providers"
+    WHERE "ProviderID" = 100;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    DELETE FROM public."Providers"
+    WHERE "ProviderID" = 104;
+    END IF;
+END $EF$;
+
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251113211940_RemovedOldWindowsProviders') THEN
+    INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+    VALUES ('20251113211940_RemovedOldWindowsProviders', '9.0.9');
+    END IF;
+END $EF$;
 COMMIT;
 
