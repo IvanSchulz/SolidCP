@@ -73,7 +73,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			txtSqlServerLogin.Text = Settings.DatabaseUser ?? "sa";
 			txtMySqlUser.Text = Settings.DatabaseUser ?? "root";
 			txtSqlServerPassword.Text = txtMySqlPassword.Text = Settings.DatabasePassword;
-			txtMySqlServer.Text = Settings.DatabaseServer;
+			txtMySqlServer.Text = (Settings.DatabaseServer == "(local)" || string.IsNullOrEmpty(Settings.DatabaseServer)) ? "localhost" : Settings.DatabaseServer;
 			txtMySqlPort.Text = Settings.DatabasePort != default ? Settings.DatabasePort.ToString() : "3306";
 
             if (MariaDbSupport) tabMySql.Text = "  MySQL / MariaDB  ";
