@@ -113,7 +113,6 @@ jobs:
       with:
         dotnet-version: '10.0.x'
 
-
     - name: Sanitize Artifact Name
       id: sanitize_name_step
       shell: bash 
