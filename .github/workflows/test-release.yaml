@@ -82,6 +82,7 @@ jobs:
         wsl wget https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-linux-x64.tar.gz
         wsl tar -xvzf dotnet-sdk-10.0.100-linux-x64.tar.gz -C /usr/lib/dotnet
         wsl dotnet --info
+        wsl dotnet dev-certs https
 
     - name: Checkout
       uses: actions/checkout@v5
