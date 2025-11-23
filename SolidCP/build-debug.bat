@@ -47,5 +47,4 @@ echo "VisualStudio 2026 not found. VS 2026 must be installed to build SolidCP."
 Set SCPMSBuild="msbuild"
 
 :Build
-Set VisualStudioVersion=%SCPVSVer%
 dotnet msbuild build.xml /target:Build /p:BuildConfiguration=%Configuration% /p:Version="%SolidCPVersion%" /p:FileVersion="%SolidCPFileVersion%" /p:VersionLabel="%SolidCPFileVersion%" %MsBuildSwitches% /fileLogger /flp:verbosity=normal /p:VisualStudioVersion=%SCPVSVer%
