@@ -19,7 +19,7 @@
 		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/connectionStrings/add/@connectionString" Value="Server=(local)\SQLExpress;Database=$(TestDatabase);uid=$(TestDbLogin);pwd=$(TestDbPassword);"  />
 		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/appSettings/add[@key=%22SolidCP.CryptoKey%22]/@value" Value="$(TestCryptoKey)"  />
 		<XmlUpdate XmlFileName="$(PortalInstall)\App_Data\SiteSettings.config" Xpath="//SiteSettings/EnterpriseServer" Value="$(EnterpriseUrl)"  />
-	</Target> 
+	</Target>
 	
 	<Target Name="CreateIISWebsites" DependsOnTargets="ConfigTest">
 		<Exec Command="powershell . &quot;.\Tools\SetupTestWebsites.ps1&quot;" />
