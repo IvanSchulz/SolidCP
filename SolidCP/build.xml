@@ -132,6 +132,7 @@
 	<Target Name="RestorePackages" DependsOnTargets="ShowParameters">
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.Server.sln" />
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" />
+		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" />
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" />
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" />
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" />

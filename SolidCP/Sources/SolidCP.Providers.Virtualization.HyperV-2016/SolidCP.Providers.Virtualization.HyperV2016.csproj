@@ -19,11 +19,6 @@
 			<HintPath>..\..\Lib\References\Microsoft\Microsoft.Storage.Vds.dll</HintPath>
 			<Private>False</Private>
 		</Reference>
-		<Reference Include="SolidCP.Providers.Virtualization.HyperV2012R2, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-			<HintPath>..\SolidCP.Server\bin\HyperV2012R2\SolidCP.Providers.Virtualization.HyperV2012R2.dll</HintPath>
-			<Private>False</Private>
-			<SpecificVersion>False</SpecificVersion>
-		</Reference>
 		<Reference Include="System.Configuration" />
 		<Reference Include="Microsoft.CSharp" />
 		<Reference Include="System.Management" />
@@ -40,6 +35,7 @@
 		<ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
 		<ProjectReference Include="..\SolidCP.Providers.HostedSolution\SolidCP.Providers.HostedSolution.csproj" />
 		<ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+		<ProjectReference Include="..\SolidCP.Providers.Virtualization.HyperV-2012R2\SolidCP.Providers.Virtualization.HyperV2012R2.csproj" />
 	</ItemGroup>
 
     <Target Name="DeleteUnusedDlls" AfterTargets="Build">
