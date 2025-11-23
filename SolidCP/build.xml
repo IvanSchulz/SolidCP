@@ -130,17 +130,17 @@
 	</Target>
 
 	<Target Name="RestorePackages" DependsOnTargets="ShowParameters">
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.Server.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\SolidCP.Server.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" />
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" />
+		<Exec Command="dotnet restore $(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" />
+		<Exec Command="dotnet restore $(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox.sln" />
 	</Target>
 
 	<Target Name="GenerateBuildVersionFilesInstaller" DependsOnTargets="RestorePackages">
