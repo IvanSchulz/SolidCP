@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.9.34714.143
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.WebDavPortal", "SolidCP.WebDavPortal\SolidCP.WebDavPortal.csproj", "{73A51A0A-9CF3-4516-BF25-28E5E4129FC9}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Base", "SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj", "{041A10D7-12E8-4B6A-9C05-3D9878B34E9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Web.Clients", "SolidCP.Web.Clients\SolidCP.Web.Clients.csproj", "{8E383DA6-47C1-4693-AC41-59AB44DD6D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.WebDav.Core", "SolidCP.WebDav.Core\SolidCP.WebDav.Core.csproj", "{089D696B-386B-C8B4-6C0E-07D81A60A10D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Server.Utils", "SolidCP.Server.Utils\SolidCP.Server.Utils.csproj", "{8FC416FC-91E8-E4BA-4FA8-775D048E15C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{8E383DA6-47C1-4693-AC41-59AB44DD6D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E383DA6-47C1-4693-AC41-59AB44DD6D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E383DA6-47C1-4693-AC41-59AB44DD6D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089D696B-386B-C8B4-6C0E-07D81A60A10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089D696B-386B-C8B4-6C0E-07D81A60A10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089D696B-386B-C8B4-6C0E-07D81A60A10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089D696B-386B-C8B4-6C0E-07D81A60A10D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC416FC-91E8-E4BA-4FA8-775D048E15C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC416FC-91E8-E4BA-4FA8-775D048E15C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC416FC-91E8-E4BA-4FA8-775D048E15C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC416FC-91E8-E4BA-4FA8-775D048E15C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
