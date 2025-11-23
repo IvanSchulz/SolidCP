@@ -506,7 +506,7 @@
 		<!--<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)SolidCP.Installer.Legacy.sln" />-->
 
 		<!-- compile Installer -->
-		<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=17.12.4" />
+		<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />
 		<!--<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.Legacy.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=17.12.4" />-->
 
 		<!-- copy installer binaries for upgrade -->
@@ -937,9 +937,9 @@
 	<!-- Compile and deploy Setup.dll -->
 	<Target Name="CopySetupDLL" DependsOnTargets="PublishSqlInstallScripts">
         <!-- Restore -->
-        <Exec Command="dotnet restore $(InstallerProjectRoot)\SolidCP.Installer.sln" />
+        <!--<Exec Command="dotnet restore $(InstallerProjectRoot)\SolidCP.Installer.sln" />-->
         <!-- Compile Setup.dll -->
-        <MSBuild Projects="$(SetupTrunkFolder)\Sources\SolidCP.Installer.sln"  Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+        <!--<MSBuild Projects="$(SetupTrunkFolder)\Sources\SolidCP.Installer.sln"  Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />-->
 
 		<!-- Copy Setup.dll -->
 		<MakeDir Directories="$(ServerInstall)\Setup" />
