@@ -664,7 +664,8 @@ Password: [?DatabasePassword                               ]
 					case DbType.MariaDb:
 						do
 						{
-							form = new ConsoleForm(@"
+                            if (settings.DatabaseServer == "(local)" || string.IsNullOrEmpty(settings.DatabaseServer)) settings.DatabaseServer = "localhost";
+                            form = new ConsoleForm(@"
 MySQL/MariaDB Settings:
 =======================
 

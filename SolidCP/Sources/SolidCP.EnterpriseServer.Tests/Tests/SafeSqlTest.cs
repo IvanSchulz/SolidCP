@@ -47,7 +47,7 @@ GO
 
 			Debug.WriteLine(safesql);
 
-			var correctSafeSql = @"PRINT 'Command 4'
+			var correctSafeSql = @"PRINT 'Command 3'
 EXECUTE sp_executesql N'CREATE FUNCTION'
 GO
 
@@ -55,7 +55,7 @@ GO
 'GO'
 GO
 
-PRINT 'Command 3'
+PRINT 'Command 2'
 EXECUTE sp_executesql N'CREATE VIEW'
 GO;
 

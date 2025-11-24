@@ -56,6 +56,19 @@
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.com</DevEnv>
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.com</DevEnv>
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.com</DevEnv>
+		<MsBuildExe>$(ProgramFiles64)\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\18\Enterprise\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\18\Professional\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(ProgramFiles64)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(MSBuildProgramFiles32)\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(MSBuildProgramFiles32)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
+		<MsBuildExe Condition="!Exists('$(MsBuildExe)')">$(MSBuildProgramFiles32)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MsBuild.exe</MsBuildExe>
 
 		<ServerBuild>$(BuildFolder)\Server</ServerBuild>
 		<EnterpriseServerBuild>$(BuildFolder)\EnterpriseServer</EnterpriseServerBuild>
@@ -117,16 +130,17 @@
 	</Target>
 
 	<Target Name="RestorePackages" DependsOnTargets="ShowParameters">
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.Server.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\SolidCP.Server.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" />
+		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" />
+		<Exec Command="dotnet restore $(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" />
+		<Exec Command="dotnet restore $(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox.sln" />
 	</Target>
 
 	<Target Name="GenerateBuildVersionFilesInstaller" DependsOnTargets="RestorePackages">
@@ -170,8 +184,9 @@
 		<!-- SolidCP -->
 		<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.Server.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
 		<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<Exec Command="&quot;$(MsBuildExe)&quot; &quot;$(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln&quot; &quot;/p:Configuration=$(BuildConfiguration);Platform=$(Platform)&quot; $(MsBuildSwitches)" />
 
-		<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<!--<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />-->
 
 		<!-- Tools -->
 		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
@@ -491,7 +506,7 @@
 		<!--<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)SolidCP.Installer.Legacy.sln" />-->
 
 		<!-- compile Installer -->
-		<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=17.12.4" />
+		<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />
 		<!--<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.Legacy.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=17.12.4" />-->
 
 		<!-- copy installer binaries for upgrade -->
@@ -515,7 +530,7 @@
 
 	</Target>
 	
-	<Target Name="CreateInstallPackages" DependsOnTargets="ZipDeploy" Condition="'$(BuildLinuxInstallPackages)' == 'true'">
+	<Target Name="CreateInstallPackages" DependsOnTargets="ZipTools" Condition="'$(BuildLinuxInstallPackages)' == 'true'">
 		<PropertyGroup>
 			<InstallerProjectRoot>$(RootFolder)\SolidCP.Installer\Sources\</InstallerProjectRoot>
 			<InstallerProjectBin>$(InstallerProjectRoot)SolidCP.UniversalInstaller\bin\$(BuildConfiguration)\net48\</InstallerProjectBin>
@@ -922,9 +937,9 @@
 	<!-- Compile and deploy Setup.dll -->
 	<Target Name="CopySetupDLL" DependsOnTargets="PublishSqlInstallScripts">
         <!-- Restore -->
-        <Exec Command="dotnet restore $(InstallerProjectRoot)\SolidCP.Installer.sln" />
+        <!--<Exec Command="dotnet restore $(InstallerProjectRoot)\SolidCP.Installer.sln" />-->
         <!-- Compile Setup.dll -->
-        <MSBuild Projects="$(SetupTrunkFolder)\Sources\SolidCP.Installer.sln"  Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+        <!--<MSBuild Projects="$(SetupTrunkFolder)\Sources\SolidCP.Installer.sln"  Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />-->
 
 		<!-- Copy Setup.dll -->
 		<MakeDir Directories="$(ServerInstall)\Setup" />
@@ -994,7 +1009,7 @@
   </Target>
 
 	<!-- Deploy -->
-	<Target Name="ZipDeploy" DependsOnTargets="DeploySqlScripts" >
+	<Target Name="ZipSetupDll" DependsOnTargets="DeploySqlScripts" >
 		<ItemGroup>
 			<PortalInstallFiles Include="$(PortalInstall)\**\*.*" />
 			<WebDavPortalInstallFiles Include="$(WebDavPortalInstall)\**\*.*" />
@@ -1033,8 +1048,11 @@
 		<Delete Files="@(ZipFilesToDelete)" />
         
         <!-- Zip Setup2.dll to DeployFolder -->
+		<Message Text="Zip Setup2.dll" Importance="high" />
         <Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\Setup2.dll$(ZipExt)&quot; &quot;$(SetupBuildFolder)\Setup2.dll&quot;" />
-
+	</Target>
+    
+	<Target Name="ZipPortal" DependsOnTargets="ZipSetupDll">
 		<!--
 		<Zip Files="@(PortalInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-Portal-$(Version).zip" WorkingDirectory="$(PortalInstall)" />
 		<Zip Files="@(WebDavPortalInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-Web-Dav-Portal-$(Version).zip" WorkingDirectory="$(WebDavPortalInstall)" />
@@ -1042,11 +1060,23 @@
 		<Zip Files="@(ServerInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-Server-$(Version).zip" WorkingDirectory="$(ServerInstall)" />
 		<Zip Files="@(StandaloneInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-StandaloneServerSetup-$(Version).zip" WorkingDirectory="$(StandaloneInstall)" />
 		-->
-
+		<Message Text="Zip Portal" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Portal$(ZipExt)&quot; &quot;$(PortalInstall)\*&quot;" />
+	</Target>
+	<Target Name="ZipWebDavPortal" DependsOnTargets="ZipPortal">
+		<Message Text="Zip WebDavPortal" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Web-Dav-Portal$(ZipExt)&quot; &quot;$(WebDavPortalInstall)\*&quot;" />
+	</Target>
+	<Target Name="ZipEnterpriseServer" DependsOnTargets="ZipWebDavPortal">
+		<Message Text="Zip EnterpriseServer" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-EnterpriseServer$(ZipExt)&quot; &quot;$(EnterpriseServerInstall)\*&quot;" />
+	</Target>
+	<Target Name="ZipServer" DependsOnTargets="ZipEnterpriseServer">
+		<Message Text="Zip Server" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Server$(ZipExt)&quot; &quot;$(ServerInstall)\*&quot;" />
+	</Target>
+	<Target Name="ZipStandalone" DependsOnTargets="ZipServer">
+		<Message Text="Zip StandaloneServerSetup" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-StandaloneServerSetup$(ZipExt)&quot; &quot;$(StandaloneInstall)\*&quot;" />
 
 		<ItemGroup>
@@ -1054,7 +1084,9 @@
 		</ItemGroup>
 		
 		<Copy SourceFiles="@(InstallerMsiFile)" DestinationFiles="$(DeployFolder)\SolidCP.Installer-$(Version).msi" />
+	</Target>
 
+	<Target Name="ZipUpdates" DependsOnTargets="ZipStandalone">
 		<!-- zip updates
 		<ItemGroup>
 			<PortalUpdateFiles Include="$(PortalUpdate)\**\*.*" />
@@ -1071,12 +1103,16 @@
 		<Zip Files="@(ManualUpdateFiles)" ZipFileName="$(DeployFolder)\Manual-Update.zip" WorkingDirectory="$(UpdateFolder)" />
 		<Zip Files="@(InstallerUpdateFiles)" ZipFileName="$(DeployFolder)\SolidCP-Installer-$(Version)-Update.zip" WorkingDirectory="$(InstallerBuild)" />
 		-->
-
+		<Message Text="Zip Updates" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Portal-Update$(ZipExt)&quot; &quot;$(PortalUpdate)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-WebDavPortal-Update$(ZipExt)&quot; &quot;$(WebDavPortalUpdate)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-EnterpriseServer-Update$(ZipExt)&quot; &quot;$(EnterpriseServerUpdate)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Server-Update$(ZipExt)&quot; &quot;$(ServerUpdate)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Manual-Update$(ZipExt)&quot; &quot;$(UpdateFolder)\*&quot;" />
+	</Target>
+
+	<Target Name="ZipInstaller" DependsOnTargets="ZipUpdates">
+		<Message Text="Zip Installer" Importance="high" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Installer.zip&quot; &quot;$(InstallerBuild)\*&quot;" />
 
 		<!-- zip tools
@@ -1087,7 +1123,10 @@
 		<Zip Files="@(AWStatsViewerInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-AWStatsViewer-$(Version).zip" WorkingDirectory="$(AWStatsViewerInstall)" />
 		<Zip Files="@(SCPTransportAgentInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-SCPTransportAgent-$(Version).zip" WorkingDirectory="$(SCPTransportAgentInstall)" />
 		-->
+	</Target>
 
+	<Target Name="ZipTools" DependsOnTargets="ZipInstaller">
+		<Message Text="Zip Tools" Importance="high" />
         <Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-Import-CsvBulk$(ZipExt)&quot; &quot;$(ImportCsvInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-HyperVUtils$(ZipExt)&quot; &quot;$(HyperVUtilsInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-VMConfig$(ZipExt)&quot; &quot;$(VMConfigInstall)\*&quot;" />

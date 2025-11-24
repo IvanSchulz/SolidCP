@@ -74,8 +74,15 @@ jobs:
       with: 
         wsl-version: 2
         distribution: Ubuntu-24.04
-        additional-packages: dotnet-sdk-10.0
+        additional-packages: dotnet-sdk-8.0
         use-cache: 'false'
+
+    - name: Install .NET SDK 10 in WSL
+      run: |
+        wsl wget https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-linux-x64.tar.gz
+        wsl tar -xvzf dotnet-sdk-10.0.100-linux-x64.tar.gz -C /usr/lib/dotnet
+        wsl dotnet --info
+        wsl dotnet dev-certs https
 
     - name: Checkout
       uses: actions/checkout@v5
