@@ -37,7 +37,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
     public class PortalControlBase : UserControl
     {

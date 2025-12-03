@@ -35,10 +35,10 @@ using System.Data;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.RemoteDesktopServices;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	public class RDSHelper
 	{

@@ -34,12 +34,12 @@ using System.Text;
 using OrderBoxCoreLib;
 using OrderBoxDomainsLib;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.IO;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	public class DirectiRegistrar : SystemPluginBase, IDomainRegistrar
 	{
@@ -71,7 +71,7 @@ namespace SolidCP.Ecommerce.EnterpriseServer
 			if (!File.Exists(assemblyFile))
 			{
 				//
-				EventLog.WriteEntry("SolidCPES:DIRECTI", "OrderBoxCoreLib assembly could not be found at " + assemblyFile, EventLogEntryType.Information);
+				EventLog.WriteEntry("FuseCPES:DIRECTI", "OrderBoxCoreLib assembly could not be found at " + assemblyFile, EventLogEntryType.Information);
 				return null;
 			}
 			//
@@ -98,7 +98,7 @@ namespace SolidCP.Ecommerce.EnterpriseServer
 			if (!File.Exists(assemblyFile))
 			{
 				//
-				EventLog.WriteEntry("SolidCPES:DIRECTI", "OrderBoxDomainsLib assembly could not be found at " + assemblyFile, EventLogEntryType.Information);
+				EventLog.WriteEntry("FuseCPES:DIRECTI", "OrderBoxDomainsLib assembly could not be found at " + assemblyFile, EventLogEntryType.Information);
 				return null;
 			}
 			//

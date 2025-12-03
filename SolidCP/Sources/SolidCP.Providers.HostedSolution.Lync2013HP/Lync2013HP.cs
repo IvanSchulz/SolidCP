@@ -42,10 +42,10 @@ using System.DirectoryServices;
 
 using Microsoft.Win32;
 
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using System.Management;
 using System.Management.Automation;
@@ -56,7 +56,7 @@ using Microsoft.Rtc.Management.WritableConfig.Settings.Edge;
 using Microsoft.Rtc.Management.WritableConfig.Settings.SimpleUrl;
 
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class Lync2013HP : HostingServiceProviderBase, ILyncServer
     {

@@ -1,1 +1,1 @@
-﻿<%@ Control Language="C#" CodeBehind="MariaDB_EditUser.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MariaDB_EditUser" %>
+<%@ Control Language="C#" CodeBehind="MariaDB_EditUser.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MariaDB_EditUser" %>

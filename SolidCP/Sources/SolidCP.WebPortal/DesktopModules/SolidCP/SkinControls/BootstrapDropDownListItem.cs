@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -33,7 +33,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     [Serializable]
     public class BootstrapDropDownListItem

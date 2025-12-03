@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Management;
 
-namespace SolidCP.HyperV.Utils
+namespace FuseCP.HyperV.Utils
 {
     public class ConcreteJob
     {

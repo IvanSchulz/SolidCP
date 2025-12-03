@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Connect.aspx.cs" Inherits="SolidCP.Portal.VPSForPC.RemoteDesktop.Connect" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Connect.aspx.cs" Inherits="FuseCP.Portal.VPSForPC.RemoteDesktop.Connect" %>
 
 <!DOCTYPE html>
 <html>

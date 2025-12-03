@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -38,9 +38,9 @@ using System.Management.Automation.Runspaces;
 using Microsoft.Management.Infrastructure;
 using System.Collections.Generic;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
-    /// <summary>This class wraps MS DNS server PowerShell commands used by the SolidCP.</summary>
+    /// <summary>This class wraps MS DNS server PowerShell commands used by the FuseCP.</summary>
     internal static class DnsCommands
     {
         /// <summary>Add parameter to PS command</summary>

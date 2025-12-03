@@ -40,18 +40,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SettingsMySqlPolicy {
-        protected SolidCP.Portal.CollapsiblePanel secDatabase;
+        protected FuseCP.Portal.CollapsiblePanel secDatabase;
         protected System.Web.UI.WebControls.Panel DatabasePanel;
         protected System.Web.UI.WebControls.Label lblDatabaseName;
-        protected SolidCP.Portal.UsernamePolicyEditor databaseNamePolicy;
-        protected SolidCP.Portal.CollapsiblePanel secUsername;
+        protected FuseCP.Portal.UsernamePolicyEditor databaseNamePolicy;
+        protected FuseCP.Portal.CollapsiblePanel secUsername;
         protected System.Web.UI.WebControls.Panel UsernamePanel;
         protected System.Web.UI.WebControls.Label lblUsername;
-        protected SolidCP.Portal.UsernamePolicyEditor userNamePolicy;
+        protected FuseCP.Portal.UsernamePolicyEditor userNamePolicy;
         protected System.Web.UI.WebControls.Label lblPassword;
-        protected SolidCP.Portal.PasswordPolicyEditor userPasswordPolicy;
+        protected FuseCP.Portal.PasswordPolicyEditor userPasswordPolicy;
     }
 }

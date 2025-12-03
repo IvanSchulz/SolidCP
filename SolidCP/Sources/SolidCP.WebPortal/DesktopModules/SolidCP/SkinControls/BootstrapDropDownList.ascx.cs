@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.Portal;
+using FuseCP.Portal;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,7 +44,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     [ParseChildren(true, "Items")]
     [PersistChildren(false)]
@@ -396,7 +396,7 @@ namespace SolidCP.Portal.SkinControls
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            SolidCPControlBase solidCPControlBase;
+            FuseCPControlBase solidCPControlBase;
             HtmlInputHidden str;
             HtmlInputHidden htmlInputHidden;
             string str1;
@@ -418,7 +418,7 @@ namespace SolidCP.Portal.SkinControls
                         this.ViewState["index"] = this.SelectedIndex;
                         return;
                     }
-                    solidCPControlBase = parent as SolidCPControlBase;
+                    solidCPControlBase = parent as FuseCPControlBase;
                 }
                 while (solidCPControlBase == null);
                 solidCPControlBase.LocalizeListItems(item, this.Items);

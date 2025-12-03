@@ -43,11 +43,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class MSFTP70_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class MSFTP70_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

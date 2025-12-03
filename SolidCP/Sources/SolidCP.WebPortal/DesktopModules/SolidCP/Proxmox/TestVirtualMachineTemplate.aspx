@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestVirtualMachineTemplate.aspx.cs" Inherits="SolidCP.Portal.Proxmox.TestVirtualMachineTemplate" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestVirtualMachineTemplate.aspx.cs" Inherits="FuseCP.Portal.Proxmox.TestVirtualMachineTemplate" %>
 
 <%@ Register src="../UserControls/MessageBox.ascx" tagname="MessageBox" tagprefix="wsp" %>
 

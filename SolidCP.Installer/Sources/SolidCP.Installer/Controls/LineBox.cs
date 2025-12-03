@@ -34,7 +34,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SolidCP.Installer
+namespace FuseCP.Installer
 {
 	/// <summary>
 	/// 3D line box.

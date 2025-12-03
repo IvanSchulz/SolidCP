@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeActiveSyncSettings.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeActiveSyncSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeActiveSyncSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeActiveSyncSettings" %>
 <%@ Register Src="UserControls/HoursBox.ascx" TagName="HoursBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>

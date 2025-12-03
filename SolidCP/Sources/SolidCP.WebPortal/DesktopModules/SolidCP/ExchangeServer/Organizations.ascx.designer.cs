@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class Organizations {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// chkRecursive control.
@@ -136,7 +136,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota orgsQuota;
+        protected global::FuseCP.Portal.Quota orgsQuota;
         
         /// <summary>
         /// btnSetDefaultOrganization control.

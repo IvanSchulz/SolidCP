@@ -1,15 +1,15 @@
 <%@ Control AutoEventWireup="true" %>
-<%@ Register TagPrefix="scp" TagName="SiteFooter" Src="~/DesktopModules/SolidCP/SkinControls/SiteFooter.ascx" %>
-<%@ Register TagPrefix="scp" TagName="TopMenu" Src="~/DesktopModules/SolidCP/SkinControls/TopMenu.ascx" %>
-<%@ Register TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/SolidCP/SkinControls/Logo.ascx" %>
-<%@ Register TagPrefix="scp" TagName="SignedInUser" Src="~/DesktopModules/SolidCP/SkinControls/SignedInUser.ascx" %>
-<%@ Register TagPrefix="scp" TagName="GlobalSearch" Src="~/DesktopModules/SolidCP/SkinControls/GlobalSearch.ascx" %>
-<%@ Register TagPrefix="scp" TagName="GlobalSearchTop" Src="~/DesktopModules/SolidCP/SkinControls/GlobalSearch.ascx" %>
-<%@ Register TagPrefix="scp" TagName="UserSpaceBreadcrumb" Src="~/DesktopModules/SolidCP/SkinControls/UserSpaceBreadcrumb.ascx" %>
+<%@ Register TagPrefix="scp" TagName="SiteFooter" Src="~/DesktopModules/FuseCP/SkinControls/SiteFooter.ascx" %>
+<%@ Register TagPrefix="scp" TagName="TopMenu" Src="~/DesktopModules/FuseCP/SkinControls/TopMenu.ascx" %>
+<%@ Register TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
+<%@ Register TagPrefix="scp" TagName="SignedInUser" Src="~/DesktopModules/FuseCP/SkinControls/SignedInUser.ascx" %>
+<%@ Register TagPrefix="scp" TagName="GlobalSearch" Src="~/DesktopModules/FuseCP/SkinControls/GlobalSearch.ascx" %>
+<%@ Register TagPrefix="scp" TagName="GlobalSearchTop" Src="~/DesktopModules/FuseCP/SkinControls/GlobalSearch.ascx" %>
+<%@ Register TagPrefix="scp" TagName="UserSpaceBreadcrumb" Src="~/DesktopModules/FuseCP/SkinControls/UserSpaceBreadcrumb.ascx" %>
 
 <asp:ScriptManager ID="scriptManager" runat="server" EnablePartialRendering="true" EnableScriptGlobalization="true" EnableScriptLocalization="true">
     <Services>
-        <asp:ServiceReference Path="~/DesktopModules/SolidCP/TaskManager.asmx" />
+        <asp:ServiceReference Path="~/DesktopModules/FuseCP/TaskManager.asmx" />
     </Services>
 </asp:ScriptManager>
 <!-- WRAPPER -->

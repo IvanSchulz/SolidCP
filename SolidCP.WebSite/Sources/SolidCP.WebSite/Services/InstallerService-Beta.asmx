@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="InstallerService-Beta.asmx.cs" Class="SolidCP.WebSite.Services.InstallerService_Beta" %>
+<%@ WebService Language="C#" CodeBehind="InstallerService-Beta.asmx.cs" Class="FuseCP.WebSite.Services.InstallerService_Beta" %>

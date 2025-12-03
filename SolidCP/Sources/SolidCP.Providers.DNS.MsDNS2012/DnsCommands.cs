@@ -37,13 +37,13 @@ using System.Linq;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Net;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Management.Infrastructure;
 
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
-    /// <summary>This class wraps MS DNS server PowerShell commands used by the SolidCP.</summary>
+    /// <summary>This class wraps MS DNS server PowerShell commands used by the FuseCP.</summary>
     internal static class DnsCommands
     {
         /// <summary>Add parameter to PS command</summary>

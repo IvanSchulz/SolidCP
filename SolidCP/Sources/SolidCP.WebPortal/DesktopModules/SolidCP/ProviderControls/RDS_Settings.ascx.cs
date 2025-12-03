@@ -35,14 +35,14 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.RDS;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.RDS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.RemoteDesktopServices;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class RDS_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class RDS_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {        
         protected void Page_Load(object sender, EventArgs e)
         {

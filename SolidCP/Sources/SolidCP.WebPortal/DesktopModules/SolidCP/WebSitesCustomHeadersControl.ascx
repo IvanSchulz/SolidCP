@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesCustomHeadersControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesCustomHeadersControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesCustomHeadersControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesCustomHeadersControl" %>
 <div style="width:400px">
     <div class="FormButtonsBar">
         <asp:Button id="btnAdd" runat="server" meta:resourcekey="btnAdd" Text="Add Custom Header" CssClass="btn btn-primary" CausesValidation="false" OnClick="btnAdd_Click"/>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class HostedSharePointEditSiteCollection {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox localMessageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox localMessageBox;
         
         /// <summary>
         /// tblEditItem control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.DomainsSelectDomainControl domain;
+        protected global::FuseCP.Portal.DomainsSelectDomainControl domain;
         
         /// <summary>
         /// valRequireHostName control.
@@ -127,7 +127,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.UserSelector userSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.UserSelector userSelector;
         
         /// <summary>
         /// lblSiteCollectionLocaleID control.
@@ -163,7 +163,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaEditor maxStorage;
+        protected global::FuseCP.Portal.QuotaEditor maxStorage;
         
         /// <summary>
         /// lblWarningStorage control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaEditor warningStorage;
+        protected global::FuseCP.Portal.QuotaEditor warningStorage;
         
         /// <summary>
         /// lblTitle control.
@@ -316,7 +316,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaEditor editMaxStorage;
+        protected global::FuseCP.Portal.QuotaEditor editMaxStorage;
         
         /// <summary>
         /// lblWarningStorageView control.
@@ -334,7 +334,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaEditor editWarningStorage;
+        protected global::FuseCP.Portal.QuotaEditor editWarningStorage;
         
         /// <summary>
         /// lblTitle2 control.
@@ -379,7 +379,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secMainTools;
+        protected global::FuseCP.Portal.CollapsiblePanel secMainTools;
         
         /// <summary>
         /// ToolsPanel control.

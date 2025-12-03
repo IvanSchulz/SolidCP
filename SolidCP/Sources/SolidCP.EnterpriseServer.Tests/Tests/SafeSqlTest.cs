@@ -1,4 +1,4 @@
-﻿using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	[TestClass]
 	public class SafeSqlTest

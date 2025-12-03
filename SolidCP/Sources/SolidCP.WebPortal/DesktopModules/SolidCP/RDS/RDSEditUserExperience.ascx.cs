@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.RDS;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.RDS;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class RDSEditUserExperience : SolidCPModuleBase
+    public partial class RDSEditUserExperience : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -37,11 +37,11 @@ using System.Configuration;
 using System.Collections;
 using System.Text;
 using System.Linq;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Diagnostics;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class Server : BaseSetup
 	{

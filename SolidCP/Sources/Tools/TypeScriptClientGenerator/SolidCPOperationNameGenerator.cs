@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace TypeScriptClientGenerator
 {
-    public class SolidCPOperationNameGenerator : IOperationNameGenerator
+    public class FuseCPOperationNameGenerator : IOperationNameGenerator
     {
         public bool SupportsMultipleClients => true;
 

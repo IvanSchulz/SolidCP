@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSolutionReport.ascx.cs"
-    Inherits="SolidCP.Portal.ScheduleTaskControls.HostedSolutionReport" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSolutionReport.ascx.cs"
+    Inherits="FuseCP.Portal.ScheduleTaskControls.HostedSolutionReport" %>
 <table width="100%">
     <tr>
         <td>

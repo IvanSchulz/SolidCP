@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainActions.ascx.cs" Inherits="SolidCP.Portal.DomainActions" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainActions.ascx.cs" Inherits="FuseCP.Portal.DomainActions" %>
 <script type="text/javascript">
     function ShowProgress(btn) {
         var action = $(btn).prev().val();

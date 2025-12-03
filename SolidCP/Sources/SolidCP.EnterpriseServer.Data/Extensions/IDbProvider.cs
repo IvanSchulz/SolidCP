@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public interface IDbProvider
 	{

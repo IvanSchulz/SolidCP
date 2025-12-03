@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ApplyEnableHardQuotaFeature.ascx.cs" Inherits="SolidCP.Portal.ApplyEnableHardQuotaFeature" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ApplyEnableHardQuotaFeature.ascx.cs" Inherits="FuseCP.Portal.ApplyEnableHardQuotaFeature" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="messageBox" TagPrefix="uc4" %>
 
 <div class="panel-body form-horizontal">

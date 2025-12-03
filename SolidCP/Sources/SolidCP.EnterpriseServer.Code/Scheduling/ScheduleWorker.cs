@@ -1,4 +1,4 @@
-﻿#if NETCOREAPP
+#if NETCOREAPP
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.WindowsServices;
 using Microsoft.Extensions.Hosting.Systemd;
 
-namespace SolidCP.EnterpriseServer.Code;
+namespace FuseCP.EnterpriseServer.Code;
 
 
 public class ScheduleWorker: BackgroundService

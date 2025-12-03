@@ -37,14 +37,14 @@ using System.Data;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer.Code.SharePoint
+namespace FuseCP.EnterpriseServer.Code.SharePoint
 {
     /// <summary>
     /// Exposes handful API on hosted SharePoint site collections management.
@@ -282,7 +282,7 @@ namespace SolidCP.EnterpriseServer.Code.SharePoint
                 item.Name = String.Format("{0}://{1}", rootWebApplicationUri.Scheme, hostNameBase + "-" + counter.ToString() + "." + sslRoot);
                 siteName = String.Format("{0}", hostNameBase + "-" + counter.ToString() + "." + sslRoot);                
 
-                while  ( Database. CheckServiceItemExists( serviceId,   item. Name,   "SolidCP.Providers.SharePoint.SharePointSiteCollection,   SolidCP.Providers.Base"))  
+                while  ( Database. CheckServiceItemExists( serviceId,   item. Name,   "FuseCP.Providers.SharePoint.SharePointSiteCollection,   FuseCP.Providers.Base"))  
                 {
                     counter++;
                     item.Name = String.Format("{0}://{1}", rootWebApplicationUri.Scheme, hostNameBase + "-" + counter.ToString() + "." + sslRoot);

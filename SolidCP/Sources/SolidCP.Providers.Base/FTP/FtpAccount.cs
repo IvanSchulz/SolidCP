@@ -34,7 +34,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
 	/// <summary>
 	/// Summary description for FtpDirectoryItem.

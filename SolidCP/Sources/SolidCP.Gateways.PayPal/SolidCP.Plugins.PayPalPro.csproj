@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,8 +8,8 @@
     <ProjectGuid>{D695D58C-99F7-409E-B3D8-C1B97A8E748A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SolidCP.Ecommerce.EnterpriseServer</RootNamespace>
-    <AssemblyName>SolidCP.Plugins.PayPalPro</AssemblyName>
+    <RootNamespace>FuseCP.Ecommerce.EnterpriseServer</RootNamespace>
+    <AssemblyName>FuseCP.Plugins.PayPalPro</AssemblyName>
     <StartupObject>
     </StartupObject>
     <FileUpgradeFlags>
@@ -39,7 +39,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\SolidCP.EnterpriseServer\bin\</OutputPath>
+    <OutputPath>..\FuseCP.EnterpriseServer\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -49,7 +49,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>portable</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\SolidCP.EnterpriseServer\bin\</OutputPath>
+    <OutputPath>..\FuseCP.EnterpriseServer\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -72,9 +72,9 @@
     <Compile Include="Reference.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj">
+    <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj">
       <Project>{C09CE910-F16B-48A1-B2CC-C99B8C1CF775}</Project>
-      <Name>SolidCP.EnterpriseServer.Base</Name>
+      <Name>FuseCP.EnterpriseServer.Base</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

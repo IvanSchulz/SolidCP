@@ -1,7 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using Microsoft.Win32;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 [RunInstaller(true)]
 public partial class SetPathCustomAction : System.Configuration.Install.Installer

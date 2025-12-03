@@ -43,7 +43,7 @@ using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
 #endif
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public delegate void ScheduleFinished(SchedulerJob schedule);
 

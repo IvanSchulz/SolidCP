@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
 using System.Text;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.Providers;
-using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.Providers;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012
 {
     public class VirtualizationHelper: ControllerBase
     {

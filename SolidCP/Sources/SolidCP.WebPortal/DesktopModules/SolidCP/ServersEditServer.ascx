@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditServer.ascx.cs" Inherits="SolidCP.Portal.ServersEditServer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditServer.ascx.cs" Inherits="FuseCP.Portal.ServersEditServer" %>
 <%@ Register Src="ServerVLANsControl.ascx" TagName="ServerVLANsControl" TagPrefix="uc5" %>
 <%@ Register Src="ServerServicesControl.ascx" TagName="ServerServicesControl" TagPrefix="uc4" %>
 <%@ Register Src="ServerIPAddressesControl.ascx" TagName="ServerIPAddressesControl" TagPrefix="uc2" %>
@@ -8,7 +8,7 @@
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="ProductVersion" Src="SkinControls/ProductVersion.ascx" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 <asp:ValidationSummary ID="summary" runat="server" ShowMessageBox="true" ShowSummary="false" ValidationGroup="Server" />
@@ -300,13 +300,13 @@
                     <ul class="list-group">
 
                         <li class="list-group-item">
-                            <asp:Label ID="lblServerVersion" runat="server" meta:resourcekey="lblServerVersion" Text="SolidCP Server Version"></asp:Label>
+                            <asp:Label ID="lblServerVersion" runat="server" meta:resourcekey="lblServerVersion" Text="FuseCP Server Version"></asp:Label>
                             :<br />
                             <asp:Localize ID="locVersion" runat="server" meta:resourcekey="locVersion" />
                             <asp:Label ID="scpVersion" runat="server" />
                         </li>
                         <li class="list-group-item">
-                            <asp:Label ID="lblServerFilePath" runat="server" meta:resourcekey="lblServerFilePath" Text="SolidCP Server Filepath"></asp:Label>
+                            <asp:Label ID="lblServerFilePath" runat="server" meta:resourcekey="lblServerFilePath" Text="FuseCP Server Filepath"></asp:Label>
                             :<br />
                             <asp:Localize ID="locFilepath" runat="server" meta:resourcekey="locFilepath" />
                             <asp:Label ID="scpFilepath" runat="server" />

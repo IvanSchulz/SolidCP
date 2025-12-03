@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 
-namespace SolidCP.UniversalInstaller.Core
+namespace FuseCP.UniversalInstaller.Core
 {
 	public class Program
 	{

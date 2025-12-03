@@ -1,7 +1,7 @@
-' Copyright (c) 2016, SolidCP
-' SolidCP Is distributed under the Creative Commons Share-alike license
+' Copyright (c) 2016, FuseCP
+' FuseCP Is distributed under the Creative Commons Share-alike license
 ' 
-' SolidCP Is a fork of WebsitePanel:
+' FuseCP Is a fork of WebsitePanel:
 ' Copyright (c) 2014, Outercurve Foundation.
 ' All rights reserved.
 '
@@ -37,9 +37,9 @@ Imports System.IO
 Imports System.Text
 Imports System.Diagnostics
 Imports Microsoft.Win32
-Imports SolidCP.Providers.Utils
-Imports SolidCP.Providers.Utils.LogParser
-Imports SolidCP.Server.Utils
+Imports FuseCP.Providers.Utils
+Imports FuseCP.Providers.Utils.LogParser
+Imports FuseCP.Server.Utils
 
 Public Class MailEnable
     Inherits HostingServiceProviderBase
@@ -50,7 +50,7 @@ Public Class MailEnable
     Public Overridable Function GetDomains() As String() Implements IMailServer.GetDomains
 
         Dim domainList As List(Of String) = New List(Of String)
-        Dim po As New SolidCP.Providers.Mail.MailEnablePostoffice
+        Dim po As New FuseCP.Providers.Mail.MailEnablePostoffice
 
         po.Account = ""
         po.Name = ""
@@ -69,7 +69,7 @@ Public Class MailEnable
     End Function
 
     Public Overridable Function DomainExists(ByVal domainName As String) As Boolean Implements IMailServer.DomainExists
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
 
         ResetDomain(domain)
         domain.AccountName = domainName
@@ -80,7 +80,7 @@ Public Class MailEnable
 
     Public Overridable Function GetDomain(ByVal domainName As String) As MailDomain Implements IMailServer.GetDomain
         Dim info As MailDomain = Nothing
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
 
         ResetDomain(domain)
         domain.AccountName = domainName
@@ -97,7 +97,7 @@ Public Class MailEnable
 
     Public Overridable Sub CreateDomain(ByVal domainInfo As MailDomain) Implements IMailServer.CreateDomain
         'create a new postoffice for each account
-        Dim postoffice As New SolidCP.Providers.Mail.MailEnablePostoffice
+        Dim postoffice As New FuseCP.Providers.Mail.MailEnablePostoffice
         postoffice.Account = domainInfo.Name
         postoffice.Name = domainInfo.Name
         postoffice.Status = IIf((domainInfo.Enabled), 1, 0)
@@ -106,7 +106,7 @@ Public Class MailEnable
             Throw New Exception("Postoffice creation failedNot ")
         End If
 
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
         domain.AccountName = domainInfo.Name
         domain.DomainName = domainInfo.Name
         domain.DomainRedirectionHosts = domainInfo.RedirectionHosts
@@ -120,7 +120,7 @@ Public Class MailEnable
         Dim blackListedDomain As String
         For Each blackListedDomain In domainInfo.BlackList
 
-            Dim blacklist As New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+            Dim blacklist As New FuseCP.Providers.Mail.MailEnableDomainBlacklist
             blacklist.Account = domainInfo.Name
             blacklist.Status = 1
             blacklist.TargetDomainName = domainInfo.Name
@@ -132,7 +132,7 @@ Public Class MailEnable
     End Sub
 
     Public Overridable Sub UpdateDomain(ByVal info As MailDomain) Implements IMailServer.UpdateDomain
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
         domain.AccountName = info.Name
         domain.DomainName = info.Name
         domain.DomainRedirectionHosts = String.Empty
@@ -167,7 +167,7 @@ Public Class MailEnable
             '
             ' Update the Catch All Account
             '
-            Dim oAddressMap As New SolidCP.Providers.Mail.MailEnableAddressMap
+            Dim oAddressMap As New FuseCP.Providers.Mail.MailEnableAddressMap
 
             oAddressMap.Account = info.Name ' account
             oAddressMap.DestinationAddress = ""
@@ -268,7 +268,7 @@ Public Class MailEnable
 
             'edit blacklists 
             'delete all the blacklists
-            Dim blacklist As New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+            Dim blacklist As New FuseCP.Providers.Mail.MailEnableDomainBlacklist
             ResetBlacklist(blacklist)
             blacklist.Account = info.Name
             blacklist.TargetDomainName = info.Name
@@ -278,7 +278,7 @@ Public Class MailEnable
                 blacklist.RemoveBlacklist()
 
                 ' initialize blacklist again
-                blacklist = New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+                blacklist = New FuseCP.Providers.Mail.MailEnableDomainBlacklist
                 ResetBlacklist(blacklist)
                 blacklist.Account = info.Name
                 blacklist.TargetDomainName = info.Name
@@ -287,7 +287,7 @@ Public Class MailEnable
             'add new blacklists
             Dim blacklistedDomainName As String
             For Each blacklistedDomainName In info.BlackList
-                blacklist = New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+                blacklist = New FuseCP.Providers.Mail.MailEnableDomainBlacklist
                 blacklist.Account = info.Name
                 blacklist.TargetDomainName = info.Name
                 blacklist.BannedDomainName = blacklistedDomainName
@@ -303,13 +303,13 @@ Public Class MailEnable
 
     Public Overridable Sub DeleteDomain(ByVal domainName As String) Implements IMailServer.DeleteDomain
         'delete all postoffice logins
-        Dim login As New SolidCP.Providers.Mail.MailEnableLogin
+        Dim login As New FuseCP.Providers.Mail.MailEnableLogin
         ResetLogin(login)
         login.Account = domainName
         login.RemoveLogin()
 
         'delete all the mailboxes
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
 
         ResetMailbox(mailbox)
         mailbox.Postoffice = domainName
@@ -320,7 +320,7 @@ Public Class MailEnable
         Dim list As MailList
         For Each list In lists
             ' remove list members
-            Dim listMember As New SolidCP.Providers.Mail.MailEnableListMember
+            Dim listMember As New FuseCP.Providers.Mail.MailEnableListMember
             listMember.AccountName = domainName
             listMember.ListName = GetMailboxName(list.Name)
             listMember.Address = ""
@@ -329,7 +329,7 @@ Public Class MailEnable
             listMember.RemoveListMember()
 
             ' delete maillist
-            Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+            Dim mailList As New FuseCP.Providers.Mail.MailEnableList
             ResetMaillist(mailList)
             mailList.AccountName = domainName
             mailList.ListName = GetMailboxName(list.Name)
@@ -341,14 +341,14 @@ Public Class MailEnable
         Dim group As MailGroup
         For Each group In groups
             ' remove group members
-            Dim groupMember As New SolidCP.Providers.Mail.MailEnableGroupMember
+            Dim groupMember As New FuseCP.Providers.Mail.MailEnableGroupMember
             groupMember.Postoffice = domainName
             groupMember.Mailbox = GetMailboxName(group.Name)
             groupMember.Address = ""
             groupMember.RemoveGroupMember()
 
             ' delete group
-            Dim objGroup As New SolidCP.Providers.Mail.MailEnableGroup
+            Dim objGroup As New FuseCP.Providers.Mail.MailEnableGroup
             ResetGroup(objGroup)
             objGroup.Postoffice = domainName
             objGroup.GroupName = GetMailboxName(group.Name)
@@ -356,25 +356,25 @@ Public Class MailEnable
         Next
 
         'delete all address mappings
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         ResetAddressMap(map)
         map.Account = domainName
         map.RemoveAddressMap(True)
 
         'delete all the blacklists
-        Dim blacklist As New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+        Dim blacklist As New FuseCP.Providers.Mail.MailEnableDomainBlacklist
         ResetBlacklist(blacklist)
         blacklist.Account = domainName
         blacklist.RemoveBlacklist()
 
         'delete all domains
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
         ResetDomain(domain)
         domain.AccountName = domainName
         domain.RemoveDomain()
 
         'delete postoffice
-        Dim po As New SolidCP.Providers.Mail.MailEnablePostoffice
+        Dim po As New FuseCP.Providers.Mail.MailEnablePostoffice
         po.Account = domainName
         po.Name = domainName
         po.Host = ""
@@ -412,7 +412,7 @@ Public Class MailEnable
         '
         ' We need to get the catch all account for the domain
         '
-        Dim oAddressMap As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim oAddressMap As New FuseCP.Providers.Mail.MailEnableAddressMap
         oAddressMap.Account = info.Name
         oAddressMap.DestinationAddress = ""
         oAddressMap.SourceAddress = "[SMTP:*@" & info.Name & "]"
@@ -454,7 +454,7 @@ Public Class MailEnable
         'getting black mail list
         Dim blacklists As ArrayList = New ArrayList
 
-        Dim blacklist As New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+        Dim blacklist As New FuseCP.Providers.Mail.MailEnableDomainBlacklist
         blacklist.Account = domain.AccountName
         blacklist.Host = domain.Host
         blacklist.TargetDomainName = domain.DomainName
@@ -483,7 +483,7 @@ Public Class MailEnable
 
 #Region "Domain Aliases"
     Public Overridable Function DomainAliasExists(ByVal domainName As String, ByVal aliasName As String) As Boolean Implements IMailServer.DomainAliasExists
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
 
         ResetDomain(domain)
         domain.AccountName = domainName
@@ -494,7 +494,7 @@ Public Class MailEnable
 
     Public Overridable Function GetDomainAliases(ByVal domainName As String) As String() Implements IMailServer.GetDomainAliases
         Dim aliases As List(Of String) = New List(Of String)
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
 
         ResetDomain(domain)
         domain.AccountName = domainName
@@ -520,7 +520,7 @@ Public Class MailEnable
 
     Public Overridable Sub AddDomainAlias(ByVal domainName As String, ByVal aliasName As String) Implements IMailServer.AddDomainAlias
         ' add new domain
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
         domain.AccountName = domainName
         domain.DomainName = aliasName
         domain.DomainRedirectionHosts = ""
@@ -535,7 +535,7 @@ Public Class MailEnable
         ' get current "main domain" address mappings
         Dim srcAddr As String = "@" + domainName + "]"
         Dim maps As ArrayList = New ArrayList
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
 
         ResetAddressMap(map)
         map.Account = domainName
@@ -567,21 +567,21 @@ Public Class MailEnable
         'delete all address mappings
         Dim addr As String = "@" + aliasName.ToLower() + "]"
         Dim maps As ArrayList = New ArrayList
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         ResetAddressMap(map)
         map.Account = domainName
         map.SourceAddress = "[SMTP:*@" + aliasName + "]"
         map.RemoveAddressMap(True)
 
         'delete all the blacklists
-        Dim blacklist As New SolidCP.Providers.Mail.MailEnableDomainBlacklist
+        Dim blacklist As New FuseCP.Providers.Mail.MailEnableDomainBlacklist
         ResetBlacklist(blacklist)
         blacklist.Account = domainName
         blacklist.TargetDomainName = aliasName
         blacklist.RemoveBlacklist()
 
         'delete all domains
-        Dim domain As New SolidCP.Providers.Mail.MailEnableDomain
+        Dim domain As New FuseCP.Providers.Mail.MailEnableDomain
         ResetDomain(domain)
         domain.AccountName = domainName
         domain.DomainName = aliasName
@@ -594,7 +594,7 @@ Public Class MailEnable
     Public Overridable Function GetAccounts(ByVal domainName As String) As MailAccount() Implements IMailServer.GetAccounts
 
         Dim mailboxes As List(Of MailAccount) = New List(Of MailAccount)
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
 
         ResetMailbox(mailbox)
         mailbox.Postoffice = domainName
@@ -618,7 +618,7 @@ Public Class MailEnable
 
     Public Overridable Function GetAccount(ByVal mailboxName As String) As MailAccount Implements IMailServer.GetAccount
         Dim info As MailAccount = Nothing
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
         ResetMailbox(mailbox)
         mailbox.Postoffice = GetDomainName(mailboxName)
         mailbox.MailboxName = GetMailboxName(mailboxName)
@@ -634,7 +634,7 @@ Public Class MailEnable
         Return info
     End Function
 
-    Private Function GetMailboxInfo(ByVal mailbox As SolidCP.Providers.Mail.MailEnableMailbox) As MailAccount
+    Private Function GetMailboxInfo(ByVal mailbox As FuseCP.Providers.Mail.MailEnableMailbox) As MailAccount
         Dim info As MailAccount = New MailAccount
         info.MaxMailboxSize = IIf(mailbox.Limit = -1, 0, mailbox.Limit / 1024)
         info.Name = mailbox.MailboxName + "@" + mailbox.Postoffice
@@ -660,12 +660,12 @@ Public Class MailEnable
         info.ResponderMessage = mailbox.GetAutoResponderContents()
         info.ReplyTo = GetMailBoxReplyToAddress(info.Name)
 
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         map.Account = info.Name
         map.DestinationAddress = String.Format("[SF:{0}/{1}]", info.Name, info.Name)
         map.SourceAddress = ""
 
-        Dim login As New SolidCP.Providers.Mail.MailEnableLogin
+        Dim login As New FuseCP.Providers.Mail.MailEnableLogin
         ResetLogin(login)
         login.Account = mailbox.Postoffice
         login.UserName = info.Name
@@ -678,7 +678,7 @@ Public Class MailEnable
         Return info
     End Function
 
-    Private Function GetMailAliasInfo(ByVal mailbox As SolidCP.Providers.Mail.MailEnableMailbox) As MailAlias
+    Private Function GetMailAliasInfo(ByVal mailbox As FuseCP.Providers.Mail.MailEnableMailbox) As MailAlias
         Dim info As MailAlias = New MailAlias
         info.Name = mailbox.MailboxName + "@" + mailbox.Postoffice
 
@@ -700,12 +700,12 @@ Public Class MailEnable
         info.DeleteOnForward = (mailbox.RedirectStatus.Equals(1))
         info.Enabled = (mailbox.Status = 1)
 
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         map.Account = info.Name
         map.DestinationAddress = String.Format("[SF:{0}/{1}]", info.Name, info.Name)
         map.SourceAddress = ""
 
-        Dim login As New SolidCP.Providers.Mail.MailEnableLogin
+        Dim login As New FuseCP.Providers.Mail.MailEnableLogin
         ResetLogin(login)
         login.Account = mailbox.Postoffice
         login.UserName = info.Name
@@ -719,7 +719,7 @@ Public Class MailEnable
     End Function
 
     Public Overridable Function AccountExists(ByVal mailboxName As String) As Boolean Implements IMailServer.AccountExists
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
         ResetMailbox(mailbox)
         mailbox.Postoffice = GetDomainName(mailboxName)
         mailbox.MailboxName = GetMailboxName(mailboxName)
@@ -728,7 +728,7 @@ Public Class MailEnable
     End Function
 
     Public Overridable Sub CreateAccount(ByVal info As MailAccount) Implements IMailServer.CreateAccount
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
         Dim domainName As String = GetDomainName(info.Name)
         Dim mailboxName As String = GetMailboxName(info.Name)
         mailbox.Postoffice = domainName
@@ -776,7 +776,7 @@ Public Class MailEnable
         CreateAddressMapsForAllDomains(domainName, mailboxName, destinationAddress)
 
         ' create login
-        Dim login As New SolidCP.Providers.Mail.MailEnableLogin
+        Dim login As New FuseCP.Providers.Mail.MailEnableLogin
         login.Account = domainName
         login.Password = info.Password
         login.Status = IIf(info.Enabled, 1, 0)
@@ -797,7 +797,7 @@ Public Class MailEnable
         Dim domainName As String = GetDomainName(info.Name)
         Dim mailboxName As String = GetMailboxName(info.Name)
 
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
         mailbox.Postoffice = domainName
         mailbox.MailboxName = mailboxName
 
@@ -853,7 +853,7 @@ Public Class MailEnable
 
         ' change login password
         If (info.Password.Length > 0) Then
-            Dim login As New SolidCP.Providers.Mail.MailEnableLogin
+            Dim login As New FuseCP.Providers.Mail.MailEnableLogin
             ResetLogin(login)
             login.Account = domainName
             login.UserName = info.Name
@@ -880,7 +880,7 @@ Public Class MailEnable
         Dim domainName As String = GetDomainName(name)
         Dim mailboxName As String = GetMailboxName(name)
 
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
         ResetMailbox(mailbox)
         mailbox.Postoffice = domainName
         mailbox.MailboxName = mailboxName
@@ -890,7 +890,7 @@ Public Class MailEnable
         End If
 
         'delete the login for this mailbox
-        Dim login As New SolidCP.Providers.Mail.MailEnableLogin
+        Dim login As New FuseCP.Providers.Mail.MailEnableLogin
         ResetLogin(login)
         login.Account = domainName
         login.UserName = name
@@ -901,7 +901,7 @@ Public Class MailEnable
 
 
         'delete the address map for this mailbox
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         ResetAddressMap(map)
         map.Account = domainName
         map.DestinationAddress = String.Format("[SF:{0}/{1}]", domainName, mailboxName)
@@ -918,7 +918,7 @@ Public Class MailEnable
     Public Function GetMailAliases(ByVal domainName As String) As MailAlias() Implements IMailServer.GetMailAliases
 
         Dim mailAliases As List(Of MailAlias) = New List(Of MailAlias)
-        Dim mailbox As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailbox As New FuseCP.Providers.Mail.MailEnableMailbox
 
         ResetMailbox(mailbox)
         mailbox.Postoffice = domainName
@@ -942,7 +942,7 @@ Public Class MailEnable
 
     Public Function GetMailAlias(ByVal mailAliasName As String) As MailAlias Implements IMailServer.GetMailAlias
         Dim info As MailAlias = Nothing
-        Dim mailAlias As New SolidCP.Providers.Mail.MailEnableMailbox
+        Dim mailAlias As New FuseCP.Providers.Mail.MailEnableMailbox
         ResetMailbox(mailAlias)
         mailAlias.Postoffice = GetDomainName(mailAliasName)
         mailAlias.MailboxName = GetMailboxName(mailAliasName)
@@ -979,7 +979,7 @@ Public Class MailEnable
     ' ============================
 
     Public Overridable Function GroupExists(ByVal groupName As String) As Boolean Implements IMailServer.GroupExists
-        Dim group As New SolidCP.Providers.Mail.MailEnableGroup
+        Dim group As New FuseCP.Providers.Mail.MailEnableGroup
         ResetGroup(group)
         group.Postoffice = GetDomainName(groupName)
         group.GroupName = GetMailboxName(groupName)
@@ -988,7 +988,7 @@ Public Class MailEnable
     End Function
 
     Public Overridable Function GetGroup(ByVal groupName As String) As MailGroup Implements IMailServer.GetGroup
-        Dim objGroup As New SolidCP.Providers.Mail.MailEnableGroup
+        Dim objGroup As New FuseCP.Providers.Mail.MailEnableGroup
         ResetGroup(objGroup)
         objGroup.Postoffice = GetDomainName(groupName)
         objGroup.GroupName = GetMailboxName(groupName)
@@ -1003,7 +1003,7 @@ Public Class MailEnable
     Public Overridable Function GetGroups(ByVal domainName As String) As MailGroup() Implements IMailServer.GetGroups
         Dim groups As List(Of MailGroup) = New List(Of MailGroup)
 
-        Dim objGroup As New SolidCP.Providers.Mail.MailEnableGroup
+        Dim objGroup As New FuseCP.Providers.Mail.MailEnableGroup
         ResetGroup(objGroup)
         objGroup.Postoffice = domainName
 
@@ -1029,7 +1029,7 @@ Public Class MailEnable
             group.Members = New String() {}
         End If
 
-        Dim objGroup As New SolidCP.Providers.Mail.MailEnableGroup
+        Dim objGroup As New FuseCP.Providers.Mail.MailEnableGroup
         ResetGroup(objGroup)
 
         objGroup.Postoffice = domainName
@@ -1044,7 +1044,7 @@ Public Class MailEnable
             ' add group members
             Dim member As String
             For Each member In group.Members
-                Dim groupMember As New SolidCP.Providers.Mail.MailEnableGroupMember
+                Dim groupMember As New FuseCP.Providers.Mail.MailEnableGroupMember
                 groupMember.Postoffice = domainName
                 groupMember.Address = String.Format("[SMTP:{0}]", member)
                 groupMember.Mailbox = groupName
@@ -1065,7 +1065,7 @@ Public Class MailEnable
             group.Members = New String() {}
         End If
 
-        Dim objGroup As New SolidCP.Providers.Mail.MailEnableGroup
+        Dim objGroup As New FuseCP.Providers.Mail.MailEnableGroup
         ResetGroup(objGroup)
 
         objGroup.Postoffice = domainName
@@ -1083,7 +1083,7 @@ Public Class MailEnable
             IIf(group.Enabled, 1, 0))
 
         'delete group members
-        Dim objMember As New SolidCP.Providers.Mail.MailEnableGroupMember
+        Dim objMember As New FuseCP.Providers.Mail.MailEnableGroupMember
         objMember.Postoffice = domainName
         objMember.Mailbox = groupName
         objMember.Address = ""
@@ -1092,7 +1092,7 @@ Public Class MailEnable
         ' add group members
         Dim member As String
         For Each member In group.Members
-            Dim groupMember As New SolidCP.Providers.Mail.MailEnableGroupMember
+            Dim groupMember As New FuseCP.Providers.Mail.MailEnableGroupMember
             groupMember.Postoffice = domainName
             groupMember.Address = String.Format("[SMTP:{0}]", member)
             groupMember.Mailbox = groupName
@@ -1108,21 +1108,21 @@ Public Class MailEnable
         Dim groupName As String = GetMailboxName(name)
 
         ' remove group
-        Dim objGroup As New SolidCP.Providers.Mail.MailEnableGroup
+        Dim objGroup As New FuseCP.Providers.Mail.MailEnableGroup
         ResetGroup(objGroup)
         objGroup.Postoffice = domainName
         objGroup.GroupName = groupName
         objGroup.RemoveGroup()
 
         'delete group members
-        Dim objMember As New SolidCP.Providers.Mail.MailEnableGroupMember
+        Dim objMember As New FuseCP.Providers.Mail.MailEnableGroupMember
         objMember.Postoffice = domainName
         objMember.Mailbox = groupName
         objMember.Address = ""
         objMember.RemoveGroupMember()
 
         ' delete address maps
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         ResetAddressMap(map)
         map.Account = domainName
         map.DestinationAddress = String.Format("[SF:{0}/{1}]", domainName, groupName)
@@ -1133,7 +1133,7 @@ Public Class MailEnable
 #Region "Lists"
 
     Public Overridable Function GetList(ByVal maillistName As String) As MailList Implements IMailServer.GetList
-        Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+        Dim mailList As New FuseCP.Providers.Mail.MailEnableList
         ResetMaillist(mailList)
         mailList.AccountName = GetDomainName(maillistName)
         mailList.ListName = GetMailboxName(maillistName)
@@ -1149,7 +1149,7 @@ Public Class MailEnable
         Dim maillists As List(Of MailList) = New List(Of MailList)
 
         Try
-            Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+            Dim mailList As New FuseCP.Providers.Mail.MailEnableList
             ResetMaillist(mailList)
             mailList.AccountName = domainName
 
@@ -1202,7 +1202,7 @@ Public Class MailEnable
         Dim domainName As String = GetDomainName(name)
         Dim mailListName As String = GetMailboxName(name)
 
-        Dim listMember As New SolidCP.Providers.Mail.MailEnableListMember
+        Dim listMember As New FuseCP.Providers.Mail.MailEnableListMember
         listMember.AccountName = domainName
         listMember.ListName = mailListName
         listMember.Address = ""
@@ -1229,7 +1229,7 @@ Public Class MailEnable
     End Function
 
     Public Overridable Function ListExists(ByVal maillistName As String) As Boolean Implements IMailServer.ListExists
-        Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+        Dim mailList As New FuseCP.Providers.Mail.MailEnableList
         ResetMaillist(mailList)
         mailList.AccountName = GetDomainName(maillistName)
         mailList.ListName = GetMailboxName(maillistName)
@@ -1247,7 +1247,7 @@ Public Class MailEnable
             info.Members = New String() {}
         End If
 
-        Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+        Dim mailList As New FuseCP.Providers.Mail.MailEnableList
         ResetMaillist(mailList)
 
         mailList.AccountName = domainName
@@ -1276,7 +1276,7 @@ Public Class MailEnable
         'create mail list members
         Dim member As String
         For Each member In info.Members
-            Dim listMember As New SolidCP.Providers.Mail.MailEnableListMember
+            Dim listMember As New FuseCP.Providers.Mail.MailEnableListMember
             listMember.AccountName = domainName
             listMember.Address = String.Format("[SMTP:{0}]", member)
             listMember.ListMemberType = 0
@@ -1302,7 +1302,7 @@ Public Class MailEnable
             info.Members = New String() {}
         End If
 
-        Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+        Dim mailList As New FuseCP.Providers.Mail.MailEnableList
         ResetMaillist(mailList)
 
         mailList.AccountName = domainName
@@ -1355,7 +1355,7 @@ Public Class MailEnable
          -1)
 
         'delete list members
-        Dim listMember As New SolidCP.Providers.Mail.MailEnableListMember
+        Dim listMember As New FuseCP.Providers.Mail.MailEnableListMember
         listMember.AccountName = domainName
         listMember.ListName = maillistName
         listMember.Address = ""
@@ -1366,7 +1366,7 @@ Public Class MailEnable
         'create mail list members
         Dim member As String
         For Each member In info.Members
-            listMember = New SolidCP.Providers.Mail.MailEnableListMember
+            listMember = New FuseCP.Providers.Mail.MailEnableListMember
             listMember.AccountName = domainName
             listMember.ListName = maillistName
             listMember.Address = String.Format("[SMTP:{0}]", member)
@@ -1390,14 +1390,14 @@ Public Class MailEnable
         Dim maillistName As String = GetMailboxName(name)
 
         ' remove mailing list
-        Dim mailList As New SolidCP.Providers.Mail.MailEnableList
+        Dim mailList As New FuseCP.Providers.Mail.MailEnableList
         ResetMaillist(mailList)
         mailList.ListName = maillistName
         mailList.AccountName = domainName
         mailList.RemoveList()
 
         ' delete list members
-        Dim listMember As New SolidCP.Providers.Mail.MailEnableListMember
+        Dim listMember As New FuseCP.Providers.Mail.MailEnableListMember
         listMember.AccountName = domainName
         listMember.ListName = maillistName
         listMember.Address = ""
@@ -1407,7 +1407,7 @@ Public Class MailEnable
         listMember.RemoveListMember()
 
         ' delete address maps
-        Dim map As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim map As New FuseCP.Providers.Mail.MailEnableAddressMap
         ResetAddressMap(map)
         map.Account = domainName
         map.DestinationAddress = String.Format("[LS:{0}/{1}]", domainName, maillistName)
@@ -1452,7 +1452,7 @@ Public Class MailEnable
         login.Status = -1
     End Sub
 
-    Private Sub ResetMailbox(ByVal mailbox As SolidCP.Providers.Mail.MailEnableMailbox)
+    Private Sub ResetMailbox(ByVal mailbox As FuseCP.Providers.Mail.MailEnableMailbox)
         mailbox.Postoffice = ""
         mailbox.Host = ""
         mailbox.MailboxName = ""
@@ -1532,7 +1532,7 @@ Public Class MailEnable
         Dim domainName As String = GetDomainName(name)
         Dim groupName As String = GetMailboxName(name)
 
-        Dim groupMember As New SolidCP.Providers.Mail.MailEnableGroupMember
+        Dim groupMember As New FuseCP.Providers.Mail.MailEnableGroupMember
         groupMember.Postoffice = domainName
         groupMember.Mailbox = groupName
         groupMember.Address = ""
@@ -1553,8 +1553,8 @@ Public Class MailEnable
     End Function
 
     Private Sub CreateAddressMapsForAllDomains(ByVal domainName As String, ByVal aliasName As String, ByVal targetAddress As String)
-        Dim oDomain As New SolidCP.Providers.Mail.MailEnableDomain
-        Dim oAddressMap As New SolidCP.Providers.Mail.MailEnableAddressMap
+        Dim oDomain As New FuseCP.Providers.Mail.MailEnableDomain
+        Dim oAddressMap As New FuseCP.Providers.Mail.MailEnableAddressMap
         oDomain.AccountName = domainName
         oDomain.DomainName = ""
         oDomain.Status = -1
@@ -1868,7 +1868,7 @@ Public Class MailEnable
 
     Private Sub SetMailBoxReplyToAddress(ByVal mailbox As String, ByVal replyToAddress As String)
 
-        Dim oMEAOSO As New SolidCP.Providers.Mail.MailEnableOption
+        Dim oMEAOSO As New FuseCP.Providers.Mail.MailEnableOption
 
         With oMEAOSO
             .Scope = 2
@@ -1882,7 +1882,7 @@ Public Class MailEnable
 
     Private Function GetMailBoxReplyToAddress(ByVal mailbox As String)
 
-        Dim oMEAOSO As New SolidCP.Providers.Mail.MailEnableOption
+        Dim oMEAOSO As New FuseCP.Providers.Mail.MailEnableOption
 
         With oMEAOSO
             .Scope = 2

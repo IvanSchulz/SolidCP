@@ -3,13 +3,13 @@ using Microsoft.Identity.Client;
 using Microsoft.Web.Administration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.Web;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.Web;
+using FuseCP.UniversalInstaller.Core;
 using System;
 using System.Collections;
 using System.Data;
@@ -23,21 +23,21 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public abstract partial class Installer
 {
 	public const bool RunAsAdmin = true;
-	public virtual string SolidCP => "SolidCP";
+	public virtual string FuseCP => "FuseCP";
 	public virtual string ServerFolder => "Server";
 	public virtual string EnterpriseServerFolder => "EnterpriseServer";
 	public virtual string EnterpriseServerAltFolder => "Enterprise Server";
 	public virtual string WebPortalFolder => "Portal";
 	public virtual string WebDavPortalFolder => "WebDavPortal";
-	public virtual string ServerUser => $"{SolidCP}Server";
-	public virtual string EnterpriseServerUser => $"{SolidCP}EnterpriseServer";
-	public virtual string WebPortalUser => $"{SolidCP}Portal";
-	public virtual string SolidCPWebUsersGroup => "SCP_IUSRS";
+	public virtual string ServerUser => $"{FuseCP}Server";
+	public virtual string EnterpriseServerUser => $"{FuseCP}EnterpriseServer";
+	public virtual string WebPortalUser => $"{FuseCP}Portal";
+	public virtual string FuseCPWebUsersGroup => "SCP_IUSRS";
 	public virtual string UnixAppRootPath => "/usr/share";
 	public virtual string NewLine => Environment.NewLine;
 	public virtual bool CanInstallServer => true;
@@ -57,8 +57,8 @@ public abstract partial class Installer
 	public virtual bool IsUpdateAction => Settings.Installer.Action == SetupActions.Update;
 	public virtual bool IsSetupAction => Settings.Installer.Action == SetupActions.Setup;
 	public virtual bool IsUninstallAction => Settings.Installer.Action == SetupActions.Uninstall;
-	public virtual string SolidCPGroup => SolidCP.ToLower();
-	public virtual string SolidCPUnixGroup => SolidCPGroup;
+	public virtual string FuseCPGroup => FuseCP.ToLower();
+	public virtual string FuseCPUnixGroup => FuseCPGroup;
 
 	public const bool UseHttpsOnWindows = true;
 	public const bool UseLettuceEncrypt = false;
@@ -204,7 +204,7 @@ public abstract partial class Installer
 			foreach (var component in components)
 			{
 				var info = new ComponentInfo();
-				info.ApplicationName = SolidCP;
+				info.ApplicationName = FuseCP;
 
 				var settingsFromCode = new Dictionary<string, ComponentSettings>()
 				{
@@ -400,7 +400,7 @@ public abstract partial class Installer
 			var fileName = info.FullFilePath.Replace('\\', Path.DirectorySeparatorChar);
 
 			args[Global.Parameters.ComponentName] = info.ComponentName;
-			args[Global.Parameters.ApplicationName] = SolidCP;
+			args[Global.Parameters.ApplicationName] = FuseCP;
 			args[Global.Parameters.ComponentCode] = info.ComponentCode;
 			args[Global.Parameters.ComponentDescription] = info.ComponentDescription;
 			args[Global.Parameters.Version] = info.Version.ToString();
@@ -674,16 +674,16 @@ public abstract partial class Installer
 	{
 		/* var remoteServerSettings = new RemoteServerSettings() { ADEnabled = false };
 		// Create web users group
-		if (!SecurityUtils.GroupExists(SolidCPWebUsersGroup, remoteServerSettings, ""))
+		if (!SecurityUtils.GroupExists(FuseCPWebUsersGroup, remoteServerSettings, ""))
 		{
-			var group = new SystemGroup() { GroupName = SolidCPWebUsersGroup, Name = SolidCPWebUsersGroup, Description = "SolidCP Website User Group" };
+			var group = new SystemGroup() { GroupName = FuseCPWebUsersGroup, Name = FuseCPWebUsersGroup, Description = "FuseCP Website User Group" };
 			SecurityUtils.CreateGroup(group, remoteServerSettings, "", "");
 		} */
 
 		var site = new WebSite()
 		{
 			ContentPath = path,
-			GroupName = SolidCPWebUsersGroup,
+			GroupName = FuseCPWebUsersGroup,
 			AspNetInstalled = "4I",
 			AnonymousUsername = settings.Username ?? "",
 			AnonymousUserPassword = settings.Password ?? "",
@@ -731,7 +731,7 @@ public abstract partial class Installer
 		{
 			Info($"Install Website {name}");
 
-			((HostingServiceProviderBase)WebServer).ProviderSettings.Settings.Add("WebGroupName", SolidCPWebUsersGroup);
+			((HostingServiceProviderBase)WebServer).ProviderSettings.Settings.Add("WebGroupName", FuseCPWebUsersGroup);
 
 			WebServer.CreateSite(site);
 			InstallLog($"Installed {name} website, listening on the url(s):" +
@@ -1341,8 +1341,8 @@ public abstract partial class Installer
 	{
 		get
 		{
-			if (OSInfo.IsCore) return Activator.CreateInstance(GetType("SolidCP.UniversalInstaller.LoadContextImplementation, SolidCP.UniversalInstaller.Runtime.NetCore")) as ILoadContext;
-			else return Activator.CreateInstance(GetType("SolidCP.UniversalInstaller.LoadContextImplementation, SolidCP.UniversalInstaller.Runtime.NetFX")) as ILoadContext;
+			if (OSInfo.IsCore) return Activator.CreateInstance(GetType("FuseCP.UniversalInstaller.LoadContextImplementation, FuseCP.UniversalInstaller.Runtime.NetCore")) as ILoadContext;
+			else return Activator.CreateInstance(GetType("FuseCP.UniversalInstaller.LoadContextImplementation, FuseCP.UniversalInstaller.Runtime.NetFX")) as ILoadContext;
 		}
 	}
 
@@ -1350,8 +1350,8 @@ public abstract partial class Installer
 	{
 		get
 		{
-			if (OSInfo.IsCore) return Activator.CreateInstance(GetType("SolidCP.UniversalInstaller.Runtime.SecurityUtils, SolidCP.UniversalInstaller.Runtime.NetCore")) as SecurityUtils;
-			else return Activator.CreateInstance(GetType("SolidCP.UniversalInstaller.Runtime.SecurityUtils, SolidCP.UniversalInstaller.Runtime.NetFX")) as SecurityUtils;
+			if (OSInfo.IsCore) return Activator.CreateInstance(GetType("FuseCP.UniversalInstaller.Runtime.SecurityUtils, FuseCP.UniversalInstaller.Runtime.NetCore")) as SecurityUtils;
+			else return Activator.CreateInstance(GetType("FuseCP.UniversalInstaller.Runtime.SecurityUtils, FuseCP.UniversalInstaller.Runtime.NetFX")) as SecurityUtils;
 		}
 	}
 
@@ -1359,8 +1359,8 @@ public abstract partial class Installer
 	{
 		get
 		{
-			if (OSInfo.IsCore) return Activator.CreateInstance(GetType("SolidCP.UniversalInstaller.Runtime.WebUtils, SolidCP.UniversalInstaller.Runtime.NetCore")) as WebUtils;
-			else return Activator.CreateInstance(GetType("SolidCP.UniversalInstaller.Runtime.WebUtils, SolidCP.UniversalInstaller.Runtime.NetFX")) as WebUtils;
+			if (OSInfo.IsCore) return Activator.CreateInstance(GetType("FuseCP.UniversalInstaller.Runtime.WebUtils, FuseCP.UniversalInstaller.Runtime.NetCore")) as WebUtils;
+			else return Activator.CreateInstance(GetType("FuseCP.UniversalInstaller.Runtime.WebUtils, FuseCP.UniversalInstaller.Runtime.NetFX")) as WebUtils;
 		}
 	}
 
@@ -1414,7 +1414,7 @@ public abstract partial class Installer
 					case OSFlavor.Alpine: current = new AlpineInstaller(); break;
 					default:
 						var assembly = Assembly.GetExecutingAssembly();
-						var type = assembly.GetType($"SolidCP.UniversalInstaller.{flavor}");
+						var type = assembly.GetType($"FuseCP.UniversalInstaller.{flavor}");
 						if (type != null) current = Activator.CreateInstance(type) as Installer;
 						else throw new PlatformNotSupportedException("This OS is not supported by the installer.");
 						break;
@@ -1519,7 +1519,7 @@ public abstract partial class Installer
 			process.WaitForExit();
 			UI.EndWaitCursor();
 
-			Console.WriteLine("SolidCP Installer has been updated. Please restart it...");
+			Console.WriteLine("FuseCP Installer has been updated. Please restart it...");
 			Installer.Current.Exit();
 		}
 

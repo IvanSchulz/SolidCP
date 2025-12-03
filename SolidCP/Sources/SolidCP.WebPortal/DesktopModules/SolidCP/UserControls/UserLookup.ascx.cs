@@ -42,9 +42,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Text;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserLookup : SolidCPControlBase
+    public partial class UserLookup : FuseCPControlBase
     {
         public bool AllowEmptySelection
         {

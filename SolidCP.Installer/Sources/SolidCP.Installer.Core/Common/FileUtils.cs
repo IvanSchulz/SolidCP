@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 
     /// <summary>

@@ -1,8 +1,8 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCustomersSummary.ascx.cs" Inherits="SolidCP.Portal.UserCustomersSummary" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCustomersSummary.ascx.cs" Inherits="FuseCP.Portal.UserCustomersSummary" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <div class="FormButtonsBar right">
 	<div class="right">
 		<CPCC:StyleButton id="btnCreate" CssClass="btn btn-primary" runat="server" OnClick="btnCreate_Click"> <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnCreate"/> </CPCC:StyleButton>

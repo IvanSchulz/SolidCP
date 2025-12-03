@@ -1,4 +1,4 @@
-﻿namespace SolidCP.Providers.StorageSpaces
+namespace FuseCP.Providers.StorageSpaces
 {
     public class StorageSpaceFolderShare
     {

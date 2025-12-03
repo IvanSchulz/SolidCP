@@ -34,7 +34,7 @@ using System;
 using System.Configuration;
 using System.Reflection;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for Globals.
@@ -44,12 +44,12 @@ namespace SolidCP.Portal
         public const string UsernameDefaultAllowedRegExp = @"a-zA-Z0-9_\.";
 		public const string MetaCharacters2Escape = @".\+-()<>{}[]|*$^&?!";
 
-        public static string SolidCPRootPath
+        public static string FuseCPRootPath
         {
             get
             {
 				return PortalUtils.ApplicationPath
-					+ "/DesktopModules/SolidCP/";
+					+ "/DesktopModules/FuseCP/";
             }
         }
     }

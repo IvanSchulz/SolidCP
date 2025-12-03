@@ -35,12 +35,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VpsToolsDeleteServer : SolidCPModuleBase
+    public partial class VpsToolsDeleteServer : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace SolidCP.Portal.VPS
             }
 
             // load export settings
-            if (PanelSecurity.EffectiveUser.Role == SolidCP.EnterpriseServer.UserRole.Administrator)
+            if (PanelSecurity.EffectiveUser.Role == FuseCP.EnterpriseServer.UserRole.Administrator)
             {
                 txtExportPath.Text = ES.Services.VPS.GetDefaultExportPath(PanelRequest.ItemID);
             }

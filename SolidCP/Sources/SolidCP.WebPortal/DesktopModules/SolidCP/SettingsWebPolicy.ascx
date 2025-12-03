@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsWebPolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsWebPolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsWebPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsWebPolicy" %>
 <%@ Register Src="UserControls/UsernamePolicyEditor.ascx" TagName="UsernamePolicyEditor" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

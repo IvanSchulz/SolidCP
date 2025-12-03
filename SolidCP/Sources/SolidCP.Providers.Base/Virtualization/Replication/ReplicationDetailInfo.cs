@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class ReplicationDetailInfo
     {

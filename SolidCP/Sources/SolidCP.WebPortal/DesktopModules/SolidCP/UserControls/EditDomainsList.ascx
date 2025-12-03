@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditDomainsList.ascx.cs" Inherits="SolidCP.Portal.UserControls.EditDomainsList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditDomainsList.ascx.cs" Inherits="FuseCP.Portal.UserControls.EditDomainsList" %>
 <div style="width:400px;">
 	<div class="FormButtonsBar">
 		<asp:Button id="btnAddDomain" runat="server" meta:resourcekey="btnAddDomain" Text="Add"

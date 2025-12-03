@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
         <TargetFramework>net48</TargetFramework>
@@ -35,9 +35,9 @@
         <Content Include="Web-v2.0.config" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj" />
-        <ProjectReference Include="..\..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj" />
+        <ProjectReference Include="..\..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
     </ItemGroup>
 </Project>

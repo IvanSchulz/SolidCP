@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSummaryLetter.ascx.cs" Inherits="SolidCP.Portal.SpaceSummaryLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSummaryLetter.ascx.cs" Inherits="FuseCP.Portal.SpaceSummaryLetter" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>

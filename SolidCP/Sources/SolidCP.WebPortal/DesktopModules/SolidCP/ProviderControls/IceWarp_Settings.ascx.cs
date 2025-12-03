@@ -44,9 +44,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class IceWarp_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class IceWarp_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         public const string MailFilterDestinations = "MailFilterDestinations";
 

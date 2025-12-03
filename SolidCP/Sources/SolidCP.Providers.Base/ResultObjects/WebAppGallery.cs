@@ -32,9 +32,9 @@
 
 ﻿using System;
 using System.Collections.Generic;
-using SolidCP.Providers.WebAppGallery;
+using FuseCP.Providers.WebAppGallery;
 
-namespace SolidCP.Providers.ResultObjects
+namespace FuseCP.Providers.ResultObjects
 {
 	public class GalleryCategoriesResult : ValueResultObject<List<GalleryCategory>>
 	{

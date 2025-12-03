@@ -42,13 +42,13 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Web;
 
-using SolidCP.Providers;
-using SolidCP.Providers.Database;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.Database;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class DatabaseServerController : ControllerBase, IImportController, IBackupController
     {

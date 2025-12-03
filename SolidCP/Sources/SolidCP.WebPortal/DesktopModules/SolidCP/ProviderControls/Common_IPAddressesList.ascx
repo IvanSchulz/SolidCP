@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Common_IPAddressesList.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Common_IPAddressesList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Common_IPAddressesList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Common_IPAddressesList" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 <table>
     <tr>

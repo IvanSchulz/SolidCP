@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -28,13 +28,13 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.SfB.UserControls
+namespace FuseCP.Portal.SfB.UserControls
 {
-    public partial class SfBUserSettings : SolidCPControlBase
+    public partial class SfBUserSettings : FuseCPControlBase
     {
 
         private string sipAddressToSelect;
@@ -121,9 +121,9 @@ namespace SolidCP.Portal.SfB.UserControls
                 email.Visible = false;
                 ddlSipAddresses.Visible = true;
 
-                SolidCP.EnterpriseServer.ExchangeEmailAddress[] emails = ES.Services.ExchangeServer.GetMailboxEmailAddresses(PanelRequest.ItemID, PanelRequest.AccountID);
+                FuseCP.EnterpriseServer.ExchangeEmailAddress[] emails = ES.Services.ExchangeServer.GetMailboxEmailAddresses(PanelRequest.ItemID, PanelRequest.AccountID);
 
-                foreach (SolidCP.EnterpriseServer.ExchangeEmailAddress mail in emails)
+                foreach (FuseCP.EnterpriseServer.ExchangeEmailAddress mail in emails)
                 {
                     ListItem li = new ListItem();
                     li.Text = mail.EmailAddress;

@@ -36,7 +36,7 @@ using System.Text;
 using System.Security;
 using System.Security.Principal;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class EnterpriseServerIdentity : IIdentity
     {

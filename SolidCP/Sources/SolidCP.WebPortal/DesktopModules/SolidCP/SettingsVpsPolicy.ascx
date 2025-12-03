@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsVpsPolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsVpsPolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsVpsPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsVpsPolicy" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 

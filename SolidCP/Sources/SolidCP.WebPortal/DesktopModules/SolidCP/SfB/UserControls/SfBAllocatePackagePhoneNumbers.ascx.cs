@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -31,12 +31,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class SfBAllocatePackagePhoneNumbers : SolidCPModuleBase
+    public partial class SfBAllocatePackagePhoneNumbers : FuseCPModuleBase
     {
         private IPAddressPool pool;
         public IPAddressPool Pool

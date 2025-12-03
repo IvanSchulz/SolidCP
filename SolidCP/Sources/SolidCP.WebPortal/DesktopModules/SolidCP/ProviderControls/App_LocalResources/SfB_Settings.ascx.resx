@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -136,7 +136,7 @@
     <value>Enterprise pool or &lt;br/&gt;Standard Edition Server name:</value>
   </data>
   <data name="locSimpleUrlBase.Text" xml:space="preserve">
-    <value>Simple Url Base (Example https://skypeweb.solidcp.com/ ):</value>
+    <value>Simple Url Base (Example https://skypeweb.fusecp.com/ ):</value>
   </data>
   <data name="UseDefault.Text" xml:space="preserve">
     <value>&lt;Located on the same server&gt;</value>

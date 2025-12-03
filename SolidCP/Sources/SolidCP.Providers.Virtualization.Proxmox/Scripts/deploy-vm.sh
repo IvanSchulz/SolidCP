@@ -4,7 +4,7 @@
 # (Version 1.0.0)
 #
 # First prepare a Template VM or TemplateFile (When using LXC Container) you want to base clones on.
-# Then set this script in SolidCP Proxmox Virtualization Server Settings VM Deploy Script like this (replace ./ with the actual path to the file):
+# Then set this script in FuseCP Proxmox Virtualization Server Settings VM Deploy Script like this (replace ./ with the actual path to the file):
 #
 # ./deploy-vm.sh
 #

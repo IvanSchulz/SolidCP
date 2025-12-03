@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.HostedSolution {
+namespace FuseCP.Portal.HostedSolution {
     
     
     public partial class OrganizationCreateUser {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// divWrapper control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// NewUserDiv control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.EmailAddress email;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.EmailAddress email;
         
         /// <summary>
         /// sendToControl control.
@@ -190,7 +190,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SendToControl sendToControl;
+        protected global::FuseCP.Portal.UserControls.SendToControl sendToControl;
         
         /// <summary>
         /// PasswordBlock control.
@@ -208,7 +208,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl password;
+        protected global::FuseCP.Portal.PasswordControl password;
         
         /// <summary>
         /// chkUserMustChangePassword control.
@@ -235,7 +235,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EmailControl sendInstructionEmail;
+        protected global::FuseCP.Portal.UserControls.EmailControl sendInstructionEmail;
         
         /// <summary>
         /// btnCreate control.

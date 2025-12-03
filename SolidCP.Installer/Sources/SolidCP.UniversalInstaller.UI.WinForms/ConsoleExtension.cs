@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 internal static class ConsoleExtension
 {

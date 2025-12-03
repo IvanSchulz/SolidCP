@@ -1,7 +1,7 @@
 // Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
-// SolidCP is a fork of SolidCP:
+// FuseCP is a fork of FuseCP:
 // Copyright (c) 2015, Outercurve Foundation.
 // All rights reserved.
 //
@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public sealed class OS
 	{

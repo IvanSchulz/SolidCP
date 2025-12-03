@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "SolidCP.EnterpriseServer.Data": {
+    "FuseCP.EnterpriseServer.Data": {
         "commandName": "Project",
-        "commandLineArgs": "\"Server=(local);Initial Catalog=SolidCPFresh;uid=sa;pwd=Password12;TrustServerCertificate=true;Connection Timeout=300;command timeout=300\" SolidCP.EnterpriseServer.Data.Entities.ServiceDefaultProperty 8"
+        "commandLineArgs": "\"Server=(local);Initial Catalog=FuseCPFresh;uid=sa;pwd=Password12;TrustServerCertificate=true;Connection Timeout=300;command timeout=300\" FuseCP.EnterpriseServer.Data.Entities.ServiceDefaultProperty 8"
     }
   }
 }

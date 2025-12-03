@@ -1,9 +1,9 @@
-﻿using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 using System;
 using System.Collections;
 
-namespace SolidCP.EnterpriseServer.MailTemplates
+namespace FuseCP.EnterpriseServer.MailTemplates
 {
 	public class TemplateHashtable : Hashtable, IDisposable
 	{
@@ -61,7 +61,7 @@ namespace SolidCP.EnterpriseServer.MailTemplates
 			if (user != null)
 			{
 				this.User = user;
-				UserSettings userSettings = UserController.GetUserSettings(user.UserId, "SolidCPPolicy");
+				UserSettings userSettings = UserController.GetUserSettings(user.UserId, "FuseCPPolicy");
 				if (!string.IsNullOrEmpty(userSettings["LogoImageURL"]))
 				{
 					this.LogoUrl = userSettings["LogoImageURL"];

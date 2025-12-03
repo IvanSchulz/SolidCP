@@ -34,14 +34,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
-    public partial class DeletedUserGeneralSettings : SolidCPModuleBase
+    public partial class DeletedUserGeneralSettings : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
@@ -12,11 +12,11 @@ using System.Net.Http;
 using System.Net.Security;
 using System.Threading;
 using System.Security.Cryptography.X509Certificates;
-using SolidCP.Providers.OS;
-using SolidCP.Web.Clients;
-using SolidCP.Web.Services;
+using FuseCP.Providers.OS;
+using FuseCP.Web.Clients;
+using FuseCP.Web.Services;
 
-namespace SolidCP.Tests;
+namespace FuseCP.Tests;
 
 public enum Component
 {
@@ -95,17 +95,17 @@ public class Servers
 			$@"..\..\..\..\{Paths.App}.EnterpriseServer\bin\netstandard" +
 			$@"..\..\..\..\{Paths.App}.Server\bin_dotnet;" +
 			$@"..\..\..\..\{Paths.App}.Server\bin\netstandard;";
-		SolidCP.Web.Services.AssemblyLoaderNetCore.Init();
+		FuseCP.Web.Services.AssemblyLoaderNetCore.Init();
 #endif
 		// TODO rest of Server path
 
 		try
 			{
-				var eserver = Assembly.Load("SolidCP.EnterpriseServer");
+				var eserver = Assembly.Load("FuseCP.EnterpriseServer");
 				if (eserver != null)
 				{
 					// init password validator
-					var validatorType = eserver.GetType("SolidCP.EnterpriseServer.UsernamePasswordValidator");
+					var validatorType = eserver.GetType("FuseCP.EnterpriseServer.UsernamePasswordValidator");
 					var init = validatorType.GetMethod("Init", BindingFlags.Public | BindingFlags.Static);
 					init.Invoke(null, new object[0]);
 				}
@@ -114,10 +114,10 @@ public class Servers
 
 		try
 		{
-			var aserver = Assembly.Load("SolidCP.Server");
+			var aserver = Assembly.Load("FuseCP.Server");
 			if (aserver != null)
 			{
-				var validatorType = aserver.GetType("SolidCP.Server.PasswordValidator");
+				var validatorType = aserver.GetType("FuseCP.Server.PasswordValidator");
 				var init = validatorType.GetMethod("Init", BindingFlags.Public | BindingFlags.Static);
 				init.Invoke(null, new object[0]);
 			}
@@ -246,8 +246,8 @@ public class Servers
 		{
 			return type.Component switch
 			{
-				Component.Server => "assembly://SolidCP.Server",
-				Component.EnterpriseServer => "assembly://SolidCP.EnterpriseServer",
+				Component.Server => "assembly://FuseCP.Server",
+				Component.EnterpriseServer => "assembly://FuseCP.EnterpriseServer",
 				_ => throw new ArgumentOutOfRangeException(nameof(type.Component), type.Component, null)
 			};
 		}

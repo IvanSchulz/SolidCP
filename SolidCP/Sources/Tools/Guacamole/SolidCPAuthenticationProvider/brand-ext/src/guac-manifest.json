@@ -1,7 +1,7 @@
 {
     "guacamoleVersion" : "*",
     "name"             : "Virtual Console",
-    "namespace"        : "guacamole-brand-solidcp",
+    "namespace"        : "guacamole-brand-fusecp",
     
     "css" : [
         "css/login.css"
@@ -14,7 +14,7 @@
     ],
     
     "resources" : {
-        "resources/images/solidcp/logo.png" : "image/png"
+        "resources/images/fusecp/logo.png" : "image/png"
     },
     
     "translations" : [

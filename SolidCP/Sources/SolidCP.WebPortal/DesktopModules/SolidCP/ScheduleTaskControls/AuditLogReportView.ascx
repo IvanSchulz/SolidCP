@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AuditLogReportView.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.AuditLogReportView" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AuditLogReportView.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.AuditLogReportView" %>
 <div>
     <br />
 	<table>

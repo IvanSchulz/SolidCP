@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.UserControls.ScheduleTaskView {
+namespace FuseCP.Portal.UserControls.ScheduleTaskView {
     
     
     /// <summary>

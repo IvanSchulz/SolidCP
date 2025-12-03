@@ -40,13 +40,13 @@ using Microsoft.Web.Administration;
 using System.DirectoryServices;
 using System.Text.RegularExpressions;
 using System.Linq;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Diagnostics;
 using System.Reflection;
 using System.Reflection.Emit;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller.Runtime
+namespace FuseCP.UniversalInstaller.Runtime
 {
 	/// <summary>
 	/// Web utils class.
@@ -1265,7 +1265,7 @@ namespace SolidCP.UniversalInstaller.Runtime
 				Log.Write($"Found Website ID: SiteName {site}  ID: {siteId}\n");
 
 				// extract wacs.exe and wcfcert.exe from embedded resource and save it in the website's bin folder
-				var installerPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "SolidCP Installer");
+				var installerPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "FuseCP Installer");
 				var version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyVersionAttribute>().Version;
 				var leFolder = Path.Combine(installerPath, "bin", "LetsEncrypt", version);
 				var command = Path.Combine(leFolder, "wacs.exe");

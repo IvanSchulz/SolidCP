@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.BlackBerry
+namespace FuseCP.Portal.BlackBerry
 {
-    public partial class CreateNewBlackBerryUser : SolidCPModuleBase
+    public partial class CreateNewBlackBerryUser : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

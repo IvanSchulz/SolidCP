@@ -35,14 +35,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
 	public class AmsDomain
 	{
 		private string domainName;
 		private TreeNode domainConfig;
 
-		public SolidCP.Providers.Mail.TreeNode DomainConfig
+		public FuseCP.Providers.Mail.TreeNode DomainConfig
 		{
 			get { return this.domainConfig; }
 		}

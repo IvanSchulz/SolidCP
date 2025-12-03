@@ -40,14 +40,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SettingsFtpPolicy {
-        protected SolidCP.Portal.CollapsiblePanel secAccountPolicy;
+        protected FuseCP.Portal.CollapsiblePanel secAccountPolicy;
         protected System.Web.UI.WebControls.Panel AccountPolicyPanel;
         protected System.Web.UI.WebControls.Label lblUsername;
-        protected SolidCP.Portal.UsernamePolicyEditor userNamePolicy;
+        protected FuseCP.Portal.UsernamePolicyEditor userNamePolicy;
         protected System.Web.UI.WebControls.Label lblPassword;
-        protected SolidCP.Portal.PasswordPolicyEditor userPasswordPolicy;
+        protected FuseCP.Portal.PasswordPolicyEditor userPasswordPolicy;
     }
 }

@@ -1,5 +1,5 @@
-﻿# Migrating an existing SQL Server Database to MySQL
-Be aware that by running EnterpriseServer on MySQL SolidCP will perform slower than with SQL Server,
+# Migrating an existing SQL Server Database to MySQL
+Be aware that by running EnterpriseServer on MySQL FuseCP will perform slower than with SQL Server,
 because it does not use Stored Procedures but Entity Framework. But if you are using SQL Express,
 the database size limit of 5GB might be an issue due to the size of the AuditLog. So you might
 consider using MySQL as an alternative.
@@ -11,15 +11,15 @@ database to MySQL follow these steps:
 # Create a fresh MySQL database
 - Open MySQL Workbench and create a new schema for the database.
 - Select the schema you've created as default schema.
-- Open SolidCP.EnterpriseServer.sln or SolidCP.WebPortalAndEnterpriseServerCombined.sln in
+- Open FuseCP.EnterpriseServer.sln or FuseCP.WebPortalAndEnterpriseServerCombined.sln in
   VisualStudio.
-- Open the file SolidCP.EnterpriseServer.Data\Migrations\MySql\install.mysql.sql
+- Open the file FuseCP.EnterpriseServer.Data\Migrations\MySql\install.mysql.sql
 - Copy the text of the install.mysql.sql script to the Clipboard, create a new query in MySQL
   Workbench and paste the copied text.
 - Run the script on the database. This schould create the schema and seed data on your MySQL
   server.
 
-# Create an ODBC Datasource for your SQL Server SolidCP database
+# Create an ODBC Datasource for your SQL Server FuseCP database
 - Open **Start > Windows Administrative Tools**.
 - Choose the 32-bit or 64-bit ODBC drivers according to your system.
 - A window pops up, click **System DSN** tab **> Add**.

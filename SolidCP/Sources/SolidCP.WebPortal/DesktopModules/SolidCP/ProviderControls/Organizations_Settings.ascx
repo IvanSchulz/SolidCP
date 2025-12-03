@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Organizations_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Organizations_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Organizations_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Organizations_Settings" %>
 <table width="100%"  cellspacing="0">
     <tr>
         <td class="SubHead" width="200" nowrap>

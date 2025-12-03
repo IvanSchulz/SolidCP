@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,18 +8,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml.Serialization;
-using SolidCP.Providers.OS;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Exceptions;
-using SolidCP.WebDav.Core.Extensions;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Resources;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Scp.Framework;
+using FuseCP.Providers.OS;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Exceptions;
+using FuseCP.WebDav.Core.Extensions;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Resources;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Scp.Framework;
 
-namespace SolidCP.WebDav.Core.Managers
+namespace FuseCP.WebDav.Core.Managers
 {
     public class WebDavManager : IWebDavManager
     {

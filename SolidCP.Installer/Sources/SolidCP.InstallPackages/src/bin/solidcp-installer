@@ -1,2 +1,2 @@
 #!/bin/sh
-exec dotnet /usr/share/solidcp/Installer/SolidCP.Installer.dll
+exec dotnet /usr/share/fusecp/Installer/FuseCP.Installer.dll

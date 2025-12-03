@@ -33,11 +33,11 @@
 using System;
 using System.Data;
 using System.Web.UI;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserCustomersSummary : SolidCPModuleBase
+    public partial class UserCustomersSummary : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

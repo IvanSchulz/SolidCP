@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-﻿using SolidCP.EnterpriseServer.Base.HostedSolution;
-﻿using SolidCP.Providers.HostedSolution;
+﻿using FuseCP.EnterpriseServer.Base.HostedSolution;
+﻿using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.BlackBerry
+namespace FuseCP.Portal.BlackBerry
 {
-    public partial class BlackBerryUsers : SolidCPModuleBase
+    public partial class BlackBerryUsers : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

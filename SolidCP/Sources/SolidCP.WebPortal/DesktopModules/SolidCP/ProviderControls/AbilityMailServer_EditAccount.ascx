@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AbilityMailServer_EditAccount.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.AbilityMailServer_EditAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AbilityMailServer_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.AbilityMailServer_EditAccount" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="secAutoresponder" runat="server"

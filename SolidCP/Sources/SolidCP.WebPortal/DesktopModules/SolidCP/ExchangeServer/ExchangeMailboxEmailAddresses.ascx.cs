@@ -42,13 +42,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using EntServer = SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using EntServer = FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxEmailAddresses : SolidCPModuleBase
+    public partial class ExchangeMailboxEmailAddresses : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

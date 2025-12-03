@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     public class Brew : Installer
 	{

@@ -39,10 +39,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller.Core;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class CertificatePage : BannerWizardPage
 	{

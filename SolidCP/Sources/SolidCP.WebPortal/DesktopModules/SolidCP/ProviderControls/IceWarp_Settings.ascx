@@ -1,6 +1,6 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.IceWarp_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IceWarp_Settings" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <table width="100%">
 	<tr>
 		<td class="SubHead" width="150">

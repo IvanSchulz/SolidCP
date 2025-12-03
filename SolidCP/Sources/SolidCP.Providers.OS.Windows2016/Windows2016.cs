@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // Redistribution and use in source and binary forms, with or without modification,
@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -28,13 +28,13 @@
 
 using Microsoft.Win32;
 using Mono.Unix.Native;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -54,7 +54,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 
     public class Windows2016 : HostingServiceProviderBase, IWindowsOperatingSystem
@@ -65,7 +65,7 @@ namespace SolidCP.Providers.OS
         private const string ODBC_SOURCES_KEY_NAME = @"ODBC Data Sources";
         private const string ODBC_INST_KEY = @"SOFTWARE\ODBC\ODBCINST.INI\";
 
-        private const string DSN_DESCRIPTION = @"SolidCP Data Source";
+        private const string DSN_DESCRIPTION = @"FuseCP Data Source";
 
         private const string MSSQL_DRIVER = "SQL Server";
         private const string MSSQL_NATIVE_DRIVER = "SQL Native Client";
@@ -1399,7 +1399,7 @@ namespace SolidCP.Providers.OS
         public virtual WSLShell WSL => WSLShell.Default;
 
         static TraceListener defaultTraceListener = null;
-        public TraceListener DefaultTraceListener => defaultTraceListener ?? (defaultTraceListener = new SolidCP.Server.Utils.EventLogTraceListener());
+        public TraceListener DefaultTraceListener => defaultTraceListener ?? (defaultTraceListener = new FuseCP.Server.Utils.EventLogTraceListener());
 
 
         public override bool IsInstalled()
@@ -1522,7 +1522,7 @@ namespace SolidCP.Providers.OS
                 if (id.Contains("72") || id.Contains("104"))
                     return true;
                 else if (name.Contains("file server resource manager")
-                     || name.Contains("ressourcen-manager f�r dateiserver"))
+                     || name.Contains("ressourcen-manager f?r dateiserver"))
                     return true;
             }
 
@@ -1973,6 +1973,6 @@ namespace SolidCP.Providers.OS
 
         #endregion
 
-        protected virtual Type WebServerType => Type.GetType("SolidCP.Providers.Web.IIs100, SolidCP.Providers.Web.IIs100");
+        protected virtual Type WebServerType => Type.GetType("FuseCP.Providers.Web.IIs100, FuseCP.Providers.Web.IIs100");
     }
 }

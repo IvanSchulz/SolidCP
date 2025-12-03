@@ -41,9 +41,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class InstallFolderPage : BannerWizardPage
 	{

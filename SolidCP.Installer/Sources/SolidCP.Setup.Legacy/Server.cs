@@ -37,12 +37,12 @@ using System.Configuration;
 using System.Windows.Forms;
 using System.Collections;
 using System.Text;
-using SolidCP.Setup.Actions;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Actions;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
 using System.Diagnostics;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class Server : BaseSetup
 	{

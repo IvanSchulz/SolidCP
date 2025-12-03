@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>net10.0;net48;netstandard2.0</TargetFrameworks>
         <LangVersion>13</LangVersion>
         <ImplicitUsings>disable</ImplicitUsings>
-        <ScaffoldConnectionString>Server=(local);Initial Catalog=SolidCPFresh;uid=sa;pwd=Password12;TrustServerCertificate=true;Connection Timeout=300;command timeout=300</ScaffoldConnectionString>
+        <ScaffoldConnectionString>Server=(local);Initial Catalog=FuseCPFresh;uid=sa;pwd=Password12;TrustServerCertificate=true;Connection Timeout=300;command timeout=300</ScaffoldConnectionString>
         <SupportOracle Condition="$(TargetFramework) != 'net48'">false</SupportOracle>
 		<UsePomelo>true</UsePomelo>
 		<UseMySql Condition="'$(TargetFramework)' == 'net9.0'">false</UseMySql>
@@ -18,7 +18,7 @@
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
         <OutputPath>bin\$(Configuration)</OutputPath>
         <EntityFramework6>6.5</EntityFramework6>
-        <PackageId>SolidCP.EnterpriseServer.Data</PackageId>
+        <PackageId>FuseCP.EnterpriseServer.Data</PackageId>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
         <DebugType>embedded</DebugType>
         <!-- Use EntityFramework 6.4 or 6.5 -->
@@ -29,17 +29,17 @@
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
-        <AssemblyName>SolidCP.EnterpriseServer.Data.NetFX</AssemblyName>
+        <AssemblyName>FuseCP.EnterpriseServer.Data.NetFX</AssemblyName>
         <OutputType>Library</OutputType>
         <StartupObject></StartupObject>
     </PropertyGroup>
     <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
-        <AssemblyName>SolidCP.EnterpriseServer.Data.NetCore</AssemblyName>
+        <AssemblyName>FuseCP.EnterpriseServer.Data.NetCore</AssemblyName>
         <OutputType>Exe</OutputType>
-        <StartupObject>SolidCP.EnterpriseServer.Data.Program</StartupObject>
+        <StartupObject>FuseCP.EnterpriseServer.Data.Program</StartupObject>
     </PropertyGroup>
 	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-        <AssemblyName>SolidCP.EnterpriseServer.Data.NetStandard</AssemblyName>
+        <AssemblyName>FuseCP.EnterpriseServer.Data.NetStandard</AssemblyName>
         <OutputType>Library</OutputType>
         <StartupObject></StartupObject>
     </PropertyGroup>
@@ -120,7 +120,7 @@
         <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
         <PackageReference Include="MySql.Data" Version="9.4.0" />
         <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
-        <ProjectReference Include="..\SolidCP.Web.Services\SolidCP.Web.Services.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Services\FuseCP.Web.Services.csproj" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
@@ -140,8 +140,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
     </ItemGroup>
 
     <Target Name="Scaffold">

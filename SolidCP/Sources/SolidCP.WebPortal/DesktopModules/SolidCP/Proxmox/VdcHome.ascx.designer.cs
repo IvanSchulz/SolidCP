@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox {
+namespace FuseCP.Portal.Proxmox {
     
     
     public partial class VdcHome {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// btnCreate-Steuerelement
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.SearchBox searchBox;
+        protected global::FuseCP.Portal.SearchBox searchBox;
         
         /// <summary>
         /// btnReplicaStates-Steuerelement

@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.Providers.DNS;
+using FuseCP.Providers.DNS;
 
-namespace SolidCP.Providers.DomainLookup
+namespace FuseCP.Providers.DomainLookup
 {
     public class DnsRecordInfo
     {

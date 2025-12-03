@@ -34,7 +34,7 @@ using System;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Shows rollback process.

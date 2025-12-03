@@ -1,1 +1,1 @@
-<%@ WebService Language="C#" CodeBehind="RemoteDesktopServices.asmx.cs" Class="SolidCP.Server.RemoteDesktopServices" %>
+<%@ WebService Language="C#" CodeBehind="RemoteDesktopServices.asmx.cs" Class="FuseCP.Server.RemoteDesktopServices" %>

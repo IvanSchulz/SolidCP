@@ -37,12 +37,12 @@ using System.Web;
 using System.Web.Services;
 using System.Data;
 
-namespace SolidCP.WebSite.Services
+namespace FuseCP.WebSite.Services
 {
     /// <summary>
     /// Summary description for InstallerService
     /// </summary>
-    [WebService(Namespace = "http://installer.solidcp.com/services")]
+    [WebService(Namespace = "http://installer.fusecp.com/services")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 

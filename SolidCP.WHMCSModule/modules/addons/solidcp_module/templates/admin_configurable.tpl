@@ -1,7 +1,7 @@
 <h3>Configurable Options automation</h3>
 {if $settings.ConfigurableOptionsActive eq 0}
     <div id="servicecontent_configurable">
-        <div class="errorbox">{$LANG.SolidCP_configurablenotactive}</div>
+        <div class="errorbox">{$LANG.FuseCP_configurablenotactive}</div>
     </div>
 {else}
     <script type="text/javascript">
@@ -9,7 +9,7 @@
 			var scp_id_input = document.getElementById("conf_scp_id");
 			var scp_id = parseInt(scp_id_input.value);
 			if (isNaN(scp_id) || scp_id <= 0 || scp_id > 2147483647){
-				alert("Invalid SolidCP-ID.");
+				alert("Invalid FuseCP-ID.");
 				scp_id_input.focus();
 				return false;
 			}
@@ -20,7 +20,7 @@
             var reqstr = form.serialize();
             reqstr = reqstr+'&ajax=1';
 
-            $.post("addonmodules.php?module=solidcp_module", reqstr,
+            $.post("addonmodules.php?module=fusecp_module", reqstr,
             function(data){
                 if (data.substr(0,9)=="redirect|") {
                     window.location = data.substr(9);
@@ -40,7 +40,7 @@
             if(confirm('Are you sure you want to delete this configurable option?')){
 				var searchConf = document.getElementById("searchConf").value;
 				var onlyAssigned = document.getElementById("showOnlyAssignedConf").checked;
-                var reqstr = "module=solidcp_module&action=delete_configurable&id="+whmcs_id+"&ajax=1&searchConf="+searchConf;
+                var reqstr = "module=fusecp_module&action=delete_configurable&id="+whmcs_id+"&ajax=1&searchConf="+searchConf;
 				if (onlyAssigned) reqstr += "&showOnlyAssignedConf=1";
 
                 $.post("addonmodules.php", reqstr,
@@ -99,21 +99,21 @@
                 <div class="modal-header panel-heading">
                     <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
-                        <span class="sr-only">{$LANG.SolidCP_close}</span>
+                        <span class="sr-only">{$LANG.FuseCP_close}</span>
                     </button>
-                    <h4 class="modal-title" id="modal_configurable_edit_form_Label">{$LANG.SolidCP_edit_configurable_option}</h4>
+                    <h4 class="modal-title" id="modal_configurable_edit_form_Label">{$LANG.FuseCP_edit_configurable_option}</h4>
                 </div>
                 <div class="modal-body panel-body">
                         <input type="hidden" name="action" value="edit_configurable"/>
-                        <input type="hidden" name="module" value="solidcp_module"/>
+                        <input type="hidden" name="module" value="fusecp_module"/>
 						<input type="hidden" id="conf_whmcs_id" name="whmcs_id" value="" />
-                        <div class="form-group"><label>{$LANG.SolidCP_solidcp_id}:</label><input type="text" id="conf_scp_id" name="scp_id" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_solidcp_id_tooltip}" /></div>
-                        <div class="form-group"><label><input type="checkbox" id="conf_is_ipaddress" name="is_ipaddress" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_is_ip_address_tooltip}" /> {$LANG.SolidCP_is_ip_address}</label></div>
+                        <div class="form-group"><label>{$LANG.FuseCP_fusecp_id}:</label><input type="text" id="conf_scp_id" name="scp_id" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_fusecp_id_tooltip}" /></div>
+                        <div class="form-group"><label><input type="checkbox" id="conf_is_ipaddress" name="is_ipaddress" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_is_ip_address_tooltip}" /> {$LANG.FuseCP_is_ip_address}</label></div>
                 </div>
                 <div class="modal-footer panel-footer">
-                    <input type="submit" onclick="runConfigurableSaveCommand();return false;" value="{$LANG.SolidCP_save_changes}" class="btn btn-primary"/>
+                    <input type="submit" onclick="runConfigurableSaveCommand();return false;" value="{$LANG.FuseCP_save_changes}" class="btn btn-primary"/>
                     <button type='button' class='btn btn-default' data-dismiss="modal">
-                        {$LANG.SolidCP_cancel}
+                        {$LANG.FuseCP_cancel}
                     </button>
                 </div>
             </div>
@@ -131,20 +131,20 @@
 	
 	<div class="panel-heading clearfix" style="background-color: lightgray;">
 		<div class="form-group">
-			<input type="text" id="searchConf" name="searchConf" value="{$searchConf}" onkeyup="searchConfigurable(0, 2)" onclick="searchConfigurable(0, 2)" placeholder="{$LANG.SolidCP_search_configurable}" style="width: 500px;"/>
+			<input type="text" id="searchConf" name="searchConf" value="{$searchConf}" onkeyup="searchConfigurable(0, 2)" onclick="searchConfigurable(0, 2)" placeholder="{$LANG.FuseCP_search_configurable}" style="width: 500px;"/>
 		</div>
 		<div class="form-group">
-			<label><input type="checkbox" id="showOnlyAssignedConf" name="showOnlyAssignedConf" value="1" {if $showOnlyAssignedConf}checked{/if} onclick="searchConfigurable(0, 2)" /> {$LANG.SolidCP_show_only_assigned_conf}</label>
+			<label><input type="checkbox" id="showOnlyAssignedConf" name="showOnlyAssignedConf" value="1" {if $showOnlyAssignedConf}checked{/if} onclick="searchConfigurable(0, 2)" /> {$LANG.FuseCP_show_only_assigned_conf}</label>
 		</div>
 	</div>
 	
     <div class="tablebg">
         <table class="table table-striped" width="100%" border="0" cellspacing="1" cellpadding="3" id="configurable_table">
             <tr>
-				<th>{$LANG.SolidCP_configurableoptionname}</th>
-				<th>{$LANG.SolidCP_whmcs_id}</th>
-				<th>{$LANG.SolidCP_solidcp_id}</th>
-				<th>{$LANG.SolidCP_hidden}</th>
+				<th>{$LANG.FuseCP_configurableoptionname}</th>
+				<th>{$LANG.FuseCP_whmcs_id}</th>
+				<th>{$LANG.FuseCP_fusecp_id}</th>
+				<th>{$LANG.FuseCP_hidden}</th>
 				<th width="20"></th>
 				<th width="20"></th>
 			</tr>
@@ -154,15 +154,15 @@
 					<td>{$option->whmcs_id}</td>
 					<td>{$option->scp_id}</td>
 					<td>{$option->hidden}</td>
-					<td><a href="#" onclick="openConfigurableEditDialog('{$option->whmcs_id}', '{$option->scp_id}', '{$option->is_ipaddress}'); return false;" title="{$LANG.SolidCP_edit}"><i class="fas fa-pencil-alt"></i></a></td>
+					<td><a href="#" onclick="openConfigurableEditDialog('{$option->whmcs_id}', '{$option->scp_id}', '{$option->is_ipaddress}'); return false;" title="{$LANG.FuseCP_edit}"><i class="fas fa-pencil-alt"></i></a></td>
 					<td>
 						{if $option->scp_id}
-						<a href="{$params['modulelink']}&action=configurable_delete&id={$option->whmcs_id}" onclick="runConfigurableDeleteCommand('{$option->whmcs_id}'); return false;" title="{$LANG.SolidCP_delete}"><i class="fa fa-times textred"></i></a>
+						<a href="{$params['modulelink']}&action=configurable_delete&id={$option->whmcs_id}" onclick="runConfigurableDeleteCommand('{$option->whmcs_id}'); return false;" title="{$LANG.FuseCP_delete}"><i class="fa fa-times textred"></i></a>
 						{/if}
 					</td>
 				</tr>
             {foreachelse}
-                <tr><td colspan="5">{$LANG.SolidCP_norecordsfound}</td></tr>
+                <tr><td colspan="5">{$LANG.FuseCP_norecordsfound}</td></tr>
             {/foreach}
         </table>
 

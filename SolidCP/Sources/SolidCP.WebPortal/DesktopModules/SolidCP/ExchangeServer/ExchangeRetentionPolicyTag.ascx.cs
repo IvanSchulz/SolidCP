@@ -48,14 +48,14 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeRetentionPolicyTag : SolidCPModuleBase
+    public partial class ExchangeRetentionPolicyTag : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -92,7 +92,7 @@ namespace SolidCP.Portal.ExchangeServer
 
         private void BindRetentionPolicy()
         {
-            SolidCP.Providers.HostedSolution.ExchangeRetentionPolicyTag[] list = ES.Services.ExchangeServer.GetExchangeRetentionPolicyTags(PanelRequest.ItemID);
+            FuseCP.Providers.HostedSolution.ExchangeRetentionPolicyTag[] list = ES.Services.ExchangeServer.GetExchangeRetentionPolicyTags(PanelRequest.ItemID);
 
             gvPolicy.DataSource = list;
             gvPolicy.DataBind();
@@ -106,7 +106,7 @@ namespace SolidCP.Portal.ExchangeServer
             if (!Page.IsValid)
                 return;
 
-            SolidCP.Providers.HostedSolution.ExchangeRetentionPolicyTag tag = new Providers.HostedSolution.ExchangeRetentionPolicyTag();
+            FuseCP.Providers.HostedSolution.ExchangeRetentionPolicyTag tag = new Providers.HostedSolution.ExchangeRetentionPolicyTag();
             tag.TagName = txtPolicy.Text;
             tag.TagType = Convert.ToInt32(ddTagType.SelectedValue);
             tag.AgeLimitForRetention = ageLimitForRetention.QuotaValue;

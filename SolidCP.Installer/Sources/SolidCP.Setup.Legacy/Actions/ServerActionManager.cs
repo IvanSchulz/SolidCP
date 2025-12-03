@@ -34,8 +34,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
 using Microsoft.Web.Management;
 using Microsoft.Web.Administration;
 using Ionic.Zip;
@@ -46,14 +46,14 @@ using System.Linq;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using System.Security.Cryptography.X509Certificates;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Runtime.Remoting.Contexts;
 using System.Web.Services.Description;
 using System.Diagnostics;
 using System.Windows.Forms;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public static class MyExtensions
 	{
@@ -859,7 +859,7 @@ namespace SolidCP.Setup.Actions
 				else hash = Utils.ComputeSHAServerPassword(vars.ServerPassword);
 				var XmlDoc = new XmlDocument();
 				XmlDoc.Load(file);
-				var Node = XmlDoc.SelectSingleNode("configuration/SolidCP.server/security/password") as XmlElement;
+				var Node = XmlDoc.SelectSingleNode("configuration/FuseCP.server/security/password") as XmlElement;
 				if (Node == null)
 					throw new Exception("Unable to set a server access password. Check structure of configuration file.");
 				else
@@ -987,7 +987,7 @@ namespace SolidCP.Setup.Actions
 		{
 			//
 			if (String.IsNullOrEmpty(vars.InstallationFolder))
-				vars.InstallationFolder = String.Format(@"C:\SolidCP\{0}", vars.ComponentName);
+				vars.InstallationFolder = String.Format(@"C:\FuseCP\{0}", vars.ComponentName);
 			//
 			if (String.IsNullOrEmpty(vars.WebSiteDomain))
 				vars.WebSiteDomain = String.Empty;
@@ -1234,14 +1234,14 @@ namespace SolidCP.Setup.Actions
 			swaggerwcfsection = XElement.Parse($@"
 <swaggerwcf>
 	<settings>
-		<setting name=""InfoDescription"" value=""SolidCP Server Service"" />
+		<setting name=""InfoDescription"" value=""FuseCP Server Service"" />
 		<setting name=""InfoVersion"" value=""{vars.Version}"" />
 		<setting name=""InfoTermsOfService"" value=""Terms of Service"" />
-		<setting name=""InfoTitle"" value=""SolidCP Server Service"" />
-		<setting name=""InfoContactName"" value=""SolidCP"" />
-		<setting name=""InfoContactUrl"" value=""http://solidcp.com/forum"" />
-		<setting name=""InfoContactEmail"" value=""support@solidcp.com"" />
-		<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/SolidCP/blob/master/LICENSE.txt"" />
+		<setting name=""InfoTitle"" value=""FuseCP Server Service"" />
+		<setting name=""InfoContactName"" value=""FuseCP"" />
+		<setting name=""InfoContactUrl"" value=""http://fusecp.com/forum"" />
+		<setting name=""InfoContactEmail"" value=""support@fusecp.com"" />
+		<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/master/LICENSE.txt"" />
 		<setting name=""InfoLicenseName"" value=""Creative Commons Share-alike"" />
 	</settings>
 </swaggerwcf>");
@@ -1362,14 +1362,14 @@ namespace SolidCP.Setup.Actions
 			swaggerwcfsection = XElement.Parse($@"
 <swaggerwcf>
 	<settings>
-		<setting name=""InfoDescription"" value=""SolidCP EnterpriseServer Service"" />
+		<setting name=""InfoDescription"" value=""FuseCP EnterpriseServer Service"" />
 		<setting name=""InfoVersion"" value=""{vars.Version}"" />
 		<setting name=""InfoTermsOfService"" value=""Terms of Service"" />
-		<setting name=""InfoTitle"" value=""SolidCP EnterpriseServer Service"" />
-		<setting name=""InfoContactName"" value=""SolidCP"" />
-		<setting name=""InfoContactUrl"" value=""http://solidcp.com/forum"" />
-		<setting name=""InfoContactEmail"" value=""support@solidcp.com"" />
-		<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/SolidCP/blob/master/LICENSE.txt"" />
+		<setting name=""InfoTitle"" value=""FuseCP EnterpriseServer Service"" />
+		<setting name=""InfoContactName"" value=""FuseCP"" />
+		<setting name=""InfoContactUrl"" value=""http://fusecp.com/forum"" />
+		<setting name=""InfoContactEmail"" value=""support@fusecp.com"" />
+		<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/master/LICENSE.txt"" />
 		<setting name=""InfoLicenseName"" value=""Creative Commons Share-alike"" />
 	</settings>
 </swaggerwcf>");
@@ -1699,11 +1699,11 @@ namespace SolidCP.Setup.Actions
 		}
 	}
 
-	public class CleanupSolidCPModulesListAction : Action, IInstallAction
+	public class CleanupFuseCPModulesListAction : Action, IInstallAction
 	{
 		void IInstallAction.Run(SetupVariables vars)
 		{
-			var filePath = Path.Combine(vars.InstallationFolder, @"App_Data\SolidCP_Modules.config");
+			var filePath = Path.Combine(vars.InstallationFolder, @"App_Data\FuseCP_Modules.config");
 			//
 			var xdoc = XDocument.Load(filePath);
 			//

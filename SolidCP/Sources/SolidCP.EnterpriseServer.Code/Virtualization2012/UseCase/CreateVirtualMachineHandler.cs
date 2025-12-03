@@ -1,11 +1,11 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -14,7 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.UseCase
 {
     public class CreateVirtualMachineHandler: ControllerBase
     {
@@ -191,7 +191,7 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
                         // re-read package IPs
                         List<PackageIPAddress> packageIPs = ServerController.GetPackageUnassignedIPAddresses(
                                         packageId, IPAddressPool.VpsExternalNetwork);
-                        // get new externalAddresses IDs (Yep, very strange WSP/SolidCP logic)
+                        // get new externalAddresses IDs (Yep, very strange WSP/FuseCP logic)
                         for (int i = 0; i < externalAddresses.Length; i++)
                         {
                             externalAddresses[i] = packageIPs[i].PackageAddressID;

@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesHeliconApeControl.ascx.cs"
-	Inherits="SolidCP.Portal.WebSitesHeliconApeControl" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+	Inherits="FuseCP.Portal.WebSitesHeliconApeControl" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <style type="text/css">
     .HtaccessPanel {

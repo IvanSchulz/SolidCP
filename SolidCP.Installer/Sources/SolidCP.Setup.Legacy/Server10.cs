@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using SolidCP.Setup.Actions;
+using FuseCP.Setup.Actions;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     /// <summary>
     /// Release 1.5.0

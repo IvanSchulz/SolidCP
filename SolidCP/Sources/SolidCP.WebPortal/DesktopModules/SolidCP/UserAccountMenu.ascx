@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountMenu.ascx.cs" Inherits="SolidCP.Portal.UserAccountMenu" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountMenu.ascx.cs" Inherits="FuseCP.Portal.UserAccountMenu" %>
 
 <asp:Localize ID="locMenuTitle" runat="server" meta:resourcekey="locMenuTitle" Visible="false"></asp:Localize>
 

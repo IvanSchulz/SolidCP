@@ -34,18 +34,18 @@ using System;
 using System.Web;
 using System.Web.Security;
 using System.Collections.Concurrent;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.EnterpriseServer;
-//using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer.Base;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.EnterpriseServer;
+//using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer.Base;
 
 #if Modules
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 #else
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
-	using SolidCP.Portal;
+	using FuseCP.Portal;
 #endif
 
 	// ES.Services

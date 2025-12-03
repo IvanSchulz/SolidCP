@@ -2,8 +2,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PublishUrl>publish\</PublishUrl>
-        <OutputPath>..\SolidCP.Server\bin\netstandard</OutputPath>
-        <ServerPath>..\SolidCP.Server\bin\netstandard</ServerPath>
+        <OutputPath>..\FuseCP.Server\bin\netstandard</OutputPath>
+        <ServerPath>..\FuseCP.Server\bin\netstandard</ServerPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -33,7 +33,7 @@
         <Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
     </ItemGroup>
 
     <Target Name="CopyPackageReferences" AfterTargets="Build">

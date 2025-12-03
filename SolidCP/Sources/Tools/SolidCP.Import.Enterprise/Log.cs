@@ -32,7 +32,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	/// <summary>
 	/// Installer Log.
@@ -46,7 +46,7 @@ namespace SolidCP.Import.Enterprise
 		{
 		}
 
-		private static string logFile = "SolidCP.Import.Enterprise.log";
+		private static string logFile = "FuseCP.Import.Enterprise.log";
 
 		/// <summary>
 		/// Initializes trace listeners.

@@ -45,8 +45,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCompany("SolidCP")]
-[assembly: AssemblyCopyright("Copyright © 2016 SolidCP.")]
+[assembly: AssemblyCompany("FuseCP")]
+[assembly: AssemblyCopyright("Copyright © 2016 FuseCP.")]
 [assembly: AssemblyVersion("1.2.0.0")]
 [assembly: AssemblyFileVersion("1.2.0.38")]
 [assembly: AssemblyInformationalVersion("1.2.0")]

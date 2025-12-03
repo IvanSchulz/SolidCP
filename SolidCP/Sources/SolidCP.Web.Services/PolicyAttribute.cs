@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 	public enum Policies { Encrypted, ServerAuthenticated, EnterpriseServerAuthenticated }
 	public class PolicyAttribute : Attribute

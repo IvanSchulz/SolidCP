@@ -1,12 +1,12 @@
-﻿using System.Web;
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Ninject;
-using SolidCP.WebDavPortal.DependencyInjection;
-using SolidCP.WebDavPortal.Models;
-using SolidCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDavPortal.DependencyInjection;
+using FuseCP.WebDavPortal.Models;
+using FuseCP.WebDavPortal.UI.Routes;
 
-namespace SolidCP.WebDavPortal.CustomAttributes
+namespace FuseCP.WebDavPortal.CustomAttributes
 {
     public class LdapAuthorizationAttribute : AuthorizeAttribute
     {

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersAddService.ascx.cs" Inherits="SolidCP.Portal.ServersAddService" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersAddService.ascx.cs" Inherits="FuseCP.Portal.ServersAddService" %>
 <%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>

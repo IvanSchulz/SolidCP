@@ -40,11 +40,11 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using SolidCP.Providers.Mail;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-	public partial class SmarterMail50_EditDomain_Features : SolidCPControlBase
+	public partial class SmarterMail50_EditDomain_Features : FuseCPControlBase
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

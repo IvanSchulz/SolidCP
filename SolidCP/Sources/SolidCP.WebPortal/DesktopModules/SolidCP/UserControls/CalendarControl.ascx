@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CalendarControl.ascx.cs" Inherits="SolidCP.Portal.CalendarControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CalendarControl.ascx.cs" Inherits="FuseCP.Portal.CalendarControl" %>
 
 <asp:TextBox ID="txtDate" runat="server" CssClass="form-control" Width="100px">22/22/2006</asp:TextBox>
     <asp:RequiredFieldValidator id="dateValidator" CssClass="NormalBold" runat="server" ControlToValidate="txtDate"

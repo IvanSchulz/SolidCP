@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="ResizeImage.ashx.cs" Class="SolidCP.Portal.ResizeImage" %>
+<%@ WebHandler Language="C#" CodeBehind="ResizeImage.ashx.cs" Class="FuseCP.Portal.ResizeImage" %>

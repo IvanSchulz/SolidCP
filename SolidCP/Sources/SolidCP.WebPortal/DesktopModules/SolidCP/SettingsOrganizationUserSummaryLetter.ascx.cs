@@ -32,9 +32,9 @@
 
 using System;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsOrganizationUserSummaryLetter : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsOrganizationUserSummaryLetter : FuseCPControlBase, IUserSettingsEditorControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

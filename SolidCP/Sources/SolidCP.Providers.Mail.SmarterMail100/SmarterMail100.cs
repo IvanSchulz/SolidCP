@@ -32,9 +32,9 @@
 
 using Microsoft.Win32;
 using Newtonsoft.Json;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,9 +49,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Reflection;
 using static System.Net.Mime.MediaTypeNames;
-using FileUtils = SolidCP.Providers.Utils.FileUtils;
+using FileUtils = FuseCP.Providers.Utils.FileUtils;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
     class SmarterMail100 : HostingServiceProviderBase, IMailServer
 	{

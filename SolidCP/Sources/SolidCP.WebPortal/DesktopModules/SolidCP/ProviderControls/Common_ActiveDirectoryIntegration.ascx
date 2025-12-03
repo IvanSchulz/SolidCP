@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Common_ActiveDirectoryIntegration.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Common_ActiveDirectoryIntegration" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Common_ActiveDirectoryIntegration.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Common_ActiveDirectoryIntegration" %>
 <table>
     <tr>
         <td class="Normal">

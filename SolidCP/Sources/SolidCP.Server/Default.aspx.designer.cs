@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 #if NETFRAMEWORK
-namespace SolidCP.Server {
+namespace FuseCP.Server {
     
     
     public partial class DefaultPage {

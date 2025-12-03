@@ -14,7 +14,7 @@
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
         <OutputPath>bin_dotnet</OutputPath>
-        <StartupObject>SolidCP.Server.Program</StartupObject>
+        <StartupObject>FuseCP.Server.Program</StartupObject>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
     <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
@@ -27,8 +27,8 @@
         <Compile Remove="WebServices\**\*.*" />
         <Content Remove="WebServices\**\*.*" />
         <EmbeddedResource Remove="WebServices\**\*.*" />
-        <None Include="WebServices\**\*.cs" Exclude="WebServices\SolidCP.Build\obj\**\*.cs" />
-        <None Remove="WebServices\SolidCP.Build\obj\**" />
+        <None Include="WebServices\**\*.cs" Exclude="WebServices\FuseCP.Build\obj\**\*.cs" />
+        <None Remove="WebServices\FuseCP.Build\obj\**" />
         <None Remove="**\*.asmx" />
         <Content Remove="bin_dotnet\**\*.*" />
     </ItemGroup>
@@ -56,11 +56,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.Build\SolidCP.Build.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-        <ProjectReference Include="..\SolidCP.Providers.Database.SqlServer\SolidCP.Providers.Database.SqlServer.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Services\SolidCP.Web.Services.csproj" />
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+        <ProjectReference Include="..\FuseCP.Build\FuseCP.Build.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\FuseCP.Providers.Database.SqlServer\FuseCP.Providers.Database.SqlServer.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Services\FuseCP.Web.Services.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.0" />
@@ -94,20 +94,20 @@
             IncludeAssets="None" ExcludeAssets="All" PrivateAssets="None" />-->
     </ItemGroup>
     <ItemGroup>
-        <Analyzer Include="..\SolidCP.Build\bin\$(Configuration)\netstandard2.0\RazorBlade.dll" />
+        <Analyzer Include="..\FuseCP.Build\bin\$(Configuration)\netstandard2.0\RazorBlade.dll" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="WebServices\SolidCP.Build\SolidCP.Build.WebServices\" />
+        <Folder Include="WebServices\FuseCP.Build\FuseCP.Build.WebServices\" />
     </ItemGroup>
     
     <Target Name="DeleteUnusedDlls" AfterTargets="Build" Condition="'$(TargetFramework)' == 'net48'">
         <Message Text="Delete unused dll files" Importance="high" />
         <ItemGroup>
             <FilesToDelete Include="bin\WebServices\**\*.*" />
-            <FilesToMove Include="bin\SolidCP.Server.Utils.*" />
+            <FilesToMove Include="bin\FuseCP.Server.Utils.*" />
             <FilesToMove Include="bin\Ionic.Zip.Reduced.*" />
             <FilesToMove Include="bin\DotNetZip.*" />
             <FilesToMove Include="bin\Newtonsoft.Json.*" />
@@ -118,10 +118,10 @@
             <FilesToMove Include="bin\System.*" />
             <FilesToMove Include="bin\Renci.SshNet.*" />
             <FilesToMove Include="bin\RazorBlade.*" />
-            <FilesToMove Include="bin\SolidCP.Build.*" />
+            <FilesToMove Include="bin\FuseCP.Build.*" />
             <FilesToMove Include="bin\Microsoft.Web.Administration.*" />
             <FilesToMove Include="bin\SwaggerWcf.*" />
-            <FilesToMove Include="bin\SolidCP.Providers.*" />
+            <FilesToMove Include="bin\FuseCP.Providers.*" />
             <FilesToMove Include="bin\Microsoft.SharePoint.*" />
             <FilesToMove Include="bin\Microsoft.Identity.*" />
             <FilesToMove Include="bin\Microsoft.IdentityModel.*" />
@@ -130,7 +130,7 @@
 			<FilesToMove Include="bin\Mono.Unix.*" />
 			<FilesToMove Include="bin\MySql.*" />
             <FilesToMove Include="bin\Microsoft.Extensions.*" />
-            <FilesToMove Include="bin\SolidCP.Server.WPIService.*" />
+            <FilesToMove Include="bin\FuseCP.Server.WPIService.*" />
             <FilesToMove Include="bin\WPIServiceContract.*" />
             <FilesToMove Include="bin\Azure.*" />
             <FilesToMove Include="bin\BouncyCastle.*" />

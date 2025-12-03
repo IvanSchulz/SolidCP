@@ -30,9 +30,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	public class OfflineRegistrar : SystemPluginBase, IDomainRegistrar
 	{

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
@@ -11,7 +11,7 @@ using CoreWCF;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 #if NETFRAMEWORK
 	public class UserNamePasswordValidator: System.IdentityModel.Selectors.UserNamePasswordValidator

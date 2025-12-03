@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangePublicFolderMailFlowSettings.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangePublicFolderMailFlowSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangePublicFolderMailFlowSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangePublicFolderMailFlowSettings" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/PublicFolderTabs.ascx" TagName="PublicFolderTabs" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>

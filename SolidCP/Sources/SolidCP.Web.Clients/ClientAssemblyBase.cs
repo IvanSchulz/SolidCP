@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.Web.Clients
+namespace FuseCP.Web.Clients
 {
 	public class ClientAssemblyBase
 	{
@@ -47,12 +47,12 @@ namespace SolidCP.Web.Clients
 
 				lock (Lock)
 				{
-					if (serviceAssembly == null) serviceAssembly = Assembly.Load("SolidCP.Web.Services");
+					if (serviceAssembly == null) serviceAssembly = Assembly.Load("FuseCP.Web.Services");
 				}
-				var validatorType = serviceAssembly.GetType("SolidCP.Web.Services.UserNamePasswordValidator");
+				var validatorType = serviceAssembly.GetType("FuseCP.Web.Services.UserNamePasswordValidator");
 				var validatorPolicyField = validatorType.GetField("Policy");
 				var validator = Activator.CreateInstance(validatorType);
-				var policyType = serviceAssembly.GetType("SolidCP.Web.Services.PolicyAttribute");
+				var policyType = serviceAssembly.GetType("FuseCP.Web.Services.PolicyAttribute");
 				var policy = Activator.CreateInstance(policyType, Client.Policy.Policy);
 				validatorPolicyField.SetValue(validator, policy);
 

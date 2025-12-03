@@ -36,7 +36,7 @@ using System.Text;
 using System.Management;
 using System.Diagnostics;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     /// <summary>
     /// DEPRECATED: This class will be removed in the next release (after 2025?).

@@ -32,15 +32,15 @@
 
 using System;
 using System.Text.RegularExpressions;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class EnterpriseStorageCreateFolder : SolidCPModuleBase
+    public partial class EnterpriseStorageCreateFolder : FuseCPModuleBase
     {
         #region Constants
 

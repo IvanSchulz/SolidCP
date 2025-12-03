@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Benutzername</value>
   </data>
   <data name="ComparePasswordsValidator.ErrorMessage" xml:space="preserve">
-    <value>Beide WiederverkÃ¤ufer-PasswÃ¶rter mÃ¼ssen Ã¼bereinstimmen</value>
+    <value>Beide Wiederverkäufer-Passwörter müssen übereinstimmen</value>
   </data>
   <data name="DefaultGatewayValidator.ErrorMessage" xml:space="preserve">
     <value>Geben Sie eine Standard-Gateway-IP ein</value>
@@ -133,7 +133,7 @@
     <value>Geben Sie einen Pfad zum Speichern von exportierten VPS ein</value>
   </data>
   <data name="HostnamePatternValidator.ErrorMessage" xml:space="preserve">
-    <value>Geben Sie ein Muster fÃ¼r den Hostnamen ein</value>
+    <value>Geben Sie ein Muster für den Hostnamen ein</value>
   </data>
   <data name="locAlternateNameServer.Text" xml:space="preserve">
     <value>Alternativer Name-Server:</value>
@@ -145,7 +145,7 @@
     <value>Festplattentyp:</value>
   </data>
   <data name="locSCPResellerAccount.Text" xml:space="preserve">
-    <value>SolidCP-WiederverkÃ¤uferkonto</value>
+    <value>FuseCP-Wiederverkäuferkonto</value>
   </data>
   <data name="locDvdIsoPath.Text" xml:space="preserve">
     <value>DVD-Bibliothek-Pfad:</value>
@@ -169,7 +169,7 @@
     <value>VPS-Hostname</value>
   </data>
   <data name="locHostnamePattern.Text" xml:space="preserve">
-    <value>Muster fÃ¼r Hostnamen:</value>
+    <value>Muster für Hostnamen:</value>
   </data>
   <data name="locIPFormat.Text" xml:space="preserve">
     <value>IP-Adressen-Format:</value>
@@ -184,7 +184,7 @@
     <value>Betriebssystemvorlagen-Pfad:</value>
   </data>
   <data name="locPatternText.Text" xml:space="preserve">
-    <value>Wenn es dem Benutzer nicht erlaubt ist, eigene individuelle Host-Namen zu vergeben, wird das System einen Host-Namen fÃ¼r neue VPS, basierend auf diesem Muster generieren.&lt;br/&gt;&lt;br/&gt;Die folgenden Platzhaltervariablen kÃ¶nnen in dem Muster benutzt werden:&lt;br/&gt;[USERNAME], [USER_ID], [SPACE_ID]</value>
+    <value>Wenn es dem Benutzer nicht erlaubt ist, eigene individuelle Host-Namen zu vergeben, wird das System einen Host-Namen für neue VPS, basierend auf diesem Muster generieren.&lt;br/&gt;&lt;br/&gt;Die folgenden Platzhaltervariablen können in dem Muster benutzt werden:&lt;br/&gt;[USERNAME], [USER_ID], [SPACE_ID]</value>
   </data>
   <data name="locPreferredNameServer.Text" xml:space="preserve">
     <value>Bevorzugter Nameserver:</value>
@@ -193,10 +193,10 @@
     <value>Privates Netzwerk</value>
   </data>
   <data name="locResellerAccountText.Text" xml:space="preserve">
-    <value>FÃ¼r die automatische Bereitstellung des SolidCP Control Panels in VPS geben Sie bitte die SolidCP WiederverkÃ¤uferkonto-Details unten ein:</value>
+    <value>Für die automatische Bereitstellung des FuseCP Control Panels in VPS geben Sie bitte die FuseCP Wiederverkäuferkonto-Details unten ein:</value>
   </data>
   <data name="locResellerConfirmPassword.Text" xml:space="preserve">
-    <value>Passwort bestÃ¤tigen:</value>
+    <value>Passwort bestätigen:</value>
   </data>
   <data name="locResellerPassword.Text" xml:space="preserve">
     <value>Passwort:</value>
@@ -214,16 +214,16 @@
     <value>Was soll der VPS tun, wenn der physikalische Computer startet?</value>
   </data>
   <data name="locStartupDelay.Text" xml:space="preserve">
-    <value>StartverzÃ¶gerung:</value>
+    <value>Startverzögerung:</value>
   </data>
   <data name="locStartupDelayText.Text" xml:space="preserve">
-    <value>Geben Sie eine StartverzÃ¶gerung an, um den Verbrauch an Ressourcen zwischen den virtuellen Maschinen beim Start zu reduzieren.</value>
+    <value>Geben Sie eine Startverzögerung an, um den Verbrauch an Ressourcen zwischen den virtuellen Maschinen beim Start zu reduzieren.</value>
   </data>
   <data name="locStopAction.Text" xml:space="preserve">
     <value>Automatische Stoppaktion</value>
   </data>
   <data name="locStopActionText.Text" xml:space="preserve">
-    <value>Was soll der VPS tun, wenn der physikalische Computer herunterfÃ¤hrt?</value>
+    <value>Was soll der VPS tun, wenn der physikalische Computer herunterfährt?</value>
   </data>
   <data name="locSubnetMask.Text" xml:space="preserve">
     <value>Subnetzmaske:</value>
@@ -232,7 +232,7 @@
     <value>Virtuelle Festplatte:</value>
   </data>
   <data name="locVpsFolderIncludes.Text" xml:space="preserve">
-    <value>VPS-Ordner enthÃ¤lt:</value>
+    <value>VPS-Ordner enthält:</value>
   </data>
   <data name="locVpsRootFolder.Text" xml:space="preserve">
     <value>VPS-Stammordner:</value>
@@ -268,7 +268,7 @@
     <value>Wird dynamisch erweitert</value>
   </data>
   <data name="radioVirtualDiskTypeFixed.Text" xml:space="preserve">
-    <value>Feste GrÃ¶ÃŸe</value>
+    <value>Feste Größe</value>
   </data>
   <data name="radioVpsFolderIncludesID.Text" xml:space="preserve">
     <value>VPS-Kennung, zum Beispiel "843FA-A0B2-24404"</value>
@@ -277,7 +277,7 @@
     <value>VPS-Hostname, zum Beispiel "vps1.domain.de"</value>
   </data>
   <data name="radioSwitchTypePrivatePrivate.Text" xml:space="preserve">
-    <value>Neuer privater Switch fÃ¼r jeden Hosting Space</value>
+    <value>Neuer privater Switch für jeden Hosting Space</value>
   </data>
   <data name="radioSwitchTypePrivateExternal.Text" xml:space="preserve">
     <value>Externen Switch verwenden (VLAN-Trennung)</value>
@@ -286,7 +286,7 @@
     <value>Geben Sie einen VPS-Stammordner ein</value>
   </data>
   <data name="StartupDelayValidator.ErrorMessage" xml:space="preserve">
-    <value>StartverzÃ¶gerung darf nicht leer sein</value>
+    <value>Startverzögerung darf nicht leer sein</value>
   </data>
   <data name="SubnetMaskValidator.ErrorMessage" xml:space="preserve">
     <value>Geben Sie eine Subnetz-Maske ein</value>
@@ -307,13 +307,13 @@
     <value>Begrenzung der virtuellen Maschine:</value>
   </data>
   <data name="locCpuReserve.Text" xml:space="preserve">
-    <value>Reserve fÃ¼r virtuelle Maschine:</value>
+    <value>Reserve für virtuelle Maschine:</value>
   </data>
   <data name="locCpuWeight.Text" xml:space="preserve">
     <value>Relative Gewichtung:</value>
   </data>
   <data name="locFolderVariables.Text" xml:space="preserve">
-    <value>Die folgenden Variablen werden unterstÃ¼tzt: [VPS_HOSTNAME], [USERNAME], [USER_ID], [SPACE_ID]</value>
+    <value>Die folgenden Variablen werden unterstützt: [VPS_HOSTNAME], [USERNAME], [USER_ID], [SPACE_ID]</value>
   </data>
   <data name="locProcessorSettings.Text" xml:space="preserve">
     <value>Prozessor-Ressourcen-Einstellungen</value>
@@ -325,7 +325,7 @@
     <value>&lt;Netzwerkliste kann nicht gelesen werden&gt;</value>
   </data>
   <data name="locErrorReadingNetworksList.Text" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;b&gt;Verbindung zum Hyper-V Server nicht mÃ¶glich&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;MÃ¶gliche GrÃ¼nde:&lt;ol&gt;&lt;li&gt;Sie mÃ¶chten Remote-Hyper-V Server verwalten (entweder Server Core oder Hyper-V Server 2012 R2 Maschinen) auf denen der SolidCP Server nicht installiert ist. Geben Sie den richtigen Servernamen oben in diesem Formular ein und klicken Sie auf "Verbinden".&lt;/li&gt;&lt;li&gt;SolidCP Server verfÃ¼gt nicht Ã¼ber ausreichende Berechtigungen, um sich mit dem Remote-Hyper-V Server zu verbinden. Schlagen Sie in der Administrationsanleitung die Anleitungen fÃ¼r die Client und Server Einrichtung nach.&lt;/li&gt;&lt;li&gt;Die Verbindung zum SolidCP Server, welcher auf dem Hyper-V Virtualisierungsserver installiert ist, wurde verloren. ÃœberprÃ¼fen Sie die Verbindung und Ã¶ffnen Sie die Diensteinstellungen-Seite noch einmal.&lt;/li&gt;&lt;/ol&gt;</value>
+    <value>&lt;br/&gt;&lt;b&gt;Verbindung zum Hyper-V Server nicht möglich&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Mögliche Gründe:&lt;ol&gt;&lt;li&gt;Sie möchten Remote-Hyper-V Server verwalten (entweder Server Core oder Hyper-V Server 2012 R2 Maschinen) auf denen der FuseCP Server nicht installiert ist. Geben Sie den richtigen Servernamen oben in diesem Formular ein und klicken Sie auf "Verbinden".&lt;/li&gt;&lt;li&gt;FuseCP Server verfügt nicht über ausreichende Berechtigungen, um sich mit dem Remote-Hyper-V Server zu verbinden. Schlagen Sie in der Administrationsanleitung die Anleitungen für die Client und Server Einrichtung nach.&lt;/li&gt;&lt;li&gt;Die Verbindung zum FuseCP Server, welcher auf dem Hyper-V Virtualisierungsserver installiert ist, wurde verloren. Überprüfen Sie die Verbindung und öffnen Sie die Diensteinstellungen-Seite noch einmal.&lt;/li&gt;&lt;/ol&gt;</value>
   </data>
   <data name="locHyperVServer.Text" xml:space="preserve">
     <value>Hyper-V Server</value>
@@ -415,10 +415,10 @@
     <value>Fingerabdruck zum SSL-Zertifikat:</value>
   </data>
   <data name="locErrorSetReplica.Text" xml:space="preserve">
-    <value>Dieser Server mit dem Servernamen, Replikationspfad und SSL-Zertifikat kann nicht als Replikation-Server ausgewÃ¤hlt werden</value>
+    <value>Dieser Server mit dem Servernamen, Replikationspfad und SSL-Zertifikat kann nicht als Replikation-Server ausgewählt werden</value>
   </data>
   <data name="locReplicaPath.Text" xml:space="preserve">
-    <value>Pfad fÃ¼r Replikationen:</value>
+    <value>Pfad für Replikationen:</value>
   </data>
   <data name="locReplication.Text" xml:space="preserve">
     <value>Replikation</value>
@@ -439,7 +439,7 @@
     <value>Dies ist ein Replika-Server</value>
   </data>
   <data name="locEnableReplicaError.Text" xml:space="preserve">
-    <value>FÃ¼gen Sie einen Server mit aktivierter Replikation hinzu und wÃ¤hlen diesen aus der Liste aus</value>
+    <value>Fügen Sie einen Server mit aktivierter Replikation hinzu und wählen diesen aus der Liste aus</value>
   </data>
   <data name="locErrorPathReplica.Text" xml:space="preserve">
     <value>Geben Sie einen Replikationspfad ein</value>
@@ -448,10 +448,10 @@
     <value>Replikation-Server:</value>
   </data>
   <data name="btnAddDvd.Text" xml:space="preserve">
-    <value>DVD hinzufÃ¼gen</value>
+    <value>DVD hinzufügen</value>
   </data>
   <data name="btnAddOsTemplate.Text" xml:space="preserve">
-    <value>Betriebssystemvorlage hinzufÃ¼gen</value>
+    <value>Betriebssystemvorlage hinzufügen</value>
   </data>
   <data name="btnRemoveDvd.Text" xml:space="preserve">
     <value>Entfernen</value>
@@ -460,13 +460,13 @@
     <value>Entfernen</value>
   </data>
   <data name="chkCanSetAdminPass.Text" xml:space="preserve">
-    <value>Administrator-Passwort kann geÃ¤ndert werden</value>
+    <value>Administrator-Passwort kann geändert werden</value>
   </data>
   <data name="chkCanSetComputerName.Text" xml:space="preserve">
-    <value>Computer-Name kann geÃ¤ndert werden</value>
+    <value>Computer-Name kann geändert werden</value>
   </data>
   <data name="chkCanSetNetwork.Text" xml:space="preserve">
-    <value>IP-Adressen kÃ¶nnen geÃ¤ndert werden</value>
+    <value>IP-Adressen können geändert werden</value>
   </data>
   <data name="chkLegacyNetworkAdapter.Text" xml:space="preserve">
     <value>Legacy-Adapter verwenden</value>
@@ -520,10 +520,10 @@
     <value>Volume zum Anwenden sollte eine positive Nummer sein</value>
   </data>
   <data name="btnAddDvdText.Text" xml:space="preserve">
-    <value>DVD hinzufÃ¼gen</value>
+    <value>DVD hinzufügen</value>
   </data>
   <data name="btnAddOsTemplateText.Text" xml:space="preserve">
-    <value>OS-Vorlage hinzufÃ¼gen</value>
+    <value>OS-Vorlage hinzufügen</value>
   </data>
   <data name="btnConnectText.Text" xml:space="preserve">
     <value>Verbinden</value>
@@ -565,10 +565,10 @@
     <value>Failover Cluster</value>
   </data>
   <data name="locDiskSize.Text" xml:space="preserve">
-    <value>VHD-FestplattengrÃ¶ÃŸe (GB):</value>
+    <value>VHD-Festplattengröße (GB):</value>
   </data>
   <data name="btnAddPsScript.Text" xml:space="preserve">
-    <value>PS Script hinzufÃ¼gen</value>
+    <value>PS Script hinzufügen</value>
   </data>
   <data name="btnRemovePsScript.Text" xml:space="preserve">
     <value>Entfernen</value>
@@ -577,13 +577,13 @@
     <value>Benutzerdefinierte PowerShell-Skripts</value>
   </data>
   <data name="locRunAt.Text" xml:space="preserve">
-    <value>AusfÃ¼hren bei:</value>
+    <value>Ausführen bei:</value>
   </data>
   <data name="locScript.Text" xml:space="preserve">
     <value>PS-Script:</value>
   </data>
   <data name="locVar.Text" xml:space="preserve">
-    <value>Folgenden Variablen sind unterstÃ¼tzt:</value>
+    <value>Folgenden Variablen sind unterstützt:</value>
   </data>
   <data name="liRunAtAfterCreation.Text" xml:space="preserve">
     <value>Nach der VM-Erstellung</value>
@@ -592,7 +592,7 @@
     <value>Nach dem Umbenennen der VM</value>
   </data>
   <data name="liRunAtBeforeDeletion.Text" xml:space="preserve">
-    <value>Vor dem LÃ¶schen der VM</value>
+    <value>Vor dem Löschen der VM</value>
   </data>
   <data name="liRunAtBeforeRenaming.Text" xml:space="preserve">
     <value>Vor dem Umbenennen der VM</value>

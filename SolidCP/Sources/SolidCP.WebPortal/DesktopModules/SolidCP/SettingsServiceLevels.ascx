@@ -1,8 +1,8 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsServiceLevels.ascx.cs" Inherits="SolidCP.Portal.SettingsServiceLevels" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsServiceLevels.ascx.cs" Inherits="FuseCP.Portal.SettingsServiceLevels" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
     <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
     <scp:SimpleMessageBox id="messageBox" runat="server" />

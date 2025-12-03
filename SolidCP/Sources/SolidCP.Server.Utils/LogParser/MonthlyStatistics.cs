@@ -34,7 +34,7 @@ using System;
 using System.IO;
 using System.Collections;
 
-namespace SolidCP.Providers.Utils.LogParser
+namespace FuseCP.Providers.Utils.LogParser
 {
 	/// <summary>
 	/// Summary description for WebSiteStatistics.

@@ -40,7 +40,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class ServerPasswordPage : BannerWizardPage
 	{

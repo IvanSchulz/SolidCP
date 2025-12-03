@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of SolidCP  nor   the   names  of  its
+// - Neither  the  name  of FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -30,11 +30,11 @@ using Microsoft.Web.Administration;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Web.Iis;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Web.Iis;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	public class IIs100 : IIs70
 	{

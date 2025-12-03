@@ -30,10 +30,10 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -44,7 +44,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
     public class IscBind : HostingServiceProviderBase, IDnsServer
     {
@@ -830,8 +830,8 @@ namespace SolidCP.Providers.DNS
             // build zone file
             StringBuilder sb = new StringBuilder();
 
-            // add SolidCP comment
-            sb.Append("; Updated with SolidCP DNS API ").Append(DateTime.Now).Append("\r\n\r\n");
+            // add FuseCP comment
+            sb.Append("; Updated with FuseCP DNS API ").Append(DateTime.Now).Append("\r\n\r\n");
 
             // TTL
             sb.Append("$TTL ").Append(MinimumTTL).Append("\r\n\r\n");

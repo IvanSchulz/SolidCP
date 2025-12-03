@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class SmarterStats_Settings {
         protected System.Web.UI.WebControls.Label lblSmarterUrl;
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.ProviderControls {
         protected System.Web.UI.WebControls.TextBox txtSmarterLogDeleteMonths;
         protected System.Web.UI.WebControls.Label Label1;
         protected System.Web.UI.WebControls.Label lblTimeZone;
-        protected SolidCP.Portal.TimeZones timeZone;
+        protected FuseCP.Portal.TimeZones timeZone;
         protected System.Web.UI.WebControls.Label lblBuildUncLogsPath;
         protected System.Web.UI.WebControls.CheckBox chkBuildUncLogsPath;
         protected System.Web.UI.WebControls.Label lblStatsUrl;

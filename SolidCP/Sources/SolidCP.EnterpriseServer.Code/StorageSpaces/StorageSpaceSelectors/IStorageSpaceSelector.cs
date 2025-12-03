@@ -1,6 +1,6 @@
-﻿using SolidCP.Providers.StorageSpaces;
+using FuseCP.Providers.StorageSpaces;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public interface IStorageSpaceSelector
     {

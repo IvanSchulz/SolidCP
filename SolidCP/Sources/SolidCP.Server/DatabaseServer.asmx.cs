@@ -34,18 +34,18 @@ using System;
 using System.Data;
 using System.Web;
 using System.Collections;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
-using SolidCP.Server.Utils;
-using SolidCP.Providers;
-using SolidCP.Providers.Database;
+using FuseCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.Database;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// <summary>
     /// Summary description for DatabaseServer
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/server/")]
+    [WebService(Namespace = "http://smbsaas/fusecp/server/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("ServerPolicy")]
     [ToolboxItem(false)]

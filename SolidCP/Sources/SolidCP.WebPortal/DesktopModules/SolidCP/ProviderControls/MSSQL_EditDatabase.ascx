@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSSQL_EditDatabase.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MSSQL_EditDatabase" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSSQL_EditDatabase.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MSSQL_EditDatabase" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="secDataFiles" runat="server" IsCollapsed="true"

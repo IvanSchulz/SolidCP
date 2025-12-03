@@ -36,7 +36,7 @@ using System.Text;
 using System.Management;
 using System.Diagnostics;
 
-namespace SolidCP.HyperV.Utils
+namespace FuseCP.HyperV.Utils
 {
     internal class Wmi
     {

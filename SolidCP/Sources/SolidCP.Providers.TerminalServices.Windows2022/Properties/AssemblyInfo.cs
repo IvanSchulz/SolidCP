@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2022, SolidCP
+// Copyright (c) 2022, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:

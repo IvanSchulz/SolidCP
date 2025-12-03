@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SolidCP.WebDavPortal.MvcApplication" Language="C#" %>
+<%@ Application Codebehind="Global.asax.cs" Inherits="FuseCP.WebDavPortal.MvcApplication" Language="C#" %>

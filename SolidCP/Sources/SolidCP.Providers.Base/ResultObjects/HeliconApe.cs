@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.ResultObjects
+namespace FuseCP.Providers.ResultObjects
 {
     [Serializable]
     public class HeliconApeStatus

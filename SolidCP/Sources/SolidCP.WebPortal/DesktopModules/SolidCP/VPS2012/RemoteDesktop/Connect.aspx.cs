@@ -31,10 +31,10 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ﻿using System;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.VPS2012.RemoteDesktop
+namespace FuseCP.Portal.VPS2012.RemoteDesktop
 {
     public partial class Connect : System.Web.UI.Page
     {

@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public partial class Installer
 	{
-		public virtual string WebDavPortalSiteId => $"{SolidCP}WebDavPortal";
-		public virtual string UnixWebDavPortalServiceId => "solidcp-webdavportal";
+		public virtual string WebDavPortalSiteId => $"{FuseCP}WebDavPortal";
+		public virtual string UnixWebDavPortalServiceId => "fusecp-webdavportal";
 		public virtual void InstallWebDavPortalPrerequisites() { }
 		public virtual void RemoveWebDavPortalPrerequisites() { }
 		public virtual void CreateWebDavPortalUser() => CreateUser(Settings.WebDavPortal);
 		public virtual void RemoveWebDavPortalUser() => RemoveUser(Settings.WebDavPortal.Username);
 		public virtual void SetWebDavPortalFilePermissions() => SetFilePermissions(Settings.WebDavPortal.InstallPath, Settings.WebDavPortal.Username);
-		public virtual void SetWebDavPortalFileOwner() => SetFileOwner(Settings.WebDavPortal.InstallPath, Settings.WebDavPortal.Username, SolidCPGroup);
+		public virtual void SetWebDavPortalFileOwner() => SetFileOwner(Settings.WebDavPortal.InstallPath, Settings.WebDavPortal.Username, FuseCPGroup);
 		public virtual void InstallWebDavPortal()
 		{
 			InstallWebDavPortalPrerequisites();
@@ -39,13 +39,13 @@ namespace SolidCP.UniversalInstaller
 		public virtual void InstallWebDavPortalWebsite()
 		{
 			var web = Settings.WebDavPortal.InstallPath;
-			var dll = Path.Combine(web, "bin_dotnet", "SolidCP.WebDavPortal.dll");
+			var dll = Path.Combine(web, "bin_dotnet", "FuseCP.WebDavPortal.dll");
 			InstallWebsite(WebDavPortalSiteId,
 				web,
 				Settings.WebDavPortal,
-				SolidCPUnixGroup,
+				FuseCPUnixGroup,
 				dll,
-				"SolidCP.WebDavPortal service, the WebDavPortal for the SolidCP control panel.",
+				"FuseCP.WebDavPortal service, the WebDavPortal for the FuseCP control panel.",
 				UnixWebDavPortalServiceId);
 		}
 		public virtual void SetupWebDavPortal()

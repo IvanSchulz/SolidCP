@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class MailAccountsEditAccount {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// mailEditAddress control.
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailEditAddress mailEditAddress;
+        protected global::FuseCP.Portal.MailEditAddress mailEditAddress;
         
         /// <summary>
         /// passwordControl control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl passwordControl;
+        protected global::FuseCP.Portal.PasswordControl passwordControl;
         
         /// <summary>
         /// lblMailboxSizeLimit control.

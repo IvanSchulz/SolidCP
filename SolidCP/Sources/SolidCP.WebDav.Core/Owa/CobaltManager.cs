@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Threading;
 using Cobalt;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Owa;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Owa;
 
-namespace SolidCP.WebDav.Core.Owa
+namespace FuseCP.WebDav.Core.Owa
 {
     public class CobaltManager : ICobaltManager
     {

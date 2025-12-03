@@ -42,13 +42,13 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Linq;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class Domains : SolidCPModuleBase
+    public partial class Domains : FuseCPModuleBase
     {
         public Dictionary<int, string> dnsRecords;
 

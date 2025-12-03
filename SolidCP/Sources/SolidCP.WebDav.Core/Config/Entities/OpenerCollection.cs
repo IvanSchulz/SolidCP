@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using SolidCP.WebDav.Core.Config.WebConfigSections;
-using SolidCP.WebDavPortal.WebConfigSections;
+using FuseCP.WebDav.Core.Config.WebConfigSections;
+using FuseCP.WebDavPortal.WebConfigSections;
 
-namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public class OpenerCollection : AbstractConfigCollection, IReadOnlyCollection<OpenerElement>
     {

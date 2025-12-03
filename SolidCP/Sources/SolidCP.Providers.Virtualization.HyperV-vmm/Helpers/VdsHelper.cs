@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -6,11 +6,11 @@ using System.Management;
 using System.Threading;
 using Microsoft.Storage.Vds;
 using Microsoft.Storage.Vds.Advanced;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Virtualization.Extensions;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Virtualization.Extensions;
 using Path = System.IO.Path;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public static class VdsHelper
     {

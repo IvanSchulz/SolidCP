@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-	public partial class AcceptedSenders : SolidCPControlBase
+	public partial class AcceptedSenders : FuseCPControlBase
     {
 		public void SetAccounts(ExchangeAccount[] accounts)
 		{

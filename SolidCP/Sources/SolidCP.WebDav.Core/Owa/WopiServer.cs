@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Net.Mime;
@@ -7,17 +7,17 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using Cobalt;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Entities.Owa;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Owa;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
-using SolidCP.WebDav.Core.Security.Authorization.Enums;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Entities.Owa;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Owa;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.WebDav.Core.Security.Authorization.Enums;
 
-namespace SolidCP.WebDav.Core.Owa
+namespace FuseCP.WebDav.Core.Owa
 {
     public class WopiServer : IWopiServer
     {

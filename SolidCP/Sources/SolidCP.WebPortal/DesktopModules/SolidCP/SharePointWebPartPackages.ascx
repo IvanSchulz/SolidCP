@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointWebPartPackages.ascx.cs" Inherits="SolidCP.Portal.SharePointWebPartPackages" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointWebPartPackages.ascx.cs" Inherits="FuseCP.Portal.SharePointWebPartPackages" %>
 <div class="panel-body form-horizontal">
     <table cellspacing="0" cellpadding="3" width="100%">
 	    <tr>

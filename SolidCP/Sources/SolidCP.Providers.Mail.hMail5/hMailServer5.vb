@@ -1,7 +1,7 @@
-' Copyright (c) 2016, SolidCP
-' SolidCP Is distributed under the Creative Commons Share-alike license
+' Copyright (c) 2016, FuseCP
+' FuseCP Is distributed under the Creative Commons Share-alike license
 ' 
-' SolidCP Is a fork of WebsitePanel:
+' FuseCP Is a fork of WebsitePanel:
 ' Copyright (c) 2014, Outercurve Foundation.
 ' All rights reserved.
 '
@@ -37,14 +37,14 @@ Imports System.Collections.Specialized
 Imports System.IO
 Imports System.Text
 Imports Microsoft.Win32
-Imports SolidCP.Server.Utils
+Imports FuseCP.Server.Utils
 
 Public Class hMailServer5
     Inherits HostingServiceProviderBase
     Implements IMailServer
 
     Private Const APPLICATION_PROG_ID As String = "hMailServer.Application"
-    Private Const SolidCP_RULE_NAME As String = "SolidCP"
+    Private Const FuseCP_RULE_NAME As String = "FuseCP"
     Private Const MAIL_GROUP_RULE As String = "Mail Group Rule"
     Private Const FORWARDING_RULE As String = "Forwarding Rule"
 
@@ -419,13 +419,13 @@ Public Class hMailServer5
     End Sub
 
     Private Sub SetAccountRules(ByVal mailbox As MailAccount, ByVal objAccount As Object)
-        ' check for default SolidCP rule
+        ' check for default FuseCP rule
         Dim ruleExists As Boolean = False
         Dim objRule As Object = Nothing
 
         For i As Integer = 0 To objAccount.Rules.Count - 1
             objRule = objAccount.Rules.Item(i)
-            If String.Compare(objRule.Name, SolidCP_RULE_NAME, True) = 0 Then
+            If String.Compare(objRule.Name, FuseCP_RULE_NAME, True) = 0 Then
                 ruleExists = True
                 Exit For
             End If

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -44,4 +44,4 @@ using System.Web.UI;
 //[assembly: Guid("3d5900ae-111a-45be-96b3-d9e4606ca793")]
 
 // embedded resources
-[assembly: WebResource("SolidCP.WebPortal.Code.Adapters.empty.gif", "image/gif")]
+[assembly: WebResource("FuseCP.WebPortal.Code.Adapters.empty.gif", "image/gif")]

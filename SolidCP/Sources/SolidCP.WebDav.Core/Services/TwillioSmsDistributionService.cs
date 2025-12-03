@@ -1,9 +1,9 @@
-﻿using Twilio;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Interfaces.Services;
+using Twilio;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Interfaces.Services;
 using Twilio.Rest.Api.V2010.Account;
 
-namespace SolidCP.WebDav.Core.Services
+namespace FuseCP.WebDav.Core.Services
 {
     public class TwillioSmsDistributionService : ISmsDistributionService
     {

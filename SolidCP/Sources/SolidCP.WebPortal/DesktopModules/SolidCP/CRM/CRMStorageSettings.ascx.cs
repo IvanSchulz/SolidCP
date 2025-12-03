@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class CRMStorageSettings : SolidCPModuleBase
+    public partial class CRMStorageSettings : FuseCPModuleBase
     {
         public string SizeValueToString(long val)
         {

@@ -39,7 +39,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Drawing.Imaging;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for $codebehindclassname$

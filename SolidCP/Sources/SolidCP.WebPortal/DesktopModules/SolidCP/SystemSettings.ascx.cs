@@ -40,13 +40,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer.Base.Common;
-using SCP = SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.Common;
+using SCP = FuseCP.EnterpriseServer;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SystemSettings : SolidCPModuleBase
+    public partial class SystemSettings : FuseCPModuleBase
     {
         public const string SMTP_SERVER = "SmtpServer";
         public const string SMTP_PORT = "SmtpPort";
@@ -122,7 +122,7 @@ namespace SolidCP.Portal
             }
             else
             {
-                // Original SolidCP Extensions
+                // Original FuseCP Extensions
                 txtFileManagerEditableExtensions.Text = FileManager.ALLOWED_EDIT_EXTENSIONS.Replace(",", System.Environment.NewLine);
             }
 

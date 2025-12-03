@@ -31,18 +31,18 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.Common;
-using SolidCP.Portal.Code.Helpers;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.Common;
+using FuseCP.Portal.Code.Helpers;
 
 
-namespace SolidCP.Portal.Lync
+namespace FuseCP.Portal.Lync
 {
-    public partial class LyncAddLyncUserPlan : SolidCPModuleBase
+    public partial class LyncAddLyncUserPlan : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

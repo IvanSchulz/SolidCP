@@ -1,4 +1,4 @@
-// Copyright (c) 2022, SolidCP
+// Copyright (c) 2022, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // Redistribution and use in source and binary forms, with or without modification,
@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -37,24 +37,24 @@ using System.Globalization;
 
 using Microsoft.Win32;
 
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using System.Management;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
 using System.Runtime.InteropServices;
 using System.Linq;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Providers.DNS;
 
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 
     public class Windows2022 : Windows2016
@@ -517,7 +517,7 @@ namespace SolidCP.Providers.OS
 
         #endregion
 
-        protected override Type WebServerType => Type.GetType("SolidCP.Providers.Web.IIs100, SolidCP.Providers.Web.IIs100");
+        protected override Type WebServerType => Type.GetType("FuseCP.Providers.Web.IIs100, FuseCP.Providers.Web.IIs100");
 
     }
 }

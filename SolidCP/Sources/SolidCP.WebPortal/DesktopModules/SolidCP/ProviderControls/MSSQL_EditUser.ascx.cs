@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Database;
+using FuseCP.Providers.Database;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class MSSQL_EditUser : SolidCPControlBase, IDatabaseEditUserControl
+    public partial class MSSQL_EditUser : FuseCPControlBase, IDatabaseEditUserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

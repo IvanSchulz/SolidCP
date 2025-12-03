@@ -43,11 +43,11 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using CPCC;
 
-using SolidCP.Providers.Web;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebSitesMimeTypesControl : SolidCPControlBase
+    public partial class WebSitesMimeTypesControl : FuseCPControlBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

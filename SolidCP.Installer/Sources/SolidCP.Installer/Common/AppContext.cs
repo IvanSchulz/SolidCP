@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	internal class SCPAppContext
 	{

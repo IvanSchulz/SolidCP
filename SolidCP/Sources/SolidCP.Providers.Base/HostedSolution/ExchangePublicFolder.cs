@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class ExchangePublicFolder
 	{
@@ -66,19 +66,19 @@ namespace SolidCP.Providers.HostedSolution
 		}
 
 		        
-		public SolidCP.Providers.HostedSolution.ExchangeAccount[] Accounts
+		public FuseCP.Providers.HostedSolution.ExchangeAccount[] Accounts
         {
             get { return this.accounts; }
             set { this.accounts = value; }
         }
         
-		public SolidCP.Providers.HostedSolution.ExchangeAccount[] AcceptAccounts
+		public FuseCP.Providers.HostedSolution.ExchangeAccount[] AcceptAccounts
 		{
 			get { return this.acceptAccounts; }
 			set { this.acceptAccounts = value; }
 		}
 
-		public SolidCP.Providers.HostedSolution.ExchangeAccount[] RejectAccounts
+		public FuseCP.Providers.HostedSolution.ExchangeAccount[] RejectAccounts
 		{
 			get { return this.rejectAccounts; }
 			set { this.rejectAccounts = value; }

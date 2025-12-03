@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsAccountSummaryLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsAccountSummaryLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsAccountSummaryLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsAccountSummaryLetter" %>
 <table>
     <tr>
         <td class="Normal" colspan="2">

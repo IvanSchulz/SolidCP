@@ -33,18 +33,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Installer.Core;
-using SolidCP.Installer.Common;
+using FuseCP.Installer.Core;
+using FuseCP.Installer.Common;
 using System.Data;
 using System.Threading;
-using SolidCP.Installer.Configuration;
+using FuseCP.Installer.Configuration;
 using System.IO;
 using System.Collections;
 using System.Configuration;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
 
-namespace SolidCP.SilentInstaller
+namespace FuseCP.SilentInstaller
 {
 	class Program
 	{

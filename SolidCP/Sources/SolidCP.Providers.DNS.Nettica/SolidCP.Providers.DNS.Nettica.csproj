@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<RootNamespace>SolidCP.Providers.DNS</RootNamespace>
+		<RootNamespace>FuseCP.Providers.DNS</RootNamespace>
 		<TargetFramework>net48</TargetFramework>
 		<PublishUrl>publish\</PublishUrl>
-		<OutputPath>..\SolidCP.Server\bin\DNS\</OutputPath>
+		<OutputPath>..\FuseCP.Server\bin\DNS\</OutputPath>
 				<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 		<LangVersion>11</LangVersion>
@@ -27,7 +27,7 @@
 		<Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.DNS.PowerDNS\SolidCP.Providers.DNS.PowerDNS.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.DNS.PowerDNS\FuseCP.Providers.DNS.PowerDNS.csproj" />
 	</ItemGroup>
 </Project>

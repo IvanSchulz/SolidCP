@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.OrganizationSettingsTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.OrganizationSettingsTabs" %>
 
 
 <table width="100%" cellpadding="0" cellspacing="1">

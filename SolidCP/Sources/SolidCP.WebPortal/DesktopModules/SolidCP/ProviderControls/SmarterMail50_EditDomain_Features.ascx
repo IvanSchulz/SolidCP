@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail50_EditDomain_Features.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail50_EditDomain_Features" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail50_EditDomain_Features.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail50_EditDomain_Features" %>
 <table width="100%">
     <tr>
         <td width="200px" align="right"><asp:Label ID="Label1" runat="server" meta:resourcekey="lbShowcontentfilteringmenu" /></td>

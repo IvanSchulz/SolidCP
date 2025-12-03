@@ -32,11 +32,11 @@
 
 using System;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public interface IUninstallAction
 	{
-		void Run(SolidCP.Setup.SetupVariables vars);
+		void Run(FuseCP.Setup.SetupVariables vars);
 		//
 		event EventHandler<ActionProgressEventArgs<int>> ProgressChange;
 	}

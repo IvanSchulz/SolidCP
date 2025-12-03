@@ -1,4 +1,4 @@
-﻿using RestSharp;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public static class ProxmoxDvdDriveHelper
     {

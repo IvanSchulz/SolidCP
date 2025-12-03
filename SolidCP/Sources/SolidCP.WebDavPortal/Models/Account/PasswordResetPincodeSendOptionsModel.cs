@@ -1,6 +1,6 @@
-﻿using SolidCP.WebDavPortal.Models.Account.Enums;
+using FuseCP.WebDavPortal.Models.Account.Enums;
 
-namespace SolidCP.WebDavPortal.Models.Account
+namespace FuseCP.WebDavPortal.Models.Account
 {
     public class PasswordResetPincodeSendOptionsModel
     {

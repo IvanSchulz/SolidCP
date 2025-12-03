@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net48;net10.0</TargetFrameworks>
         <Nullable>disable</Nullable>
@@ -8,15 +8,15 @@
         <OutputPath>..\..\..\..\Bin</OutputPath>
         <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
         <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>SolidCP.snk</AssemblyOriginatorKeyFile>
+        <AssemblyOriginatorKeyFile>FuseCP.snk</AssemblyOriginatorKeyFile>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     </PropertyGroup>
     <ItemGroup>
         <Compile Remove="Microsoft.NET.Sdk.Razor.SourceGenerators\**" />
         <EmbeddedResource Remove="Microsoft.NET.Sdk.Razor.SourceGenerators\**" />
         <None Remove="Microsoft.NET.Sdk.Razor.SourceGenerators\**" />
-        <Services Include="SolidCP.Build.WebServices\**\*.g.cs" />
-        <Folder Include="SolidCP.Build.WebServices" />
+        <Services Include="FuseCP.Build.WebServices\**\*.g.cs" />
+        <Folder Include="FuseCP.Build.WebServices" />
     </ItemGroup>
     <PropertyGroup>
         <AnyServices>@(Services)</AnyServices>
@@ -25,9 +25,9 @@
         <Compile Include="..\..\..\VersionInfo.cs" Link="VersionInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.EnterpriseServer\SolidCP.EnterpriseServer.csproj"
+        <ProjectReference Include="..\..\..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.EnterpriseServer\FuseCP.EnterpriseServer.csproj"
             ReferenceOutputAssembly="false" PrivateAssets="All" Condition="'$(AnyServices)' == ''" />
     </ItemGroup>
     <ItemGroup Condition="'$(TargetFramework)' == 'net48'">

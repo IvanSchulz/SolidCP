@@ -40,7 +40,7 @@ using System.Xml.Serialization;
 using System.Runtime.Serialization;
 using System.Collections;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	[DataContract]
 	public class SystemSettings

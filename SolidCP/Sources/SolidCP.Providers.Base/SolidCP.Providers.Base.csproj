@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <RootNamespace>SolidCP.Providers</RootNamespace>
+    <RootNamespace>FuseCP.Providers</RootNamespace>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>SolidCP.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>FuseCP.snk</AssemblyOriginatorKeyFile>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PublishUrl>publish\</PublishUrl>
-    <Product>SolidCP.Providers.Base</Product>
+    <Product>FuseCP.Providers.Base</Product>
     <WarningsAsErrors>618</WarningsAsErrors>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
@@ -31,7 +31,7 @@
     <Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SolidCP.snk" />
+    <None Include="FuseCP.snk" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Virtualization\MemoryInfo.cs" />

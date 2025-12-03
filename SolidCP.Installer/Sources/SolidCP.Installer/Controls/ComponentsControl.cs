@@ -43,13 +43,13 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 
-using SolidCP.Installer.Common;
-using SolidCP.Installer.Services;
-using SolidCP.Installer.Core;
-using SolidCP.Installer.Configuration;
-using SolidCP.Providers.OS;
+using FuseCP.Installer.Common;
+using FuseCP.Installer.Services;
+using FuseCP.Installer.Core;
+using FuseCP.Installer.Configuration;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Installer.Controls
+namespace FuseCP.Installer.Controls
 {
     /// <summary>
     /// Components control

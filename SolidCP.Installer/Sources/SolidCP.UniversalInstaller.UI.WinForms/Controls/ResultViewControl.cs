@@ -34,7 +34,7 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.Controls
+namespace FuseCP.UniversalInstaller.Controls
 {
 	internal class ResultViewControl : UserControl
 	{

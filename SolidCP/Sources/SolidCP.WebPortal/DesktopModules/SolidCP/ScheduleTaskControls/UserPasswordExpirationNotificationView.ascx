@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserPasswordExpirationNotificationView.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.UserPasswordExpirationNotificationView" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserPasswordExpirationNotificationView.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.UserPasswordExpirationNotificationView" %>
 
 
 <table cellspacing="0" cellpadding="4" width="100%">

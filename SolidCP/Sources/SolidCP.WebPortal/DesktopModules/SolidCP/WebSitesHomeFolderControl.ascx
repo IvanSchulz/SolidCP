@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesHomeFolderControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesHomeFolderControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesHomeFolderControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesHomeFolderControl" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <div style="padding: 20;">
 <table>

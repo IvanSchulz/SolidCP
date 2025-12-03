@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,12 +6,12 @@ using System.Xml;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class UserHelper: ControllerBase
     {

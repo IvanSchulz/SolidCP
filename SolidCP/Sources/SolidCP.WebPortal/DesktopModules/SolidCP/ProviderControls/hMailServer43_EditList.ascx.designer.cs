@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class hMailServer43_EditList {
@@ -78,7 +78,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EmailControl txtEmailAnnouncements;
+        protected global::FuseCP.Portal.UserControls.EmailControl txtEmailAnnouncements;
         
         /// <summary>
         /// lblMembers control.
@@ -96,7 +96,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailEditItems mailEditItems;
+        protected global::FuseCP.Portal.MailEditItems mailEditItems;
         
         /// <summary>
         /// Security control.
@@ -105,7 +105,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel Security;
+        protected global::FuseCP.Portal.CollapsiblePanel Security;
         
         /// <summary>
         /// pSecurity control.

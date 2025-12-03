@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace SolidCP.EnterpriseServer {
+namespace FuseCP.EnterpriseServer {
     
     
     public partial class DefaultPage {

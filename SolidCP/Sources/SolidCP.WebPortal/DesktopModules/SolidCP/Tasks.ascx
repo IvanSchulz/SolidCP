@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Tasks.ascx.cs" Inherits="SolidCP.Portal.Tasks" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Tasks.ascx.cs" Inherits="FuseCP.Portal.Tasks" %>
 <asp:Timer runat="server" Interval="5000" ID="tasksTimer" />
 <asp:UpdatePanel runat="server" ID="tasksUpdatePanel" UpdateMode="Conditional">
   <Triggers>
@@ -42,7 +42,7 @@
 
 <asp:ObjectDataSource ID="odsTasks" runat="server"
     SelectMethod="GetRunningTasks"
-    TypeName="SolidCP.Portal.TasksHelper"
+    TypeName="FuseCP.Portal.TasksHelper"
     OnSelected="odsTasks_Selected">
     <SelectParameters>
     </SelectParameters>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class HyperV2012R2_Create {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.Generation GenerationSetting;
+        protected global::FuseCP.Portal.VPS.UserControls.Generation GenerationSetting;
         
         /// <summary>
         /// DynamicMemorySetting control.
@@ -28,6 +28,6 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.DynamicMemory DynamicMemorySetting;
+        protected global::FuseCP.Portal.VPS.UserControls.DynamicMemory DynamicMemorySetting;
     }
 }

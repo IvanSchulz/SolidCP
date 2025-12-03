@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.SE;
+using FuseCP.SE;
 
-namespace SolidCP.SE.Test
+namespace FuseCP.SE.Test
 {
     public class Program
     {

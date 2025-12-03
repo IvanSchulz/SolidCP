@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>net48;net10.0</TargetFrameworks>
         <Nullable>disable</Nullable>
@@ -13,7 +13,7 @@
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
-        <OutputPath>..\SolidCP.EnterpriseServer\bin\Code</OutputPath>
+        <OutputPath>..\FuseCP.EnterpriseServer\bin\Code</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net48' AND '$(EntityFramework6)' == '6.4'">
@@ -21,11 +21,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
-        <OutputPath>..\SolidCP.EnterpriseServer\bin_dotnet</OutputPath>
+        <OutputPath>..\FuseCP.EnterpriseServer\bin_dotnet</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-        <OutputPath>..\SolidCP.EnterpriseServer\bin\netstandard</OutputPath>
+        <OutputPath>..\FuseCP.EnterpriseServer\bin\netstandard</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(UseSkia)' == 'true'">
@@ -37,7 +37,7 @@
 	</PropertyGroup>
 
     <ItemGroup>
-        <Content Include="..\SolidCP.EnterpriseServer.Data\Migrations\SqlServer\StoredProcedures\**\*.sql">
+        <Content Include="..\FuseCP.EnterpriseServer.Data\Migrations\SqlServer\StoredProcedures\**\*.sql">
             <Link>Data\StoredProcedures\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </Content>
     </ItemGroup>
@@ -101,13 +101,13 @@
     <Import Project="$(PkgSkiaSharp_NativeAssets_Win32)\buildTransitive\net462\SkiaSharp.NativeAssets.Win32.targets" Condition="'$(TargetFramework)' != ''" />
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj" />
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Templates\SolidCP.Templates.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Services\SolidCP.Web.Services.csproj" />
-        <ProjectReference Include="..\SolidCP.Server\WebServices\SolidCP.Build\SolidCP.Server.Client.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Templates\FuseCP.Templates.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Services\FuseCP.Web.Services.csproj" />
+        <ProjectReference Include="..\FuseCP.Server\WebServices\FuseCP.Build\FuseCP.Server.Client.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -35,15 +35,15 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
 
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
-    public partial class VpsCheckPoints : SolidCPModuleBase
+    public partial class VpsCheckPoints : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

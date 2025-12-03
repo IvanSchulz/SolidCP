@@ -1,10 +1,10 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Runtime.Serialization;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	[TestClass]
 	public class Misc

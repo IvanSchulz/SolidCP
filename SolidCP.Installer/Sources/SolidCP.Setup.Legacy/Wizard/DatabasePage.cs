@@ -39,11 +39,11 @@ using System.Data;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using SolidCP.Providers.Common;
-using Data = SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.Providers.Common;
+using Data = FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller.Core;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class DatabasePage : BannerWizardPage
 	{

@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Extensions
+namespace FuseCP.WebDav.Core.Extensions
 {
     public static class StringExtensions
     {

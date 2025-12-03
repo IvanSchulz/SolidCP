@@ -39,7 +39,7 @@ using System.Data;
 using System.Text;
 using Ionic.Zip;
 
-using SolidCP.Installer.Common;
+using FuseCP.Installer.Common;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Collections;
@@ -47,7 +47,7 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace SolidCP.Installer.Core
+namespace FuseCP.Installer.Core
 {
 	public class LoaderEventArgs<T> : EventArgs
 	{
@@ -67,7 +67,7 @@ namespace SolidCP.Installer.Core
 		{
 			Debug.Assert(!String.IsNullOrEmpty(remoteFile), "Remote file is empty");
 
-			if (remoteFile.StartsWith("http://installer.solidcp.com/"))
+			if (remoteFile.StartsWith("http://installer.fusecp.com/"))
 			{
 				return new CodeplexLoader(remoteFile);
 			}
@@ -176,8 +176,8 @@ namespace SolidCP.Installer.Core
 
 		public const string readmeText = "To avoid re-downloading files, please create a version folder inside this directory (e.g., \"1.5.1\") and place the corresponding *-Update.zip files in it.\r\n\r\n" +
 					"Example:\r\n" +
-					"- Create a folder: C:/SolidCP Installer/Offline/1.5.1\r\n" +
-					"- Place the file: SolidCP-EnterpriseServer-Update.zip\r\n\r\n" +
+					"- Create a folder: C:/FuseCP Installer/Offline/1.5.1\r\n" +
+					"- Place the file: FuseCP-EnterpriseServer-Update.zip\r\n\r\n" +
 					"The installer will use the files in this folder instead of downloading them again.";
 
 		private const int ChunkSize = 262144;

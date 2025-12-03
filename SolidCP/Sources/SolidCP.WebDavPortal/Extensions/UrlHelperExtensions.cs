@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Http.Routing;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.WebDav.Core;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDavPortal.UI.Routes;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.WebDav.Core;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDavPortal.UI.Routes;
 
-namespace SolidCP.WebDavPortal.Extensions
+namespace FuseCP.WebDavPortal.Extensions
 {
     public static class UrlHelperExtensions
     {

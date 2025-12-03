@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OCS_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.OCS_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OCS_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.OCS_Settings" %>
 <table>
     <tr>
         <td class="Normal" width="200" >

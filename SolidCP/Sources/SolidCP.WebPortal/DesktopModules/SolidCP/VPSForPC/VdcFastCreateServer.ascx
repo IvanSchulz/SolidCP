@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcFastCreateServer.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VdcFastCreateServer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcFastCreateServer.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VdcFastCreateServer" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>

@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
     public interface ISharePointServer
     {

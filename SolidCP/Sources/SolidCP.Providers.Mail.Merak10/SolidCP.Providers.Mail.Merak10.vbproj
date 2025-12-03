@@ -1,6 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<RootNamespace>SolidCP.Providers.Mail</RootNamespace>
+		<RootNamespace>FuseCP.Providers.Mail</RootNamespace>
 		<TargetFramework>net48</TargetFramework>
 		<OptionExplicit>On</OptionExplicit>
 		<OptionCompare>Binary</OptionCompare>
@@ -10,7 +10,7 @@
 		<DefineTrace>true</DefineTrace>
 		<DocumentationFile />
 		<NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
-		<OutputPath>..\SolidCP.Server\bin\Providers\</OutputPath>
+		<OutputPath>..\FuseCP.Server\bin\Providers\</OutputPath>
 		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
@@ -71,7 +71,7 @@
 		</None>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.Mail.Merak\SolidCP.Providers.Mail.Merak.vbproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Mail.Merak\FuseCP.Providers.Mail.Merak.vbproj" />
 	</ItemGroup>
 </Project>

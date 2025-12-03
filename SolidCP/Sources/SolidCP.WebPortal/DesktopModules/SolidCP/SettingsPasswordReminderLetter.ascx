@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsPasswordReminderLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsPasswordReminderLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsPasswordReminderLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsPasswordReminderLetter" %>
 <table>
     <tr>
         <td class="SubHead" width="150" nowrap><asp:Label ID="lblFrom" runat="server" meta:resourcekey="lblFrom" Text="From:"></asp:Label></td>

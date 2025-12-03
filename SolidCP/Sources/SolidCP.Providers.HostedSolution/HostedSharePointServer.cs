@@ -33,12 +33,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	/// <summary>
 	/// Provides hosted SharePoint server functionality implementation.
@@ -215,7 +215,7 @@ namespace SolidCP.Providers.HostedSolution
 
 		public override bool IsInstalled()
 		{
-			if (!SolidCP.Providers.OS.OSInfo.IsWindows) return false;
+			if (!FuseCP.Providers.OS.OSInfo.IsWindows) return false;
 
 			return IsSharePointInstalled();
 		}

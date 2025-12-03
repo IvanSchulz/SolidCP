@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WebDavPortal.Models.FileSystem
+namespace FuseCP.WebDavPortal.Models.FileSystem
 {
     public class UploadFileResult
     {

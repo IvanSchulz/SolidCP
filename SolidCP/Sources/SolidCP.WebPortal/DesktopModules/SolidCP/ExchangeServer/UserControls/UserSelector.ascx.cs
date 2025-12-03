@@ -34,11 +34,11 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class UserSelector : SolidCPControlBase
+    public partial class UserSelector : FuseCPControlBase
     {
         public const string DirectionString = "DirectionString";
 

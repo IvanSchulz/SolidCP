@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012 {
+namespace FuseCP.Portal.VPS2012 {
     
     
     public partial class TestVirtualMachineTemplate {
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// txtItemId control.

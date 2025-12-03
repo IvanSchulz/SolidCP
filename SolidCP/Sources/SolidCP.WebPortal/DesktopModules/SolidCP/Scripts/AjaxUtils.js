@@ -111,7 +111,7 @@ function ReloadProgressImage() {
     $get("imgAjaxIndicator").src = $get("imgAjaxIndicator").src;
 }
 function GetTaskProgress() {
-    requestSimpleService = SolidCP.Portal.TaskManager.GetTaskWithLogRecords(
+    requestSimpleService = FuseCP.Portal.TaskManager.GetTaskWithLogRecords(
     _taskId,       //params
     new Date(1, 2, 3, 4),
     OnGetTaskProgressComplete,     //Complete event

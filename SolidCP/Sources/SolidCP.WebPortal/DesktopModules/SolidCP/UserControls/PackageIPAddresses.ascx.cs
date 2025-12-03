@@ -36,12 +36,12 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class PackageIPAddresses : SolidCPControlBase
+    public partial class PackageIPAddresses : FuseCPControlBase
     {
         private bool spaceOwner;
 
@@ -94,8 +94,8 @@ namespace SolidCP.Portal.UserControls
             }
             searchBox.AjaxData = this.GetSearchBoxAjaxData();
 
-            bool isUserSelected = PanelSecurity.SelectedUser.Role == SolidCP.EnterpriseServer.UserRole.User;
-            bool isUserLogged = PanelSecurity.EffectiveUser.Role == SolidCP.EnterpriseServer.UserRole.User;
+            bool isUserSelected = PanelSecurity.SelectedUser.Role == FuseCP.EnterpriseServer.UserRole.User;
+            bool isUserLogged = PanelSecurity.EffectiveUser.Role == FuseCP.EnterpriseServer.UserRole.User;
             spaceOwner = PanelSecurity.EffectiveUserId == PanelSecurity.SelectedUserId;
 
             gvAddresses.Columns[6].Visible = !isUserSelected; // space

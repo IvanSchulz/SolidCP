@@ -35,12 +35,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VpsDetailsSnapshots : SolidCPModuleBase
+    public partial class VpsDetailsSnapshots : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -100,7 +100,7 @@ namespace SolidCP.Portal.VPS
 
                 // set image
                 imgThumbnail.ImageUrl =
-                    string.Format("~/DesktopModules/SolidCP/VPS/VirtualMachineSnapshotImage.ashx?ItemID={0}&SnapshotID={1}&rnd={2}",
+                    string.Format("~/DesktopModules/FuseCP/VPS/VirtualMachineSnapshotImage.ashx?ItemID={0}&SnapshotID={1}&rnd={2}",
                     PanelRequest.ItemID, HttpUtility.UrlEncode(node.Value), DateTime.Now.Ticks);
             }
         }

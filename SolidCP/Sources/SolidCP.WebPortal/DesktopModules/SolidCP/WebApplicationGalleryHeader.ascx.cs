@@ -32,12 +32,12 @@
 
 ﻿using System;
 ﻿using System.Globalization;
-﻿using SolidCP.Providers.WebAppGallery;
-using SolidCP.Providers.ResultObjects;
+﻿using FuseCP.Providers.WebAppGallery;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebApplicationGalleryHeader :  SolidCPModuleBase
+    public partial class WebApplicationGalleryHeader :  FuseCPModuleBase
     {
         public void BindApplicationDetails(GalleryApplication application)
         {
@@ -45,7 +45,7 @@ namespace SolidCP.Portal
             lblDescription.Text = application.Description;
             lblTitle.Text = application.Title;
             lblSize.Text = application.InstallerFileSize.ToString(CultureInfo.InvariantCulture);
-            imgLogo.ImageUrl = "~/DesktopModules/SolidCP/resizeimage.ashx?url=" + Server.UrlEncode(application.IconUrl) +
+            imgLogo.ImageUrl = "~/DesktopModules/FuseCP/resizeimage.ashx?url=" + Server.UrlEncode(application.IconUrl) +
                                "&width=200&height=200";
 
             hlAuthor.Text = application.AuthorName;

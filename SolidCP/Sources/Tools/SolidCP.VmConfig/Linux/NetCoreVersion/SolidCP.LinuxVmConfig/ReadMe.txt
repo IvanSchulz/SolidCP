@@ -1,8 +1,8 @@
-SolidCP.LinuxVmConfig - Service for Linux-VM configuration (Hostname, IPs, root-password), uses KVP-Exchange.
+FuseCP.LinuxVmConfig - Service for Linux-VM configuration (Hostname, IPs, root-password), uses KVP-Exchange.
 
 Tested on Ubuntu-16.04-LTS, 18.04-LTS, 18.04.2-LTS (Live), CentOS-7, FreeBSD-12
 
-SolidCP.LinuxVmConfig must be installed from root user, KVP-Exchange must be enabled in Hyper-V (default enabled), Hyper-V kvp-daemon muss be running on the guest system.
+FuseCP.LinuxVmConfig must be installed from root user, KVP-Exchange must be enabled in Hyper-V (default enabled), Hyper-V kvp-daemon muss be running on the guest system.
 
 ***Installing - Ubuntu:
 1 - If not installed then:
@@ -11,16 +11,16 @@ SolidCP.LinuxVmConfig must be installed from root user, KVP-Exchange must be ena
 		apt-get install linux-tools-virtual linux-cloud-tools-virtual
 2 - Copy "Compiled\SCPLinux-x64" on your server.
 3 - cd /{Your path}/SCPLinux-x64
-4 - chmod 774 SolidCP.LinuxVmConfig
-5 - ./SolidCP.LinuxVmConfig install
-6 - "SolidCP.service successfully installed." message - Done
+4 - chmod 774 FuseCP.LinuxVmConfig
+5 - ./FuseCP.LinuxVmConfig install
+6 - "FuseCP.service successfully installed." message - Done
 
 ***Installing - CentOS:
 1 - Copy "Compiled\SCPLinux-x64" on your server.
 2 - cd /{Your path}/SCPLinux-x64
-3 - chmod 774 SolidCP.LinuxVmConfig
-4 - ./SolidCP.LinuxVmConfig install
-5 - "SolidCP.service successfully installed." message - Done
+3 - chmod 774 FuseCP.LinuxVmConfig
+4 - ./FuseCP.LinuxVmConfig install
+5 - "FuseCP.service successfully installed." message - Done
 
 ***Installing - FreeBSD:
 1 - kldload linux64
@@ -32,15 +32,15 @@ SolidCP.LinuxVmConfig must be installed from root user, KVP-Exchange must be ena
 5 - reboot
 6 - Copy "Compiled\SCPLinux-x64" on your server.
 7 - cd /{Your path}/SCPLinux-x64
-8 - chmod 774 SolidCP.LinuxVmConfig
+8 - chmod 774 FuseCP.LinuxVmConfig
 9 - chmod 774 sh
-10 - ./SolidCP.LinuxVmConfig install
-11 - "solidcp service successfully installed." message - Done
+10 - ./FuseCP.LinuxVmConfig install
+11 - "fusecp service successfully installed." message - Done
 
 
 ***Compiling:
 1 - Install NetCore SDK on Your server:
 		Manual: https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/sdk-current
 2 - Copy source folder on Your server.
-3 - cd /{Your path}/SolidCP.LinuxVmConfig/SolidCP.LinuxVmConfig
+3 - cd /{Your path}/FuseCP.LinuxVmConfig/FuseCP.LinuxVmConfig
 4 - dotnet publish -c Release --self-contained -r linux-x64

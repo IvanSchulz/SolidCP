@@ -34,8 +34,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
 using Microsoft.Web.Management;
 using Microsoft.Web.Administration;
 using Ionic.Zip;
@@ -45,20 +45,20 @@ using Microsoft.Win32;
 using System.Linq;
 using System.Xml.Linq;
 using System.Xml.XPath;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Runtime.Remoting.Contexts;
 using System.Net.Configuration;
 using System.Diagnostics;
 using System.Reflection;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	#region Actions
 
 	public class InstallUnixInstallerAction : Action, IInstallAction, IUninstallAction
 	{
-		public const string LogStartMessage = "Install SolidCP Installer...";
+		public const string LogStartMessage = "Install FuseCP Installer...";
 		public const string LogEndMessage = "";
 
 		public override bool Indeterminate
@@ -89,9 +89,9 @@ namespace SolidCP.Setup.Actions
 					File.Copy(AppConfig.ConfigurationPath + ".config", exePath + ".config", true);
 				}
 				var sh = Shell.Default.Find("sh");
-				File.WriteAllText("/usr/bin/solidcp", $"#!{sh}\nexec mono --debug {exePath}");
+				File.WriteAllText("/usr/bin/fusecp", $"#!{sh}\nexec mono --debug {exePath}");
 
-				OSInfo.Unix.GrantUnixPermissions("/usr/bin/solidcp", UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite |
+				OSInfo.Unix.GrantUnixPermissions("/usr/bin/fusecp", UnixFileMode.UserExecute | UnixFileMode.UserRead | UnixFileMode.UserWrite |
 					UnixFileMode.GroupRead | UnixFileMode.GroupExecute |
 					UnixFileMode.OtherExecute | UnixFileMode.OtherRead);
 				OSInfo.Unix.GrantUnixPermissions(exePath, UnixFileMode.GroupExecute | UnixFileMode.GroupRead |
@@ -110,12 +110,12 @@ namespace SolidCP.Setup.Actions
 					.FirstOrDefault(dir => Directory.Exists(dir)) ??
 					"/usr/share/applications";
 
-				var deskfile = appdir + "/com.solidcp.installer.desktop";
+				var deskfile = appdir + "/com.fusecp.installer.desktop";
 				File.WriteAllText(deskfile, $@"[Desktop Entry]
 Type=Application
-Name=SolidCP Installer
-Comment=The Server component of the SolidCP server control panel
-Exec=/usr/bin/solidcp
+Name=FuseCP Installer
+Comment=The Server component of the FuseCP server control panel
+Exec=/usr/bin/fusecp
 Icon={iconFileName}
 Version={vars.Version}
 Terminal=false
@@ -126,7 +126,7 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 
 				Log.WriteEnd("Installer installed");
 
-				InstallLog.AppendLine("- Installed SolidCP Installer. You can run the installer with the command \"solidcp\"");
+				InstallLog.AppendLine("- Installed FuseCP Installer. You can run the installer with the command \"fusecp\"");
 
 			}
 			catch (Exception ex)
@@ -143,10 +143,10 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 				var appdir = Environment.GetEnvironmentVariable("XDG_DATA_DIRS") ?? "/usr/share";
 				appdir += "/applications";
 
-				var deskfile = appdir + "/com.solidcp.SolidCP.desktop";
+				var deskfile = appdir + "/com.fusecp.FuseCP.desktop";
 				if (File.Exists(deskfile)) File.Delete(deskfile);
 
-				if (File.Exists("/usr/bin/solidcp")) File.Delete("/usr/bin/solidcp");
+				if (File.Exists("/usr/bin/fusecp")) File.Delete("/usr/bin/fusecp");
 
 				var installerDir = Path.Combine(vars.InstallationFolder, "Installer");
 				if (Directory.Exists(installerDir))
@@ -166,7 +166,7 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 
 	public class InstallServerUnixAction : Action, IInstallAction, IUninstallAction
 	{
-		public const string LogStartMessage = "Install SolidCP Server...";
+		public const string LogStartMessage = "Install FuseCP Server...";
 		public const string LogEndMessage = "";
 
 		public override bool Indeterminate
@@ -182,7 +182,7 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 			{
 
 				if (String.IsNullOrEmpty(vars.InstallationFolder) || vars.InstallationFolder.Contains('\\'))
-					vars.InstallationFolder = Path.Combine("/var/www/SolidCP", vars.ComponentName);
+					vars.InstallationFolder = Path.Combine("/var/www/FuseCP", vars.ComponentName);
 				//
 				if (String.IsNullOrEmpty(vars.WebSiteDomain))
 					vars.WebSiteDomain = String.Empty;
@@ -254,10 +254,10 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 
 				Finish(LogStartMessage);
 
-				Log.WriteEnd("Installed SolidCP Server");
+				Log.WriteEnd("Installed FuseCP Server");
 
 				//update install log
-				var serviceId = (installer as UniversalInstaller.UnixInstaller)?.UnixServerServiceId ?? "solidcp-server";
+				var serviceId = (installer as UniversalInstaller.UnixInstaller)?.UnixServerServiceId ?? "fusecp-server";
 
 				if (vars.InstallNet8Runtime) InstallLog.AppendLine("- Installed .NET 8 Runtime.");
 				InstallLog.AppendLine($"- Created a new system service {serviceId} running the website.");
@@ -276,7 +276,7 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 					return;
 
 				Log.WriteError("Web site install error", ex);
-				InstallLog.AppendLine(string.Format("- Failed to install \"{0}\" web site ", "SolidCP Server"));
+				InstallLog.AppendLine(string.Format("- Failed to install \"{0}\" web site ", "FuseCP Server"));
 
 				throw;
 			}
@@ -286,7 +286,7 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 		void IUninstallAction.Run(SetupVariables vars)
 		{
 			Log.WriteStart("Deleting web site");
-			var serviceId = (UniversalInstaller.Installer.Current as UniversalInstaller.UnixInstaller)?.UnixServerServiceId ?? "solidcp-server";
+			var serviceId = (UniversalInstaller.Installer.Current as UniversalInstaller.UnixInstaller)?.UnixServerServiceId ?? "fusecp-server";
 
 			try
 			{
@@ -322,7 +322,7 @@ Caregories=Network".Replace("\r\n", Environment.NewLine));
 		void IPrepareDefaultsAction.Run(SetupVariables vars)
 		{
 			if (String.IsNullOrEmpty(vars.InstallationFolder) || vars.InstallationFolder.Contains('\\'))
-				vars.InstallationFolder = String.Format(@"/var/www/SolidCP/{0}", vars.ComponentName);
+				vars.InstallationFolder = String.Format(@"/var/www/FuseCP/{0}", vars.ComponentName);
 
 			if (String.IsNullOrEmpty(vars.WebSiteDomain))
 				vars.WebSiteDomain = String.Empty;

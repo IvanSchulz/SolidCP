@@ -32,14 +32,14 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class AddRDSServer : SolidCPModuleBase
+    public partial class AddRDSServer : FuseCPModuleBase
     {
         
         protected void Page_Load(object sender, EventArgs e)

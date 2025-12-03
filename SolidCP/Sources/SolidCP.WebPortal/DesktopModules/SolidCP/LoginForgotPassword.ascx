@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginForgotPassword.ascx.cs" Inherits="SolidCP.Portal.LoginForgotPassword" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginForgotPassword.ascx.cs" Inherits="FuseCP.Portal.LoginForgotPassword" %>
 <div class="panel-body form-horizontal">
     <div class="form-group">
 	<asp:Label ID="lblUsername" runat="server" meta:resourcekey="lblUsername" Text="User name:" CssClass="col-sm-2"></asp:Label>

@@ -30,7 +30,7 @@ using System;
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	/// <summary>
 	/// Top logo

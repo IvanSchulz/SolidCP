@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DynamicMemoryControl.ascx.cs" Inherits="SolidCP.Portal.Proxmox.UserControls.DynamicMemoryControl" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DynamicMemoryControl.ascx.cs" Inherits="FuseCP.Portal.Proxmox.UserControls.DynamicMemoryControl" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register TagPrefix="wsp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
 <%@ Register TagPrefix="wsp" TagName="CheckBoxOption" Src="../../UserControls/CheckBoxOption.ascx" %>
 

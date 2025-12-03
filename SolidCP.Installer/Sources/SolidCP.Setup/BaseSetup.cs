@@ -39,10 +39,10 @@ using System.Linq;
 using System.Runtime.Loader;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using SolidCP.UniversalInstaller;
-using OS = SolidCP.Providers.OS;
+using FuseCP.UniversalInstaller;
+using OS = FuseCP.Providers.OS;
 
-namespace SolidCP.Setup;
+namespace FuseCP.Setup;
 
 public class BaseSetup
 {

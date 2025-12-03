@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ContactDetails.ascx.cs" Inherits="SolidCP.Portal.ContactDetails" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ContactDetails.ascx.cs" Inherits="FuseCP.Portal.ContactDetails" %>
 <div class="form-horizontal">
     <div class="form-group">
 		<asp:Label ID="lblCompanyName" runat="server" meta:resourcekey="lblCompanyName" Text="Company Name:"  CssClass="col-sm-2"  AssociatedControlID="txtCompanyName"></asp:Label>

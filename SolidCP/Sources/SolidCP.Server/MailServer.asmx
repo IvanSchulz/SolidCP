@@ -1,1 +1,1 @@
-<%@ WebService Language="C#" CodeBehind="MailServer.asmx.cs" Class="SolidCP.Server.MailServer" %>
+<%@ WebService Language="C#" CodeBehind="MailServer.asmx.cs" Class="FuseCP.Server.MailServer" %>

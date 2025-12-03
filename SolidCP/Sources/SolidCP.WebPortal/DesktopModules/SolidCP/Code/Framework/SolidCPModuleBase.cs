@@ -38,15 +38,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public class SolidCPModuleBase : SolidCPControlBase
+    public class FuseCPModuleBase : FuseCPControlBase
     {
         private IMessageBoxControl messageBox;
 
-        public SolidCPModuleBase()
+        public FuseCPModuleBase()
         {
         }
 
@@ -54,7 +54,7 @@ namespace SolidCP.Portal
         {
             // add message box control
             messageBox = (IMessageBoxControl)this.LoadControl(
-                PanelGlobals.SolidCPRootPath + "UserControls/MessageBox.ascx");
+                PanelGlobals.FuseCPRootPath + "UserControls/MessageBox.ascx");
             this.Controls.AddAt(0, (Control)messageBox);
             ((Control)messageBox).Visible = false;
 
@@ -181,7 +181,7 @@ namespace SolidCP.Portal
                 if (resultCode == BusinessErrorCodes.ERROR_USER_ACCOUNT_DEMO)
                 {
                     UserSettings scpSettings = UsersHelper.GetCachedUserSettings(
-                        PanelSecurity.EffectiveUserId, UserSettings.SolidCP_POLICY);
+                        PanelSecurity.EffectiveUserId, UserSettings.FuseCP_POLICY);
                     if (!String.IsNullOrEmpty(scpSettings["DemoMessage"]))
                     {
                         localizedDescription = scpSettings["DemoMessage"];
@@ -268,7 +268,7 @@ namespace SolidCP.Portal
                 //
                 if (ex != null)
                 {
-                    if (!String.IsNullOrEmpty(ex.Message) && ex.Message.Contains("SolidCP_ERROR"))
+                    if (!String.IsNullOrEmpty(ex.Message) && ex.Message.Contains("FuseCP_ERROR"))
                     {
                         string[] messageParts = ex.Message.Split(new char[] { '@' });
                         if (messageParts.Length > 1)

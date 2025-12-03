@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	/// <summary>This static class holds 2 lookup tables, from/to DnsRecordType enum</summary>
 	internal static class RecordTypes

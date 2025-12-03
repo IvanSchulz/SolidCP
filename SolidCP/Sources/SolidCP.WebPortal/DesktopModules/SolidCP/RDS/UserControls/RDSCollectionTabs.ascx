@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSCollectionTabs.ascx.cs" Inherits="SolidCP.Portal.RDS.UserControls.RdsServerTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSCollectionTabs.ascx.cs" Inherits="FuseCP.Portal.RDS.UserControls.RdsServerTabs" %>
 <div class="nav nav-tabs" style="padding-bottom:7px !important;">
             <asp:DataList ID="rdsTabs" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" EnableViewState="false">
                 <ItemStyle Wrap="False" />

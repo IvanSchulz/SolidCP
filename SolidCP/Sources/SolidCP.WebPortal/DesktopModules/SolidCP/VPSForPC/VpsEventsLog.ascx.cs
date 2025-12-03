@@ -37,9 +37,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
-    public partial class VpsEventsLog : SolidCPModuleBase
+    public partial class VpsEventsLog : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

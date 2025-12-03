@@ -38,7 +38,7 @@
 
 #pragma warning disable 1591
 
-namespace SolidCP.LocalizationToolkit {
+namespace FuseCP.LocalizationToolkit {
     
     
     /// <summary>

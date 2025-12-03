@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceQuotas.ascx.cs" Inherits="SolidCP.Portal.SpaceQuotas" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceQuotas.ascx.cs" Inherits="FuseCP.Portal.SpaceQuotas" %>
 <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
 
 <div class="panel-body form-horizontal">

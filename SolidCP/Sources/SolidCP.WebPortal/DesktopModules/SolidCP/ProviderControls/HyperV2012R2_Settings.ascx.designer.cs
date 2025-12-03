@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
 
 
@@ -993,7 +993,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl externalPreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl externalPreferredNameServer;
 
         /// <summary>
         /// locAlternateNameServer control.
@@ -1011,7 +1011,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl externalAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl externalAlternateNameServer;
 
         /// <summary>
         /// chkAssignIPAutomatically control.
@@ -1110,7 +1110,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl managePreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl managePreferredNameServer;
 
         /// <summary>
         /// ManageAlternateNameServerRow control.
@@ -1137,7 +1137,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl manageAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl manageAlternateNameServer;
 
         /// <summary>
         /// PrivUpdatePanel control.
@@ -1200,7 +1200,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privateIPAddress;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateIPAddress;
 
         /// <summary>
         /// privateSubnetMask control.
@@ -1236,7 +1236,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privateDefaultGateway;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateDefaultGateway;
 
         /// <summary>
         /// locPrivPreferredNameServer control.
@@ -1254,7 +1254,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privatePreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privatePreferredNameServer;
 
         /// <summary>
         /// locPrivAlternateNameServer control.
@@ -1272,7 +1272,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privateAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateAlternateNameServer;
 
         /// <summary>
         /// locSwitchTypePrivateNetwork control.
@@ -1380,7 +1380,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl dmzIPAddress;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl dmzIPAddress;
 
         /// <summary>
         /// dmzSubnetMask control.
@@ -1416,7 +1416,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl dmzDefaultGateway;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl dmzDefaultGateway;
 
         /// <summary>
         /// locDmzPreferredNameServer control.
@@ -1434,7 +1434,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl dmzPreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl dmzPreferredNameServer;
 
         /// <summary>
         /// locDmzAlternateNameServer control.
@@ -1452,7 +1452,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl dmzAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl dmzAlternateNameServer;
 
         /// <summary>
         /// locDmzSwitchType control.

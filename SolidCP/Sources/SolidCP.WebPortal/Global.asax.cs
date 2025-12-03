@@ -45,11 +45,11 @@ using System.Web.UI;
 using System.Net;
 using System.Net.Http;
 using System.Timers;
-using SolidCP.Portal;
+using FuseCP.Portal;
 using System.Threading.Tasks;
 
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
 	public class Global : System.Web.HttpApplication
 	{
@@ -134,7 +134,7 @@ namespace SolidCP.WebPortal
 					client.GetAsync(serverUrl);
 			} else if (!serverUrl.StartsWith("assembly://"))
 			{ // Start EnterpriseServer
-				var esTestClient = new SolidCP.EnterpriseServer.Client.esTest();
+				var esTestClient = new FuseCP.EnterpriseServer.Client.esTest();
 				esTestClient.Url = serverUrl;
 				TouchTask = esTestClient.TouchAsync();
 			} else

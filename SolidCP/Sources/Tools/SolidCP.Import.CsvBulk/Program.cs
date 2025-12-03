@@ -31,7 +31,7 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Import.CsvBulk
+namespace FuseCP.Import.CsvBulk
 {
 	class Program
 	{

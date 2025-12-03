@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SuspendOverusedSpaces.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.SuspendOverusedSpaces" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SuspendOverusedSpaces.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.SuspendOverusedSpaces" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 

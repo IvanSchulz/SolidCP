@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.EnterpriseServer.Code.HostedSolution;
-using SolidCP.EnterpriseServer.Code.SharePoint;
-using SolidCP.EnterpriseServer.Code.VirtualizationProxmox;
+using FuseCP.EnterpriseServer.Code.HostedSolution;
+using FuseCP.EnterpriseServer.Code.SharePoint;
+using FuseCP.EnterpriseServer.Code.VirtualizationProxmox;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class ControllerBase: IDisposable
 	{

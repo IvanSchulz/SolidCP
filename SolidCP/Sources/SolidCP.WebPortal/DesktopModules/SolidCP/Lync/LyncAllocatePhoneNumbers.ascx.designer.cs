@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Lync {
+namespace FuseCP.Portal.Lync {
     
     
     public partial class LyncAllocatePhoneNumbers {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,6 +46,6 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.AllocatePackagePhoneNumbers allocatePhoneNumbers;
+        protected global::FuseCP.Portal.UserControls.AllocatePackagePhoneNumbers allocatePhoneNumbers;
     }
 }

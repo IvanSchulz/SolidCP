@@ -35,7 +35,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	/// <summary>
 	/// Animated Icon.

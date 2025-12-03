@@ -1,4 +1,4 @@
-﻿using SolidCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Entities;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 #endif
@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Configuration;
+namespace FuseCP.EnterpriseServer.Data.Configuration;
 
 public partial class ExchangeOrganizationConfiguration: EntityTypeConfiguration<ExchangeOrganization>
 {

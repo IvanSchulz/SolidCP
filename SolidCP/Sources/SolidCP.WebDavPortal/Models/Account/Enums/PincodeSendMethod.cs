@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDavPortal.Models.Account.Enums
+namespace FuseCP.WebDavPortal.Models.Account.Enums
 {
     public enum PincodeSendMethod
     {

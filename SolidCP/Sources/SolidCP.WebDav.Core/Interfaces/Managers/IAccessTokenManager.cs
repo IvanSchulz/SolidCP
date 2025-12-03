@@ -1,8 +1,8 @@
-﻿using System;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
+using System;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
 
-namespace SolidCP.WebDav.Core.Interfaces.Managers
+namespace FuseCP.WebDav.Core.Interfaces.Managers
 {
     public interface IAccessTokenManager
     {

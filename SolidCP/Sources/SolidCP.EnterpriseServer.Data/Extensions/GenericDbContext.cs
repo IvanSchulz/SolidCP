@@ -1,4 +1,4 @@
-﻿#if !NETSTANDARD
+#if !NETSTANDARD
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 
 	public class MySqlDbContext : GenericDbContext<MySqlProvider>

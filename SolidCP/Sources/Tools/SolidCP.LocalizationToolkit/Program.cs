@@ -36,7 +36,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	static class Program
 	{
@@ -72,7 +72,7 @@ namespace SolidCP.LocalizationToolkit
 		{
 			string message = string.Format("A fatal error has occurred.\n" +
 				"We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@SolidCP.net.\n{0}",
+				"Please contact Technical Support at support@FuseCP.net.\n{0}",
 				e.Exception);
 			MessageBox.Show(message, "Localization Toolkit", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			Application.Exit();
@@ -122,7 +122,7 @@ namespace SolidCP.LocalizationToolkit
 		internal static void ShowError(Exception ex)
 		{
 			string message = string.Format("An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@SolidCP.net\n{0}", ex);
+				"Please contact Technical Support at support@FuseCP.net\n{0}", ex);
 			MessageBox.Show(message, "Localization Toolkit", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 

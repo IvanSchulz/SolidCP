@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Proxmox_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Proxmox_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Proxmox_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Proxmox_Settings" %>
 
 
 <asp:ValidationSummary ID="ValidationSummary" runat="server" ShowMessageBox="true" ShowSummary="false" />

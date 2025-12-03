@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsEditor.ascx.cs" Inherits="SolidCP.Portal.SpaceSettingsEditor" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsEditor.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsEditor" %>
 <div class="panel-body form-horizontal">
     <asp:UpdatePanel runat="server" ID="updatePanelUsers">
         <ContentTemplate>

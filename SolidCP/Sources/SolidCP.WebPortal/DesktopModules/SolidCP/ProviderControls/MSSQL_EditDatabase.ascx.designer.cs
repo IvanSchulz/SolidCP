@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class MSSQL_EditDatabase {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDataFiles;
+        protected global::FuseCP.Portal.CollapsiblePanel secDataFiles;
         
         /// <summary>
         /// FilesPanel control.
@@ -136,7 +136,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secMainTools;
+        protected global::FuseCP.Portal.CollapsiblePanel secMainTools;
         
         /// <summary>
         /// MainToolsPanel control.
@@ -172,7 +172,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secHousekeepingTools;
+        protected global::FuseCP.Portal.CollapsiblePanel secHousekeepingTools;
         
         /// <summary>
         /// HousekeepingToolsPanel control.

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class DomainsAddDomain {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// summary control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.DomainControl DomainName;
+        protected global::FuseCP.Portal.UserControls.DomainControl DomainName;
         
         /// <summary>
         /// OptionsPanelHeader control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel OptionsPanelHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel OptionsPanelHeader;
         
         /// <summary>
         /// OptionsPanel control.
@@ -67,13 +67,13 @@ namespace SolidCP.Portal {
         protected global::System.Web.UI.WebControls.Panel OptionsPanel;
         
         /// <summary>
-        /// CreateSolidCP control.
+        /// CreateFuseCP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel CreateSolidCP;
+        protected global::System.Web.UI.WebControls.Panel CreateFuseCP;
         
         /// <summary>
         /// CreateWebSite control.
@@ -112,13 +112,13 @@ namespace SolidCP.Portal {
         protected global::System.Web.UI.WebControls.TextBox txtHostName;
         
         /// <summary>
-        /// PointSolidCP control.
+        /// PointFuseCP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PointSolidCP;
+        protected global::System.Web.UI.WebControls.Panel PointFuseCP;
         
         /// <summary>
         /// PointWebSite control.

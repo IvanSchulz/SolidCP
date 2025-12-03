@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.EnterpriseServer.Base.HostedSolution
+namespace FuseCP.EnterpriseServer.Base.HostedSolution
 {
     public class WebDavAccessToken
     {

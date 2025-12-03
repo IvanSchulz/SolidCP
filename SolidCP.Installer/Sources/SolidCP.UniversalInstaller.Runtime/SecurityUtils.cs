@@ -39,7 +39,7 @@ using System.Collections.Generic;
 using System.Management;
 using System.Globalization;
 
-namespace SolidCP.UniversalInstaller.Runtime;
+namespace FuseCP.UniversalInstaller.Runtime;
 
 /// <summary>
 /// Security utils class.

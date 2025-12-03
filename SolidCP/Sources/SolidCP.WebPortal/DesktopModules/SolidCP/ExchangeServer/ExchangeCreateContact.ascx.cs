@@ -40,11 +40,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeCreateContact : SolidCPModuleBase
+    public partial class ExchangeCreateContact : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

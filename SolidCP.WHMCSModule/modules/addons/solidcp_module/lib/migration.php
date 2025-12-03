@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,18 +32,18 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP migration controller
+ * FuseCP migration controller
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
 
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/var_definition.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/var_definition.php');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -147,7 +147,7 @@ function migrateDbValues($table = "", $depr_value = ""){
         if($table == "tblproducts" && $depr_value == "configoption6"){
             $old_tbl_content = Capsule::table($table)
                     ->select('id', 'configoption7', 'configoption8', 'configoption9', 'configoption10', 'configoption11', 'configoption12', 'configoption13', 'configoption14', 'configoption15', 'configoption16', 'configoption17', 'configoption18', 'configoption19', 'configoption20', 'configoption21', 'configoption22', 'configoption23', 'configoption24')
-                    ->where('servertype','SolidCP')
+                    ->where('servertype','FuseCP')
                     ->whereRaw('configoption6 REGEXP "^[0-9]{4,5}$"')
                     ->get();
             foreach($old_tbl_content as $value){
@@ -309,7 +309,7 @@ function needDbValuesMigration(){
         if(Capsule::schema()->hasTable('tblproducts')){
             $old_tbl_values = Capsule::table('tblproducts')
                     ->select('id', 'name')
-                    ->where('servertype','SolidCP')
+                    ->where('servertype','FuseCP')
                     ->whereRaw('configoption6 REGEXP "^[0-9]{4,5}$"')
                     ->get();
             if(count($old_tbl_values) > 0) $migrate_db_values[] = ['table' => 'tblproducts', 'depr_value' => 'configoption6'];
@@ -325,9 +325,9 @@ function needDbValuesMigration(){
 function needModulesDeactivation(){
     $deactive_old_modules = array();
     foreach($GLOBALS['activeaddonmodules'] as $value){
-        if($value == 'solidcp_addons') $deactive_old_modules[]='solidcp_addons';
-        if($value == 'solidcp_configurable') $deactive_old_modules[]='solidcp_configurable';
-        if($value == 'solidcp_sync') $deactive_old_modules[]='solidcp_sync';
+        if($value == 'fusecp_addons') $deactive_old_modules[]='fusecp_addons';
+        if($value == 'fusecp_configurable') $deactive_old_modules[]='fusecp_configurable';
+        if($value == 'fusecp_sync') $deactive_old_modules[]='fusecp_sync';
     }
     if(count($deactive_old_modules)>0) return $deactive_old_modules;
     else return false;
@@ -336,14 +336,14 @@ function needModulesDeactivation(){
 function needFilesDeletion(){
     $migrate_delete_files = array();
     // Before version 1.1.0
-    $migrate_old_files[] = '/modules/addons/solidcp_addons/hooks.php';
-    $migrate_old_files[] = '/modules/addons/solidcp_addons/solidcp_addons.php';
-    $migrate_old_files[] = '/modules/addons/solidcp_configurable/solidcp_configurable.php';
-    $migrate_old_files[] = '/modules/addons/solidcp_sync/hooks.php';
-    $migrate_old_files[] = '/modules/addons/solidcp_sync/solidcp_sync.php';
-    $migrate_old_files[] = '/modules/servers/SolidCP/enterpriseserver.php';
-    $migrate_old_files[] = '/modules/servers/SolidCP/functions.php';
-    $migrate_old_files[] = '/modules/servers/SolidCP/clientarea.tpl';
+    $migrate_old_files[] = '/modules/addons/fusecp_addons/hooks.php';
+    $migrate_old_files[] = '/modules/addons/fusecp_addons/fusecp_addons.php';
+    $migrate_old_files[] = '/modules/addons/fusecp_configurable/fusecp_configurable.php';
+    $migrate_old_files[] = '/modules/addons/fusecp_sync/hooks.php';
+    $migrate_old_files[] = '/modules/addons/fusecp_sync/fusecp_sync.php';
+    $migrate_old_files[] = '/modules/servers/FuseCP/enterpriseserver.php';
+    $migrate_old_files[] = '/modules/servers/FuseCP/functions.php';
+    $migrate_old_files[] = '/modules/servers/FuseCP/clientarea.tpl';
 
     foreach($migrate_old_files as $value){
         if(is_file(ROOTDIR.$value)) $migrate_delete_files[]= $value;

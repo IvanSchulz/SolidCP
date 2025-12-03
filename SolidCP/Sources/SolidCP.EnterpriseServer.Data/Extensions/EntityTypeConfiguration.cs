@@ -1,4 +1,4 @@
-﻿#if !NETSTANDARD
+#if !NETSTANDARD
 
 #nullable enable
 using System;
@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using SolidCP.EnterpriseServer.Data.Entities;
-using SolidCP.EnterpriseServer.Data.Configuration;
+using FuseCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Configuration;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -30,7 +30,7 @@ using System.Data.Entity.ModelConfiguration.Configuration;
 #endif
 
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 #if NetCore
 	public abstract class EntityTypeConfiguration<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : class

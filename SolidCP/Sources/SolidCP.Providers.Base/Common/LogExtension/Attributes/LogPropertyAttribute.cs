@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class LogPropertyAttribute : Attribute

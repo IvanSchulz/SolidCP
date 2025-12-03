@@ -32,7 +32,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.FilesComparer
+namespace FuseCP.FilesComparer
 {
     class Program
     {

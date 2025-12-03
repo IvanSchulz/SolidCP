@@ -26,7 +26,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Updater
+namespace FuseCP.Updater
 {
 	partial class UpdaterForm
 	{
@@ -112,7 +112,7 @@ namespace SolidCP.Updater
 			this.Name = "UpdaterForm";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "SolidCP Installer";
+			this.Text = "FuseCP Installer";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormClosing);
 			this.grpFiles.ResumeLayout(false);
 			this.ResumeLayout(false);

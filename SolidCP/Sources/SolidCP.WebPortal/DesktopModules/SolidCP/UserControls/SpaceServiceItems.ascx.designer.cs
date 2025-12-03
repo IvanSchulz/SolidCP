@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.UserControls {
+namespace FuseCP.Portal.UserControls {
     
     
     public partial class SpaceServiceItems {
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebsiteActions websiteActions;
+        protected global::FuseCP.Portal.WebsiteActions websiteActions;
         
         /// <summary>
         /// mailActions control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailAccountActions mailActions;
+        protected global::FuseCP.Portal.MailAccountActions mailActions;
         
         /// <summary>
         /// searchBox control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SearchBox searchBox;
+        protected global::FuseCP.Portal.SearchBox searchBox;
         
         /// <summary>
         /// litGroupName control.
@@ -136,6 +136,6 @@ namespace SolidCP.Portal.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota itemsQuota;
+        protected global::FuseCP.Portal.Quota itemsQuota;
     }
 }

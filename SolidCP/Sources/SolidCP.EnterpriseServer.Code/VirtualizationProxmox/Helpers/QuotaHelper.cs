@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer.Code.VirtualizationProxmox
+namespace FuseCP.EnterpriseServer.Code.VirtualizationProxmox
 {
     public static class QuotaHelper
     {

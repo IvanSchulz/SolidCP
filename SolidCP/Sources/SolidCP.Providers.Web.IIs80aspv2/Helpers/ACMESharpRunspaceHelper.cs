@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Management.Automation.Runspaces;
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
     public class ACMESharpRunspaceHelper : RunspaceHelper
     {

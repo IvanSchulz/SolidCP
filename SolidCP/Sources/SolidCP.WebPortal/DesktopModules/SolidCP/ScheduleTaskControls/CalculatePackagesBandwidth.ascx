@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CalculatePackagesBandwidth.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.CalculatePackagesBandwidth" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CalculatePackagesBandwidth.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.CalculatePackagesBandwidth" %>
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>
             <td class="SubHead" nowrap>

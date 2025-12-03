@@ -40,15 +40,15 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.DirectoryServices;
-using SolidCP.Setup.Web;
+using FuseCP.Setup.Web;
 using System.IO;
 using System.Management;
-using SolidCP.Setup.Actions;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Actions;
+using FuseCP.UniversalInstaller;
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class ConfigurationCheckPage : BannerWizardPage
 	{
@@ -763,7 +763,7 @@ namespace SolidCP.Setup
             return GetIsWebFeaturesInstalled();
 		}
         private static bool GetIsWebFeaturesInstalled()
-        {   // See SolidCP.Installer\Sources\SolidCP.WIXInstaller\Common\Tool.cs
+        {   // See FuseCP.Installer\Sources\FuseCP.WIXInstaller\Common\Tool.cs
             bool Result = false;
             var LMKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
             Result |= CheckAspNetRegValue(LMKey);

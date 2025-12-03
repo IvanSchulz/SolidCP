@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 using System.IO;
 using SkiaSharp;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
 	public class PpmImage
 	{

@@ -1,4 +1,4 @@
-// Copyright (c) 2024, SolidCP
+// Copyright (c) 2024, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -34,10 +34,10 @@ using System;
 using System.IO;
 using System.Text;
 using System.Security.Cryptography;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Linq;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     /// <summary>
     /// Summary description for CryptoUtils.

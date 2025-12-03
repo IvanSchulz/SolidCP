@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerServicesControl.ascx.cs" Inherits="SolidCP.Portal.ServerServicesControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerServicesControl.ascx.cs" Inherits="FuseCP.Portal.ServerServicesControl" %>
 <asp:Repeater id="dlServiceGroups" Runat="server" >
 	<ItemTemplate>
         <div class="panel panel-info">

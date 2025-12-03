@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NotifyOverusedDatabases.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.NotifyOverusedDatabases" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NotifyOverusedDatabases.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.NotifyOverusedDatabases" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 

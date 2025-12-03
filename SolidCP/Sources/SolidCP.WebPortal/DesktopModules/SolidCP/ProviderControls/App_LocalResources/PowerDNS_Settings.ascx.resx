@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -149,7 +149,7 @@ for your installation of ADO.NET Driver for MySQL (also known as MySQL Connector
     <value>Expire Limit:</value>
   </data>
   <data name="lblFtuNote.Text" xml:space="preserve">
-    <value>Information for first-time users of SolidCP Control Panel</value>
+    <value>Information for first-time users of FuseCP Control Panel</value>
   </data>
   <data name="lblIPAddresses.Text" xml:space="preserve">
     <value>Listening IP Addresses:</value>

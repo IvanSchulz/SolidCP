@@ -36,11 +36,11 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using SolidCP.Setup.Actions;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Setup.Actions;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Shows sql script process.

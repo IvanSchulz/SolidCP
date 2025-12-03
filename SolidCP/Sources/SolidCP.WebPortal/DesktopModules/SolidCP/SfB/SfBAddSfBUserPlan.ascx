@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAddSfBUserPlan.ascx.cs" Inherits="SolidCP.Portal.SfB.SfBAddSfBUserPlan" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAddSfBUserPlan.ascx.cs" Inherits="FuseCP.Portal.SfB.SfBAddSfBUserPlan" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
 <%@ Register Src="../ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>

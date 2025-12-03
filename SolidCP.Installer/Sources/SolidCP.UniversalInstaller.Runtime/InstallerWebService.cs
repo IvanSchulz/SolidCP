@@ -38,9 +38,9 @@ using System.ServiceModel;
 using System.Data;
 using System.Xml;
 using System.Xml.Linq;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public class InstallerWebService : InstallerService_SoapClient, IInstallerWebService
 	{

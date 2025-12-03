@@ -36,12 +36,12 @@ using System.Data;
 using System.Text;
 using MySql.Data.MySqlClient;
 
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
 using System.IO;
 using System.Reflection;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
     public class PowerDNS : HostingServiceProviderBase, IDnsServer
     {

@@ -32,13 +32,13 @@
 
 using System;
 using System.Web.Security;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeCreateMailbox : SolidCPModuleBase
+    public partial class ExchangeCreateMailbox : FuseCPModuleBase
     {
         private bool IsNewUser
         {
@@ -75,7 +75,7 @@ namespace SolidCP.Portal.ExchangeServer
 
 
 
-                SolidCP.Providers.HostedSolution.ExchangeMailboxPlan[] plans = ES.Services.ExchangeServer.GetExchangeMailboxPlans(PanelRequest.ItemID, false);
+                FuseCP.Providers.HostedSolution.ExchangeMailboxPlan[] plans = ES.Services.ExchangeServer.GetExchangeMailboxPlans(PanelRequest.ItemID, false);
 
                 if (plans.Length == 0)
                     btnCreate.Enabled = false;

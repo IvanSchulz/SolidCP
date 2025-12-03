@@ -40,9 +40,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class UserAccountNotes {
-        protected SolidCP.Portal.EditItemComments userComments;
+        protected FuseCP.Portal.EditItemComments userComments;
     }
 }

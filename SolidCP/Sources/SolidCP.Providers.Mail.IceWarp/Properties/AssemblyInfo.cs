@@ -37,10 +37,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Providers.Mail.IceWarp")]
+[assembly: AssemblyTitle("FuseCP.Providers.Mail.IceWarp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Providers.Mail.IceWarp")]
+[assembly: AssemblyProduct("FuseCP.Providers.Mail.IceWarp")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

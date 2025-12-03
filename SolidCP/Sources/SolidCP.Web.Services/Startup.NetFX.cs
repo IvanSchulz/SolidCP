@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +17,8 @@ using SwaggerWcf.Models;
 //using Microsoft.Web.Infrastructure;
 using System.ComponentModel;
 
-//[assembly: PreApplicationStartMethod(typeof(SolidCP.Web.Services.StartupFX), "Start")]
-namespace SolidCP.Web.Services
+//[assembly: PreApplicationStartMethod(typeof(FuseCP.Web.Services.StartupFX), "Start")]
+namespace FuseCP.Web.Services
 {
 	public static class StartupNetFX
 	{
@@ -40,30 +40,30 @@ namespace SolidCP.Web.Services
             var a = Assembly.GetEntryAssembly();
             var srvcAssemblies = AppDomain.CurrentDomain.GetAssemblies()
                 .Select(assembly => assembly.GetName().Name.Replace('.', ' '))
-                .Where(name => name == "SolidCP Server" || name == "SolidCP EnterpriseServer" ||
-                    name == "SolidCP WebApp");
+                .Where(name => name == "FuseCP Server" || name == "FuseCP EnterpriseServer" ||
+                    name == "FuseCP WebApp");
             var title = $"{string.Join(" & ", srvcAssemblies.ToArray())} API";
 
-			var hasServer = title.Contains("SolidCP Server");
-			var hasEnterprise = title.Contains("SolidCP EnterpriseServer");
+			var hasServer = title.Contains("FuseCP Server");
+			var hasEnterprise = title.Contains("FuseCP EnterpriseServer");
 
 			var openServices = $"{(hasServer || hasEnterprise ? "but the " : "")}{(hasEnterprise ? $"esAuthentication{(hasServer ? ", " : " & ")}esTest{(hasServer ? ", " : " ")}" : "")}{(hasServer ? "AutoDiscovery & Test " : "")}";
-			var clientAssembly = $"{(hasEnterprise ? "SolidCP.EnterpriseServer.Client " : "")}{(hasEnterprise && hasServer ? "& " : "")}{(hasServer ? "SolidCP.Server.Client " : "")}";
+			var clientAssembly = $"{(hasEnterprise ? "FuseCP.EnterpriseServer.Client " : "")}{(hasEnterprise && hasServer ? "& " : "")}{(hasServer ? "FuseCP.Server.Client " : "")}";
 			var info = new SwaggerWcf.Models.Info
 			{
 				Version = "1.0.0",
 				Title = title,
-				Description = $"This is the REST API of SolidCP. Note that all {openServices}services use Basic Http Authentication. If you use .NET, you might want to access the API over WCF/SOAP, in this case refer to the {clientAssembly}assembly.",
-				TermsOfService = "http://solidcp.com/terms/",
+				Description = $"This is the REST API of FuseCP. Note that all {openServices}services use Basic Http Authentication. If you use .NET, you might want to access the API over WCF/SOAP, in this case refer to the {clientAssembly}assembly.",
+				TermsOfService = "http://fusecp.com/terms/",
 				Contact = new SwaggerWcf.Models.InfoContact
 				{
 					Name = "Support",
-					Email = "support@solidcp.com"
+					Email = "support@fusecp.com"
 				},
 				License = new SwaggerWcf.Models.InfoLicense
 				{
-					Name = "SolidCP License",
-					Url = "http://solidcp.com/license/"
+					Name = "FuseCP License",
+					Url = "http://fusecp.com/license/"
 				},
 			};
 

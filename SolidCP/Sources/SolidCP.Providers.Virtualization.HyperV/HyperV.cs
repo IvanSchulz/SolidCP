@@ -33,23 +33,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.Utils;
 using System.Management;
 using System.Xml;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
 using Vds = Microsoft.Storage.Vds;
 using System.Configuration;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class HyperV : HostingServiceProviderBase, IVirtualizationServer
     {
         #region Constants
-        private const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "SolidCP.HyperV.UseDiskPartClearReadOnlyFlag";
+        private const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "FuseCP.HyperV.UseDiskPartClearReadOnlyFlag";
         private const string WMI_VIRTUALIZATION_NAMESPACE = @"root\virtualization";
         private const string WMI_CIMV2_NAMESPACE = @"root\cimv2";
 
@@ -149,7 +149,7 @@ namespace SolidCP.Providers.Virtualization
             vm.RamUsage = 0; // Convert.ToInt32(objSummary["MemoryUsage"]);
             vm.CreatedDate = wmi.ToDateTime((string)objSummary["CreationTime"]);
 
-            // try reading RAM and HDD from SolidCP.VmConfig service using KVP
+            // try reading RAM and HDD from FuseCP.VmConfig service using KVP
             List<KvpExchangeDataItem> vmKvps = GetKVPItems(vmId);
             foreach (KvpExchangeDataItem vmKvp in vmKvps)
             {
@@ -1999,7 +1999,7 @@ exit", Convert.ToInt32(objDisk["Index"])));
                     if (vps.State == VirtualMachineState.Running)
                     {
                         // try to shutdown the system
-                        ReturnCode code = ShutDownVirtualMachine(vm.VirtualMachineId, true, "Virtual Machine has been suspended from SolidCP");
+                        ReturnCode code = ShutDownVirtualMachine(vm.VirtualMachineId, true, "Virtual Machine has been suspended from FuseCP");
                         if (code == ReturnCode.OK)
                             return;
                     }

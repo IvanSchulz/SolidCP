@@ -36,13 +36,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class FileManager : SolidCPModuleBase
+    public partial class FileManager : FuseCPModuleBase
     {
 		/// <summary>
 		/// gvFilesID control.
@@ -220,7 +220,7 @@ function SetCreateZipFocus()
                 return false;
 
             // Get the Editable Extensions from the System Settings
-            // If it has not yet been set, we will use the original SolidCP allowed editable extensions
+            // If it has not yet been set, we will use the original FuseCP allowed editable extensions
             EnterpriseServer.SystemSettings settings = ES.Services.Files.GetFileManagerSettings();
             if (!String.IsNullOrEmpty(settings["EditableExtensions"]))
             {
@@ -888,7 +888,7 @@ function SetCreateZipFocus()
         {
             if (e.Exception != null)
             {
-                if (PanelSecurity.SelectedUser.Role == SolidCP.EnterpriseServer.UserRole.Administrator)
+                if (PanelSecurity.SelectedUser.Role == FuseCP.EnterpriseServer.UserRole.Administrator)
                     messageBox.ShowWarningMessage("FILES_GET_LIST");
                 else
                     messageBox.ShowErrorMessage("FILES_GET_LIST", e.Exception);

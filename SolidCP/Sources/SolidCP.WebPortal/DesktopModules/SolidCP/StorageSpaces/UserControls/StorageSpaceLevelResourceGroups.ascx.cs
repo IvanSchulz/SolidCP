@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.StorageSpaces.UserControls
+namespace FuseCP.Portal.StorageSpaces.UserControls
 {
-    public partial class StorageSpaceLevelResourceGroups : SolidCPControlBase
+    public partial class StorageSpaceLevelResourceGroups : FuseCPControlBase
     {
         public const string DirectionString = "DirectionString";
 

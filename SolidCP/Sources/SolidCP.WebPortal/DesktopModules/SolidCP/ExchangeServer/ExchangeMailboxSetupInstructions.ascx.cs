@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxSetupInstructions : SolidCPModuleBase
+    public partial class ExchangeMailboxSetupInstructions : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

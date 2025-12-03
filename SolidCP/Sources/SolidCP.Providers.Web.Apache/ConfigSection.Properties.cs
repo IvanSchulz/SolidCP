@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-namespace SolidCP.Providers.Web.Apache
+namespace FuseCP.Providers.Web.Apache
 {
 
 	public partial class ConfigSection

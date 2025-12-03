@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,21 +12,21 @@ using System.Web;
 using System.Web.Hosting;
 using System.Web.Http;
 using Cobalt;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.WebDav.Core;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Entities.Owa;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Owa;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Scp.Framework;
-using SolidCP.WebDavPortal.Configurations.ControllerConfigurations;
-using SolidCP.WebDavPortal.Extensions;
-using SolidCP.WebDavPortal.UI.Routes;
-using SolidCP.WebDav.Core.Extensions;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.WebDav.Core;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Entities.Owa;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Owa;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Scp.Framework;
+using FuseCP.WebDavPortal.Configurations.ControllerConfigurations;
+using FuseCP.WebDavPortal.Extensions;
+using FuseCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDav.Core.Extensions;
 
-namespace SolidCP.WebDavPortal.Controllers.Api
+namespace FuseCP.WebDavPortal.Controllers.Api
 {
     [Authorize]
     [OwaControllerConfiguration]

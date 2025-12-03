@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Portal.Code.UserControls;
-using SCP = SolidCP.EnterpriseServer;
+using FuseCP.Portal.Code.UserControls;
+using SCP = FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class EnterpriseStorageEditFolderTabs : SolidCPControlBase
+    public partial class EnterpriseStorageEditFolderTabs : FuseCPControlBase
     {
         public string SelectedTab { get; set; }
 

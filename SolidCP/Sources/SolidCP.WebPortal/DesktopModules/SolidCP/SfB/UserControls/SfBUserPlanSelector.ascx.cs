@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of SolidCP  nor   the   names  of  its
+// - Neither  the  name  of FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -29,9 +29,9 @@
 using System;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.SfB.UserControls
+namespace FuseCP.Portal.SfB.UserControls
 {
-    public partial class SfBUserPlanSelector : SolidCPControlBase
+    public partial class SfBUserPlanSelector : FuseCPControlBase
     {
 
         private string planToSelect;
@@ -75,12 +75,12 @@ namespace SolidCP.Portal.SfB.UserControls
 			}
         }
 
-        public SolidCP.Providers.HostedSolution.SfBUserPlan plan
+        public FuseCP.Providers.HostedSolution.SfBUserPlan plan
         {
             get
             {
-                SolidCP.Providers.HostedSolution.SfBUserPlan[] plans = ES.Services.SfB.GetSfBUserPlans(PanelRequest.ItemID);
-                foreach (SolidCP.Providers.HostedSolution.SfBUserPlan planitem in plans)
+                FuseCP.Providers.HostedSolution.SfBUserPlan[] plans = ES.Services.SfB.GetSfBUserPlans(PanelRequest.ItemID);
+                foreach (FuseCP.Providers.HostedSolution.SfBUserPlan planitem in plans)
                 {
                     if (planitem.SfBUserPlanId.ToString() == planId) return planitem;
                 }
@@ -90,9 +90,9 @@ namespace SolidCP.Portal.SfB.UserControls
 
         private void BindPlans()
 		{
-            SolidCP.Providers.HostedSolution.SfBUserPlan[] plans = ES.Services.SfB.GetSfBUserPlans(PanelRequest.ItemID);
+            FuseCP.Providers.HostedSolution.SfBUserPlan[] plans = ES.Services.SfB.GetSfBUserPlans(PanelRequest.ItemID);
 
-            foreach (SolidCP.Providers.HostedSolution.SfBUserPlan plan in plans)
+            foreach (FuseCP.Providers.HostedSolution.SfBUserPlan plan in plans)
 			{
 				ListItem li = new ListItem();
                 li.Text = plan.SfBUserPlanName;

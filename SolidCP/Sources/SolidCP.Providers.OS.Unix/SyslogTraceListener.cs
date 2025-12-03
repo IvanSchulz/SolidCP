@@ -1,14 +1,14 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System;
 using SyslogNet.Client;
 using SyslogNet.Client.Serialization;
 using SyslogNet.Client.Transport;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     public class SyslogTraceListener : TraceListener
     {
-        public const string SyslogAppName = "SolidCP";
+        public const string SyslogAppName = "FuseCP";
 
         SyslogLocalMessageSerializer serializer = new SyslogLocalMessageSerializer();
         SyslogLocalSender sender = new SyslogLocalSender();

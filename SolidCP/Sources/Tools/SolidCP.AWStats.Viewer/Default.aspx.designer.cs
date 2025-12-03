@@ -36,7 +36,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.AWStats.Viewer {
+namespace FuseCP.AWStats.Viewer {
     
     
     public partial class Default {

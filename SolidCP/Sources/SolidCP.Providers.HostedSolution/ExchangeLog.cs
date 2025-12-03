@@ -34,9 +34,9 @@ using System;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Text;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     /// <summary>
     /// Exchange Log Helper Methods

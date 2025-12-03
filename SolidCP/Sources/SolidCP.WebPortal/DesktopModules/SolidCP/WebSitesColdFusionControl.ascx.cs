@@ -41,7 +41,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public partial class WebSitesColdFusionControl : System.Web.UI.UserControl
     {

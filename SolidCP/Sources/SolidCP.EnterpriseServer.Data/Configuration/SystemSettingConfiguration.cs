@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer.Data.Configuration;
-using SolidCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Configuration;
+using FuseCP.EnterpriseServer.Data.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Configuration;
+namespace FuseCP.EnterpriseServer.Data.Configuration;
 
 public partial class SystemSettingConfiguration: EntityTypeConfiguration<SystemSetting>
 {
@@ -31,7 +31,7 @@ public partial class SystemSettingConfiguration: EntityTypeConfiguration<SystemS
 		HasData(() => new SystemSetting[] {
 			new SystemSetting() { SettingsName = "AccessIpsSettings", PropertyName = "AccessIps", PropertyValue = "" },
 			new SystemSetting() { SettingsName = "AuthenticationSettings", PropertyName = "CanPeerChangeMfa", PropertyValue = "True" },
-			new SystemSetting() { SettingsName = "AuthenticationSettings", PropertyName = "MfaTokenAppDisplayName", PropertyValue = "SolidCP" },
+			new SystemSetting() { SettingsName = "AuthenticationSettings", PropertyName = "MfaTokenAppDisplayName", PropertyValue = "FuseCP" },
 			new SystemSetting() { SettingsName = "BackupSettings", PropertyName = "BackupsPath", PropertyValue = "c:\\HostingBackups" },
 			new SystemSetting() { SettingsName = "SmtpSettings", PropertyName = "SmtpEnableSsl", PropertyValue = "False" },
 			new SystemSetting() { SettingsName = "SmtpSettings", PropertyName = "SmtpPort", PropertyValue = "25" },

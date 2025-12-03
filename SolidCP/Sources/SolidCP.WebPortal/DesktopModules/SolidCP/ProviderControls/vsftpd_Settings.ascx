@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="vsftpd_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.vsftpd_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="vsftpd_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.vsftpd_Settings" %>
 <table cellpadding="1" cellspacing="0" width="100%">
 		<tr>
 			<td class="SubHead" width="200" nowrap>

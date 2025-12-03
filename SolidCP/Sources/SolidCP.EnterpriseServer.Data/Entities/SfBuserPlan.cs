@@ -1,12 +1,12 @@
-﻿#if ScaffoldedEntities
+#if ScaffoldedEntities
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities;
+namespace FuseCP.EnterpriseServer.Data.Entities;
 
 [Table("SfBUserPlans")]
 public partial class SfBUserPlan

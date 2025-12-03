@@ -1,10 +1,10 @@
-﻿using SolidCP.WebDav.Core.Entities.Account;
-using SolidCP.WebDav.Core.Entities.Account.Enums;
-using SolidCP.WebDav.Core.Helper;
-using SolidCP.WebDav.Core.Interfaces.Managers.Users;
-using SolidCP.WebDav.Core.Scp.Framework;
+using FuseCP.WebDav.Core.Entities.Account;
+using FuseCP.WebDav.Core.Entities.Account.Enums;
+using FuseCP.WebDav.Core.Helper;
+using FuseCP.WebDav.Core.Interfaces.Managers.Users;
+using FuseCP.WebDav.Core.Scp.Framework;
 
-namespace SolidCP.WebDav.Core.Managers.Users
+namespace FuseCP.WebDav.Core.Managers.Users
 {
     public class UserSettingsManager : IUserSettingsManager
     {

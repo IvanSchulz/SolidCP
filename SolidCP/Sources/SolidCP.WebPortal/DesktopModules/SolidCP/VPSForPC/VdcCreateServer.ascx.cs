@@ -35,15 +35,15 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 using System.Resources;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
-	public partial class VdcCreate : SolidCPModuleBase
+	public partial class VdcCreate : FuseCPModuleBase
 	{
 		protected PackageContext cntx = null;
 

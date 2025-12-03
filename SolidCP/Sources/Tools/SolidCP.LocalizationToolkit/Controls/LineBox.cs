@@ -30,7 +30,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	/// <summary>
 	/// 3D line box.

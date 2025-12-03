@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPrivateNetwork.ascx.cs" Inherits="SolidCP.Portal.Proxmox.VdcPrivateNetwork" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPrivateNetwork.ascx.cs" Inherits="FuseCP.Portal.Proxmox.VdcPrivateNetwork" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="wsp" %>
@@ -48,7 +48,7 @@
 						    SelectCountMethod="GetPackagePrivateIPAddressesCount"
 						    SelectMethod="GetPackagePrivateIPAddresses"
 						    SortParameterName="sortColumn"
-						    TypeName="SolidCP.Portal.VirtualMachinesProxmoxHelper"
+						    TypeName="FuseCP.Portal.VirtualMachinesProxmoxHelper"
 						    OnSelected="odsPrivateAddressesPaged_Selected">
 					    <SelectParameters>
 						    <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="0" />						    

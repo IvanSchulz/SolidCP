@@ -34,16 +34,16 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 using System.Linq;
-using SolidCP.Providers.Web;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.Web;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.RemoteDesktopServices;
 using AjaxControlToolkit;
 
-namespace SolidCP.Portal.RDS.UserControls
+namespace FuseCP.Portal.RDS.UserControls
 {
-    public partial class RDSCollectionServers : SolidCPControlBase
+    public partial class RDSCollectionServers : FuseCPControlBase
 	{
         public const string DirectionString = "DirectionString";
         public event EventHandler OnRefreshClicked;

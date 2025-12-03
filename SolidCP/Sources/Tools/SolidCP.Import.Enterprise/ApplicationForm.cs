@@ -38,10 +38,10 @@ using System.Reflection;
 
 using System.DirectoryServices;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public partial class ApplicationForm : BaseForm
 	{

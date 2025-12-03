@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CollapsiblePanel.ascx.cs" Inherits="SolidCP.Portal.CollapsiblePanel" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CollapsiblePanel.ascx.cs" Inherits="FuseCP.Portal.CollapsiblePanel" %>
 <asp:Panel ID="HeaderPanel" runat="server" style="cursor: pointer;">
     <table class="Shevron" cellpadding="0" cellspacing="0" onmouseout="this.className='Shevron';" onmouseover="this.className='ShevronActive';">
 		<tr>

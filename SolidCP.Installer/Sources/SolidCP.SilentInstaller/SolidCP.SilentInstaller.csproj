@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
         <OutputType>Exe</OutputType>
         <TargetFramework>net48</TargetFramework>
-        <OutputPath>..\SolidCP.Installer\bin\$(Configuration)</OutputPath>
+        <OutputPath>..\FuseCP.Installer\bin\$(Configuration)</OutputPath>
         <PlatformTarget>AnyCPU</PlatformTarget>
         <Nullable>disable</Nullable>
         <LangVersion>12</LangVersion>
@@ -19,44 +19,44 @@
         <Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" OutputItemType="EmbeddedResource" />
-        <ProjectReference Include="..\SolidCP.Installer.Core\SolidCP.Installer.Core.csproj" OutputItemType="EmbeddedResource" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" OutputItemType="EmbeddedResource" />
-        <ProjectReference Include="..\SolidCP.Updater\SolidCP.Updater.csproj" OutputItemType="EmbeddedResource" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" OutputItemType="EmbeddedResource" />
+        <ProjectReference Include="..\FuseCP.Installer.Core\FuseCP.Installer.Core.csproj" OutputItemType="EmbeddedResource" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" OutputItemType="EmbeddedResource" />
+        <ProjectReference Include="..\FuseCP.Updater\FuseCP.Updater.csproj" OutputItemType="EmbeddedResource" />
         <!--
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs100\SolidCP.Providers.Web.IIs100.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs100\FuseCP.Providers.Web.IIs100.csproj">
 			<Project>{9b99f215-5029-4779-bc2f-6d83cbb42205}</Project>
-			<Name>SolidCP.Providers.Web.IIs100</Name>
+			<Name>FuseCP.Providers.Web.IIs100</Name>
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<OutputItemType>EmbeddedResource</OutputItemType>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs60\SolidCP.Providers.Web.IIs60.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs60\FuseCP.Providers.Web.IIs60.csproj">
 			<Project>{9be0317d-e42e-4ff6-9a87-8c801f046ea1}</Project>
-			<Name>SolidCP.Providers.Web.IIs60</Name>
+			<Name>FuseCP.Providers.Web.IIs60</Name>
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<OutputItemType>EmbeddedResource</OutputItemType>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIs70.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIs70.csproj">
 			<Project>{1b9dce85-c664-49fc-b6e1-86c63cab88d1}</Project>
-			<Name>SolidCP.Providers.Web.IIs70</Name>
+			<Name>FuseCP.Providers.Web.IIs70</Name>
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<OutputItemType>EmbeddedResource</OutputItemType>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs80\SolidCP.Providers.Web.IIs80.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs80\FuseCP.Providers.Web.IIs80.csproj">
 			<Project>{6e348968-461d-45a1-b235-4f552947b9f1}</Project>
-			<Name>SolidCP.Providers.Web.IIs80</Name>
+			<Name>FuseCP.Providers.Web.IIs80</Name>
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<OutputItemType>EmbeddedResource</OutputItemType>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.LetsEncrypt\SolidCP.Providers.Web.LetsEncrypt.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.LetsEncrypt\FuseCP.Providers.Web.LetsEncrypt.csproj">
 			<Project>{4e59ef03-997a-4b41-8ca7-01a5db5613ff}</Project>
-			<Name>SolidCP.Providers.Web.LetsEncrypt</Name>
+			<Name>FuseCP.Providers.Web.LetsEncrypt</Name>
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<OutputItemType>EmbeddedResource</OutputItemType>
 		</ProjectReference>-->
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
-        <ProjectReference Include="..\SolidCP.Installer.Core\SolidCP.Installer.Core.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
+        <ProjectReference Include="..\FuseCP.Installer.Core\FuseCP.Installer.Core.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
         <Compile Remove="obj\x86\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />

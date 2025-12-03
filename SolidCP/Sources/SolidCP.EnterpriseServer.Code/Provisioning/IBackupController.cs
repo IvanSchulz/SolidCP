@@ -34,9 +34,9 @@ using System;
 using System.Data;
 using System.Xml;
 
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public interface IBackupController
     {

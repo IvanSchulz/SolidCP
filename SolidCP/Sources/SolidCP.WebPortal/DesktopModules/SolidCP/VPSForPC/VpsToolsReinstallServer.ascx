@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsToolsReinstallServer.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VpsToolsReinstallServer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsToolsReinstallServer.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VpsToolsReinstallServer" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>

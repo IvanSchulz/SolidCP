@@ -1,4 +1,4 @@
-﻿#if NETSTANDARD
+#if NETSTANDARD
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +10,11 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Collections;
 using System.Threading;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
 #nullable enable
 
-namespace SolidCP.EnterpriseServer.Data;
+namespace FuseCP.EnterpriseServer.Data;
 
 public class DbSet<TEntity> : IQueryable<TEntity>, IEnumerable<TEntity>, IEnumerable, IQueryable where TEntity : class
 {

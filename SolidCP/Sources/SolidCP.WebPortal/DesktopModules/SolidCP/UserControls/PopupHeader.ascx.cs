@@ -41,7 +41,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
 	public partial class PopupHeader : System.Web.UI.UserControl
 	{

@@ -1,10 +1,10 @@
 using System;
 using System.Reflection;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.EnterpriseServer.Data;
 using System.Globalization;
 using System.Security.Policy;
 using System.Diagnostics.Contracts;
@@ -13,7 +13,7 @@ using System.Text.RegularExpressions;
 using System.Data;
 using System.Xml.Linq;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public abstract partial class Installer
 	{

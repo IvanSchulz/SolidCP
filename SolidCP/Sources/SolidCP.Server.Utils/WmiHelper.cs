@@ -33,7 +33,7 @@
 using System;
 using System.Management;
 
-namespace SolidCP.Providers.Utils
+namespace FuseCP.Providers.Utils
 {
     /// <summary>
     /// Summary description for WmiHelper.

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SendFilesViaFtp.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.SendFilesViaFtp" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SendFilesViaFtp.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.SendFilesViaFtp" %>
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>
             <td class="SubHead" nowrap valign="top">

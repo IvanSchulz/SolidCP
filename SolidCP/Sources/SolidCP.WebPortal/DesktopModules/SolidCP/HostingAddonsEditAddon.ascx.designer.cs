@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class HostingAddonsEditAddon {
@@ -91,7 +91,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel control.
@@ -109,7 +109,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.HostingPlansQuotas hostingPlansQuotas;
+        protected global::FuseCP.Portal.HostingPlansQuotas hostingPlansQuotas;
         
         /// <summary>
         /// btnDelete control.

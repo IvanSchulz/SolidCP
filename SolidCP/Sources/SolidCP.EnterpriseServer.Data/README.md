@@ -1,9 +1,9 @@
-﻿# SolidCP.EnterpriseServer.Data
-This project contains the EntityFramework database layer of SolidCP.EnterpriseServer. It uses EntityFramework Core 8
+# FuseCP.EnterpriseServer.Data
+This project contains the EntityFramework database layer of FuseCP.EnterpriseServer. It uses EntityFramework Core 8
 when running in .NET 10 or EntityFramework 6 when running in .NET Framework.
 
 # Programmer's Introduction Video
-Here's a [programmer's introduction video of the SolidCP EntityFramework port](https://youtu.be/fRJz-iDz4_s).
+Here's a [programmer's introduction video of the FuseCP EntityFramework port](https://youtu.be/fRJz-iDz4_s).
 
 # Database Support
 This implementation supports the following database flavors:
@@ -30,7 +30,7 @@ The Extensions folder contains extension classes.
 The folder CodeTemplates contains the T4 templates used by the "dotnet ef dbcontext scaffold" command to create the
 entity, dbcontext and configuration classes from an existing SQL Server database. You can run the scaffolding of the
 database by executing Scaffold.bat. The connection string for scaffolding must be set in the
-SolidCP.EnterpriseServer.Data.csproj in the ScaffoldConnectionString property. Be sure to run the scaffolding against a
+FuseCP.EnterpriseServer.Data.csproj in the ScaffoldConnectionString property. Be sure to run the scaffolding against a
 fresh database, since it will also scaffold seed data.
 You can also apply changes to the database model done through the old way with update_db.sql, in that you apply
 update_db.sql to the database, and then scaffold the database. You will see all the changes to the model in the
@@ -70,29 +70,29 @@ installer, not with .NET Framework.
 To create a new migration, you can run MigrationAdd.bat, or if you just want a migration for the database flavor
 you're developing with, copy the individual lines in AddMigration.bat to a command line shell.
 
-When you create SolidCP release with deploy-release.bat, deploy-release.bat creates backups of the Model Snapshots
-..DbContextModelSnapshot.cs files, so you can always create migrations based on the last SolidCP release. When
-creating a SolidCP release, one can combine all new migrations into one by using the DbContext in the snapshot
+When you create FuseCP release with deploy-release.bat, deploy-release.bat creates backups of the Model Snapshots
+..DbContextModelSnapshot.cs files, so you can always create migrations based on the last FuseCP release. When
+creating a FuseCP release, one can combine all new migrations into one by using the DbContext in the snapshot
 backup .cs file for the `dotnet ef migrations add` command or by reverting the Model Snapshot to that of the last
 release and creating a new migration. During development, when you have to change the database model often
 you might want to revert the last migration and then calculate a new migration with the MigrationRemove.bat
 script or the command `dotnet ef migrations remove`.
 
-# Usage of SolidCP.EnterpriseServer.Data
-SolidCP.EnterpriseServer.Data provides a class DbContext, that can be used as EF DbContext to access the database,
+# Usage of FuseCP.EnterpriseServer.Data
+FuseCP.EnterpriseServer.Data provides a class DbContext, that can be used as EF DbContext to access the database,
 It has properties to access the DbSet's of the Entities, and the usual SaveChanges etc. commands. In order to
 consume SoldiCP.EnterpriseServer.Data, you don't have to import the assemblies for EF Core 8 or EF 6, just use the
-SolidCP.EnterpriseServer.Data.DbContext class. It will use either EF Core 8 or EF 6 for accessing the database
+FuseCP.EnterpriseServer.Data.DbContext class. It will use either EF Core 8 or EF 6 for accessing the database
 depending on wether you run on NET 10 or on NET Framework.
 
 # Connection Strings
-SolidCP.EnterpriseServer.Data uses an additional setting in the connection strings, `DbType`. You can set the
+FuseCP.EnterpriseServer.Data uses an additional setting in the connection strings, `DbType`. You can set the
 `DbType` token in the connection string to either `DbType=SqlServer`, `DbType=MySql`, `DbType=MariaDb`,
 `DbType=Sqlite` or `DbType=PostgreSql`. You don't have to specify a providerName with your connection string
-as SolidCP will determine the correct database type according to the `DbType` token in your connection string
+as FuseCP will determine the correct database type according to the `DbType` token in your connection string
 automatically. So for example correct connection strings would be:
 
-- SQL Server: `DbType=SqlServer;Server=(local);Initial Catalog=SolidCP;uid=sa;pwd=Password12`
-- MySQL: `DbType=MySql;server=localhost;port=3306;database=SolidCP;uid=root;password=Password12`
-- MariaDB: `DbType=MariaDb;server=localhost;port=3306;database=SolidCP;uid=root;password=Password12`
-- SQLite: `DbType=Sqlite;data source=App_Data\SolidCP.sqlite`
+- SQL Server: `DbType=SqlServer;Server=(local);Initial Catalog=FuseCP;uid=sa;pwd=Password12`
+- MySQL: `DbType=MySql;server=localhost;port=3306;database=FuseCP;uid=root;password=Password12`
+- MariaDB: `DbType=MariaDb;server=localhost;port=3306;database=FuseCP;uid=root;password=Password12`
+- SQLite: `DbType=Sqlite;data source=App_Data\FuseCP.sqlite`

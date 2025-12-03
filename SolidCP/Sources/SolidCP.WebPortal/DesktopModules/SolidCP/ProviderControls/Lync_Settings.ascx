@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Lync_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Lync_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Lync_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Lync_Settings" %>
 <table>
     <tr>
         <td class="Normal" width="200" >

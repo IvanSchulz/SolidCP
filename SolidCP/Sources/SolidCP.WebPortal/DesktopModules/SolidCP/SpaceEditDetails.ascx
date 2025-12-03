@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceEditDetails.ascx.cs" Inherits="SolidCP.Portal.SpaceEditDetails" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceEditDetails.ascx.cs" Inherits="FuseCP.Portal.SpaceEditDetails" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

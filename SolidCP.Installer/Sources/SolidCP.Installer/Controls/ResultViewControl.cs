@@ -32,9 +32,9 @@
 
 using System;
 using System.Windows.Forms;
-using SolidCP.Installer.Common;
+using FuseCP.Installer.Common;
 
-namespace SolidCP.Installer.Controls
+namespace FuseCP.Installer.Controls
 {
 	internal class ResultViewControl : UserControl
 	{

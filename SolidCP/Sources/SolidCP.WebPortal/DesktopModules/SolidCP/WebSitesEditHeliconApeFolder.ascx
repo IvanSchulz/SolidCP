@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeFolder.ascx.cs"
-	Inherits="SolidCP.Portal.WebSitesEditHeliconApeFolder" %>
+	Inherits="FuseCP.Portal.WebSitesEditHeliconApeFolder" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
 <link rel="stylesheet" href="/JavaScript/codemirror/codemirror.css" />

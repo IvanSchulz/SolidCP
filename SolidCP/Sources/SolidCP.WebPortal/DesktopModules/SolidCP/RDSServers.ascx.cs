@@ -42,15 +42,15 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 using AjaxControlToolkit;
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.RemoteDesktopServices;
 using System.Text;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class RDSServers : SolidCPModuleBase
+    public partial class RDSServers : FuseCPModuleBase
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{            

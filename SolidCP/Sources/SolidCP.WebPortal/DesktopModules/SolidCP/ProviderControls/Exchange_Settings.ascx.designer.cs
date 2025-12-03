@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class Exchange2010_Settings {

@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Mail;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-	public partial class hMailServer43_EditAccount : SolidCPControlBase, IMailEditAccountControl
+	public partial class hMailServer43_EditAccount : FuseCPControlBase, IMailEditAccountControl
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

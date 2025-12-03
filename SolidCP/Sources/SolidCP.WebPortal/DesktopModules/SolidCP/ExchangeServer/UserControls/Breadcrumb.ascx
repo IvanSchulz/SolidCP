@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Breadcrumb.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.Breadcrumb" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Breadcrumb.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.Breadcrumb" %>
 <div class="Breadcrumb">
 	<asp:HyperLink ID="lnkHome" runat="server" meta:resourcekey="lnkHome">Exchange Organizations</asp:HyperLink>
 	<span id="spanOrg" runat="server">

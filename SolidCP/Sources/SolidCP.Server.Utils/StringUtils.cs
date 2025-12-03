@@ -35,7 +35,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Providers.Utils
+namespace FuseCP.Providers.Utils
 {
     public class StringUtils
     {

@@ -48,18 +48,18 @@ using System.Drawing;
 #endif
 
 using System.IO;
-using SolidCP.EnterpriseServer.Base;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.EnterpriseServer.Code.HostedSolution;
-using SolidCP.EnterpriseServer.Extensions;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Server.Client;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Base;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.EnterpriseServer.Code.HostedSolution;
+using FuseCP.EnterpriseServer.Extensions;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Server.Client;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class ExchangeServerController: ControllerBase
     {
@@ -1289,8 +1289,8 @@ namespace SolidCP.EnterpriseServer
                 c1.AccountId = 4;
                 c1.AccountName = "pntr1_fabrikam";
                 c1.AccountType = ExchangeAccountType.Contact;
-                c1.DisplayName = "SolidCP Support";
-                c1.PrimaryEmailAddress = "support@solidcp.com";
+                c1.DisplayName = "FuseCP Support";
+                c1.PrimaryEmailAddress = "support@fusecp.com";
                 demoAccounts.Add(c1);
 
                 ExchangeAccount c2 = new ExchangeAccount();
@@ -4513,11 +4513,11 @@ namespace SolidCP.EnterpriseServer
         private ExchangeContact GetDemoContactSettings()
         {
             ExchangeContact c = new ExchangeContact();
-            c.DisplayName = "SolidCP Support";
+            c.DisplayName = "FuseCP Support";
             c.AccountName = "scp_fabrikam";
-            c.FirstName = "SolidCP";
+            c.FirstName = "FuseCP";
             c.LastName = "Support";
-            c.EmailAddress = "support@solidcp.com";
+            c.EmailAddress = "support@fusecp.com";
             c.AcceptAccounts = GetAccounts(0, ExchangeAccountType.Mailbox).ToArray();
             return c;
         }

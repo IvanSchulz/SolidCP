@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class WebSitesEditHeliconApeGroup {
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernameControl usernameControl;
+        protected global::FuseCP.Portal.UsernameControl usernameControl;
         
         /// <summary>
         /// secUsers control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secUsers;
+        protected global::FuseCP.Portal.CollapsiblePanel secUsers;
         
         /// <summary>
         /// UsersPanel control.

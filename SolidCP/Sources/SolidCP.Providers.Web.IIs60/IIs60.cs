@@ -46,22 +46,22 @@ using System.Web;
 using System.IO;
 using Microsoft.Win32;
 using Microsoft.Web.Deployment;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.Utils.LogParser;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.Utils.LogParser;
+using FuseCP.Providers.ResultObjects;
 
 using ProcessStartInfo = System.Diagnostics.ProcessStartInfo;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Collections.Specialized;
 using Microsoft.Web.Administration;
 using Microsoft.Web.Management.Server;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	public class IIs60 : HostingServiceProviderBase, IWebServer
 	{
@@ -527,7 +527,7 @@ namespace SolidCP.Providers.Web
 			SystemUser user = new SystemUser();
 			user.Name = site.AnonymousUsername;
 			user.FullName = site.AnonymousUsername;
-			user.Description = "SolidCP System Account";
+			user.Description = "FuseCP System Account";
 			user.MemberOf = webGroups.ToArray();
 			user.Password = site.AnonymousUserPassword;
 			user.PasswordCantChange = true;
@@ -1975,7 +1975,7 @@ namespace SolidCP.Providers.Web
 			SystemUser user = new SystemUser();
 			user.Name = username;
 			user.FullName = username;
-			user.Description = "SolidCP System Account";
+			user.Description = "FuseCP System Account";
 			user.Password = password;
 			user.PasswordCantChange = true;
 			user.PasswordNeverExpires = true;
@@ -3827,7 +3827,7 @@ namespace SolidCP.Providers.Web
 						SystemGroup group = new SystemGroup();
 						group.Name = WebGroupName;
 						group.Members = new string[] { };
-						group.Description = "SolidCP System Group";
+						group.Description = "FuseCP System Group";
 
 						SecurityUtils.CreateGroup(group, ServerSettings, UsersOU, GroupsOU);
 					}

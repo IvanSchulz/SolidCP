@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class ExchangeCreateJournalingMailbox {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// divWrapper control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -208,7 +208,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.EmailAddress email;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.EmailAddress email;
         
         /// <summary>
         /// sendToControl control.
@@ -217,7 +217,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SendToControl sendToControl;
+        protected global::FuseCP.Portal.UserControls.SendToControl sendToControl;
         
         /// <summary>
         /// PasswordBlock control.
@@ -235,7 +235,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl password;
+        protected global::FuseCP.Portal.PasswordControl password;
         
         /// <summary>
         /// ExistingUserDiv control.
@@ -262,7 +262,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.UserSelector userSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.UserSelector userSelector;
         
         /// <summary>
         /// locMailboxplanName control.
@@ -280,7 +280,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxPlanSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxPlanSelector;
         
         /// <summary>
         /// locScope control.

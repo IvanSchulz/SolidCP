@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,35 +10,35 @@ using System.Reflection;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.Providers.Utils;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.Providers.Utils;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Tests;
+namespace FuseCP.Tests;
 
 public class EnterpriseServer : IDisposable
 {
 	// Create a temporal clone of the EnterpriseServer website
 	const bool CreateClone = false;
-	const string DatabaseName = "SolidCPTest";
+	const string DatabaseName = "FuseCPTest";
 	const DbType dbType = DbType.SqlServer;
 	public const string SysadminPassword = "123456";
-	public const string AssemblyUrl = "assembly://SolidCP.EnterpriseServer";
+	public const string AssemblyUrl = "assembly://FuseCP.EnterpriseServer";
 	public static void InitAssemblyLoader()
 	{
 #if NETFRAMEWORK
-		Web.Clients.AssemblyLoader.Init(@"..\SolidCP.EnterpriseServer\bin;..\SolidCP.EnterpriseServer\bin\Code;..\SolidCP.EnterpriseServer\bin\netstandard", "none", true);
+		Web.Clients.AssemblyLoader.Init(@"..\FuseCP.EnterpriseServer\bin;..\FuseCP.EnterpriseServer\bin\Code;..\FuseCP.EnterpriseServer\bin\netstandard", "none", true);
 #else
-		//Web.Clients.AssemblyLoader.Init(@"..\SolidCP.EnterpriseServer\bin_dotnet;..\SolidCP.EnterpriseServer\bin\netstandard", "none", true);
-		Web.Services.Configuration.ProbingPaths = @"..\..\..\..\SolidCP.EnterpriseServer\bin_dotnet;..\..\..\..\SolidCP.EnterpriseServer\bin\netstandard";
+		//Web.Clients.AssemblyLoader.Init(@"..\FuseCP.EnterpriseServer\bin_dotnet;..\FuseCP.EnterpriseServer\bin\netstandard", "none", true);
+		Web.Services.Configuration.ProbingPaths = @"..\..\..\..\FuseCP.EnterpriseServer\bin_dotnet;..\..\..\..\FuseCP.EnterpriseServer\bin\netstandard";
 		Web.Services.AssemblyLoaderNetCore.Init();
 
-        var eserver = Assembly.Load("SolidCP.EnterpriseServer");
+        var eserver = Assembly.Load("FuseCP.EnterpriseServer");
         if (eserver != null)
         {
             // init password validator
-            var validatorType = eserver.GetType("SolidCP.EnterpriseServer.UsernamePasswordValidator");
+            var validatorType = eserver.GetType("FuseCP.EnterpriseServer.UsernamePasswordValidator");
             var init = validatorType.GetMethod("Init", BindingFlags.Public | BindingFlags.Static);
             init.Invoke(null, new object[0]);
         }
@@ -54,7 +54,7 @@ public class EnterpriseServer : IDisposable
 		get
 		{
 			var exepath = IO.Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath);
-			var esserver = IO.Path.GetFullPath(IO.Path.Combine(exepath, "..", "..", "..", "..", "SolidCP.EnterpriseServer"));
+			var esserver = IO.Path.GetFullPath(IO.Path.Combine(exepath, "..", "..", "..", "..", "FuseCP.EnterpriseServer"));
 			return esserver;
 		}
 	}
@@ -67,7 +67,7 @@ public class EnterpriseServer : IDisposable
 				lock (Lock)
 				{
 					if (path != null) return path;
-					path = IO.Path.Combine(IO.Path.GetTempPath(), "SolidCP", "SolidCP.EnterpriseServer.Tests", Guid.NewGuid().ToString());
+					path = IO.Path.Combine(IO.Path.GetTempPath(), "FuseCP", "FuseCP.EnterpriseServer.Tests", Guid.NewGuid().ToString());
 					mustClone = true;
 					tmpPath = path;
 				}
@@ -88,10 +88,10 @@ public class EnterpriseServer : IDisposable
 		DeleteDirectory(IO.Path.GetDirectoryName(path));
 
 		var exepath = IO.Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath);
-		var esserver = IO.Path.GetFullPath(IO.Path.Combine(exepath, "..", "..", "..", "..", "SolidCP.EnterpriseServer"));
+		var esserver = IO.Path.GetFullPath(IO.Path.Combine(exepath, "..", "..", "..", "..", "FuseCP.EnterpriseServer"));
 
 		Console.WriteLine($"Cloning {IO.Path.GetFileName(EnterpriseServerPath)} ...");
-		SolidCP.Providers.Utils.FileUtils.CopyDirectory(esserver, path);
+		FuseCP.Providers.Utils.FileUtils.CopyDirectory(esserver, path);
 	}
 
 	public void Dispose() => Delete();
@@ -231,6 +231,6 @@ public class EnterpriseServer : IDisposable
 
 	public static void SetupEmbeddedEnterpriseServer()
 	{
-		SolidCP.Web.Clients.AssemblyLoader.ProbingPaths = @"..\SolidCP.EnterpriseServer\bin;..\SolidCP.EnterpriseServer\bin\Code;..\SolidCP.EnterpriseServer\bin\netstandard";
+		FuseCP.Web.Clients.AssemblyLoader.ProbingPaths = @"..\FuseCP.EnterpriseServer\bin;..\FuseCP.EnterpriseServer\bin\Code;..\FuseCP.EnterpriseServer\bin\netstandard";
 	}
 }

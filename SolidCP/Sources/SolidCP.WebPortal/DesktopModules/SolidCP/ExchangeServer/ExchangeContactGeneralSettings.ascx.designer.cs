@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class ExchangeContactGeneralSettings {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.ContactTabs tabs;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.ContactTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// locDisplayName control.
@@ -235,7 +235,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secCompanyInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secCompanyInfo;
         
         /// <summary>
         /// CompanyInfo control.
@@ -334,7 +334,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxSelector manager;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxSelector manager;
         
         /// <summary>
         /// secContactInfo control.
@@ -343,7 +343,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secContactInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secContactInfo;
         
         /// <summary>
         /// ContactInfo control.
@@ -469,7 +469,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAddressInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secAddressInfo;
         
         /// <summary>
         /// AddressInfo control.
@@ -568,7 +568,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.CountrySelector country;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.CountrySelector country;
         
         /// <summary>
         /// btnSave control.

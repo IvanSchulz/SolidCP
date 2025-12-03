@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditVirtualApps.ascx.cs" Inherits="SolidCP.Portal.WebSitesEditVirtualApps" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditVirtualApps.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditVirtualApps" %>
 <%@ Register Src="WebSitesExtensionsControl.ascx" TagName="WebSitesExtensionsControl" TagPrefix="uc6" %>
 <%@ Register Src="WebSitesCustomErrorsControl.ascx" TagName="WebSitesCustomErrorsControl" TagPrefix="uc4" %>
 <%@ Register Src="WebSitesMimeTypesControl.ascx" TagName="WebSitesMimeTypesControl" TagPrefix="uc5" %>

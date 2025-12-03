@@ -23,8 +23,8 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**SolidCP Info**
- - SolidCP Version:  [e.g. 1.2.3]
+**FuseCP Info**
+ - FuseCP Version:  [e.g. 1.2.3]
 
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]

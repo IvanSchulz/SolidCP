@@ -35,9 +35,9 @@ using System.IO;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Diagnostics;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.Utils.LogParser
+namespace FuseCP.Providers.Utils.LogParser
 {
 
 	/// <summary>

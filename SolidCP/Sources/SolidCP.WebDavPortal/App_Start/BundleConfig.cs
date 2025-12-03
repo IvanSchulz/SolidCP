@@ -1,6 +1,6 @@
-﻿using System.Web.Optimization;
+using System.Web.Optimization;
 
-namespace SolidCP.WebDavPortal
+namespace FuseCP.WebDavPortal
 {
     public class BundleConfig
     {

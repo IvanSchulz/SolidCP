@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSEditCollectionSettings.ascx.cs" Inherits="SolidCP.Portal.RDS.RDSEditCollectionSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSEditCollectionSettings.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSEditCollectionSettings" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="UserControls/RDSCollectionApps.ascx" TagName="CollectionApps" TagPrefix="scp"%>

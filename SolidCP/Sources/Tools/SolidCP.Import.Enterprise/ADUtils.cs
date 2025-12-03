@@ -33,7 +33,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.DirectoryServices;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public class ADUtils
 	{

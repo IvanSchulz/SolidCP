@@ -40,9 +40,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class FtpAccounts {
-        protected SolidCP.Portal.UserControls.SpaceServiceItems itemsList;
+        protected FuseCP.Portal.UserControls.SpaceServiceItems itemsList;
     }
 }

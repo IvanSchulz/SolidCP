@@ -1,5 +1,5 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.Providers;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.Providers;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
 {    
     public class VirtualizationUtils: ControllerBase
     {

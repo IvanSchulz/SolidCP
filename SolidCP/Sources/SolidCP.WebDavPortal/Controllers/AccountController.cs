@@ -1,27 +1,27 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using System.Web.Routing;
 using AutoMapper;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Security.Authentication;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Scp.Framework;
-using SolidCP.WebDavPortal.CustomAttributes;
-using SolidCP.WebDavPortal.Models;
-using SolidCP.WebDavPortal.Models.Account;
-using SolidCP.WebDavPortal.Models.Account.Enums;
-using SolidCP.WebDavPortal.Models.Common;
-using SolidCP.WebDavPortal.Models.Common.EditorTemplates;
-using SolidCP.WebDavPortal.Models.Common.Enums;
-using SolidCP.WebDavPortal.UI.Routes;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Security.Authentication;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Scp.Framework;
+using FuseCP.WebDavPortal.CustomAttributes;
+using FuseCP.WebDavPortal.Models;
+using FuseCP.WebDavPortal.Models.Account;
+using FuseCP.WebDavPortal.Models.Account.Enums;
+using FuseCP.WebDavPortal.Models.Common;
+using FuseCP.WebDavPortal.Models.Common.EditorTemplates;
+using FuseCP.WebDavPortal.Models.Common.Enums;
+using FuseCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.WebDavPortal.Controllers
+namespace FuseCP.WebDavPortal.Controllers
 {
     [LdapAuthorization]
     public class AccountController : BaseController

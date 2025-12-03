@@ -1,7 +1,7 @@
-' Copyright (c) 2016, SolidCP
-' SolidCP Is distributed under the Creative Commons Share-alike license
+' Copyright (c) 2016, FuseCP
+' FuseCP Is distributed under the Creative Commons Share-alike license
 ' 
-' SolidCP Is a fork of WebsitePanel:
+' FuseCP Is a fork of WebsitePanel:
 ' Copyright (c) 2014, Outercurve Foundation.
 ' All rights reserved.
 '
@@ -37,9 +37,9 @@ Imports System.IO
 Imports System.Text
 Imports System.Diagnostics
 Imports Microsoft.Win32
-Imports SolidCP.Providers.Utils
-Imports SolidCP.Providers.Utils.LogParser
-Imports SolidCP.Server.Utils
+Imports FuseCP.Providers.Utils
+Imports FuseCP.Providers.Utils.LogParser
+Imports FuseCP.Server.Utils
 
 Public Class MELogReader
 	Inherits Utils.LogParser.LogReader

@@ -47,14 +47,14 @@ using System.Globalization;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.OS;
 using System.Reflection;
 using System.Threading;
 using System.DirectoryServices.AccountManagement;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class OrganizationProvider : HostingServiceProviderBase, IOrganization
     {

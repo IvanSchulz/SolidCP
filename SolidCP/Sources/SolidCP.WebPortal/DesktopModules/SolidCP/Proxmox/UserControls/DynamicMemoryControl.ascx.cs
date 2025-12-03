@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.Proxmox.UserControls
+namespace FuseCP.Portal.Proxmox.UserControls
 {
-    public partial class DynamicMemoryControl : SolidCPControlBase, IVirtualMachineSettingsControl
+    public partial class DynamicMemoryControl : FuseCPControlBase, IVirtualMachineSettingsControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

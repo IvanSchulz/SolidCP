@@ -41,15 +41,15 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Collections.Specialized;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
 using System.Web.UI.MobileControls;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class HyperVForPrivateCloud_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class HyperVForPrivateCloud_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

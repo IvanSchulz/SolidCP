@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditStorageSpace.ascx.cs" Inherits="SolidCP.Portal.StorageSpaces.EditStorageSpace" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditStorageSpace.ascx.cs" Inherits="FuseCP.Portal.StorageSpaces.EditStorageSpace" %>
 
 
 

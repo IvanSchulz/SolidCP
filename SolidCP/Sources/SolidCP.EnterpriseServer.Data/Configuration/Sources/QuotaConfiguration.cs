@@ -1,9 +1,9 @@
-﻿// This file is auto generated, do not edit.
+// This file is auto generated, do not edit.
 using System;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer.Data.Configuration;
-using SolidCP.EnterpriseServer.Data.Entities;
-using SolidCP.EnterpriseServer.Data.Extensions;
+using FuseCP.EnterpriseServer.Data.Configuration;
+using FuseCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Extensions;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 #endif
@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Configuration;
+namespace FuseCP.EnterpriseServer.Data.Configuration;
 
 public partial class QuotaConfiguration: EntityTypeConfiguration<Quota>
 {
@@ -649,7 +649,7 @@ public partial class QuotaConfiguration: EntityTypeConfiguration<Quota>
                 ServiceQuota = false },
             new Quota() { QuotaId = 728, GroupId = 33, QuotaDescription = "Number of Private Network VLANs", QuotaName = "VPS2012.PrivateVLANsNumber", QuotaOrder = 14, QuotaTypeId = 2,
                 ServiceQuota = false },
-            new Quota() { QuotaId = 729, GroupId = 12, QuotaDescription = "Automatic Replies via SolidCP Allowed", QuotaName = "Exchange2013.AutoReply", QuotaOrder = 32, QuotaTypeId = 1,
+            new Quota() { QuotaId = 729, GroupId = 12, QuotaDescription = "Automatic Replies via FuseCP Allowed", QuotaName = "Exchange2013.AutoReply", QuotaOrder = 32, QuotaTypeId = 1,
                 ServiceQuota = false },
             new Quota() { QuotaId = 730, GroupId = 33, QuotaDescription = "Additional Hard Drives per VPS", QuotaName = "VPS2012.AdditionalVhdCount", QuotaOrder = 6, QuotaTypeId = 3,
                 ServiceQuota = false },

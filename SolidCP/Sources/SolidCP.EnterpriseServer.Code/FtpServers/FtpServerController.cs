@@ -38,11 +38,11 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-using SolidCP.Providers;
-using SolidCP.Providers.FTP;
-using SolidCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.FTP;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class FtpServerController : ControllerBase, IImportController, IBackupController
     {

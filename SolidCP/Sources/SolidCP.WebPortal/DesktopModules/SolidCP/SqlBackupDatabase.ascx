@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlBackupDatabase.ascx.cs" Inherits="SolidCP.Portal.SqlBackupDatabase" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlBackupDatabase.ascx.cs" Inherits="FuseCP.Portal.SqlBackupDatabase" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <div class="panel-body form-horizontal">
     <table cellSpacing="0" cellPadding="5" width="100%">

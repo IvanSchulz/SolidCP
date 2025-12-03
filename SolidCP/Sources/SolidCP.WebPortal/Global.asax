@@ -1,1 +1,1 @@
-<%@ Application Inherits="SolidCP.WebPortal.Global" Language="C#" %>
+<%@ Application Inherits="FuseCP.WebPortal.Global" Language="C#" %>

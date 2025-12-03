@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharedSSLEditFolder.ascx.cs" Inherits="SolidCP.Portal.SharedSSLEditFolder" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharedSSLEditFolder.ascx.cs" Inherits="FuseCP.Portal.SharedSSLEditFolder" %>
 <%@ Register Src="WebSitesExtensionsControl.ascx" TagName="WebSitesExtensionsControl" TagPrefix="uc6" %>
 <%@ Register Src="WebSitesCustomErrorsControl.ascx" TagName="WebSitesCustomErrorsControl" TagPrefix="uc4" %>
 <%@ Register Src="WebSitesMimeTypesControl.ascx" TagName="WebSitesMimeTypesControl" TagPrefix="uc5" %>

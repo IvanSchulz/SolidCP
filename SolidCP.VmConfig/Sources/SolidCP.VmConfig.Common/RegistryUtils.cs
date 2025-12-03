@@ -33,7 +33,7 @@
 using System;
 using Microsoft.Win32;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	/// <summary>
 	/// Registry helper class.

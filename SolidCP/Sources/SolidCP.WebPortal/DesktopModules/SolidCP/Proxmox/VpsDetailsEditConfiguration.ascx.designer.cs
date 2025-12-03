@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox {
+namespace FuseCP.Portal.Proxmox {
     
     
     public partial class VpsDetailsEditConfiguration {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// tabs control.
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.Proxmox.UserControls.ServerTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// locSubTitle control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secResources;
+        protected global::FuseCP.Portal.CollapsiblePanel secResources;
         
         /// <summary>
         /// ResourcesPanel control.
@@ -235,7 +235,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.DynamicMemoryControl DynamicMemorySetting;
+        protected global::FuseCP.Portal.Proxmox.UserControls.DynamicMemoryControl DynamicMemorySetting;
         
         /// <summary>
         /// secSnapshots control.
@@ -244,7 +244,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSnapshots;
+        protected global::FuseCP.Portal.CollapsiblePanel secSnapshots;
         
         /// <summary>
         /// SnapshotsPanel control.
@@ -289,7 +289,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDvd;
+        protected global::FuseCP.Portal.CollapsiblePanel secDvd;
         
         /// <summary>
         /// DvdPanel control.
@@ -316,7 +316,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secBios;
+        protected global::FuseCP.Portal.CollapsiblePanel secBios;
         
         /// <summary>
         /// BiosPanel control.
@@ -343,7 +343,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secActions;
+        protected global::FuseCP.Portal.CollapsiblePanel secActions;
         
         /// <summary>
         /// ActionsPanel control.
@@ -406,7 +406,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secNetwork;
+        protected global::FuseCP.Portal.CollapsiblePanel secNetwork;
         
         /// <summary>
         /// NetworkPanel control.

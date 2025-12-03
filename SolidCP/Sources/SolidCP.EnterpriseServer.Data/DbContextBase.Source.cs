@@ -1,10 +1,10 @@
-﻿// This file is auto generated, do not edit.
+// This file is auto generated, do not edit.
 #if ScaffoldedDbContext
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer.Data.Configuration;
-using SolidCP.EnterpriseServer.Data.Entities.Sources;
+using FuseCP.EnterpriseServer.Data.Configuration;
+using FuseCP.EnterpriseServer.Data.Entities.Sources;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -19,13 +19,13 @@ using System.Data.Entity.Spatial;
 using System.Data.Entity.Validation;
 #endif
 
-namespace SolidCP.EnterpriseServer.Context
+namespace FuseCP.EnterpriseServer.Context
 {
 
-    using Version = SolidCP.EnterpriseServer.Data.Entities.Version;
-    using GlobalDnsRecord = SolidCP.EnterpriseServer.Data.Entities.GlobalDnsRecord;
-    using BackgroundTask = SolidCP.EnterpriseServer.Data.Entities.BackgroundTask;
-    using BackgroundTaskParameter = SolidCP.EnterpriseServer.Data.Entities.BackgroundTaskParameter;
+    using Version = FuseCP.EnterpriseServer.Data.Entities.Version;
+    using GlobalDnsRecord = FuseCP.EnterpriseServer.Data.Entities.GlobalDnsRecord;
+    using BackgroundTask = FuseCP.EnterpriseServer.Data.Entities.BackgroundTask;
+    using BackgroundTaskParameter = FuseCP.EnterpriseServer.Data.Entities.BackgroundTaskParameter;
 
     public partial class DbContextBase : DbContext, Data.IGenericDbContext
     {
@@ -410,12 +410,12 @@ namespace SolidCP.EnterpriseServer.Context
     }
 }
 
-namespace SolidCP.EnterpriseServer.Data {
+namespace FuseCP.EnterpriseServer.Data {
 
-    using Version = SolidCP.EnterpriseServer.Data.Entities.Version;
-    using GlobalDnsRecord = SolidCP.EnterpriseServer.Data.Entities.GlobalDnsRecord;
-    using BackgroundTask = SolidCP.EnterpriseServer.Data.Entities.BackgroundTask;
-    using BackgroundTaskParameter = SolidCP.EnterpriseServer.Data.Entities.BackgroundTaskParameter;
+    using Version = FuseCP.EnterpriseServer.Data.Entities.Version;
+    using GlobalDnsRecord = FuseCP.EnterpriseServer.Data.Entities.GlobalDnsRecord;
+    using BackgroundTask = FuseCP.EnterpriseServer.Data.Entities.BackgroundTask;
+    using BackgroundTaskParameter = FuseCP.EnterpriseServer.Data.Entities.BackgroundTaskParameter;
 
 #if ScaffoldDbContextEntities
     public partial class DbContext {

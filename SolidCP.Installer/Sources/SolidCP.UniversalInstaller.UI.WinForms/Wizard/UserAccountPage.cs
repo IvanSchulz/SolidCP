@@ -40,10 +40,10 @@ using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class UserAccountPage : BannerWizardPage
 	{
@@ -98,7 +98,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			{
 				//creating user account
 				string userName = component.Replace(" ", string.Empty);
-				userName = userName.Replace("SolidCP", "WP");
+				userName = userName.Replace("FuseCP", "WP");
 
 				txtUserName.Text = userName;
 				txtDomain.Text = "mydomain.com";

@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class TimeZones {
         protected System.Web.UI.WebControls.DropDownList ddlZones;

@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -35,7 +35,7 @@ using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using Microsoft.Rtc.Management.WritableConfig.Settings.Edge;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class SfB2015 : SfBBase
     {

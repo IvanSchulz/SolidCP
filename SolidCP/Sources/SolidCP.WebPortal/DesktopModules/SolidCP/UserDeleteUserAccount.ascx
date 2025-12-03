@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserDeleteUserAccount.ascx.cs" Inherits="SolidCP.Portal.UserDeleteUserAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserDeleteUserAccount.ascx.cs" Inherits="FuseCP.Portal.UserDeleteUserAccount" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 
 <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>

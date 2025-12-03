@@ -38,12 +38,12 @@ using System.Collections;
 using System.Reflection;
 using System.Text;
 using System.Linq;
-using Data = SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.Providers;
+using Data = FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.Providers;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class EnterpriseServer : BaseSetup
 	{

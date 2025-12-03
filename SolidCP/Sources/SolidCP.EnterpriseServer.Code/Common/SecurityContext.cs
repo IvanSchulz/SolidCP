@@ -37,9 +37,9 @@ using System.Diagnostics;
 using System.Security;
 using System.Security.Principal;
 using System.Web;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Provides security utilities.

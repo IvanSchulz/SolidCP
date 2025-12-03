@@ -47,7 +47,7 @@ using System.Web.UI.HtmlControls;
 
 using Microsoft.Reporting.WebForms;
 
-namespace SolidCP.Portal.ReportingServices
+namespace FuseCP.Portal.ReportingServices
 {
 	/// <summary>
 	/// Utility class that provides helper methods
@@ -63,7 +63,7 @@ namespace SolidCP.Portal.ReportingServices
 		/// <param name="module">Instance of a module containing the ReportViewer component.</param>
 		/// <returns><see cref="TextReader"/> containing the localized report file.</returns>
 		/// <exception cref="ArgumentNullException">When <paramref name="assembly"/>, <paramref name="embeddedReportName"/> or <paramref name="module"/> is null.</exception>
-		public static TextReader LoadReportFileFromAssembly(Assembly assembly, string embeddedReportName, string embeddedReportResourceId, SolidCPModuleBase module)
+		public static TextReader LoadReportFileFromAssembly(Assembly assembly, string embeddedReportName, string embeddedReportResourceId, FuseCPModuleBase module)
 		{
 			if (assembly == null)
 			{
@@ -82,7 +82,7 @@ namespace SolidCP.Portal.ReportingServices
 					assembly
 					, embeddedReportName
 					, embeddedReportResourceId
-					, new SolidCPModuleResourceStorage(module)
+					, new FuseCPModuleResourceStorage(module)
 				).GetLocalizedReportStream();
 		}
 
@@ -94,7 +94,7 @@ namespace SolidCP.Portal.ReportingServices
 		/// <param name="module">Instance of a module containing the ReportViewer component.</param>
 		/// <returns><see cref="TextReader"/> containing the localized report file.</returns>
 		/// <exception cref="ArgumentNullException">When <paramref name="reportPath"/> or <paramref name="module"/> is null.</exception>
-		public static TextReader LoadReportFromFile(string reportPath, string reportResourceId, SolidCPModuleBase module)
+		public static TextReader LoadReportFromFile(string reportPath, string reportResourceId, FuseCPModuleBase module)
 		{
 			if (String.IsNullOrEmpty(reportPath))
 			{
@@ -108,7 +108,7 @@ namespace SolidCP.Portal.ReportingServices
 			return new FileSystemReportLocalizer(
 						  reportPath
 						, reportResourceId
-						, new SolidCPModuleResourceStorage(module)
+						, new FuseCPModuleResourceStorage(module)
 					).GetLocalizedReportStream();
 		}
 

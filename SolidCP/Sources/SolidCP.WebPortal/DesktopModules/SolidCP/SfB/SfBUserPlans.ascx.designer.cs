@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SfB {
+namespace FuseCP.Portal.SfB {
     
     
     public partial class SfBUserPlans {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.SfB {
          /// Auto-generated field.
          /// To modify move field declaration from designer file to code-behind file.
          /// </remarks>
-         protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+         protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
 		
         /// <summary>
         /// gvPlans control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secMainTools;
+        protected global::FuseCP.Portal.CollapsiblePanel secMainTools;
         
         /// <summary>
         /// ToolsPanel control.
@@ -118,7 +118,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SfB.UserControls.SfBUserPlanSelector sfbUserPlanSelectorSource;
+        protected global::FuseCP.Portal.SfB.UserControls.SfBUserPlanSelector sfbUserPlanSelectorSource;
         
         /// <summary>
         /// lblTargetPlan control.
@@ -136,7 +136,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SfB.UserControls.SfBUserPlanSelector sfbUserPlanSelectorTarget;
+        protected global::FuseCP.Portal.SfB.UserControls.SfBUserPlanSelector sfbUserPlanSelectorTarget;
         
         /// <summary>
         /// txtStatus control.

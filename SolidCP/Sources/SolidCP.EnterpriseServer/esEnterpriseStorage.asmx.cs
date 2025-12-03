@@ -36,23 +36,23 @@ using System.Data;
 using System.Web;
 using System.Collections;
 using System.Collections.Generic;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
 
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.EnterpriseStorage;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Web;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.EnterpriseStorage;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Web;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for esEnterpriseStorage
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+    [WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("EnterpriseServerPolicy")]
     [ToolboxItem(false)]

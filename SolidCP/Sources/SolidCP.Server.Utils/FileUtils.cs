@@ -43,10 +43,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Management;
 using System.Linq;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using Mono.Unix;
 
-namespace SolidCP.Providers.Utils
+namespace FuseCP.Providers.Utils
 {
     /// <summary>
     /// Defines a contract that a system command provider needs to implement.
@@ -289,20 +289,20 @@ namespace SolidCP.Providers.Utils
 			    SecurityUtils.GrantNtfsPermissionsBySid(path, SystemSID.SYSTEM, NTFSPermission.FullControl, true, true);
 			} else if (OSInfo.IsUnix)
             {
-                if (!UnixGroupInfo.GetLocalGroups().Any(group => group.GroupName == "solidcp"))
+                if (!UnixGroupInfo.GetLocalGroups().Any(group => group.GroupName == "fusecp"))
                 {
-                    Shell.Standard.Exec("groupadd solidcp");
+                    Shell.Standard.Exec("groupadd fusecp");
                 }
-			    if (!UnixUserInfo.GetLocalUsers().Any(user => user.UserName == "solidcp"))
+			    if (!UnixUserInfo.GetLocalUsers().Any(user => user.UserName == "fusecp"))
                 {
-					Shell.Standard.Exec($"useradd --home /home/solidcp --gid solidcp -m --shell /bin/false solidcp");
+					Shell.Standard.Exec($"useradd --home /home/fusecp --gid fusecp -m --shell /bin/false fusecp");
 				}
 
 				var unixDirInfo = new UnixDirectoryInfo(path);
                 unixDirInfo.FileAccessPermissions =
                     FileAccessPermissions.GroupRead | FileAccessPermissions.GroupWrite | FileAccessPermissions.GroupExecute |
                     FileAccessPermissions.UserRead | FileAccessPermissions.UserWrite | FileAccessPermissions.UserExecute;
-                unixDirInfo.SetOwner("solidcp", "solidcp");
+                unixDirInfo.SetOwner("fusecp", "fusecp");
                 unixDirInfo.Refresh();
             }
             return path;

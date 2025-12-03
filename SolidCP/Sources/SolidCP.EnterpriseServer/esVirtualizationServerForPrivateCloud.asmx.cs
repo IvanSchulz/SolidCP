@@ -35,19 +35,19 @@ using System.Data;
 using System.Web;
 using System.Collections;
 using System.Collections.Generic;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for esVirtualizationServerPC
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+    [WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("EnterpriseServerPolicy")]
     [ToolboxItem(false)]

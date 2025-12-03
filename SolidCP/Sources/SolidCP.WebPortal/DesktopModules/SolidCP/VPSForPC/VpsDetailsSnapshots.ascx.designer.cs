@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPSForPC {
+namespace FuseCP.Portal.VPSForPC {
     
     
     public partial class VpsDetailsSnapshots {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// imgIcon control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.FormTitle locTitle;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.FormTitle locTitle;
         
         /// <summary>
         /// menu control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.Menu menu;
         
         /// <summary>
         /// tabs control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.ServerTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// btnTakeSnapshot control.
@@ -118,7 +118,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer snapshotsQuota;
+        protected global::FuseCP.Portal.QuotaViewer snapshotsQuota;
         
         /// <summary>
         /// SnapshotDetailsPanel control.

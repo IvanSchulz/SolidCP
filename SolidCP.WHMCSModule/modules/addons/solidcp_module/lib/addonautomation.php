@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,22 +32,22 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP addon automation class
+ * FuseCP addon automation class
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
 
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/var_definition.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/var_definition.php');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-Class solidcp_addonautomation{
+Class fusecp_addonautomation{
     
     public $addonautomation = NULL;
     
@@ -62,9 +62,9 @@ Class solidcp_addonautomation{
 				ORDER BY name");
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't read the SolidCP Addons: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't read the FuseCP Addons: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
-        return array('status' => 'success', 'description' => "SolidCP Addons were read successfully.");
+        return array('status' => 'success', 'description' => "FuseCP Addons were read successfully.");
     }
     
     public function setAddonAutomation($new){
@@ -97,9 +97,9 @@ Class solidcp_addonautomation{
 			}
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't write the SolidCP Addon automation: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't write the FuseCP Addon automation: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
-        return array('status' => 'success', 'description' => "SolidCP Addon automation was written successfully.");
+        return array('status' => 'success', 'description' => "FuseCP Addon automation was written successfully.");
     }
     
     public function deleteAddonAutomation($whmcs_id){
@@ -110,9 +110,9 @@ Class solidcp_addonautomation{
                     ->delete();
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't delete the SolidCP Addon automation: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't delete the FuseCP Addon automation: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
-        return array('status' => 'success', 'description' => "SolidCP Addon automation was deleted successfully.");
+        return array('status' => 'success', 'description' => "FuseCP Addon automation was deleted successfully.");
     }
 
 }

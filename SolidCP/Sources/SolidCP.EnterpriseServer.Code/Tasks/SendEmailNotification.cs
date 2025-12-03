@@ -33,7 +33,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SolidCP.EnterpriseServer.Tasks
+namespace FuseCP.EnterpriseServer.Tasks
 {
     public class SendEmailNotification : TaskEventHandler
     {

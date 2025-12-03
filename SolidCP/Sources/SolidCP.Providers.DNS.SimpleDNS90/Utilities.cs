@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,7 +35,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.DNS.SimpleDNS90
+namespace FuseCP.Providers.DNS.SimpleDNS90
 {
     public static class Utilities
     {

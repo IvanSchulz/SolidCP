@@ -1,4 +1,4 @@
-﻿#if NetCore
+#if NetCore
 
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace SolidCP.EnterpriseServer.Data.Extensions
+namespace FuseCP.EnterpriseServer.Data.Extensions
 {
 	public class DesignTimeDbContextFactory: IDesignTimeDbContextFactory<Context.DbContextBase>,
 		IDesignTimeDbContextFactory<SqlServerDbContext>,
@@ -19,7 +19,7 @@ namespace SolidCP.EnterpriseServer.Data.Extensions
 
 		public Context.DbContextBase CreateDbContext(string[] args)
 		{
-			const string DefaultConnectionString = "DbType=SqlServer; Server=(local); Initial Catalog=SolidCPFresh; uid=sa; pwd=Password12; TrustServerCertificate=true; Connection Timeout=300; command timeout=300";
+			const string DefaultConnectionString = "DbType=SqlServer; Server=(local); Initial Catalog=FuseCPFresh; uid=sa; pwd=Password12; TrustServerCertificate=true; Connection Timeout=300; command timeout=300";
 
 			var connectionString = args.Length > 0 ? args[0] : DefaultConnectionString;
 

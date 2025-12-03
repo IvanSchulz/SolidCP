@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -7,12 +7,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Scp.Framework;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Scp.Framework;
 
-namespace SolidCP.WebDavPortal.HttpHandlers
+namespace FuseCP.WebDavPortal.HttpHandlers
 {
     public class AccessTokenHandler : DelegatingHandler
     {

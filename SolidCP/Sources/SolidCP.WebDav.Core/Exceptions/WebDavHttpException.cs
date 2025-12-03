@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Exceptions
+namespace FuseCP.WebDav.Core.Exceptions
 {
     public class WebDavHttpException : WebDavException
     {

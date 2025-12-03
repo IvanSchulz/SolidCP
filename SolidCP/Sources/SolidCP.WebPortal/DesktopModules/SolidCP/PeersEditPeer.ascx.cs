@@ -41,11 +41,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class PeersEditPeer : SolidCPModuleBase
+    public partial class PeersEditPeer : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -63,7 +63,7 @@ namespace SolidCP.Portal
 
             if (PanelRequest.PeerID == 0)
             {
-                userPassword.SetUserPolicy(PanelSecurity.SelectedUserId, UserSettings.SolidCP_POLICY, "PasswordPolicy");
+                userPassword.SetUserPolicy(PanelSecurity.SelectedUserId, UserSettings.FuseCP_POLICY, "PasswordPolicy");
                 userPassword.ValidationGroup = "";
 
                 if (PanelSecurity.SelectedUser.RoleId == (int)UserRole.Administrator)
@@ -111,7 +111,7 @@ namespace SolidCP.Portal
                     else
                         rowRole.Visible = false;
 
-                userPassword.SetUserPolicy(PanelSecurity.SelectedUserId, UserSettings.SolidCP_POLICY, "PasswordPolicy");
+                userPassword.SetUserPolicy(PanelSecurity.SelectedUserId, UserSettings.FuseCP_POLICY, "PasswordPolicy");
                 userPassword.ValidationGroup = "NewPassword";
 
                 // account info

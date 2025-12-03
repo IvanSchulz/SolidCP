@@ -41,12 +41,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.DNS;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.DNS;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeDomainRecords : SolidCPModuleBase
+    public partial class ExchangeDomainRecords : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -37,10 +37,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Providers.VirtualizationForPC.HyperVForPC")]
+[assembly: AssemblyTitle("FuseCP.Providers.VirtualizationForPC.HyperVForPC")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Providers.VirtualizationForPC.HyperVForPC")]
+[assembly: AssemblyProduct("FuseCP.Providers.VirtualizationForPC.HyperVForPC")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

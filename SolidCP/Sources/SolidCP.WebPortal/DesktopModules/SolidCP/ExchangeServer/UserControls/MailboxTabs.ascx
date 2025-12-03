@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailboxTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.MailboxTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailboxTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.MailboxTabs" %>
             <asp:DataList ID="dlTabs" runat="server" RepeatDirection="Horizontal"
                 RepeatLayout="Flow" EnableViewState="false"  RepeatColumns="9"   SeparatorStyle-CssClass="Separator" SeparatorStyle-Height="22px" >
                 <ItemStyle Wrap="False" />

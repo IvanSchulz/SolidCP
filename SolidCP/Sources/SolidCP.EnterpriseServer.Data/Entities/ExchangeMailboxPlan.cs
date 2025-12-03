@@ -1,5 +1,5 @@
-﻿#if ScaffoldedEntities
-using SolidCP.Providers.HostedSolution;
+#if ScaffoldedEntities
+using FuseCP.Providers.HostedSolution;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities;
+namespace FuseCP.EnterpriseServer.Data.Entities;
 
 #if NetCore
 [Index("ItemId", Name = "ExchangeMailboxPlansIdx_ItemID")]

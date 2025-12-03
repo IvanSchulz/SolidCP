@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerTabs.ascx.cs"
-    Inherits="SolidCP.Portal.VPS.UserControls.ServerTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerTabs.ascx.cs"
+    Inherits="FuseCP.Portal.VPS.UserControls.ServerTabs" %>
 <%@ Register Src="../../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
 <%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 

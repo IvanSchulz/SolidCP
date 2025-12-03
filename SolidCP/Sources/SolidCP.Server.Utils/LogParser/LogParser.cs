@@ -39,9 +39,9 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Diagnostics;
 using System.Web;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.Utils.LogParser
+namespace FuseCP.Providers.Utils.LogParser
 {
 	public delegate void ProcessKeyFieldsEventHandler (string[] key_fields, string[] key_values, string[] log_fields, string[] log_values);
 	public delegate void CalculateStatsLineEventHandler(StatsLine line, string[] fields, string[] values);

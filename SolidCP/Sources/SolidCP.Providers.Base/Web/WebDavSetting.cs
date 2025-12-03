@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
     public class WebDavSetting
     {

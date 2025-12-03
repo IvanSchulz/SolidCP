@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox {
+namespace FuseCP.Portal.Proxmox {
     
     
     public partial class VdcImportServer {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// messageBox-Steuerelement
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// validatorsSummary-Steuerelement
@@ -100,7 +100,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secOsTemplate;
+        protected global::FuseCP.Portal.CollapsiblePanel secOsTemplate;
         
         /// <summary>
         /// OsTemplatePanel-Steuerelement
@@ -199,7 +199,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secConfiguration;
+        protected global::FuseCP.Portal.CollapsiblePanel secConfiguration;
         
         /// <summary>
         /// ConfigurationPanel-Steuerelement
@@ -217,7 +217,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.Generation GenerationSetting;
+        protected global::FuseCP.Portal.Proxmox.UserControls.Generation GenerationSetting;
         
         /// <summary>
         /// locCPU-Steuerelement
@@ -298,7 +298,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.DynamicMemoryControl DynamicMemorySetting;
+        protected global::FuseCP.Portal.Proxmox.UserControls.DynamicMemoryControl DynamicMemorySetting;
         
         /// <summary>
         /// secBios-Steuerelement
@@ -307,7 +307,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secBios;
+        protected global::FuseCP.Portal.CollapsiblePanel secBios;
         
         /// <summary>
         /// BiosPanel-Steuerelement
@@ -325,7 +325,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption BootFromCd;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption BootFromCd;
         
         /// <summary>
         /// locBootFromCd-Steuerelement
@@ -343,7 +343,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption NumLockEnabled;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption NumLockEnabled;
         
         /// <summary>
         /// locNumLockEnabled-Steuerelement
@@ -361,7 +361,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDvd;
+        protected global::FuseCP.Portal.CollapsiblePanel secDvd;
         
         /// <summary>
         /// DvdPanel-Steuerelement
@@ -379,7 +379,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption DvdInstalled;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption DvdInstalled;
         
         /// <summary>
         /// locDvdInstalled-Steuerelement
@@ -397,7 +397,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAllowedActions;
+        protected global::FuseCP.Portal.CollapsiblePanel secAllowedActions;
         
         /// <summary>
         /// AllowedActionsPanel-Steuerelement
@@ -451,7 +451,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secExternalNetwork;
+        protected global::FuseCP.Portal.CollapsiblePanel secExternalNetwork;
         
         /// <summary>
         /// ExternalNetworkPanel-Steuerelement
@@ -523,7 +523,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secManagementNetwork;
+        protected global::FuseCP.Portal.CollapsiblePanel secManagementNetwork;
         
         /// <summary>
         /// ManagementNetworkPanel-Steuerelement

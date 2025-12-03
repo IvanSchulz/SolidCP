@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class MailEnable_EditList {
@@ -187,7 +187,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EmailControl txtModeratorEmail;
+        protected global::FuseCP.Portal.UserControls.EmailControl txtModeratorEmail;
         
         /// <summary>
         /// lblMembers control.
@@ -205,7 +205,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailEditItems mailEditItems;
+        protected global::FuseCP.Portal.MailEditItems mailEditItems;
         
         /// <summary>
         /// HeaderFooterSection control.
@@ -214,7 +214,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel HeaderFooterSection;
+        protected global::FuseCP.Portal.CollapsiblePanel HeaderFooterSection;
         
         /// <summary>
         /// pHeaderFooter control.

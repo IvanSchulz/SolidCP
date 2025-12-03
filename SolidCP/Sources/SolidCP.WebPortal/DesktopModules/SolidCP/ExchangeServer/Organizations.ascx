@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Organizations.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.Organizations" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Organizations.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.Organizations" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -92,7 +92,7 @@
     </Columns>
 </asp:GridView>
 <div class="panel-body">
-    <asp:ObjectDataSource ID="odsOrgsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetOrganizationsPagedCount" SelectMethod="GetOrganizationsPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.OrganizationsHelper" OnSelected="odsOrgsPaged_Selected">
+    <asp:ObjectDataSource ID="odsOrgsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetOrganizationsPagedCount" SelectMethod="GetOrganizationsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.OrganizationsHelper" OnSelected="odsOrgsPaged_Selected">
         <SelectParameters>
             <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="-1" />
             <asp:ControlParameter Name="recursive" ControlID="chkRecursive" PropertyName="Checked" DefaultValue="False" />

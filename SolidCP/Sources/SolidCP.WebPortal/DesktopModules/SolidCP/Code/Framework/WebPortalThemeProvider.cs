@@ -35,11 +35,11 @@ using System.Data;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.WebPortal;
+using FuseCP.WebPortal;
 using System.Web;
-using SolidCP.Portal;
+using FuseCP.Portal;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	public class WebPortalThemeProvider : PortalThemeProvider
 	{

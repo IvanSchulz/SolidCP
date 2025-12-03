@@ -36,19 +36,19 @@ using System.Collections.Generic;
 ﻿using System.IO;
 ﻿using System.Web;
 ﻿using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.WebAppGallery;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Database;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.WebAppGallery;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Database;
 using System.Text.RegularExpressions;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Reflection;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebApplicationGalleryParams : SolidCPModuleBase
+    public partial class WebApplicationGalleryParams : FuseCPModuleBase
     {
         private const DeploymentParameterWellKnownTag databaseEngineTags =
                     DeploymentParameterWellKnownTag.Sql |

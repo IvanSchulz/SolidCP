@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,852 +118,852 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ModuleTitle.User" xml:space="preserve">
-    <value>المستخدم</value>
+    <value>????????</value>
   </data>
   <data name="ModuleTitle.HostingSpace" xml:space="preserve">
-    <value>مساحة الاستضافة</value>
+    <value>????? ?????????</value>
   </data>
   <data name="ModuleTitle.MyWeb" xml:space="preserve">
-    <value>الويب الخاص بي</value>
+    <value>????? ????? ??</value>
   </data>
   <data name="ModuleTitle.AccountCreationComplete" xml:space="preserve">
-    <value>اكتمل إنشاء الحساب</value>
+    <value>????? ????? ??????</value>
   </data>
   <data name="ModuleTitle.AccountCreationWizard" xml:space="preserve">
-    <value>معالج إنشاء الحساب</value>
+    <value>????? ????? ??????</value>
   </data>
   <data name="ModuleTitle.AccountSettings" xml:space="preserve">
-    <value>إعدادت الحساب</value>
+    <value>?????? ??????</value>
   </data>
   <data name="ModuleTitle.AccountsSynchronizationComplete" xml:space="preserve">
-    <value>اكتملت مزامنة الحسابات</value>
+    <value>?????? ?????? ????????</value>
   </data>
   <data name="ModuleTitle.AccountSummaryLetter" xml:space="preserve">
-    <value>خطاب ملخص الحساب</value>
+    <value>???? ???? ??????</value>
   </data>
   <data name="ModuleTitle.AddDomain" xml:space="preserve">
-    <value>أضف نطاق</value>
+    <value>??? ????</value>
   </data>
   <data name="ModuleTitle.AddVLAN" xml:space="preserve">
-    <value>أضف VLAN</value>
+    <value>??? VLAN</value>
   </data>
   <data name="ModuleTitle.AddIPAddress" xml:space="preserve">
-    <value>أضف عنوان IP</value>
+    <value>??? ????? IP</value>
   </data>
   <data name="ModuleTitle.AddMailDomainPointer" xml:space="preserve">
-    <value>إضافة مؤشر نطاق البريد</value>
+    <value>????? ???? ???? ??????</value>
   </data>
   <data name="ModuleTitle.AddNewDomain" xml:space="preserve">
-    <value>إضافة نطاق جديد</value>
+    <value>????? ???? ????</value>
   </data>
   <data name="ModuleTitle.AddNewService" xml:space="preserve">
-    <value>أضف خدمة جديدة</value>
+    <value>??? ???? ?????</value>
   </data>
   <data name="ModuleTitle.AddNewVirtualServer" xml:space="preserve">
-    <value>إضافة خادم افتراضي جديد</value>
+    <value>????? ???? ??????? ????</value>
   </data>
   <data name="ModuleTitle.AddServer" xml:space="preserve">
-    <value>إضافة خادم</value>
+    <value>????? ????</value>
   </data>
   <data name="ModuleTitle.AddSharedSSLFolder" xml:space="preserve">
-    <value>إضافة مجلد SSL مشترك</value>
+    <value>????? ???? SSL ?????</value>
   </data>
   <data name="ModuleTitle.AddAppVirtualDirectory" xml:space="preserve">
-    <value>أضف الدليل الافتراضي</value>
+    <value>??? ?????? ?????????</value>
   </data>
   <data name="ModuleTitle.AddVirtualServerServices" xml:space="preserve">
-    <value>أضف خدمات الخادم الافتراضي</value>
+    <value>??? ????? ?????? ?????????</value>
   </data>
   <data name="ModuleTitle.AddWebSite" xml:space="preserve">
-    <value>أضف موقع ويب</value>
+    <value>??? ???? ???</value>
   </data>
   <data name="ModuleTitle.AddWebSiteDomainPointer" xml:space="preserve">
-    <value>إضافة مؤشر نطاق موقع ويب</value>
+    <value>????? ???? ???? ???? ???</value>
   </data>
   <data name="ModuleTitle.AdvancedStatistics" xml:space="preserve">
-    <value>إحصائيات الويب المتقدمة</value>
+    <value>???????? ????? ????????</value>
   </data>
   <data name="ModuleTitle.AdvancedStatisticsInstallation" xml:space="preserve">
-    <value>تثبيت إحصائيات متقدم</value>
+    <value>????? ???????? ?????</value>
   </data>
   <data name="ModuleTitle.ApplicationsInstaller" xml:space="preserve">
-    <value>مثبت التطبيقات</value>
+    <value>???? ?????????</value>
   </data>
   <data name="ModuleTitle.WebApplicationsGallery" xml:space="preserve">
-    <value>معرض تطبيقات الويب</value>
+    <value>???? ??????? ?????</value>
   </data>
   <data name="ModuleTitle.AuditLog" xml:space="preserve">
-    <value>سجل التدقيق</value>
+    <value>??? ???????</value>
   </data>
   <data name="ModuleTitle.BackupSharePointSite" xml:space="preserve">
-    <value>موقع النسخ الاحتياطي شيربوينت</value>
+    <value>???? ????? ????????? ????????</value>
   </data>
   <data name="ModuleTitle.BackupSQLDatabase" xml:space="preserve">
-    <value>قاعدة بيانات SQL النسخ الاحتياطي ل</value>
+    <value>????? ?????? SQL ????? ????????? ?</value>
   </data>
   <data name="ModuleTitle.BandwidthReport" xml:space="preserve">
-    <value>تقرير الباندويث</value>
+    <value>????? ?????????</value>
   </data>
   <data name="ModuleTitle.CustomerSpaces" xml:space="preserve">
-    <value>مساحات العملاء</value>
+    <value>?????? ???????</value>
   </data>
   <data name="ModuleTitle.CustomizeSpaceGlobalDNSRecords" xml:space="preserve">
-    <value>تخصيص سجلات DNS العالمية مساحات</value>
+    <value>????? ????? DNS ???????? ??????</value>
   </data>
   <data name="ModuleTitle.DeleteHostingSpace" xml:space="preserve">
-    <value>حذف مساحة الاستضافة</value>
+    <value>??? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.DeleteUserAccount" xml:space="preserve">
-    <value>حذف حساب المستخدم</value>
+    <value>??? ???? ????????</value>
   </data>
   <data name="ModuleTitle.DiskspaceReport" xml:space="preserve">
-    <value>تقرير مساحة القرص</value>
+    <value>????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.OverusageReport" xml:space="preserve">
-    <value>تقرير الاستخدام الزائد</value>
+    <value>????? ????????? ??????</value>
   </data>
   <data name="ModuleTitle.DiskSpaceSummary" xml:space="preserve">
-    <value>ملخص مساحة القرص</value>
+    <value>???? ????? ?????</value>
   </data>
   <data name="ModuleTitle.SCPSQLDatabasesSettings" xml:space="preserve">
-    <value>إعدادات قواعد بيانات SolidCP SQL</value>
+    <value>??????? ????? ?????? FuseCP SQL</value>
   </data>
   <data name="ModuleTitle.SCPSQLUserSettings" xml:space="preserve">
-    <value>إعدادات مستخدم SolidCP SQL</value>
+    <value>??????? ?????? FuseCP SQL</value>
   </data>
   <data name="ModuleTitle.DNSZoneRecords" xml:space="preserve">
-    <value>سجلات منطقة DNS</value>
+    <value>????? ????? DNS</value>
   </data>
   <data name="ModuleTitle.Domains" xml:space="preserve">
-    <value>النطاقات</value>
+    <value>????????</value>
   </data>
-  <data name="ModuleTitle.SolidCPEnterpriseServerSettings" xml:space="preserve">
-    <value>إعدادات خادم SolidCP Enterprise</value>
+  <data name="ModuleTitle.FuseCPEnterpriseServerSettings" xml:space="preserve">
+    <value>??????? ???? FuseCP Enterprise</value>
   </data>
   <data name="ModuleTitle.EditAccountSettings" xml:space="preserve">
-    <value>تحرير إعدادات الحساب</value>
+    <value>????? ??????? ??????</value>
   </data>
   <data name="ModuleTitle.EditDomain" xml:space="preserve">
-    <value>تحرير النطاق</value>
+    <value>????? ??????</value>
   </data>
   <data name="ModuleTitle.EditHostingAddOn" xml:space="preserve">
-    <value>تحرير إضافة الاستضافة</value>
+    <value>????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.EditHostingPlan" xml:space="preserve">
-    <value>تحرير خطة الاستضافة</value>
+    <value>????? ??? ?????????</value>
   </data>
   <data name="ModuleTitle.EditHostingSpace" xml:space="preserve">
-    <value>تحرير مساحة الاستضافة</value>
+    <value>????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.EditIconProperties" xml:space="preserve">
-    <value>تحرير خصائص الرمز</value>
+    <value>????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.EditVLAN" xml:space="preserve">
-    <value>تحرير VLAN</value>
+    <value>????? VLAN</value>
   </data>
   <data name="ModuleTitle.EditIPAddress" xml:space="preserve">
-    <value>تحرير عنوان IP</value>
+    <value>????? ????? IP</value>
   </data>
   <data name="ModuleTitle.EditPeerAccount" xml:space="preserve">
-    <value>تحرير الحساب المقترن</value>
+    <value>????? ?????? ???????</value>
   </data>
   <data name="ModuleTitle.EditUserDetails" xml:space="preserve">
-    <value>تحرير تفاصيل المستخدم</value>
+    <value>????? ?????? ????????</value>
   </data>
   <data name="ModuleTitle.EditVirtualServer" xml:space="preserve">
-    <value>تحرير Virtual Server</value>
+    <value>????? Virtual Server</value>
   </data>
   <data name="ModuleTitle.EnterpriseServer" xml:space="preserve">
-    <value>خادم المؤسسة</value>
+    <value>???? ???????</value>
   </data>
   <data name="ModuleTitle.FileManager" xml:space="preserve">
-    <value>مدير الملفات</value>
+    <value>???? ???????</value>
   </data>
   <data name="ModuleTitle.FTPAccountProperties" xml:space="preserve">
-    <value>خصائص حساب FTP</value>
+    <value>????? ???? FTP</value>
   </data>
   <data name="ModuleTitle.FtpAccounts" xml:space="preserve">
-    <value>حسابات FTP</value>
+    <value>?????? FTP</value>
   </data>
   <data name="ModuleTitle.HostingAccountSettings" xml:space="preserve">
-    <value>إعدادات حساب الاستضافة</value>
+    <value>??????? ???? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingAddons" xml:space="preserve">
-    <value> الوظائف الإضافية للاستضافة</value>
+    <value> ??????? ???????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingPlans" xml:space="preserve">
-    <value>خطط الاستضافة</value>
+    <value>??? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingSpaceAddOn" xml:space="preserve">
-    <value>إضافة مساحة الاستضافة</value>
+    <value>????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingSpaceBandwidthDetails" xml:space="preserve">
-    <value>تفاصيل مساحة الباندويث للاستضافة</value>
+    <value>?????? ????? ????????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingSpaceDetails" xml:space="preserve">
-    <value>تفاصيل مساحة الاستضافة</value>
+    <value>?????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingSpaceDiskSpaceDetails" xml:space="preserve">
-    <value>تفاصيل مساحة القرص للاستضافة</value>
+    <value>?????? ????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingSpaceFiles" xml:space="preserve">
-    <value>مساحة استضافة الملفات </value>
+    <value>????? ??????? ??????? </value>
   </data>
   <data name="ModuleTitle.HostingSpaceSettings" xml:space="preserve">
-    <value>اعدادت مساحة الاستضافة</value>
+    <value>?????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostingSpaceSummaryLetter" xml:space="preserve">
-    <value>معلومات ملخص مساحة الاستضافة</value>
+    <value>??????? ???? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.Icons" xml:space="preserve">
-    <value>رموز</value>
+    <value>????</value>
   </data>
   <data name="ModuleTitle.IconsPadSettings" xml:space="preserve">
-    <value>إعدادات لوحة الرموز</value>
+    <value>??????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.InstalledSharePointWebPartPackages" xml:space="preserve">
-    <value>تثبيت حزم جزء ويب شيربوينت</value>
+    <value>????? ??? ??? ??? ????????</value>
   </data>
   <data name="ModuleTitle.InstallSharePointWebPartsPackage" xml:space="preserve">
-    <value>قم بتثبيت حزمة أجزاء ويب شيربوينت</value>
+    <value>?? ?????? ???? ????? ??? ????????</value>
   </data>
   <data name="ModuleTitle.InstallWebApplication" xml:space="preserve">
-    <value>تثبيت تطبيق الويب</value>
+    <value>????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.DownloadWebApplication" xml:space="preserve">
-    <value>تنزيل تطبيق الويب</value>
+    <value>????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.WebApplicationParameters" xml:space="preserve">
-    <value>معلمات تطبيق الويب</value>
+    <value>?????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.IPAddresses" xml:space="preserve">
-    <value>عناوين IP</value>
+    <value>?????? IP</value>
   </data>
   <data name="ModuleTitle.IPAddressesManager" xml:space="preserve">
-    <value>مدير عناوين IP</value>
+    <value>???? ?????? IP</value>
   </data>
   <data name="ModuleTitle.VLANsManager" xml:space="preserve">
-    <value>مدير شبكات VLAN</value>
+    <value>???? ????? VLAN</value>
   </data>
   <data name="ModuleTitle.SignIn" xml:space="preserve">
-    <value>سجّل الدخول إلى لوحة التحكم</value>
+    <value>???? ?????? ??? ???? ??????</value>
   </data>
   <data name="ModuleTitle.MailAccountProperties" xml:space="preserve">
-    <value>خصائص حساب البريد</value>
+    <value>????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.MailAccounts" xml:space="preserve">
-    <value>حسابات البريد</value>
+    <value>?????? ??????</value>
   </data>
   <data name="ModuleTitle.MailDomainProperties" xml:space="preserve">
-    <value>خصائص نطاق البريد</value>
+    <value>????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.MailDomains" xml:space="preserve">
-    <value>نطاقات البريد</value>
+    <value>?????? ??????</value>
   </data>
   <data name="ModuleTitle.MailForwardingProperties" xml:space="preserve">
-    <value>خصائص الاسم المستعار للبريد</value>
+    <value>????? ????? ???????? ??????</value>
   </data>
   <data name="ModuleTitle.MailForwardings" xml:space="preserve">
-    <value>الأسماء المستعارة للبريد</value>
+    <value>??????? ????????? ??????</value>
   </data>
   <data name="ModuleTitle.MailGroupProperties" xml:space="preserve">
-    <value>خصائص مجموعة البريد</value>
+    <value>????? ?????? ??????</value>
   </data>
   <data name="ModuleTitle.MailGroups" xml:space="preserve">
-    <value>مجموعات البريد</value>
+    <value>??????? ??????</value>
   </data>
   <data name="ModuleTitle.MailListProperties" xml:space="preserve">
-    <value>خصائص قائمة البريد</value>
+    <value>????? ????? ??????</value>
   </data>
   <data name="ModuleTitle.MailLists" xml:space="preserve">
-    <value>قوائم البريد</value>
+    <value>????? ??????</value>
   </data>
   <data name="ModuleTitle.ManageServerSystemProcesses" xml:space="preserve">
-    <value>إدارة عمليات نظام الخادم</value>
+    <value>????? ?????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.ManageTerminalConnections" xml:space="preserve">
-    <value>إدارة اتصالات النظام عن بعد</value>
+    <value>????? ??????? ?????? ?? ???</value>
   </data>
   <data name="ModuleTitle.ManageWindowsServices" xml:space="preserve">
-    <value>إدارة خدمات Windows</value>
+    <value>????? ????? Windows</value>
   </data>
   <data name="ModuleTitle.ManagePlatformInstaller" xml:space="preserve">
-    <value>إدارة مثبت منصة الويب</value>
+    <value>????? ???? ???? ?????</value>
   </data>
   <data name="ModuleTitle.MyDatabases" xml:space="preserve">
-    <value>قواعد البيانات الخاصة بي</value>
+    <value>????? ???????? ?????? ??</value>
   </data>
   <data name="ModuleTitle.MyExtras" xml:space="preserve">
-    <value>إضافاتي</value>
+    <value>???????</value>
   </data>
   <data name="ModuleTitle.MyHostingSpaces" xml:space="preserve">
-    <value>مساحات الاستضافة الخاصة بي</value>
+    <value>?????? ????????? ?????? ??</value>
   </data>
   <data name="ModuleTitle.MyMail" xml:space="preserve">
-    <value>بريدي</value>
+    <value>?????</value>
   </data>
   <data name="ModuleTitle.MySpaces" xml:space="preserve">
-    <value>مساحاتي</value>
+    <value>???????</value>
   </data>
   <data name="ModuleTitle.MySql4Databases" xml:space="preserve">
-    <value>قواعد بيانات MySQL 4</value>
+    <value>????? ?????? MySQL 4</value>
   </data>
   <data name="ModuleTitle.MySql4Users" xml:space="preserve">
-    <value>مستخدمي MySQL 4</value>
+    <value>??????? MySQL 4</value>
   </data>
   <data name="ModuleTitle.MySql5Databases" xml:space="preserve">
-    <value>قواعد بيانات MySQL 5</value>
+    <value>????? ?????? MySQL 5</value>
   </data>
   <data name="ModuleTitle.MySql5Users" xml:space="preserve">
-    <value>مستخدمي MySQL 5</value>
+    <value>??????? MySQL 5</value>
   </data>
   <data name="ModuleTitle.MySql8Databases" xml:space="preserve">
-    <value>قواعد بيانات MySQL 8</value>
+    <value>????? ?????? MySQL 8</value>
   </data>
   <data name="ModuleTitle.MySql8Users" xml:space="preserve">
-    <value>مستخدمو MySQL 8</value>
+    <value>??????? MySQL 8</value>
   </data>
   <data name="ModuleTitle.MySql9Databases" xml:space="preserve">
-    <value>قواعد بيانات MySQL 9</value>
+    <value>????? ?????? MySQL 9</value>
   </data>
   <data name="ModuleTitle.MySql9Users" xml:space="preserve">
-    <value>مستخدمو MySQL 9</value>
+    <value>??????? MySQL 9</value>
   </data>
   <data name="ModuleTitle.MariaDBDatabases" xml:space="preserve">
-    <value>قواعد بيانات MariaDB</value>
+    <value>????? ?????? MariaDB</value>
   </data>
   <data name="ModuleTitle.MariaDBUsers" xml:space="preserve">
-    <value>مستخدمي MariaDB</value>
+    <value>??????? MariaDB</value>
   </data>
   <data name="ModuleTitle.MyUsers" xml:space="preserve">
-    <value>المستخدمون</value>
+    <value>??????????</value>
   </data>
   <data name="ModuleTitle.ODBC" xml:space="preserve">
-    <value>مصادر بيانات ODBC</value>
+    <value>????? ?????? ODBC</value>
   </data>
   <data name="ModuleTitle.ODBCDSNProperties" xml:space="preserve">
-    <value>خصائص ODBC DSN</value>
+    <value>????? ODBC DSN</value>
   </data>
   <data name="ModuleTitle.ODBCDSNs" xml:space="preserve">
     <value>ODBC DSNs</value>
   </data>
   <data name="ModuleTitle.PasswordReminder" xml:space="preserve">
-    <value>تذكير كلمة السر</value>
+    <value>????? ???? ????</value>
   </data>
   <data name="ModuleTitle.PeerAccounts" xml:space="preserve">
-    <value>حسابات مقترنة</value>
+    <value>?????? ??????</value>
   </data>
   <data name="ModuleTitle.RebootServer" xml:space="preserve">
-    <value>إعادة تشغيل الخادم</value>
+    <value>????? ????? ??????</value>
   </data>
   <data name="ModuleTitle.RestoreSharePointSite" xml:space="preserve">
-    <value>استعادة موقع شيربوينت</value>
+    <value>??????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.RestoreSQLDatabase" xml:space="preserve">
-    <value>استعادة قاعدة بيانات SQL</value>
+    <value>??????? ????? ?????? SQL</value>
   </data>
   <data name="ModuleTitle.ScheduledTaskProperties" xml:space="preserve">
-    <value>خصائص المهام المجدولة</value>
+    <value>????? ?????? ????????</value>
   </data>
   <data name="ModuleTitle.ScheduledTasks" xml:space="preserve">
-    <value>المهام المجدولة</value>
+    <value>?????? ????????</value>
   </data>
   <data name="ModuleTitle.SecuredFolderProperties" xml:space="preserve">
-    <value>خصائص المجلد الآمن</value>
+    <value>????? ?????? ?????</value>
   </data>
   <data name="ModuleTitle.SecureGroupProperties" xml:space="preserve">
-    <value>خصائص المجموعة الآمنة</value>
+    <value>????? ???????? ??????</value>
   </data>
   <data name="ModuleTitle.SecureUserProperties" xml:space="preserve">
-    <value>خصائص المستخدم الآمنة</value>
+    <value>????? ???????? ??????</value>
   </data>
   <data name="ModuleTitle.HeliconApeFolderProperties" xml:space="preserve">
-    <value>تحرير .htaccess</value>
+    <value>????? .htaccess</value>
   </data>
   <data name="ModuleTitle.HeliconApeFolderAuthProperties" xml:space="preserve">
-    <value>.htaccess الخصائص الآمنة</value>
+    <value>.htaccess ??????? ??????</value>
   </data>
   <data name="ModuleTitle.HeliconApeGroupProperties" xml:space="preserve">
-    <value>خصائص مجموعة Helicon Ape</value>
+    <value>????? ?????? Helicon Ape</value>
   </data>
   <data name="ModuleTitle.HeliconApeUserProperties" xml:space="preserve">
-    <value>خصائص مستخدم Helicon Ape</value>
+    <value>????? ?????? Helicon Ape</value>
   </data>
   <data name="ModuleTitle.SelectUsertoWorkFor" xml:space="preserve">
-    <value>حدد المستخدم للعمل لديه</value>
+    <value>??? ???????? ????? ????</value>
   </data>
   <data name="ModuleTitle.ServerEventViewer" xml:space="preserve">
-    <value>عارض الأحداث للخادم</value>
+    <value>???? ??????? ??????</value>
   </data>
   <data name="ModuleTitle.ServerProperties" xml:space="preserve">
-    <value>خصائص الخادم</value>
+    <value>????? ??????</value>
   </data>
   <data name="ModuleTitle.Servers" xml:space="preserve">
-    <value>الخوادم</value>
+    <value>???????</value>
   </data>
   <data name="ModuleTitle.ServiceProperties" xml:space="preserve">
-    <value>خصائص الخدمة</value>
+    <value>????? ??????</value>
   </data>
   <data name="ModuleTitle.SharedSSL" xml:space="preserve">
-    <value>مجلدات SSL المشتركة</value>
+    <value>?????? SSL ????????</value>
   </data>
   <data name="ModuleTitle.SharedSSLFolderProperties" xml:space="preserve">
-    <value>خصائص مجلد SSL المشتركة</value>
+    <value>????? ???? SSL ????????</value>
   </data>
   <data name="ModuleTitle.SharedSSLFolders" xml:space="preserve">
-    <value>مجلدات SSL المشتركة</value>
+    <value>?????? SSL ????????</value>
   </data>
   <data name="ModuleTitle.SharePointGroup" xml:space="preserve">
-    <value>مجموعة شيربوينت</value>
+    <value>?????? ????????</value>
   </data>
   <data name="ModuleTitle.SharePointGroups" xml:space="preserve">
-    <value>مجموعات شيربوينت</value>
+    <value>??????? ????????</value>
   </data>
   <data name="ModuleTitle.SharePointSite" xml:space="preserve">
-    <value>موقع شيربوينت</value>
+    <value>???? ????????</value>
   </data>
   <data name="ModuleTitle.SharePointSites" xml:space="preserve">
-    <value>مواقع شيربوينت</value>
+    <value>????? ????????</value>
   </data>
   <data name="ModuleTitle.SharePointUserProperties" xml:space="preserve">
-    <value>خصائص مستخدم شيربوينت</value>
+    <value>????? ?????? ????????</value>
   </data>
   <data name="ModuleTitle.SharePointUsers" xml:space="preserve">
-    <value>مستخدمين شيربوينت</value>
+    <value>???????? ????????</value>
   </data>
   <data name="ModuleTitle.Sql2000Databases" xml:space="preserve">
-    <value>قواعد بيانات SQL Server 2000</value>
+    <value>????? ?????? SQL Server 2000</value>
   </data>
   <data name="ModuleTitle.Sql2000Users" xml:space="preserve">
-    <value>عمليات تسجيل الدخول إلى SQL Server 2000</value>
+    <value>?????? ????? ?????? ??? SQL Server 2000</value>
   </data>
   <data name="ModuleTitle.Sql2005Databases" xml:space="preserve">
-    <value>قواعد بيانات SQL Server 2005</value>
+    <value>????? ?????? SQL Server 2005</value>
   </data>
   <data name="ModuleTitle.Sql2005Users" xml:space="preserve">
-    <value>عمليات تسجيل الدخول إلى SQL Server 2005</value>
+    <value>?????? ????? ?????? ??? SQL Server 2005</value>
   </data>
   <data name="ModuleTitle.Sql2008Databases" xml:space="preserve">
-    <value>قواعد بيانات SQL Server 2008</value>
+    <value>????? ?????? SQL Server 2008</value>
   </data>
   <data name="ModuleTitle.Sql2008Users" xml:space="preserve">
-    <value>عمليات تسجيل الدخول إلى SQL Server 2008</value>
+    <value>?????? ????? ?????? ??? SQL Server 2008</value>
   </data>
   <data name="ModuleTitle.Sql2012Databases" xml:space="preserve">
-    <value>قواعد بيانات SQL Server 2012</value>
+    <value>????? ?????? SQL Server 2012</value>
   </data>
   <data name="ModuleTitle.Sql2012Users" xml:space="preserve">
-    <value>عمليات تسجيل الدخول إلى SQL Server 2012</value>
+    <value>?????? ????? ?????? ??? SQL Server 2012</value>
   </data>
   <data name="ModuleTitle.Sql2014Databases" xml:space="preserve">
-    <value>قواعد بيانات SQL Server 2014</value>
+    <value>????? ?????? SQL Server 2014</value>
   </data>
   <data name="ModuleTitle.Sql2014Users" xml:space="preserve">
-    <value>عمليات تسجيل الدخول إلى SQL Server 2014</value>
+    <value>?????? ????? ?????? ??? SQL Server 2014</value>
   </data>
   <data name="ModuleTitle.Sql2016Databases" xml:space="preserve">
-    <value>قواعد بيانات SQL Server 2016</value>
+    <value>????? ?????? SQL Server 2016</value>
   </data>
   <data name="ModuleTitle.Sql2016Users" xml:space="preserve">
-    <value>عمليات تسجيل الدخول إلى SQL Server 2016</value>
+    <value>?????? ????? ?????? ??? SQL Server 2016</value>
   </data>
   <data name="ModuleTitle.SQLDatabaseProperties" xml:space="preserve">
-    <value>خصائص قاعدة بيانات SQL</value>
+    <value>????? ????? ?????? SQL</value>
   </data>
   <data name="ModuleTitle.SQLDatabases" xml:space="preserve">
-    <value>قواعد بيانات SQL</value>
+    <value>????? ?????? SQL</value>
   </data>
   <data name="ModuleTitle.SQLUserProperties" xml:space="preserve">
-    <value>خصائص مستخدم SQL</value>
+    <value>????? ?????? SQL</value>
   </data>
   <data name="ModuleTitle.SQLUsers" xml:space="preserve">
-    <value>مستخدمو SQL</value>
+    <value>??????? SQL</value>
   </data>
-  <data name="ModuleTitle.SynchronizeDotNetNukeSolidCPUserAccounts" xml:space="preserve">
-    <value>مزامنة DotNetNuke - حسابات مستخدمي SolidCP</value>
+  <data name="ModuleTitle.SynchronizeDotNetNukeFuseCPUserAccounts" xml:space="preserve">
+    <value>?????? DotNetNuke - ?????? ??????? FuseCP</value>
   </data>
   <data name="ModuleTitle.UserAccountProperties" xml:space="preserve">
-    <value>خصائص حساب المستخدم</value>
+    <value>????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.UserHostingSpaces" xml:space="preserve">
-    <value>مساحات استضافة المستخدم</value>
+    <value>?????? ??????? ????????</value>
   </data>
   <data name="ModuleTitle.Users" xml:space="preserve">
-    <value>المستخدمون</value>
+    <value>??????????</value>
   </data>
   <data name="ModuleTitle.UsersWizard" xml:space="preserve">
-    <value>معالج إنشاء المستخدم</value>
+    <value>????? ????? ????????</value>
   </data>
   <data name="ModuleTitle.AppVirtualDirectoryProperties" xml:space="preserve">
-    <value>خصائص الخوادم الافتراضية</value>
+    <value>????? ??????? ??????????</value>
   </data>
   <data name="ModuleTitle.VirtualServers" xml:space="preserve">
-    <value>الخوادم الافتراضية</value>
+    <value>??????? ??????????</value>
   </data>
   <data name="ModuleTitle.WebApplicationsInstaller" xml:space="preserve">
-    <value>مثبت تطبيقات الويب</value>
+    <value>???? ??????? ?????</value>
   </data>
   <data name="ModuleTitle.WebSiteProperties" xml:space="preserve">
-    <value>خصائص موقع الويب</value>
+    <value>????? ???? ?????</value>
   </data>
   <data name="ModuleTitle.WebSites" xml:space="preserve">
-    <value>مواقع الويب</value>
+    <value>????? ?????</value>
   </data>
   <data name="ModuleTitle.WorkFor" xml:space="preserve">
-    <value>العمل ل</value>
+    <value>????? ?</value>
   </data>
   <data name="ModuleTitle.InstallationComplete" xml:space="preserve">
-    <value>اكتمل التثبيت</value>
+    <value>????? ???????</value>
   </data>
   <data name="ModuleTitle.UserNotes" xml:space="preserve">
-    <value>ملاحظات حساب المستخدم</value>
+    <value>??????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.UserSpaces" xml:space="preserve">
-    <value>مساحات الاستضافة</value>
+    <value>?????? ?????????</value>
   </data>
   <data name="ModuleTitle.UserCustomersSummary" xml:space="preserve">
-    <value>العملاء</value>
+    <value>???????</value>
   </data>
   <data name="ModuleTitle.UserDeleteUserAccount" xml:space="preserve">
-    <value>حذف حساب المستخدم</value>
+    <value>??? ???? ????????</value>
   </data>
   <data name="ModuleTitle.UserDetails" xml:space="preserve">
-    <value>بيانات المستخدم</value>
+    <value>?????? ????????</value>
   </data>
   <data name="ModuleTitle.UserMenu" xml:space="preserve">
-    <value>المستخدم</value>
+    <value>????????</value>
   </data>
   <data name="ModuleTitle.UserResellerSettings" xml:space="preserve">
-    <value>إعدادات الموزع</value>
+    <value>??????? ??????</value>
   </data>
   <data name="ModuleTitle.UserTools" xml:space="preserve">
-    <value>أدوات المستخدم</value>
+    <value>????? ????????</value>
   </data>
   <data name="ModuleTitle.SpaceDetails" xml:space="preserve">
-    <value>تفاصيل المساحة</value>
+    <value>?????? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceMenu" xml:space="preserve">
-    <value>مساحة</value>
+    <value>?????</value>
   </data>
   <data name="ModuleTitle.SpaceNestedSpacesSummary" xml:space="preserve">
-    <value>مساحات متداخلة</value>
+    <value>?????? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceNotes" xml:space="preserve">
-    <value>ملاحظات</value>
+    <value>???????</value>
   </data>
   <data name="ModuleTitle.SpaceQuotas" xml:space="preserve">
-    <value>حصص المساحة</value>
+    <value>??? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceServerUsage" xml:space="preserve">
-    <value>استخدام موارد خادم الفضاء</value>
+    <value>??????? ????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.CreateNewOrganization" xml:space="preserve">
-    <value>إنشاء منظمة جديدة</value>
+    <value>????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.SpaceSettings" xml:space="preserve">
-    <value>إعدادات الموزع</value>
+    <value>??????? ??????</value>
   </data>
   <data name="ModuleTitle.SpaceTools" xml:space="preserve">
-    <value>أدوات المساحة</value>
+    <value>????? ???????</value>
   </data>
   <data name="ModuleTitle.LoggedUserDetails" xml:space="preserve">
-    <value>تفاصيل حسابي</value>
+    <value>?????? ?????</value>
   </data>
   <data name="ModuleTitle.UserAccountChangePassword" xml:space="preserve">
-    <value>تغيير كلمة المرور</value>
+    <value>????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.UserAccountEditDetails" xml:space="preserve">
-    <value>تفاصيل حساب المستخدم</value>
+    <value>?????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.UserAccountSummaryLetter" xml:space="preserve">
-    <value>ملخص حساب المستخدم</value>
+    <value>???? ???? ????????</value>
   </data>
   <data name="ModuleTitle.SpaceSummaryLetter" xml:space="preserve">
-    <value>معلومات ملخص مساحة الاستضافة</value>
+    <value>??????? ???? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.BackupSpace" xml:space="preserve">
-    <value> النسخ الاحتياطي مساحة استضافة</value>
+    <value> ????? ????????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.BackupUser" xml:space="preserve">
-    <value>نسخ احتياطي لمساحات حساب المستخدم</value>
+    <value>??? ??????? ??????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.ImportSpaceResources" xml:space="preserve">
-    <value>استيراد موارد مساحة الاستضافة</value>
+    <value>??????? ????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.RestoreSpace" xml:space="preserve">
-    <value>استعادة مساحة الاستضافة</value>
+    <value>??????? ????? ?????????</value>
   </data>
   <data name="ModuleTitle.RestoreUser" xml:space="preserve">
-    <value>استعادة مساحات حساب المستخدم</value>
+    <value>??????? ?????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.BackupServer" xml:space="preserve">
-    <value>النسخ الاحتياطي للخادم</value>
+    <value>????? ????????? ??????</value>
   </data>
   <data name="ModuleTitle.RestoreServer" xml:space="preserve">
-    <value>استعادة النسخة الاحتياطية للخادم</value>
+    <value>??????? ?????? ?????????? ??????</value>
   </data>
   <data name="ModuleTitle.NestedSpaces" xml:space="preserve">
-    <value>مساحات الاستضافة المتداخلة</value>
+    <value>?????? ????????? ?????????</value>
   </data>
   <data name="ModuleTitle.SpaceDeleteSpace" xml:space="preserve">
-    <value>حذف المساحة</value>
+    <value>??? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceEditAddon" xml:space="preserve">
-    <value>إضافة / تحرير مساحة إضافية</value>
+    <value>????? / ????? ????? ??????</value>
   </data>
   <data name="ModuleTitle.SpaceEditDetails" xml:space="preserve">
-    <value>تفاصيل المساحة</value>
+    <value>?????? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceEditDnsRecords" xml:space="preserve">
-    <value>سجلات مساحة DNS</value>
+    <value>????? ????? DNS</value>
   </data>
   <data name="ModuleTitle.SpaceSettingsEditor" xml:space="preserve">
-    <value>تحرير إعدادات المساحة</value>
+    <value>????? ??????? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceViewQuotas" xml:space="preserve">
-    <value>حصص موارد المساحة</value>
+    <value>??? ????? ???????</value>
   </data>
   <data name="ModuleTitle.UserAccountMailTemplateSettings" xml:space="preserve">
-    <value>قوالب البريد الإلكتروني لحساب المستخدم</value>
+    <value>????? ?????? ?????????? ????? ????????</value>
   </data>
   <data name="ModuleTitle.UserAccountPolicySettings" xml:space="preserve">
-    <value>سياسات حساب المستخدم</value>
+    <value>?????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.UserAccountSettingsEditor" xml:space="preserve">
-    <value>خصائص حساب المستخدم</value>
+    <value>????? ???? ????????</value>
   </data>
   <data name="ModuleTitle.UserCreateSpace" xml:space="preserve">
-    <value>إنشاء مساحة استضافة</value>
+    <value>????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.UserCreateUserAccount" xml:space="preserve">
-    <value>إنشاء حساب مستخدم</value>
+    <value>????? ???? ??????</value>
   </data>
   <data name="ModuleTitle.UserCustomers" xml:space="preserve">
-    <value>حسابات المستخدم للعملاء</value>
+    <value>?????? ???????? ???????</value>
   </data>
   <data name="ModuleTitle.UserPeers" xml:space="preserve">
-    <value>حسابات مقترنة</value>
+    <value>?????? ??????</value>
   </data>
   <data name="ModuleTitle.SystemSettings" xml:space="preserve">
-    <value>اعدادات النظام</value>
+    <value>??????? ??????</value>
   </data>
   <data name="ModuleTitle.SearchSpaces" xml:space="preserve">
-    <value>البحث عن مساحات الاستضافة</value>
+    <value>????? ?? ?????? ?????????</value>
   </data>
   <data name="ModuleTitle.SearchObject" xml:space="preserve">
-    <value>كائنات البحث</value>
+    <value>?????? ?????</value>
   </data>
   <data name="ModuleTitle.SearchUsers" xml:space="preserve">
-    <value>بحث في حسابات المستخدمين</value>
+    <value>??? ?? ?????? ??????????</value>
   </data>
   <data name="ModuleTitle.TasksTaskDetails" xml:space="preserve">
-    <value>تفاصيل المهمة</value>
+    <value>?????? ??????</value>
   </data>
   <data name="ModuleTitle.Tasks" xml:space="preserve">
-    <value>المهام</value>
+    <value>??????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointSiteCollection" xml:space="preserve">
-    <value>مجموعة مواقع شيربوينت</value>
+    <value>?????? ????? ????????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointSiteCollections" xml:space="preserve">
-    <value>مجموعات موقع شيربوينت المستضافة</value>
+    <value>??????? ???? ???????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointBackupSiteCollection" xml:space="preserve">
-    <value> النسخ الاحتياطي لمجموعة مواقع</value>
+    <value> ????? ????????? ??????? ?????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointRestoreSiteCollection" xml:space="preserve">
-    <value>استعادة مجموعة المواقع</value>
+    <value>??????? ?????? ???????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointEnterpriseSiteCollection" xml:space="preserve">
-    <value>مجموعة مواقع مؤسسة شيربوينت</value>
+    <value>?????? ????? ????? ????????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointEnterpriseSiteCollections" xml:space="preserve">
-    <value>مجموعات مواقع مؤسسة شيربوينت المستضافة</value>
+    <value>??????? ????? ????? ???????? ?????????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointEnterpriseBackupSiteCollection" xml:space="preserve">
-    <value> النسخ الاحتياطي لمجموعة مواقع</value>
+    <value> ????? ????????? ??????? ?????</value>
   </data>
   <data name="ModuleTitle.HostedSharePointEnterpriseRestoreSiteCollection" xml:space="preserve">
-    <value>استعادة مجموعة المواقع</value>
+    <value>??????? ?????? ???????</value>
   </data>
   <data name="ModuleTitle.WebSiteIPAddresses" xml:space="preserve">
-    <value>عناوين IP الخاصة بموقع الويب</value>
+    <value>?????? IP ?????? ????? ?????</value>
   </data>
   <data name="ModuleTitle.WebSitesAllocateIPAddresses" xml:space="preserve">
-    <value>تخصيص عناوين IP الخاصة بموقع ويب</value>
+    <value>????? ?????? IP ?????? ????? ???</value>
   </data>
   <data name="ModuleTitle.HostedExchangeAddOrganizationDomain" xml:space="preserve">
-    <value>إضافة نطاق المؤسسة</value>
+    <value>????? ???? ???????</value>
   </data>
   <data name="ModuleTitle.HostedExchangeCreateOrganization" xml:space="preserve">
-    <value>إنشاء مؤسسة Exchange 2010 الجديدة</value>
+    <value>????? ????? Exchange 2010 ???????</value>
   </data>
   <data name="ModuleTitle.HostedExchangeDeleteOrganization" xml:space="preserve">
-    <value>حذف المنظمة</value>
+    <value>??? ???????</value>
   </data>
   <data name="ModuleTitle.HostedExchangeOrganizationDetails" xml:space="preserve">
-    <value>تفاصيل المنظمة</value>
+    <value>?????? ???????</value>
   </data>
   <data name="ModuleTitle.HostedExchangeUpdateOrganizationCatchAll" xml:space="preserve">
-    <value>تحديث المنظمة الشامل</value>
+    <value>????? ??????? ??????</value>
   </data>
   <data name="ModuleTitle.HostedExchangeUpdateOrganizationQuotas" xml:space="preserve">
-    <value>تحديث حصص المنظمة</value>
+    <value>????? ??? ???????</value>
   </data>
   <data name="ModuleTitle.HostedExchangeUpdateOrganizationServicePlan" xml:space="preserve">
-    <value>تحديث خطة خدمة المنظمة</value>
+    <value>????? ??? ???? ???????</value>
   </data>
   <data name="ModuleTitle.SystemCenterServerAddresses" xml:space="preserve">
-    <value>عناوين خادم مركز النظام</value>
+    <value>?????? ???? ???? ??????</value>
   </data>
   <data name="ModuleTitle.UserAccountVLanCreate" xml:space="preserve">
-    <value>أضف VLan إلى المستخدم</value>
+    <value>??? VLan ??? ????????</value>
   </data>
   <data name="ModuleTitle.SetupControlPanelAccounts" xml:space="preserve">
-    <value>قم بإعداد حسابات SolidCP</value>
+    <value>?? ?????? ?????? FuseCP</value>
   </data>
   <data name="ModuleTitle.ApplyEnableHardQuotaFeature" xml:space="preserve">
-    <value>الحصة الثابتة للنظام</value>
+    <value>????? ??????? ??????</value>
   </data>
   <data name="ModuleTitle.LyncPhoneNumbers" xml:space="preserve">
-    <value>أرقام الهواتف</value>
+    <value>????? ???????</value>
   </data>
   <data name="ModuleTitle.SfBPhoneNumbers" xml:space="preserve">
-    <value>أرقام الهواتف</value>
+    <value>????? ???????</value>
   </data>
   <data name="ModuleTitle.AddPhoneNumber" xml:space="preserve">
-    <value>أضف أرقام الهواتف</value>
+    <value>??? ????? ???????</value>
   </data>
   <data name="ModuleTitle.EditPhoneNumber" xml:space="preserve">
-    <value>تحرير أرقام الهواتف</value>
+    <value>????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.PhoneNumbers" xml:space="preserve">
-    <value>أرقام الهواتف</value>
+    <value>????? ???????</value>
   </data>
   <data name="ModuleTitle.UserOrganization" xml:space="preserve">
-    <value>المنظمة المستضيفة</value>
+    <value>??????? ?????????</value>
   </data>
   <data name="ModuleTitle.RDSServers" xml:space="preserve">
-    <value>خوادم RDS</value>
+    <value>????? RDS</value>
   </data>
   <data name="ModuleTitle.RDSServersAddserver" xml:space="preserve">
-    <value>إضافة خادم RDS جديد</value>
+    <value>????? ???? RDS ????</value>
   </data>
   <data name="ModuleTitle.RDSServersEditServer" xml:space="preserve">
-    <value>تحرير خادم RDS</value>
+    <value>????? ???? RDS</value>
   </data>
   <data name="ModuleTitle.VirtualPrivateServersProxmox" xml:space="preserve">
-    <value>الخوادم الافتراضية الخاصة</value>
+    <value>??????? ?????????? ??????</value>
   </data>
   <data name="ModuleTitle.VirtualPrivateServers2012" xml:space="preserve">
-    <value>الخوادم الافتراضية الخاصة</value>
+    <value>??????? ?????????? ??????</value>
   </data>
   <data name="ModuleTitle.VdcCreateServer" xml:space="preserve">
-    <value>قم بإنشاء خادم VPS جديد</value>
+    <value>?? ?????? ???? VPS ????</value>
   </data>
   <data name="ModuleTitle.VdcImportServer" xml:space="preserve">
-    <value>استيراد VPS</value>
+    <value>??????? VPS</value>
   </data>
   <data name="ModuleTitle.VdcExternalNetwork" xml:space="preserve">
-    <value>الشبكة الخارجية</value>
+    <value>?????? ????????</value>
   </data>
   <data name="ModuleTitle.VdcManagementNetwork" xml:space="preserve">
-    <value>إدارة الشبكة</value>
+    <value>????? ??????</value>
   </data>
   <data name="ModuleTitle.VdcAddPrivateNetworkVLAN" xml:space="preserve">
-    <value>تخصيص شبكات VLAN</value>
+    <value>????? ????? VLAN</value>
   </data>
   <data name="ModuleTitle.VdcAddDmzNetworkVLAN" xml:space="preserve">
-    <value>تخصيص شبكات VLAN</value>
+    <value>????? ????? VLAN</value>
   </data>
   <data name="ModuleTitle.VdcAddExternalAddress" xml:space="preserve">
-    <value>تخصيص عناوين IP</value>
+    <value>????? ?????? IP</value>
   </data>
   <data name="ModuleTitle.VdcPrivateNetwork" xml:space="preserve">
-    <value>شبكة خاصة</value>
+    <value>???? ????</value>
   </data>
   <data name="ModuleTitle.VdcPermissions" xml:space="preserve">
-    <value>أذونات المستخدم</value>
+    <value>?????? ????????</value>
   </data>
   <data name="ModuleTitle.VdcAuditLog" xml:space="preserve">
-    <value>سجل التدقيق</value>
+    <value>??? ???????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsGeneral" xml:space="preserve">
-    <value>عام</value>
+    <value>???</value>
   </data>
   <data name="ModuleTitle.VpsDetailsConfiguration" xml:space="preserve">
-    <value>إعدادات</value>
+    <value>???????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsEditConfiguration" xml:space="preserve">
-    <value>تحرير الإعدادات </value>
+    <value>????? ????????? </value>
   </data>
   <data name="ModuleTitle.VpsDetailsDvd" xml:space="preserve">
-    <value>قرص رقمي مضغوط</value>
+    <value>??? ???? ?????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsInsertDvd" xml:space="preserve">
-    <value>قرص رقمي مضغوط</value>
+    <value>??? ???? ?????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsSnapshots" xml:space="preserve">
-    <value>لقطات</value>
+    <value>?????</value>
   </data>
   <data name="ModuleTitle.VpsDetailReplications" xml:space="preserve">
-    <value>النسخ المتماثل</value>
+    <value>????? ????????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsNetwork" xml:space="preserve">
-    <value>شبكة الاتصال</value>
+    <value>???? ???????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsAddExternalAddress" xml:space="preserve">
-    <value>شبكة الاتصال</value>
+    <value>???? ???????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsAddPrivateAddress" xml:space="preserve">
-    <value>شبكة الاتصال</value>
+    <value>???? ???????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsNetworking" xml:space="preserve">
-    <value>أذونات</value>
+    <value>??????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsTools" xml:space="preserve">
-    <value>أدوات</value>
+    <value>?????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsAuditLog" xml:space="preserve">
-    <value>سجل التدقيق</value>
+    <value>??? ???????</value>
   </data>
   <data name="ModuleTitle.VpsDetailsHelp" xml:space="preserve">
-    <value>مساعدة</value>
+    <value>??????</value>
   </data>
   <data name="ModuleTitle.VpsToolsDeleteServer" xml:space="preserve">
-    <value>حذف الخادم</value>
+    <value>??? ??????</value>
   </data>
   <data name="ModuleTitle.VpsMoveServer" xml:space="preserve">
-    <value>انقل VPS</value>
+    <value>???? VPS</value>
   </data>
   <data name="ModuleTitle.VpsToolsReinstallServer" xml:space="preserve">
-    <value>أعد تثبيت الخادم</value>
+    <value>??? ????? ??????</value>
   </data>
   <data name="ModuleTitle.SpaceStorages" xml:space="preserve">
-    <value>مساحات التخزين</value>
+    <value>?????? ???????</value>
   </data>
   <data name="ModuleTitle.AddSpaceStorageLevel" xml:space="preserve">
-    <value>أضف مستوى مساحة التخزين</value>
+    <value>??? ????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.EditSpaceStorageLevel" xml:space="preserve">
-    <value>تحرير مستوى مساحة التخزين</value>
+    <value>????? ????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.SpaceStorageLevels" xml:space="preserve">
-    <value>مستويات مساحة التخزين</value>
+    <value>??????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.AddStorageSpace" xml:space="preserve">
-    <value>إضافة مساحة التخزين</value>
+    <value>????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.EditStorageSpace" xml:space="preserve">
-    <value>تحرير مساحة التخزين</value>
+    <value>????? ????? ???????</value>
   </data>
   <data name="ModuleTitle.AutoUpdateServers" xml:space="preserve">
-    <value>التحديث التلقائي للخوادم</value>
+    <value>??????? ???????? ???????</value>
   </data>
   <data name="ModuleTitle.DomainsImportZone" xml:space="preserve">
-    <value>استيراد منطقة DNS</value>
+    <value>??????? ????? DNS</value>
   </data>
   <data name="ModuleTitle.PrivateNetworkVLANs" xml:space="preserve">
-    <value>الشبكة الخاصة - شبكات VLAN</value>
+    <value>?????? ?????? - ????? VLAN</value>
   </data>
 </root>

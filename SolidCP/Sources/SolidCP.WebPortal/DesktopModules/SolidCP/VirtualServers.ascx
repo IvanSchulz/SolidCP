@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServers.ascx.cs" Inherits="SolidCP.Portal.VirtualServers" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServers.ascx.cs" Inherits="FuseCP.Portal.VirtualServers" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <div class="buttons-in-panel-header">
     <CPCC:StyleButton ID="btnAddItem"  runat="server" CssClass="btn btn-primary" OnClick="btnAddItem_Click">
         <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddItem" />

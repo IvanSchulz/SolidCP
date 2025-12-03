@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,7 +12,7 @@ using CoreWCF;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 	public class ServiceType
 	{
@@ -61,7 +61,7 @@ namespace SolidCP.Web.Services
 				{
 					try
 					{
-						eserver = Assembly.Load("SolidCP.EnterpriseServer");
+						eserver = Assembly.Load("FuseCP.EnterpriseServer");
 					}
 					catch { }
 				}
@@ -71,7 +71,7 @@ namespace SolidCP.Web.Services
 				{
 					try
 					{
-						server = Assembly.Load("SolidCP.Server");
+						server = Assembly.Load("FuseCP.Server");
 					}
 					catch { }
 				}
@@ -88,11 +88,11 @@ namespace SolidCP.Web.Services
 		}
 
         public bool IsServerLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.Server");
+            .Any(a => a.GetName().Name == "FuseCP.Server");
         public bool IsEnterpriseServerLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.EnterpriseServer");
+            .Any(a => a.GetName().Name == "FuseCP.EnterpriseServer");
         public bool IsPortalLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.WebPortal");
+            .Any(a => a.GetName().Name == "FuseCP.WebPortal");
 
         public static IEnumerable<Type> GetWebServices()
 		{

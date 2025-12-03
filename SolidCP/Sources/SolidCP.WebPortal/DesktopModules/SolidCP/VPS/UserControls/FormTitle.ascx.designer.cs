@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS.UserControls {
+namespace FuseCP.Portal.VPS.UserControls {
     
     
     public partial class FormTitle {

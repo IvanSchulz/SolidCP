@@ -1,9 +1,9 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Schedules.ascx.cs" Inherits="SolidCP.Portal.Schedules" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Schedules.ascx.cs" Inherits="FuseCP.Portal.Schedules" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="uc4" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <asp:Timer runat="server" Interval="5000" ID="tasksTimer" OnTick="tasksTimer_Tick" />
 <div class="FormButtonsBar right">
@@ -95,7 +95,7 @@
 </asp:UpdatePanel>
 
 <asp:ObjectDataSource ID="odsSchedules" runat="server" EnablePaging="True" SelectCountMethod="GetSchedulesPagedCount"
-    SelectMethod="GetSchedulesPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.SchedulesHelper" OnSelected="odsSchedules_Selected">
+    SelectMethod="GetSchedulesPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.SchedulesHelper" OnSelected="odsSchedules_Selected">
     <SelectParameters>
         <asp:ControlParameter ControlID="chkRecursive" Name="recursive" PropertyName="Checked" />
         <asp:ControlParameter ControlID="searchBox" Name="filterColumn" PropertyName="FilterColumn" />

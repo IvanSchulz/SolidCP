@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\ReleaseNotes.htm = ..\ReleaseNotes.htm
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.WebSite", "SolidCP.WebSite\SolidCP.WebSite.csproj", "{168FBFB5-D770-43DE-82F0-089D0F1FD4D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.WebSite", "FuseCP.WebSite\FuseCP.WebSite.csproj", "{168FBFB5-D770-43DE-82F0-089D0F1FD4D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

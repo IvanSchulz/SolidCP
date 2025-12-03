@@ -33,7 +33,7 @@
 using System;
 using System.Web;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
     public partial class TestVirtualMachineTemplate : System.Web.UI.Page
     {

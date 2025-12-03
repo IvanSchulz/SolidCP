@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StorageSpaceLevelResourceGroups.ascx.cs" Inherits="SolidCP.Portal.StorageSpaces.UserControls.StorageSpaceLevelResourceGroups" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StorageSpaceLevelResourceGroups.ascx.cs" Inherits="FuseCP.Portal.StorageSpaces.UserControls.StorageSpaceLevelResourceGroups" %>
 
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
 

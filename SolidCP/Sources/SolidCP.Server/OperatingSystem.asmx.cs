@@ -36,21 +36,21 @@ using System.Web;
 using System.Diagnostics;
 using System.Collections;
 using System.Runtime.InteropServices;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
 using System.Collections.Generic;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
 	/// <summary>
 	/// Summary description for OperatingSystem
 	/// </summary>
-	[WebService(Namespace = "http://smbsaas/solidcp/server/")]
+	[WebService(Namespace = "http://smbsaas/fusecp/server/")]
 	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 	[Policy("ServerPolicy")]
 	[ToolboxItem(false)]

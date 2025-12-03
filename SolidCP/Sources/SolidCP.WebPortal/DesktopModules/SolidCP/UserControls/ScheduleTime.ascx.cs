@@ -41,9 +41,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class ScheduleTime : SolidCPControlBase
+    public partial class ScheduleTime : FuseCPControlBase
     {
         public DateTime SelectedValue
         {

@@ -36,18 +36,18 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
-using SolidCP.EnterpriseServer.Code;
+using FuseCP.EnterpriseServer.Code;
 using System.IO;
 
 
 #if NETCOREAPP
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.WindowsServices;
 using Microsoft.Extensions.Hosting.Systemd;
 #endif
 
-namespace SolidCP.SchedulerService
+namespace FuseCP.SchedulerService
 {
     static class Program
     {

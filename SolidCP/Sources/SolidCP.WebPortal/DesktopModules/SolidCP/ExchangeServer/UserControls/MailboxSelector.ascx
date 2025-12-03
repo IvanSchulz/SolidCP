@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailboxSelector.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.MailboxSelector" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailboxSelector.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.MailboxSelector" %>
 
 <asp:UpdatePanel ID="MainUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate>

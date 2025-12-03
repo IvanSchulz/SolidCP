@@ -33,9 +33,9 @@
 ﻿using System.Text;
 using System.Web;
 using System.Web.Services;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
     /// <summary>
     /// Summary description for $codebehindclassname$
@@ -52,7 +52,7 @@ namespace SolidCP.Portal.VPS
 
             int itemId =  Utils.ParseInt(context.Request.QueryString["ItemID"]);
             byte[] buffer = ES.Services.VPS.GetVirtualMachineThumbnail(itemId,
-                SolidCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
+                FuseCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
             if (buffer != null)
             {
                 context.Response.OutputStream.Write(buffer, 0, buffer.Length);                

@@ -103,18 +103,18 @@ jobs:
       run: dotnet dev-certs https
 
     - name: Build Server & EnterpriseServer
-      working-directory: SolidCP\Sources
+      working-directory: FuseCP\Sources
       run: |
-        dotnet build SolidCP.Server.sln
-        dotnet build SolidCP.EnterpriseServer.sln
-        dotnet build SolidCP.Tests.sln
+        dotnet build FuseCP.Server.sln
+        dotnet build FuseCP.EnterpriseServer.sln
+        dotnet build FuseCP.Tests.sln
 
     - name: Run Unit Tests
       id: test
-      working-directory: SolidCP\Sources
+      working-directory: FuseCP\Sources
       continue-on-error: true
       run: |
-        dotnet test --no-build -v n --logger trx -m:1 -p:BuildInParallel=false --configuration ${{ matrix.configuration }} --results-directory ..\..\test-results SolidCP.Tests.sln
+        dotnet test --no-build -v n --logger trx -m:1 -p:BuildInParallel=false --configuration ${{ matrix.configuration }} --results-directory ..\..\test-results FuseCP.Tests.sln
  
     - name: Upload Test Results
       uses: actions/upload-artifact@v4

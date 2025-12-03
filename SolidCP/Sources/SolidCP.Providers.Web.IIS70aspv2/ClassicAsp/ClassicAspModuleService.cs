@@ -32,7 +32,7 @@
 
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Iis.ClassicAsp
+namespace FuseCP.Providers.Web.Iis.ClassicAsp
 {
     using Common;
     using Microsoft.Web.Administration;

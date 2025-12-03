@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using SolidCP.WebDavPortal.Models.Common;
+using System.Collections.Generic;
+using FuseCP.WebDavPortal.Models.Common;
 
-namespace SolidCP.WebDavPortal.Models.FileSystem
+namespace FuseCP.WebDavPortal.Models.FileSystem
 {
     public class DeleteFilesModel : AjaxModel
     {

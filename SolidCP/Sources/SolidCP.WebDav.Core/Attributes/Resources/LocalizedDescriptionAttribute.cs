@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Resources;
 
-namespace SolidCP.WebDav.Core.Attributes.Resources
+namespace FuseCP.WebDav.Core.Attributes.Resources
 {
     public class LocalizedDescriptionAttribute : DescriptionAttribute
     {

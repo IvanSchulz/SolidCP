@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Library</OutputType>
-        <RootNamespace>SolidCP.Portal</RootNamespace>
-        <AssemblyName>SolidCP.Portal.Modules</AssemblyName>
+        <RootNamespace>FuseCP.Portal</RootNamespace>
+        <AssemblyName>FuseCP.Portal.Modules</AssemblyName>
         <TargetFrameworks>net48;net10.0</TargetFrameworks>
         <LangVersion>13</LangVersion>
         <Nullable>disable</Nullable>
@@ -152,10 +152,10 @@
         <Compile Include="Code\Framework\ISchedulerTaskView.cs" />
         <Compile Include="Code\Framework\WebPortalPageTitleProvider.cs" />
         <Compile Include="Code\Framework\WebPortalThemeProvider.cs" />
-        <Compile Include="Code\Framework\SolidCPControlBase.cs">
+        <Compile Include="Code\Framework\FuseCPControlBase.cs">
             <SubType>ASPXCodeBehind</SubType>
         </Compile>
-        <Compile Include="Code\Framework\SolidCPModuleBase.cs">
+        <Compile Include="Code\Framework\FuseCPModuleBase.cs">
             <SubType>ASPXCodeBehind</SubType>
         </Compile>
         <Compile Include="Code\Framework\ES.cs" />
@@ -212,7 +212,7 @@
         <Compile Include="Code\ProviderControls\IStatsEditInstallationControl.cs" />
         <Compile Include="Code\ProviderControls\IWebInstallerSettings.cs" />
         <Compile Include="Code\ReportingServices\AbstractReportLocalizer.cs" />
-        <Compile Include="Code\ReportingServices\SolidCPModuleResourceStorage.cs" />
+        <Compile Include="Code\ReportingServices\FuseCPModuleResourceStorage.cs" />
         <Compile Include="Code\ReportingServices\EmbeddedReportLocalizer.cs" />
         <Compile Include="Code\ReportingServices\FileSystemReportLocalizer.cs" />
         <Compile Include="Code\ReportingServices\IResourceStorage.cs" />
@@ -3631,12 +3631,12 @@
         <Compile Include="ServersEditServer.ascx.designer.cs">
             <DependentUpon>ServersEditServer.ascx</DependentUpon>
         </Compile>
-        <Compile Include="SettingsSolidCPPolicy.ascx.cs">
-            <DependentUpon>SettingsSolidCPPolicy.ascx</DependentUpon>
+        <Compile Include="SettingsFuseCPPolicy.ascx.cs">
+            <DependentUpon>SettingsFuseCPPolicy.ascx</DependentUpon>
             <SubType>ASPXCodeBehind</SubType>
         </Compile>
-        <Compile Include="SettingsSolidCPPolicy.ascx.designer.cs">
-            <DependentUpon>SettingsSolidCPPolicy.ascx</DependentUpon>
+        <Compile Include="SettingsFuseCPPolicy.ascx.designer.cs">
+            <DependentUpon>SettingsFuseCPPolicy.ascx</DependentUpon>
         </Compile>
         <Compile Include="SettingsOperatingSystemPolicy.ascx.cs">
             <DependentUpon>SettingsOperatingSystemPolicy.ascx</DependentUpon>
@@ -6132,7 +6132,7 @@
         <Content Include="App_LocalResources\SettingsServiceLevels.ascx.de-DE.resx" />
         <Content Include="App_LocalResources\SettingsSfBUserPlansPolicy.ascx.de-DE.resx" />
         <Content Include="App_LocalResources\SettingsSharePointPolicy.ascx.de-DE.resx" />
-        <Content Include="App_LocalResources\SettingsSolidCPPolicy.ascx.de-DE.resx" />
+        <Content Include="App_LocalResources\SettingsFuseCPPolicy.ascx.de-DE.resx" />
         <Content Include="App_LocalResources\SettingsUserPasswordExpirationLetter.ascx.de-DE.resx" />
         <Content Include="App_LocalResources\SettingsUserPasswordRequestLetter.ascx.de-DE.resx" />
         <Content Include="App_LocalResources\SettingsUserPasswordResetLetter.ascx.de-DE.resx" />
@@ -7778,7 +7778,7 @@
         <Content Include="App_LocalResources\SettingsEditor.ascx.resx">
             <SubType>Designer</SubType>
         </Content>
-        <Content Include="SettingsSolidCPPolicy.ascx" />
+        <Content Include="SettingsFuseCPPolicy.ascx" />
         <Content Include="SettingsOperatingSystemPolicy.ascx" />
         <Content Include="SettingsSharePointPolicy.ascx" />
         <Content Include="SettingsMySqlPolicy.ascx" />
@@ -7797,7 +7797,7 @@
         </Content>
     </ItemGroup>
     <ItemGroup>
-        <Content Include="App_LocalResources\SettingsSolidCPPolicy.ascx.resx">
+        <Content Include="App_LocalResources\SettingsFuseCPPolicy.ascx.resx">
             <SubType>Designer</SubType>
         </Content>
     </ItemGroup>
@@ -8302,7 +8302,7 @@
         <Content Include="ApplicationInstallerControls\CommunityServer21.ascx" />
         <Content Include="ApplicationInstallerControls\community_server2007.gif" />
         <Content Include="ApplicationInstallerControls\community_server21.gif" />
-        <Content Include="ApplicationInstallerControls\SolidCPPortal.ascx" />
+        <Content Include="ApplicationInstallerControls\FuseCPPortal.ascx" />
         <Content Include="ApplicationInstallerControls\MyBlog.gif" />
         <Content Include="ApplicationInstallerControls\WordPress.ascx" />
         <Content Include="ApplicationInstallerControls\csk2.gif" />
@@ -9156,11 +9156,11 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\..\CPCC\CPCC.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
-        <ProjectReference Include="..\..\SolidCP.WebPortal.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\..\FuseCP.WebPortal.csproj" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="ApplicationInstallerControls\scp_logo.png" />
@@ -9234,11 +9234,11 @@
             <FilesToMove Include="$(OutputPath)\Microsoft.ReportViewer.*" />
             <FilesToMove Include="$(OutputPath)\Microsoft.Extensions.*" />
             <FilesToMove Include="$(OutputPath)\Microsoft.Web.*" />
-            <FilesToMove Include="$(OutputPath)\SolidCP.Server.Client.*" />
+            <FilesToMove Include="$(OutputPath)\FuseCP.Server.Client.*" />
             <FilesToMove Include="$(OutputPath)\MsieJavaScriptEngine.*" />
             <FilesToMove Include="$(OutputPath)\Renci.SshNet.*" />
-            <FilesToMove Include="$(OutputPath)\SolidCP.EnterpriseServer.Client.*" />
-            <FilesToMove Include="$(OutputPath)\SolidCP.Providers.*" Exclude="$(OutputPath)\SolidCP.Providers.Virtualization.NoVNC.*" />
+            <FilesToMove Include="$(OutputPath)\FuseCP.EnterpriseServer.Client.*" />
+            <FilesToMove Include="$(OutputPath)\FuseCP.Providers.*" Exclude="$(OutputPath)\FuseCP.Providers.Virtualization.NoVNC.*" />
             <FilesToMove Include="$(OutputPath)\WebGrease.*" />
             <FilesToMove Include="$(OutputPath)\JavaScriptEngineSwitcher.*" />
             <FilesToMove Include="$(OutputPath)\System.*" />

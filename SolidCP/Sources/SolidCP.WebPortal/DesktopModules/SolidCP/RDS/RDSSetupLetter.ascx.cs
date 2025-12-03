@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class RDSSeupLetter : SolidCPModuleBase
+    public partial class RDSSeupLetter : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

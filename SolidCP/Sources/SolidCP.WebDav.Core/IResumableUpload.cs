@@ -1,6 +1,6 @@
-﻿using System.IO;
+using System.IO;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     namespace Client
     {

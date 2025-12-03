@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 
 
@@ -21,7 +21,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secGeneral;
+        protected global::FuseCP.Portal.CollapsiblePanel secGeneral;
 
         /// <summary>
         /// GeneralPanel control.
@@ -66,7 +66,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAccountPolicy;
+        protected global::FuseCP.Portal.CollapsiblePanel secAccountPolicy;
 
         /// <summary>
         /// AccountPolicyPanel control.
@@ -93,7 +93,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor accountNamePolicy;
+        protected global::FuseCP.Portal.UsernamePolicyEditor accountNamePolicy;
 
         /// <summary>
         /// lblPassword control.
@@ -111,7 +111,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordPolicyEditor accountPasswordPolicy;
+        protected global::FuseCP.Portal.PasswordPolicyEditor accountPasswordPolicy;
 
         /// <summary>
         /// secAccessPolicy control.
@@ -120,7 +120,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAccessPolicy;
+        protected global::FuseCP.Portal.CollapsiblePanel secAccessPolicy;
 
         /// <summary>
         /// AccessPolicyPanel control.

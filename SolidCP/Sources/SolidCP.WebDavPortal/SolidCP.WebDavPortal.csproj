@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SolidCP.WebDavPortal</RootNamespace>
-    <AssemblyName>SolidCP.WebDavPortal</AssemblyName>
+    <RootNamespace>FuseCP.WebDavPortal</RootNamespace>
+    <AssemblyName>FuseCP.WebDavPortal</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <RuntimeIdentifier>win</RuntimeIdentifier>
     <MvcBuildViews>false</MvcBuildViews>
@@ -721,29 +721,29 @@
       <Project>{68b50d26-3f14-4ac7-977a-2f6128088019}</Project>
       <Name>CPCC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj">
+    <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj">
       <Project>{c09ce910-f16b-48a1-b2cc-c99b8c1cf775}</Project>
-      <Name>SolidCP.EnterpriseServer.Base</Name>
+      <Name>FuseCP.EnterpriseServer.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj">
+    <ProjectReference Include="..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj">
       <Project>{df3d477e-741c-4871-b838-c1635e72474b}</Project>
-      <Name>SolidCP.EnterpriseServer.Client</Name>
+      <Name>FuseCP.EnterpriseServer.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj">
+    <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj">
       <Project>{684c932a-6c75-46ac-a327-f3689d89eb42}</Project>
-      <Name>SolidCP.Providers.Base</Name>
+      <Name>FuseCP.Providers.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj">
+    <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj">
       <Project>{e91e52f3-9555-4d00-b577-2b1dbdd87ca7}</Project>
-      <Name>SolidCP.Server.Utils</Name>
+      <Name>FuseCP.Server.Utils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj">
+    <ProjectReference Include="..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj">
       <Project>{652639d5-59ce-4f42-8a5f-87cb1e812961}</Project>
-      <Name>SolidCP.Web.Clients</Name>
+      <Name>FuseCP.Web.Clients</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.WebDav.Core\SolidCP.WebDav.Core.csproj">
+    <ProjectReference Include="..\FuseCP.WebDav.Core\FuseCP.WebDav.Core.csproj">
       <Project>{BA147805-9EF1-45F2-BF32-A5825D4E950D}</Project>
-      <Name>SolidCP.WebDav.Core</Name>
+      <Name>FuseCP.WebDav.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

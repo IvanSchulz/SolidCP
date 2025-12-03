@@ -33,17 +33,17 @@
 using System;
 using System.ComponentModel;
 using System.Globalization;
-using SolidCP.Web.Services;
-using SolidCP.Providers;
-using SolidCP.Providers.DNS;
-using SolidCP.Server.Utils;
+using FuseCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.DNS;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// <summary>
     /// Summary description for DNSServer
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/server/")]
+    [WebService(Namespace = "http://smbsaas/fusecp/server/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("ServerPolicy")]
     [ToolboxItem(false)]

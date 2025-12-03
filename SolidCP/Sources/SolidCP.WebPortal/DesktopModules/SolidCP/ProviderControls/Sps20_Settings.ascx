@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Sps20_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Sps20_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Sps20_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Sps20_Settings" %>
 <%@ Register Src="Common_ActiveDirectoryIntegration.ascx" TagName="ActiveDirectoryIntegration" TagPrefix="uc1" %>
 <table cellpadding="1" cellspacing="0" width="100%">
 	<tr>

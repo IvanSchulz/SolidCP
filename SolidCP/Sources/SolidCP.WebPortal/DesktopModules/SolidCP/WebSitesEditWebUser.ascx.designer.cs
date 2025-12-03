@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class WebSitesEditWebUser {
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernameControl usernameControl;
+        protected global::FuseCP.Portal.UsernameControl usernameControl;
         
         /// <summary>
         /// lblUserPassword control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl passwordControl;
+        protected global::FuseCP.Portal.PasswordControl passwordControl;
         
         /// <summary>
         /// secGroups control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secGroups;
+        protected global::FuseCP.Portal.CollapsiblePanel secGroups;
         
         /// <summary>
         /// GroupsPanel control.

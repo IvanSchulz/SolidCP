@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="vsftpd_EditAccount.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.vsftpd_EditAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="vsftpd_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.vsftpd_EditAccount" %>
 <table cellSpacing="0" cellPadding="4" width="100%">
 	<tr>
 		<td class="SubHead" valign="top" style="width:150px;">

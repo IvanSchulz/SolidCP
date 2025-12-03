@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ScheduleTaskControls {
+namespace FuseCP.Portal.ScheduleTaskControls {
     
     
     public partial class NotifyOverusedDatabases {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ScheduleTaskControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel clpOverusageDefinitionHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel clpOverusageDefinitionHeader;
         
         /// <summary>
         /// pnlOverusageDefinition control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.ScheduleTaskControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel clpWarningSettingsHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel clpWarningSettingsHeader;
         
         /// <summary>
         /// pnlWarningSettings control.
@@ -226,7 +226,7 @@ namespace SolidCP.Portal.ScheduleTaskControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel clpOverusedSettingsHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel clpOverusedSettingsHeader;
         
         /// <summary>
         /// pnlOverusedSettings control.

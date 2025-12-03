@@ -31,10 +31,10 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System.Collections.Generic;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public interface IExchangeServer
 	{

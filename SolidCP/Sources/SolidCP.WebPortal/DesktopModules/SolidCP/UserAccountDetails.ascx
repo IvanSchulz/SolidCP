@@ -1,4 +1,4 @@
-<%@ Control Language="C#" EnableViewState="false" AutoEventWireup="true" CodeBehind="UserAccountDetails.ascx.cs" Inherits="SolidCP.Portal.UserAccountDetails" %>
+<%@ Control Language="C#" EnableViewState="false" AutoEventWireup="true" CodeBehind="UserAccountDetails.ascx.cs" Inherits="FuseCP.Portal.UserAccountDetails" %>
 <div class="widget">
 							<div class="widget-header clearfix">
 								<h3><i class="fa fa-user"></i> <span><asp:Literal ID="litUsername" runat="server"></asp:Literal></span></h3>

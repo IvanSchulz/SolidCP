@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class IceWarp_EditAccount {
@@ -132,7 +132,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAutoresponder;
+        protected global::FuseCP.Portal.CollapsiblePanel secAutoresponder;
         
         /// <summary>
         /// AutoresponderPanel control.
@@ -249,7 +249,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl calRespondFrom;
+        protected global::FuseCP.Portal.CalendarControl calRespondFrom;
         
         /// <summary>
         /// RespondTo control.
@@ -276,7 +276,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl calRespondTo;
+        protected global::FuseCP.Portal.CalendarControl calRespondTo;
         
         /// <summary>
         /// lblSubject control.
@@ -339,7 +339,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secForwarding;
+        protected global::FuseCP.Portal.CollapsiblePanel secForwarding;
         
         /// <summary>
         /// ForwardingPanel control.
@@ -384,7 +384,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secOlderMails;
+        protected global::FuseCP.Portal.CollapsiblePanel secOlderMails;
         
         /// <summary>
         /// OlderMailsPanel control.

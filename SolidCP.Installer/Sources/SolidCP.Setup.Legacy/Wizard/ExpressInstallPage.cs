@@ -45,18 +45,18 @@ using System.Linq;
 using System.Reflection;
 using System.Collections.Specialized;
 
-using SolidCP.Setup.Common;
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.OS;
-using SolidCP.Setup.Actions;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Common;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.OS;
+using FuseCP.Setup.Actions;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class ExpressInstallPage : BannerWizardPage
 	{
@@ -315,7 +315,7 @@ namespace SolidCP.Setup
                 // add node:
                 //<system.webServer>
                 //  <modules>
-                //    <add name="SecureSession" type="SolidCP.WebPortal.SecureSessionModule" />
+                //    <add name="SecureSession" type="FuseCP.WebPortal.SecureSessionModule" />
                 //  </modules>
                 //</system.webServer>
                 //
@@ -323,7 +323,7 @@ namespace SolidCP.Setup
                 //
                 //<system.web>
                 //  <httpModules>
-                //    <add name="SecureSession" type="SolidCP.WebPortal.SecureSessionModule" />
+                //    <add name="SecureSession" type="FuseCP.WebPortal.SecureSessionModule" />
                 //  </httpModules>
                 //</system.web>
                 bool iis6 = false;
@@ -344,7 +344,7 @@ namespace SolidCP.Setup
                         webServer.AppendChild(modules);
                         var sessionModule = doc.CreateElement("add");
                         sessionModule.SetAttribute("name", "SecureSession");
-                        sessionModule.SetAttribute("type", "SolidCP.WebPortal.SecureSessionModule");
+                        sessionModule.SetAttribute("type", "FuseCP.WebPortal.SecureSessionModule");
                         modules.AppendChild(sessionModule);
                     }
                 }
@@ -388,7 +388,7 @@ namespace SolidCP.Setup
 			sam.AddAction(new EnableAspNetWebExtensionAction());
 			sam.AddAction(new MigrateWebPortalWebConfigAction());
 			sam.AddAction(new SwitchAppPoolAspNetVersion());
-			sam.AddAction(new CleanupSolidCPModulesListAction());
+			sam.AddAction(new CleanupFuseCPModulesListAction());
 			//
 			sam.ActionError += new EventHandler<ActionErrorEventArgs>((object sender, ActionErrorEventArgs e) =>
 			{
@@ -713,7 +713,7 @@ namespace SolidCP.Setup
 			XmlDocument doc = new XmlDocument();
 			doc.Load(webConfigPath);
 			//crypto key
-			string xPath = "configuration/appSettings/add[@key=\"SolidCP.CryptoKey\"]";
+			string xPath = "configuration/appSettings/add[@key=\"FuseCP.CryptoKey\"]";
 			XmlElement keyNode = doc.SelectSingleNode(xPath) as XmlElement;
 			if (keyNode != null)
 			{
@@ -727,7 +727,7 @@ namespace SolidCP.Setup
 			XmlDocument doc = new XmlDocument();
 			doc.Load(webConfigPath);
 			//encryption enabled
-			string xPath = "configuration/appSettings/add[@key=\"SolidCP.EncryptionEnabled\"]";
+			string xPath = "configuration/appSettings/add[@key=\"FuseCP.EncryptionEnabled\"]";
 			XmlElement encryptionNode = doc.SelectSingleNode(xPath) as XmlElement;
 			bool encryptionEnabled = false;
 			if (encryptionNode != null)
@@ -736,15 +736,15 @@ namespace SolidCP.Setup
 			}
 			return encryptionEnabled;
 		}
-		#region SolidCP providioning
+		#region FuseCP providioning
 		private void ConfigureStandaloneServer(string enterpriseServerUrl)
 		{
 			try
 			{
-				Log.WriteStart("Configuring SolidCP");
+				Log.WriteStart("Configuring FuseCP");
 				AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(ResolvePortalAssembly);
 
-				SetProgressText("Configuring SolidCP...");
+				SetProgressText("Configuring FuseCP...");
 				if (!ConnectToEnterpriseServer(enterpriseServerUrl, "serveradmin", Wizard.SetupVariables.ServerAdminPassword))
 				{
 					Log.WriteError("Enterprise Server connection error");
@@ -1515,7 +1515,7 @@ namespace SolidCP.Setup
 		{
 			try
 			{
-				Log.WriteStart("Creating SolidCP login");
+				Log.WriteStart("Creating FuseCP login");
 				string query = string.Empty;
 
 				string connectionString = AppConfig.GetComponentSettingStringValue(
@@ -1551,7 +1551,7 @@ namespace SolidCP.Setup
 					
 					AppConfig.SetComponentSettingStringValue(Wizard.SetupVariables.EnterpriseServerComponentId, "DatabaseLogin", loginName);
 					
-					Log.WriteEnd("Created SolidCP login");
+					Log.WriteEnd("Created FuseCP login");
 				}
 				else
 				{
@@ -1856,8 +1856,8 @@ namespace SolidCP.Setup
 
 				Log.WriteStart("Creating menu shortcut");
 				string programs = Environment.GetFolderPath(Environment.SpecialFolder.Programs);
-				string fileName = "Login to SolidCP.url";
-				string path = Path.Combine(programs, "SolidCP Software");
+				string fileName = "Login to FuseCP.url";
+				string path = Path.Combine(programs, "FuseCP Software");
 				if (!Directory.Exists(path))
 				{
 					Directory.CreateDirectory(path);
@@ -2714,7 +2714,7 @@ namespace SolidCP.Setup
 				XmlDocument doc = new XmlDocument();
 				doc.Load(path);
 
-				XmlElement passwordNode = doc.SelectSingleNode("//SolidCP.server/security/password") as XmlElement;
+				XmlElement passwordNode = doc.SelectSingleNode("//FuseCP.server/security/password") as XmlElement;
 				if (passwordNode == null)
 				{
 					Log.WriteInfo("server password setting not found");
@@ -2779,14 +2779,14 @@ namespace SolidCP.Setup
 				XmlDocument doc = new XmlDocument();
 				doc.Load(path);
 
-				XmlElement ipNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.HostIP']") as XmlElement;
+				XmlElement ipNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.HostIP']") as XmlElement;
 				if (ipNode == null)
 				{
 					Log.WriteInfo("Service host IP setting not found");
 					return;
 				}
 				ipNode.SetAttribute("value", ip);
-				XmlElement portNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.HostPort']") as XmlElement;
+				XmlElement portNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.HostPort']") as XmlElement;
 				if (portNode == null)
 				{
 					Log.WriteInfo("Service host port setting not found");

@@ -1,4 +1,4 @@
-﻿using System.Web.Http.Dependencies;
+using System.Web.Http.Dependencies;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SolidCP.WebDavPortal.DependencyInjection
+namespace FuseCP.WebDavPortal.DependencyInjection
 {
     public class NinjectDependecyResolver : System.Web.Mvc.IDependencyResolver, System.Web.Http.Dependencies.IDependencyResolver
     {

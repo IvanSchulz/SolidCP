@@ -37,9 +37,9 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class TaskController: ControllerBase
     {

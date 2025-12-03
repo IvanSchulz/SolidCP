@@ -42,9 +42,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Xml;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class TextHTML : SolidCPModuleBase
+    public partial class TextHTML : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

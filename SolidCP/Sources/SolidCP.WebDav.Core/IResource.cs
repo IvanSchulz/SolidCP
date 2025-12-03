@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -12,7 +12,7 @@ using System.Threading;
 using System.Web;
 using System.Xml;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     namespace Client
     {

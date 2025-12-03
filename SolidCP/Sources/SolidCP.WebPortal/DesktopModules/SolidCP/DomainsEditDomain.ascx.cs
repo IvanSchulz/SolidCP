@@ -42,11 +42,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Newtonsoft.Json;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class DomainsEditDomain : SolidCPModuleBase
+    public partial class DomainsEditDomain : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -81,7 +81,7 @@ namespace SolidCP.Portal
                 // web site
                 if (webEnabled && domain.WebSiteId > 0)
                 {
-                    SolidCP.Visible = true;
+                    FuseCP.Visible = true;
                     WebSiteAliasPanel.Visible = true;
 
                     WebSiteName.Text = domain.WebSiteName;

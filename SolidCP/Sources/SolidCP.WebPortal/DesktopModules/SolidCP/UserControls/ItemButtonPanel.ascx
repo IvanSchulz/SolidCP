@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ItemButtonPanel.ascx.cs" Inherits="SolidCP.Portal.ItemButtonPanel" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ItemButtonPanel.ascx.cs" Inherits="FuseCP.Portal.ItemButtonPanel" %>
 <CPCC:StyleButton id="btnSaveExit" runat="server"  CssClass="btn btn-success" 
     OnClick="btnSaveExit_Click" OnClientClick="ShowProgressDialog('Updating ...');">
     <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" id="btnSaveExitText" meta:resourcekey="btnSaveExit"/>

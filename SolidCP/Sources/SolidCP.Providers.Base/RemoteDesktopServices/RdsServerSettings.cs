@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace SolidCP.EnterpriseServer.Base.RDS
+namespace FuseCP.EnterpriseServer.Base.RDS
 {
     public class RdsServerSettings
     {

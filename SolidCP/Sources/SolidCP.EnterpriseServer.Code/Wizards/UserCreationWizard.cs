@@ -35,13 +35,13 @@ using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.FTP;
-using SolidCP.Providers.Mail;
-using SolidCP.Providers.OS;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.FTP;
+using FuseCP.Providers.Mail;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class UserCreationWizard: ControllerBase
     {

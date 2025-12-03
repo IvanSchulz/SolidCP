@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCustomers.ascx.cs" Inherits="SolidCP.Portal.UserCustomers" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCustomers.ascx.cs" Inherits="FuseCP.Portal.UserCustomers" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
@@ -87,7 +87,7 @@
             </Columns>
         </asp:GridView>
         <asp:ObjectDataSource ID="odsUsersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetUsersPagedCount"
-            SelectMethod="GetUsersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.UsersHelper" OnSelected="odsUsersPaged_Selected">
+            SelectMethod="GetUsersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.UsersHelper" OnSelected="odsUsersPaged_Selected">
             <SelectParameters>
                 <asp:QueryStringParameter Name="userId" QueryStringField="UserID" Type="Int32" />
                 <asp:ControlParameter Name="filterColumn" ControlID="searchBox"  PropertyName="FilterColumn" />

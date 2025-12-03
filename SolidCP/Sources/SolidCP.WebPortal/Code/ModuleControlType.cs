@@ -40,7 +40,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
     /// <summary>
     /// Summary description for ModuleActionSecurityLevel

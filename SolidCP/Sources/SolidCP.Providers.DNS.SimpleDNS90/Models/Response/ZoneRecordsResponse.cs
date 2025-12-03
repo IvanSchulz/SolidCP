@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
-namespace SolidCP.Providers.DNS.SimpleDNS90.Models.Response
+namespace FuseCP.Providers.DNS.SimpleDNS90.Models.Response
 {
     public partial class ZoneRecordsResponse
     {

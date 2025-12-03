@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Bind_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Bind_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Bind_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Bind_Settings" %>
 <%@ Register Src="../UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc5" %>
 <%@ Register Src="Common_IPAddressesList.ascx" TagName="IPAddressesList" TagPrefix="uc1" %>
 <%@ Register Src="Common_SecondaryDNSServers.ascx" TagName="SecondaryDNSServers" TagPrefix="uc2" %>

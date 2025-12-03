@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,9 +32,9 @@
 
 using System;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-	public partial class VdcAddDmzNetworkVLAN : SolidCPModuleBase
+	public partial class VdcAddDmzNetworkVLAN : FuseCPModuleBase
 	{
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<RootNamespace>SolidCP.Providers.Database</RootNamespace>
+		<RootNamespace>FuseCP.Providers.Database</RootNamespace>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<PublishUrl>publish\</PublishUrl>
-		<OutputPath>..\SolidCP.Server\bin\netstandard\</OutputPath>
+		<OutputPath>..\FuseCP.Server\bin\netstandard\</OutputPath>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -47,8 +47,8 @@
         <PackageReference Include="System.Security.Principal.Windows" Version="5.0.0" GeneratePathProperty="true" />-->
     </ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-		<ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+		<ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
 	</ItemGroup>
 
     <!--

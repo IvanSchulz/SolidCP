@@ -35,7 +35,7 @@ using System.Collections;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	internal class CRC32 : HashAlgorithm
 	{

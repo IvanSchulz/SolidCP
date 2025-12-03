@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Routing;
-using SolidCP.WebDav.Core;
+using FuseCP.WebDav.Core;
 
-namespace SolidCP.WebDavPortal.CustomAttributes
+namespace FuseCP.WebDavPortal.CustomAttributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public class UniqueAdPhoneNumberAttribute : RemoteAttribute

@@ -30,9 +30,9 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-﻿namespace SolidCP.Setup
+﻿namespace FuseCP.Setup
 {
 	public sealed class SqlServerItem
 	{

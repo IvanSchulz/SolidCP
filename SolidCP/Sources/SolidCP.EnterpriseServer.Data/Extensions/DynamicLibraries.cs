@@ -1,4 +1,4 @@
-﻿using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Data;
+namespace FuseCP.EnterpriseServer.Data;
 
 public class DynamicLibraries
 {

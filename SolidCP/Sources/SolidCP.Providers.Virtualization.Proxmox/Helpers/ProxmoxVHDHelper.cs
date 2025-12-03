@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using RestSharp;
 
-namespace SolidCP.Providers.Virtualization.Proxmox
+namespace FuseCP.Providers.Virtualization.Proxmox
 {
 	public class ProxmoxVHDHelper
 	{

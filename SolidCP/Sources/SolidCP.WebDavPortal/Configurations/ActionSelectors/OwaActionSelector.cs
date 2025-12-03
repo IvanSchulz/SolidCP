@@ -1,7 +1,7 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Web.Http.Controllers;
 
-namespace SolidCP.WebDavPortal.Configurations.ActionSelectors
+namespace FuseCP.WebDavPortal.Configurations.ActionSelectors
 {
     public class OwaActionSelector : ApiControllerActionSelector
     {

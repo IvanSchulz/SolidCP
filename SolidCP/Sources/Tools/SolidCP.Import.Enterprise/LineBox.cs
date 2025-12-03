@@ -30,7 +30,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	/// <summary>
 	/// 3D line box.

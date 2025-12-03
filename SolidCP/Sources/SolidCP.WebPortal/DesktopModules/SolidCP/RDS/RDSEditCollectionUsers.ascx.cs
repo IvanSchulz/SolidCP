@@ -35,15 +35,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class RDSEditCollectionUsers : SolidCPModuleBase
+    public partial class RDSEditCollectionUsers : FuseCPModuleBase
     {
         
         protected void Page_Load(object sender, EventArgs e)

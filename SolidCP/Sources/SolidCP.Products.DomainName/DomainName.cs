@@ -30,9 +30,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	public class DomainName : ProvisioningControllerBase, IProvisioningController
 	{
@@ -105,7 +105,7 @@ namespace SolidCP.Ecommerce.EnterpriseServer
 			registrar = RegistrarController.GetTLDDomainRegistrar(ServiceInfo.SpaceId, tld);
 		}
 
-		private void CreateSolidCPDomain(int packageId)
+		private void CreateFuseCPDomain(int packageId)
 		{
 			// try to register domain in panel
 			DomainInfo domain = ServerController.GetDomain(FQDN);
@@ -315,8 +315,8 @@ namespace SolidCP.Ecommerce.EnterpriseServer
 
 			// create remote domain on registrar's side
 			CreateRegistrarDomain(packageId);
-			// create local domain on SolidCP's side
-			CreateSolidCPDomain(packageId);
+			// create local domain on FuseCP's side
+			CreateFuseCPDomain(packageId);
 		}
 
 		public void Rollback()

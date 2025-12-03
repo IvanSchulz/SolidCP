@@ -35,7 +35,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     public class IntroductionPage : MarginWizardPage
     {
@@ -47,7 +47,7 @@ namespace SolidCP.Setup
 		{
 			string product = Wizard.SetupVariables.Product;
 			if (string.IsNullOrEmpty(product))
-				product = "SolidCP";
+				product = "FuseCP";
 			this.introductionText = string.Format("This wizard will guide you through the installation of {0} product.\n\n" +
 				"It is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files without having to reboot your computer.",
 				product);

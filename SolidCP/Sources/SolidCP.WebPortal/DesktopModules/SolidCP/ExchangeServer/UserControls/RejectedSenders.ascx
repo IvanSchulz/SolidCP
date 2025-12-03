@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RejectedSenders.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.RejectedSenders" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RejectedSenders.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.RejectedSenders" %>
 <%@ Register Src="AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
 
 <asp:UpdatePanel ID="MainUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">

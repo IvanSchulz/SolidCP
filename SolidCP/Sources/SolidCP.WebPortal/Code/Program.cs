@@ -1,10 +1,10 @@
-﻿#if NETCOREAPP
+#if NETCOREAPP
 
 using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using SolidCP.Web.Services;
-using SolidCP.Web.Clients;
+using FuseCP.Web.Services;
+using FuseCP.Web.Clients;
 public class Program
 {
 
@@ -18,10 +18,10 @@ public class Program
 		};
 		Server.ConfigureBuilder = builder =>
 		{
-			var es = Assembly.Load("SolidCP.EnterpriseServer");
+			var es = Assembly.Load("FuseCP.EnterpriseServer");
 			if (es != null)
 			{
-				var initializer = es.GetType("SolidCP.EnterpriseServer.Code.Initializer");
+				var initializer = es.GetType("FuseCP.EnterpriseServer.Code.Initializer");
 				var init = initializer.GetMethod("Init");
 				init?.Invoke(null, new[] { builder.Services });
 			}

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class FtpAccountEditAccount {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// lblUserName control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernameControl usernameControl;
+        protected global::FuseCP.Portal.UsernameControl usernameControl;
         
         /// <summary>
         /// passwordControl control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl passwordControl;
+        protected global::FuseCP.Portal.PasswordControl passwordControl;
         
         /// <summary>
         /// lblHomeFolder control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup fileLookup;
+        protected global::FuseCP.Portal.FileLookup fileLookup;
         
         /// <summary>
         /// providerControl control.

@@ -41,15 +41,15 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Collections.Generic;
 using System.Xml;
-using SolidCP.Providers.Mail;
+using FuseCP.Providers.Mail;
 using System.Linq;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsMailPolicy : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsMailPolicy : FuseCPControlBase, IUserSettingsEditorControl
     {
         public void BindSettings(UserSettings settings)
         {

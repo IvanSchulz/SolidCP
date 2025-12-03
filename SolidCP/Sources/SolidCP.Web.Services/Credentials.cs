@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
-    [DataContract(Namespace = "http://solidcp/credentials")]
+    [DataContract(Namespace = "http://fusecp/credentials")]
     public class Credentials
     {
         [DataMember]

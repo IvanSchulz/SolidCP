@@ -39,11 +39,11 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Text.RegularExpressions;
 using System.Web;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
 
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	/// <summary>
 	/// Summary description for IOperationSystem.

@@ -42,12 +42,12 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml;
 using System.Xml.Serialization;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	/// <summary>
 	/// Summary description for ObjectUtils.

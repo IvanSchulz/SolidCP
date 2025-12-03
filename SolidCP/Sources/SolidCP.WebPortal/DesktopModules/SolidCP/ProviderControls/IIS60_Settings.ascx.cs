@@ -41,12 +41,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Text;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class IIS60_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class IIS60_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
 		private string FilteredAppIds;
 

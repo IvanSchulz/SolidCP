@@ -40,9 +40,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class Quota {
-        protected SolidCP.Portal.QuotaViewer quotaViewer;
+        protected FuseCP.Portal.QuotaViewer quotaViewer;
     }
 }

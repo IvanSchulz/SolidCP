@@ -43,23 +43,23 @@ using Mono.Posix;
 using Mono.Unix;
 using CryptSharp;
 
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.FTP;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.FTP;
+using FuseCP.Server.Utils;
 using Mono.Unix.Native;
-using SolidCP.Providers.Database;
+using FuseCP.Providers.Database;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
 	public class VsFtp3 : HostingServiceProviderBase, IFtpServer
 	{
 		readonly string NewLine = Environment.NewLine;
 		const string PasswordFile = "/etc/vsftpd/ftpd.passwd";
 		const string UsersConfigFolder = "/etc/vsftpd/users";
-		const string VsftpdUser = "solidcp-vsftpd";
-		const string SolidCPUser = "solidcp";
-		const string VsftpdGroup = "solidcp";
+		const string VsftpdUser = "fusecp-vsftpd";
+		const string FuseCPUser = "fusecp";
+		const string VsftpdGroup = "fusecp";
 		const string LocalRoot = "/var/www";
 		const string LocalUmask = "022";
 		const string VsftpServiceId = "vsftpd";
@@ -189,7 +189,7 @@ namespace SolidCP.Providers.FTP
 			if (!Directory.Exists(account.Folder) && !string.IsNullOrEmpty(account.Folder))
 			{
 				Directory.CreateDirectory(account.Folder);
-				Unix.ChangeUnixFileOwner(account.Folder, SolidCPUser, VsftpdGroup);
+				Unix.ChangeUnixFileOwner(account.Folder, FuseCPUser, VsftpdGroup);
 			}
 
 			// Create user's config file
@@ -268,7 +268,7 @@ namespace SolidCP.Providers.FTP
 		}
 		public override string[] Install()
 		{
-			if (!Regex.IsMatch(Config.Text, @"^# This file has been modified by SolidCP\.", RegexOptions.Multiline))
+			if (!Regex.IsMatch(Config.Text, @"^# This file has been modified by FuseCP\.", RegexOptions.Multiline))
 			{
 				// Create wsp-vsftpd user
 				AddUnixUser(VsftpdUser, VsftpdGroup);
@@ -283,7 +283,7 @@ namespace SolidCP.Providers.FTP
 				File.WriteAllText($"/etc/pam.d/{VsftpdUser}", @$"auth required pam_pwdfile.so pwdfile {PasswordFile}{NewLine}account required pam_permit.so");
 
 				// Configure vsftpd
-				Config.Text = $"# This file has been modified by SolidCP.{NewLine}{Config.Text}{NewLine}# SolidCP settings";
+				Config.Text = $"# This file has been modified by FuseCP.{NewLine}{Config.Text}{NewLine}# FuseCP settings";
 				Config.AnonymousEnable = false;
 				Config.LocalEnable = true;
 				Config.WriteEnable = true;

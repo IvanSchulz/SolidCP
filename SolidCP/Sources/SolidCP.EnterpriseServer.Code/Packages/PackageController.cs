@@ -41,19 +41,19 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Net.Mail;
 
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.FTP;
-using SolidCP.Providers.Mail;
-using SolidCP.Providers.OS;
-using OS = SolidCP.Server.Client;
-using Reports = SolidCP.EnterpriseServer.Base.Reports;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.FTP;
+using FuseCP.Providers.Mail;
+using FuseCP.Providers.OS;
+using OS = FuseCP.Server.Client;
+using Reports = FuseCP.EnterpriseServer.Base.Reports;
 using System.Diagnostics;
-using SolidCP.Templates;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Templates;
+using FuseCP.EnterpriseServer.Data;
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for Packages.
@@ -2210,7 +2210,7 @@ namespace SolidCP.EnterpriseServer
             items["PreviewDomain"] = previewDomain;
 
             // web sites
-            List<SolidCP.Providers.Web.WebSite> webSites =
+            List<FuseCP.Providers.Web.WebSite> webSites =
                 WebServerController.GetWebSites(packageId, false);
             items["WebSites"] = webSites;
 

@@ -48,10 +48,10 @@ using System.Security.AccessControl;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Exchange.Data.Directory.Recipient;
 using Microsoft.Win32;
 
@@ -59,7 +59,7 @@ using Microsoft.Exchange.Data;
 using Microsoft.Exchange.Data.Directory;
 using Microsoft.Exchange.Data.Storage;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class Exchange2010SP2 : Exchange2010
 	{
@@ -810,7 +810,7 @@ namespace SolidCP.Providers.HostedSolution
 
 		public override bool IsInstalled()
 		{
-			if (!SolidCP.Providers.OS.OSInfo.IsWindows) return false;
+			if (!FuseCP.Providers.OS.OSInfo.IsWindows) return false;
 
 
 			int value = 0;

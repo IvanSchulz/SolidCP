@@ -42,11 +42,11 @@ using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class InsecureHttpWarningPage : BannerWizardPage
 	{

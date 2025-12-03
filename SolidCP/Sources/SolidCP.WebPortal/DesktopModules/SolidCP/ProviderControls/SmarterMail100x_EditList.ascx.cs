@@ -32,12 +32,12 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Mail;
-using SolidCP.WebPortal.Code.Controls;
+using FuseCP.Providers.Mail;
+using FuseCP.WebPortal.Code.Controls;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class SmarterMail100x_EditList : SolidCPControlBase, IMailEditListControl
+    public partial class SmarterMail100x_EditList : FuseCPControlBase, IMailEditListControl
     {
         private string selectedModerator = null;
         private string selectedListToAddress = null;

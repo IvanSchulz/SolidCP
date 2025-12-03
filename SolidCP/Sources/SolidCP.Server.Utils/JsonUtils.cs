@@ -33,7 +33,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 
-namespace SolidCP.Providers.Utils
+namespace FuseCP.Providers.Utils
 {
     public class JsonUtils
     {

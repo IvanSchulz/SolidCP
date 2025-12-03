@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeFolderAuth.ascx.cs" Inherits="SolidCP.Portal.WebSitesEditHeliconApeFolderAuth" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeFolderAuth.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditHeliconApeFolderAuth" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <div class="panel-body form-horizontal">

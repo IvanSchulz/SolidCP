@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -32,9 +32,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.SfB
+namespace FuseCP.Portal.SfB
 {
-    public partial class SfBAllocatePhoneNumbers : SolidCPModuleBase
+    public partial class SfBAllocatePhoneNumbers : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

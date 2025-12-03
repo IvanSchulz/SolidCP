@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackageIPAddresses.ascx.cs" Inherits="SolidCP.Portal.UserControls.PackageIPAddresses" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackageIPAddresses.ascx.cs" Inherits="FuseCP.Portal.UserControls.PackageIPAddresses" %>
 <%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
 
@@ -94,7 +94,7 @@
 	    SelectCountMethod="GetPackageIPAddressesCount"
 	    SelectMethod="GetPackageIPAddresses"
 	    SortParameterName="sortColumn"
-	    TypeName="SolidCP.Portal.VirtualMachinesHelper"
+	    TypeName="FuseCP.Portal.VirtualMachinesHelper"
 	    OnSelected="odsExternalAddressesPaged_Selected" 
     onselecting="odsExternalAddressesPaged_Selecting">
     <SelectParameters>

@@ -5,10 +5,10 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.guacamole</groupId>
-  <artifactId>guacamole-auth-solidcp</artifactId>
+  <artifactId>guacamole-auth-fusecp</artifactId>
   <packaging>jar</packaging>
   <version>1.4.1</version>
-  <name>guacamole-auth-solidcp</name>
+  <name>guacamole-auth-fusecp</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 using System;
 using System.Reflection;
@@ -16,7 +16,7 @@ namespace TypeScriptClientGenerator
             var assembly = Assembly.GetExecutingAssembly();
             var version = assembly.GetCustomAttribute<AssemblyVersionAttribute>()?.Version;
 
-            Console.WriteLine($"SolidCP TypeScriptClientGenerator, v{version}\n" +
+            Console.WriteLine($"FuseCP TypeScriptClientGenerator, v{version}\n" +
                 $"Usage: TypeScriptClientGenerator <URL to swagger.json> <output path>\n");
 
             var interactive = false;
@@ -61,7 +61,7 @@ namespace TypeScriptClientGenerator
                 settings.TypeScriptGeneratorSettings.TypeStyle = TypeScriptTypeStyle.Interface;
                 settings.TypeScriptGeneratorSettings.TypeScriptVersion = 3.5M;
                 settings.TypeScriptGeneratorSettings.DateTimeType = TypeScriptDateTimeType.String;
-                settings.OperationNameGenerator = new SolidCPOperationNameGenerator();
+                settings.OperationNameGenerator = new FuseCPOperationNameGenerator();
 
                 var generator = new NSwag.CodeGeneration.TypeScript.TypeScriptClientGenerator(document, settings);
                 var code = generator.GenerateFile();

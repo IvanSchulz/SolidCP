@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountChangePassword.ascx.cs"
-    Inherits="SolidCP.Portal.UserAccountChangePassword" %>
+    Inherits="FuseCP.Portal.UserAccountChangePassword" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
 <asp:Panel ID="PasswordPanel" runat="server" DefaultButton="cmdChangePassword">
     <div class="panel-body form-horizontal">

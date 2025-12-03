@@ -1,4 +1,4 @@
-// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -49,12 +49,12 @@ using System.Security.AccessControl;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
 using Microsoft.Exchange.Data.Directory.Recipient;
 using Microsoft.Win32;
@@ -65,7 +65,7 @@ using Microsoft.Exchange.Data.Storage;
 
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class Exchange2019 : HostingServiceProviderBase, IExchangeServer
     {
@@ -79,7 +79,7 @@ namespace SolidCP.Providers.HostedSolution
         }
 
         #region Constants
-        private const string CONFIG_CLEAR_QUERYBASEDN = "SolidCP.Exchange.ClearQueryBaseDN";
+        private const string CONFIG_CLEAR_QUERYBASEDN = "FuseCP.Exchange.ClearQueryBaseDN";
         #endregion
 
         #region Properties

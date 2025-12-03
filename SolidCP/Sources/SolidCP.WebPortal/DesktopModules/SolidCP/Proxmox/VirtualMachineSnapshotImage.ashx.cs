@@ -35,9 +35,9 @@ using System;
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Services;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
 	/// <summary>
 	/// Summary description for $codebehindclassname$
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.Proxmox
 			string snapshotId = req["SnapshotID"];
 
 			var image = ES.Services.Proxmox.GetSnapshotThumbnail(itemId, snapshotId,
-				 SolidCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
+				 FuseCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
 
 			context.Response.Clear();
 			context.Response.ContentType = image?.MimeType ?? "image/png";

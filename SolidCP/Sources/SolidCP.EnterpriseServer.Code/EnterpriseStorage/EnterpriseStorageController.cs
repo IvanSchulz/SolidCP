@@ -41,25 +41,25 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Linq;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.Server;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using OS = SolidCP.Server.Client;
-using SolidCP.Providers.EnterpriseStorage;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.Server;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using OS = FuseCP.Server.Client;
+using FuseCP.Providers.EnterpriseStorage;
 using System.Collections;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
 using System.Text.RegularExpressions;
 using System.Threading;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class EnterpriseStorageController : ControllerBase
     {

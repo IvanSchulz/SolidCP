@@ -1,6 +1,6 @@
-﻿#if !NETFRAMEWORK
+#if !NETFRAMEWORK
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
 	public static class Program
 	{
@@ -9,8 +9,8 @@ namespace SolidCP.Server
 		{
 			//if (!Debugger.IsAttached) Debugger.Launch();
 			PasswordValidator.Init();
-			SolidCP.Web.Services.StartupCore.Init(args);
-			SolidCP.Server.Utils.Log.LogLevel = SolidCP.Web.Services.Configuration.TraceLevel;
+			FuseCP.Web.Services.StartupCore.Init(args);
+			FuseCP.Server.Utils.Log.LogLevel = FuseCP.Web.Services.Configuration.TraceLevel;
 		}
 	}
 }

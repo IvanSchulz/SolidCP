@@ -1,4 +1,4 @@
-﻿#if ScaffoldedEntities
+#if ScaffoldedEntities
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities;
+namespace FuseCP.EnterpriseServer.Data.Entities;
 
 #if NetCore
 [Index("AccountId", Name = "BlackBerryUsersIdx_AccountId")]

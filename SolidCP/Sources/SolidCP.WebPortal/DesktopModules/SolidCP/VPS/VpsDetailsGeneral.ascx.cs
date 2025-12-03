@@ -31,14 +31,14 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ﻿using System;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VpsDetailsGeneral : SolidCPModuleBase
+    public partial class VpsDetailsGeneral : FuseCPModuleBase
     {
         private class ActionButton
         {
@@ -97,7 +97,7 @@ namespace SolidCP.Portal.VPS
                     txtDomain.Text = item.Domain;
                 }
 
-                litRdpPageUrl.Text = Page.ResolveUrl("~/DesktopModules/SolidCP/VPS/RemoteDesktop/Connect.aspx?ItemID=" + PanelRequest.ItemID + "&Resolution=");
+                litRdpPageUrl.Text = Page.ResolveUrl("~/DesktopModules/FuseCP/VPS/RemoteDesktop/Connect.aspx?ItemID=" + PanelRequest.ItemID + "&Resolution=");
 
                 TimeSpan uptime = TimeSpan.FromMilliseconds(vm.Uptime);
                 uptime = uptime.Subtract(TimeSpan.FromMilliseconds(uptime.Milliseconds));
@@ -145,7 +145,7 @@ namespace SolidCP.Portal.VPS
 
                 // update image
                 imgThumbnail.ImageUrl =
-                    String.Format("~/DesktopModules/SolidCP/VPS/VirtualMachineImage.ashx?ItemID={0}&rnd={1}",
+                    String.Format("~/DesktopModules/FuseCP/VPS/VirtualMachineImage.ashx?ItemID={0}&rnd={1}",
                     PanelRequest.ItemID, DateTime.Now.Ticks);
 
                 // load virtual machine meta item

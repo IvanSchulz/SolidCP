@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Caching;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Interfaces.Storages;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Interfaces.Storages;
 
-namespace SolidCP.WebDav.Core.Storages
+namespace FuseCP.WebDav.Core.Storages
 {
     public class CacheTtlStorage : ITtlStorage
     {

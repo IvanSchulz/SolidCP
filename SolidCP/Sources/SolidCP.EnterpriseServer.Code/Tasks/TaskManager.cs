@@ -39,15 +39,15 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Reflection;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer.Data.Extensions;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer.Data.Extensions;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class TaskManager : ControllerBase
     {

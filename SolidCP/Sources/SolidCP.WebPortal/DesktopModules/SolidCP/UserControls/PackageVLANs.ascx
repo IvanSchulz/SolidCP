@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackageVLANs.ascx.cs" Inherits="SolidCP.Portal.UserControls.PackageVLANs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackageVLANs.ascx.cs" Inherits="FuseCP.Portal.UserControls.PackageVLANs" %>
 <%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 
 
@@ -71,7 +71,7 @@
 	    SelectCountMethod="GetPackageVLANsCount"
 	    SelectMethod="GetPackageVLANs"
 	    SortParameterName="sortColumn"
-	    TypeName="SolidCP.Portal.VirtualMachines2012Helper"
+	    TypeName="FuseCP.Portal.VirtualMachines2012Helper"
 	    OnSelected="odsVLANsPaged_Selected">
     <SelectParameters>
 	    <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="0" />

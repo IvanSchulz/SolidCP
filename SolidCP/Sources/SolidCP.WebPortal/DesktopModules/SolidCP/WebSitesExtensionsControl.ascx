@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesExtensionsControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesExtensionsControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesExtensionsControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesExtensionsControl" %>
 <div style="padding: 20;">
 <table cellpadding="4">
     <tr id="rowAsp" runat="server">

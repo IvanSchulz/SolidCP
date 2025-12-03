@@ -40,9 +40,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.FTP;
+using FuseCP.Providers.FTP;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for IFtpEditAccountControl

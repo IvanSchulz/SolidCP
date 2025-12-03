@@ -38,9 +38,9 @@ using System.Linq;
 using System.Web.UI.WebControls;
 
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public abstract class DomainListControlBase : SolidCPControlBase
+    public abstract class DomainListControlBase : FuseCPControlBase
     {
         # region Properties
 

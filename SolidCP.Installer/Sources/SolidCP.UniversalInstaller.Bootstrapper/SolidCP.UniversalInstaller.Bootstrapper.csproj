@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -8,17 +8,17 @@
         <LangVersion>13</LangVersion>
         <DefineConstants>$(DefineConstants);wpkg</DefineConstants>
         <!--<AssemblyName>AnyCPUAppHostConsole</AssemblyName>-->
-        <AssemblyName>SolidCP.Installer</AssemblyName>
+        <AssemblyName>FuseCP.Installer</AssemblyName>
         <DebugType>embedded</DebugType>
-        <ApplicationIcon>..\SolidCP.UniversalInstaller\Resources\SolidCP.ico</ApplicationIcon>
-        <ApplicationManifest>SolidCP.Installer.manifest</ApplicationManifest>
-        <!--<OutputPath>..\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\</OutputPath>-->
+        <ApplicationIcon>..\FuseCP.UniversalInstaller\Resources\FuseCP.ico</ApplicationIcon>
+        <ApplicationManifest>FuseCP.Installer.manifest</ApplicationManifest>
+        <!--<OutputPath>..\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\</OutputPath>-->
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.UniversalInstaller\SolidCP.UniversalInstaller.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller\FuseCP.UniversalInstaller.csproj">
             <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
             <Private>false</Private>
             <CopyLocal>false</CopyLocal>

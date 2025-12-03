@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailAccountActions.ascx.cs" Inherits="SolidCP.Portal.MailAccountActions" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailAccountActions.ascx.cs" Inherits="FuseCP.Portal.MailAccountActions" %>
 
 <script type="text/javascript">
     function ShowProgress(btn) {

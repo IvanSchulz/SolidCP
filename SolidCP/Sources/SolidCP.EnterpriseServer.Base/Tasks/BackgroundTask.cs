@@ -38,7 +38,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 
     public class BackgroundTask

@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiskspaceReport.ascx.cs" Inherits="SolidCP.Portal.DiskspaceReport" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiskspaceReport.ascx.cs" Inherits="FuseCP.Portal.DiskspaceReport" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 <div class="FormButtonsBar right">
@@ -64,7 +64,7 @@
     </Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsReport" runat="server" EnablePaging="True" SelectCountMethod="GetPackagesDiskspacePagedCount"
-    SelectMethod="GetPackagesDiskspacePaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.ReportsHelper" OnSelected="odsReport_Selected">
+    SelectMethod="GetPackagesDiskspacePaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.ReportsHelper" OnSelected="odsReport_Selected">
     <SelectParameters>
         <asp:QueryStringParameter DefaultValue="-1" Name="packageId" QueryStringField="SpaceID" />
     </SelectParameters>

@@ -32,11 +32,11 @@
 
 
 using System;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.Proxmox.UserControls
+namespace FuseCP.Portal.Proxmox.UserControls
 {
-    public partial class Generation : SolidCPControlBase, IVirtualMachineSettingsControl
+    public partial class Generation : FuseCPControlBase, IVirtualMachineSettingsControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

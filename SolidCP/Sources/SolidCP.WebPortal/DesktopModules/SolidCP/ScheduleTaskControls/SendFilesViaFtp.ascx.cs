@@ -40,10 +40,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.UserControls.ScheduleTaskView;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.UserControls.ScheduleTaskView;
 
-namespace SolidCP.Portal.ScheduleTaskControls
+namespace FuseCP.Portal.ScheduleTaskControls
 {
 	public partial class SendFilesViaFtp : EmptyView
 	{

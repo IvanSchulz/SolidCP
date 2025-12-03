@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePointStorageUsage.ascx.cs" Inherits="SolidCP.Portal.HostedSharePointStorageUsage" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePointStorageUsage.ascx.cs" Inherits="FuseCP.Portal.HostedSharePointStorageUsage" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel"

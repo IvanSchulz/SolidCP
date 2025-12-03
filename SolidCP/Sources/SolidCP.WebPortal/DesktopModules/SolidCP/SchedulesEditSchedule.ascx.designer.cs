@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SchedulesEditSchedule {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// lblTaskName control.
@@ -145,7 +145,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleTime timeStartTime;
+        protected global::FuseCP.Portal.ScheduleTime timeStartTime;
         
         /// <summary>
         /// tblInterval control.
@@ -172,7 +172,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleInterval intInterval;
+        protected global::FuseCP.Portal.ScheduleInterval intInterval;
         
         /// <summary>
         /// lblFrom control.
@@ -190,7 +190,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleTime timeFromTime;
+        protected global::FuseCP.Portal.ScheduleTime timeFromTime;
         
         /// <summary>
         /// lblTo control.
@@ -208,7 +208,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleTime timeToTime;
+        protected global::FuseCP.Portal.ScheduleTime timeToTime;
         
         /// <summary>
         /// tblOneTime control.
@@ -370,7 +370,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleInterval intMaxExecutionTime;
+        protected global::FuseCP.Portal.ScheduleInterval intMaxExecutionTime;
         
         /// <summary>
         /// btnDelete control.

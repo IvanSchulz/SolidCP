@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Providers.Database.SqlServer", "SolidCP.Providers.Database.SqlServer.csproj", "{3744791D-C7B5-4818-8521-78EB5261CB34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.Providers.Database.SqlServer", "FuseCP.Providers.Database.SqlServer.csproj", "{3744791D-C7B5-4818-8521-78EB5261CB34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

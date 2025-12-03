@@ -47,23 +47,23 @@ using System.Xml;
 using System.Xml.Serialization;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
-using SolidCP.EnterpriseServer.Base;
-using SolidCP.EnterpriseServer.Code.HostedSolution;
-using SolidCP.EnterpriseServer.Code.SharePoint;
-using SolidCP.EnterpriseServer.Extensions;
-using SolidCP.Server.Client;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.DNS;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Base;
+using FuseCP.EnterpriseServer.Code.HostedSolution;
+using FuseCP.EnterpriseServer.Code.SharePoint;
+using FuseCP.EnterpriseServer.Extensions;
+using FuseCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.DNS;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class OrganizationController: ControllerBase
     {
@@ -279,7 +279,7 @@ namespace SolidCP.EnterpriseServer
             if (domain == null)
             {
                 domain = CreateNewDomain(packageId, domainName);
-                // add SolidCP domain
+                // add FuseCP domain
                 domainId = ServerController.AddDomain(domain);
 
                 if (domainId < 0)
@@ -4782,13 +4782,13 @@ namespace SolidCP.EnterpriseServer
 
         #region OS
 
-        private SolidCP.Server.Client.OperatingSystem GetOS(int packageId)
+        private FuseCP.Server.Client.OperatingSystem GetOS(int packageId)
         {
             int sid = PackageController.GetPackageServiceId(packageId, ResourceGroups.Os);
             if (sid <= 0)
                 return null;
 
-            var os = new SolidCP.Server.Client.OperatingSystem();
+            var os = new FuseCP.Server.Client.OperatingSystem();
             ServiceProviderProxy.Init(os, sid);
 
             return os;

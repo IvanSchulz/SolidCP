@@ -36,7 +36,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	public class SetupNetworkAdapterModule : IProvisioningModule
 	{

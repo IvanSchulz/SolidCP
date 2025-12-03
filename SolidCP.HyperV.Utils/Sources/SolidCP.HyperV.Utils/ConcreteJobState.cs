@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.HyperV.Utils
+namespace FuseCP.HyperV.Utils
 {
     public enum ConcreteJobState
     {

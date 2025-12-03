@@ -35,10 +35,10 @@ using System.Data;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	public class ExchangeHelper
 	{

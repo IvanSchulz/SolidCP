@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class OrganizationUserSetupInstructions : SolidCPModuleBase
+    public partial class OrganizationUserSetupInstructions : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

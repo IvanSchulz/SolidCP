@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperV2012R2_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.HyperV2012R2_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperV2012R2_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.HyperV2012R2_Settings" %>
 <%@ Register Src="../UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
 
@@ -410,7 +410,7 @@
 	                                </td>
 	                                <td>
                                         <asp:DropDownList ID="ddlTemplateTimeZone" runat="server" CssClass="form-control" Width="450"
-	                                                DataValueField="Key" DataTextField="Value" DataSource='<%# SolidCP.EnterpriseServer.Base.Virtualization.VirtualMachineTimeZoneList.GetList() %>'
+	                                                DataValueField="Key" DataTextField="Value" DataSource='<%# FuseCP.EnterpriseServer.Base.Virtualization.VirtualMachineTimeZoneList.GetList() %>'
                                             SelectedValue='<%#  SetSelectedValueIfTimeZoneExis(Eval("timeZoneId")) %>'>
                                         </asp:DropDownList>
 	                                </td>

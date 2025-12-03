@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsAddDomain.ascx.cs" Inherits="SolidCP.Portal.DomainsAddDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsAddDomain.ascx.cs" Inherits="FuseCP.Portal.DomainsAddDomain" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="UserControls/DomainControl.ascx" TagName="DomainControl" TagPrefix="scp" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagPrefix="scp" TagName="CollapsiblePanel" %>
@@ -17,7 +17,7 @@
     <asp:Panel ID="OptionsPanel" runat="server">
         
         <br />
-        <asp:Panel id="CreateSolidCP" runat="server" style="padding-bottom: 15px;">
+        <asp:Panel id="CreateFuseCP" runat="server" style="padding-bottom: 15px;">
             <asp:CheckBox ID="CreateWebSite" runat="server" meta:resourcekey="CreateWebSite" Text="Create Web Site" CssClass="input-group" Checked="true" /><br />
             <div style="padding-left: 20px;">
                 <asp:Localize ID="DescribeCreateWebSite" runat="server" meta:resourcekey="DescribeCreateWebSite">Description...</asp:Localize>
@@ -28,7 +28,7 @@
             </div>
         </asp:Panel>
 
-        <asp:Panel id="PointSolidCP" runat="server" style="padding-bottom: 15px;">
+        <asp:Panel id="PointFuseCP" runat="server" style="padding-bottom: 15px;">
             <asp:CheckBox ID="PointWebSite" runat="server" meta:resourcekey="PointWebSite" Text="Assign to Web Site" CssClass="input-group"
                 AutoPostBack="true" /><br />
             <div style="padding-left: 20px;">

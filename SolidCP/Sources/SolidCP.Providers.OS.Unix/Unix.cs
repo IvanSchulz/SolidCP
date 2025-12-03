@@ -1,8 +1,8 @@
-﻿using Mono.Unix;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using Mono.Unix;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.OS;
+namespace FuseCP.Providers.OS;
 
 
 public class Unix : HostingServiceProviderBase, IUnixOperatingSystem

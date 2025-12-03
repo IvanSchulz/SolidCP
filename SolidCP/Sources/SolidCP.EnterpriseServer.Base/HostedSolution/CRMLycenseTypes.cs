@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CRMUserLycenseTypes
     {

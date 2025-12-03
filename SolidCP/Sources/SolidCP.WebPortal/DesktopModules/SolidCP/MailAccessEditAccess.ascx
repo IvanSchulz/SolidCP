@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailAccessEditAccess.ascx.cs" Inherits="SolidCP.Portal.MailAccessEditAccess" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailAccessEditAccess.ascx.cs" Inherits="FuseCP.Portal.MailAccessEditAccess" %>
 
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
 	TagPrefix="scp" %>

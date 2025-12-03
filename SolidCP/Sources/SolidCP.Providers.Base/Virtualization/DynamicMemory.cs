@@ -33,7 +33,7 @@
 ﻿using System;
 
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     [Persistent]
     public class DynamicMemory

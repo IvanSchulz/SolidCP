@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
         <OutputPath>..\..\Build\$(Configuration)</OutputPath>
@@ -17,7 +17,7 @@
     <Target Name="CopyResources" BeforeTargets="ResolveReferences">
         <Message Text="Copying Installer Resources" Importance="high" />
         <ItemGroup>
-            <FilesToCopy Include="..\..\..\SolidCP\Sources\SolidCP.Server\bin\LetsEncrypt\wacs.exe" />
+            <FilesToCopy Include="..\..\..\FuseCP\Sources\FuseCP.Server\bin\LetsEncrypt\wacs.exe" />
         </ItemGroup>
         <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="Resources" SkipUnchangedFiles="true" />
         <!--<Copy SourceFiles="@(FilesToCopyX64)" DestinationFolder="Resources\x64" SkipUnchangedFiles="true" />
@@ -95,25 +95,25 @@
         <Reference Include="System.Web.Services" />
         <Reference Include="System.Windows.Forms" />
         <!--
-    <Reference Include="SolidCP.EnterpriseServer.Base, Version=1.1.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081, processorArchitecture=MSIL">
+    <Reference Include="FuseCP.EnterpriseServer.Base, Version=1.1.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SolidCP\Bin\SolidCP.EnterpriseServer.Base.dll</HintPath>
+      <HintPath>..\..\..\FuseCP\Bin\FuseCP.EnterpriseServer.Base.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SolidCP.EnterpriseServer.Client, Version=1.1.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081, processorArchitecture=MSIL">
+    <Reference Include="FuseCP.EnterpriseServer.Client, Version=1.1.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\SolidCP\Bin\SolidCP.EnterpriseServer.Client.dll</HintPath>
+      <HintPath>..\..\..\FuseCP\Bin\FuseCP.EnterpriseServer.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="SolidCP.Providers.Base">
-      <HintPath>..\..\..\SolidCP\Bin\SolidCP.Providers.Base.dll</HintPath>
+    <Reference Include="FuseCP.Providers.Base">
+      <HintPath>..\..\..\FuseCP\Bin\FuseCP.Providers.Base.dll</HintPath>
       <Private>False</Private>
     </Reference>
     -->
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Include="Resources\wacs.exe" />
-        <!--<EmbeddedResource Include="Resources\SolidCP.Installer.Core.pdb" />-->
+        <!--<EmbeddedResource Include="Resources\FuseCP.Installer.Core.pdb" />-->
         <EmbeddedResource Include="Resources\logo.png" />
         <EmbeddedResource Include="EULA.Unix.rtf" />
         <None Include="Actions\EntServerUnixActionManager.cs" />
@@ -323,30 +323,30 @@
         </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Unix\SolidCP.Providers.OS.Unix.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2003\SolidCP.Providers.OS.Windows2003.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2008\SolidCP.Providers.OS.Windows2008.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2012\SolidCP.Providers.OS.Windows2012.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2016\SolidCP.Providers.OS.Windows2016.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2019\SolidCP.Providers.OS.Windows2019.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2022\SolidCP.Providers.OS.Windows2022.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2025\SolidCP.Providers.OS.Windows2025.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs100\SolidCP.Providers.Web.IIs100.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs60\SolidCP.Providers.Web.IIs60.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIs70.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs80\SolidCP.Providers.Web.IIs80.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.LetsEncrypt\SolidCP.Providers.Web.LetsEncrypt.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Unix\FuseCP.Providers.OS.Unix.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2003\FuseCP.Providers.OS.Windows2003.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2008\FuseCP.Providers.OS.Windows2008.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2012\FuseCP.Providers.OS.Windows2012.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2016\FuseCP.Providers.OS.Windows2016.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2019\FuseCP.Providers.OS.Windows2019.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2022\FuseCP.Providers.OS.Windows2022.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2025\FuseCP.Providers.OS.Windows2025.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs100\FuseCP.Providers.Web.IIs100.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs60\FuseCP.Providers.Web.IIs60.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIs70.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs80\FuseCP.Providers.Web.IIs80.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.LetsEncrypt\FuseCP.Providers.Web.LetsEncrypt.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
         <!--
-		<ProjectReference Include="..\SolidCP.Installer.Core\SolidCP.Installer.Core.csproj">
+		<ProjectReference Include="..\FuseCP.Installer.Core\FuseCP.Installer.Core.csproj">
 			<Project>{0E4A3F5B-0BB1-4F63-863D-7B0182B378CF}</Project>
-			<Name>SolidCP.Installer.Core</Name>
+			<Name>FuseCP.Installer.Core</Name>
 			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
 			<OutputItemType>EmbeddedResource</OutputItemType>
 		</ProjectReference>-->

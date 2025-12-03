@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,12 +32,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP WHMCS Server Module Shared Funcitons
+ * FuseCP WHMCS Server Module Shared Funcitons
  *
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  */
@@ -49,7 +49,7 @@
  * @param string $startDate Customer registration date (starting date)
  * @return string
  */
-function SolidCP_CreateBandwidthDate($startDate)
+function FuseCP_CreateBandwidthDate($startDate)
 {
 	$dateExploded = explode('-', $startDate);
 	$currentYear = date('Y');
@@ -69,15 +69,15 @@ function SolidCP_CreateBandwidthDate($startDate)
 }
 
 /**
- * Calculates the total usage of the provided SolidCP usage tables
- * Each SolidCP provider / service calculates its own disk and bandwidth usage, total all provided tables and return
+ * Calculates the total usage of the provided FuseCP usage tables
+ * Each FuseCP provider / service calculates its own disk and bandwidth usage, total all provided tables and return
  * 
  * @access public
  * @param array $usageTables Usage tables (each service provides its own usage breakdown)
- * @param int $usageType SolidCP usage type (SolidCP_EnterpriseServer::USAGE_*)
+ * @param int $usageType FuseCP usage type (FuseCP_EnterpriseServer::USAGE_*)
  * @return int
  */
-function SolidCP_CalculateUsage($usageTables, $usageType)
+function FuseCP_CalculateUsage($usageTables, $usageType)
 {
 	$totalUsage = 0;
 
@@ -92,11 +92,11 @@ function SolidCP_CalculateUsage($usageTables, $usageType)
 	{
 		switch ($usageType)
 		{
-		    case SolidCP_EnterpriseServer::USAGE_BANDWIDTH:
+		    case FuseCP_EnterpriseServer::USAGE_BANDWIDTH:
 				$totalUsage += $table['BytesTotal'];
 		    break;
 		    
-		    case SolidCP_EnterpriseServer::USAGE_DISKSPACE:
+		    case FuseCP_EnterpriseServer::USAGE_DISKSPACE:
 				$totalUsage += $table['DiskspaceBytes'];
 		    break;
 		}
@@ -108,11 +108,11 @@ function SolidCP_CalculateUsage($usageTables, $usageType)
 }
 
 /**
- * Loads the SolidCP language file
+ * Loads the FuseCP language file
  * 
  * @access public
  */
-function SolidCP_LoadClientLanguage()
+function FuseCP_LoadClientLanguage()
 {
     global $CONFIG, $_LANG, $smarty;
     
@@ -122,12 +122,12 @@ function SolidCP_LoadClientLanguage()
     // For the admin area
     if (defined('ADMINAREA'))
     {
-        $admin = solidcp_database::getAdminLanguage((int)$_SESSION['adminid']);
+        $admin = fusecp_database::getAdminLanguage((int)$_SESSION['adminid']);
         $selectedLanguage = !empty($admin->language) ? $admin->language : 'english';
     }
     
     // Load the language file
-    $languageFile = ROOTDIR . "/modules/servers/SolidCP/lang/{$selectedLanguage}.php";
+    $languageFile = ROOTDIR . "/modules/servers/FuseCP/lang/{$selectedLanguage}.php";
     if (file_exists($languageFile))
     {
         require_once($languageFile);
@@ -135,7 +135,7 @@ function SolidCP_LoadClientLanguage()
     else
     {
         // Load the default (English) language file
-        require_once( ROOTDIR . '/modules/servers/SolidCP/lang/english.php');
+        require_once( ROOTDIR . '/modules/servers/FuseCP/lang/english.php');
     }
     
     // Process the module language entries

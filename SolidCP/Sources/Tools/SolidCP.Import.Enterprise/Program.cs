@@ -31,7 +31,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	static class Program
 	{
@@ -102,7 +102,7 @@ namespace SolidCP.Import.Enterprise
 		{
 			Log.WriteError("Fatal error occured.", exception);
 			string message = "A fatal error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@SolidCP.net.\n\n" +
+				"Please contact Technical Support at support@FuseCP.net.\n\n" +
 				"Make sure you include a copy of the log file from the \n" +
 				"application home directory.";
 			MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

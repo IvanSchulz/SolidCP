@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SfB {
+namespace FuseCP.Portal.SfB {
     
     
     public partial class SfBPhoneNumbers {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.PackagePhoneNumbers phoneNumbers;
+        protected global::FuseCP.Portal.UserControls.PackagePhoneNumbers phoneNumbers;
         
         /// <summary>
         /// secQuotas control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel control.
@@ -82,6 +82,6 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota phoneQuota;
+        protected global::FuseCP.Portal.Quota phoneQuota;
     }
 }

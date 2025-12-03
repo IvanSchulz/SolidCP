@@ -35,10 +35,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
-using SolidCP.EnterpriseServer.Base.RDS;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer.Base.RDS;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Providers.RemoteDesktopServices
+namespace FuseCP.Providers.RemoteDesktopServices
 {
     /// <summary>
     /// Summary description for IRemoteDesktopServices.

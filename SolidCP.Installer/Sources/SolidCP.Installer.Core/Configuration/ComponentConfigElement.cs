@@ -36,7 +36,7 @@ using System.Collections;
 using System.Configuration;
 using System.Text;
 
-namespace SolidCP.Installer.Configuration
+namespace FuseCP.Installer.Configuration
 {
 	/// <summary>
 	/// Represents a configuration element containing component info.

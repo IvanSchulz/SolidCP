@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GroupsList.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.GroupsList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GroupsList.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.GroupsList" %>
 <%@ Register Src="../../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
 
 <asp:UpdatePanel ID="GroupsUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">

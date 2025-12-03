@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.RDS {
+namespace FuseCP.Portal.RDS {
     
     
     public partial class RDSEditCollection {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// imgAddRDSServer control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.RDS.UserControls.RdsServerTabs tabs;
+        protected global::FuseCP.Portal.RDS.UserControls.RdsServerTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// secRdsServers control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secRdsServers;
+        protected global::FuseCP.Portal.CollapsiblePanel secRdsServers;
         
         /// <summary>
         /// panelRdsServers control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.RDS.UserControls.RDSCollectionServers servers;
+        protected global::FuseCP.Portal.RDS.UserControls.RDSCollectionServers servers;
         
         /// <summary>
         /// buttonPanel control.
@@ -100,6 +100,6 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
     }
 }

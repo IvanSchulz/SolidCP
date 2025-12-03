@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNestedSpaces.ascx.cs" Inherits="SolidCP.Portal.SpaceNestedSpaces" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNestedSpaces.ascx.cs" Inherits="FuseCP.Portal.SpaceNestedSpaces" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
@@ -79,7 +79,7 @@
 <asp:ObjectDataSource ID="odsNestedPackages" runat="server" EnablePaging="True"
     SelectCountMethod="GetNestedPackagesPagedCount"
     SelectMethod="GetNestedPackagesPaged" SortParameterName="sortColumn"
-    TypeName="SolidCP.Portal.PackagesHelper"
+    TypeName="FuseCP.Portal.PackagesHelper"
     OnSelected="odsNestedPackages_Selected">
     <SelectParameters>
         <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" Type="Int32" />

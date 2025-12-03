@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
 
-namespace SolidCP.WebDav.Core.Extensions
+namespace FuseCP.WebDav.Core.Extensions
 {
     public static class UriExtensions
     {

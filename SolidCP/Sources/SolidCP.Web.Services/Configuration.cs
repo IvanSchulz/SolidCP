@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 #endif
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Web.Services;
+namespace FuseCP.Web.Services;
 
 public class Configuration
 {
@@ -64,7 +64,7 @@ public class Configuration
 	public static void Log(string msg)
 	{
 		Console.WriteLine(msg);
-		if (Debugger.IsAttached) Debugger.Log(1, "SolidCP", msg);
+		if (Debugger.IsAttached) Debugger.Log(1, "FuseCP", msg);
 		//Trace.TraceInformation(msg);
 	}
 

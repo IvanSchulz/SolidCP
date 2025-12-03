@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -158,7 +158,7 @@ for your installation of ADO.NET Driver for MySQL (also known as MySQL Connector
     <value>MariaDB Installation Folder:</value>
   </data>
   <data name="lblFtuNote.Text" xml:space="preserve">
-    <value>Information for first-time users of SolidCP Control Panel</value>
+    <value>Information for first-time users of FuseCP Control Panel</value>
   </data>
   <data name="lblInternalAddress.Text" xml:space="preserve">
     <value>Internal Address:</value>

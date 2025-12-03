@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Common
+namespace FuseCP.Providers.Common
 {
 
 	public class ConnectionStringBuilder : System.Data.Common.DbConnectionStringBuilder

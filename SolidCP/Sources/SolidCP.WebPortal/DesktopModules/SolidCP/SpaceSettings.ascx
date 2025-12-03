@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettings.ascx.cs" Inherits="SolidCP.Portal.SpaceSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettings.ascx.cs" Inherits="FuseCP.Portal.SpaceSettings" %>
 <div class="widget">
 							<div class="widget-header clearfix">
 								<h3><i class="fa fa-cogs"></i> <span><asp:Localize id="SettingsHeader" runat="server" meta:resourcekey="SettingsHeader" Text="Settings"></asp:Localize></span></h3>

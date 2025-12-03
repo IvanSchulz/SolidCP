@@ -33,14 +33,14 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using SolidCP.Web.Services;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Server.Utils;
+using FuseCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// <summary>
     /// Summary description for Organizations

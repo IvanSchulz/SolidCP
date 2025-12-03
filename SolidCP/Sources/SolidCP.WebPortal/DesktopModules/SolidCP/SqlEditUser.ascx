@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlEditUser.ascx.cs" Inherits="SolidCP.Portal.SqlEditUser" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlEditUser.ascx.cs" Inherits="FuseCP.Portal.SqlEditUser" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc2" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

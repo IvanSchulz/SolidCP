@@ -33,26 +33,26 @@
 ﻿using System;
 using System.Data;
 using System.Xml;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.VirtualizationForPC;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.VirtualizationForPC;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
-using SolidCP.Providers;
+using FuseCP.Providers;
 using System.Text;
 using System.Collections;
 using System.Net.Mail;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class VirtualizationServerControllerForPrivateCloud: ControllerBase
     {
-        private const string SHUTDOWN_REASON = "SolidCP - Initiated by user";
-        private const string SHUTDOWN_REASON_CHANGE_CONFIG = "SolidCP - changing VPS configuration";
+        private const string SHUTDOWN_REASON = "FuseCP - Initiated by user";
+        private const string SHUTDOWN_REASON_CHANGE_CONFIG = "FuseCP - changing VPS configuration";
         private const Int64 Size1G = 0x40000000;
         private const string MS_MAC_PREFIX = "00155D"; // IEEE prefix of MS MAC addresses
 
@@ -1837,7 +1837,7 @@ namespace SolidCP.EnterpriseServer
 
                         // spin until fully stopped
                         VMInfo vm = vps.GetVirtualMachine(machine.Name);
-                        while (vm.State != SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.PowerOff)
+                        while (vm.State != FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.PowerOff)
                         {
                             System.Threading.Thread.Sleep(1000); // sleep 1 second
                             vm = vps.GetVirtualMachine(machine.Name);

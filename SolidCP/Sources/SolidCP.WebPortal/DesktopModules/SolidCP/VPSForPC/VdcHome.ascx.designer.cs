@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPSForPC {
+namespace FuseCP.Portal.VPSForPC {
     
     
     public partial class VdcHome {
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// btnCreate control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SearchBox searchBox;
+        protected global::FuseCP.Portal.SearchBox searchBox;
         
         /// <summary>
         /// menu control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.Menu menu;
         
         /// <summary>
         /// gvServers control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel control.
@@ -118,7 +118,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota vpsQuota;
+        protected global::FuseCP.Portal.Quota vpsQuota;
         
         /// <summary>
         /// locCPUQuota control.
@@ -136,7 +136,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota cpuQuota;
+        protected global::FuseCP.Portal.Quota cpuQuota;
         
         /// <summary>
         /// locRamQuota control.
@@ -154,7 +154,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota ramQuota;
+        protected global::FuseCP.Portal.Quota ramQuota;
         
         /// <summary>
         /// locHddQuota control.
@@ -172,7 +172,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota hddQuota;
+        protected global::FuseCP.Portal.Quota hddQuota;
         
         /// <summary>
         /// FormComments control.

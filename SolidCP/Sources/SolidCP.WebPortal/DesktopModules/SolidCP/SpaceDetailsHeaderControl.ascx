@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceDetailsHeaderControl.ascx.cs" Inherits="SolidCP.Portal.SpaceDetailsHeaderControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceDetailsHeaderControl.ascx.cs" Inherits="FuseCP.Portal.SpaceDetailsHeaderControl" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="scp" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
 <table cellSpacing="0" cellPadding="5" width="100%">

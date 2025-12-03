@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.WebSockets;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
 #if !NETFRAMEWORK
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -18,7 +18,7 @@ using System.Web.Routing;
 using System.Web.WebSockets;
 #endif
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 
     public class TunnelHandlerBase

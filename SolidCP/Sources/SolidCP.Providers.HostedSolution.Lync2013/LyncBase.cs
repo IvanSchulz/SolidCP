@@ -39,7 +39,7 @@ using System.Management.Automation.Runspaces;
 using System.Text;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class LyncBase : HostingServiceProviderBase, ILyncServer
     {

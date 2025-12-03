@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.FTP.IIs100
+namespace FuseCP.Providers.FTP.IIs100
 {
 	internal class FtpSiteGlobals
 	{

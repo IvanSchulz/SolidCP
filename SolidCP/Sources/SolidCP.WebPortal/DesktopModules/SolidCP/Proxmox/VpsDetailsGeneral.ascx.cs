@@ -35,16 +35,16 @@ using System;
 using System.Web;
 using System.Linq;
 using System.Text.RegularExpressions;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 using System.Collections.Generic;
 using System.Web.UI.MobileControls;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-    public partial class VpsDetailsGeneral : SolidCPModuleBase
+    public partial class VpsDetailsGeneral : FuseCPModuleBase
     {
         private class ActionButton
         {
@@ -162,7 +162,7 @@ namespace SolidCP.Portal.Proxmox
 
                 // update image
                 imgThumbnail.ImageUrl =
-                    String.Format("~/DesktopModules/SolidCP/Proxmox/VirtualMachineImage.ashx?ItemID={0}&rnd={1}",
+                    String.Format("~/DesktopModules/FuseCP/Proxmox/VirtualMachineImage.ashx?ItemID={0}&rnd={1}",
                     PanelRequest.ItemID, DateTime.Now.Ticks);
 
                 // load virtual machine meta item

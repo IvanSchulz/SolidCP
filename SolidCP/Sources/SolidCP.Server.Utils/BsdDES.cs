@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Server.Utils
+namespace FuseCP.Server.Utils
 {
     /*
     * FreeSec: libcrypt for NetBSD 

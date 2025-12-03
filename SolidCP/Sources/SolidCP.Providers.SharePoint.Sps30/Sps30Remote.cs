@@ -35,15 +35,15 @@ using System.Reflection;
 using System.Security.Principal;
 using Microsoft.Win32;
 
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Utilities;
 using Microsoft.SharePoint.Administration;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
 	public class Sps30Remote : MarshalByRefObject
 	{

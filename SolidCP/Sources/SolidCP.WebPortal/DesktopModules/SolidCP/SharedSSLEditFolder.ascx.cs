@@ -41,12 +41,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Web;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Web;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SharedSSLEditFolder : SolidCPModuleBase
+    public partial class SharedSSLEditFolder : FuseCPModuleBase
     {
         class Tab
         {

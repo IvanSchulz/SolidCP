@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFrameworks>net48;net8.0</TargetFrameworks>
-        <StartupObject>SolidCP.VmConfig.Program</StartupObject>
+        <StartupObject>FuseCP.VmConfig.Program</StartupObject>
         <OutputPath>bin\$(Configuration)\</OutputPath>
         <LangVersion>13</LangVersion>
         <Nullable>disable</Nullable>
@@ -45,7 +45,7 @@
         </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.VmConfig.Common\SolidCP.VmConfig.Common.csproj" />
+        <ProjectReference Include="..\FuseCP.VmConfig.Common\FuseCP.VmConfig.Common.csproj" />
     </ItemGroup>
     <ItemGroup>
         <None Include="..\..\Resources\install.bat">

@@ -38,11 +38,11 @@ using System.Linq;
 using System.Xml;
 using System.Text;
 using System.Xml.Serialization;
-using SolidCP.Providers;
-using SolidCP.Providers.DNS;
-using SolidCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.DNS;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class DnsServerController : ControllerBase, IImportController, IBackupController
     {

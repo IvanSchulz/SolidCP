@@ -36,15 +36,15 @@ using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.SharePoint;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.SharePoint;
 
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class HostedSharePointEnterpriseEditSiteCollection : SolidCPModuleBase
+    public partial class HostedSharePointEnterpriseEditSiteCollection : FuseCPModuleBase
     {
         SharePointEnterpriseSiteCollection item = null;
 

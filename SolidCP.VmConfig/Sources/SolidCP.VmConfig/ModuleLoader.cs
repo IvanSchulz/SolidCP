@@ -43,7 +43,7 @@ using System.Runtime.Remoting.Lifetime;
 using System.Runtime.Loader;
 #endif
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	[Serializable]
 	internal class ModuleLoader : MarshalByRefObject

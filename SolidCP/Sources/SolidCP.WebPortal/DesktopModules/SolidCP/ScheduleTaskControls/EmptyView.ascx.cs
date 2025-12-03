@@ -34,10 +34,10 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.Code.Framework;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.Code.Framework;
 
-namespace SolidCP.Portal.UserControls.ScheduleTaskView
+namespace FuseCP.Portal.UserControls.ScheduleTaskView
 {
 	/// <summary>
 	/// Represents empty view which states that no configuration is availalbe for this schedule task.

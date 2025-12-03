@@ -1,7 +1,7 @@
-Ôªø<####################################################################################################
+<####################################################################################################
 SolidSCP - Simple server setup menu
 
-v1.0    24th May 2016:       First release of the SolidCP Install Script
+v1.0    24th May 2016:       First release of the FuseCP Install Script
 v1.0.1  15th June 2016       Added Exchange 2016 and Silent Installation to the script
 v1.0.2  16th June 2016       Fixes on Option 4 (removed [TAB] and replaced with [SPACE] so PowerShell doesn't try to Auto Complete
 v1.0.3  22nd June 2016       Added domain membership checking as well as various bug fixes for File Permission Hardening
@@ -9,32 +9,32 @@ v1.0.4  23nd June 2016       Added MariaDB Database Server as well as various fi
 v1.0.5  25th June 2016       New menu structure added for simplicity
 v1.0.6  28th June 2016       Additional deployment options for Active Directory
 v1.0.7  04th July 2016       Added XML function and improved the File Permission Hardening for the XML files in IIS for .NET
-v1.0.8  05th August 2016     Added IP Address checking for Firewall Rules - allow UNC access for SolidCP upgrade via Portal or Auto-Upgrade Script
+v1.0.8  05th August 2016     Added IP Address checking for Firewall Rules - allow UNC access for FuseCP upgrade via Portal or Auto-Upgrade Script
 v1.0.9  09th August 2016     Added VC++ 2012 runtime for PHP and option for phpMyAdmin, added submenu for SCP ES and Portal installation options - Thanks to S.Brown
 v1.1.0  2nd  September 2016: Added web.config file updates to the script so the new features are added
 v1.1.1  10th October 2016:   Added IIS SSL Hardening and fixed PHP v7.0 installation bug
-v1.1.2  19th October 2016:   Added Dynamic Download Support - will download the latest files from the SolidCP XML List
+v1.1.2  19th October 2016:   Added Dynamic Download Support - will download the latest files from the FuseCP XML List
 v1.1.3  20th October 2016:   Added Tools Menu
 v1.1.4  22nd October 2016:   Added Exchange DAG Creation
 v1.1.5  3rd  November 2016:  Added Mail Enable Silent Installation
 v1.1.6  6th  November 2016:  Added extra permissions to resolve issues with Web Server that are joined to a domain
-v1.1.7  14th November 2016:  Added WebDav to the script so you can configure your Cloud Sorage Folders in SolidCP
+v1.1.7  14th November 2016:  Added WebDav to the script so you can configure your Cloud Sorage Folders in FuseCP
 v1.1.8  18th November 2016:  Resolved an issue with the SSL Hardening for Windows Servers on the Ciphers
 v1.1.9  21st November 2016:  Added MailCleaner Move Spam to Junk Folder rule
 v1.2.0  25th November 2016:  Added Remote Desktop Services to the script to fully provision your RDS Deployment
 v1.2.1  29th November 2016:  Added LetsEncrypt support to the script
 v1.2.2  6th  December 2016:  Resolved issue with phpMyAdmin installation and the SSL Hardening functions
-v1.2.3  28th December 2016:  Added PreLoad for all SolidCP Components to speed up the load times on the web interface
+v1.2.3  28th December 2016:  Added PreLoad for all FuseCP Components to speed up the load times on the web interface
 v1.2.4  17th January  2017:  Increased the Exchange Send and Receive Connectors sizes to the maximum as they are low by default, they can now be set via Mailbox Plans in the portal
 v1.2.5  5th  February 2017:  Improved the installation speed on Microsoft Windows Server 2016
 v1.2.6  9th  March    2017:  Fixed installation issues on some Exchange Server 2016 setups
 v1.2.7  30th August   2018:  Added TLS1.2 mode to support new security requirements for GitHub
 
 
-Written By Marc Banyard for the SolidCP Project (c) 2016 SolidCP
+Written By Marc Banyard for the FuseCP Project (c) 2016 FuseCP
 
-Copyright (c) 2016, SolidCP
-SolidCP is distributed under the Creative Commons Share-alike license
+Copyright (c) 2016, FuseCP
+FuseCP is distributed under the Creative Commons Share-alike license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -46,7 +46,7 @@ are permitted provided that the following conditions are met:
   this list of conditions  and  the  following  disclaimer in  the documentation
   and/or other materials provided with the distribution.
 
-- Neither the name of  SolidCP  nor the names of its contributors may be used to
+- Neither the name of  FuseCP  nor the names of its contributors may be used to
   endorse or  promote  products  derived  from  this  software  without specific
   prior written permission.
 
@@ -67,12 +67,12 @@ All Code provided as is and used at your own risk.
 # Set the window size as Server 2016 comes up small
 $host.UI.RawUI.BufferSize = New-Object -TypeName System.Management.Automation.Host.Size -ArgumentList (120, 50)
 $host.UI.RawUI.WindowSize = New-Object -TypeName System.Management.Automation.Host.Size -ArgumentList (120, 50)
-$Host.UI.RawUI.WindowTitle = "$([Environment]::UserName): --  SolidCP Server Configuration Script  --"
+$Host.UI.RawUI.WindowTitle = "$([Environment]::UserName): --  FuseCP Server Configuration Script  --"
 CLS
 Write-Host "
         ****************************************
         *                                      *
-        *        Welcome to the SolidCP        *
+        *        Welcome to the FuseCP        *
         *          Automated Installer         *
         *                                      *
         *       Please be patient whilst       *
@@ -86,7 +86,7 @@ $dIPV4 = ((Test-Connection $env:computername -count 1).IPv4address.IPAddressToSt
 $dIPV6 = ((Resolve-DnsName -Name $env:COMPUTERNAME -Type AAAA).IPAddress -notlike 'fe80:*') # Get IPV6 Address
 $dDomainMember     = ((gwmi win32_computersystem).partofdomain -eq $true)                   # Check if machine is joined to a domain
 $dFQDNthisMachine  = ([System.Net.Dns]::GetHostByName(($env:computerName)).HostName)        # Get the FQDN of this machine
-$dRootDN           = (([ADSI]"LDAP://RootDSE").rootDomainNamingContext)                     # Get the Root Distinguished Name from Active Directory (i.e. DC=SolidCP,DC=com)
+$dRootDN           = (([ADSI]"LDAP://RootDSE").rootDomainNamingContext)                     # Get the Root Distinguished Name from Active Directory (i.e. DC=FuseCP,DC=com)
 $dDomainName       = $env:USERDNSDOMAIN  # Store the Domain Name (if joined) as a variable to use later
 $dComputerName     = $env:computername   # Store the Computer Name as a variable to use later
 $dLoggedInUserName = $env:USERNAME       # Store the Logged On User Name as a variable to use later
@@ -95,7 +95,7 @@ $dLoggedInUserName = $env:USERNAME       # Store the Logged On User Name as a va
 
 # Editable features are below this line
 
-$SolidCPhstSpace   = "$env:SystemDrive\HostingSpaces"  # Hosting Spaces Directory Location (including Drive)
+$FuseCPhstSpace   = "$env:SystemDrive\HostingSpaces"  # Hosting Spaces Directory Location (including Drive)
 $InstallSNMPchk    = $true                  # Enable or disable by $true|$false
 $SNMPsysContact    = "Please Change Me"     # SNMP Contact Name
 $SNMPsysLocation   = "Please Change Me"     # SNMP Server Location
@@ -106,7 +106,7 @@ $dInstalPhpMyAdmin = ""                     # Specify if phpMyAdmin is to be ins
 $dPhpMyAdminPort   = "80"                   # phpMyAdmin TCP Port for website (if installed on Web or Database Server)
 $dPhpMyAdminUserNm = "pma"                  # phpMyAdmin Username
 $dPhpMyAdminPassWd = "YourPassword"         # phpMyAdmin Password
-$dPhpMyAdminHostNm = "pma"                  # Set the FQDN (Hostname) to be used for phpMyAdmin - Default = ServerFQDNpma (i.e. web1pma.solidcp.com)
+$dPhpMyAdminHostNm = "pma"                  # Set the FQDN (Hostname) to be used for phpMyAdmin - Default = ServerFQDNpma (i.e. web1pma.fusecp.com)
 $dEnableIISsmtpSvc = ""                     # Enable or Disable the SMTP Virtual Server in IIS $true|$false - Leave blank to prompt
 $dExchangeOrgNme   = "HostedExchange"       # Set the Exchange Organisation Name
 $dExchangeFQDNsndC = ""                     # Set the FQDN of the Exchange Send Connector
@@ -114,31 +114,31 @@ $dOutlookAnywhFQDN = ""                     # Set the FQDN for Outlook Anywhere
 $dExchangeAutoDisc = ""                     # Set the FQDN for Exchange Autodiscover - If this is empty it will use your Outlook Anywhere FQDN
 $dRDSconnBroker    = ""                     # Set the FQDN for your Remote Desktop Connection Broker
 $dRDSGatewayFQDN   = ""                     # Set the FQDN for your RD Gateway cluster
-$dSolidCp_OU_Name  = "SolidCP"              # Set the Active Directory Organisational Unit Name
+$dSolidCp_OU_Name  = "FuseCP"              # Set the Active Directory Organisational Unit Name
 $dSCPhstd_OU_Name  = "Hosted"               # Set the Active Directory Organisational Unit Name for your Hosted Accounts (Exchange / SharePoint / RDP)
 $dExchangeInstal   = "D:"                   # Set the installation directory of where your Exchange files are located (i.e. D: for the DVD)
-$dExchangeImportUserFirst = "SolidCP"                # Exchange Import/Export Active Directory Account First Name
+$dExchangeImportUserFirst = "FuseCP"                # Exchange Import/Export Active Directory Account First Name
 $dExchangeImportUserLast  = "Exchange Administrator" # Exchange Import/Export Active Directory Account Last Name
 $dExchangeImportLogonName = "ExchangeAdminAcc"       # Exchange Import/Export Active Directory Account Username
 $dExchangeImportFolderNme = "C:\_pstImports"         # Exchange PST Imports Folder
 $dExchangeExportFolderNme = "C:\_pstExports"         # Exchange PST Exports Folder
-$dSolidCPportalPortNumber = "80"            # SolidCP Web Portal - Port Number
-$dSolidCPportalIPaddress  = $dIPV4          # SolidCP Web Portal - IP Address
-$dSolidCPportalPassword   = "YourPassword"  # SolidCP Web Portal - serveradmin Password
-$dSolidCPserverPassword   = "YourPassword"  # SolidCP Server - Password
-$dSolidCPCloudPortlPasswd = "YourPassword"  # SolidCP Cloud Storage Server - Password
+$dFuseCPportalPortNumber = "80"            # FuseCP Web Portal - Port Number
+$dFuseCPportalIPaddress  = $dIPV4          # FuseCP Web Portal - IP Address
+$dFuseCPportalPassword   = "YourPassword"  # FuseCP Web Portal - serveradmin Password
+$dFuseCPserverPassword   = "YourPassword"  # FuseCP Server - Password
+$dFuseCPCloudPortlPasswd = "YourPassword"  # FuseCP Cloud Storage Server - Password
 $dRDSourganisationalUnit  = "RemoteDesktopServers"  # Remote Desktop Services Organisational Unit
-$dSolidCPEnterpriseSvrIP  = ""              # Enterprise Server IP Address (i.e. 192.168.1.1)
-$dSolidCPEnterpriseSvrURL = ""              # Enterprise Server URL - FULL URL with Port (i.e. http://192.168.1.1:9002)
-$dSCPdomainName           = ""              # FQDN used for Active Directory (i.e. hosted.solidcp.com)
+$dFuseCPEnterpriseSvrIP  = ""              # Enterprise Server IP Address (i.e. 192.168.1.1)
+$dFuseCPEnterpriseSvrURL = ""              # Enterprise Server URL - FULL URL with Port (i.e. http://192.168.1.1:9002)
+$dSCPdomainName           = ""              # FQDN used for Active Directory (i.e. hosted.fusecp.com)
 $dSCPfirewallUNCshareIPs  = ""              # IPV4 Addresses seperated by semicolon for UNC Access to servers (192.168.1.1; 192.168.2.0/24)
 $dSCPfirewallRDPaccess    = ""              # IPV4 Addresses seperated by semicolon for RDP Access to servers (192.168.1.1; 192.168.2.0/24)
 $dSCPqualitySSLlabsRating = "A"             # Qualys SSL Labs Rating - https://www.ssllabs.com/ssltest/
 $ddSCPqualySSLScheduleTsk = $true           # Setup an Automated Script to check for new SSL Fixes on your web servers by $true|$false
 $dMailEnableDirectory     = "C:\Program Files (x86)\Mail Enable" # Specify the installation directory where MailEnable needs to be installed to on the machine
-$dMailEnableContactName   = "SolidCP"       # Mail Enable Company Name (who it needs to be registered to
-$dWebDavStoragePath       = "C:\CloudStorage"                    # The path for the SolidCP WebDav Storage
-$dWebDavStoragePortNumber = "80"                                 # The SolidCP Cloud Storage Portal (WebDav Front End) Port Number
+$dMailEnableContactName   = "FuseCP"       # Mail Enable Company Name (who it needs to be registered to
+$dWebDavStoragePath       = "C:\CloudStorage"                    # The path for the FuseCP WebDav Storage
+$dWebDavStoragePortNumber = "80"                                 # The FuseCP Cloud Storage Portal (WebDav Front End) Port Number
 
 
 # Editable features are above this line
@@ -195,23 +195,23 @@ if ($dDomainMember) { # Only do the following if the server is a member of a dom
 	$dLangDomainAdministratorName = (([wmi]"Win32_SID.SID='$dDomainAdministratorSID'").AccountName); # Administrator
 	$dLangDomainEnterpriseAdmins  = (([wmi]"Win32_SID.SID='$dDomainSID-519'").AccountName);          # Enterprise Admins
 }
-$dSCPiisSSLratingURLa     = "http://installer.solidcp.com/Files/XML/SSL/IIS_SSL_Hardening_A.xml"     # XML Feed for A Rating from Qualys SSL Labs for your IIS Server
-$dSCPiisSSLratingURLb     = "http://installer.solidcp.com/Files/XML/SSL/IIS_SSL_Hardening_B.xml"     # XML Feed for B Rating from Qualys SSL Labs for your IIS Server
-$dSCPiisSSLDateCheckFile  = "C:\SolidCP\SSL_Fix_DO_NOT_DELETE.txt"                                   # This is the location of the file that stores the last date the IIS SSL Security was updated on the server
-$dSCPFileURL              = "http://installer.solidcp.com/Files/XML/Downloads/Download-Links.xml"    # XML Feed for files that are downloaded as part of the PowerShell Auto Installation Script
+$dSCPiisSSLratingURLa     = "http://installer.fusecp.com/Files/XML/SSL/IIS_SSL_Hardening_A.xml"     # XML Feed for A Rating from Qualys SSL Labs for your IIS Server
+$dSCPiisSSLratingURLb     = "http://installer.fusecp.com/Files/XML/SSL/IIS_SSL_Hardening_B.xml"     # XML Feed for B Rating from Qualys SSL Labs for your IIS Server
+$dSCPiisSSLDateCheckFile  = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"                                   # This is the location of the file that stores the last date the IIS SSL Security was updated on the server
+$dSCPFileURL              = "http://installer.fusecp.com/Files/XML/Downloads/Download-Links.xml"    # XML Feed for files that are downloaded as part of the PowerShell Auto Installation Script
 $dSCPFileDownloadLinks    = ([xml](New-Object System.Net.WebClient).DownloadString("$dSCPFileURL"))  # Download the XML Feed for files and store as a variable
 (Import-Module ServerManager) | Out-Null                                                             # Import the "ServerManager" module
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12                      # Set powershell to use TLS 1.2
 ####################################################################################################
 # Main menu starts here
-Function SolidCPmenu() {
+Function FuseCPmenu() {
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu`n" -ForegroundColor Magenta
-			Write-Host "`t  Please select the type of server you are installing SolidCP onto`n" -ForegroundColor Cyan
+			Write-Host "`n`tFuseCP Setup Menu`n" -ForegroundColor Magenta
+			Write-Host "`t  Please select the type of server you are installing FuseCP onto`n" -ForegroundColor Cyan
 	$menu = @"
-	    1. SolidCP Exterprise Server / Portal
+	    1. FuseCP Exterprise Server / Portal
 	    2. Microsoft DNS Server
 	    3. Microsoft Web Server
 	    4. Database Servers (MS SQL, MariaDB, MySQL)
@@ -243,7 +243,7 @@ Function SolidCPmenu() {
 			"6" { dInstallConfirm "Microsoft Active Directory Requirements" $function:MainMenu_Option_6 ; $choice="X" }
 			"7" { MainMenu_Option_7 }
 			"8" { MainMenu_Option_8 }
-			"9" { dInstallConfirm "SolidCP Cloud Storage Portal (WebDav)" $function:MainMenu_Option_9 ; $choice="X" }
+			"9" { dInstallConfirm "FuseCP Cloud Storage Portal (WebDav)" $function:MainMenu_Option_9 ; $choice="X" }
 			"T" { MainMenu_Option_T }
 			"X" { MainMenu_Option_X }
 		}
@@ -255,17 +255,17 @@ Function SolidCPmenu() {
 ####################################################################################################################################################################################
 # Functions for the Main Menu Options are below here
 ####################################################################################################################################################################################
-# Main Menu - Option 1 - Present Sub Menu for SolidCP Enterprise Server and Portal Server deployment types
-Function MainMenu_Option_1() { # Function to show the user a Sub Menu for the SolidCP Enterprise Server and Portal Server deployment options
+# Main Menu - Option 1 - Present Sub Menu for FuseCP Enterprise Server and Portal Server deployment types
+Function MainMenu_Option_1() { # Function to show the user a Sub Menu for the FuseCP Enterprise Server and Portal Server deployment options
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu - Enterprise Server and Portal Server`n" -ForegroundColor Magenta
+			Write-Host "`n`tFuseCP Setup Menu - Enterprise Server and Portal Server`n" -ForegroundColor Magenta
 			Write-Host "`t  Please select the Enterprise Server and Portal Server deployment you want to install`n`n" -ForegroundColor Cyan
 	$menu = @"
-	    A. SolidCP Enterprise Server and Portal Server (single Machine)
-	    B. SolidCP Enterprise Server ONLY
-	    C. SolidCP Portal Server ONLY
+	    A. FuseCP Enterprise Server and Portal Server (single Machine)
+	    B. FuseCP Enterprise Server ONLY
+	    C. FuseCP Portal Server ONLY
 
 	    X. Exit back to Main Menu
 "@
@@ -279,104 +279,104 @@ Function MainMenu_Option_1() { # Function to show the user a Sub Menu for the So
 		} until ( $ok )
 
 		switch -Regex ( $choice1 ) {
-			"A" { dInstallConfirm "SolidCP Enterprise Server and Portal Server (single Machine)" $function:MainMenu_Option_1_A }
-			"B" { dInstallConfirm "SolidCP Enterprise Server ONLY" $function:MainMenu_Option_1_B }
-			"C" { dInstallConfirm "SolidCP Portal Server ONLY" $function:MainMenu_Option_1_C }
+			"A" { dInstallConfirm "FuseCP Enterprise Server and Portal Server (single Machine)" $function:MainMenu_Option_1_A }
+			"B" { dInstallConfirm "FuseCP Enterprise Server ONLY" $function:MainMenu_Option_1_B }
+			"C" { dInstallConfirm "FuseCP Portal Server ONLY" $function:MainMenu_Option_1_C }
 		}
 	} until ( $choice1 -match "X" )
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 1 - Sub Menu A - Install SolidCP Enterpeise Server and Portal Server
-Function MainMenu_Option_1_A() { # Function to call multiple functions to install SolidCP Enterprise Server and Portal
-	CheckSolidCPdomainUser "Enterprise"
-	CheckSolidCPdomainUser "Portal"
+# Main Menu - Option 1 - Sub Menu A - Install FuseCP Enterpeise Server and Portal Server
+Function MainMenu_Option_1_A() { # Function to call multiple functions to install FuseCP Enterprise Server and Portal
+	CheckFuseCPdomainUser "Enterprise"
+	CheckFuseCPdomainUser "Portal"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	dCheckMsSQLpassword
-	Write-Host "`n Installing the 'SolidCP Enterprise Server and Portal'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`n Installing the 'FuseCP Enterprise Server and Portal'" -ForegroundColor Magenta
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforESandPortal
 	HardenDotNETforIIS
 	HardenFilePermissions
 	IIS_SMTP_VirtualServer -Enable
 	InstallSQLsvr2014withTools -Password $dMsSQLpassword
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Enterprise
-	InstallSolidCPcomponent -Portal
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Enterprise
+	InstallFuseCPcomponent -Portal
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 1 - Sub Menu B - Install SolidCP Enterpeise Server ONLY
-Function MainMenu_Option_1_B() { # Function to call multiple functions to install SolidCP Enterprise Server and Portal
-	CheckSolidCPdomainUser "Enterprise"
+# Main Menu - Option 1 - Sub Menu B - Install FuseCP Enterpeise Server ONLY
+Function MainMenu_Option_1_B() { # Function to call multiple functions to install FuseCP Enterprise Server and Portal
+	CheckFuseCPdomainUser "Enterprise"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	dCheckMsSQLpassword
-	Write-Host "`n Installing the 'SolidCP Enterprise Server'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`n Installing the 'FuseCP Enterprise Server'" -ForegroundColor Magenta
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforESandPortal
 	HardenDotNETforIIS
 	HardenFilePermissions
 	IIS_SMTP_VirtualServer -Enable
 	InstallSQLsvr2014withTools -Password $dMsSQLpassword
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Enterprise
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Enterprise
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 1 - Sub Menu C - Install SolidCP Portal Server ONLY
-Function MainMenu_Option_1_C() { # Function to call multiple functions to install SolidCP Enterprise Server and Portal
-	CheckSolidCPdomainUser "Portal"
+# Main Menu - Option 1 - Sub Menu C - Install FuseCP Portal Server ONLY
+Function MainMenu_Option_1_C() { # Function to call multiple functions to install FuseCP Enterprise Server and Portal
+	CheckFuseCPdomainUser "Portal"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
-	Write-Host "`nInstalling the 'SolidCP Portal Server'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`nInstalling the 'FuseCP Portal Server'" -ForegroundColor Magenta
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforESandPortal
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Portal
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Portal
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 2 - Install Microsoft DNS Server for SolidCP
+# Main Menu - Option 2 - Install Microsoft DNS Server for FuseCP
 Function MainMenu_Option_2() { # Function to call multiple functions to install Features for Microsoft DNS Server
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing a 'Microsoft DNS Server'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallDNSServer
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
@@ -388,7 +388,7 @@ Function MainMenu_Option_3() { # Function to show the user a Sub Menu for the Mi
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu - Microsoft Web Server`n" -ForegroundColor Magenta
+			Write-Host "`n`tFuseCP Setup Menu - Microsoft Web Server`n" -ForegroundColor Magenta
 			Write-Host "`t  Please select the Microsoft Web Server deployment you want to install`n`n" -ForegroundColor Cyan
 			Write-Host "`t  (IIS, FTP, PHP, PHP Manager, Python, Perl, MariaDB or MySQL, MS SQL)`n`n" -ForegroundColor Cyan
 	$menu = @"
@@ -418,9 +418,9 @@ Function MainMenu_Option_3() { # Function to show the user a Sub Menu for the Mi
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 3 - Sub Menu A - Install Microsoft IIS Web Server for SolidCP
+# Main Menu - Option 3 - Sub Menu A - Install Microsoft IIS Web Server for FuseCP
 Function MainMenu_Option_3_A() { # Function to call multiple functions to install IIS, FTP, PHP, Python, Perl, MariaDB or MySQL and MS SQL
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	IIS_SMTP_InstallCheck
 	dAskInstallPhpMyAdmin
@@ -429,9 +429,9 @@ Function MainMenu_Option_3_A() { # Function to call multiple functions to instal
 	dCheckMsSQLpassword
 	dCheckMariaMySQLpassword
 	Write-Host "Installing a 'Microsoft Web Server' (IIS, FTP, PHP, Python, Perl, $dMySQLvMariaDB and MS SQL)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
@@ -448,8 +448,8 @@ Function MainMenu_Option_3_A() { # Function to call multiple functions to instal
 	InstallSQLsvr2014withTools -Password $dMsSQLpassword
 	InstallDisablePasswdComplex
 	IIS_SMTP_VirtualServer
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	AddWebServerToDomainIISacco
 	HardenIIS_SSL
 	InstallLetsEncryptACMESharp
@@ -458,17 +458,17 @@ Function MainMenu_Option_3_A() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 3 - Sub Menu B - Install Microsoft IIS Web Server without Database Servers for SolidCP
+# Main Menu - Option 3 - Sub Menu B - Install Microsoft IIS Web Server without Database Servers for FuseCP
 Function MainMenu_Option_3_B() { # Function to call multiple functions to install IIS, FTP, PHP, Python, Perl
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	IIS_SMTP_InstallCheck
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing a 'Microsoft Web Server' (IIS, FTP, PHP, Python, Perl)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
@@ -482,8 +482,8 @@ Function MainMenu_Option_3_B() { # Function to call multiple functions to instal
 	InstallActivePerl
 	InstallDisablePasswdComplex
 	IIS_SMTP_VirtualServer
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	AddWebServerToDomainIISacco
 	HardenIIS_SSL
 	InstallLetsEncryptACMESharp
@@ -492,18 +492,18 @@ Function MainMenu_Option_3_B() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 3 - Sub Menu C - Install Microsoft IIS Web Server for SolidCP - Prompted
+# Main Menu - Option 3 - Sub Menu C - Install Microsoft IIS Web Server for FuseCP - Prompted
 Function MainMenu_Option_3_C() { # Function to call multiple functions to install Features for IIS, FTP, PHP, Python, Perl, MySQL and MS SQL
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	dCheckMsSQLpassword
 	dCheckMariaMySQLpassword
 	Write-Host "Installing a 'Microsoft Web Server - Prompted'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	dInstallConfirmNoCLS "Harden .NET for IIS" $function:HardenDotNETforIIS                            # Prompt to Harden .NET for IIS
 	dInstallConfirmNoCLS "Harden the File Permissions" $function:HardenFilePermissions                 # Prompt to harden the file permissions
@@ -521,7 +521,7 @@ Function MainMenu_Option_3_C() { # Function to call multiple functions to instal
 	dInstallConfirmNoCLS "Disable Password Complexity (Local)" $function:InstallDisablePasswdComplex   # Prompt to disable local password complexity
 	IIS_SMTP_InstallCheck                                                                              # Prompt to enable the SMTP Virtual Server in IIS
 	IIS_SMTP_VirtualServer                                                                             # Install the SMTP Virtual Server if required
-	dInstallConfirmNoCLS "SolidCP Server" $function:InstallSolidCPcomponentServer                      # Prompt to download and install the SOlidCP Installation Application and Server component
+	dInstallConfirmNoCLS "FuseCP Server" $function:InstallFuseCPcomponentServer                      # Prompt to download and install the SOlidCP Installation Application and Server component
 	dInstallConfirmNoCLS "IIS SSL Hardening for security" $function:HardenIIS_SSL                      # Prompt to fix the SSL issues in IIS to resolve various issues regarding SSL Certificates
 	dInstallConfirmNoCLS "LetsEncrypt (ACMESharp)" $function:InstallLetsEncryptACMESharp               # Prompt to install LetsEncrypt for free SSL Certificates
 	dInstallConfirmNoCLS "Windows Updates" $function:EnableWindowsUpdates                              # Prompt to enable Windows Updates on this machine
@@ -529,9 +529,9 @@ Function MainMenu_Option_3_C() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 3 - Sub Menu D - Install Microsoft IIS Web Server for SolidCP
+# Main Menu - Option 3 - Sub Menu D - Install Microsoft IIS Web Server for FuseCP
 Function MainMenu_Option_3_D() { # Function to call multiple functions to install IIS, FTP for Microsoft Web Server ONLY
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	IIS_SMTP_InstallCheck
 	dAskInstallPhpMyAdmin
@@ -540,9 +540,9 @@ Function MainMenu_Option_3_D() { # Function to call multiple functions to instal
 	dCheckMsSQLpassword
 	dCheckMariaMySQLpassword
 	Write-Host "Installing a 'Microsoft Web Server' (IIS, FTP)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
@@ -551,8 +551,8 @@ Function MainMenu_Option_3_D() { # Function to call multiple functions to instal
 	InstallWebPI_WebDeploy
 	InstallDisablePasswdComplex
 	IIS_SMTP_VirtualServer
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	AddWebServerToDomainIISacco
 	HardenIIS_SSL
 	EnableWindowsUpdates
@@ -565,7 +565,7 @@ Function MainMenu_Option_4() { # Function to show the user a Sub Menu for the Da
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu - Database Server`n" -ForegroundColor Magenta
+			Write-Host "`n`tFuseCP Setup Menu - Database Server`n" -ForegroundColor Magenta
 			Write-Host "`t  Please select the Database Server deployment you want to install`n`n" -ForegroundColor Cyan
 	$menu = @"
 	    A. FULL Database Server - (Microsoft SQL Server 2014, MariaDB or MySQL)
@@ -594,18 +594,18 @@ Function MainMenu_Option_4() { # Function to show the user a Sub Menu for the Da
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 4 - Sub Menu A - Install Full Database Server for SolidCP
+# Main Menu - Option 4 - Sub Menu A - Install Full Database Server for FuseCP
 Function MainMenu_Option_4_A() { # Function to call multiple functions to install IIS, MariaDB or MySQL and MS SQL
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	dAskInstallPhpMyAdmin
 	CLS
 	dCheckMsSQLpassword
 	dCheckMariaMySQLpassword
 	Write-Host "Installing the FULL Database Server - (Microsoft SQL Server 2014, $dMySQLvMariaDB Database Server)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
@@ -613,102 +613,102 @@ Function MainMenu_Option_4_A() { # Function to call multiple functions to instal
 	InstallPhpMyAdmin
 	InstallSQLsvr2014withTools -Password $dMsSQLpassword
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 4 - Sub Menu B - Install Microsoft SQL Express Database Server with Tools for SolidCP
+# Main Menu - Option 4 - Sub Menu B - Install Microsoft SQL Express Database Server with Tools for FuseCP
 Function MainMenu_Option_4_B() { # Function to call multiple functions to install IIS, MS SQL and Tools
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	dCheckMsSQLpassword
 	Write-Host "Installing the Microsoft SQL Server 2014 Express Database ONLY (No Tools))" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallSQLsvr2014noTools $dMsSQLpassword
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 4 - Sub Menu C - Install Microsoft SQL Database Server ONLY (NO Tools) for SolidCP
+# Main Menu - Option 4 - Sub Menu C - Install Microsoft SQL Database Server ONLY (NO Tools) for FuseCP
 Function MainMenu_Option_4_C() { # Function to call multiple functions to install IIS and MS SQL
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	dCheckMsSQLpassword
 	Write-Host "Installing the Microsoft SQL Server 2014 Express with Tools)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallSQLsvr2014withTools -Password $dMsSQLpassword
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 4 - Sub Menu D - Install MariaDB or MySQL Database Server for SolidCP
+# Main Menu - Option 4 - Sub Menu D - Install MariaDB or MySQL Database Server for FuseCP
 Function MainMenu_Option_4_D() { # Function to call multiple functions to install MariaDB or MySQL
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	dAskInstallPhpMyAdmin
 	CLS
 	dCheckMariaMySQLpassword
 	Write-Host "Installing the $dMySQLvMariaDB Database Server)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallIISforHosting
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallMariaDB_MySQL $dMariaMySQLpasswd
 	InstallPhpMyAdmin
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 5 - Install AwStats Server for SolidCP
+# Main Menu - Option 5 - Install AwStats Server for FuseCP
 Function MainMenu_Option_5() { # Function to call multiple functions to install AwStats
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'AwStats Server'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallAwStats
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallActivePerl
 	InstallDisablePasswdComplex
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
@@ -721,7 +721,7 @@ Function MainMenu_Option_6() { # Function to call multiple functions to install 
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n`n`n`n`n"  # This brings the text down by 12 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the required windows features for 'Microsoft Active Directory (Domain Controllers)'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	InstallActiveDirectory
 	EnableWindowsUpdates
@@ -734,7 +734,7 @@ Function MainMenu_Option_7() { # Function to show the user a Sub Menu for the Em
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu - Email Servers`n" -ForegroundColor Magenta
+			Write-Host "`n`tFuseCP Setup Menu - Email Servers`n" -ForegroundColor Magenta
 			Write-Host "`t  Please select the Email Server deployment you want to install`n`n" -ForegroundColor Cyan
 	$menu = @"
 	    A. Microsoft Exchange Server 2016 - CAS & Mailbox Roles
@@ -788,20 +788,20 @@ Function MainMenu_Option_7() { # Function to show the user a Sub Menu for the Em
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu A - Install Microsoft Exchange 2016 for SolidCP
+# Main Menu - Option 7 - Sub Menu A - Install Microsoft Exchange 2016 for FuseCP
 Function MainMenu_Option_7_A() { # Function to call multiple functions to install Microsoft Exchange 2016 MBX Role Requirements
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Exchange 2016 Server Role (Mailbox and CAS)'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	Exchange2016_PreCheck
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	ExchangeMBX2016
-	dInstallConfirmNoCLS "SolidCP Installer Application" $function:InstallSolidCPInstaller  # Prompt to download and install the SOlidCP Installation Application
-	InstallSolidCPcomponent -Server -NoIP                                                   # Install the Server component ONLY of the installer is installed
+	dInstallConfirmNoCLS "FuseCP Installer Application" $function:InstallFuseCPInstaller  # Prompt to download and install the SOlidCP Installation Application
+	InstallFuseCPcomponent -Server -NoIP                                                   # Install the Server component ONLY of the installer is installed
 	Exchange2016_PostCheck
 	HardenIIS_SSL
 	EnableWindowsUpdates
@@ -811,13 +811,13 @@ Function MainMenu_Option_7_A() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu B - Install Microsoft Exchange File Share Witness (DAG ONLY Role) for SolidCP
+# Main Menu - Option 7 - Sub Menu B - Install Microsoft Exchange File Share Witness (DAG ONLY Role) for FuseCP
 Function MainMenu_Option_7_B() { # Function to call multiple functions to install Microsoft Exchange File Share Witness - DAG ONLY Role Requirements
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Exchange (File Share Witness - DAG ONLY)'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	InstallExchangeFSW
 	EnableWindowsUpdates
@@ -825,34 +825,34 @@ Function MainMenu_Option_7_B() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu C - Install Microsoft Exchange 2013 CAS Role for SolidCP
+# Main Menu - Option 7 - Sub Menu C - Install Microsoft Exchange 2013 CAS Role for FuseCP
 Function MainMenu_Option_7_C() { # Function to call multiple functions to install Microsoft Exchange CAS Role Requirements
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Exchange (CAS Server Role)'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallExchangeCAS
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu D - Install Microsoft Exchange 2013 Mailbox Role for SolidCP
+# Main Menu - Option 7 - Sub Menu D - Install Microsoft Exchange 2013 Mailbox Role for FuseCP
 Function MainMenu_Option_7_D() { # Function to call multiple functions to install Microsoft Exchange Mailbox Role Requirements
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Exchange (Mailbox Server Role)'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallExchangeMBX
 	HardenIIS_SSL
 	EnableWindowsUpdates
@@ -860,34 +860,34 @@ Function MainMenu_Option_7_D() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu E - Install MailEnable Email Server for SolidCP
+# Main Menu - Option 7 - Sub Menu E - Install MailEnable Email Server for FuseCP
 Function MainMenu_Option_7_E() { # Function to call multiple functions to install Install MailEnable Email Server
-	CheckSolidCPdomainUser "Server"
+	CheckFuseCPdomainUser "Server"
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Install MailEnable Email Server'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallMailEnable
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu F - Install Microsoft Exchange 2016 for SolidCP
+# Main Menu - Option 7 - Sub Menu F - Install Microsoft Exchange 2016 for FuseCP
 Function MainMenu_Option_7_F() { # Function to call multiple functions to install Microsoft Exchange 2016 MBX Role Requirements
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Exchange 2016 Server Role (Mailbox and CAS)'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	HardenDotNETforIIS
 	HardenFilePermissions
 	InstallDisablePasswdComplex
@@ -908,7 +908,7 @@ Function MainMenu_Option_7_N() { # Function to Create a new Failover Cluster for
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "'Microsoft Exchange 2016 Server' Create a new Failover Cluster" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	CreateNewExchangeFailoverCluster
 	dPressAnyKeyToExit
 }
@@ -957,7 +957,7 @@ Function MainMenu_Option_7_P() { # Function to configure the HTTP to HTTPS Redir
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "'Microsoft Exchange 2016 Server' Configure HTTP to HTTPS Redirection for Exchange 2016" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	CreateExch2016_HttpToHttps403
 	dPressAnyKeyToExit
 }
@@ -968,7 +968,7 @@ Function MainMenu_Option_7_Q() { # Function to Extend the Active Directory Schem
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "'Microsoft Exchange 2016 Server' Extend the Active Directory Schema for Exchange 2016 installation" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	Exchange2016PrepareSchema
 	dPressAnyKeyToExit
 }
@@ -979,7 +979,7 @@ Function MainMenu_Option_7_R() { # Function to Prepare Active Directory for Micr
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "'Microsoft Exchange 2016 Server' Prepare Active Directory for Microsoft Exchange Server" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	Exchange2016PrepareAD
 	dPressAnyKeyToExit
 }
@@ -990,7 +990,7 @@ Function MainMenu_Option_7_S() { # Function to Create Exchange ContentSubmitters
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "'Microsoft Exchange 2016 Server' Create Exchange ContentSubmitters Security Group" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	CreateExchangeContentSubmittersGroup
 	dPressAnyKeyToExit
 }
@@ -1001,7 +1001,7 @@ Function MainMenu_Option_7_T() { # Function to Create a new DAG for Exchange 201
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "'Microsoft Exchange 2016 Server' Create a new Database Avilability Group (DAG)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	CreateExchangeContentSubmittersGroup
 	CreateNewDAG
 	dPressAnyKeyToExit
@@ -1013,7 +1013,7 @@ Function MainMenu_Option_7_U() { # Function to Add Exchange 2016 Servers to exis
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Add 'Microsoft Exchange 2016 Server' to existing Database Avilability Group (DAG)" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	CreateExchangeContentSubmittersGroup
 	AddDAGMember
 	dPressAnyKeyToExit
@@ -1025,13 +1025,13 @@ Function MainMenu_Option_7_V() { # Function to check the Microsoft Exchange 2016
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Checking 'Microsoft Exchange 2016 Server' after Windows or Exchange Updates" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	Exchange2016_UpgradeCheck
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 7 - Sub Menu W - Microsoft Exchange - Fix Failed Database Content Indexes for SolidCP
+# Main Menu - Option 7 - Sub Menu W - Microsoft Exchange - Fix Failed Database Content Indexes for FuseCP
 Function MainMenu_Option_7_W() { # Function to call multiple functions to Microsoft Exchange - Fix Failed Database Content Indexes
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
@@ -1046,7 +1046,7 @@ Function MainMenu_Option_8() { # Function to show the user a Sub Menu for the Mi
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu - Remote Desktop Services`n" -ForegroundColor Magenta
+			Write-Host "`n`tFuseCP Setup Menu - Remote Desktop Services`n" -ForegroundColor Magenta
 			Write-Host "`t  Please select the Microsoft Remote Desktop Services deployment you want to install`n`n" -ForegroundColor Cyan
 	$menu = @"
 	    A. RD Connection Broker
@@ -1080,7 +1080,7 @@ Function MainMenu_Option_8() { # Function to show the user a Sub Menu for the Mi
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 8 - Sub Menu A - Install Microsoft Remote Desktop Services RD Connection Broker and RD Web Access Requirements for SolidCP
+# Main Menu - Option 8 - Sub Menu A - Install Microsoft Remote Desktop Services RD Connection Broker and RD Web Access Requirements for FuseCP
 Function MainMenu_Option_8_A() { # Function to call multiple functions to install Microsoft Remote Desktop Services RD Connection Broker and RD Web Access
 	dCheckIPaddressesSet
 	dCheckRDSconnectionBroker
@@ -1088,7 +1088,7 @@ Function MainMenu_Option_8_A() { # Function to call multiple functions to instal
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n`n`n`n`n`n`n`n`n"  # This brings the text down by 16 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Remote Desktop - RD Connection Broker and RD Web Access'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	CreateRDSConnectionBrokersGroup
 	InstallSQLsvr2012NativeClnt
@@ -1102,7 +1102,7 @@ Function MainMenu_Option_8_A() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 8 - Sub Menu B - Install Microsoft Remote Desktop Services Licencing Server Requirements for SolidCP
+# Main Menu - Option 8 - Sub Menu B - Install Microsoft Remote Desktop Services Licencing Server Requirements for FuseCP
 Function MainMenu_Option_8_B() { # Function to call multiple functions to install Microsoft Remote Desktop Services Licencing Server Requirements
 	dCheckIPaddressesSet
 	dCheckRDSconnectionBroker
@@ -1111,7 +1111,7 @@ Function MainMenu_Option_8_B() { # Function to call multiple functions to instal
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	dCheckMsSQLpassword
 	Write-Host "Installing the 'Microsoft Remote Desktop - RD Licencing Server'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	InstallSQLsvr2014withTools -Password $dMsSQLpassword
 	HardenDotNETforIIS
@@ -1123,7 +1123,7 @@ Function MainMenu_Option_8_B() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 8 - Sub Menu C - Install Microsoft Remote Desktop Services RD Gateway Server Requirements for SolidCP
+# Main Menu - Option 8 - Sub Menu C - Install Microsoft Remote Desktop Services RD Gateway Server Requirements for FuseCP
 Function MainMenu_Option_8_C() { # Function to call multiple functions to install Microsoft Remote Desktop Services RD Gateway
 	dCheckIPaddressesSet
 	dCheckRDSconnectionBroker
@@ -1131,20 +1131,20 @@ Function MainMenu_Option_8_C() { # Function to call multiple functions to instal
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Remote Desktop - RD Gateway'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	HardenDotNETforIIS
 	#HardenFilePermissions
 	HardenIIS_SSL
 	InstallRDGateway
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 8 - Sub Menu D - Install Microsoft Remote Desktop Services RD Web Access Server Requirements for SolidCP
+# Main Menu - Option 8 - Sub Menu D - Install Microsoft Remote Desktop Services RD Web Access Server Requirements for FuseCP
 Function MainMenu_Option_8_D() { # Function to call multiple functions to install Microsoft Remote Desktop Services RD Web Access
 	dCheckIPaddressesSet
 	dCheckRDSconnectionBroker
@@ -1152,7 +1152,7 @@ Function MainMenu_Option_8_D() { # Function to call multiple functions to instal
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Remote Desktop - RD Web Access'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	HardenDotNETforIIS
 	#HardenFilePermissions
@@ -1163,14 +1163,14 @@ Function MainMenu_Option_8_D() { # Function to call multiple functions to instal
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 8 - Sub Menu E - Install Microsoft Remote Desktop Services RD Session Host Server Requirements for SolidCP
+# Main Menu - Option 8 - Sub Menu E - Install Microsoft Remote Desktop Services RD Session Host Server Requirements for FuseCP
 Function MainMenu_Option_8_E() { # Function to call multiple functions to install Microsoft Remote Desktop Services RD Session Host
 	dCheckIPaddressesSet
 	dCheckRDSconnectionBroker
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Microsoft Remote Desktop - RD Session Host'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
 	HardenDotNETforIIS
 	#HardenFilePermissions
@@ -1189,27 +1189,27 @@ Function MainMenu_Option_8_W() { # Function to call multiple functions to Config
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Configuring the 'HTTP to HTTPS Redirection' for the RD Web Access role" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	ConfigureRDwebHTTPtoHTTPSredirect
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option 9 - Install SolidCP Cloud Storage Portal
+# Main Menu - Option 9 - Install FuseCP Cloud Storage Portal
 Function MainMenu_Option_9() { # Function to call multiple functions to install Cloud Storage Portal
 	dCheckIPaddressesSet
 	CLS
 	Write-Host "`n`n`n`n`n`n`n`n"  # This brings the text down by 8 lines to allow fo the Windows Features installation overlay
 	Write-Host "Installing the 'Cloud Storage Portal'" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallCommonFeatures
-	InstallIISforSolidCP
+	InstallIISforFuseCP
 	InstallWebDavFeatures
-	InstallSolidCPInstaller
+	InstallFuseCPInstaller
 	CheckWebDavStorageFQDN -FQDN
-	InstallSolidCPcomponent -WebDav
+	InstallFuseCPcomponent -WebDav
 	InstallWebDavStorageRootWebsite
-	InstallSolidCPcomponent -Server
+	InstallFuseCPcomponent -Server
 	HardenIIS_SSL
 	EnableWindowsUpdates
 	dPressAnyKeyToExit
@@ -1217,11 +1217,11 @@ Function MainMenu_Option_9() { # Function to call multiple functions to install 
 
 ####################################################################################################################################################################################
 # Main Menu - Option T - Present Sub Menu for Tools
-Function MainMenu_Option_T() { # Function to show the user a Sub Menu for the Tools offered by SolidCP
+Function MainMenu_Option_T() { # Function to show the user a Sub Menu for the Tools offered by FuseCP
 	do {
 		do {
 		cls
-			Write-Host "`n`tSolidCP Setup Menu - Tools`n" -ForegroundColor Magenta
+			Write-Host "`n`tFuseCP Setup Menu - Tools`n" -ForegroundColor Magenta
 			Write-Host "`t  Please select the required Tool you want to run on this machine`n`n" -ForegroundColor Cyan
 	$menu = @"
 	    A. Harden File Permissions
@@ -1254,7 +1254,7 @@ Function MainMenu_Option_T() { # Function to show the user a Sub Menu for the To
 Function MainMenu_Option_T_A() { # Function to call multiple functions to harden the file permissions on this machine
 	CLS
 	Write-Host "SolifCP - Harden the File Permissions on this machine" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	HardenFilePermissions
 	dPressAnyKeyToExit
 }
@@ -1264,7 +1264,7 @@ Function MainMenu_Option_T_A() { # Function to call multiple functions to harden
 Function MainMenu_Option_T_B() { # Function to call multiple functions to Harden Microsoft .NET
 	CLS
 	Write-Host "SolifCP - Harden Microsoft .NET" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	HardenDotNETforIIS
 	dPressAnyKeyToExit
 }
@@ -1274,7 +1274,7 @@ Function MainMenu_Option_T_B() { # Function to call multiple functions to Harden
 Function MainMenu_Option_T_C() { # Function to call multiple functions to fixFix SSL Issues for Microsoft IIS
 	CLS
 	Write-Host "SolifCP - Fix SSL Issues for Microsoft IIS" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	HardenIIS_SSL
 	dPressAnyKeyToExit
 }
@@ -1284,13 +1284,13 @@ Function MainMenu_Option_T_C() { # Function to call multiple functions to fixFix
 Function MainMenu_Option_T_D() { # Function to call multiple functions to Install LetsEncrypt for Microsoft IIS
 	CLS
 	Write-Host "SolifCP - Install LetsEncrypt for Microsoft IIS" -ForegroundColor Magenta
-	Write-Host "`tStarting server setup for SolidCP`n" -ForegroundColor Gray
+	Write-Host "`tStarting server setup for FuseCP`n" -ForegroundColor Gray
 	InstallLetsEncryptACMESharp
 	dPressAnyKeyToExit
 }
 
 ####################################################################################################################################################################################
-# Main Menu - Option X - Exit the SolidCP Menu
+# Main Menu - Option X - Exit the FuseCP Menu
 Function MainMenu_Option_X() { # Function to Exit this menu
 	CLS
 	Write-Host "`n`t ******************************" -ForegroundColor Green
@@ -1483,13 +1483,13 @@ Function dCheckMariaMySQLpassword()                         # Function to check 
 
 ####################################################################################################################################################################################
 Function dCheckIPaddressesSet() {                            # Function to check if the IP Addresses have been set at the top of this script
-	if (!$dSolidCPEnterpriseSvrIP) { # If the Enterprise Server IP Address has not been set ask the user for one
+	if (!$dFuseCPEnterpriseSvrIP) { # If the Enterprise Server IP Address has not been set ask the user for one
 		do {
 			cls
 			Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *     You have not specified the IP Address     *" -ForegroundColor Yellow
-			Write-Host "`t *      for your SolidCP Enterprise Server!      *" -ForegroundColor Yellow
+			Write-Host "`t *      for your FuseCP Enterprise Server!      *" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *      You can set this at the top of this      *" -ForegroundColor Yellow
 			Write-Host "`t *           script before running it.           *" -ForegroundColor Yellow
@@ -1497,8 +1497,8 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			Write-Host "`t *   It is a requirement to open the firewall    *" -ForegroundColor Yellow
 			Write-Host "`t *   for UNC access from the Enterprise Server   *" -ForegroundColor Yellow
 			Write-Host "`t *     on each server if you want to use the     *" -ForegroundColor Yellow
-			Write-Host "`t *    Upgrade feature from the SolidCP Portal    *" -ForegroundColor Yellow
-			Write-Host "`t *        or from the SolidCP PowerShell         *" -ForegroundColor Yellow
+			Write-Host "`t *    Upgrade feature from the FuseCP Portal    *" -ForegroundColor Yellow
+			Write-Host "`t *        or from the FuseCP PowerShell         *" -ForegroundColor Yellow
 			Write-Host "`t *              Auto-Upgrade Script              *" -ForegroundColor Yellow
 			if (!$dSCPfirewallUNCshareIPs) {
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -1519,7 +1519,7 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *************************************************" -ForegroundColor Yellow
 
-			$choice = Read-Host "`n`tDo you want to enter the IP Address of your SolidCP Enterprise Server`? (Y/N)"
+			$choice = Read-Host "`n`tDo you want to enter the IP Address of your FuseCP Enterprise Server`? (Y/N)"
 			$ok = $choice -match '[y|n]'
 
 			if ( -not $ok) { Write-Host "`t Invalid selection" -ForegroundColor Yellow ; start-Sleep -Seconds 1 }
@@ -1529,11 +1529,11 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			"Y" {
 				do { # Ask for the Enterprise Server IP Address (can be single IP or in CIDR format)
 					$ok_EntSvrIP = ""
-					$script:dSolidCPEnterpriseSvrIP = Read-Host "`n`tPlease enter the SolidCP Enterprise Server IPV4 Address"
-					$ok_EntSvrIP = CheckIP -IPV4 "$dSolidCPEnterpriseSvrIP"
+					$script:dFuseCPEnterpriseSvrIP = Read-Host "`n`tPlease enter the FuseCP Enterprise Server IPV4 Address"
+					$ok_EntSvrIP = CheckIP -IPV4 "$dFuseCPEnterpriseSvrIP"
 					if ( -not $ok_EntSvrIP) { Write-Host "`t Invalid selection" -ForegroundColor Yellow ; start-Sleep -Seconds 1 }
 				} until ( $ok_EntSvrIP )
-				Write-Host "`t You entered `"$dSolidCPEnterpriseSvrIP`"" -ForegroundColor Green
+				Write-Host "`t You entered `"$dFuseCPEnterpriseSvrIP`"" -ForegroundColor Green
 			}
 			"N" { Write-Host "`n`tYou will need to manually set the firewall rules to allow UNC Access to this machine from your Enterprise Server" -ForegroundColor Yellow }
 		}
@@ -1560,7 +1560,7 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			"N" { Write-Host "`n`tYou will need to manually set the firewall rules to allow RDP Access to this machine" -ForegroundColor Yellow }
 		}
 	}
-	if ($dSolidCPEnterpriseSvrIP) {ValidateIP -IPaddress "$dSolidCPEnterpriseSvrIP"} # Check that the Enterprise Server IP Address is valid
+	if ($dFuseCPEnterpriseSvrIP) {ValidateIP -IPaddress "$dFuseCPEnterpriseSvrIP"} # Check that the Enterprise Server IP Address is valid
 	if ($dSCPfirewallUNCshareIPs) {ValidateIP -IPaddress "$dSCPfirewallUNCshareIPs"} # Check that the UNC Share IP Address(es) are valid
 	if ($dSCPfirewallRDPaccess)   {ValidateIP -IPaddress "$dSCPfirewallRDPaccess"}   # Check that the Remote Desktop IP Address(es) are valid
 }
@@ -1691,7 +1691,7 @@ Function ValidateIP()                                       # Function for check
 
 
 ####################################################################################################################################################################################
-Function SolidCPFileDownload($dProduct)                     # Function to get the Download URL, Folder Name and File Name from the SolidCP Installer Site for the required file
+Function FuseCPFileDownload($dProduct)                     # Function to get the Download URL, Folder Name and File Name from the FuseCP Installer Site for the required file
 {
 	Return ($dSCPFileDownloadLinks.SelectNodes("//Feed/Files/Downloads/$dProduct"))
 }
@@ -1712,7 +1712,7 @@ Function EnableWindowsUpdates()                             # Function to enable
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
 	Write-Host "`t *     Please ensure ALL Windows Updates are     *" -ForegroundColor Yellow
 	Write-Host "`t *      installed before adding this server      *" -ForegroundColor Yellow
-	Write-Host "`t *          to your SolidCP Deployment.          *" -ForegroundColor Yellow
+	Write-Host "`t *          to your FuseCP Deployment.          *" -ForegroundColor Yellow
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
 	Write-Host "`t *************************************************" -ForegroundColor Yellow
 }
@@ -1722,7 +1722,7 @@ Function EnableWindowsUpdates()                             # Function to enable
 Function InstallCommonFeatures()                            # Function for common features on the servers
 {
 	# Start installing the Common Features required on the machine
-	Write-Host "`tChecking the common features required for SolidCP" -ForegroundColor Cyan
+	Write-Host "`tChecking the common features required for FuseCP" -ForegroundColor Cyan
 	(Import-Module ServerManager) | Out-Null
 	# Install .NET Framework 3.5 on the server
 	(Add-WindowsFeature -Name Net-Framework-Core) | Out-Null
@@ -1754,12 +1754,12 @@ Function InstallCommonFeatures()                            # Function for commo
 	Enable-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv4-In)"
 	Enable-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv6-In)"
 	# Add the firewall rule in for UNC Access to this machine from the IP Addresses specified in the user defined section unless it already exists
-	if ( !(Get-NetFirewallRule | where DisplayName -EQ "Allow SolidCP UNC Share") ) {
+	if ( !(Get-NetFirewallRule | where DisplayName -EQ "Allow FuseCP UNC Share") ) {
 		if ($dSCPfirewallUNCshareIPs) { $IPV4addresses_UNC = $dSCPfirewallUNCshareIPs.replace(' ','').split(';') } # Build the array of IP Addresses
-		if ($dSolidCPEnterpriseSvrIP) { $IPV4addresses_UNC += "$dSolidCPEnterpriseSvrIP" }                         # Add the Enterprise Server IP Address to the array
+		if ($dFuseCPEnterpriseSvrIP) { $IPV4addresses_UNC += "$dFuseCPEnterpriseSvrIP" }                         # Add the Enterprise Server IP Address to the array
 		if ($IPV4addresses_UNC) { # If the array is not empty then create and enable the firewall rule
-			(New-NetFirewallRule -DisplayName "Allow SolidCP UNC Share" -Description "Firewall rule to allow remote UNC access to the default share from the SolidCP Enterprise Server" -Protocol "TCP" -LocalPort "445" -RemoteAddress $IPV4addresses_UNC -WarningAction SilentlyContinue) | Out-Null
-			(Enable-NetFirewallRule -DisplayName "Allow SolidCP UNC Share") | Out-Null
+			(New-NetFirewallRule -DisplayName "Allow FuseCP UNC Share" -Description "Firewall rule to allow remote UNC access to the default share from the FuseCP Enterprise Server" -Protocol "TCP" -LocalPort "445" -RemoteAddress $IPV4addresses_UNC -WarningAction SilentlyContinue) | Out-Null
+			(Enable-NetFirewallRule -DisplayName "Allow FuseCP UNC Share") | Out-Null
 		}
 	}
 	# Add the firewall rule in for Remote Desktop Access to this machine from the IP Addresses specified in the user defined section
@@ -1774,16 +1774,16 @@ Function InstallCommonFeatures()                            # Function for commo
 
 
 ####################################################################################################################################################################################
-Function InstallIISforSolidCP()         # Function to install SolidCP IIS (Basic Requirements)
+Function InstallIISforFuseCP()         # Function to install FuseCP IIS (Basic Requirements)
 {
-	Write-Host "`tInstalling the features required for SolidCP to run on IIS Server" -ForegroundColor Cyan
+	Write-Host "`tInstalling the features required for FuseCP to run on IIS Server" -ForegroundColor Cyan
 	Write-Host "`t  ****************************************" -ForegroundColor Green
 	Write-Host "`t  *                                      *" -ForegroundColor Green
 	Write-Host "`t  *  Please be patient while we install  *" -ForegroundColor Green
 	Write-Host "`t  *    the required Winodws Features     *" -ForegroundColor Green
 	Write-Host "`t  *                                      *" -ForegroundColor Green
 	Write-Host "`t  ****************************************" -ForegroundColor Green
-	# Install the features required by SolidCP Server to run on the machine, this is the minimum requirements for SolidCP to be installed on the server.
+	# Install the features required by FuseCP Server to run on the machine, this is the minimum requirements for FuseCP to be installed on the server.
 	(Add-WindowsFeature -Name Web-Server, Web-WebServer, Web-Common-Http, Web-Default-Doc, Web-Dir-Browsing, Web-Http-Errors, Web-Static-Content, Web-Http-Redirect, Web-Health, Web-Http-Logging, Web-Log-Libraries, Web-Http-Tracing, Web-Performance, Web-Stat-Compression, Web-Security, Web-Filtering, Web-Client-Auth, Web-Windows-Auth, Web-App-Dev, Web-Net-Ext, Web-Net-Ext45, Web-Asp-Net, Web-Asp-Net45, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Mgmt-Tools, Web-Mgmt-Console, Web-Scripting-Tools) | Out-Null
 }
 
@@ -1800,7 +1800,7 @@ Function InstallIISforHosting()         # Function to install additional IIS fea
 	Set-WebConfigurationProperty -Filter System.Applicationhost/Sites/SiteDefaults/logfile -Name LogExtFileFlags -Value "Date,Time,ClientIP,UserName,SiteName,ComputerName,ServerIP,Method,UriStem,UriQuery,HttpStatus,Win32Status,BytesSent,BytesRecv,TimeTaken,ServerPort,UserAgent,Cookie,Referer,ProtocolVersion,Host,HttpSubStatus"
 	if ($dDomainMember) {
 		# Create a domain group called "SCP_IUSRS_ComputerName" within the Web Server Organisational Unit in Active Directory
-		CreateSolidCPdomainOU -Web_Server
+		CreateFuseCPdomainOU -Web_Server
 	}
 }
 
@@ -1812,13 +1812,13 @@ Function InstallFTPforHosting()         # Function to install additional IIS fea
 	# Install the additional features required for a customer FTP server or shared hosting server that will be public facing
 	(Add-WindowsFeature -Name Web-Ftp-Server, Web-Ftp-Service) | Out-Null
 	Write-Host "`tConfiguring the FTP Server on this machine" -ForegroundColor Cyan
-	# Check if the FTP Server is installed on this machine, if it check to make sure the Default FTP Site is not setup, then set it up corectly for SolidCP
+	# Check if the FTP Server is installed on this machine, if it check to make sure the Default FTP Site is not setup, then set it up corectly for FuseCP
 	If ( ((Get-WindowsFeature *Web-Ftp-Service*).Installed[0]) -And !(Test-Path "IIS:\Sites\Default FTP Site" -pathType container) ) {
 		# Create a local group called "SCPFtpUsers" on the local web server unless it already exists
-		CreateLocalUserOrGroup "SCPFtpUsers" "SolidCP FTP Users Group  ********* DO NOT DELETE *********" "Group"
+		CreateLocalUserOrGroup "SCPFtpUsers" "FuseCP FTP Users Group  ********* DO NOT DELETE *********" "Group"
 		# Create a domain group called "SCPFtpUsers_ComputerName" within the FTP Server Organisational Unit in Active Directory
 		if ($dDomainMember) {
-			CreateSolidCPdomainOU -FTP_Server
+			CreateFuseCPdomainOU -FTP_Server
 		}
 		# Create the "ftproot" folder in "C:\inetpub" if it doesnt exist
 		if(!(Test-Path "$env:SystemDrive\inetpub\ftproot")) {New-Item "$env:SystemDrive\inetpub\ftproot" -itemType directory}
@@ -1827,7 +1827,7 @@ Function InstallFTPforHosting()         # Function to install additional IIS fea
 		if ($dDomainMember) {
 			SetAccessToFolder "C:\inetpub\ftproot" "SCPFtpUsers_$env:COMPUTERNAME" "Read" "Allow" "Domain"
 		}
-		# Create the FTP Site for SolidCP only if it does not alreayd exist
+		# Create the FTP Site for FuseCP only if it does not alreayd exist
 		if (!(Test-Path "IIS:\Sites\Default FTP Site" -pathType container)) { # Setup the SolifCP FTP Site only if it doesn't already exist
 			Import-Module WebAdministration
 			$bindings = '@{protocol="ftp";bindingInformation="'+ $dIPV4 +':21:"}'	# Setup the Bindings for the FTP Site with the IP Address gathered above
@@ -1963,22 +1963,22 @@ Function GetMembersOfGroup ($dGroupName, $dIdentifier)                          
 
 ####################################################################################################################################################################################
 Function CreateDomainComputerObject()                                           # Create a Domain Computer Object if it does not already exist
-{ # Usage - CreateDomainComputerObject -Name "ComputerName" -OU "SolidCP" -Disabled
+{ # Usage - CreateDomainComputerObject -Name "ComputerName" -OU "FuseCP" -Disabled
 	Param(
 		[string]$Name,    # Computer Name to be added to Active Directory
 		[string]$OU,      # Organisational Unit in Active Directory where to add the new Computer Object
 		[switch]$Disabled # Disable the new Computer Object when creating it
 	)
 	if ($OU) {
-		$ComputerOU  = (([ADSI]‚ÄúLDAP://OU=$OU,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)‚Äú).distinguishedName)
+		$ComputerOU  = (([ADSI]ìLDAP://OU=$OU,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)ì).distinguishedName)
 	}else{
-		$ComputerOU  = (([ADSI]‚ÄúLDAP://CN=Computers,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)‚Äú).distinguishedName)
+		$ComputerOU  = (([ADSI]ìLDAP://CN=Computers,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)ì).distinguishedName)
 	}
 	if (!([string]::IsNullOrEmpty($ComputerOU))) { # Check of the Organisational Unit exists
 		if ( !([adsi]::Exists("LDAP://CN=$Name,$ComputerOU")) ) { # Check if the Computer Object exists
 			$dNewComputer = ([ADSI]"LDAP://$ComputerOU").create("Computer", "CN=$Name")
-			$dNewComputer.put(‚ÄúsAMAccountName‚Äù,($Name + "$"))
-			$dNewComputer.put(‚ÄúuserAccountControl‚Äù,4128)
+			$dNewComputer.put(ìsAMAccountNameî,($Name + "$"))
+			$dNewComputer.put(ìuserAccountControlî,4128)
 			# Disable the Computer Object if required
 			if ($Disabled) { $dNewComputer.InvokeSet("AccountDisabled", $true) }
 			$dNewComputer.setInfo()
@@ -1996,16 +1996,16 @@ Function CreateDomainComputerObject()                                           
 
 ####################################################################################################################################################################################
 Function AddDomainComputerToComputerObject()                                    # Add a Domain Computer to a Domain Computer Object
-{ # Usage - AddDomainComputerToComputerObject -Computer "ComputerName" -OU "SolidCP" -Add "ComputerNameToAdd"
+{ # Usage - AddDomainComputerToComputerObject -Computer "ComputerName" -OU "FuseCP" -Add "ComputerNameToAdd"
 	Param(
 		[string]$Computer, # Domain Computer Object in Active Directory
 		[string]$OU,       # Organisational Unit in Active Directory where the Computer Object is located
 		[string]$Add       # Domain Computer Object to be added
 	)
 	if ($OU) {
-		$ComputerOU  = (([ADSI]‚ÄúLDAP://OU=$OU,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)‚Äú).distinguishedName)
+		$ComputerOU  = (([ADSI]ìLDAP://OU=$OU,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)ì).distinguishedName)
 	}else{
-		$ComputerOU  = (([ADSI]‚ÄúLDAP://CN=Computers,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)‚Äú).distinguishedName)
+		$ComputerOU  = (([ADSI]ìLDAP://CN=Computers,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)ì).distinguishedName)
 	}
 	if (!([string]::IsNullOrEmpty($ComputerOU))) { # Check of the Organisational Unit exists
 		if ([adsi]::Exists("LDAP://CN=$Computer,$ComputerOU")) { # Check if the Computer Object exists
@@ -2029,15 +2029,15 @@ Function AddDomainComputerToComputerObject()                                    
 
 ####################################################################################################################################################################################
 Function CheckDomainComputerObject()                                            # Check if a Domain Computer Object already exists
-{ # Usage - CheckDomainComputerObject -Name "ComputerName" -OU "SolidCP"
+{ # Usage - CheckDomainComputerObject -Name "ComputerName" -OU "FuseCP"
 	Param(
 		[string]$Name,    # Computer Name to be checked in Active Directory
 		[string]$OU       # Organisational Unit in Active Directory where to check the Computer Object
 	)
 	if ($OU) {
-		$ComputerOU  = (([ADSI]‚ÄúLDAP://OU=$OU,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)‚Äú).distinguishedName)
+		$ComputerOU  = (([ADSI]ìLDAP://OU=$OU,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)ì).distinguishedName)
 	}else{
-		$ComputerOU  = (([ADSI]‚ÄúLDAP://CN=Computers,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)‚Äú).distinguishedName)
+		$ComputerOU  = (([ADSI]ìLDAP://CN=Computers,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)ì).distinguishedName)
 	}
 	if ([adsi]::Exists("LDAP://CN=$Name,$ComputerOU") ) { # Check if the Computer Object exists
 		return $true
@@ -2250,7 +2250,7 @@ Function CheckFolderInheritance()               # Check inheritance on the folde
 
 
 ####################################################################################################################################################################################
-Function CreateSolidCPdomainOU()        # Function to create the SolidCP Organisational units
+Function CreateFuseCPdomainOU()        # Function to create the FuseCP Organisational units
 {
 	Param(
 		[switch]$Web_Server,    # Setup the WebServer Organisational Units in Active Directory
@@ -2264,76 +2264,76 @@ Function CreateSolidCPdomainOU()        # Function to create the SolidCP Organis
 		# Check to make sure the Organisational Unit has been set at the top of the script, if not then ask for one
 		if (!($dSolidCp_OU_Name)) {
 			$choice = ""
-			Write-Host "`n`tIt is reccomended that you have a Dedicated Organisational Unit for SolidCP" -ForegroundColor Yellow
+			Write-Host "`n`tIt is reccomended that you have a Dedicated Organisational Unit for FuseCP" -ForegroundColor Yellow
 			while ($choice -notmatch "[y|n]") {
-				$choice = Read-Host "`n`t Do you wan to install a new Organisational Unit for SolidCP`? (Y/N)"
+				$choice = Read-Host "`n`t Do you wan to install a new Organisational Unit for FuseCP`? (Y/N)"
 			}
 			if ($choice -eq "y") {
 				$script:dSolidCp_OU_Name = Read-Host "`n`t Please enter the name for the Organisational Unit"
-				if (!($dSolidCp_OU_Name)) {$script:dSolidCp_OU_Name = "SolidCP"}
+				if (!($dSolidCp_OU_Name)) {$script:dSolidCp_OU_Name = "FuseCP"}
 			}
 		}
-		# Check to see if the SolidCP Organisational Unit exists in Active Directory, if not then create it
+		# Check to see if the FuseCP Organisational Unit exists in Active Directory, if not then create it
 		if (!([adsi]::Exists("LDAP://OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-			New-ADOrganizationalUnit -Name "$dSolidCp_OU_Name" -Path "$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Organisational Unit"
+			New-ADOrganizationalUnit -Name "$dSolidCp_OU_Name" -Path "$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Organisational Unit"
 			do { $dCheckWebServersOUcreated = ([adsi]::Exists("LDAP://OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckWebServersOUcreated -eq $true)
 			Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name`" created in Active Directory" -ForegroundColor Green
 		}
 		if ($Web_Server) {
-			# Check to see if the WebServers Organisational Unit is created in the SolidCP Organisational Unit created above
+			# Check to see if the WebServers Organisational Unit is created in the FuseCP Organisational Unit created above
 			if (!([adsi]::Exists("LDAP://OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "WebServers" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Web Servers"
+				New-ADOrganizationalUnit -Name "WebServers" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Web Servers"
 				do { $dCheckWebServersOUcreated = ([adsi]::Exists("LDAP://OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckWebServersOUcreated -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\WebServers`" created in Active Directory" -ForegroundColor Green
 			}
 			# Create an Organisational Unit with the Server Name in the WebServers Organisational Unit created above if it doesn't already exist
 			if (!([adsi]::Exists("LDAP://OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "$env:COMPUTERNAME" -Path "OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Organisational Unit for $env:COMPUTERNAME"
+				New-ADOrganizationalUnit -Name "$env:COMPUTERNAME" -Path "OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Organisational Unit for $env:COMPUTERNAME"
 				do { $dCheckWebServerOUcreated1 = ([adsi]::Exists("LDAP://OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckWebServerOUcreated1 -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\WebServers\$env:COMPUTERNAME`" created in Active Directory" -ForegroundColor Green
 			}
 			# Create an Organisational Unit called Users in the Server Name Organisational Unit created above if it doesn't already exist
 			if (!([adsi]::Exists("LDAP://OU=Users,OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "Users" -Path "OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Organisational Unit for $env:COMPUTERNAME Web Users"
+				New-ADOrganizationalUnit -Name "Users" -Path "OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Organisational Unit for $env:COMPUTERNAME Web Users"
 				do { $dCheckWebServerOUcreated2 = ([adsi]::Exists("LDAP://OU=Users,OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckWebServerOUcreated2 -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\WebServers\$env:COMPUTERNAME\Users`" created in Active Directory" -ForegroundColor Green
 			}
 			# Create the SCP_IUSRS_ComputerName Security Group in the WebServers Organisational Unit if it doesn't already exist
 			if (!([bool](Get-ADGroup -LDAPFilter "(sAMAccountName=SCP_IUSRS_$env:COMPUTERNAME)"))) {
-				New-ADGroup -Name "SCP_IUSRS_$env:COMPUTERNAME" -SamAccountName "SCP_IUSRS_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "SolidCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
+				New-ADGroup -Name "SCP_IUSRS_$env:COMPUTERNAME" -SamAccountName "SCP_IUSRS_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "FuseCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
 				do { $dCheckWebServerUsercreated = ([bool](([ADSISearcher]"(sAMAccountName=SCP_IUSRS_$env:COMPUTERNAME)").FindOne())) } until ($dCheckWebServerUsercreated -eq $true)
 				Write-Host "`t The `"SCP_IUSRS_$env:COMPUTERNAME`" Security Group has been created in Active Directory" -ForegroundColor Green
 			}
 		}elseif ($FTP_Server) {
-			# Check to see if the FtpServers Organisational Unit is created in the SolidCP Organisational Unit created above
+			# Check to see if the FtpServers Organisational Unit is created in the FuseCP Organisational Unit created above
 			if (!([adsi]::Exists("LDAP://OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "FtpServers" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Web Servers"
+				New-ADOrganizationalUnit -Name "FtpServers" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Web Servers"
 				do { $dCheckFtpServersOUcreated = ([adsi]::Exists("LDAP://OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckFtpServersOUcreated -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\FtpServers`" created in Active Directory" -ForegroundColor Green
 			}
 			# Create an Organisational Unit with the Server Name in the FtpServers Organisational Unit created above if it doesn't already exist
 			if (!([adsi]::Exists("LDAP://OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "$env:COMPUTERNAME" -Path "OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Organisational Unit for $env:COMPUTERNAME"
+				New-ADOrganizationalUnit -Name "$env:COMPUTERNAME" -Path "OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Organisational Unit for $env:COMPUTERNAME"
 				do { $dCheckFtpServerOUcreated1 = ([adsi]::Exists("LDAP://OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckFtpServerOUcreated1 -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\FtpServers\$env:COMPUTERNAME`" created in Active Directory" -ForegroundColor Green
 			}
 			# Create an Organisational Unit called Users in the Server Name Organisational Unit created above if it doesn't already exist
 			if (!([adsi]::Exists("LDAP://OU=Users,OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "Users" -Path "OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Organisational Unit for $env:COMPUTERNAME Web Users"
+				New-ADOrganizationalUnit -Name "Users" -Path "OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Organisational Unit for $env:COMPUTERNAME Web Users"
 				do { $dCheckFtpServerOUcreated2 = ([adsi]::Exists("LDAP://OU=Users,OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckFtpServerOUcreated2 -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\FtpServers\$env:COMPUTERNAME\Users`" created in Active Directory" -ForegroundColor Green
 			}
 			# Create the SCPFtpUsers_ComputerName Security Group in the FtpServers Organisational Unit if it doesn't already exist
 			if (!([bool](Get-ADGroup -LDAPFilter "(sAMAccountName=SCPFtpUsers_$env:COMPUTERNAME)"))) {
-				New-ADGroup -Name "SCPFtpUsers_$env:COMPUTERNAME" -SamAccountName "SCPFtpUsers_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "SolidCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
+				New-ADGroup -Name "SCPFtpUsers_$env:COMPUTERNAME" -SamAccountName "SCPFtpUsers_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "FuseCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
 				do { $dCheckFtpServerUsercreated = ([bool](([ADSISearcher]"(sAMAccountName=SCPFtpUsers_$env:COMPUTERNAME)").FindOne())) } until ($dCheckFtpServerUsercreated -eq $true)
 				Write-Host "`t The `"SCPFtpUsers_$env:COMPUTERNAME`" Security Group has been created in Active Directory" -ForegroundColor Green
 			}
 		}elseif ($Hosted) {
-			# Check to see if the Hosted Organisational Unit is created in the SolidCP Organisational Unit created above
+			# Check to see if the Hosted Organisational Unit is created in the FuseCP Organisational Unit created above
 			if (!($dSCPhstd_OU_Name)) {$dSCPhstd_OU_Name = "Hosted"}
 			if (!([adsi]::Exists("LDAP://OU=$dSCPhstd_OU_Name,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "$dSCPhstd_OU_Name" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "SolidCP Web Servers"
+				New-ADOrganizationalUnit -Name "$dSCPhstd_OU_Name" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Web Servers"
 				do { $dCheckHostedOUcreated = ([adsi]::Exists("LDAP://OU=$dSCPhstd_OU_Name,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckHostedOUcreated -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\$dSCPhstd_OU_Name`" created in Active Directory" -ForegroundColor Green
 			}
@@ -2545,7 +2545,7 @@ Function HardenIIS_SSL()           # Function to Check if the IIS SSL Registry f
 {
 	Write-Host "`tChecking the SSL Security on this machine" -ForegroundColor Cyan
 	if (!($dSCPiisSSLDateCheckFile)) { # Set the location of the IIS SSL file used to store the date of the last update unless it has already been definied in the user variables
-		$dLocalDateFile = "C:\SolidCP\SSL_Fix_DO_NOT_DELETE.txt"
+		$dLocalDateFile = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"
 	}else{
 		$dLocalDateFile = $dSCPiisSSLDateCheckFile
 	}
@@ -2641,12 +2641,12 @@ Function CreateIISsslScheduledTask()           # Function to create a Scheduled 
 <####################################################################################################
 SolidSCP - IIS SSL Hardening
 
-v1.0    4th  October 2016:   First release of the SolidCP IIS SSL Hardeing Script
+v1.0    4th  October 2016:   First release of the FuseCP IIS SSL Hardeing Script
 
-Written By Marc Banyard for the SolidCP Project (c) 2016 SolidCP
+Written By Marc Banyard for the FuseCP Project (c) 2016 FuseCP
 
-Copyright (c) 2016, SolidCP
-SolidCP is distributed under the Creative Commons Share-alike license
+Copyright (c) 2016, FuseCP
+FuseCP is distributed under the Creative Commons Share-alike license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -2658,7 +2658,7 @@ are permitted provided that the following conditions are met:
   this list of conditions  and  the  following  disclaimer in  the documentation
   and/or other materials provided with the distribution.
 
-- Neither the name of  SolidCP  nor the names of its contributors may be used to
+- Neither the name of  FuseCP  nor the names of its contributors may be used to
   endorse or  promote  products  derived  from  this  software  without specific
   prior written permission.
 
@@ -2680,7 +2680,7 @@ CLS
 Write-Host "
         ****************************************
         *                                      *
-        *        Welcome to the SolidCP        *
+        *        Welcome to the FuseCP        *
         *       IIS SSL Hardening Script       *
         *                                      *
         *       Please be patient whilst       *
@@ -2813,7 +2813,7 @@ HardenIIS_SSL
 '@
 
 	if (!($dSCPiisSSLDateCheckFile)) { # Set the location of the IIS SSL file used to store the date of the last update unless it has already been definied in the user variables
-		$dLocalDateFile = "C:\SolidCP\SSL_Fix_DO_NOT_DELETE.txt"
+		$dLocalDateFile = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"
 	}else{
 		$dLocalDateFile = $dSCPiisSSLDateCheckFile
 	}
@@ -2833,13 +2833,13 @@ HardenIIS_SSL
 	}
 
 	# Create the IIS SSL Hardening PowerShell Script on the Server so we can run it as a Scheduled Task
-	(New-Item "C:\SolidCP\IIS_SSL_Hardening.ps1" -type file -force -value "$((($dSCPiisSSLAutoScript -replace "_XML_Installer_Site_", $dRemoteXMLfile) -replace "_SCP_Date_Check_File_", $dLocalDateFile) -replace "`n", "`r`n")") | Out-Null
+	(New-Item "C:\FuseCP\IIS_SSL_Hardening.ps1" -type file -force -value "$((($dSCPiisSSLAutoScript -replace "_XML_Installer_Site_", $dRemoteXMLfile) -replace "_SCP_Date_Check_File_", $dLocalDateFile) -replace "`n", "`r`n")") | Out-Null
 	# Create the IIS SSL Hardening Scheduled Task as XML Format so we can import it
-	(New-Item "C:\SolidCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml" -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>SolidCP</Author>`r`n    <Description>PowerShell file that runs Daily to fix any new SSL Security Issues from and XML file on the SolidCP Installer Site.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <CalendarTrigger>`r`n      <Repetition>`r`n        <Interval>P1D</Interval>`r`n        <Duration>P1D</Duration>`r`n        <StopAtDurationEnd>false</StopAtDurationEnd>`r`n      </Repetition>`r`n      <StartBoundary>2015-01-01T00:00:00</StartBoundary>`r`n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>`r`n      <Enabled>true</Enabled>`r`n      <ScheduleByDay>`r`n        <DaysInterval>1</DaysInterval>`r`n      </ScheduleByDay>`r`n    </CalendarTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dSSLtaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>false</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT6H</Interval>`r`n      <Count>4</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>powershell.exe</Command>`r`n      <Arguments>-file `"C:\SolidCP\IIS_SSL_Hardening.ps1`"</Arguments>`r`n      <WorkingDirectory>C:\SolidCP</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
+	(New-Item "C:\FuseCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml" -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>FuseCP</Author>`r`n    <Description>PowerShell file that runs Daily to fix any new SSL Security Issues from and XML file on the FuseCP Installer Site.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <CalendarTrigger>`r`n      <Repetition>`r`n        <Interval>P1D</Interval>`r`n        <Duration>P1D</Duration>`r`n        <StopAtDurationEnd>false</StopAtDurationEnd>`r`n      </Repetition>`r`n      <StartBoundary>2015-01-01T00:00:00</StartBoundary>`r`n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>`r`n      <Enabled>true</Enabled>`r`n      <ScheduleByDay>`r`n        <DaysInterval>1</DaysInterval>`r`n      </ScheduleByDay>`r`n    </CalendarTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dSSLtaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>false</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT6H</Interval>`r`n      <Count>4</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>powershell.exe</Command>`r`n      <Arguments>-file `"C:\FuseCP\IIS_SSL_Hardening.ps1`"</Arguments>`r`n      <WorkingDirectory>C:\FuseCP</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
 	# Create the task and import the settings from the XML file we created above
-	(schtasks /create /XML C:\SolidCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml /tn "SolidCP - Check SSL Security") | Out-Null
+	(schtasks /create /XML C:\FuseCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml /tn "FuseCP - Check SSL Security") | Out-Null
 	# Remove the file used to import the Scheduled Task
-	(Remove-Item "C:\SolidCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml" -Force) | Out-Null
+	(Remove-Item "C:\FuseCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml" -Force) | Out-Null
 }
 
 
@@ -2847,7 +2847,7 @@ HardenIIS_SSL
 Function AddWebServerToDomainIISacco()  # Add the SCPServer-ComputerName account to the Domain Group called "IIS_IUSRS" only if the SCP Server component is installed
 {
 	if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
-		if (!(Test-Path "C:\SolidCP\Server")) { # Make sure the Server Component is installed
+		if (!(Test-Path "C:\FuseCP\Server")) { # Make sure the Server Component is installed
 			if ([bool](([ADSISearcher]"(sAMAccountName=SCPServer-$env:COMPUTERNAME)").FindOne())) { # Make sure the SCPServer-ComputerName Domain Account exists
 				(AddDomainUserToDomainGroup "IIS_IUSRS" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "IIS_IUSRS"
 			}
@@ -2857,9 +2857,9 @@ Function AddWebServerToDomainIISacco()  # Add the SCPServer-ComputerName account
 
 
 ####################################################################################################################################################################################
-Function InstallDisablePasswdComplex()  # Disable Password Complexity Policy ‚Äì Local Security Policy
+Function InstallDisablePasswdComplex()  # Disable Password Complexity Policy ñ Local Security Policy
 {
-	Write-Host "`tDisabling Password Complexity Policy ‚Äì Local Security Policy" -ForegroundColor Cyan
+	Write-Host "`tDisabling Password Complexity Policy ñ Local Security Policy" -ForegroundColor Cyan
 	(secedit /export /cfg c:\secpol.cfg) | Out-Null;
 	((gc C:\secpol.cfg).replace("PasswordComplexity = 1", "PasswordComplexity = 0") | Out-File C:\secpol.cfg) | Out-Null;
 	(secedit /configure /db c:\windows\security\local.sdb /cfg c:\secpol.cfg /areas SECURITYPOLICY) | Out-Null;
@@ -2868,12 +2868,12 @@ Function InstallDisablePasswdComplex()  # Disable Password Complexity Policy ‚Äì
 
 
 ####################################################################################################################################################################################
-Function InstallIISforESandPortal()     # Function to install additional IIS features required by the SolidCP Enterprise Server and Portal
+Function InstallIISforESandPortal()     # Function to install additional IIS features required by the FuseCP Enterprise Server and Portal
 {
-	Write-Host "`tInstalling the features required for the SolidCP Enterprise Server and Portal" -ForegroundColor Cyan
-	# Install the additional features required for SolidCP to be able to send emails from the Enterpeise Server
+	Write-Host "`tInstalling the features required for the FuseCP Enterprise Server and Portal" -ForegroundColor Cyan
+	# Install the additional features required for FuseCP to be able to send emails from the Enterpeise Server
 	(Add-WindowsFeature -Name Web-Lgcy-Mgmt-Console, SMTP-Server) | Out-Null
-	# Change the "Default Website" port from 80 to 8080 so that we can install SolidCP on Port 80
+	# Change the "Default Website" port from 80 to 8080 so that we can install FuseCP on Port 80
 	if ( (Get-WebBinding -Name 'Default Web Site').bindingInformation -eq "*:80:" ) {
 		Set-WebBinding -Name 'Default Web Site' -BindingInformation "*:80:" -PropertyName Port -Value 8080
 	}
@@ -2925,7 +2925,7 @@ Function AddRDSserversToServerManager()                     # Function to add al
 			# Get a list of all servers in the specified Organisational Unit
 			$ServerList = (Get-ADComputer -LDAPFilter "(name=*)" -SearchBase "OU=$(SplitStringReverseJoin -String $OU -Split '\\' -Join ",OU="),$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)").Name
 			# Close the Server Manager if it is running on this machine
-			get-process ServerManager  -ErrorAction SilentlyContinue | stop-process ‚Äìforce
+			get-process ServerManager  -ErrorAction SilentlyContinue | stop-process ñforce
 			if (!(Test-Path "$env:APPDATA\Microsoft\Windows\ServerManager\ServerList.xml")) {
 				if (!(Test-Path "$env:APPDATA\Microsoft\Windows\ServerManager\")) {
 					(md -Path "$env:APPDATA\Microsoft\Windows\ServerManager\" -Force) | Out-Null
@@ -2939,7 +2939,7 @@ Function AddRDSserversToServerManager()                     # Function to add al
 			}
 			# Get a list of all the servers in the specified Organisational Unit
 			$file = get-item "$env:APPDATA\Microsoft\Windows\ServerManager\ServerList.xml"
-			copy-item ‚Äìpath $file ‚Äìdestination $file-backup ‚Äìforce
+			copy-item ñpath $file ñdestination $file-backup ñforce
 			$xml = [xml] (get-content $file )
 			foreach ($Server in $ServerList) {
 				if ($xml.ServerList.ServerInfo.name -notcontains "$([System.Net.Dns]::GetHostByName(($Server)).HostName)") {
@@ -3099,9 +3099,9 @@ Function InstallRDSconnectionBroker()                       # Function to instal
 				if ($choiceRDSgw -eq "y") {
 					Write-Host "`t Adding this server as an `"RD Gateway`" Server" -ForegroundColor Green
 					(Add-RDServer -Server "$dFQDNthisMachine" -Role "RDS-GATEWAY" -ConnectionBroker "$dRDSconnBroker" -GatewayExternalFqdn "$dRDSGatewayFQDN") | Out-Null
-					# Install the SolidCP Installer and then install the SolidCP Server component as this is required on the RD Gateway server only
-					InstallSolidCPInstaller
-					InstallSolidCPcomponent -Server
+					# Install the FuseCP Installer and then install the FuseCP Server component as this is required on the RD Gateway server only
+					InstallFuseCPInstaller
+					InstallFuseCPcomponent -Server
 				}
 			}
 			Write-Host "`t This server will automatically reboot to complete the installation" -ForegroundColor Yellow
@@ -3152,7 +3152,7 @@ Function InstallRDSconnectionBroker()                       # Function to instal
 					Write-Host "`t Starting the installation of the Remote Desktop Connection Broker" -ForegroundColor Green
 					Write-Host "`t The `"RD Session Host`" will reboot automatically once the roles have been installed" -ForegroundColor Yellow
 					Write-Host "`t If not please reboot the server once this one has rebooted" -ForegroundColor Yellow
-					(New-SessionDeployment ‚ÄìConnectionBroker "$(($dRDSconnBrokerServer).ToLower())" ‚ÄìWebAccessServer "$(($dRDwebAccessServer).ToLower())" ‚ÄìSessionHost "$(($dRDSessionHostServer).ToUpper())") | Out-Null
+					(New-SessionDeployment ñConnectionBroker "$(($dRDSconnBrokerServer).ToLower())" ñWebAccessServer "$(($dRDwebAccessServer).ToLower())" ñSessionHost "$(($dRDSessionHostServer).ToUpper())") | Out-Null
 
 					# If this server is not a RD Session Host server we can ask if it needs to be an RD Gateway server
 					if ($dRDSessionHostServer -ne $dFQDNthisMachine) {
@@ -3161,9 +3161,9 @@ Function InstallRDSconnectionBroker()                       # Function to instal
 						if ($choiceRDSgw -eq "y") {
 							Write-Host "`t Adding this server as an `"RD Gateway`" Server" -ForegroundColor Green
 							(Add-RDServer -Server "$(($dFQDNthisMachine).ToLower())" -Role "RDS-GATEWAY" -ConnectionBroker "$dRDSconnBroker" -GatewayExternalFqdn "$dRDSGatewayFQDN") | Out-Null
-							# Install the SolidCP Installer and then install the SolidCP Server component as this is required on the RD Gateway server only
-							InstallSolidCPInstaller
-							InstallSolidCPcomponent -Server
+							# Install the FuseCP Installer and then install the FuseCP Server component as this is required on the RD Gateway server only
+							InstallFuseCPInstaller
+							InstallFuseCPcomponent -Server
 						}
 					}
 					Write-Host "`t This server will automatically reboot to complete the installation" -ForegroundColor Yellow
@@ -3517,9 +3517,9 @@ Function InstallActivePerl()            # Function to install Perl - ActiverPerl
 	if ( !(Test-Path "C:\Perl64") -or (Test-Path "C:\Perl\") ) {
 		# Perl is not installed on this server so go ahead and install it
 		Write-Host "`tDetermining your Operating System Type and installing the correct version of Perl" -ForegroundColor Cyan
-		# Get the latest download information from the SolidCP Installer site
-		($ActivePerl_x64 = (SolidCPFileDownload "ActivePerl_x64")) | Out-Null
-		($ActivePerl_x32 = (SolidCPFileDownload "ActivePerl_x32")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($ActivePerl_x64 = (FuseCPFileDownload "ActivePerl_x64")) | Out-Null
+		($ActivePerl_x32 = (FuseCPFileDownload "ActivePerl_x32")) | Out-Null
 		# Create the Perl ActivePerl Directory in our Installation Files folder ready for downloading
 		(md -Path "C:\_Install Files\$($ActivePerl_x64.FolderName)" -Force) | Out-Null ; cd "C:\_Install Files\$($ActivePerl_x64.FolderName)\"
 		# Import the PowerShell Web Administration Module
@@ -3562,9 +3562,9 @@ Function InstallWebPI()                                 # Function to install Mi
 	if ( !(Test-Path "C:\Program Files\Microsoft\Web Platform Installer\") ) {
 		# WebPI is not installed on this server so go ahead and install it
 		Write-Host "`tDetermining your Operating System Type and installing the correct version of WebPI" -ForegroundColor Cyan
-		# Get the latest download information from the SolidCP Installer site
-		($WebPI_x64 = (SolidCPFileDownload "WebPI_x64")) | Out-Null
-		($WebPI_x32 = (SolidCPFileDownload "WebPI_x32")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($WebPI_x64 = (FuseCPFileDownload "WebPI_x64")) | Out-Null
+		($WebPI_x32 = (FuseCPFileDownload "WebPI_x32")) | Out-Null
 		# Create the WebPI Directory in our Installation Files folder ready for downloading
 		(md -Path "C:\_Install Files\$($WebPI_x64.FolderName)" -Force) | Out-Null ; cd "C:\_Install Files\$($WebPI_x64.FolderName)\"
 		if ([Environment]::Is64BitProcess){ # Download and install the 64 bit version if the operating system is 64 bit.
@@ -3590,8 +3590,8 @@ Function InstallWebPI_PHP()                             # Function to install PH
 	# Check if VC++ 2012 32bit run times are installed - PHP doesnt work without them, if not then install them
 	if ( !(Test-Path "HKLM:\SOFTWARE\Classes\Installer\Dependencies\{33d1fd90-4274-48a1-9bc1-97e33d9c2d6f}") ) {
 		Write-Host "`tInstalling PHP runtime support" -ForegroundColor Cyan
-		# Get the latest download information from the SolidCP Installer site
-		($WebPI_PHP_Runtime_Support = (SolidCPFileDownload "WebPI_PHP_Runtime_Support")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($WebPI_PHP_Runtime_Support = (FuseCPFileDownload "WebPI_PHP_Runtime_Support")) | Out-Null
 		if (!(Test-Path "C:\_Install Files\$($WebPI_PHP_Runtime_Support.FolderName)")) { (md -Path "C:\_Install Files\$($WebPI_PHP_Runtime_Support.FolderName)" -Force) | Out-Null }
 		cd "C:\_Install Files\$($WebPI_PHP_Runtime_Support.FolderName)\"
 		if (!(Test-Path "C:\_Install Files\$($WebPI_PHP_Runtime_Support.FolderName)\$($WebPI_PHP_Runtime_Support.FileName)")) {
@@ -3616,7 +3616,7 @@ Function InstallWebPI_PHP()                             # Function to install PH
 		Write-Host "`t Installing PHP v7.0" -ForegroundColor Green
 		do {
 			# Install the Visual C++ 2015 Runtime (32bit) for PHP v7.0
-			($WebPI_PHP_Runtime_Support_2015 = (SolidCPFileDownload "WebPI_PHP_Runtime_Support_2015")) | Out-Null
+			($WebPI_PHP_Runtime_Support_2015 = (FuseCPFileDownload "WebPI_PHP_Runtime_Support_2015")) | Out-Null
 			if (!(Test-Path "C:\_Install Files\$($WebPI_PHP_Runtime_Support_2015.FolderName)")) { (md -Path "C:\_Install Files\$($WebPI_PHP_Runtime_Support_2015.FolderName)" -Force) | Out-Null }
 			cd "C:\_Install Files\$($WebPI_PHP_Runtime_Support_2015.FolderName)\"
 			if (!(Test-Path "C:\_Install Files\$($WebPI_PHP_Runtime_Support_2015.FolderName)\$($WebPI_PHP_Runtime_Support_2015.FileName)")) {
@@ -3652,8 +3652,8 @@ Function InstallWebPI_SQLdriverPHP()                    # Function to install th
 	if ( (Test-Path "C:\Program Files (x86)\PHP\v7.0\") -and (!(Test-Path "C:\Program Files (x86)\PHP\v5.6\ext\php_sqlsrv.dll")) ) { Write-Host "`t Installing the SQL Driver for PHP v5.6" -ForegroundColor Green ; (invoke-command {.\WebPICMD.exe /Install /Products:SQLDriverPHP56IIS /AcceptEULA}) | Out-Null }
 	if ( (Test-Path "C:\Program Files (x86)\PHP\v7.0\") -and (!(Test-Path "C:\Program Files (x86)\PHP\v7.0\ext\php_sqlsrv_7_ts_x86.dll")) ) {
 		Write-Host "`t Installing the SQL Driver for PHP v7.0" -ForegroundColor Green
-		# Get the latest download information from the SolidCP Installer site
-		($WebPI_PHP7_SQL_Driver = (SolidCPFileDownload "WebPI_PHP7_SQL_Driver")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($WebPI_PHP7_SQL_Driver = (FuseCPFileDownload "WebPI_PHP7_SQL_Driver")) | Out-Null
 		if ( !(Test-Path "C:\_Install Files\$($WebPI_PHP7_SQL_Driver.FolderName)") ) { (md -Path "C:\_Install Files\$($WebPI_PHP7_SQL_Driver.FolderName)" -Force) | Out-Null }
 		if ( (((Get-ChildItem "C:\_Install Files\$($WebPI_PHP7_SQL_Driver.FolderName)" | Measure-Object).Count) -eq "0") ) {
 			(New-Object System.Net.WebClient).DownloadFile("$($WebPI_PHP7_SQL_Driver.DownloadURL)", "C:\_Install Files\$($WebPI_PHP7_SQL_Driver.FolderName)\$($WebPI_PHP7_SQL_Driver.FileName)")
@@ -3737,8 +3737,8 @@ Function InstallMariaDB_MySQL($dMariaMySQLpasswd)       # Function to install th
 	if ($dMySQLvMariaDB -eq "MariaDB") { # Install MariaDB if required
 		if ( !(Test-Path "C:\Program Files\MariaDB 10.1\") ) { # Check if the MariaDB Database Server is already installed
 			Write-Host "`tDownloading the MariaDB Database Server" -ForegroundColor Cyan
-			# Get the latest download information from the SolidCP Installer site
-			($MariaDB_x64 = (SolidCPFileDownload "MariaDB_x64")) | Out-Null
+			# Get the latest download information from the FuseCP Installer site
+			($MariaDB_x64 = (FuseCPFileDownload "MariaDB_x64")) | Out-Null
 			# Create the MariaDB Database Server Directory in our Installation Files folder ready for downloading
 			(md -Path "C:\_Install Files\$($MariaDB_x64.FolderName)" -Force) | Out-Null ; cd "C:\_Install Files\$($MariaDB_x64.FolderName)\"
 			# Download MariaDB Database Server
@@ -3761,7 +3761,7 @@ Function InstallMariaDB_MySQL($dMariaMySQLpasswd)       # Function to install th
 		# Add the firewall rule to open Port 3306 for inbound management of the MySQL Server 5.1 only if it doesn't exist
 		if ( !(Get-NetFirewallRule | where DisplayName -EQ "MySQL Server - Port 3306") ) {
 			Write-Host "`tOpening port 3306 for the MySQL Database Server on the Firewall" -ForegroundColor Cyan
-			(New-NetFirewallRule -DisplayName "MySQL Server - Port 3306" -Direction Inbound ‚ÄìLocalPort 3306 -Protocol TCP -Action Allow) | Out-Null
+			(New-NetFirewallRule -DisplayName "MySQL Server - Port 3306" -Direction Inbound ñLocalPort 3306 -Protocol TCP -Action Allow) | Out-Null
 		}
 		cd "\"
 	}
@@ -3801,8 +3801,8 @@ Function InstallSQLsvr2014withTools()                   # Function to install SQ
 		Write-Host "`t  *             to download              *" -ForegroundColor Green
 		Write-Host "`t  *                                      *" -ForegroundColor Green
 		Write-Host "`t  ****************************************" -ForegroundColor Green
-		# Get the latest download information from the SolidCP Installer site
-		($Microsoft_SQL_Server_2014_With_Tools = (SolidCPFileDownload "Microsoft_SQL_Server_2014_With_Tools")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($Microsoft_SQL_Server_2014_With_Tools = (FuseCPFileDownload "Microsoft_SQL_Server_2014_With_Tools")) | Out-Null
 		# Create the SQL Server 2014 Express with Tools Directory in our Installation Files folder ready for downloading
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2014_With_Tools.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2014_With_Tools.FolderName)" -Force) | Out-Null
@@ -3863,8 +3863,8 @@ Function InstallSQLsvr2014noTools()                     # Function to install SQ
 		Write-Host "`t  *             to download              *" -ForegroundColor Green
 		Write-Host "`t  *                                      *" -ForegroundColor Green
 		Write-Host "`t  ****************************************" -ForegroundColor Green
-		# Get the latest download information from the SolidCP Installer site
-		($Microsoft_SQL_Server_2014_No_Tools = (SolidCPFileDownload "Microsoft_SQL_Server_2014_No_Tools")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($Microsoft_SQL_Server_2014_No_Tools = (FuseCPFileDownload "Microsoft_SQL_Server_2014_No_Tools")) | Out-Null
 		# Create the SQL Server 2014 Express Directory in our Installation Files folder ready for downloading
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2014_No_Tools.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2014_No_Tools.FolderName)" -Force) | Out-Null
@@ -3915,8 +3915,8 @@ Function InstallSQLsvr2014mgmtTools()                   # Function to install SQ
 		Write-Host "`t  *             to download              *" -ForegroundColor Green
 		Write-Host "`t  *                                      *" -ForegroundColor Green
 		Write-Host "`t  ****************************************" -ForegroundColor Green
-		# Get the latest download information from the SolidCP Installer site
-		($Microsoft_SQL_Server_2014_Tools_ONLY = (SolidCPFileDownload "Microsoft_SQL_Server_2014_Tools_ONLY")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($Microsoft_SQL_Server_2014_Tools_ONLY = (FuseCPFileDownload "Microsoft_SQL_Server_2014_Tools_ONLY")) | Out-Null
 		# Create the SQL Server 2014 Management Tools Directory in our Installation Files folder ready for downloading
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2014_Tools_ONLY.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2014_Tools_ONLY.FolderName)" -Force) | Out-Null
@@ -3953,8 +3953,8 @@ Function InstallSQLsvr2012NativeClnt()                  # Function to install SQ
 			(Stop-Service 'MSSQL*' -Force -WarningAction SilentlyContinue) | Out-Null
 		}
 		Write-Host "`t Downloading the SQL Server 2012 Native Client" -ForegroundColor Green
-		# Get the latest download information from the SolidCP Installer site
-		($Microsoft_SQL_Server_2012_Native_Client = (SolidCPFileDownload "Microsoft_SQL_Server_2012_Native_Client")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($Microsoft_SQL_Server_2012_Native_Client = (FuseCPFileDownload "Microsoft_SQL_Server_2012_Native_Client")) | Out-Null
 		# Create the SQL Server 2012 Native Client Directory in our Installation Files folder ready for downloading
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_Native_Client.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_Native_Client.FolderName)" -Force) | Out-Null
@@ -3987,7 +3987,7 @@ Function InstallSQLsvr2012PowerShellTools()             # Function to install th
 		}
 	}
 	if (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server 2012 Redist\SQL Server System CLR Types\1033\CurrentVersion")) {
-		($Microsoft_SQL_Server_2012_System_CLR_Types = (SolidCPFileDownload "Microsoft_SQL_Server_2012_System_CLR_Types")) | Out-Null
+		($Microsoft_SQL_Server_2012_System_CLR_Types = (FuseCPFileDownload "Microsoft_SQL_Server_2012_System_CLR_Types")) | Out-Null
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_System_CLR_Types.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_System_CLR_Types.FolderName)" -Force) | Out-Null
 			cd "C:\_Install Files\$($Microsoft_SQL_Server_2012_System_CLR_Types.FolderName)"
@@ -4000,7 +4000,7 @@ Function InstallSQLsvr2012PowerShellTools()             # Function to install th
 		((Start-Process -FilePath "C:\_Install Files\$($Microsoft_SQL_Server_2012_System_CLR_Types.FolderName)\$($Microsoft_SQL_Server_2012_System_CLR_Types.FileName)" -ArgumentList "/qb IACCEPTSQLNCLILICENSETERMS=YES" -Wait -Passthru).ExitCode) | Out-Null
 	}
 	if (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server 2012 Redist\SharedManagementObjects\1033\CurrentVersion")) {
-		($Microsoft_SQL_Server_2012_Shared_Management_Objects = (SolidCPFileDownload "Microsoft_SQL_Server_2012_Shared_Management_Objects")) | Out-Null
+		($Microsoft_SQL_Server_2012_Shared_Management_Objects = (FuseCPFileDownload "Microsoft_SQL_Server_2012_Shared_Management_Objects")) | Out-Null
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_Shared_Management_Objects.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_Shared_Management_Objects.FolderName)" -Force) | Out-Null
 			cd "C:\_Install Files\$($Microsoft_SQL_Server_2012_Shared_Management_Objects.FolderName)"
@@ -4013,7 +4013,7 @@ Function InstallSQLsvr2012PowerShellTools()             # Function to install th
 		((Start-Process -FilePath "C:\_Install Files\$($Microsoft_SQL_Server_2012_Shared_Management_Objects.FolderName)\$($Microsoft_SQL_Server_2012_Shared_Management_Objects.FileName)" -ArgumentList "/qb IACCEPTSQLNCLILICENSETERMS=YES" -Wait -Passthru).ExitCode) | Out-Null
 	}
 	if (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server 2012 Redist\PowerShell\1033\CurrentVersion")) {
-		($Microsoft_SQL_Server_2012_PowerShell_Tools = (SolidCPFileDownload "Microsoft_SQL_Server_2012_PowerShell_Tools")) | Out-Null
+		($Microsoft_SQL_Server_2012_PowerShell_Tools = (FuseCPFileDownload "Microsoft_SQL_Server_2012_PowerShell_Tools")) | Out-Null
 		if (!(Test-Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_PowerShell_Tools.FolderName)")) {
 			(md -Path "C:\_Install Files\$($Microsoft_SQL_Server_2012_PowerShell_Tools.FolderName)" -Force) | Out-Null
 			cd "C:\_Install Files\$($Microsoft_SQL_Server_2012_PowerShell_Tools.FolderName)"
@@ -4040,7 +4040,7 @@ Function InstallPowerShellGallery()                     # Function to install th
 {
 	if ($PSVersionTable.PSVersion.Major -match "3|4") {
 		if (!(Test-Path "C:\Program Files\WindowsPowerShell\Modules\PowerShellGet")) {
-			($PowerShell_Gallery = (SolidCPFileDownload "PowerShell_Gallery")) | Out-Null
+			($PowerShell_Gallery = (FuseCPFileDownload "PowerShell_Gallery")) | Out-Null
 			if (!(Test-Path "C:\_Install Files\$($PowerShell_Gallery.FolderName)")) {
 				(md -Path "C:\_Install Files\$($PowerShell_Gallery.FolderName)" -Force) | Out-Null
 				cd "C:\_Install Files\$($PowerShell_Gallery.FolderName)"
@@ -4057,7 +4057,7 @@ Function InstallPowerShellGallery()                     # Function to install th
 
 
 ####################################################################################################################################################################################
-Function InstallLetsEncryptACMESharp()                      # Function to get the Download URL, Folder Name and File Name from the SolidCP Installer Site for the required file
+Function InstallLetsEncryptACMESharp()                      # Function to get the Download URL, Folder Name and File Name from the FuseCP Installer Site for the required file
 {
 	if (!(Test-Path "C:\Program Files\WindowsPowerShell\Modules\ACMESharp")) {
 		# Install the PowerShell Gallery (PowerShellGet) if required
@@ -4123,8 +4123,8 @@ exit
 	# Register the SQL PowerShell Modules
 	start-Sleep -Seconds 25
 	(set-alias installutil $env:windir\microsoft.net\framework\v2.0.50727\installutil) | Out-Null
-	(installutil -i ‚ÄúC:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSProvider.dll‚Äù) | Out-Null
-	(installutil -i ‚ÄúC:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSSnapins.dll‚Äù) | Out-Null
+	(installutil -i ìC:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSProvider.dllî) | Out-Null
+	(installutil -i ìC:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSSnapins.dllî) | Out-Null
 	# Open the SQL PowerShell Enviroment and run the above command
 	cd "C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn"
 	invoke-expression "cmd /c start sqlps -Command {$dEnableSQLports}"
@@ -4149,14 +4149,14 @@ Function InstallFirewall_MSSQL()                        # Function to install th
 	}
 	# Add the firewall rule to open Port 1433 for inbound management of the Microsoft SQL Server only if it doesn't exist
 	if ( !(Get-NetFirewallRule | where DisplayName -EQ "Microsoft SQL Server - TCP Port 1433") ) {
-		(New-NetFirewallRule -DisplayName "Microsoft SQL Server - TCP Port 1433" -Direction Inbound ‚ÄìLocalPort "1433-1434" -Protocol TCP -Action Allow) | Out-Null
+		(New-NetFirewallRule -DisplayName "Microsoft SQL Server - TCP Port 1433" -Direction Inbound ñLocalPort "1433-1434" -Protocol TCP -Action Allow) | Out-Null
 		Write-Host "`t The SQL Server TCP Port `"1433`" Firewall rule has been added successfully" -ForegroundColor Green
 	}else{
 		(Set-NetFirewallRule -DisplayName "Microsoft SQL Server - TCP Port 1433" -Direction Inbound -LocalPort "1433-1434" -Protocol TCP -Action Allow) | Out-Null
 		Write-Host "`t The SQL Server TCP Port `"1433`" Firewall rule has been modified successfully" -ForegroundColor Green
 	}
 	if ( !(Get-NetFirewallRule | where DisplayName -EQ "Microsoft SQL Server - UDP Port 1433") ) {
-		(New-NetFirewallRule -DisplayName "Microsoft SQL Server - UDP Port 1433" -Direction Inbound ‚ÄìLocalPort "1433-1434" -Protocol UDP -Action Allow) | Out-Null
+		(New-NetFirewallRule -DisplayName "Microsoft SQL Server - UDP Port 1433" -Direction Inbound ñLocalPort "1433-1434" -Protocol UDP -Action Allow) | Out-Null
 		Write-Host "`t The SQL Server UDP Port `"1433`" Firewall rule has been added successfully" -ForegroundColor Green
 	}else{
 		(Set-NetFirewallRule -DisplayName "Microsoft SQL Server - UDP Port 1433" -Direction Inbound -LocalPort "1433-1434" -Protocol UDP -Action Allow) | Out-Null
@@ -4204,8 +4204,8 @@ Function InstallPhpMyAdmin()                            # Function to install ph
 		Import-Module WebAdministration
 		# Configure all logging options to be enabled for websites in IIS
 		Set-WebConfigurationProperty -Filter System.Applicationhost/Sites/SiteDefaults/logfile -Name LogExtFileFlags -Value "Date,Time,ClientIP,UserName,SiteName,ComputerName,ServerIP,Method,UriStem,UriQuery,HttpStatus,Win32Status,BytesSent,BytesRecv,TimeTaken,ServerPort,UserAgent,Cookie,Referer,ProtocolVersion,Host,HttpSubStatus"
-		# Get the latest download information from the SolidCP Installer site
-		($PHP_MyAdmin = (SolidCPFileDownload "PHP_MyAdmin")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($PHP_MyAdmin = (FuseCPFileDownload "PHP_MyAdmin")) | Out-Null
 		# Create the phpMyAdmin Directory in our Installation Files folder ready for downloading if it doesn't already exist
 		if (!(Test-Path "C:\_Install Files\$($PHP_MyAdmin.FolderName)")) { (md -Path "C:\_Install Files\$($PHP_MyAdmin.FolderName)" -Force) | Out-Null }
 		# Download the files required for phpMyAdmin
@@ -4235,7 +4235,7 @@ Function InstallPhpMyAdmin()                            # Function to install ph
 		# update the config
 		$newConfig = @"
 <?php
-//SolidCP phpMyAdmin Configuration
+//FuseCP phpMyAdmin Configuration
 `$cfg['blowfish_secret'] = '$randomSecret';
 
 `$i = 1;
@@ -4328,29 +4328,29 @@ Function InstallPhpMyAdmin()                            # Function to install ph
 		}
 		# Create the AppPool for phpMyAdmin
 		Write-Host "`t Creating the phpMyAdmin Application Pool in IIS" -ForegroundColor Green
-		(New-WebAppPool -Name "SolidCP phpMyAdmin .NET v4" -Force) | Out-Null
+		(New-WebAppPool -Name "FuseCP phpMyAdmin .NET v4" -Force) | Out-Null
 		# Create the new website for phpMyAdmin
 		Write-Host "`t Creating the phpMyAdmin website in IIS" -ForegroundColor Green
-		(New-Website -Name "SolidCP phpMyAdmin" -Port $dPhpMyAdminPort -HostHeader "$(($env:computerName).ToLower() + $dPhpMyAdminHostNm + (([System.Net.Dns]::GetHostByName(($env:computerName)).HostName) -replace (($env:computerName).ToLower()), ''))" -IPAddress "$dIPV4" -PhysicalPath "C:\phpMyAdmin\wwwroot\" -ApplicationPool "SolidCP phpMyAdmin .NET v4" -Force) | Out-Null
-		(Set-ItemProperty "IIS:\Sites\SolidCP phpMyAdmin" -name logfile.directory "C:\phpMyAdmin\logs\" -Force) | Out-Null
+		(New-Website -Name "FuseCP phpMyAdmin" -Port $dPhpMyAdminPort -HostHeader "$(($env:computerName).ToLower() + $dPhpMyAdminHostNm + (([System.Net.Dns]::GetHostByName(($env:computerName)).HostName) -replace (($env:computerName).ToLower()), ''))" -IPAddress "$dIPV4" -PhysicalPath "C:\phpMyAdmin\wwwroot\" -ApplicationPool "FuseCP phpMyAdmin .NET v4" -Force) | Out-Null
+		(Set-ItemProperty "IIS:\Sites\FuseCP phpMyAdmin" -name logfile.directory "C:\phpMyAdmin\logs\" -Force) | Out-Null
 		# Grant Read & Execute permissions on wwwroot folder and Logs Folder
-		SetAccessToFolderNoChk "C:\phpMyAdmin\wwwroot" "IIS AppPool\SolidCP phpMyAdmin .NET v4" "ReadAndExecute" "Allow";
+		SetAccessToFolderNoChk "C:\phpMyAdmin\wwwroot" "IIS AppPool\FuseCP phpMyAdmin .NET v4" "ReadAndExecute" "Allow";
 		SetAccessToFolderNoChk "C:\phpMyAdmin\wwwroot" "BUILTIN\IIS_IUSRS" "ReadAndExecute" "Allow";
 		SetAccessToFolderNoChk "C:\phpMyAdmin\wwwroot" "BUILTIN\$dLangUsersGroup" "ReadAndExecute" "Allow";
 		SetAccessToFolderNoChk "C:\phpMyAdmin\logs" "NT SERVICE\TrustedInstaller" "FullControl" "Allow";
 		# Set the "preloadEnabled" value to True to speed up loading on the phpMyAdmin site
-		if (Test-Path "IIS:\Sites\SolidCP phpMyAdmin" -pathType container) {
-			if ((Get-ItemProperty "IIS:\Sites\SolidCP phpMyAdmin" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
-				Set-ItemProperty "IIS:\Sites\SolidCP phpMyAdmin" -Name applicationDefaults.preloadEnabled -Value $true
+		if (Test-Path "IIS:\Sites\FuseCP phpMyAdmin" -pathType container) {
+			if ((Get-ItemProperty "IIS:\Sites\FuseCP phpMyAdmin" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
+				Set-ItemProperty "IIS:\Sites\FuseCP phpMyAdmin" -Name applicationDefaults.preloadEnabled -Value $true
 			}
 		}
-		#SetAccessToFolderNoChk "C:\phpMyAdmin\wwwroot\config.inc.php" "IIS AppPool\SolidCP phpMyAdmin .NET v4" "FullControl" "Allow";
+		#SetAccessToFolderNoChk "C:\phpMyAdmin\wwwroot\config.inc.php" "IIS AppPool\FuseCP phpMyAdmin .NET v4" "FullControl" "Allow";
 		(Restart-Service 'World Wide Web Publishing Service' -Force -WarningAction SilentlyContinue) | Out-Null
 		start-Sleep -Seconds 5
 		# Add the firewall rule to open the Port for phpMyAdmin only if it doesn't exist
-		if ( !(Get-NetFirewallRule | where DisplayName -EQ "SolidCP phpMyAdmin - Port $dPhpMyAdminPort") ) {
+		if ( !(Get-NetFirewallRule | where DisplayName -EQ "FuseCP phpMyAdmin - Port $dPhpMyAdminPort") ) {
 			Write-Host "`tOpening port $dPhpMyAdminPort for phpMyAdmin on the Firewall" -ForegroundColor Cyan
-			(New-NetFirewallRule -DisplayName "SolidCP phpMyAdmin - Port $dPhpMyAdminPort" -Direction Inbound ‚ÄìLocalPort $dPhpMyAdminPort -Protocol TCP -Action Allow) | Out-Null
+			(New-NetFirewallRule -DisplayName "FuseCP phpMyAdmin - Port $dPhpMyAdminPort" -Direction Inbound ñLocalPort $dPhpMyAdminPort -Protocol TCP -Action Allow) | Out-Null
 			Write-Host "`t Firewall rule added successfully" -ForegroundColor Green
 		}
 	}
@@ -4360,9 +4360,9 @@ Function InstallPhpMyAdmin()                            # Function to install ph
 ####################################################################################################################################################################################
 Function InstallWebDavFeatures()                            # Function to install WebDav features
 {
-	if (Test-Path $("\\" + ($dSolidCPEnterpriseSvrIP) + "\c$\SolidCP\Enterprise Server\Web.config")) {
+	if (Test-Path $("\\" + ($dFuseCPEnterpriseSvrIP) + "\c$\FuseCP\Enterprise Server\Web.config")) {
 		Write-Host "`tInstalling the features required for Cloud Storage Portal" -ForegroundColor Cyan
-		# Install the features required by the SolidCP Cloud Storage Portal on the server.
+		# Install the features required by the FuseCP Cloud Storage Portal on the server.
 		(Add-WindowsFeature -Name Web-DAV-Publishing, FS-Resource-Manager, Search-Service, Web-Basic-Auth) | Out-Null
 		# Create a local group called "Administrators File Access" on the serverif it does not exist
 		CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
@@ -4370,10 +4370,10 @@ Function InstallWebDavFeatures()                            # Function to instal
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *          The firewall check to your           *" -ForegroundColor Yellow
-		Write-Host "`t *     SolidCP Enterprise Server has failed      *" -ForegroundColor Yellow
+		Write-Host "`t *     FuseCP Enterprise Server has failed      *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *    UNC Access is required from this server    *" -ForegroundColor Yellow
-		Write-Host "`t *       to your SolidCP Enterprise Server       *" -ForegroundColor Yellow
+		Write-Host "`t *       to your FuseCP Enterprise Server       *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *************************************************" -ForegroundColor Yellow
 		dPressAnyKeyToExit
@@ -4392,7 +4392,7 @@ Function CheckWebDavStorageFQDN()                           # Function to instal
 	}else{
 		if (!($dWebDavStorageHostName)) { # As the user for to choose the FQDN for the WebDav Server
 			do {
-				Write-Host "`n`tPlease select the FQDN Deployment for the `"SolidCP WebDav Storage`" website" -ForegroundColor Cyan
+				Write-Host "`n`tPlease select the FQDN Deployment for the `"FuseCP WebDav Storage`" website" -ForegroundColor Cyan
 				Write-Host "`t  A. Use `"$dFQDNthisMachine`"`n`t  B. Enter my own FQDN" -ForegroundColor Cyan
 				$choiceWebDavFQDN = Read-Host "`tEnter Option From Above Menu"
 				$ok = $choiceWebDavFQDN -match '^[a-b]+$'
@@ -4400,7 +4400,7 @@ Function CheckWebDavStorageFQDN()                           # Function to instal
 			} until ( $ok )
 			switch -Regex ( $choiceWebDavFQDN ) {
 				"A" {$script:dWebDavStorageHostName = $dFQDNthisMachine}
-				"B" {do { $script:dWebDavStorageHostName = Read-Host "`tPlease enter the required FQDN for the `"SolidCP WebDav Storage`" website" } until (!([string]::IsNullOrEmpty($dWebDavStorageHostName)))}
+				"B" {do { $script:dWebDavStorageHostName = Read-Host "`tPlease enter the required FQDN for the `"FuseCP WebDav Storage`" website" } until (!([string]::IsNullOrEmpty($dWebDavStorageHostName)))}
 			}
 		}
 	}
@@ -4418,20 +4418,20 @@ Function InstallWebDavStorageRootWebsite()                  # Function to instal
 			if (!($dWebDavStoragePath)) { # Specify the WebDav Storage Location
 				do { $script:dWebDavStoragePath = Read-Host "`tPlease enter the WebDav Storage Path (i.e. C:\CloudStorage)" } until (!([string]::IsNullOrEmpty($dWebDavStoragePath)))
 			}
-			Write-Host "`tCreating the `"SolidCP WebDav Storage`" website in IIS" -ForegroundColor Cyan
+			Write-Host "`tCreating the `"FuseCP WebDav Storage`" website in IIS" -ForegroundColor Cyan
 			# Create the WebDav Storage Directory on the server if it doesn't already exist
 			if (!(Test-Path "$dWebDavStoragePath")) { (md -Path "$dWebDavStoragePath" -Force) | Out-Null }
 			# Create the AppPool for WebDav Storage only if it doesn't exist
 			if (!(Test-Path "IIS:\AppPools\$dWebDavStorageHostName" )) {
 				(New-WebAppPool -Name "$dWebDavStorageHostName" -Force) | Out-Null
-				# Get the Application Pool for the SolidCP Cloud Storage Portal ready to make changes
+				# Get the Application Pool for the FuseCP Cloud Storage Portal ready to make changes
 				$pool = Get-Item "IIS:\AppPools\$dWebDavStorageHostName"
 				$pool.autoStart = 'True'                                # Enable Auto-Start
 				$pool.startMode = 'AlwaysRunning'                       # Set Start Mode as Always Running
 				$pool.processModel.idleTimeout = [TimeSpan]::Zero       # Set Idele TimeOut as 0 Minutes
 				$pool.recycling.periodicRestart.time = [TimeSpan]::Zero # Set Regular time interval as 0 Minutes
-				$pool | Set-Item                                        # Set all of the above for the SolidCP Cloud Storage Portal Application Pool
-				# Remove any schedules for the SolidCP Cloud Storage Portal Application Pool and set the time to be 3.00am as it needs to be recycled once a day
+				$pool | Set-Item                                        # Set all of the above for the FuseCP Cloud Storage Portal Application Pool
+				# Remove any schedules for the FuseCP Cloud Storage Portal Application Pool and set the time to be 3.00am as it needs to be recycled once a day
 				Clear-ItemProperty "IIS:\AppPools\$dWebDavStorageHostName" -Name recycling.periodicRestart.schedule
 				Set-ItemProperty "IIS:\AppPools\$dWebDavStorageHostName" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
 				# Set the "preloadEnabled" value to True to speed up loading on the WebDav site
@@ -4454,7 +4454,7 @@ Function InstallWebDavStorageRootWebsite()                  # Function to instal
 			Set-WebConfiguration system.webServer/security/authentication/Authentication           -PSPath IIS:\ -Location "$dWebDavStorageHostName" -Value @{enabled="False"} -WarningAction SilentlyContinue
 			# Restart IIS on the server
 			(Restart-Service 'World Wide Web Publishing Service' -Force -WarningAction SilentlyContinue) | Out-Null
-			Write-Host "`t Successfully created the `"SolidCP WebDav Storage`" website" -ForegroundColor Green
+			Write-Host "`t Successfully created the `"FuseCP WebDav Storage`" website" -ForegroundColor Green
 			# Ensure the Windows Search Service startup type is Automatic and start the service
 			if ((Get-WmiObject -Class Win32_Service -Property StartMode -Filter "Name='WSearch'").StartMode -ne "Automatic") {
 				(Set-Service -Name "WSearch" -StartupType Automatic -Status Running) | Out-Null
@@ -4508,9 +4508,9 @@ Function CreateExchangeContentSubmittersGroup()                                 
 			do { $dCheckContentSubmitters = (([ADSI]("WinNT://$env:USERDNSDOMAIN/ContentSubmitters")).Path) } until ($dCheckContentSubmitters -ne $null)
 			start-sleep -Seconds "25"
 			Write-Host "`t Adding `"Network Service`" to the `"ContentSubmitters`" Security Group" -ForegroundColor Green
-			(Add-ADPermission -ID "ContentSubmitters" -User ‚ÄúNetwork Service‚Äù -AccessRights "GenericAll") | Out-Null
+			(Add-ADPermission -ID "ContentSubmitters" -User ìNetwork Serviceî -AccessRights "GenericAll") | Out-Null
 			Write-Host "`t Adding `"Administrators`" to the `"ContentSubmitters`" Security Group" -ForegroundColor Green
-			(Add-ADPermission -Identity "ContentSubmitters" -User ‚ÄúAdministrators‚Äù -AccessRights "GenericAll") | Out-Null
+			(Add-ADPermission -Identity "ContentSubmitters" -User ìAdministratorsî -AccessRights "GenericAll") | Out-Null
 		}
 	}
 }
@@ -4638,7 +4638,7 @@ Function CreateNewDAG()                                     # Function for creat
 					# Create a new IPv6 Cluster IP Resource
 					(Add-ClusterResource -Name "IPv6 Cluster Address" -ResourceType "IPv6 Address" -Group "Cluster Group") | Out-Null
 					# Set the properties for the newly created IP Address resource
-					(Get-ClusterResource "IPv6 Cluster Address" | Set-ClusterParameter ‚ÄìMultiple @{‚ÄúNetwork"="Cluster Network 1"; "Address"= "$DAGipv6";"PrefixLength"="$(((Get-NetIPAddress ‚ÄìAddressFamily IPv6 | Select-Object PrefixLength,IPAddress) -match "$((Resolve-DnsName -Name $env:COMPUTERNAME -Type AAAA).IPAddress -notlike 'fe80:*')").PrefixLength)"}) | Out-Null
+					(Get-ClusterResource "IPv6 Cluster Address" | Set-ClusterParameter ñMultiple @{ìNetwork"="Cluster Network 1"; "Address"= "$DAGipv6";"PrefixLength"="$(((Get-NetIPAddress ñAddressFamily IPv6 | Select-Object PrefixLength,IPAddress) -match "$((Resolve-DnsName -Name $env:COMPUTERNAME -Type AAAA).IPAddress -notlike 'fe80:*')").PrefixLength)"}) | Out-Null
 					(Stop-ClusterResource "Cluster Name") | Out-Null
 					(Set-ClusterResourceDependency "Cluster Name" "[Ipv6 Cluster Address] or [Cluster IP Address]") | Out-Null
 					(Start-ClusterResource "Cluster Name") | Out-Null
@@ -4691,7 +4691,7 @@ Function CreateNewExchangeFailoverCluster()                 # Function for creat
 				# Create a new IPv6 Failover Cluster IP Resource
 				(Add-ClusterResource -Name "IPv6 Cluster Address" -ResourceType "IPv6 Address" -Group "Cluster Group") | Out-Null
 				# Set the properties for the newly created IP Address resource
-				(Get-ClusterResource "IPv6 Cluster Address" | Set-ClusterParameter ‚ÄìMultiple @{‚ÄúNetwork"="Cluster Network 1"; "Address"= "$Clusteripv6";"PrefixLength"="$(((Get-NetIPAddress ‚ÄìAddressFamily IPv6 | Select-Object PrefixLength,IPAddress) -match "$((Resolve-DnsName -Name $env:COMPUTERNAME -Type AAAA).IPAddress -notlike 'fe80:*')").PrefixLength)"}) | Out-Null
+				(Get-ClusterResource "IPv6 Cluster Address" | Set-ClusterParameter ñMultiple @{ìNetwork"="Cluster Network 1"; "Address"= "$Clusteripv6";"PrefixLength"="$(((Get-NetIPAddress ñAddressFamily IPv6 | Select-Object PrefixLength,IPAddress) -match "$((Resolve-DnsName -Name $env:COMPUTERNAME -Type AAAA).IPAddress -notlike 'fe80:*')").PrefixLength)"}) | Out-Null
 				(Stop-ClusterResource "Cluster Name") | Out-Null
 				(Set-ClusterResourceDependency "Cluster Name" "[Ipv6 Cluster Address] or [Cluster IP Address]") | Out-Null
 				if (Get-OSName -Check "2016") { (Get-ClusterResource | Where {$_.ResourceType -eq "IPv6 Address"} | Where {$_.Name -ne "IPv6 Cluster Address"} | Remove-ClusterResource -Force) | Out-Null }
@@ -4819,22 +4819,22 @@ Function Exchange2016_PreCheck()  # Function to check Exchange 2016 Installation
 			}
 		}
 		Write-Host "`t Your Exchange Organisation Name will be `"$dExchangeOrgNme`"" -ForegroundColor Green
-		# Check if a new Organisational Unit needs to be created for SolidCP
+		# Check if a new Organisational Unit needs to be created for FuseCP
 		if (!($dSolidCp_OU_Name)) {
 			$choice = ""
-			Write-Host "`n`tIt is reccomended that you have a Dedicated Organisational Unit for SolidCP" -ForegroundColor Yellow
+			Write-Host "`n`tIt is reccomended that you have a Dedicated Organisational Unit for FuseCP" -ForegroundColor Yellow
 			while ($choice -notmatch "[y|n]") {
-				$choice = Read-Host "`n`t Do you wan to install a new Organisational Unit for SolidCP`? (Y/N)"
+				$choice = Read-Host "`n`t Do you wan to install a new Organisational Unit for FuseCP`? (Y/N)"
 			}
 			if ($choice -eq "y") {
 				$script:dSolidCp_OU_Name = Read-Host "`n`t Please enter the name for the Organisational Unit"
-				if (!($dSolidCp_OU_Name)) {$script:dSolidCp_OU_Name = "SolidCP"}
+				if (!($dSolidCp_OU_Name)) {$script:dSolidCp_OU_Name = "FuseCP"}
 			}
 		}
 		Write-Host "`t Your Dedicated Organisational Unit will be `"$dSolidCp_OU_Name`"" -ForegroundColor Green
-		##dCreateNewOU -Name "$dSolidCp_OU_Name" -Description "SolidCP Organisational Unit for Hosted Customers" -DiableInheritance -RemoveUserFromACL "S-1-5-32-554"
-		#dCreateNewOU -Name "$dSolidCp_OU_Name" -Description "SolidCP Organisational Unit for Hosted Customers"
-		CreateSolidCPdomainOU -Hosted
+		##dCreateNewOU -Name "$dSolidCp_OU_Name" -Description "FuseCP Organisational Unit for Hosted Customers" -DiableInheritance -RemoveUserFromACL "S-1-5-32-554"
+		#dCreateNewOU -Name "$dSolidCp_OU_Name" -Description "FuseCP Organisational Unit for Hosted Customers"
+		CreateFuseCPdomainOU -Hosted
 	}else{ # Otherwise get the Exchange Organisation Name from Active Directory
 		$script:dExchangeOrgNme = Get-ExchangeOrgName
 		Write-Host "`t Your Exchange Organisation Name is `"$dExchangeOrgNme`"" -ForegroundColor Green
@@ -4894,8 +4894,8 @@ Function Exchange2016PreReqMgmtTools()  # Function to install the features requi
 ####################################################################################################################################################################################
 Function InstallDotNET452()             # Function to install the .NET Framework v4.5.2
 {
-	# Get the latest download information from the SolidCP Installer site
-	($Exchange_2016_DotNET_4_5_2 = (SolidCPFileDownload "Exchange_2016_DotNET_4_5_2")) | Out-Null
+	# Get the latest download information from the FuseCP Installer site
+	($Exchange_2016_DotNET_4_5_2 = (FuseCPFileDownload "Exchange_2016_DotNET_4_5_2")) | Out-Null
 	# Create the Exchange 2016 Pre-Requisites Directory in our Installation Files folder ready for downloading if it doesn't already exist
 	if (!(Test-Path "C:\_Install Files\$($Exchange_2016_DotNET_4_5_2.FolderName)")) { (md -Path "C:\_Install Files\$($Exchange_2016_DotNET_4_5_2.FolderName)" -Force) | Out-Null }
 	# Check if Microsoft .NET Framework v4.5.2 is installed, if not then download and install it
@@ -4915,8 +4915,8 @@ Function InstallDotNET452()             # Function to install the .NET Framework
 ####################################################################################################################################################################################
 Function InstallExchangeUCMA4()         # Function to install the Unified Communications Managed API 4.0 Runtime
 {
-	# Get the latest download information from the SolidCP Installer site
-	($Exchange_2016_UC_API_4_0 = (SolidCPFileDownload "Exchange_2016_UC_API_4_0")) | Out-Null
+	# Get the latest download information from the FuseCP Installer site
+	($Exchange_2016_UC_API_4_0 = (FuseCPFileDownload "Exchange_2016_UC_API_4_0")) | Out-Null
 	# Create the Exchange 2016 Pre-Requisites Directory in our Installation Files folder ready for downloading if it doesn't already exist
 	if (!(Test-Path "C:\_Install Files\$($Exchange_2016_UC_API_4_0.FolderName)")) { (md -Path "C:\_Install Files\$($Exchange_2016_UC_API_4_0.FolderName)" -Force) | Out-Null }
 	# Check if Unified Communications Managed API 4.0 Runtime is installed, if not then download and install it
@@ -5124,13 +5124,13 @@ Function Exchange2016_PostCheck()  # Function to check Exchange 2016 Installatio
 			# Ask the user if they want to install a Public Folder Database on this server
 			$choice = ""
 			Write-Host "`n`t You do not have any Public Folder Databases installed" -ForegroundColor Yellow
-			Write-Host "`t It is a requirement of SolidCP that at least 1 Public Folder Database is configured" -ForegroundColor Yellow
+			Write-Host "`t It is a requirement of FuseCP that at least 1 Public Folder Database is configured" -ForegroundColor Yellow
 			while ($choice -notmatch "[y|n]") {
 				$choice = Read-Host "`n`t Do you want to install a Public Folder Database on this server`? (Y/N)"
 			}
 			if ($choice -eq "y") {
 				$dPublicFolderDatabase = Read-Host "`n`t Please enter the name for the Public Folder Database"
-				if (!($dPublicFolderDatabase)) {$dPublicFolderDatabase = "SolidCP-PF-Mailbox"}
+				if (!($dPublicFolderDatabase)) {$dPublicFolderDatabase = "FuseCP-PF-Mailbox"}
 				Write-Host "`t The Public Folder Database will be called `"$dPublicFolderDatabase`"" -ForegroundColor Green
 				# Check if the Exchange Organisation Name is set, if not then get it
 				if ( !($dExchangeOrgNme) ) { $dExchangeOrgNme = (([ADSI]("LDAP://CN=Microsoft Exchange,CN=Services," + (Get-ADRootDSE).configurationNamingContext)).Children[0].name) }
@@ -5142,17 +5142,17 @@ Function Exchange2016_PostCheck()  # Function to check Exchange 2016 Installatio
 					$orgName.SetInfo()
 				}
 				# Create the Default Public Folder Database for Primary Hierarchy
-				(New-Mailbox -Name "$dPublicFolderDatabase" ‚ÄìPublicFolder) | Out-Null
+				(New-Mailbox -Name "$dPublicFolderDatabase" ñPublicFolder) | Out-Null
 			} else {
-				write-host "`n`t You MUST install a Public Folder Database for SolidCP to function correctly" -ForegroundColor Yellow
+				write-host "`n`t You MUST install a Public Folder Database for FuseCP to function correctly" -ForegroundColor Yellow
 			}
 		}
-		if ( (Test-Path "C:\Program Files (x86)\SolidCP Installer") -and  (Test-Path "C:\Program Files\Microsoft\Exchange Server\V15") ) {
+		if ( (Test-Path "C:\Program Files (x86)\FuseCP Installer") -and  (Test-Path "C:\Program Files\Microsoft\Exchange Server\V15") ) {
 			# Add the SCPServer User to the Domain Groups called "Enterprise Admins" and "Organization Management"
 			(AddDomainUserToDomainGroup "$dLangDomainEnterpriseAdmins" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Enterprise Admins"
 			(AddDomainUserToDomainGroup "Organization Management" "SCPServer-$env:computerName") | Out-Null         # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Organization Management"
 		}
-		# Check to make sure the default options for SolidCP are configured corectly
+		# Check to make sure the default options for FuseCP are configured corectly
 		Exchange2016_UpgradeCheck
 	}
 }
@@ -5232,16 +5232,16 @@ Function Exchange2016_Set_SSLredir()           # Function to configure the SSL R
 		Import-Module WebAdministration
 		# Set the SSL settings for the Default Website and Virtual Directories
 		Write-Host "`t Configuring SSL Settings for Microsoft Exchange on this server" -ForegroundColor Green
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site‚Äô -name ‚ÄússlFlags‚Äù -value ‚Äú$null‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/Autodiscover‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/ecp‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/EWS‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/mapi‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/Microsoft-Server-ActiveSync‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/OAB‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/owa‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/PowerShell‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSslNegotiateCert‚Äù
-		Set-WebConfigurationProperty -pspath ‚ÄòMACHINE/WEBROOT/APPHOST‚Äô -filter ‚Äúsystem.webServer/security/access‚Äù -location ‚ÄòDefault Web Site/Rpc‚Äô -name ‚ÄússlFlags‚Äù -value ‚ÄúSsl,Ssl128‚Äù
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Siteí -name ìsslFlagsî -value ì$nullî
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/Autodiscoverí -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/ecpí -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/EWSí -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/mapií -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/Microsoft-Server-ActiveSyncí -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/OABí -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/owaí -name ìsslFlagsî -value ìSsl,Ssl128î
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/PowerShellí -name ìsslFlagsî -value ìSslNegotiateCertî
+		Set-WebConfigurationProperty -pspath ëMACHINE/WEBROOT/APPHOSTí -filter ìsystem.webServer/security/accessî -location ëDefault Web Site/Rpcí -name ìsslFlagsî -value ìSsl,Ssl128î
 		# Set the HTTP Redirect on the Default Website and remove it on all Virtual Directories
 		Write-Host "`t Configuring HTTP to HTTPS Redirection for Microsoft Exchange on this server" -ForegroundColor Green
 		Set-WebConfiguration -Filter "system.webServer/httpRedirect" "IIS:\sites\Default Web Site" -Value @{enabled="true";destination="https://$dOutlookAnywhFQDN/owa";exactDestination="false";childOnly="true";httpResponseStatus="Found"}
@@ -5298,12 +5298,12 @@ Function CreateIISHTTPtoHTTPSScheduledTask()   # Function to create a Scheduled 
 <####################################################################################################
 SolidSCP - Exchange HTTP to HTTPS Redirection
 
-v1.0    31st October 2016:   First release of the SolidCP Exchange HTTP to HTTPS Redirection Script
+v1.0    31st October 2016:   First release of the FuseCP Exchange HTTP to HTTPS Redirection Script
 
-Written By Marc Banyard for the SolidCP Project (c) 2016 SolidCP
+Written By Marc Banyard for the FuseCP Project (c) 2016 FuseCP
 
-Copyright (c) 2016, SolidCP
-SolidCP is distributed under the Creative Commons Share-alike license
+Copyright (c) 2016, FuseCP
+FuseCP is distributed under the Creative Commons Share-alike license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -5315,7 +5315,7 @@ are permitted provided that the following conditions are met:
   this list of conditions  and  the  following  disclaimer in  the documentation
   and/or other materials provided with the distribution.
 
-- Neither the name of  SolidCP  nor the names of its contributors may be used to
+- Neither the name of  FuseCP  nor the names of its contributors may be used to
   endorse or  promote  products  derived  from  this  software  without specific
   prior written permission.
 
@@ -5383,10 +5383,10 @@ function ModifyXML([String] $dFilePath, $dAction, [String] $dNodePath, $dElement
 	}
 }
 
-ModifyXML "_SolidCP_Exchange_Web_Config_File_" "Comment" "//configuration/location/system.webServer/modules/remove[@name='CustomErrorModule']"
-ModifyXML "_SolidCP_Exchange_Web_Config_File_" "Add" "//configuration" "system.webServer"
-ModifyXML "_SolidCP_Exchange_Web_Config_File_" "Add" "//configuration/system.webServer" "httpErrors"
-ModifyXML "_SolidCP_Exchange_Web_Config_File_" "Add" "//configuration/system.webServer/httpErrors" "error" @( ("statusCode","403"), ("subStatusCode","4"), ("path","https://_SolidCP_Exchange_OWA_URL_/owa/"), ("responseMode","Redirect") )
+ModifyXML "_FuseCP_Exchange_Web_Config_File_" "Comment" "//configuration/location/system.webServer/modules/remove[@name='CustomErrorModule']"
+ModifyXML "_FuseCP_Exchange_Web_Config_File_" "Add" "//configuration" "system.webServer"
+ModifyXML "_FuseCP_Exchange_Web_Config_File_" "Add" "//configuration/system.webServer" "httpErrors"
+ModifyXML "_FuseCP_Exchange_Web_Config_File_" "Add" "//configuration/system.webServer/httpErrors" "error" @( ("statusCode","403"), ("subStatusCode","4"), ("path","https://_FuseCP_Exchange_OWA_URL_/owa/"), ("responseMode","Redirect") )
 
 '@
 
@@ -5399,16 +5399,16 @@ ModifyXML "_SolidCP_Exchange_Web_Config_File_" "Add" "//configuration/system.web
 						$dIISredirectTaskUser = $dDomainAdministratorSID
 					}
 				}
-				# Check if the SolidCP directory exists, if not then create it
-				if (!(Test-Path "C:\SolidCP")) { (md -Path "C:\SolidCP" -Force) | Out-Null }
+				# Check if the FuseCP directory exists, if not then create it
+				if (!(Test-Path "C:\FuseCP")) { (md -Path "C:\FuseCP" -Force) | Out-Null }
 				# Create the IIS SSL Hardening PowerShell Script on the Server so we can run it as a Scheduled Task
-				( (($dSCPiisHTTPSAutoScript -replace "_SolidCP_Exchange_Web_Config_File_", $dExchangeServerWebConfig) -replace "_SolidCP_Exchange_OWA_URL_", $dOutlookAnywhFQDN) | Out-File -Encoding "ascii" -FilePath "C:\SolidCP\Exchange_HTTP_to_HTTPS_Redirection.ps1" ) | Out-Null
+				( (($dSCPiisHTTPSAutoScript -replace "_FuseCP_Exchange_Web_Config_File_", $dExchangeServerWebConfig) -replace "_FuseCP_Exchange_OWA_URL_", $dOutlookAnywhFQDN) | Out-File -Encoding "ascii" -FilePath "C:\FuseCP\Exchange_HTTP_to_HTTPS_Redirection.ps1" ) | Out-Null
 				# Create the IIS SSL Hardening Scheduled Task as XML Format so we can import it
-				(New-Item "C:\SolidCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml" -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>SolidCP</Author>`r`n    <Description>PowerShell file that runs on Startup to fix the Microsoft Exchange HTTP to HTTPS settings in IIS.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <BootTrigger>`r`n      <Enabled>true</Enabled>`r`n    </BootTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dIISredirectTaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>false</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT6H</Interval>`r`n      <Count>4</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>powershell.exe</Command>`r`n      <Arguments>-file `"C:\SolidCP\Exchange_HTTP_to_HTTPS_Redirection.ps1`"</Arguments>`r`n      <WorkingDirectory>C:\SolidCP</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
+				(New-Item "C:\FuseCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml" -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>FuseCP</Author>`r`n    <Description>PowerShell file that runs on Startup to fix the Microsoft Exchange HTTP to HTTPS settings in IIS.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <BootTrigger>`r`n      <Enabled>true</Enabled>`r`n    </BootTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dIISredirectTaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>false</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT6H</Interval>`r`n      <Count>4</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>powershell.exe</Command>`r`n      <Arguments>-file `"C:\FuseCP\Exchange_HTTP_to_HTTPS_Redirection.ps1`"</Arguments>`r`n      <WorkingDirectory>C:\FuseCP</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
 				# Create the task and import the settings from the XML file we created above
-				(schtasks /create /XML C:\SolidCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml /tn "SolidCP - Fix Exchange HTTP Redirect") | Out-Null
+				(schtasks /create /XML C:\FuseCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml /tn "FuseCP - Fix Exchange HTTP Redirect") | Out-Null
 				# Remove the file used to import the Scheduled Task
-				(Remove-Item "C:\SolidCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml" -Force) | Out-Null
+				(Remove-Item "C:\FuseCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml" -Force) | Out-Null
 			}
 		}
 	}
@@ -5446,12 +5446,12 @@ Function Exchange2016_UpgradeCheck()  # Function to check Exchange 2016 Installa
 		# Enable Automatic Forwards
 		if ((Get-RemoteDomain Default).AutoForwardEnabled -eq $false) {
 			Write-Host "`t Enabling Auto Forwards on the Exchange Server" -ForegroundColor Green
-			Set-RemoteDomain Default ‚ÄìAutoForwardEnabled $true
+			Set-RemoteDomain Default ñAutoForwardEnabled $true
 		}
 		# Enable OOF for Outlook 2003 and previous (for Exchange 2007 and 2010 support)
 		if ((Get-RemoteDomain Default).AllowedOOFType -eq "External") {
 			Write-Host "`t Enabling Legacy Out Of Office Types on the Exchange Server" -ForegroundColor Green
-			Set-RemoteDomain Default ‚ÄìAllowedOOFType "ExternalLegacy"
+			Set-RemoteDomain Default ñAllowedOOFType "ExternalLegacy"
 		}
 		# Enable Meeting Forward Notifications
 		if ((Get-RemoteDomain Default).MeetingForwardNotificationEnabled -eq $false) {
@@ -5469,11 +5469,11 @@ Function Exchange2016_UpgradeCheck()  # Function to check Exchange 2016 Installa
 					do { $dExchangeFQDNsndC = Read-Host "`tPlease enter the FQDN for the Exchange Send Connector you would like to use" }
 					until (!([string]::IsNullOrEmpty($dExchangeFQDNsndC)))
 				}
-				Write-Host "`t Configuring the SolidCP Send Connector on this Exchange Server" -ForegroundColor Green
-				(New-SendConnector -Internet -Name "SolidCP Outbound Internet Email" -AddressSpaces "*" -UseExternalDNSServersEnabled $true -SourceTransportServers $env:COMPUTERNAME -MaxMessageSize "unlimited" -Fqdn "$dExchangeFQDNsndC") | Out-Null
-			}elseif ( ((Get-SendConnector).enabled) -and ((((Get-SendConnector).Identity).Name) -eq "SolidCP Outbound Internet Email") ) { # Edit the SolidCP Send Connector
+				Write-Host "`t Configuring the FuseCP Send Connector on this Exchange Server" -ForegroundColor Green
+				(New-SendConnector -Internet -Name "FuseCP Outbound Internet Email" -AddressSpaces "*" -UseExternalDNSServersEnabled $true -SourceTransportServers $env:COMPUTERNAME -MaxMessageSize "unlimited" -Fqdn "$dExchangeFQDNsndC") | Out-Null
+			}elseif ( ((Get-SendConnector).enabled) -and ((((Get-SendConnector).Identity).Name) -eq "FuseCP Outbound Internet Email") ) { # Edit the FuseCP Send Connector
 				Write-Host "`t Adding this server to the Default Send Connector on the Exchange Server" -ForegroundColor Green
-				(Set-SendConnector -Identity "SolidCP Outbound Internet Email" -SourceTransportServers @{Add="$env:COMPUTERNAME"}) | Out-Null
+				(Set-SendConnector -Identity "FuseCP Outbound Internet Email" -SourceTransportServers @{Add="$env:COMPUTERNAME"}) | Out-Null
 			}
 		}
 		# Set the Transport Config Maximum Send and Receive message sizes as unlimited unless they are already set
@@ -5754,8 +5754,8 @@ Function InstallMailEnable()           # Function to install the features requir
 		if ( (Get-WebBinding -Name 'Default Web Site').bindingInformation -eq "*:80:" ) {
 			Set-WebBinding -Name 'Default Web Site' -BindingInformation "*:80:" -PropertyName Port -Value 8080
 		}
-		# Get the latest download information from the SolidCP Installer site
-		($MailEnable = (SolidCPFileDownload "MailEnable")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($MailEnable = (FuseCPFileDownload "MailEnable")) | Out-Null
 		# Create the MailEnable Directory in our Installation Files folder ready for downloading if it doesn't already exist
 		if (!(Test-Path "C:\_Install Files\$($MailEnable.FolderName)")) { (md -Path "C:\_Install Files\$($MailEnable.FolderName)" -Force) | Out-Null }
 		# Download the files required for MailEnable
@@ -5839,23 +5839,23 @@ Function InstallAwStats()               # Function for downloading and installin
 		Import-Module WebAdministration
 		# Configure all logging options to be enabled for websites in IIS
 		Set-WebConfigurationProperty -Filter System.Applicationhost/Sites/SiteDefaults/logfile -Name LogExtFileFlags -Value "Date,Time,ClientIP,UserName,SiteName,ComputerName,ServerIP,Method,UriStem,UriQuery,HttpStatus,Win32Status,BytesSent,BytesRecv,TimeTaken,ServerPort,UserAgent,Cookie,Referer,ProtocolVersion,Host,HttpSubStatus"
-		# Get the latest download information from the SolidCP Installer site
-		($AwStats_WebApp = (SolidCPFileDownload "AwStats_WebApp")) | Out-Null
+		# Get the latest download information from the FuseCP Installer site
+		($AwStats_WebApp = (FuseCPFileDownload "AwStats_WebApp")) | Out-Null
 		# Create the AwStats Directory in our Installation Files folder ready for downloading if it doesn't already exist
 		if (!(Test-Path "C:\_Install Files\$($AwStats_WebApp.FolderName)")) { (md -Path "C:\_Install Files\$($AwStats_WebApp.FolderName)" -Force) | Out-Null }
 		# Download the files required for AwStats
 		Write-Host "`t Downloading the latest version of AwStats" -ForegroundColor Green
 		(New-Object System.Net.WebClient).DownloadFile("$($AwStats_WebApp.DownloadURL)", "C:\_Install Files\$($AwStats_WebApp.FolderName)\$($AwStats_WebApp.FileName)")
-		# Get the highest current SolidCP Version from the Installer XML File from the SolidCP Installation Website
-		[string]$dSolidCPversion = ((([xml](New-Object System.Net.WebClient).DownloadString("http://installer.solidcp.com/Data/ProductReleasesFeed-1.0.xml")).components.component.releases.release).version | measure -Maximum).Maximum
-		# Download the latest SolidCP AwStats Viewer based upon the highest version above
-		Write-Host "`t Downloading the latest version of the AwStats Viewer from the SolidCP website" -ForegroundColor Green
-		(New-Object System.Net.WebClient).DownloadFile("http://installer.solidcp.com/Files/stable/Tools/SolidCP-AWStatsViewer.zip", "C:\_Install Files\$($AwStats_WebApp.FolderName)\SolidCP-AWStatsViewer.zip")
+		# Get the highest current FuseCP Version from the Installer XML File from the FuseCP Installation Website
+		[string]$dFuseCPversion = ((([xml](New-Object System.Net.WebClient).DownloadString("http://installer.fusecp.com/Data/ProductReleasesFeed-1.0.xml")).components.component.releases.release).version | measure -Maximum).Maximum
+		# Download the latest FuseCP AwStats Viewer based upon the highest version above
+		Write-Host "`t Downloading the latest version of the AwStats Viewer from the FuseCP website" -ForegroundColor Green
+		(New-Object System.Net.WebClient).DownloadFile("http://installer.fusecp.com/Files/stable/Tools/FuseCP-AWStatsViewer.zip", "C:\_Install Files\$($AwStats_WebApp.FolderName)\FuseCP-AWStatsViewer.zip")
 		# Unzip the downloaded files to the C:\AwStats directory
 		Write-Host "`t Extracting and installing AwStats from the downloaded files" -ForegroundColor Green
 		(Add-Type -assembly "system.io.compression.filesystem" -ErrorAction SilentlyContinue) | Out-Null
 		[io.compression.zipfile]::ExtractToDirectory("C:\_Install Files\$($AwStats_WebApp.FolderName)\$($AwStats_WebApp.FileName)", "C:\AWStats")
-		[io.compression.zipfile]::ExtractToDirectory("C:\_Install Files\$($AwStats_WebApp.FolderName)\SolidCP-AWStatsViewer.zip", "C:\AWStats\awstats-develop\wwwroot")
+		[io.compression.zipfile]::ExtractToDirectory("C:\_Install Files\$($AwStats_WebApp.FolderName)\FuseCP-AWStatsViewer.zip", "C:\AWStats\awstats-develop\wwwroot")
 		( (Get-ChildItem "C:\AWStats\" -include *.cvsignore -recurse | foreach ($_) {remove-item $_.fullname}) ) | Out-Null
 		(Move-Item "C:\AWStats\awstats-develop\wwwroot\LICENSE.txt" "C:\AWStats") | Out-Null
 		(Move-Item "C:\AWStats\awstats-develop\wwwroot\Readme.htm" "C:\AWStats") | Out-Null
@@ -5866,7 +5866,7 @@ Function InstallAwStats()               # Function for downloading and installin
 		(Remove-Item "C:\AWStats\awstats-develop" -Recurse) | Out-Null
 		(md -Path  "C:\AWStats\wwwroot\bin\" -Force) | Out-Null
 		(Move-Item "C:\AWStats\wwwroot\*.dll" "C:\AwStats\wwwroot\bin\") | Out-Null
-		(Move-Item "C:\AWStats\wwwroot\SolidCP.AWStats.Viewer.dll.config" "C:\AwStats\wwwroot\bin\") | Out-Null
+		(Move-Item "C:\AWStats\wwwroot\FuseCP.AWStats.Viewer.dll.config" "C:\AwStats\wwwroot\bin\") | Out-Null
 		(md -Path "C:\AWStats\data") | Out-Null
 		(md -Path "C:\AWStats\logs") | Out-Null
 
@@ -5900,7 +5900,7 @@ Function InstallAwStats()               # Function for downloading and installin
 		(rm -force c:\secpol-awstats-before.cfg -confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 		(rm -force c:\secpol-awstats-after.cfg -confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 		# Create the AwStats scheduled task file ready to import
-		(New-Item C:\AWStats\AwStats-Scheduled-Task-Import.xml -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>SolidCP</Author>`r`n    <Description>Batch file that runs every 1 hour to poll each website that has Advanced Stats enabled on it.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <CalendarTrigger>`r`n      <Repetition>`r`n        <Interval>PT1H</Interval>`r`n        <Duration>P1D</Duration>`r`n        <StopAtDurationEnd>false</StopAtDurationEnd>`r`n      </Repetition>`r`n      <StartBoundary>2015-01-01T00:00:00</StartBoundary>`r`n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>`r`n      <Enabled>true</Enabled>`r`n      <ScheduleByDay>`r`n        <DaysInterval>1</DaysInterval>`r`n      </ScheduleByDay>`r`n    </CalendarTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dAwStatsTaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>true</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT10M</Interval>`r`n      <Count>5</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>C:\AWStats\UpdateStats.bat</Command>`r`n      <WorkingDirectory>C:\AWStats</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
+		(New-Item C:\AWStats\AwStats-Scheduled-Task-Import.xml -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>FuseCP</Author>`r`n    <Description>Batch file that runs every 1 hour to poll each website that has Advanced Stats enabled on it.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <CalendarTrigger>`r`n      <Repetition>`r`n        <Interval>PT1H</Interval>`r`n        <Duration>P1D</Duration>`r`n        <StopAtDurationEnd>false</StopAtDurationEnd>`r`n      </Repetition>`r`n      <StartBoundary>2015-01-01T00:00:00</StartBoundary>`r`n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>`r`n      <Enabled>true</Enabled>`r`n      <ScheduleByDay>`r`n        <DaysInterval>1</DaysInterval>`r`n      </ScheduleByDay>`r`n    </CalendarTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dAwStatsTaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>true</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT10M</Interval>`r`n      <Count>5</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>C:\AWStats\UpdateStats.bat</Command>`r`n      <WorkingDirectory>C:\AWStats</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
 		# Create the task and import the settings from the XML file we created above
 		(schtasks /create /XML C:\AWStats\AwStats-Scheduled-Task-Import.xml /tn "AwStats - Update Stats") | Out-Null
 		# Change the bindings on the default website to Port 8080 so we can install AwStats on Port 80 unless it has already been done
@@ -5911,13 +5911,13 @@ Function InstallAwStats()               # Function for downloading and installin
 		}
 		# Create the AppPool for AwStats
 		Write-Host "`t Creating the AwStats Application Pool in IIS" -ForegroundColor Green
-		(New-WebAppPool -Name "SolidCP AwStats .NET v4" -Force) | Out-Null
+		(New-WebAppPool -Name "FuseCP AwStats .NET v4" -Force) | Out-Null
 		# Create the new website for AwStats
 		Write-Host "`t Creating the AwStats website in IIS" -ForegroundColor Green
-		(New-Website -Name "SolidCP AwStats" -Port 80 -IPAddress "*" -PhysicalPath "C:\AWStats\wwwroot" -ApplicationPool "SolidCP AwStats .NET v4" -Force) | Out-Null
-		(Set-ItemProperty "IIS:\Sites\SolidCP AwStats" -name logfile.directory "C:\AWStats\logs" -Force) | Out-Null
+		(New-Website -Name "FuseCP AwStats" -Port 80 -IPAddress "*" -PhysicalPath "C:\AWStats\wwwroot" -ApplicationPool "FuseCP AwStats .NET v4" -Force) | Out-Null
+		(Set-ItemProperty "IIS:\Sites\FuseCP AwStats" -name logfile.directory "C:\AWStats\logs" -Force) | Out-Null
 		# Grant Read & Execute permissions on wwwroot folder and Logs Folder
-		SetAccessToFolderNoChk "C:\AWStats\wwwroot" "IIS AppPool\SolidCP AwStats .NET v4" "ReadAndExecute" "Allow";
+		SetAccessToFolderNoChk "C:\AWStats\wwwroot" "IIS AppPool\FuseCP AwStats .NET v4" "ReadAndExecute" "Allow";
 		SetAccessToFolderNoChk "C:\AWStats\wwwroot" "BUILTIN\IIS_IUSRS" "ReadAndExecute" "Allow";
 		SetAccessToFolderNoChk "C:\AWStats\wwwroot" "BUILTIN\$dLangUsersGroup" "ReadAndExecute" "Allow";
 		SetAccessToFolderNoChk "C:\AWStats\logs" "NT SERVICE\TrustedInstaller" "FullControl" "Allow";
@@ -5927,28 +5927,28 @@ Function InstallAwStats()               # Function for downloading and installin
 		InstallAwStatsRegKeys | Out-Null
 		# Update the AWstats web.config file to hold the corect values for the connection to the Enterprise Server for authentication
 		ModifyXML "C:\AWStats\wwwroot\web.config" "Update" "//configuration/appSettings/add[@key='AWStats.ConfigFileAuthenticationProvider.DataFolder']/@value"    "C:\AWStats\data"
-		# Check if the SolidCP Enterprise Server URL has been set, if not ask for it
-		if (!($dSolidCPEnterpriseSvrURL)) {
-			Write-Host "`t You have not set the `"`$dSolidCPEnterpriseSvrURL`" variable at the top of this script" -ForegroundColor Yellow
-			do { $script:dSolidCPEnterpriseSvrURL = Read-Host "`tPlease enter the SolidCP Enterprise Server URL (i.e. http://PublicIP:9002)" }
-			until (!([string]::IsNullOrEmpty($dSolidCPEnterpriseSvrURL)))
+		# Check if the FuseCP Enterprise Server URL has been set, if not ask for it
+		if (!($dFuseCPEnterpriseSvrURL)) {
+			Write-Host "`t You have not set the `"`$dFuseCPEnterpriseSvrURL`" variable at the top of this script" -ForegroundColor Yellow
+			do { $script:dFuseCPEnterpriseSvrURL = Read-Host "`tPlease enter the FuseCP Enterprise Server URL (i.e. http://PublicIP:9002)" }
+			until (!([string]::IsNullOrEmpty($dFuseCPEnterpriseSvrURL)))
 		}
-		ModifyXML "C:\AWStats\wwwroot\web.config" "Update" "//configuration/appSettings/add[@key='AWStats.SolidCPAuthenticationProvider.EnterpriseServer']/@value" "$dSolidCPEnterpriseSvrURL"
-		# Make the required changes ONLY if the SolidCP AwStats site exists
-		if (Test-Path "IIS:\Sites\SolidCP AwStats" -pathType container) {
-			# Get the Application Pool for the SolidCP Enterprise Server ready to make changes
-			$pool = Get-Item 'IIS:\AppPools\SolidCP AwStats .NET v4'
+		ModifyXML "C:\AWStats\wwwroot\web.config" "Update" "//configuration/appSettings/add[@key='AWStats.FuseCPAuthenticationProvider.EnterpriseServer']/@value" "$dFuseCPEnterpriseSvrURL"
+		# Make the required changes ONLY if the FuseCP AwStats site exists
+		if (Test-Path "IIS:\Sites\FuseCP AwStats" -pathType container) {
+			# Get the Application Pool for the FuseCP Enterprise Server ready to make changes
+			$pool = Get-Item 'IIS:\AppPools\FuseCP AwStats .NET v4'
 			$pool.autoStart = 'True'                                # Enable Auto-Start
 			$pool.startMode = 'AlwaysRunning'                       # Set Start Mode as Always Running
 			$pool.processModel.idleTimeout = [TimeSpan]::Zero       # Set Idele TimeOut as 0 Minutes
 			$pool.recycling.periodicRestart.time = [TimeSpan]::Zero # Set Regular time interval as 0 Minutes
-			$pool | Set-Item                                        # Set all of the above for the SolidCP AwStats Application Pool
-			# Remove any schedules for the SolidCP AwStats Application Pool and set the time to be 3.00am as it needs to be recycled once a day
-			Clear-ItemProperty "IIS:\AppPools\SolidCP AwStats .NET v4" -Name recycling.periodicRestart.schedule
-			Set-ItemProperty "IIS:\AppPools\SolidCP AwStats .NET v4" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
+			$pool | Set-Item                                        # Set all of the above for the FuseCP AwStats Application Pool
+			# Remove any schedules for the FuseCP AwStats Application Pool and set the time to be 3.00am as it needs to be recycled once a day
+			Clear-ItemProperty "IIS:\AppPools\FuseCP AwStats .NET v4" -Name recycling.periodicRestart.schedule
+			Set-ItemProperty "IIS:\AppPools\FuseCP AwStats .NET v4" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
 			# Set the "preloadEnabled" value to True to speed up loading on the AwStats site
-			if ((Get-ItemProperty "IIS:\Sites\SolidCP AwStats" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
-				Set-ItemProperty "IIS:\Sites\SolidCP AwStats" -Name applicationDefaults.preloadEnabled -Value $true
+			if ((Get-ItemProperty "IIS:\Sites\FuseCP AwStats" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
+				Set-ItemProperty "IIS:\Sites\FuseCP AwStats" -Name applicationDefaults.preloadEnabled -Value $true
 			}
 		}
 	}
@@ -6085,55 +6085,55 @@ Function HardenFilePermissions()            # Function to harden the file permis
 	# If the machine is a member of a domain then add the "Domain Admins" group to the Local Group called "Administrators File Access" unless it is already a mmember of the group
 	if ($dDomainMember) {AddDomainUserToLocalGroup "Administrators File Access" "$dLangDomainAdminsGroup"}
 	# Create the "C:\HostingSpaces" folder if it doesnt exist
-	if(!(Test-Path $SolidCPhstSpace)) {
-		(New-Item $SolidCPhstSpace -itemType directory) | Out-Null
+	if(!(Test-Path $FuseCPhstSpace)) {
+		(New-Item $FuseCPhstSpace -itemType directory) | Out-Null
 	}
 	# Take ownership of the "C:\HostingSpaces" directory and add the "Administrators" and "Administrators File Access" Groups (Full Access) and Remove inheritance
-	if(Test-Path $SolidCPhstSpace) {
+	if(Test-Path $FuseCPhstSpace) {
 		# Take owenership of the "C:\HostingSpaces" folder with the Local "Administrators" Group
-		if (((get-acl "$SolidCPhstSpace").owner) -ne "BUILTIN\Administrators") {
+		if (((get-acl "$FuseCPhstSpace").owner) -ne "BUILTIN\Administrators") {
 			Write-Host "`t Taking ownership of the HostingSpaces directory" -ForegroundColor Green
-			Invoke-Command {takeown /A /F $SolidCPhstSpace /R /D Y} | Out-Null;
+			Invoke-Command {takeown /A /F $FuseCPhstSpace /R /D Y} | Out-Null;
 		}
 		# Grant Full Access to the "c:\HostingSpaces" folder for the local group "Administrators"
-		if (!(CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "$dLangAdministratorGroup" -Local -AccessRights "FullControl" -Type "Allow")) {
+		if (!(CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "$dLangAdministratorGroup" -Local -AccessRights "FullControl" -Type "Allow")) {
 			Write-Host "`t Granting access to the HostingSpaces directory for the Administrators group" -ForegroundColor Green
-			SetAccessToFolderNoChk "$SolidCPhstSpace" "$dLangAdministratorGroup" "FullControl" "Allow";
+			SetAccessToFolderNoChk "$FuseCPhstSpace" "$dLangAdministratorGroup" "FullControl" "Allow";
 		}
 		# Grant Full Access to the "c:\HostingSpaces" folder for the local group "Administrators File Access"
-		if (!(CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "Administrators File Access" -Local -AccessRights "FullControl" -Type "Allow")) {
+		if (!(CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "Administrators File Access" -Local -AccessRights "FullControl" -Type "Allow")) {
 			Write-Host "`t Granting access to the HostingSpaces directory for the Administrators File Access group" -ForegroundColor Green
-			SetAccessToFolderNoChk "$SolidCPhstSpace" "Administrators File Access" "FullControl" "Allow";
+			SetAccessToFolderNoChk "$FuseCPhstSpace" "Administrators File Access" "FullControl" "Allow";
 		}
 		# Grant Full Access to the "c:\HostingSpaces" folder for the domain group "Domain Admins"
 		if ($dDomainMember) {
-			if (!(CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "$dLangDomainAdminsGroup" -Domain -AccessRights "FullControl" -Type "Allow")) {
+			if (!(CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "$dLangDomainAdminsGroup" -Domain -AccessRights "FullControl" -Type "Allow")) {
 				Write-Host "`t Granting access to the HostingSpaces directory for the Domain Admins group" -ForegroundColor Green
-				SetAccessToFolderNoChk "$SolidCPhstSpace" "$dLangDomainAdminsGroup" "FullControl" "Allow"
+				SetAccessToFolderNoChk "$FuseCPhstSpace" "$dLangDomainAdminsGroup" "FullControl" "Allow"
 			}
 		}
 		# Disable inheritance on the "c:\HostingSpaces" folder
-		if (CheckFolderInheritance -Folder "$SolidCPhstSpace") {
+		if (CheckFolderInheritance -Folder "$FuseCPhstSpace") {
 			Write-Host "`t Disabling Inheritance on the HostingSpaces directory" -ForegroundColor Green
-			DisableFolderInheritance "$SolidCPhstSpace";
+			DisableFolderInheritance "$FuseCPhstSpace";
 		}
 		# Remove "Allow" permissions to the "C:\HostingSpaces" folder for the "Users", "CREATOR OWNER" and "SYSTEM" Groups
-		if (CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "$dLangUsersGroup" -Local -AccessRights "FullControl" -Type "Allow") {
+		if (CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "$dLangUsersGroup" -Local -AccessRights "FullControl" -Type "Allow") {
 			Write-Host "`t Removing permissions on the HostingSpaces directory for $dLangUsersGroup" -ForegroundColor Green
-			RemoveAccessToFolder "$SolidCPhstSpace" "$dLangUsersGroup" "FullControl" "Allow";
+			RemoveAccessToFolder "$FuseCPhstSpace" "$dLangUsersGroup" "FullControl" "Allow";
 		}
-		if (CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "$dLangCreatorOwnerName" -System -AccessRights "FullControl" -Type "Allow") {
+		if (CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "$dLangCreatorOwnerName" -System -AccessRights "FullControl" -Type "Allow") {
 			Write-Host "`t Removing permissions on the HostingSpaces directory for $dLangCreatorOwnerName" -ForegroundColor Green
-			RemoveAccessToFolderNoChk "$SolidCPhstSpace" "$dLangCreatorOwnerName" "FullControl" "Allow";
+			RemoveAccessToFolderNoChk "$FuseCPhstSpace" "$dLangCreatorOwnerName" "FullControl" "Allow";
 		}
-		if (CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "$dLangSystemName" -System -AccessRights "FullControl" -Type "Allow") {
+		if (CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "$dLangSystemName" -System -AccessRights "FullControl" -Type "Allow") {
 			Write-Host "`t Removing permissions on the HostingSpaces directory for $dLangSystemName" -ForegroundColor Green
-			RemoveAccessToFolderNoChk "$SolidCPhstSpace" "$dLangSystemName" "FullControl" "Allow";
+			RemoveAccessToFolderNoChk "$FuseCPhstSpace" "$dLangSystemName" "FullControl" "Allow";
 		}
 		# Remove Special permissions to the "C:\HostingSpaces" folder for the "Administrator" User as it has access through the Administrators group
-		if (CheckAccessToFolder -Folder "$SolidCPhstSpace" -User "$dLangAdministratorName" -Local -AccessRights "FullControl" -Type "Allow") {
+		if (CheckAccessToFolder -Folder "$FuseCPhstSpace" -User "$dLangAdministratorName" -Local -AccessRights "FullControl" -Type "Allow") {
 			Write-Host "`t Removing permissions on the HostingSpaces directory for $dLangAdministratorName" -ForegroundColor Green
-			RemoveAccessToFolderNoChk "$SolidCPhstSpace" "$dLangAdministratorName" "FullControl" "Allow";
+			RemoveAccessToFolderNoChk "$FuseCPhstSpace" "$dLangAdministratorName" "FullControl" "Allow";
 		}
 	}
 	# Remove "Allow" permissions to the "C:\" drive to the "Users" Group
@@ -6276,7 +6276,7 @@ Function dEntSvrQuerySQL ($dQueryString)    # Function to query the Enterprise S
 { # Usage - (dEntSvrQuerySQL "[Query String]").ValueRequired
   # Usage - (dEntSvrQuerySQL "SELECT [Username], [Password] FROM [Users] WHERE [Username] = 'SCPWebDavPeer'").Password
 	$SqlConnection = New-Object System.Data.SqlClient.SqlConnection
-	$SqlConnection.ConnectionString = (( ([xml](Get-Content ( "\\" + ($dSolidCPEnterpriseSvrIP) + "\c$\SolidCP\Enterprise Server\Web.config" ) )).configuration.connectionStrings.add.connectionString) -replace "localhost", $dSolidCPEnterpriseSvrIP)
+	$SqlConnection.ConnectionString = (( ([xml](Get-Content ( "\\" + ($dFuseCPEnterpriseSvrIP) + "\c$\FuseCP\Enterprise Server\Web.config" ) )).configuration.connectionStrings.add.connectionString) -replace "localhost", $dFuseCPEnterpriseSvrIP)
 	$SqlConnection.Open()
 	$SqlCmd = New-Object System.Data.SqlClient.SqlCommand
 	$SqlCmd.CommandText = $dQueryString
@@ -6289,28 +6289,28 @@ Function dEntSvrQuerySQL ($dQueryString)    # Function to query the Enterprise S
 
 
 ####################################################################################################################################################################################
-Function InstallSolidCPInstaller()          # Function to download and install the latest SolidCP Installer from the SolidCP Website
+Function InstallFuseCPInstaller()          # Function to download and install the latest FuseCP Installer from the FuseCP Website
 {
-	if (!(Test-Path "C:\Program Files (x86)\SolidCP Installer")) {
-		# Create the SolidCP Directory in our Installation Files folder ready for downloading if it doesn't already exist
-		if (!(Test-Path "C:\_Install Files\SolidCP")) { (md -Path "C:\_Install Files\SolidCP" -Force) | Out-Null }
-		# Get the highest current SolidCP Version from the Installer XML File from the SolidCP Installation Website
-		[string]$dSolidCPversion = ((([xml](New-Object System.Net.WebClient).DownloadString("http://installer.solidcp.com/Data/ProductReleasesFeed-1.0.xml")).components.component.releases.release).version | measure -Maximum).Maximum
-		# Download the latest SolidCP Installer and save it to the "C:\_Install Files\SolidCP\" directory
-		Write-Host "`tDownloading the latest SolidCP Installer" -ForegroundColor Cyan
-		(New-Object System.Net.WebClient).DownloadFile("http://installer.solidcp.com/Files/$dSolidCPversion/SolidCPInstaller.msi", "C:\_Install Files\SolidCP\SolidCPInstaller-v$dSolidCPversion.msi")
-		# Install the SolidCP Installer on this machine
-		Write-Host "`t Installing the latest SolidCP Installer on this machine" -ForegroundColor Green
-		((Start-Process -FilePath "C:\_Install Files\SolidCP\SolidCPInstaller-v$dSolidCPversion.msi" -ArgumentList "/qb IACCEPTSQLNCLILICENSETERMS=YES" -Wait -Passthru).ExitCode) | Out-Null
+	if (!(Test-Path "C:\Program Files (x86)\FuseCP Installer")) {
+		# Create the FuseCP Directory in our Installation Files folder ready for downloading if it doesn't already exist
+		if (!(Test-Path "C:\_Install Files\FuseCP")) { (md -Path "C:\_Install Files\FuseCP" -Force) | Out-Null }
+		# Get the highest current FuseCP Version from the Installer XML File from the FuseCP Installation Website
+		[string]$dFuseCPversion = ((([xml](New-Object System.Net.WebClient).DownloadString("http://installer.fusecp.com/Data/ProductReleasesFeed-1.0.xml")).components.component.releases.release).version | measure -Maximum).Maximum
+		# Download the latest FuseCP Installer and save it to the "C:\_Install Files\FuseCP\" directory
+		Write-Host "`tDownloading the latest FuseCP Installer" -ForegroundColor Cyan
+		(New-Object System.Net.WebClient).DownloadFile("http://installer.fusecp.com/Files/$dFuseCPversion/FuseCPInstaller.msi", "C:\_Install Files\FuseCP\FuseCPInstaller-v$dFuseCPversion.msi")
+		# Install the FuseCP Installer on this machine
+		Write-Host "`t Installing the latest FuseCP Installer on this machine" -ForegroundColor Green
+		((Start-Process -FilePath "C:\_Install Files\FuseCP\FuseCPInstaller-v$dFuseCPversion.msi" -ArgumentList "/qb IACCEPTSQLNCLILICENSETERMS=YES" -Wait -Passthru).ExitCode) | Out-Null
 	}
 }
 
 
 ####################################################################################################################################################################################
-Function CheckSolidCPdomainUser($dComponent)                        # Function to check if the SolidCP user account exists in Active Directory
-{# Usage - CheckSolidCPdomainUser Enterprise|Portal|Server|WebDav
+Function CheckFuseCPdomainUser($dComponent)                        # Function to check if the FuseCP user account exists in Active Directory
+{# Usage - CheckFuseCPdomainUser Enterprise|Portal|Server|WebDav
 	if ($dDomainMember) {
-		if ($dComponent -eq "Enterprise") { # Check if the SolidCP Enterprise Server user account exists in Active Directory
+		if ($dComponent -eq "Enterprise") { # Check if the FuseCP Enterprise Server user account exists in Active Directory
 			if ([adsi]::Exists("LDAP://CN=SCPEnterprise,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -6323,12 +6323,12 @@ Function CheckSolidCPdomainUser($dComponent)                        # Function t
 				Write-Host "`t *  Either remove the user from Active Directory *" -ForegroundColor Yellow
 				Write-Host "`t *           and run this script again           *" -ForegroundColor Yellow
 				Write-Host "`t *          or manually configure a new          *" -ForegroundColor Yellow
-				Write-Host "`t *           SolidCP Enterprise Server           *" -ForegroundColor Yellow
+				Write-Host "`t *           FuseCP Enterprise Server           *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *************************************************" -ForegroundColor Yellow
 				dPressAnyKeyToExit
 			}
-		}elseif ($dComponent -eq "Portal") { # Check if the SolidCP Portal user account exists in Active Directory
+		}elseif ($dComponent -eq "Portal") { # Check if the FuseCP Portal user account exists in Active Directory
 			if ([adsi]::Exists("LDAP://CN=SCPPortal,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -6341,12 +6341,12 @@ Function CheckSolidCPdomainUser($dComponent)                        # Function t
 				Write-Host "`t *  Either remove the user from Active Directory *" -ForegroundColor Yellow
 				Write-Host "`t *           and run this script again           *" -ForegroundColor Yellow
 				Write-Host "`t *          or manually configure a new          *" -ForegroundColor Yellow
-				Write-Host "`t *             SolidCP Portal Server             *" -ForegroundColor Yellow
+				Write-Host "`t *             FuseCP Portal Server             *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *************************************************" -ForegroundColor Yellow
 				dPressAnyKeyToExit
 			}
-		}elseif ($dComponent -eq "Server") { # Check if the SolidCP Server user account exists in Active Directory
+		}elseif ($dComponent -eq "Server") { # Check if the FuseCP Server user account exists in Active Directory
 			if ([adsi]::Exists("LDAP://CN=SCPServer-$env:computerName,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -6362,7 +6362,7 @@ Function CheckSolidCPdomainUser($dComponent)                        # Function t
 				Write-Host "`t *************************************************" -ForegroundColor Yellow
 				dPressAnyKeyToExit
 			}
-		}elseif ($dComponent -eq "WebDav") { # Check if the SolidCP WebDav user account exists in Active Directory
+		}elseif ($dComponent -eq "WebDav") { # Check if the FuseCP WebDav user account exists in Active Directory
 			if ([adsi]::Exists("LDAP://CN=SCPWebDav-$env:computerName,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -6385,7 +6385,7 @@ Function CheckSolidCPdomainUser($dComponent)                        # Function t
 
 ####################################################################################################################################################################################
 function GenerateIISMachineKey($dFilePath)                          # Function to generate and add the Machine Key used in IIS only if it doesn't already exist
-{# Usage - GenerateIISMachineKey "C:\SolidCP\Server\web.config"
+{# Usage - GenerateIISMachineKey "C:\FuseCP\Server\web.config"
 	if (Test-Path "$dFilePath") {
 		if (!(CheckXMLnode $dFilePath "//configuration/system.web" "machineKey")) { # Add the Machine Key
 			function BinaryToHex {
@@ -6414,34 +6414,34 @@ function GenerateIISMachineKey($dFilePath)                          # Function t
 
 
 ####################################################################################################################################################################################
-Function InstallSolidCPcomponentServer()                            # Function to install the SolidCP Installer and the SolidCP Server component
+Function InstallFuseCPcomponentServer()                            # Function to install the FuseCP Installer and the FuseCP Server component
 {
-	InstallSolidCPInstaller
-	InstallSolidCPcomponent -Server
+	InstallFuseCPInstaller
+	InstallFuseCPcomponent -Server
 	AddWebServerToDomainIISacco
 }
 
 
 ####################################################################################################################################################################################
-Function InstallSolidCPcomponent()  # Function to install the required SolidCP Component from the SolidCP Installer
+Function InstallFuseCPcomponent()  # Function to install the required FuseCP Component from the FuseCP Installer
 {
 	Param(
 		[switch]$Enterprise, # Switch to install the Enterprise Server Component
 		[switch]$Portal,     # Switch to install the Portal Component
 		[switch]$Server,     # Switch to install the Server Component
 		[switch]$WebDav,     # Switch to install the WebDav (Cloud Storage Portal) Component
-		[string]$Pass,       # The SolidCP Component Password
+		[string]$Pass,       # The FuseCP Component Password
 		[switch]$NoIP        # Switch use ALL IP Addresses as the Binding in IIS for the chosen component
 	)
 	######################################################################################################################
-	# Variables - these are all of the variables that can be passed to the SolidCP.SilentInstaller.exe file
+	# Variables - these are all of the variables that can be passed to the FuseCP.SilentInstaller.exe file
 	#
-	# webip     # General - The IP Address that you want the SolidCP Component to be bound to in IIS
-	# webport   # General - The Port Number that you want the SolidCP Component to be bound to in IIS
-	# webdom    # General - The FQDN that you want the SolidCP Component to be bound to in IIS
-	# uname     # General - The Service Name account that you want to use for your SolidCP deployment
-	# upassw    # General - The Service Name password that you want to use for your SolidCP deployment
-	# udomaim   # General - The Domain Name that you want to use for your SolidCP deployment - *** If this is used then the above username and password will be added to Active Directory ***
+	# webip     # General - The IP Address that you want the FuseCP Component to be bound to in IIS
+	# webport   # General - The Port Number that you want the FuseCP Component to be bound to in IIS
+	# webdom    # General - The FQDN that you want the FuseCP Component to be bound to in IIS
+	# uname     # General - The Service Name account that you want to use for your FuseCP deployment
+	# upassw    # General - The Service Name password that you want to use for your FuseCP deployment
+	# udomaim   # General - The Domain Name that you want to use for your FuseCP deployment - *** If this is used then the above username and password will be added to Active Directory ***
 	# passw     # Server Password - Used on the Server and Enterprise Server Components ONLY
 	# dbname    # Enterprise Server - Database Name
 	# dbserver  # Enterprise Server - Database Server (IP or Hostname)
@@ -6450,9 +6450,9 @@ Function InstallSolidCPcomponent()  # Function to install the required SolidCP C
 	# esurl     # Portal Server - Enterprise Server URL - Used on the Portal Installation Component ONLY
 	# cname     # "Server"|"Enterprise Server"|"Portal"|"WebDavPortal" - This is the component you want to install
 	#
-	# Install the SolidCP Server component from the SolidCP.SilentInstaller.exe file with the corasponding arguments above
+	# Install the FuseCP Server component from the FuseCP.SilentInstaller.exe file with the corasponding arguments above
 	######################################################################################################################
-	if (Test-Path "C:\Program Files (x86)\SolidCP Installer") {
+	if (Test-Path "C:\Program Files (x86)\FuseCP Installer") {
 		if ($NoIP) {
 			$dIPAddres = "*"
 		}else{
@@ -6462,162 +6462,162 @@ Function InstallSolidCPcomponent()  # Function to install the required SolidCP C
 		Import-Module WebAdministration
 		# Install the additional IIS Application Initialization to speed up website loading times
 		(Add-WindowsFeature -Name Web-AppInit -ErrorAction SilentlyContinue) | Out-Null
-		if ($Enterprise) {   # Install the SolidCP Enterprise Server component
-			if (!(Test-Path "C:\SolidCP\Enterprise Server")) { # Check to see if it is already installed, if not then install it
-				if ($Pass) {$dSolidCPportalPassword = $Pass} # set the password if it has been specified as part of the function
-				if (!($dSolidCPportalPassword)) { # Ask the user to enter the password they want to for the WebDav component (for communication between the Server and the Enterprise Server)
-					$dSolidCPportalPassword = Read-Host "Please enter the password you want to use for the SolidCP Portal Component (Web GUI ServerAdmin account)"
+		if ($Enterprise) {   # Install the FuseCP Enterprise Server component
+			if (!(Test-Path "C:\FuseCP\Enterprise Server")) { # Check to see if it is already installed, if not then install it
+				if ($Pass) {$dFuseCPportalPassword = $Pass} # set the password if it has been specified as part of the function
+				if (!($dFuseCPportalPassword)) { # Ask the user to enter the password they want to for the WebDav component (for communication between the Server and the Enterprise Server)
+					$dFuseCPportalPassword = Read-Host "Please enter the password you want to use for the FuseCP Portal Component (Web GUI ServerAdmin account)"
 				}
-				Write-Host "`tDownloading and Installing the SolidCP `"Enterprise Server`" component" -ForegroundColor Cyan
-				if ($dDomainMember) { # If this server is joined to a domain then install the SolidCP Enterprise Server component Service Account in Active Directory
-					$dRandomPasswordEntSvr = [guid]::NewGuid() # Generate a random password for the Domain SolidCP Enterprise Server Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dSolidCPportalPassword`" /webip:`"*`" /webport:`"9002`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPEnterprise`" /upassw:`"$dRandomPasswordEntSvr`"" -Wait -Passthru).ExitCode | Out-Null
-				}else{ # If the server is not joined to a domain then install the SolidCP Enterprise Server component normally
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dSolidCPportalPassword`" /webip:`"*`" /webport:`"9002`"" -Wait -Passthru).ExitCode | Out-Null
+				Write-Host "`tDownloading and Installing the FuseCP `"Enterprise Server`" component" -ForegroundColor Cyan
+				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP Enterprise Server component Service Account in Active Directory
+					$dRandomPasswordEntSvr = [guid]::NewGuid() # Generate a random password for the Domain FuseCP Enterprise Server Service Account
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dFuseCPportalPassword`" /webip:`"*`" /webport:`"9002`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPEnterprise`" /upassw:`"$dRandomPasswordEntSvr`"" -Wait -Passthru).ExitCode | Out-Null
+				}else{ # If the server is not joined to a domain then install the FuseCP Enterprise Server component normally
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dFuseCPportalPassword`" /webip:`"*`" /webport:`"9002`"" -Wait -Passthru).ExitCode | Out-Null
 				}
-				# Set the correct values in the "bin\SolidCP.SchedulerService.exe.config" file so they match the ones in the "web.config" file for the Connection String and the CryptoKey
-				ModifyXML "C:\SolidCP\Enterprise Server\bin\SolidCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" (ModifyXML "C:\SolidCP\Enterprise Server\web.config" "Get" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString")
-				ModifyXML "C:\SolidCP\Enterprise Server\bin\SolidCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='SolidCP.CryptoKey']/@value"                  (ModifyXML "C:\SolidCP\Enterprise Server\web.config" "Get" "//configuration/appSettings/add[@key='SolidCP.CryptoKey']/@value")
-				# Set the Machine Key in IIS for the SolidCP Enterprise Server Component
-				GenerateIISMachineKey "C:\SolidCP\Enterprise Server\web.config"
-				# Make the required changes ONLY if the SolidCP Enterprise Server site exists
-				if (Test-Path "IIS:\Sites\SolidCP Enterprise Server" -pathType container) {
-					# Get the Application Pool for the SolidCP Enterprise Server ready to make changes
-					$pool = Get-Item 'IIS:\AppPools\SolidCP Enterprise Server Pool'
+				# Set the correct values in the "bin\FuseCP.SchedulerService.exe.config" file so they match the ones in the "web.config" file for the Connection String and the CryptoKey
+				ModifyXML "C:\FuseCP\Enterprise Server\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" (ModifyXML "C:\FuseCP\Enterprise Server\web.config" "Get" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString")
+				ModifyXML "C:\FuseCP\Enterprise Server\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value"                  (ModifyXML "C:\FuseCP\Enterprise Server\web.config" "Get" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value")
+				# Set the Machine Key in IIS for the FuseCP Enterprise Server Component
+				GenerateIISMachineKey "C:\FuseCP\Enterprise Server\web.config"
+				# Make the required changes ONLY if the FuseCP Enterprise Server site exists
+				if (Test-Path "IIS:\Sites\FuseCP Enterprise Server" -pathType container) {
+					# Get the Application Pool for the FuseCP Enterprise Server ready to make changes
+					$pool = Get-Item 'IIS:\AppPools\FuseCP Enterprise Server Pool'
 					$pool.autoStart = 'True'                                # Enable Auto-Start
 					$pool.startMode = 'AlwaysRunning'                       # Set Start Mode as Always Running
 					$pool.processModel.idleTimeout = [TimeSpan]::Zero       # Set Idele TimeOut as 0 Minutes
 					$pool.recycling.periodicRestart.time = [TimeSpan]::Zero # Set Regular time interval as 0 Minutes
-					$pool | Set-Item                                        # Set all of the above for the SolidCP Enterprise Server Application Pool
-					# Remove any schedules for the SolidCP Enterprise Server Application Pool and set the time to be 3.00am as it needs to be recycled once a day
-					Clear-ItemProperty "IIS:\AppPools\SolidCP Enterprise Server Pool" -Name recycling.periodicRestart.schedule
-					Set-ItemProperty "IIS:\AppPools\SolidCP Enterprise Server Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
-					# Disable Anonymous Authentication on the SolidCP Enterprise Server website
-					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "SolidCP Enterprise Server" -Value @{enabled="False"}
-					# Disable Windows Authentication on the SolidCP Enterprise Server website
-					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "SolidCP Enterprise Server" -Value @{enabled="False"}
-					# Set the "preloadEnabled" value to True to speed up loading on the SolidCP component
-					if ((Get-ItemProperty "IIS:\Sites\SolidCP Enterprise Server" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
-						Set-ItemProperty "IIS:\Sites\SolidCP Enterprise Server" -Name applicationDefaults.preloadEnabled -Value $true
+					$pool | Set-Item                                        # Set all of the above for the FuseCP Enterprise Server Application Pool
+					# Remove any schedules for the FuseCP Enterprise Server Application Pool and set the time to be 3.00am as it needs to be recycled once a day
+					Clear-ItemProperty "IIS:\AppPools\FuseCP Enterprise Server Pool" -Name recycling.periodicRestart.schedule
+					Set-ItemProperty "IIS:\AppPools\FuseCP Enterprise Server Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
+					# Disable Anonymous Authentication on the FuseCP Enterprise Server website
+					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "FuseCP Enterprise Server" -Value @{enabled="False"}
+					# Disable Windows Authentication on the FuseCP Enterprise Server website
+					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "FuseCP Enterprise Server" -Value @{enabled="False"}
+					# Set the "preloadEnabled" value to True to speed up loading on the FuseCP component
+					if ((Get-ItemProperty "IIS:\Sites\FuseCP Enterprise Server" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
+						Set-ItemProperty "IIS:\Sites\FuseCP Enterprise Server" -Name applicationDefaults.preloadEnabled -Value $true
 					}
 				}
 			}
-		}elseif ($Portal) {  # Install the SolidCP Portal component
-			if (!(Test-Path "C:\SolidCP\Portal")) { # Check to see if it is already installed, if not then install it
-				if (!($dSolidCPEnterpriseSvrURL)) { # Chec to see if the Enterpeise Server URL is defined
-					if ( (Test-Path "C:\SolidCP\Enterprise Server") -and (Get-WebBinding -Name 'SolidCP Enterprise Server') ) { # Check to see if the Enterprise Server is installed on this machine
-						# Find the SolidCP Enterprise Server URL and port so that it can be used in the portal installation only if it
-						if (((Get-WebBinding -Name 'SolidCP Enterprise Server').bindingInformation).substring(((Get-WebBinding -Name 'SolidCP Enterprise Server').bindingInformation).length -1,1) -eq "`:") {
-							$dSolidCPEnterpriseSvrURL = ((Get-WebBinding -Name 'SolidCP Enterprise Server').protocol) + "://" + ((((Get-WebBinding -Name 'SolidCP Enterprise Server').bindingInformation).substring(0,((Get-WebBinding -Name 'SolidCP Enterprise Server').bindingInformation).length -1) -replace '[*]','127.0.0.1') -replace '[\[\]]','')
+		}elseif ($Portal) {  # Install the FuseCP Portal component
+			if (!(Test-Path "C:\FuseCP\Portal")) { # Check to see if it is already installed, if not then install it
+				if (!($dFuseCPEnterpriseSvrURL)) { # Chec to see if the Enterpeise Server URL is defined
+					if ( (Test-Path "C:\FuseCP\Enterprise Server") -and (Get-WebBinding -Name 'FuseCP Enterprise Server') ) { # Check to see if the Enterprise Server is installed on this machine
+						# Find the FuseCP Enterprise Server URL and port so that it can be used in the portal installation only if it
+						if (((Get-WebBinding -Name 'FuseCP Enterprise Server').bindingInformation).substring(((Get-WebBinding -Name 'FuseCP Enterprise Server').bindingInformation).length -1,1) -eq "`:") {
+							$dFuseCPEnterpriseSvrURL = ((Get-WebBinding -Name 'FuseCP Enterprise Server').protocol) + "://" + ((((Get-WebBinding -Name 'FuseCP Enterprise Server').bindingInformation).substring(0,((Get-WebBinding -Name 'FuseCP Enterprise Server').bindingInformation).length -1) -replace '[*]','127.0.0.1') -replace '[\[\]]','')
 						}else{
-							$dSolidCPEnterpriseSvrURL = ((Get-WebBinding -Name 'SolidCP Enterprise Server').protocol) + "://" + ((((Get-WebBinding -Name 'SolidCP Enterprise Server').bindingInformation) -replace '[*]','127.0.0.1') -replace '[\[\]]','')
+							$dFuseCPEnterpriseSvrURL = ((Get-WebBinding -Name 'FuseCP Enterprise Server').protocol) + "://" + ((((Get-WebBinding -Name 'FuseCP Enterprise Server').bindingInformation) -replace '[*]','127.0.0.1') -replace '[\[\]]','')
 						}
 					}else{ # Otherwise ask for the Enterprise Server URL
-							$dSolidCPEnterpriseSvrURL = Read-Host "Please enter the SolidCP Enterprise Server URL (i.e. http://127.0.0.1:9002)"
+							$dFuseCPEnterpriseSvrURL = Read-Host "Please enter the FuseCP Enterprise Server URL (i.e. http://127.0.0.1:9002)"
 					}
 				}
-				Write-Host "`tDownloading and Installing the SolidCP `"Portal`" component" -ForegroundColor Cyan
-				if ($dDomainMember) { # If this server is joined to a domain then install the SolidCP Portal component Service Account in Active Directory
-					$dRandomPasswordPortal = [guid]::NewGuid() # Generate a random password for the Domain SolidCP Portal Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dSolidCPportalIPaddress`" /webport:`"$dSolidCPportalPortNumber`" /esurl:`"$dSolidCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPPortal`" /upassw:`"$dRandomPasswordPortal`"" -Wait -Passthru).ExitCode | Out-Null
-				}else{ # If the server is not joined to a domain then install the SolidCP Portal component normally
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dSolidCPportalIPaddress`" /webport:`"$dSolidCPportalPortNumber`" /esurl:`"$dSolidCPEnterpriseSvrURL`"" -Wait -Passthru).ExitCode | Out-Null
+				Write-Host "`tDownloading and Installing the FuseCP `"Portal`" component" -ForegroundColor Cyan
+				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP Portal component Service Account in Active Directory
+					$dRandomPasswordPortal = [guid]::NewGuid() # Generate a random password for the Domain FuseCP Portal Service Account
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dFuseCPportalIPaddress`" /webport:`"$dFuseCPportalPortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPPortal`" /upassw:`"$dRandomPasswordPortal`"" -Wait -Passthru).ExitCode | Out-Null
+				}else{ # If the server is not joined to a domain then install the FuseCP Portal component normally
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dFuseCPportalIPaddress`" /webport:`"$dFuseCPportalPortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`"" -Wait -Passthru).ExitCode | Out-Null
 				}
 				# Set the correct icon for the Desktop shortcut
-				if ( (Test-Path "$env:USERPROFILE\Desktop\Login to SolidCP.url") -and (Test-Path "C:\SolidCP\Portal\favicon.ico") ) {
-					($objShortcut = ((((New-Object -comObject Shell.Application).NameSpace(0X0)).ParseName("$env:USERPROFILE\Desktop\Login to SolidCP.url")).GetLink)) | Out-Null
-					($objShortcut.SetIconLocation("C:\SolidCP\Portal\favicon.ico",0)) | Out-Null
+				if ( (Test-Path "$env:USERPROFILE\Desktop\Login to FuseCP.url") -and (Test-Path "C:\FuseCP\Portal\favicon.ico") ) {
+					($objShortcut = ((((New-Object -comObject Shell.Application).NameSpace(0X0)).ParseName("$env:USERPROFILE\Desktop\Login to FuseCP.url")).GetLink)) | Out-Null
+					($objShortcut.SetIconLocation("C:\FuseCP\Portal\favicon.ico",0)) | Out-Null
 					($objShortcut.Save()) | Out-Null
 				}
 				# Set the correct icon for the Start Menu shortcut
-				if ( (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\SolidCP Software\Login to SolidCP.url") -and (Test-Path "C:\SolidCP\Portal\favicon.ico") ) {
-					($objShortcut = ((((New-Object -comObject Shell.Application).NameSpace(0X0)).ParseName("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\SolidCP Software\Login to SolidCP.url")).GetLink)) | Out-Null
-					($objShortcut.SetIconLocation("C:\SolidCP\Portal\favicon.ico",0)) | Out-Null
+				if ( (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\FuseCP Software\Login to FuseCP.url") -and (Test-Path "C:\FuseCP\Portal\favicon.ico") ) {
+					($objShortcut = ((((New-Object -comObject Shell.Application).NameSpace(0X0)).ParseName("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\FuseCP Software\Login to FuseCP.url")).GetLink)) | Out-Null
+					($objShortcut.SetIconLocation("C:\FuseCP\Portal\favicon.ico",0)) | Out-Null
 					($objShortcut.Save()) | Out-Null
 				}
-				# Set the Machine Key in IIS for the SolidCP Portal Component
-				GenerateIISMachineKey "C:\SolidCP\Portal\web.config"
-				# Make the required changes ONLY if the SolidCP Portal site exists
-				if (Test-Path "IIS:\Sites\SolidCP Portal" -pathType container) {
-					# Get the Application Pool for the SolidCP Portal ready to make changes
-					$pool = Get-Item 'IIS:\AppPools\SolidCP Portal Pool'
+				# Set the Machine Key in IIS for the FuseCP Portal Component
+				GenerateIISMachineKey "C:\FuseCP\Portal\web.config"
+				# Make the required changes ONLY if the FuseCP Portal site exists
+				if (Test-Path "IIS:\Sites\FuseCP Portal" -pathType container) {
+					# Get the Application Pool for the FuseCP Portal ready to make changes
+					$pool = Get-Item 'IIS:\AppPools\FuseCP Portal Pool'
 					$pool.autoStart = 'True'                                # Enable Auto-Start
 					$pool.startMode = 'AlwaysRunning'                       # Set Start Mode as Always Running
 					$pool.processModel.idleTimeout = [TimeSpan]::Zero       # Set Idele TimeOut as 0 Minutes
 					$pool.recycling.periodicRestart.time = [TimeSpan]::Zero # Set Regular time interval as 0 Minutes
-					$pool | Set-Item                                        # Set all of the above for the SolidCP Portal Application Pool
-					# Remove any schedules for the SolidCP Portal Application Pool and set the time to be 3.00am as it needs to be recycled once a day
-					Clear-ItemProperty "IIS:\AppPools\SolidCP Portal Pool" -Name recycling.periodicRestart.schedule
-					Set-ItemProperty "IIS:\AppPools\SolidCP Portal Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
-					# Disable Anonymous Authentication on the SolidCP Portal website
-					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "SolidCP Portal" -Value @{enabled="False"}
-					# Disable Windows Authentication on the SolidCP Portal website
-					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "SolidCP Portal" -Value @{enabled="False"}
-					# Set the "preloadEnabled" value to True to speed up loading on the SolidCP component
-					if ((Get-ItemProperty "IIS:\Sites\SolidCP Portal" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
-						Set-ItemProperty "IIS:\Sites\SolidCP Portal" -Name applicationDefaults.preloadEnabled -Value $true
+					$pool | Set-Item                                        # Set all of the above for the FuseCP Portal Application Pool
+					# Remove any schedules for the FuseCP Portal Application Pool and set the time to be 3.00am as it needs to be recycled once a day
+					Clear-ItemProperty "IIS:\AppPools\FuseCP Portal Pool" -Name recycling.periodicRestart.schedule
+					Set-ItemProperty "IIS:\AppPools\FuseCP Portal Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
+					# Disable Anonymous Authentication on the FuseCP Portal website
+					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "FuseCP Portal" -Value @{enabled="False"}
+					# Disable Windows Authentication on the FuseCP Portal website
+					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "FuseCP Portal" -Value @{enabled="False"}
+					# Set the "preloadEnabled" value to True to speed up loading on the FuseCP component
+					if ((Get-ItemProperty "IIS:\Sites\FuseCP Portal" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
+						Set-ItemProperty "IIS:\Sites\FuseCP Portal" -Name applicationDefaults.preloadEnabled -Value $true
 					}
 				}
 			}
-		}elseif ($Server) {  # Install the SolidCP Server component
-			if (!(Test-Path "C:\SolidCP\Server")) { # Check to see if it is already installed, if not then install it
-				Write-Host "`tDownloading and Installing the SolidCP `"Server`" component" -ForegroundColor Cyan
-				if ($Pass) {$dSolidCPserverPassword = $Pass} # set the password if it has been specified as part of the function
-				if (!($dSolidCPserverPassword)) { # Ask the user to enter the password they want to for the WebDav component (for communication between the Server and the Enterprise Server)
-					$dSolidCPserverPassword = Read-Host "Please enter the password you want to use for the SolidCP Server Component"
+		}elseif ($Server) {  # Install the FuseCP Server component
+			if (!(Test-Path "C:\FuseCP\Server")) { # Check to see if it is already installed, if not then install it
+				Write-Host "`tDownloading and Installing the FuseCP `"Server`" component" -ForegroundColor Cyan
+				if ($Pass) {$dFuseCPserverPassword = $Pass} # set the password if it has been specified as part of the function
+				if (!($dFuseCPserverPassword)) { # Ask the user to enter the password they want to for the WebDav component (for communication between the Server and the Enterprise Server)
+					$dFuseCPserverPassword = Read-Host "Please enter the password you want to use for the FuseCP Server Component"
 				}
 				# Create a local group called "Administrators File Access" on the serverif it does not exist
 				CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 				# Add the Local "Administrator" to the Local Group called "Administrators File Access" unless it is already a mmember of the group
 				AddLocalUserToLocalGroup "Administrators File Access" "$dLangAdministratorName"
-				if ($dDomainMember) { # If this server is joined to a domain then install the SolidCP Server component Service Account in Active Directory
-					$dRandomPasswordServer = [guid]::NewGuid() # Generate a random password for the Domain SolidCP Server Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dSolidCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPServer-$env:computerName`" /upassw:`"$dRandomPasswordServer`"" -Wait -Passthru).ExitCode | Out-Null
+				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP Server component Service Account in Active Directory
+					$dRandomPasswordServer = [guid]::NewGuid() # Generate a random password for the Domain FuseCP Server Service Account
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dFuseCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPServer-$env:computerName`" /upassw:`"$dRandomPasswordServer`"" -Wait -Passthru).ExitCode | Out-Null
 					(AddDomainUserToLocalGroup "Administrators File Access" "$dLangDomainAdminsGroup") | Out-Null      # Add the "Domain Admins" User to the new group called "Administrators File Access"
 					(AddDomainUserToLocalGroup "Administrators File Access" "SCPServer-$env:computerName") | Out-Null  # Add the "SCPServer-[ComputerName]" User to the new group called "Administrators File Access"
 					(AddDomainUserToDomainGroup "$dLangDomainAdminsGroup" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Domain Admins"
 					(AddDomainUserToDomainGroup "$dLangAdministratorGroup" "SCPServer-$env:computerName") | Out-Null   # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Administrators"
 					## May need to add the following groups in Active Directory due to the File Permissions that are set to harden the server
 					#(AddDomainUserToDomainGroup "IIS_IUSRS" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "IIS_IUSRS"
-				}else{ # If the server is not joined to a domain then install the SolidCP Server component normally
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dSolidCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`"" -Wait -Passthru).ExitCode | Out-Null
+				}else{ # If the server is not joined to a domain then install the FuseCP Server component normally
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dFuseCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`"" -Wait -Passthru).ExitCode | Out-Null
 					(AddLocalUserToLocalGroup "Administrators File Access" "SCPServer") | Out-Null                     # Add the "SCPServer" User to the new group called "Administrators File Access"
 				}
-				# Add the firewall rule to open Port 9003 for the SolidCP Enterprise Server only if the Enterprise Server IP is set also add RDP Allowed IP's
-				if ($dSCPfirewallRDPaccess) { $dSolidCPServerPort9003ips = $dSCPfirewallRDPaccess.replace(' ','').split(';') } # Build the array of IP Addresses
-				if ($dSolidCPEnterpriseSvrIP) { $dSolidCPServerPort9003ips += "$dSolidCPEnterpriseSvrIP" }                     # Add the Enterprise Server IP Address to the array
-				if ($dSolidCPServerPort9003ips) { # If the array is not empty then create and enable the firewall rule with the correct IPs
-					if ((Get-NetFirewallRule | where DisplayName -EQ "SolidCP Server").DisplayName -eq "SolidCP Server") {
-						Write-Host "`t Restricting port 9003 for SolidCP Server on the Firewall to the Enterprise Server IP Address" -ForegroundColor Green
-						(Set-NetFirewallRule -DisplayName "SolidCP Server" -RemoteAddress $dSolidCPServerPort9003ips) | Out-Null
+				# Add the firewall rule to open Port 9003 for the FuseCP Enterprise Server only if the Enterprise Server IP is set also add RDP Allowed IP's
+				if ($dSCPfirewallRDPaccess) { $dFuseCPServerPort9003ips = $dSCPfirewallRDPaccess.replace(' ','').split(';') } # Build the array of IP Addresses
+				if ($dFuseCPEnterpriseSvrIP) { $dFuseCPServerPort9003ips += "$dFuseCPEnterpriseSvrIP" }                     # Add the Enterprise Server IP Address to the array
+				if ($dFuseCPServerPort9003ips) { # If the array is not empty then create and enable the firewall rule with the correct IPs
+					if ((Get-NetFirewallRule | where DisplayName -EQ "FuseCP Server").DisplayName -eq "FuseCP Server") {
+						Write-Host "`t Restricting port 9003 for FuseCP Server on the Firewall to the Enterprise Server IP Address" -ForegroundColor Green
+						(Set-NetFirewallRule -DisplayName "FuseCP Server" -RemoteAddress $dFuseCPServerPort9003ips) | Out-Null
 						Write-Host "`t Firewall rule modified successfully" -ForegroundColor Green
 					}else {
-						Write-Host "`t Opening port 9003 for SolidCP Server on the Firewall" -ForegroundColor Green
-						(New-NetFirewallRule -DisplayName "SolidCP Server" -Direction Inbound ‚ÄìLocalPort "9003" -Protocol TCP -Action Allow -RemoteAddress $dSolidCPServerPort9003ips -WarningAction SilentlyContinue) | Out-Null
+						Write-Host "`t Opening port 9003 for FuseCP Server on the Firewall" -ForegroundColor Green
+						(New-NetFirewallRule -DisplayName "FuseCP Server" -Direction Inbound ñLocalPort "9003" -Protocol TCP -Action Allow -RemoteAddress $dFuseCPServerPort9003ips -WarningAction SilentlyContinue) | Out-Null
 						Write-Host "`t Firewall rule added successfully" -ForegroundColor Green
 					}
 				}
-				# Set the Machine Key in IIS for the SolidCP Server Component
-				GenerateIISMachineKey "C:\SolidCP\Server\web.config"
-				# Make the required changes ONLY if the SolidCP Server site exists
-				if (Test-Path "IIS:\Sites\SolidCP Server" -pathType container) {
-					# Get the Application Pool for the SolidCP Server ready to make changes
-					$pool = Get-Item 'IIS:\AppPools\SolidCP Server Pool'
+				# Set the Machine Key in IIS for the FuseCP Server Component
+				GenerateIISMachineKey "C:\FuseCP\Server\web.config"
+				# Make the required changes ONLY if the FuseCP Server site exists
+				if (Test-Path "IIS:\Sites\FuseCP Server" -pathType container) {
+					# Get the Application Pool for the FuseCP Server ready to make changes
+					$pool = Get-Item 'IIS:\AppPools\FuseCP Server Pool'
 					$pool.autoStart = 'True'                                # Enable Auto-Start
 					$pool.startMode = 'AlwaysRunning'                       # Set Start Mode as Always Running
 					$pool.processModel.idleTimeout = [TimeSpan]::Zero       # Set Idele TimeOut as 0 Minutes
 					$pool.recycling.periodicRestart.time = [TimeSpan]::Zero # Set Regular time interval as 0 Minutes
-					$pool | Set-Item                                        # Set all of the above for the SolidCP Server Application Pool
-					# Remove any schedules for the SolidCP Server Application Pool and set the time to be 3.00am as it needs to be recycled once a day
-					Clear-ItemProperty "IIS:\AppPools\SolidCP Server Pool" -Name recycling.periodicRestart.schedule
-					Set-ItemProperty "IIS:\AppPools\SolidCP Server Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
-					# Disable Anonymous Authentication on the SolidCP Server website
-					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "SolidCP Server" -Value @{enabled="False"}
-					# Disable Windows Authentication on the SolidCP Server website
-					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "SolidCP Server" -Value @{enabled="False"}
-					# Set the "preloadEnabled" value to True to speed up loading on the SolidCP component
-					if ((Get-ItemProperty "IIS:\Sites\SolidCP Server" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
-						Set-ItemProperty "IIS:\Sites\SolidCP Server" -Name applicationDefaults.preloadEnabled -Value $true
+					$pool | Set-Item                                        # Set all of the above for the FuseCP Server Application Pool
+					# Remove any schedules for the FuseCP Server Application Pool and set the time to be 3.00am as it needs to be recycled once a day
+					Clear-ItemProperty "IIS:\AppPools\FuseCP Server Pool" -Name recycling.periodicRestart.schedule
+					Set-ItemProperty "IIS:\AppPools\FuseCP Server Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
+					# Disable Anonymous Authentication on the FuseCP Server website
+					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "FuseCP Server" -Value @{enabled="False"}
+					# Disable Windows Authentication on the FuseCP Server website
+					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "FuseCP Server" -Value @{enabled="False"}
+					# Set the "preloadEnabled" value to True to speed up loading on the FuseCP component
+					if ((Get-ItemProperty "IIS:\Sites\FuseCP Server" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
+						Set-ItemProperty "IIS:\Sites\FuseCP Server" -Name applicationDefaults.preloadEnabled -Value $true
 					}
 				}
 				# if SQL has been installed then make sure the SQL Server Service Account has full permissions on the SCPServer's AppData Temp folder
@@ -6630,13 +6630,13 @@ Function InstallSolidCPcomponent()  # Function to install the required SolidCP C
 					}
 				}
 			}
-		}elseif ($WebDav) {  # Install the SolidCP WebDav (Cloud Storage Portal) component
-			if (!(Test-Path "C:\SolidCP\Cloud Storage Portal")) { # Check to see if it is already installed, if not then install it
-				if (!($dSolidCPEnterpriseSvrURL)) { # Check if the Enterprise Server URL has been set, if not ask for it
-					$dSolidCPEnterpriseSvrURL = Read-Host "`tPlease enter the SolidCP Enterprise Server URL (i.e. http://PublicIP:9002)"
+		}elseif ($WebDav) {  # Install the FuseCP WebDav (Cloud Storage Portal) component
+			if (!(Test-Path "C:\FuseCP\Cloud Storage Portal")) { # Check to see if it is already installed, if not then install it
+				if (!($dFuseCPEnterpriseSvrURL)) { # Check if the Enterprise Server URL has been set, if not ask for it
+					$dFuseCPEnterpriseSvrURL = Read-Host "`tPlease enter the FuseCP Enterprise Server URL (i.e. http://PublicIP:9002)"
 				}
-				if (!($dSolidCPEnterpriseSvrIP)) { # Check if the Enterprise Server IP has been set, if not ask for it
-					$dSolidCPEnterpriseSvrIP = Read-Host "`tPlease enter the SolidCP Enterprise Server IP Address ONLY (i.e. 192.168.1.1)"
+				if (!($dFuseCPEnterpriseSvrIP)) { # Check if the Enterprise Server IP has been set, if not ask for it
+					$dFuseCPEnterpriseSvrIP = Read-Host "`tPlease enter the FuseCP Enterprise Server IP Address ONLY (i.e. 192.168.1.1)"
 				}
 				if (!($dWebDavStorageHostName)) { # As the user for to choose the FQDN for the WebDav Server
 					do {
@@ -6651,55 +6651,55 @@ Function InstallSolidCPcomponent()  # Function to install the required SolidCP C
 						"B" {do { $script:dWebDavStorageHostName = Read-Host "`tPlease enter the required FQDN for the Cloud Storage Portal" } until (!([string]::IsNullOrEmpty($dWebDavStorageHostName)))}
 					}
 				}
-				Write-Host "`tDownloading and Installing the SolidCP `"Cloud Storage Portal`" component" -ForegroundColor Cyan
+				Write-Host "`tDownloading and Installing the FuseCP `"Cloud Storage Portal`" component" -ForegroundColor Cyan
 				# Change the bindings on the default website to Port 8080 if the required WebDav Port is 80
 				if ($dWebDavStoragePortNumber -eq "80") {
 					if ( (Get-WebBinding -Name 'Default Web Site').bindingInformation -eq "*:80:" ) {
 						Set-WebBinding -Name 'Default Web Site' -BindingInformation "*:80:" -PropertyName Port -Value 8080
 					}
 				}
-				if ($dDomainMember) { # If this server is joined to a domain then install the SolidCP WebDav (Cloud Storage Portal) component Service Account in Active Directory
-					$dRandomPasswordWebDav = [guid]::NewGuid() # Generate a random password for the Domain SolidCP WebDav Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dSolidCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPWebDav-$env:computerName`" /upassw:`"$dRandomPasswordWebDav`"" -Wait -Passthru).ExitCode | Out-Null
+				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP WebDav (Cloud Storage Portal) component Service Account in Active Directory
+					$dRandomPasswordWebDav = [guid]::NewGuid() # Generate a random password for the Domain FuseCP WebDav Service Account
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPWebDav-$env:computerName`" /upassw:`"$dRandomPasswordWebDav`"" -Wait -Passthru).ExitCode | Out-Null
 					(AddDomainUserToLocalGroup "Administrators File Access" "SCPWebDav-$env:computerName") | Out-Null  # Add the "SCPWebDav-[ComputerName]" User to the new group called "Administrators File Access"
 					(AddDomainUserToDomainGroup "$dLangDomainAdminsGroup" "SCPWebDav-$env:computerName") | Out-Null    # Add the "SCPWebDav-[ComputerName]" User to the group "Domain Admins"
-				}else{ # If the server is not joined to a domain then install the SolidCP SCPWebDav (Cloud Storage Portal) component normally
-					(Start-Process -FilePath "C:\Program Files (x86)\SolidCP Installer\SolidCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dSolidCPEnterpriseSvrURL`"" -Wait -Passthru).ExitCode | Out-Null
+				}else{ # If the server is not joined to a domain then install the FuseCP SCPWebDav (Cloud Storage Portal) component normally
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`"" -Wait -Passthru).ExitCode | Out-Null
 					(AddLocalUserToLocalGroup "Administrators File Access" "SCPWebDav") | Out-Null                     # Add the "SCPWebDav" User to the new group called "Administrators File Access"
 				}
-				# Check if the SolidCP Cloud Storage Portal web.config file is there, if it is then modify it as below
-				if (Test-Path "C:\SolidCP\Cloud Storage Portal\Web.config") {
+				# Check if the FuseCP Cloud Storage Portal web.config file is there, if it is then modify it as below
+				if (Test-Path "C:\FuseCP\Cloud Storage Portal\Web.config") {
 					# Set the values in the web.config file for the Cloud Storage Portal (WebDav)
-					[xml]$myXML = Get-Content "C:\SolidCP\Cloud Storage Portal\Web.config"
-					($myXML.configuration.appSettings.add | ? { $_.key -eq "SolidCP.CryptoKey" }).value = (([xml](Get-Content ( "\\" + ($dSolidCPEnterpriseSvrIP) + "\c$\SolidCP\Enterprise Server\Web.config" ) )).configuration.appSettings.add | ? { $_.key -eq "SolidCP.CryptoKey" }).value
+					[xml]$myXML = Get-Content "C:\FuseCP\Cloud Storage Portal\Web.config"
+					($myXML.configuration.appSettings.add | ? { $_.key -eq "FuseCP.CryptoKey" }).value = (([xml](Get-Content ( "\\" + ($dFuseCPEnterpriseSvrIP) + "\c$\FuseCP\Enterprise Server\Web.config" ) )).configuration.appSettings.add | ? { $_.key -eq "FuseCP.CryptoKey" }).value
 					$myXML.configuration.webDavExplorerConfigurationSettings.userDomain.value= $env:USERDNSDOMAIN.ToLower()
 					$myXML.configuration.webDavExplorerConfigurationSettings.webdavRoot.value = "http://" + $dWebDavStorageHostName + "/"
-					$myXML.configuration.webDavExplorerConfigurationSettings.enterpriseServer.url = $dSolidCPEnterpriseSvrURL
-					$myXML.configuration.webDavExplorerConfigurationSettings.SolidCPConstantUser.login = "serveradmin"
-					$myXML.configuration.webDavExplorerConfigurationSettings.SolidCPConstantUser.password = (dEntSvrQuerySQL "SELECT [Username], [Password] FROM [Users] WHERE [Username] = 'serveradmin'").Password
-					$myXML.Save("C:\SolidCP\Cloud Storage Portal\Web.config")
+					$myXML.configuration.webDavExplorerConfigurationSettings.enterpriseServer.url = $dFuseCPEnterpriseSvrURL
+					$myXML.configuration.webDavExplorerConfigurationSettings.FuseCPConstantUser.login = "serveradmin"
+					$myXML.configuration.webDavExplorerConfigurationSettings.FuseCPConstantUser.password = (dEntSvrQuerySQL "SELECT [Username], [Password] FROM [Users] WHERE [Username] = 'serveradmin'").Password
+					$myXML.Save("C:\FuseCP\Cloud Storage Portal\Web.config")
 				}
-				# Set the Machine Key in IIS for the SolidCP Cloud Storage Portal Component
-				GenerateIISMachineKey "C:\SolidCP\Cloud Storage Portal\web.config"
-				# Make the required changes ONLY if the SolidCP Cloud Storage Portal site exists
-				if (Test-Path "IIS:\Sites\SolidCP Cloud Storage Portal" -pathType container) {
-					# Get the Application Pool for the SolidCP Cloud Storage Portal ready to make changes
-					$pool = Get-Item 'IIS:\AppPools\SolidCP Cloud Storage Portal Pool'
+				# Set the Machine Key in IIS for the FuseCP Cloud Storage Portal Component
+				GenerateIISMachineKey "C:\FuseCP\Cloud Storage Portal\web.config"
+				# Make the required changes ONLY if the FuseCP Cloud Storage Portal site exists
+				if (Test-Path "IIS:\Sites\FuseCP Cloud Storage Portal" -pathType container) {
+					# Get the Application Pool for the FuseCP Cloud Storage Portal ready to make changes
+					$pool = Get-Item 'IIS:\AppPools\FuseCP Cloud Storage Portal Pool'
 					$pool.autoStart = 'True'                                # Enable Auto-Start
 					$pool.startMode = 'AlwaysRunning'                       # Set Start Mode as Always Running
 					$pool.processModel.idleTimeout = [TimeSpan]::Zero       # Set Idele TimeOut as 0 Minutes
 					$pool.recycling.periodicRestart.time = [TimeSpan]::Zero # Set Regular time interval as 0 Minutes
-					$pool | Set-Item                                        # Set all of the above for the SolidCP Cloud Storage Portal Application Pool
-					# Remove any schedules for the SolidCP Cloud Storage Portal Application Pool and set the time to be 3.00am as it needs to be recycled once a day
-					Clear-ItemProperty "IIS:\AppPools\SolidCP Cloud Storage Portal Pool" -Name recycling.periodicRestart.schedule
-					Set-ItemProperty "IIS:\AppPools\SolidCP Cloud Storage Portal Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
-					# Disable Anonymous Authentication on the SolidCP Cloud Storage Portal website
-					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "SolidCP Cloud Storage Portal" -Value @{enabled="False"}
-					# Disable Windows Authentication on the SolidCP Cloud Storage Portal website
-					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "SolidCP Cloud Storage Portal" -Value @{enabled="False"}
-					# Set the "preloadEnabled" value to True to speed up loading on the SolidCP component
-					if ((Get-ItemProperty "IIS:\Sites\SolidCP Cloud Storage Portal" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
-						Set-ItemProperty "IIS:\Sites\SolidCP Cloud Storage Portal" -Name applicationDefaults.preloadEnabled -Value $true
+					$pool | Set-Item                                        # Set all of the above for the FuseCP Cloud Storage Portal Application Pool
+					# Remove any schedules for the FuseCP Cloud Storage Portal Application Pool and set the time to be 3.00am as it needs to be recycled once a day
+					Clear-ItemProperty "IIS:\AppPools\FuseCP Cloud Storage Portal Pool" -Name recycling.periodicRestart.schedule
+					Set-ItemProperty "IIS:\AppPools\FuseCP Cloud Storage Portal Pool" -Name recycling.periodicRestart.schedule -Value @{value='03:00:00'}
+					# Disable Anonymous Authentication on the FuseCP Cloud Storage Portal website
+					#Get-WebConfiguration "system.webServer/security/authentication/anonymousAuthentication" -PSPath IIS:\ -Location "FuseCP Cloud Storage Portal" -Value @{enabled="False"}
+					# Disable Windows Authentication on the FuseCP Cloud Storage Portal website
+					Set-WebConfiguration system.webServer/security/authentication/windowsAuthentication -PSPath IIS:\ -Location "FuseCP Cloud Storage Portal" -Value @{enabled="False"}
+					# Set the "preloadEnabled" value to True to speed up loading on the FuseCP component
+					if ((Get-ItemProperty "IIS:\Sites\FuseCP Cloud Storage Portal" -Name applicationDefaults.preloadEnabled).Value -eq $false) {
+						Set-ItemProperty "IIS:\Sites\FuseCP Cloud Storage Portal" -Name applicationDefaults.preloadEnabled -Value $true
 					}
 				}
 			}
@@ -6710,12 +6710,12 @@ Function InstallSolidCPcomponent()  # Function to install the required SolidCP C
 
 ####################################################################################################################################################################################
 ####################################################################################################################################################################################
-# Run the SolidCP Installation Menu as long as the logged in user is member of the Local "Administrators" group of the "Domain Admins" group
+# Run the FuseCP Installation Menu as long as the logged in user is member of the Local "Administrators" group of the "Domain Admins" group
 if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 	if (CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local") { # Run the SOlidCP Menu if the logged in user is a Local Administrator
 		Write-Host "`n`t This machine is NOT Joined to domain and you are logged in as Local Administrator Account" -ForegroundColor Green
-		Write-Host "`t The SolidCP menu is being loaded" -ForegroundColor Green
-		SolidCPmenu
+		Write-Host "`t The FuseCP menu is being loaded" -ForegroundColor Green
+		FuseCPmenu
 	}elseif (!(CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local")) { # The logged in user is NOT a Local Administrator
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -6746,8 +6746,8 @@ if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 }elseif ( ($dDomainMember) -and (!($dLoggedInLocally)) ) {
 	if (CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain") { # Run the SOlidCP Menu if the logged in user is a Domain Administrator
 		Write-Host "`n`t This machine is Joined to domain and you are logged in as Domain Administrator Account" -ForegroundColor Green
-		Write-Host "`t The SolidCP menu is being loaded" -ForegroundColor Green
-		SolidCPmenu
+		Write-Host "`t The FuseCP menu is being loaded" -ForegroundColor Green
+		FuseCPmenu
 	}elseif (!(CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain")) { # The logged in user is NOT a Domain Administrator
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -6769,11 +6769,11 @@ if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 	Write-Host "`t *     Oops, An unexpected error has occurred    *" -ForegroundColor Yellow
 	Write-Host "`t *      We apologize for this inconvenience.     *" -ForegroundColor Yellow
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
-	Write-Host "`t *    Please contact SolidCP Technical Support   *" -ForegroundColor Yellow
-	Write-Host "`t *            on support@solidcp.com             *" -ForegroundColor Yellow
+	Write-Host "`t *    Please contact FuseCP Technical Support   *" -ForegroundColor Yellow
+	Write-Host "`t *            on support@fusecp.com             *" -ForegroundColor Yellow
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
 	Write-Host "`t *      Please let them know the error was       *" -ForegroundColor Yellow
-	Write-Host "`t *      with the SolidCP PowerShell Script       *" -ForegroundColor Yellow
+	Write-Host "`t *      with the FuseCP PowerShell Script       *" -ForegroundColor Yellow
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
 	Write-Host "`t *************************************************" -ForegroundColor Yellow
 	Write-Host "`n`n`t ==============  DEBUG INFORMATION  ==============" -ForegroundColor Green

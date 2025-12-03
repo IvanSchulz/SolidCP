@@ -1,13 +1,13 @@
-﻿using SolidCP.WebDav.Core.Config.Entities;
+using FuseCP.WebDav.Core.Config.Entities;
 
-namespace SolidCP.WebDav.Core.Config
+namespace FuseCP.WebDav.Core.Config
 {
     public interface IWebDavAppConfig
     {
         string UserDomain { get; }
         string ApplicationName { get; }
         ElementsRendering ElementsRendering { get; }
-        SolidCPConstantUserParameters SolidCPConstantUserParameters { get; }
+        FuseCPConstantUserParameters FuseCPConstantUserParameters { get; }
         TwilioParameters TwilioParameters { get; }
         SessionKeysCollection SessionKeys { get; }
         FileIconsDictionary FileIcons { get; }

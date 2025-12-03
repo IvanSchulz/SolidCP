@@ -34,7 +34,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Templates.AST
+namespace FuseCP.Templates.AST
 {
     internal class SetStatement : Statement
     {

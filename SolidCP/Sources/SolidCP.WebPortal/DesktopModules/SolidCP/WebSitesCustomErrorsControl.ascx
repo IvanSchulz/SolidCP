@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesCustomErrorsControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesCustomErrorsControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesCustomErrorsControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesCustomErrorsControl" %>
 
 
 <div style="padding: 20; margin-bottom: 10px;">

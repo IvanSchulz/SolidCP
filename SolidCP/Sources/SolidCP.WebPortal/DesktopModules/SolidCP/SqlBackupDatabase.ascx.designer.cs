@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SqlBackupDatabase {
@@ -100,7 +100,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup fileLookup;
+        protected global::FuseCP.Portal.FileLookup fileLookup;
         
         /// <summary>
         /// btnCancel control.

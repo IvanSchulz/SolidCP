@@ -1,10 +1,10 @@
-﻿using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public class UbuntuInstaller : DebianInstaller
 	{

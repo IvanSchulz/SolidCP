@@ -32,9 +32,9 @@
 
 using System;
 using System.IO;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     public abstract class HostingServiceProviderBase : IHostingServiceProvider
     {

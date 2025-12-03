@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.SharePoint;
+using FuseCP.Providers.SharePoint;
 
-namespace SolidCP.EnterpriseServer.Base.HostedSolution
+namespace FuseCP.EnterpriseServer.Base.HostedSolution
 {
 	public class CalculateSharePointSitesDiskSpaceResult
 	{

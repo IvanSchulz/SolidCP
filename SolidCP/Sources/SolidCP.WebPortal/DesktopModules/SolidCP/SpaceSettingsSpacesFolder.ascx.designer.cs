@@ -40,10 +40,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SpaceSettingsSpacesFolder {
-        protected SolidCP.Portal.CollapsiblePanel tblSpacesFolder;
+        protected FuseCP.Portal.CollapsiblePanel tblSpacesFolder;
         protected System.Web.UI.WebControls.Panel SpacesFolderPanel;
         protected System.Web.UI.WebControls.Label lblChildSpacesFolder;
         protected System.Web.UI.WebControls.TextBox txtSpacesFolder;

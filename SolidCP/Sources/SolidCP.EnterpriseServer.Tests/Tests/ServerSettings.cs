@@ -1,8 +1,8 @@
 using System.Runtime.Serialization;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	[TestClass]
 	public class TestServerSettings

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPSForPC.UserControls {
+namespace FuseCP.Portal.VPSForPC.UserControls {
     
     
     public partial class ServerTabs {
@@ -118,6 +118,6 @@ namespace SolidCP.Portal.VPSForPC.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
     }
 }

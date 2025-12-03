@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SpaceNestedSpacesSummary {
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel allSpaces;
+        protected global::FuseCP.Portal.CollapsiblePanel allSpaces;
         
         /// <summary>
         /// AllSpacesPanel control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel spacesbyStatus;
+        protected global::FuseCP.Portal.CollapsiblePanel spacesbyStatus;
         
         /// <summary>
         /// SpacesByStatusPanel control.

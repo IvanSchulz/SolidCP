@@ -33,7 +33,7 @@
 using System.Web.UI.WebControls;
 using CPCC;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
     public partial class EditFeedsList : DomainListControlBase
     {

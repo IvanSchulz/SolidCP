@@ -1,1 +1,1 @@
-<%@ WebService Language="C#" CodeBehind="HostedSharePointServer.asmx.cs" Class="SolidCP.Server.HostedSharePointServer" %>
+<%@ WebService Language="C#" CodeBehind="HostedSharePointServer.asmx.cs" Class="FuseCP.Server.HostedSharePointServer" %>

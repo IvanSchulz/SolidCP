@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" CodeBehind="MariaDB_EditDatabase.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MariaDB_EditUser_EditField" %>
+<%@ Control Language="C#" CodeBehind="MariaDB_EditDatabase.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MariaDB_EditUser_EditField" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="secDataFiles" runat="server" IsCollapsed="true"

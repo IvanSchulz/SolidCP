@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.Statistics
+namespace FuseCP.Providers.Statistics
 {
 	/// <summary>
 	/// Summary description for StatisticsItem.

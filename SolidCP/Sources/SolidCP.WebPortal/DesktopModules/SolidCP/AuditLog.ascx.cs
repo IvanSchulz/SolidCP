@@ -35,11 +35,11 @@ using System.Data;
 using System.Text;
 using System.Web.UI.WebControls;
 using System.Xml;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class AuditLog : SolidCPModuleBase
+    public partial class AuditLog : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

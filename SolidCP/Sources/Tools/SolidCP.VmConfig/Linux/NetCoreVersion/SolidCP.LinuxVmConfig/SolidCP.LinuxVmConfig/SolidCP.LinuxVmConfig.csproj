@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.LinuxVmConfig.Common\SolidCP.LinuxVmConfig.Common.csproj" />
+    <ProjectReference Include="..\FuseCP.LinuxVmConfig.Common\FuseCP.LinuxVmConfig.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

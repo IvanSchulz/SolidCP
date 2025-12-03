@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationDeletedUserMemberOf.ascx.cs" Inherits="SolidCP.Portal.HostedSolution.DeletedUserMemberOf" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationDeletedUserMemberOf.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.DeletedUserMemberOf" %>
 <%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
 <%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>

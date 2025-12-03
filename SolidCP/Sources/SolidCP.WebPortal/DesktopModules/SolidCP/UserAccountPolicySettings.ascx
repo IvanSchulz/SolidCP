@@ -1,9 +1,9 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountPolicySettings.ascx.cs" Inherits="SolidCP.Portal.UserAccountPolicySettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountPolicySettings.ascx.cs" Inherits="FuseCP.Portal.UserAccountPolicySettings" %>
 <div class="panel-body form-horizontal">
     <ul class="LinksList">
         <li>
-            <asp:HyperLink ID="lnkSolidCPPolicy" runat="server" meta:resourcekey="lnkSolidCPPolicy"
-                    Text="SolidCP Policy" NavigateUrl='<%# GetSettingsLink("SolidCPPolicy", "SettingsSolidCPPolicy") %>'></asp:HyperLink>
+            <asp:HyperLink ID="lnkFuseCPPolicy" runat="server" meta:resourcekey="lnkFuseCPPolicy"
+                    Text="FuseCP Policy" NavigateUrl='<%# GetSettingsLink("FuseCPPolicy", "SettingsFuseCPPolicy") %>'></asp:HyperLink>
         </li>
         <li>
             <asp:HyperLink ID="lnkServiceLevels" runat="server" meta:resourcekey="lnkServiceLevels"

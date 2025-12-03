@@ -1,1 +1,1 @@
-<%@ WebService Language="C#" CodeBehind="TaskManager.asmx.cs" Class="SolidCP.Portal.TaskManager" %>
+<%@ WebService Language="C#" CodeBehind="TaskManager.asmx.cs" Class="FuseCP.Portal.TaskManager" %>

@@ -36,7 +36,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	/// <summary>
 	/// Log.

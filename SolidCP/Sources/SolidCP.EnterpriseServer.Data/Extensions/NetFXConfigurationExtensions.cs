@@ -1,4 +1,4 @@
-﻿#if NetFX
+#if NetFX
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Linq.Expressions;
 
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public static class NetFXConfigurationExtensions
 	{

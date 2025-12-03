@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <RootNamespace>SolidCP.Providers.Web</RootNamespace>
+    <RootNamespace>FuseCP.Providers.Web</RootNamespace>
     <TargetFramework>net48</TargetFramework>
     <PublishUrl>publish\</PublishUrl>
     <WarningsAsErrors>618</WarningsAsErrors>
-    <OutputPath>..\SolidCP.Server\bin\Providers\</OutputPath>
+    <OutputPath>..\FuseCP.Server\bin\Providers\</OutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -39,49 +39,49 @@
     <Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-    <ProjectReference Include="..\SolidCP.Providers.Web.IIs60\SolidCP.Providers.Web.IIs60.csproj" />
-    <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+    <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+    <ProjectReference Include="..\FuseCP.Providers.Web.IIs60\FuseCP.Providers.Web.IIs60.csproj" />
+    <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="SolidCP.Providers.Web.IIS70\IIs70.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Authentication\AnonymAuthModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Authentication\AuthenticationGlobals.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Authentication\BasicAuthModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Authentication\WindowsAuthenticationModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\ClassicAsp\ClassicAspGlobals.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\ClassicAsp\ClassicAspModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\ConfigurationModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\FastCgiApplication.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\FastCgiApplicationCollection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\FastCgiSection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\HttpErrorResponseMode.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\IsapiCgiRestrictionCollection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\IsapiCgiRestrictionElement.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Common\IsapiCgiRestrictionSection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Compression\CompressionModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\DefaultDocuments\DefaultDocumentModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Delegation\DelegationRulesModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseGlobals.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseSection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseShowFlags.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Extensions\ExtensionsModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\HandlerAccessPolicy.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\HandlerAction.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\HandlerActionCollection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\HandlerRequiredAccess.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\HandlersModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\HandlersSection.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Handlers\ResourceType.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\HttpRedirect\HttpRedirectModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\MimeTypes\MimeTypesModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Properties\AssemblyInfo.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\SSL\CertEnrollInterop.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\SSL\SSLModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\Utility\ConfigurationUtility.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\WebObjects\CustomHttpErrorsModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\WebObjects\CustomHttpHeadersModuleService.cs" />
-    <Compile Remove="SolidCP.Providers.Web.IIS70\WebObjects\WebObjectsModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\IIs70.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Authentication\AnonymAuthModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Authentication\AuthenticationGlobals.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Authentication\BasicAuthModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Authentication\WindowsAuthenticationModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\ClassicAsp\ClassicAspGlobals.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\ClassicAsp\ClassicAspModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\ConfigurationModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\FastCgiApplication.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\FastCgiApplicationCollection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\FastCgiSection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\HttpErrorResponseMode.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\IsapiCgiRestrictionCollection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\IsapiCgiRestrictionElement.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Common\IsapiCgiRestrictionSection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Compression\CompressionModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\DefaultDocuments\DefaultDocumentModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Delegation\DelegationRulesModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseGlobals.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseSection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\DirectoryBrowse\DirectoryBrowseShowFlags.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Extensions\ExtensionsModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\HandlerAccessPolicy.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\HandlerAction.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\HandlerActionCollection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\HandlerRequiredAccess.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\HandlersModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\HandlersSection.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Handlers\ResourceType.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\HttpRedirect\HttpRedirectModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\MimeTypes\MimeTypesModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Properties\AssemblyInfo.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\SSL\CertEnrollInterop.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\SSL\SSLModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\Utility\ConfigurationUtility.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\WebObjects\CustomHttpErrorsModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\WebObjects\CustomHttpHeadersModuleService.cs" />
+    <Compile Remove="FuseCP.Providers.Web.IIS70\WebObjects\WebObjectsModuleService.cs" />
   </ItemGroup>
 </Project>

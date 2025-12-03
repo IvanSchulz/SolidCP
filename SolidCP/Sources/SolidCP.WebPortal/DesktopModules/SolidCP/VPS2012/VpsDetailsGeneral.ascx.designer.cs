@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012 {
+namespace FuseCP.Portal.VPS2012 {
     
     
     public partial class VpsDetailsGeneral {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// operationTimer control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS2012.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.VPS2012.UserControls.ServerTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// DetailsTable control.
@@ -379,7 +379,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Gauge cpuGauge;
+        protected global::FuseCP.Portal.Gauge cpuGauge;
         
         /// <summary>
         /// litCpuPercentage control.
@@ -415,7 +415,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Gauge ramGauge;
+        protected global::FuseCP.Portal.Gauge ramGauge;
         
         /// <summary>
         /// litRamPercentage control.
@@ -460,7 +460,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Gauge hddGauge;
+        protected global::FuseCP.Portal.Gauge hddGauge;
         
         /// <summary>
         /// litHddPercentage control.

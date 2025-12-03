@@ -33,11 +33,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Web.Iis.Common;
+using FuseCP.Providers.Web.Iis.Common;
 using Microsoft.Web.Administration;
-using SolidCP.Providers.Web.Iis.Utility;
+using FuseCP.Providers.Web.Iis.Utility;
 
-namespace SolidCP.Providers.Web.MimeTypes
+namespace FuseCP.Providers.Web.MimeTypes
 {
 	internal sealed class MimeTypesModuleService : ConfigurationModuleService
 	{

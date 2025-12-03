@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Configuration
+namespace FuseCP.EnterpriseServer.Data.Configuration
 {
 	public static class DbModelBuilderExtensions
 	{

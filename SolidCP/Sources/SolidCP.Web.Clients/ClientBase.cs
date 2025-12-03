@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Text;
@@ -15,8 +15,8 @@ using System.Net;
 using System.Diagnostics;
 using System.IO;
 using Renci.SshNet;
-using SolidCP.Providers.OS;
-using SolidCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers;
 using System.Net.Sockets;
 
 #if !NETFRAMEWORK && gRPC
@@ -26,7 +26,7 @@ using ProtoBuf.Grpc.Client;
 using Grpc.Net.Client;
 #endif
 
-namespace SolidCP.Web.Clients
+namespace FuseCP.Web.Clients
 {
 
 	public enum Protocols { BasicHttp, NetHttp, WSHttp, BasicHttps, NetHttps, WSHttps, NetTcp, NetTcpSsl, NetPipe, NetPipeSsl, RESTHttp, RESTHttps, gRPC, gRPCSsl, gRPCWeb, gRPCWebSsl, Assembly, Ssh }
@@ -273,7 +273,7 @@ namespace SolidCP.Web.Clients
 			}
 		}
 
-		public bool IsDefaultApi => !Regex.IsMatch(url, "(?:basic|net|ws|grpc|grpc/ssl|tcp|tcp/ssl|pipe|pipe/ssl)(?:/[A-Za-z0-9_¨]+)?/?(?:\\?|$)");
+		public bool IsDefaultApi => !Regex.IsMatch(url, "(?:basic|net|ws|grpc|grpc/ssl|tcp|tcp/ssl|pipe|pipe/ssl)(?:/[A-Za-z0-9_�]+)?/?(?:\\?|$)");
 
 		public bool IsAuthenticated
 		{
@@ -285,14 +285,14 @@ namespace SolidCP.Web.Clients
 				return policy != null && policy != HasPolicyAttribute.Encrypted;
 			}
 		}
-		public bool HasSoapHeaders => ServiceInterface?.GetCustomAttribute<SolidCP.Providers.SoapHeaderAttribute>() != null;
+		public bool HasSoapHeaders => ServiceInterface?.GetCustomAttribute<FuseCP.Providers.SoapHeaderAttribute>() != null;
 
 		public bool CheckSoapHeader(string methodName)
 		{
 			var service = ServiceInterface;
 			var method = service.GetMethod(methodName);
 			if (method == null) throw new ArgumentException($"Method {this.GetType().Name}.{methodName} not found");
-            var soapAttr = method.GetCustomAttribute<SolidCP.Providers.SoapHeaderAttribute>();
+            var soapAttr = method.GetCustomAttribute<FuseCP.Providers.SoapHeaderAttribute>();
 			if (soapAttr != null && SoapHeader == null) throw new Exception($"Must assign a SoapHeader for calling method {this.GetType().Name}.{methodName}");
 			return soapAttr != null;
 		}
@@ -668,7 +668,7 @@ namespace SolidCP.Web.Clients
 					assemblyClient.AssemblyName = url.Substring("assembly://".Length);
 					client = assemblyClient;
 				}
-				else throw new NotSupportedException("Unsupported protocol in SolidCP.Web.Clients.ClientBase");
+				else throw new NotSupportedException("Unsupported protocol in FuseCP.Web.Clients.ClientBase");
 				if (client is IClientChannel channel) channel.Open();
 				return client;
 			}

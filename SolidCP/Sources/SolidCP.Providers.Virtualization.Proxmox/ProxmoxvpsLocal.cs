@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using System.Linq;
 using System.Text.RegularExpressions;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.HostedSolution.Proxmox;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.HostedSolution.Proxmox;
 using System.IO;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
 	public class ProxmoxvpsLocal : Proxmoxvps
 	{

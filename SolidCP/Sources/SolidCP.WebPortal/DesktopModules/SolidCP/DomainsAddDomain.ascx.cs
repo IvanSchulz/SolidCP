@@ -32,18 +32,18 @@
 
 using System;
 using System.Web;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Collections.Generic;
-using SolidCP.Portal.UserControls;
+using FuseCP.Portal.UserControls;
 //using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Net;
 using System.IO;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class DomainsAddDomain : SolidCPModuleBase
+	public partial class DomainsAddDomain : FuseCPModuleBase
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -132,7 +132,7 @@ namespace SolidCP.Portal
 
             PackageContext cntx = PackagesHelper.GetCachedPackageContext(PanelSecurity.PackageId);
             // create web site option
-            CreateSolidCP.Visible = (type == DomainType.Domain || type == DomainType.SubDomain)
+            CreateFuseCP.Visible = (type == DomainType.Domain || type == DomainType.SubDomain)
 				&& cntx.Groups.ContainsKey(ResourceGroups.Web);
 
             if (PointWebSite.Checked)
@@ -143,11 +143,11 @@ namespace SolidCP.Portal
             else
             {
                 CreateWebSite.Enabled = true;
-                CreateWebSite.Checked &= CreateSolidCP.Visible;
+                CreateWebSite.Checked &= CreateFuseCP.Visible;
             }
 
             // point Web site
-            PointSolidCP.Visible = (type == DomainType.DomainPointer || (type == DomainType.Domain))
+            PointFuseCP.Visible = (type == DomainType.DomainPointer || (type == DomainType.Domain))
                 && cntx.Groups.ContainsKey(ResourceGroups.Web) && WebSitesList.Items.Count > 0;
             WebSitesList.Enabled = PointWebSite.Checked;
 

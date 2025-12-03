@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AssignedRDSServers.ascx.cs" Inherits="SolidCP.Portal.RDS.AssignedRDSServers" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AssignedRDSServers.ascx.cs" Inherits="FuseCP.Portal.RDS.AssignedRDSServers" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -74,7 +74,7 @@
     &nbsp;&nbsp;&nbsp;
     <scp:QuotaViewer ID="rdsServersQuota" runat="server" QuotaTypeId="2" DisplayGauge="true"/>
 </div>
-<asp:ObjectDataSource ID="odsRDSAssignedServersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetOrganizationRdsServersPagedCount" SelectMethod="GetOrganizationRdsServersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.RDSHelper">
+<asp:ObjectDataSource ID="odsRDSAssignedServersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetOrganizationRdsServersPagedCount" SelectMethod="GetOrganizationRdsServersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.RDSHelper">
     <SelectParameters>
         <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
         <asp:ControlParameter Name="filterValue" ControlID="txtSearchValue" PropertyName="Text" />

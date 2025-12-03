@@ -33,7 +33,7 @@
 using System;
 using System.Management;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	/// <summary>
 	/// Summary description for WmiHelper.

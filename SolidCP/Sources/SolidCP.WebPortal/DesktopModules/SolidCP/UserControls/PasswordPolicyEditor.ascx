@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PasswordPolicyEditor.ascx.cs" Inherits="SolidCP.Portal.PasswordPolicyEditor" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PasswordPolicyEditor.ascx.cs" Inherits="FuseCP.Portal.PasswordPolicyEditor" %>
 
 <asp:UpdatePanel runat="server" ID="PasswordPolicyPanel" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate> 

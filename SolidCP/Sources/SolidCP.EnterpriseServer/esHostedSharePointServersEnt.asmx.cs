@@ -33,17 +33,17 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using SolidCP.Web.Services;
-using SolidCP.EnterpriseServer.Code.SharePoint;
-using SolidCP.Providers.SharePoint;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Web.Services;
+using FuseCP.EnterpriseServer.Code.SharePoint;
+using FuseCP.Providers.SharePoint;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for esHostedSharePointServers
 	/// </summary>
-	[WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+	[WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
 	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 	[Policy("EnterpriseServerPolicy")]
 	[ToolboxItem(false)]

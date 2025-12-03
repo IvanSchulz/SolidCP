@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Menu.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.Menu" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Menu.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.Menu" %>
 <div class="Menu">
 	<asp:DataList ID="repMenu" runat="server" EnableViewState="false"
 		RepeatLayout="Flow" RepeatDirection="Vertical">

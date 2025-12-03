@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersEditServer.ascx.cs" Inherits="SolidCP.Portal.VirtualServersEditServer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersEditServer.ascx.cs" Inherits="FuseCP.Portal.VirtualServersEditServer" %>
 <%@ Register Src="GlobalDnsRecordsControl.ascx" TagName="GlobalDnsRecordsControl" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 

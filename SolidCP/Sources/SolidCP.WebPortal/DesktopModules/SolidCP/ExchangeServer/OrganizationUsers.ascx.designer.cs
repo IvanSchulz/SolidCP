@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.HostedSolution {
+namespace FuseCP.Portal.HostedSolution {
     
     
     public partial class OrganizationUsers {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// userActions control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserActions userActions;
+        protected global::FuseCP.Portal.UserActions userActions;
         
         /// <summary>
         /// SearchPanel control.
@@ -244,7 +244,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer usersQuota;
+        protected global::FuseCP.Portal.QuotaViewer usersQuota;
         
         /// <summary>
         /// dlServiceLevelQuotas control.

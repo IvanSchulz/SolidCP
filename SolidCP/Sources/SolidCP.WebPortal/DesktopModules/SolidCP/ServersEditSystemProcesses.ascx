@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditSystemProcesses.ascx.cs" Inherits="SolidCP.Portal.ServersEditSystemProcesses" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditSystemProcesses.ascx.cs" Inherits="FuseCP.Portal.ServersEditSystemProcesses" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Import Namespace="System.Text.RegularExpressions" %>
 <%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="uc1" %>
 <uc1:ServerHeaderControl id="ServerHeaderControl1" runat="server">

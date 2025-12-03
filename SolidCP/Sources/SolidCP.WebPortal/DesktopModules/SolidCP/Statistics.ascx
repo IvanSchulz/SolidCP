@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Statistics.ascx.cs" Inherits="SolidCP.Portal.Statistics" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Statistics.ascx.cs" Inherits="FuseCP.Portal.Statistics" %>
 <%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="scp" %>
 
 <scp:SpaceServiceItems ID="itemsList" runat="server"
@@ -6,5 +6,5 @@
     CreateControlID="edit_item"
     ViewLinkText="ViewStatistics"
     GroupName="Statistics"
-    TypeName="SolidCP.Providers.Statistics.StatsSite, SolidCP.Providers.Base"
+    TypeName="FuseCP.Providers.Statistics.StatsSite, FuseCP.Providers.Base"
     QuotaName="Stats.Sites" />

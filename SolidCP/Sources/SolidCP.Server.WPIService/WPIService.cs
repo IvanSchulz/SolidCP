@@ -36,9 +36,9 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading;
 using Microsoft.Web.PlatformInstaller;
-using SolidCP.Server.Code;
+using FuseCP.Server.Code;
 
-namespace SolidCP.Server.WPIService
+namespace FuseCP.Server.WPIService
 {
     // Define a service contract.
     //[ServiceContract(Namespace = "http://Helicon.Zoo.WPIService")]

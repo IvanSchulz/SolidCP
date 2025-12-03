@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SetupControlPanelAccounts {
@@ -51,7 +51,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl PasswordControlA;
+        protected global::FuseCP.Portal.PasswordControl PasswordControlA;
         
         /// <summary>
         /// Localize2 control.
@@ -69,7 +69,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl PasswordControlB;
+        protected global::FuseCP.Portal.PasswordControl PasswordControlB;
         
         /// <summary>
         /// CompleteSetupButton control.

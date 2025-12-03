@@ -36,7 +36,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.LocalizationToolkit.Properties {
+namespace FuseCP.LocalizationToolkit.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
-using SolidCP.Web.Clients;
+using FuseCP.Web.Clients;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	public class Server
 	{
@@ -18,10 +18,10 @@ namespace SolidCP.Tests
 
 			try
 			{
-				var aserver = Assembly.Load("SolidCP.Server");
+				var aserver = Assembly.Load("FuseCP.Server");
 				if (aserver != null)
 				{
-					var validatorType = aserver.GetType("SolidCP.Server.PasswordValidator");
+					var validatorType = aserver.GetType("FuseCP.Server.PasswordValidator");
 					var init = validatorType.GetMethod("Init", BindingFlags.Public | BindingFlags.Static);
 					init.Invoke(null, new object[0]);
 				}

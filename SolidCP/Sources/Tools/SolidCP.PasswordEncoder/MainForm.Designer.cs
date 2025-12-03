@@ -26,7 +26,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.PasswordEncoder
+namespace FuseCP.PasswordEncoder
 {
     partial class MainForm
     {
@@ -174,7 +174,7 @@ namespace SolidCP.PasswordEncoder
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "SolidCP Password Encoder";
+            this.Text = "FuseCP Password Encoder";
             this.ResumeLayout(false);
             this.PerformLayout();
 

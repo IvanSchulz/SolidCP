@@ -35,7 +35,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Templates.AST
+namespace FuseCP.Templates.AST
 {
     internal class ForeachStatement : Statement
     {

@@ -36,14 +36,14 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 //using System.IO;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-    public partial class VpsDetailsNetwork : SolidCPModuleBase
+    public partial class VpsDetailsNetwork : FuseCPModuleBase
     {
         VirtualMachine vm = null;
 

@@ -34,7 +34,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class VirtualMachinePermission
     {

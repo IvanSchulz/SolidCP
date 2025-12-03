@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.RDS {
+namespace FuseCP.Portal.RDS {
     
     
     public partial class RDSEditApplicationUsers {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// imgEditRDSCollection control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.RDS.UserControls.RdsServerTabs tabs;
+        protected global::FuseCP.Portal.RDS.UserControls.RdsServerTabs tabs;
         
         /// <summary>
         /// SimpleMessageBox1 control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox SimpleMessageBox1;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox SimpleMessageBox1;
         
         /// <summary>
         /// secRdsApplicationEdit control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secRdsApplicationEdit;
+        protected global::FuseCP.Portal.CollapsiblePanel secRdsApplicationEdit;
         
         /// <summary>
         /// panelRdsApplicationEdit control.
@@ -172,7 +172,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secRdsApplicationUsers;
+        protected global::FuseCP.Portal.CollapsiblePanel secRdsApplicationUsers;
         
         /// <summary>
         /// panelRdsApplicationUsers control.
@@ -190,7 +190,7 @@ namespace SolidCP.Portal.RDS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.RDS.UserControls.RDSCollectionUsers users;
+        protected global::FuseCP.Portal.RDS.UserControls.RDSCollectionUsers users;
         
         /// <summary>
         /// btnExit control.

@@ -40,13 +40,13 @@ using Microsoft.Web.Administration;
 using System.DirectoryServices;
 using System.Text.RegularExpressions;
 using System.Linq;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Diagnostics;
 using System.Reflection;
 using System.Reflection.Emit;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	/// <summary>
 	/// Web utils class.
@@ -60,8 +60,8 @@ namespace SolidCP.UniversalInstaller
         public const string AspNet20 = "v2.0.50727";
 		public const string AspNet40 = "v4.0.30319";
 
-        public const string SolidCP_POOL = "SolidCP Pool";
-		public const string SolidCP_ADMIN_POOL = "SolidCP Admin Pool";
+        public const string FuseCP_POOL = "FuseCP Pool";
+		public const string FuseCP_ADMIN_POOL = "FuseCP Admin Pool";
 
         public static string[] aspNet11Maps = new string[] { ".asax", ".ascx", ".ashx",
         ".asmx", ".aspx", ".axd", ".config", ".cs", ".csproj", ".licx", ".rem", ".resources", ".resx",

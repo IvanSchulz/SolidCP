@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +13,12 @@ using System.Data.Entity;
 #else
 using Microsoft.EntityFrameworkCore;
 #endif
-using SolidCP.EnterpriseServer.Code;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Code;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Data;
 
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	[TestClass]
 	public class Database
@@ -30,7 +30,7 @@ namespace SolidCP.Tests
 		[DataRow(DbType.Sqlite)]
 		public void TestDbAccess(DbType dbtype)
 		{
-			using (var db = new SolidCP.EnterpriseServer.Data.DbContext(ConnectionString(dbtype)))
+			using (var db = new FuseCP.EnterpriseServer.Data.DbContext(ConnectionString(dbtype)))
 			{
 				var providers = db.Providers.ToArray();
 				Assert.IsTrue(providers.Length > 0);
@@ -42,7 +42,7 @@ namespace SolidCP.Tests
 		[DataRow(DbType.Sqlite)]
 		public void TestDynamicLike(DbType dbtype)
 		{
-			using (var db = new SolidCP.EnterpriseServer.Data.DbContext(ConnectionString(dbtype)))
+			using (var db = new FuseCP.EnterpriseServer.Data.DbContext(ConnectionString(dbtype)))
 			{
 				var columnName = "ProviderName";
 				var columnValue = "%S";

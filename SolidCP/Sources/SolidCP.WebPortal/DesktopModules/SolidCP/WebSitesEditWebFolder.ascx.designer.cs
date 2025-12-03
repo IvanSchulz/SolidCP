@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class WebSitesEditWebFolder {
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup folderPath;
+        protected global::FuseCP.Portal.FileLookup folderPath;
         
         /// <summary>
         /// secUsers control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secUsers;
+        protected global::FuseCP.Portal.CollapsiblePanel secUsers;
         
         /// <summary>
         /// UsersPanel control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secGroups;
+        protected global::FuseCP.Portal.CollapsiblePanel secGroups;
         
         /// <summary>
         /// GroupsPanel control.

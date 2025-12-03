@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsSelectDomainControl.ascx.cs" Inherits="SolidCP.Portal.DomainsSelectDomainControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsSelectDomainControl.ascx.cs" Inherits="FuseCP.Portal.DomainsSelectDomainControl" %>
 
 
 <asp:DropDownList id="ddlDomains" runat="server" CssClass="form-control" DataTextField="DomainName" DataValueField="DomainID" ></asp:DropDownList>

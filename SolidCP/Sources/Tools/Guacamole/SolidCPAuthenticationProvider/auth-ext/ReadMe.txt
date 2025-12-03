@@ -1,5 +1,5 @@
 *************************************************************************************************************************
-  Guacamole authentication provider for SolidCP 
+  Guacamole authentication provider for FuseCP 
 *************************************************************************************************************************
 
 *** Compilation ***
@@ -7,7 +7,7 @@
 Instructions for Ubuntu
 
 # sudo apt install maven -y
-- Copy SolidCPAuthenticationProvider to your server
-# cd SolidCPAuthenticationProvider/auth-ext
+- Copy FuseCPAuthenticationProvider to your server
+# cd FuseCPAuthenticationProvider/auth-ext
 # mvn package
 

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangePublicFolderGeneralSettings.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangePublicFolderGeneralSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangePublicFolderGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangePublicFolderGeneralSettings" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
 <%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="scp" %>

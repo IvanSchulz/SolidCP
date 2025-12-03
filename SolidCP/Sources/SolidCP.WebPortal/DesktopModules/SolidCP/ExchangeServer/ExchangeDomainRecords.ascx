@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDomainRecords.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeDomainRecords" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDomainRecords.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDomainRecords" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -69,7 +69,7 @@
 
 
 				<asp:ObjectDataSource ID="odsDnsRecords" runat="server"
-					SelectMethod="GetRawDnsZoneRecords" TypeName="SolidCP.Portal.ServersHelper"
+					SelectMethod="GetRawDnsZoneRecords" TypeName="FuseCP.Portal.ServersHelper"
 						OnSelected="odsDnsRecords_Selected">
 					<SelectParameters>
 						<asp:QueryStringParameter DefaultValue="0" Name="domainId" QueryStringField="DomainID" />

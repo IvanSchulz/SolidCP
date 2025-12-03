@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Merak_EditDomain.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Merak_EditDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Merak_EditDomain.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Merak_EditDomain" %>
 <table width="100%">
     <tr>
         <td class="SubHead" width="200" nowrap><asp:Label ID="lblCatchAll" runat="server" meta:resourcekey="lblCatchAll" Text="Catch-All Account:"></asp:Label></td>

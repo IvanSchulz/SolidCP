@@ -36,11 +36,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 using System.Linq;
-using SolidCP.EnterpriseServer.Base.Scheduling;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Base.Scheduling;
+using FuseCP.EnterpriseServer.Data;
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class SchedulerController: ControllerBase
     {

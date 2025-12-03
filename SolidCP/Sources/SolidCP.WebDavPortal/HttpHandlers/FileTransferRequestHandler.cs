@@ -1,14 +1,14 @@
-﻿using Ninject;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
 using System.Web.Hosting;
-using SolidCP.WebDavPortal.DependencyInjection;
-using SolidCP.WebDavPortal.Models;
+using FuseCP.WebDavPortal.DependencyInjection;
+using FuseCP.WebDavPortal.Models;
 
-namespace SolidCP.WebDavPortal.HttpHandlers
+namespace FuseCP.WebDavPortal.HttpHandlers
 {
     public class FileTransferRequestHandler : IHttpHandler 
     {

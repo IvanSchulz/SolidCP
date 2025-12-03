@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class RdsServerStatusHandler : IHttpHandler
     {

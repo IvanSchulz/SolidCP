@@ -33,14 +33,14 @@
 using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.CRM
+namespace FuseCP.Portal.CRM
 {
-    public partial class CRMUserRoles : SolidCPModuleBase
+    public partial class CRMUserRoles : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -40,37 +40,37 @@ using System.DirectoryServices.ActiveDirectory;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.Web.Compression;
-using SolidCP.Providers.Web.Handlers;
-using SolidCP.Providers.Web.HttpRedirect;
-using SolidCP.Providers.Web.Iis.Authentication;
-using SolidCP.Providers.Web.Iis.ClassicAsp;
-using SolidCP.Providers.Web.Iis.DefaultDocuments;
-using SolidCP.Providers.Web.Iis.DirectoryBrowse;
-using SolidCP.Providers.Web.Iis.WebObjects;
-using SolidCP.Providers.Web.Iis.Extensions;
-using SolidCP.Providers.Web.MimeTypes;
-using SolidCP.Providers.Web.Iis.Utility;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.Web.Compression;
+using FuseCP.Providers.Web.Handlers;
+using FuseCP.Providers.Web.HttpRedirect;
+using FuseCP.Providers.Web.Iis.Authentication;
+using FuseCP.Providers.Web.Iis.ClassicAsp;
+using FuseCP.Providers.Web.Iis.DefaultDocuments;
+using FuseCP.Providers.Web.Iis.DirectoryBrowse;
+using FuseCP.Providers.Web.Iis.WebObjects;
+using FuseCP.Providers.Web.Iis.Extensions;
+using FuseCP.Providers.Web.MimeTypes;
+using FuseCP.Providers.Web.Iis.Utility;
 using Microsoft.Web.Administration;
 using Microsoft.Web.Management.Server;
 
-using SolidCP.Providers.Utils.LogParser;
+using FuseCP.Providers.Utils.LogParser;
 using Microsoft.Win32;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Collections.Specialized;
-using SolidCP.Providers.Web.WebObjects;
-using SolidCP.Providers.Web.Iis.Common;
-using SolidCP.Providers.Web.Iis;
+using FuseCP.Providers.Web.WebObjects;
+using FuseCP.Providers.Web.Iis.Common;
+using FuseCP.Providers.Web.Iis;
 using Ionic.Zip;
-using SolidCP.Providers.WebAppGallery;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Web.Delegation;
+using FuseCP.Providers.WebAppGallery;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Web.Delegation;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	internal abstract class Constants
 	{
@@ -108,7 +108,7 @@ namespace SolidCP.Providers.Web
         public const string Php4PathSetting = "Php4Path";
         public const string PhpPathSetting = "PhpPath";
 
-		public const string SolidCP_IISMODULES = "SolidCP.IIsModules";
+		public const string FuseCP_IISMODULES = "FuseCP.IIsModules";
         public const string DOTNETPANEL_IISMODULES = "DotNetPanel.IIsModules";
         
 
@@ -563,7 +563,7 @@ namespace SolidCP.Providers.Web
 			user.FullName = GetNonQualifiedAccountName(site.AnonymousUsername);
 
 			// Fix. Import web site that runs under NETWORK_SERVICE identity fails.
-			// SolidCP cannot create anonymous account.
+			// FuseCP cannot create anonymous account.
 			if (!user.Name.Contains(site.Name.Replace(".", "")))
 			{
 				user.Name = user.FullName = site.Name.Replace(".", "") + "_web";
@@ -578,7 +578,7 @@ namespace SolidCP.Providers.Web
 
 			site.AnonymousUsername = user.Name;
 
-			user.Description = "SolidCP System Account";
+			user.Description = "FuseCP System Account";
 			user.MemberOf = webGroups.ToArray();
 
 			//set new password for created Anonymous Account
@@ -2083,7 +2083,7 @@ namespace SolidCP.Providers.Web
             foreach (var moduleEntry in modulesCollection)
             {
                 if (
-                    String.Equals(moduleEntry["name"].ToString(), Constants.SolidCP_IISMODULES, StringComparison.InvariantCultureIgnoreCase)
+                    String.Equals(moduleEntry["name"].ToString(), Constants.FuseCP_IISMODULES, StringComparison.InvariantCultureIgnoreCase)
                     || String.Equals(moduleEntry["name"].ToString(), Constants.DOTNETPANEL_IISMODULES, StringComparison.InvariantCultureIgnoreCase)
                     )
                     return true;
@@ -2124,7 +2124,7 @@ namespace SolidCP.Providers.Web
                 if (String.IsNullOrEmpty(siteId))
                     throw new ArgumentNullException("siteId");
 
-                // SolidCP.IIsModules works for apps working in Integrated Pipeline mode
+                // FuseCP.IIsModules works for apps working in Integrated Pipeline mode
                 #region Switch automatically to the app pool with Integrated Pipeline enabled
                 var webSite = webObjectsSvc.GetWebSiteFromIIS(srvman, siteId);
                 //
@@ -2196,7 +2196,7 @@ namespace SolidCP.Providers.Web
 				//
 				ConfigurationElement moduleAdd = modulesCollection.CreateElement("add");
 				//
-				moduleAdd["name"] = Constants.SolidCP_IISMODULES;
+				moduleAdd["name"] = Constants.FuseCP_IISMODULES;
 				moduleAdd["type"] = SecureFoldersModuleAssembly;
 				// Enable module for all content despite ASP.NET is enabled or not
 				moduleAdd["preCondition"] = "";
@@ -2225,7 +2225,7 @@ namespace SolidCP.Providers.Web
 				//
 				foreach (ConfigurationElement moduleEntry in modulesCollection)
 				{
-					if (String.Equals(moduleEntry["name"].ToString(), Constants.SolidCP_IISMODULES, StringComparison.InvariantCultureIgnoreCase))
+					if (String.Equals(moduleEntry["name"].ToString(), Constants.FuseCP_IISMODULES, StringComparison.InvariantCultureIgnoreCase))
 					{
                         modulesCollection.Remove(moduleEntry);
                         break;
@@ -3438,7 +3438,7 @@ namespace SolidCP.Providers.Web
 			{
 				Name = username,
 				FullName = username,
-				Description = "SolidCP System Account",
+				Description = "FuseCP System Account",
 				Password = password,
 				PasswordCantChange = true,
 				PasswordNeverExpires = true,
@@ -3749,7 +3749,7 @@ namespace SolidCP.Providers.Web
 						SystemGroup group = new SystemGroup();
 						group.Name = WebGroupName;
 						group.Members = new string[] { };
-						group.Description = "SolidCP System Group";
+						group.Description = "FuseCP System Group";
 
 						SecurityUtils.CreateGroup(group, ServerSettings, UsersOU, GroupsOU);
 					}
@@ -4303,7 +4303,7 @@ namespace SolidCP.Providers.Web
 					{
 						Name = accountName,
 						FullName = accountName,
-						Description = "WMSVC Service Account created by SolidCP",
+						Description = "WMSVC Service Account created by FuseCP",
 						PasswordCantChange = true,
 						PasswordNeverExpires = true,
 						AccountDisabled = false,

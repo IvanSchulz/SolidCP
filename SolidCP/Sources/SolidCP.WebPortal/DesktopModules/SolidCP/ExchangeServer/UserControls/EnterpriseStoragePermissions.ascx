@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStoragePermissions.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.EnterpriseStoragePermissions" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStoragePermissions.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.EnterpriseStoragePermissions" %>
 <%@ Register Src="../../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
 
 <asp:UpdatePanel ID="PermissionsUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">

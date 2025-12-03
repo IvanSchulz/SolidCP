@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     namespace Client
     {

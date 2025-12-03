@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Handlers
+namespace FuseCP.Providers.Web.Handlers
 {
 	internal sealed class HandlerActionCollection : ConfigurationElementCollectionBase<HandlerAction>
 	{

@@ -1,9 +1,9 @@
 using System;
 using System.Reflection;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
 using System.Globalization;
 using System.Security.Policy;
 using System.Diagnostics.Contracts;
@@ -12,28 +12,28 @@ using System.Text.RegularExpressions;
 using System.Data;
 using System.Xml.Linq;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public abstract partial class Installer
 {
-	public string WebPortalSiteId => $"{SolidCP}WebPortal";
-	public virtual string UnixPortalServiceId => "solidcp-portal";
+	public string WebPortalSiteId => $"{FuseCP}WebPortal";
+	public virtual string UnixPortalServiceId => "fusecp-portal";
 	public virtual void InstallWebPortalPrerequisites() { }
 	public virtual void RemoveWebPortalPrerequisites() { }
 	public virtual void CreateWebPortalUser() => CreateUser(Settings.WebPortal);
 	public virtual void RemoveWebPortalUser() => RemoveUser(Settings.WebPortal.Username);
 	public virtual void SetWebPortalFilePermissions() => SetFilePermissions(Settings.WebPortal.InstallPath, Settings.WebPortal.Username);
-	public virtual void SetWebPortalFileOwner() => SetFileOwner(Settings.WebPortal.InstallPath, Settings.WebPortal.Username, SolidCPGroup);
+	public virtual void SetWebPortalFileOwner() => SetFileOwner(Settings.WebPortal.InstallPath, Settings.WebPortal.Username, FuseCPGroup);
 	public virtual void InstallWebPortalWebsite()
 	{
 		var web = Settings.WebPortal.InstallPath;
-		var dll = Path.Combine(web, "bin_dotnet", "SolidCP.WebPortal.dll");
+		var dll = Path.Combine(web, "bin_dotnet", "FuseCP.WebPortal.dll");
 		InstallWebsite(WebPortalSiteId,
 			web,
 			Settings.WebPortal,
-			SolidCPUnixGroup,
+			FuseCPUnixGroup,
 			dll,
-			"SolidCP.WebPortal service, the portal service for the SolidCP control panel.",
+			"FuseCP.WebPortal service, the portal service for the FuseCP control panel.",
 			UnixPortalServiceId);
 	}
 	public virtual string WebPortalInstallFilter(string file) => SetupFilter(file);
@@ -86,14 +86,14 @@ public abstract partial class Installer
 			new XAttribute("type", "SwaggerWcf.Configuration.SwaggerWcfSection, SwaggerWcf")));
 		var swaggerwcf = XElement.Parse(@"<swaggerwcf>
 		<settings>
-			<setting name=""InfoDescription"" value=""This is the REST API of SolidCP. Note that all but the esAuthentication service use Basic Http Authentication. If you use .NET, you might want to access the API over WCF/SOAP, in this case refer to the SolidCP.EnterpriseServer.Client assembly.""/>
+			<setting name=""InfoDescription"" value=""This is the REST API of FuseCP. Note that all but the esAuthentication service use Basic Http Authentication. If you use .NET, you might want to access the API over WCF/SOAP, in this case refer to the FuseCP.EnterpriseServer.Client assembly.""/>
 			<setting name=""InfoVersion"" value=""2.0.0""/>
 			<setting name=""InfoTermsOfService"" value=""Terms of Service"" />
-			<setting name=""InfoTitle"" value=""SolidCP EnterpriseServer Service"" />
-			<setting name=""InfoContactName"" value=""SolidCP"" />
-			<setting name=""InfoContactUrl"" value=""http://solidcp.com/forum"" />
-			<setting name=""InfoContactEmail"" value=""support@solidcp.com"" />
-			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/SolidCP/blob/master/LICENSE.txt"" />
+			<setting name=""InfoTitle"" value=""FuseCP EnterpriseServer Service"" />
+			<setting name=""InfoContactName"" value=""FuseCP"" />
+			<setting name=""InfoContactUrl"" value=""http://fusecp.com/forum"" />
+			<setting name=""InfoContactEmail"" value=""support@fusecp.com"" />
+			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/master/LICENSE.txt"" />
 			<setting name=""InfoLicenseName"" value=""Creative Commons Share-alike"" />
 		</settings>
 	</swaggerwcf>");
@@ -307,7 +307,7 @@ public abstract partial class Installer
 		var confFile = Path.Combine(Settings.WebPortal.InstallPath, "App_Data", "SiteSettings.config");
 		var conf = XElement.Load(confFile);
 		var enterpriseServer = conf.Element("EnterpriseServer");
-		enterpriseServer.Value = settings.EmbedEnterpriseServer ? "assembly://SolidCP.EnterpriseServer" : settings.EnterpriseServerUrl;
+		enterpriseServer.Value = settings.EmbedEnterpriseServer ? "assembly://FuseCP.EnterpriseServer" : settings.EnterpriseServerUrl;
 		conf.Save(confFile);
 
 		confFile = Path.Combine(Settings.WebPortal.InstallPath, "Web.config");

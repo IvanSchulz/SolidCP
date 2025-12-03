@@ -8,13 +8,13 @@
 
 @using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory
 
-@namespace SolidCP.Build
+@namespace FuseCP.Build
 @inherits RazorBlade.PlainTextTemplate
 
 @(HasPolicyAttribute?.ToString() ?? "")
-@(HasSoapHeader ? "[SolidCP.Providers.SoapHeader]" : "")
-[System.CodeDom.Compiler.GeneratedCodeAttribute("SolidCP.Build", "1.0")]
-[ServiceKnownType("GetKnownTypes", typeof(SolidCP.Providers.GlobalKnownTypes))]
+@(HasSoapHeader ? "[FuseCP.Providers.SoapHeader]" : "")
+[System.CodeDom.Compiler.GeneratedCodeAttribute("FuseCP.Build", "1.0")]
+[ServiceKnownType("GetKnownTypes", typeof(FuseCP.Providers.GlobalKnownTypes))]
 [ServiceContract(ConfigurationName="I@(Class.Identifier)", Namespace="@(WebServiceNamespace)")]
 public interface I@(Class.Identifier) {
 

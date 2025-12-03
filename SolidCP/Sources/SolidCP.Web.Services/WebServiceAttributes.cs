@@ -1,7 +1,7 @@
 using System;
 //using System.Web.Services;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 //#if NETFRAMEWORK
 	public enum WsiProfiles { BasicProfile1_1 }

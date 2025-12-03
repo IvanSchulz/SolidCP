@@ -48,15 +48,15 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsServiceLevels : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsServiceLevels : FuseCPControlBase, IUserSettingsEditorControl
     {
 
 
@@ -70,7 +70,7 @@ namespace SolidCP.Portal
             try
             {
                 //Change container title
-                ((Label)this.Parent.Parent.Parent.Parent.Parent.FindControl(SolidCP.WebPortal.DefaultPage.MODULE_TITLE_CONTROL_ID)).Text = "Service Levels";
+                ((Label)this.Parent.Parent.Parent.Parent.Parent.FindControl(FuseCP.WebPortal.DefaultPage.MODULE_TITLE_CONTROL_ID)).Text = "Service Levels";
             }
             catch { /*to do*/ }
         }

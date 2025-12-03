@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public class ElementsRendering : AbstractConfigCollection
     {

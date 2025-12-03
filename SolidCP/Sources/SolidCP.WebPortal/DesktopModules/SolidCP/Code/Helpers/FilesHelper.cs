@@ -33,9 +33,9 @@
 using System;
 using System.Data;
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for FilesHelper

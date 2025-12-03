@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhoneNumbers.ascx.cs" Inherits="SolidCP.Portal.PhoneNumbers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.PhoneNumbers" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 
@@ -72,7 +72,7 @@
 	    SelectCountMethod="GetIPAddressesPagedCount"
 	    SelectMethod="GetIPAddressesPaged"
 	    SortParameterName="sortColumn"
-	    TypeName="SolidCP.Portal.IPAddressesHelper"
+	    TypeName="FuseCP.Portal.IPAddressesHelper"
 	    OnSelected="odsIPAddresses_Selected">
     <SelectParameters>
         <asp:Parameter Name="pool" DefaultValue="PhoneNumbers" />

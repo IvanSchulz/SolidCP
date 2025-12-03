@@ -36,10 +36,10 @@ using System.Data;
 using System.Text;
 using System.Web;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	/// <summary>
 	/// Summary description for PanelSecurity.
@@ -193,7 +193,7 @@ namespace SolidCP.Portal
 					{
 						// load space
 						// check context
-						PackageInfo space = (PackageInfo)HttpContext.Current.Items["SolidCPSelectedSpace"];
+						PackageInfo space = (PackageInfo)HttpContext.Current.Items["FuseCPSelectedSpace"];
 						if (space != null)
 						{
 							return space.UserId;
@@ -204,7 +204,7 @@ namespace SolidCP.Portal
 							if (space != null)
 							{
 								// place to cache
-								HttpContext.Current.Items["SolidCPSelectedSpace"] = space;
+								HttpContext.Current.Items["FuseCPSelectedSpace"] = space;
 
 								// return
 								return space.UserId;
@@ -224,7 +224,7 @@ namespace SolidCP.Portal
 		{
 			get
 			{
-				UserInfo user = (UserInfo)HttpContext.Current.Items["SolidCPSelectedUser"];
+				UserInfo user = (UserInfo)HttpContext.Current.Items["FuseCPSelectedUser"];
 				if (user == null)
 				{
 					try
@@ -247,7 +247,7 @@ namespace SolidCP.Portal
 					}
 
 					// add to context
-					HttpContext.Current.Items["SolidCPSelectedUser"] = user;
+					HttpContext.Current.Items["FuseCPSelectedUser"] = user;
 				}
 				return user;
 			}
@@ -270,7 +270,7 @@ namespace SolidCP.Portal
 				UserInfo user = null;
 				try
 				{
-					user = (UserInfo)HttpContext.Current.Items["SolidCPLoggedUser"];
+					user = (UserInfo)HttpContext.Current.Items["FuseCPLoggedUser"];
 				}
 				catch { }
 
@@ -286,7 +286,7 @@ namespace SolidCP.Portal
 					if (user != null)
 					{
 						// add to context
-						HttpContext.Current.Items["SolidCPLoggedUser"] = user;
+						HttpContext.Current.Items["FuseCPLoggedUser"] = user;
 					}
 				}
 				return user;
@@ -307,13 +307,13 @@ namespace SolidCP.Portal
 		{
 			get
 			{
-				UserInfo user = (UserInfo)HttpContext.Current.Items["SolidCPEffectiveUser"];
+				UserInfo user = (UserInfo)HttpContext.Current.Items["FuseCPEffectiveUser"];
 				if (user == null)
 				{
 					user = ES.Services.Users.GetUserById(EffectiveUserId);
 
 					// add to context
-					HttpContext.Current.Items["SolidCPEffectiveUser"] = user;
+					HttpContext.Current.Items["FuseCPEffectiveUser"] = user;
 				}
 				return user;
 			}

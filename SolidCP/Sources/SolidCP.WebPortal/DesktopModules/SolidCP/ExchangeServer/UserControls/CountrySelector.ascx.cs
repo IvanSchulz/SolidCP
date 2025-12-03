@@ -41,7 +41,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
 	public partial class CountrySelector : System.Web.UI.UserControl
 	{

@@ -41,18 +41,18 @@ using System.Data;
 using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.EnterpriseStorage;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.RemoteDesktopServices;
-using SolidCP.Providers.Web;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.EnterpriseStorage;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.Web;
 using System.Net.Mail;
 using System.Collections;
-using SolidCP.EnterpriseServer.Base.RDS;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Base.RDS;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class RemoteDesktopServicesController: ControllerBase
     {
@@ -1321,7 +1321,7 @@ namespace SolidCP.EnterpriseServer
 
             if (!exists)
             {
-                throw TaskManager.WriteError(new Exception(string.Format("RDSH {0} already exists in SolidCP", rdsServer.FqdName)));
+                throw TaskManager.WriteError(new Exception(string.Format("RDSH {0} already exists in FuseCP", rdsServer.FqdName)));
             }
 
             try
@@ -2055,7 +2055,7 @@ namespace SolidCP.EnterpriseServer
 
         protected int GetRdsMainServiceId()
         {
-            var settings = SystemController.GetSystemSettings(SolidCP.EnterpriseServer.SystemSettings.RDS_SETTINGS);
+            var settings = SystemController.GetSystemSettings(FuseCP.EnterpriseServer.SystemSettings.RDS_SETTINGS);
 
             if (!string.IsNullOrEmpty(settings["RdsMainController"]))
             {

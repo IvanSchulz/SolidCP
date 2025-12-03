@@ -33,11 +33,11 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Win32;
 
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
     public class Sps20 : HostingServiceProviderBase, ISharePointServer
     {

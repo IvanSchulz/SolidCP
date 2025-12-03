@@ -29,10 +29,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.DirectoryServices;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	class Global
 	{

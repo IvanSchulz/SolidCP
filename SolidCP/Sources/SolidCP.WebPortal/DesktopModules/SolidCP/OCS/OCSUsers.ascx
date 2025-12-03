@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OCSUsers.ascx.cs" Inherits="SolidCP.Portal.OCS.OCSUsers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OCSUsers.ascx.cs" Inherits="FuseCP.Portal.OCS.OCSUsers" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -71,7 +71,7 @@
                             </Columns>
                         </asp:GridView>
                         <asp:ObjectDataSource ID="odsAccountsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetOCSUsersPagedCount"
-                            SelectMethod="GetOCSUsersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.OCSHelper">
+                            SelectMethod="GetOCSUsersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.OCSHelper">
                             <SelectParameters>
                                 <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
                                 <asp:ControlParameter Name="filterColumn" ControlID="ddlSearchColumn" PropertyName="SelectedValue" />

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageDriveMaps.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.EnterpriseStorageDriveMaps" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageDriveMaps.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageDriveMaps" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 
@@ -81,7 +81,7 @@
     SelectCountMethod="GetEnterpriseDriveMapsPagedCount"
     SelectMethod="GetEnterpriseDriveMapsPaged"
     SortParameterName="sortColumn"
-    TypeName="SolidCP.Portal.EnterpriseStorageHelper">
+    TypeName="FuseCP.Portal.EnterpriseStorageHelper">
     <SelectParameters>
         <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
         <asp:ControlParameter Name="filterValue" ControlID="txtSearchValue" PropertyName="Text" />

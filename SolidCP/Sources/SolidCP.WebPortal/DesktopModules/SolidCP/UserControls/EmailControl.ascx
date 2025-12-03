@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EmailControl.ascx.cs" Inherits="SolidCP.Portal.UserControls.EmailControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EmailControl.ascx.cs" Inherits="FuseCP.Portal.UserControls.EmailControl" %>
 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
 <asp:RequiredFieldValidator ID="valRequireEmail" runat="server" ErrorMessage="*" meta:resourcekey="valRequireEmail"
     ControlToValidate="txtEmail" Display="Dynamic"></asp:RequiredFieldValidator>

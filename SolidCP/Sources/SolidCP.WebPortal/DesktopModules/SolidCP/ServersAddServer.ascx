@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersAddServer.ascx.cs"
-    Inherits="SolidCP.Portal.ServersAddServer" %>
+    Inherits="FuseCP.Portal.ServersAddServer" %>
 <%@ Register Src="UserControls/ServerPasswordControl.ascx" TagName="ServerPasswordControl" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
     TagPrefix="scp" %>

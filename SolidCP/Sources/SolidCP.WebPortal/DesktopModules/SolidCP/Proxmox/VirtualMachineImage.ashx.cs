@@ -34,9 +34,9 @@
 using System.Text;
 using System.Web;
 using System.Web.Services;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
 	/// <summary>
 	/// Summary description for $codebehindclassname$
@@ -50,7 +50,7 @@ namespace SolidCP.Portal.Proxmox
 		{
 			int itemId = Utils.ParseInt(context.Request.QueryString["ItemID"]);
 			var image = ES.Services.Proxmox.GetVirtualMachineThumbnail(itemId,
-				 SolidCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
+				 FuseCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
 			
 			context.Response.Clear();
 			context.Response.ContentType = image?.MimeType ?? "image/png";

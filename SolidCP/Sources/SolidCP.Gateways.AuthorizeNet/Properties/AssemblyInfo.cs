@@ -33,10 +33,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Plugins.AuthorizeNet")]
+[assembly: AssemblyTitle("FuseCP.Plugins.AuthorizeNet")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Plugins.AuthorizeNet")]
+[assembly: AssemblyProduct("FuseCP.Plugins.AuthorizeNet")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

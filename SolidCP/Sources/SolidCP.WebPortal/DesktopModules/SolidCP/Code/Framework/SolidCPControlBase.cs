@@ -35,21 +35,21 @@ using System.Data;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	/// <summary>
-	/// Summary description for SolidCPControlBase
+	/// Summary description for FuseCPControlBase
 	/// </summary>
-	public class SolidCPControlBase : WebPortalControlBase
+	public class FuseCPControlBase : WebPortalControlBase
 	{
 		// disable controls flag
 		protected bool DisableControls = false;
 		protected List<Control> ExcludeDisableControls = new List<Control>();
 
 		private Control hostModule = null;
-		public SolidCPModuleBase HostModule
+		public FuseCPModuleBase HostModule
 		{
 			get
 			{
@@ -59,31 +59,31 @@ namespace SolidCP.Portal
 					hostModule = this.Parent;
 					while (true)
 					{
-						if (hostModule == null || hostModule is SolidCPModuleBase)
+						if (hostModule == null || hostModule is FuseCPModuleBase)
 							break;
 
 						hostModule = hostModule.Parent;
 					}
 				}
-				return (SolidCPModuleBase)hostModule;
+				return (FuseCPModuleBase)hostModule;
 			}
 		}
 
 		public string TaskID
 		{
-			get { return (string)Context.Items["SolidCPAtlasTaskID"]; }
+			get { return (string)Context.Items["FuseCPAtlasTaskID"]; }
 		}
 
 		public string AsyncTaskID
 		{
-			get { return (string)Context.Items["SolidCPAtlasAsyncTaskID"]; }
-			set { Context.Items["SolidCPAtlasAsyncTaskID"] = value; }
+			get { return (string)Context.Items["FuseCPAtlasAsyncTaskID"]; }
+			set { Context.Items["FuseCPAtlasAsyncTaskID"] = value; }
 		}
 
 		public string AsyncTaskTitle
 		{
-			get { return (string)Context.Items["SolidCPAtlasAsyncTaskTitle"]; }
-			set { Context.Items["SolidCPAtlasAsyncTaskTitle"] = value; }
+			get { return (string)Context.Items["FuseCPAtlasAsyncTaskTitle"]; }
+			set { Context.Items["FuseCPAtlasAsyncTaskTitle"] = value; }
 		}
 
 		public virtual void RedirectToBrowsePage()

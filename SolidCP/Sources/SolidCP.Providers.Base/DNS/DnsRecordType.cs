@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
     public enum DnsRecordType
     {

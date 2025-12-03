@@ -32,7 +32,7 @@
 
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Iis.DefaultDocuments
+namespace FuseCP.Providers.Web.Iis.DefaultDocuments
 {
 	using Common;
 	using Microsoft.Web.Administration;
@@ -41,7 +41,7 @@ namespace SolidCP.Providers.Web.Iis.DefaultDocuments
 	using System.Text;
 	using System.Collections.Generic;
 	using System.Collections;
-	using SolidCP.Providers.Web.Iis.Utility;
+	using FuseCP.Providers.Web.Iis.Utility;
 
 	internal sealed class DefaultDocsModuleService : ConfigurationModuleService
 	{

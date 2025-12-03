@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.WebDav.Core.Config.WebConfigSections;
-using SolidCP.WebDavPortal.WebConfigSections;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.WebDav.Core.Config.WebConfigSections;
+using FuseCP.WebDavPortal.WebConfigSections;
 
-namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public class SessionKeysCollection : AbstractConfigCollection
     {

@@ -28,7 +28,7 @@ Maximum Number of Sub-Domains: <ad:NumericQuota space="#SpaceContexts[Space.Pack
 <ad:if test="#Signup#">If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
 Best regards,
-SolidCP.
+FuseCP.
 Web Site: https://HostingCompany.com">
 E-Mail: support@HostingCompany.com
 </ad:if><ad:template name="NumericQuota"><ad:if test="#space.Quotas.ContainsKey(quota)#"><ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if><ad:else>0</ad:if></ad:template>

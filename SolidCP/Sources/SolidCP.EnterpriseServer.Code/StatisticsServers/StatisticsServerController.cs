@@ -40,12 +40,12 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Web;
 
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.Statistics;
-using SolidCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.Statistics;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class StatisticsServerController : ControllerBase, IImportController, IBackupController
     {

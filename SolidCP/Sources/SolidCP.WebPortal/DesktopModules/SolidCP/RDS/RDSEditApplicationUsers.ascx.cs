@@ -37,11 +37,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.RemoteDesktopServices;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class RDSEditApplicationUsers : SolidCPModuleBase
+    public partial class RDSEditApplicationUsers : FuseCPModuleBase
     {        
         protected void Page_Load(object sender, EventArgs e)
         {

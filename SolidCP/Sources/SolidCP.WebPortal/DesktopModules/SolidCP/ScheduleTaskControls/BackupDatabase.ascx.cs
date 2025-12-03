@@ -41,10 +41,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.Code.Framework;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.Code.Framework;
 
-namespace SolidCP.Portal.UserControls.ScheduleTaskView
+namespace FuseCP.Portal.UserControls.ScheduleTaskView
 {
 	public partial class BackupDatabase : EmptyView
 	{

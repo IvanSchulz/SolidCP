@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SpaceEditAddon {
@@ -109,7 +109,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl PurchaseDate;
+        protected global::FuseCP.Portal.CalendarControl PurchaseDate;
         
         /// <summary>
         /// lblComments control.

@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDavPortal.UI.Routes
+namespace FuseCP.WebDavPortal.UI.Routes
 {
     public class OwaRouteNames
     {

@@ -27,11 +27,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class HyperV2012R2_Edit : SolidCPControlBase, IVirtualMachineSettingsControl
+    public partial class HyperV2012R2_Edit : FuseCPControlBase, IVirtualMachineSettingsControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

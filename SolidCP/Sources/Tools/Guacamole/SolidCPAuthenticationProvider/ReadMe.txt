@@ -1,10 +1,10 @@
 **********************************************************************************************************************************
-  Guacamole for SolidCP
+  Guacamole for FuseCP
 
   INTRO
 
   Apache Guacamole allows users to access computers with a web browser without any other special software or plugins. Deploying 
-  Guacamole with SolidCP provides users with console access to virtual machines directly through the SolidCP client portal. 
+  Guacamole with FuseCP provides users with console access to virtual machines directly through the FuseCP client portal. 
 
   This project includes an authentication extension for Guacamole located in the auth-ext folder. The authentication extension
   is the means by which users securely authenticate console access to a specific virtual machine (vm).  The extension instructs
@@ -24,7 +24,7 @@
   SECURITY
 
   As always, you should consider security as it applies to your unique environment. We are providing information to help you
-  understand how Guacamole works with SolidCP.  We are also providing a configuration guide for deploying Guacamole in a
+  understand how Guacamole works with FuseCP.  We are also providing a configuration guide for deploying Guacamole in a
   production environment which uses Nginx as a reverse proxy and SSL.  However, the information that we are providing is
   not an end all be all for configuration and security.  Things such as network configuration, firewalls, vlans, group
   policies and other considerations should be taken into account before production deployment. Reference links are provided
@@ -36,14 +36,14 @@
   certainly possible to use other versions of Linux but our guide is specifically for Ubuntu.  Ubuntu 22.04.1 is the most
   current release as of this writing.  Newer releases are encouraged and will likely work without much or any trouble.
   However, we do not recommend using earlier versions due to security improvements.  Additional requirements will be detailed
-  as you work your way through the configuration steps.  The guide assumes you already have SolidCP and Hyper-V setup and are
-  successfully deploying vm's with SolidCP.  If not, you are in the wrong place.
+  as you work your way through the configuration steps.  The guide assumes you already have FuseCP and Hyper-V setup and are
+  successfully deploying vm's with FuseCP.  If not, you are in the wrong place.
 
   The guide does not cover the topic of load balancing Guacamole servers with Nginx.  However, you may wish to consider doing
   so. Some benefits include the enhanced ability to make future updates without console downtime, reducing the load on each of
   the Guacamole servers, improving overall uptime and delivering a higher quality service to users.
 
-  If you are new to Guacamole with SolidCP then a good approach is to configure Guacamole using our guide and then continue
+  If you are new to Guacamole with FuseCP then a good approach is to configure Guacamole using our guide and then continue
   to improve on your deployment by making additional enhancements.
 
   TECHNICAL
@@ -52,17 +52,17 @@
   numbers required for communication.
   
 
-               SolidCP Users
+               FuseCP Users
                      |
                  internet
                      |
         ----<--- (tcp/443) ---->----
         |                          |
-  SolidCP Portal               Nginx/SSL --> (tcp/8080) --> Guacamole/Tomcat --> (tcp/2179) --> Hyper-V Host
+  FuseCP Portal               Nginx/SSL --> (tcp/8080) --> Guacamole/Tomcat --> (tcp/2179) --> Hyper-V Host
         |                                                                                            |
     (tcp/9002)                                                                                       |
         |                                                                                            |
- SolidCP Enterprise                                                                                  |
+ FuseCP Enterprise                                                                                  |
         |                                                                                            |
         ------------------>---------------------  (tcp/9003)  ------------------>---------------------
 
@@ -77,17 +77,17 @@
   their own unique vlan using vlan routing and a firewall to manage traffic.  The configuration guide includes software
   firewall configuration on both servers, however it does not cover network design in detail.
   
-  When a SolidCP user signs into the portal and navigates to their vm, they will be presented with an 'Open Console' button
+  When a FuseCP user signs into the portal and navigates to their vm, they will be presented with an 'Open Console' button
   that sits just below the vm thumbnail image.  Additionally, the page will contain links to open the console in different
   resolutions.  Establishing a console connection is as easy as clicking the 'Open Console' button.  A browser window will
   open and display the vm console.
 
-  What happens behind the scenes is a little more technical. SolidCP creates an encrypted connection string that contains
+  What happens behind the scenes is a little more technical. FuseCP creates an encrypted connection string that contains
   all of the information needed to establish the connection and opens the browser window with an https url that contains the
   encrypted string. The url points to the Nginx server.  The request is then proxied to Tomcat and processed by Guacamole
-  using the SolidCP authentication extension.  The extension will tell Guacamole to accept or reject the request.  If
+  using the FuseCP authentication extension.  The extension will tell Guacamole to accept or reject the request.  If
   rejected, the user will be presented with the Guacamole home page.  This is typically the result of an expired link which
-  can occur if the clocks and timezones of the SolidCP server and the Guacamole server are not in sync. If accepted, the
+  can occur if the clocks and timezones of the FuseCP server and the Guacamole server are not in sync. If accepted, the
   extension provides Guacamole with the information required to establish a connection.  Guacamole then attempts to
   establish vmconnect with Hyper-V.  Hyper-V will accept or reject the request.  It's also possible that Guacamole cannot
   reach the Hyper-V host at all.  In all of these cases, the user will be presented with a 'login failed' screen.  This is
@@ -112,18 +112,18 @@
 
   FINAL NOTE
   
-  It is recommended that this Guacamole deployment is dedicated to SolidCP.  It is possible to install additional
+  It is recommended that this Guacamole deployment is dedicated to FuseCP.  It is possible to install additional
   authentication providers and use it for other purposes but this is strongly discouraged.  In those cases, you should spin
-  up a separate Guacamole deployment.  The configuration guide only installs the SolidCP authentication provider.
+  up a separate Guacamole deployment.  The configuration guide only installs the FuseCP authentication provider.
   Therefore, there is little value in displaying the login which appears on the Guacamole home page even though no
   credentials will be configured that will allow login through the home page.  Because of this, we have created another
-  extension which displays the SolidCP logo instead of the login.  The configuration guide will have you install this 
+  extension which displays the FuseCP logo instead of the login.  The configuration guide will have you install this 
   extension.  However, it is optional.  The extension can be found in the brand-ext folder and, optionally, be customized 
   with your own logo and other content.
 
   REFERENCE LINKS
 
-  SolidCP Provider      https://github.com/FuseCP/SolidCP/tree/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider
+  FuseCP Provider      https://github.com/FuseCP/FuseCP/tree/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider
   Guacamole Manual      https://guacamole.apache.org/doc/gug/introduction.html
   Guacamole Server      https://guacamole.apache.org/releases/1.4.0/
   Guacamole Client      https://guacamole.apache.org/releases/1.4.0/
@@ -179,7 +179,7 @@
 		# sudo ufw status
 		# sudo apt update
 		# sudo apt upgrade -y
-	- Set timezone to match the same timezone configured on your solidcp server - replace <region/city> with your timezone
+	- Set timezone to match the same timezone configured on your fusecp server - replace <region/city> with your timezone
 		# timedatectl
 		# timedatectl list-timezones
 		# sudo timedatectl set-timezone <region/city> 
@@ -217,19 +217,19 @@
 6) CONFIGURE GUACAMOLE (Guacamole VM)
 	- Download project files. If you experience issues, you can also download the files manually and SFTP them onto the server
 	- Each command should be pasted into SSH as one line
-		# sudo wget -O /etc/guacamole/extensions/guacamole-auth-solidcp-1.4.0.jar https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/auth-ext/target/guacamole-auth-solidcp-1.4.0.jar
-		# sudo wget -O /etc/guacamole/lib/bcprov-jdk15on-1.70.jar https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/auth-ext/target/lib/bcprov-jdk15on-1.70.jar
-		# sudo wget -O /etc/guacamole/lib/json-20211205.jar https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/auth-ext/target/lib/json-20211205.jar
-		# sudo wget -O /etc/guacamole/lib/slf4j-api-2.0.5.jar https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/auth-ext/target/lib/slf4j-api-2.0.5.jar
-		# sudo wget -O /etc/guacamole/lib/slf4j-simple-2.0.5.jar https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/auth-ext/target/lib/slf4j-simple-2.0.5.jar
-		# sudo wget -O /etc/guacamole/guacamole.properties https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/config/guacamole.properties
-		# sudo wget -O /etc/guacamole/logback.xml https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/config/logback.xml
+		# sudo wget -O /etc/guacamole/extensions/guacamole-auth-fusecp-1.4.0.jar https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/auth-ext/target/guacamole-auth-fusecp-1.4.0.jar
+		# sudo wget -O /etc/guacamole/lib/bcprov-jdk15on-1.70.jar https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/auth-ext/target/lib/bcprov-jdk15on-1.70.jar
+		# sudo wget -O /etc/guacamole/lib/json-20211205.jar https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/auth-ext/target/lib/json-20211205.jar
+		# sudo wget -O /etc/guacamole/lib/slf4j-api-2.0.5.jar https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/auth-ext/target/lib/slf4j-api-2.0.5.jar
+		# sudo wget -O /etc/guacamole/lib/slf4j-simple-2.0.5.jar https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/auth-ext/target/lib/slf4j-simple-2.0.5.jar
+		# sudo wget -O /etc/guacamole/guacamole.properties https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/config/guacamole.properties
+		# sudo wget -O /etc/guacamole/logback.xml https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/config/logback.xml
 		# sudo nano /etc/guacamole/guacamole.properties
 	- Create a user account for accessing Hyper-V from Guacamole
 		- Create a new user in active directory
 		- Make the user a member of the domain admins group
 		- Alternatively, you can create a local administrator on the Hyper-V host but not recommended
-	- Sign into your SolidCP portal
+	- Sign into your FuseCP portal
 		- Go to Configuration -> Servers -> Hyper-V -> Guacamole
 		- Set the Guacamole Script URL to http://<guacip>:8080/guacamole replacing <guacip> with the ip assigned to the Guacamole VM
 		- Generate Guacamole encryption password
@@ -239,13 +239,13 @@
 		- Copy the entire Guacamole encryption key (place cursor in box, press ctrl+a, ctrl+c)
 		- Click Update to save the configuration
 	- Provide Guacamole with the encryption key
-		- In nano, move cursor to end of solidcp-key: and paste the encryption key (usually right-click) then ctrl+x, y, enter to save
+		- In nano, move cursor to end of fusecp-key: and paste the encryption key (usually right-click) then ctrl+x, y, enter to save
 		# sudo chown -R tomcat:tomcat /etc/guacamole
 		# sudo systemctl restart guacd tomcat9
 
 7) VERIFY GUACAMOLE (Guacamole VM)
 	- When opening http://<ip>:8080/guacamole in a browser it should present the guacamole login screen
-	- When clicking 'Open Console' for a VM in SolidCP it should present a console session to the server
+	- When clicking 'Open Console' for a VM in FuseCP it should present a console session to the server
 	- If not working then the following may help you resolve issues
 		- Verify the services are running
 			# sudo systemctl status guacd
@@ -259,22 +259,22 @@
 			- Attempt to open a console session while you have your SSH session to guacamole open and it should display 
 			  debugging info in real time
 		- You may also scroll through all the logs instead of viewing in real time
-		  This can be helpful to identify that the SolidCPAuthenticationProvider is getting loaded.
+		  This can be helpful to identify that the FuseCPAuthenticationProvider is getting loaded.
 			# sudo nano /var/lib/tomcat9/logs/catalina.out
 		- Other items to check
-			- SolidCP generated key matches guacamole.properties solidcp-key value
-			- User specified in SolidCP Guacamole configuration has administrative rights to Hyper-V host
+			- FuseCP generated key matches guacamole.properties fusecp-key value
+			- User specified in FuseCP Guacamole configuration has administrative rights to Hyper-V host
 			- Software firewall on Hyper-V host allows tcp/2179 traffic from the guacamole server ip
 			- All of the files are valid and exist in /etc/guacamole and its subfolders
 			- All of the files (including libs and extensions) in /etc/guacamole are owned by tomcat user
 		- Once it is working, change the logback.xml root level back to "info" and restart services (See "Enable guacd debugging" section)
 
 8) INSTALL BRANDING EXTENSION (Guacamole VM) - OPTIONAL BUT RECOMENDED
-		# sudo wget -O /etc/guacamole/extensions/guacamole-brand-solidcp.jar https://raw.githubusercontent.com/FuseCP/SolidCP/master/SolidCP/Sources/Tools/Guacamole/SolidCPAuthenticationProvider/brand-ext/guacamole-brand-solidcp.jar
-		# sudo chown tomcat:tomcat /etc/guacamole/extensions/guacamole-brand-solidcp.jar
+		# sudo wget -O /etc/guacamole/extensions/guacamole-brand-fusecp.jar https://raw.githubusercontent.com/FuseCP/FuseCP/master/FuseCP/Sources/Tools/Guacamole/FuseCPAuthenticationProvider/brand-ext/guacamole-brand-fusecp.jar
+		# sudo chown tomcat:tomcat /etc/guacamole/extensions/guacamole-brand-fusecp.jar
 		# sudo systemctl restart guacd tomcat9
 	- Verify it's working
-		- When opening http://<guacip>:8080/guacamole in a browser it should display only the SolidCP logo
+		- When opening http://<guacip>:8080/guacamole in a browser it should display only the FuseCP logo
 
 9) GUACAMOLE ACCESS RESTRICTION (Guacamole VM)
 	- Now we will begin to prepare Guacamole for nginx
@@ -312,7 +312,7 @@
 		# sudo ufw status
 		# sudo apt update
 		# sudo apt upgrade -y
-	- Set timezone to match the same timezone configured on your solidcp server - replace <region/city> with your timezone
+	- Set timezone to match the same timezone configured on your fusecp server - replace <region/city> with your timezone
 		# timedatectl
 		# timedatectl list-timezones
 		# sudo timedatectl set-timezone <region/city> 
@@ -349,7 +349,7 @@
 15) CONFIGURE NGINX (Nginx VM)
 	- Create a new Nginx server block file
 		# sudo nano /etc/nginx/sites-available/console.domain.com
-		- Copy the contents of SolidCPAuthenticationProvider\config\nginx.txt into the nano window
+		- Copy the contents of FuseCPAuthenticationProvider\config\nginx.txt into the nano window
 		- In nano, replace the following values
 			- <nginxip> replace with the ip assigned to the nginx VM
 			- <console.domain.com> replace all instances with your fully qualified domain name
@@ -366,13 +366,13 @@
 		# sudo systemctl restart nginx
 	- Verify that it's working
 		- open a browser and navigate to https://console.domain.com
-		- You should see the Guacamole login or the SolidCP logo if the branding extension was installed
+		- You should see the Guacamole login or the FuseCP logo if the branding extension was installed
 
 16) ALMOST DONE
-	- Sign into your SolidCP portal
+	- Sign into your FuseCP portal
 	- Go to Servers -> Hyper-V -> Guacamole
 	- Change Guacamole Script URL to https://console.domain.com
-	- Go to VM and click 'Open Console' and verify it is working within SolidCP
+	- Go to VM and click 'Open Console' and verify it is working within FuseCP
 
-Congratulations! Your time and patience have paid off. You now have secure console access in SolidCP.
+Congratulations! Your time and patience have paid off. You now have secure console access in FuseCP.
 

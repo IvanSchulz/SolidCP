@@ -1,6 +1,6 @@
 <%@ Control AutoEventWireup="true" %>
-<%@ Register TagPrefix="scp" TagName="SiteFooter" Src="~/DesktopModules/SolidCP/SkinControls/SiteFooter.ascx" %>
-<%@ Register TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/SolidCP/SkinControls/Logo.ascx" %>
+<%@ Register TagPrefix="scp" TagName="SiteFooter" Src="~/DesktopModules/FuseCP/SkinControls/SiteFooter.ascx" %>
+<%@ Register TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
 <style>
     body {
         background-color: #EFEFEF;

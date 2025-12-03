@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,22 +32,22 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP database model
+ * FuseCP database model
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
 
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/var_definition.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/var_definition.php');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-Class solidcp_database{
+Class fusecp_database{
 
     /**
      * Creates the settings table in the WHMCS database
@@ -77,10 +77,10 @@ Class solidcp_database{
                     ['setting' => 'WhmcsAdmin', 'value' => '', 'created_at' => date('Y-m-d H:i:s')]
                 ]);
 
-                return array('status' => 'success', 'description' => "SolidCP settings table successfully created.");
+                return array('status' => 'success', 'description' => "FuseCP settings table successfully created.");
             }
             else{
-                return array('status' => 'success', 'description' => "SolidCP settings table already exists.");
+                return array('status' => 'success', 'description' => "FuseCP settings table already exists.");
             }
         }
         catch (Exception $e){
@@ -107,10 +107,10 @@ Class solidcp_database{
                     }
                 );
 
-                return array('status' => 'success', 'description' => "SolidCP Addons table successfully created.");
+                return array('status' => 'success', 'description' => "FuseCP Addons table successfully created.");
             }
             else{
-                return array('status' => 'success', 'description' => "SolidCP Addons table already exists.");
+                return array('status' => 'success', 'description' => "FuseCP Addons table already exists.");
             }
         }
         catch (Exception $e){
@@ -137,10 +137,10 @@ Class solidcp_database{
                     }
                 );
 
-                return array('status' => 'success', 'description' => "SolidCP configurable options table successfully created.");
+                return array('status' => 'success', 'description' => "FuseCP configurable options table successfully created.");
             }
             else{
-                return array('status' => 'success', 'description' => "SolidCP configurable options table already exists.");
+                return array('status' => 'success', 'description' => "FuseCP configurable options table already exists.");
             }
         }
         catch (Exception $e){
@@ -156,7 +156,7 @@ Class solidcp_database{
     public static function deleteSettingsTable(){
         try{
             Capsule::schema()->dropIfExists(SOLIDCP_SETTINGS_TABLE);
-            return array('status' => 'success', 'description' => "SolidCP settings table successfully deleted.");
+            return array('status' => 'success', 'description' => "FuseCP settings table successfully deleted.");
         }
         catch (Exception $e){
             return array('status' => 'error', 'description' => "Couldn't delete settings table from database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
@@ -170,7 +170,7 @@ Class solidcp_database{
     public static function deleteAddonsTable(){
         try{
             Capsule::schema()->dropIfExists(SOLIDCP_ADDONS_TABLE);
-            return array('status' => 'success', 'description' => "SolidCP Addons table successfully deleted.");
+            return array('status' => 'success', 'description' => "FuseCP Addons table successfully deleted.");
         }
         catch (Exception $e){
             return array('status' => 'error', 'description' => "Couldn't delete Addons table from database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
@@ -184,7 +184,7 @@ Class solidcp_database{
     public static function deleteConfigurableOptionsTable(){
         try{
             Capsule::schema()->dropIfExists(SOLIDCP_CONFIGURABLE_OPTIONS_TABLE);
-            return array('status' => 'success', 'description' => "SolidCP configurable options table successfully deleted.");
+            return array('status' => 'success', 'description' => "FuseCP configurable options table successfully deleted.");
         }
         catch (Exception $e){
             return array('status' => 'error', 'description' => "Couldn't delete configrable options table from database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
@@ -192,7 +192,7 @@ Class solidcp_database{
     }
 
     /**
-     * Get an Addon with a specified ID from the WHMCS SolidCP Addons table
+     * Get an Addon with a specified ID from the WHMCS FuseCP Addons table
      * @return StdClass object 
      */
     public static function getSCPAddon($addonid){
@@ -234,7 +234,7 @@ Class solidcp_database{
     }
 
     /**
-     * Get all SolidCP accounts of a user with a specified user ID from the WHMCS database
+     * Get all FuseCP accounts of a user with a specified user ID from the WHMCS database
      * @return StdClass object 
      * 
      */
@@ -258,13 +258,13 @@ Class solidcp_database{
                     h.userid = ".$userid."
                     AND h.packageid = p.id
                     AND h.server = s.id
-                    AND s.type = 'SolidCP'
+                    AND s.type = 'FuseCP'
                     AND h.domainstatus IN ('Active', 'Suspended')
             ");
             return $scpaccounts;
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't get SolidCP accounts for Userid {$userid} from WHMCS database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't get FuseCP accounts for Userid {$userid} from WHMCS database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
     }
 
@@ -295,13 +295,13 @@ Class solidcp_database{
                     AND w.whmcs_id = ".$addonid."
                     AND h.id = ".$serviceid."
                     AND h.server = s.id
-                    AND s.type = 'SolidCP'
+                    AND s.type = 'FuseCP'
             ");
             if(count($scpaccounts)>0) return $scpaccounts[0];
             else return $scpaccounts;
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't get SolidCP accounts for Userid {$userid} from WHMCS database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't get FuseCP accounts for Userid {$userid} from WHMCS database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
     }
 
@@ -323,7 +323,7 @@ Class solidcp_database{
                 FROM
                     tblhostingconfigoptions as o
                 INNER JOIN
-                    solidcp_configurable as c on o.optionid = c.whmcs_id
+                    fusecp_configurable as c on o.optionid = c.whmcs_id
                 LEFT JOIN
                     tblproductconfigoptions as co on o.configid = co.id
                 LEFT JOIN

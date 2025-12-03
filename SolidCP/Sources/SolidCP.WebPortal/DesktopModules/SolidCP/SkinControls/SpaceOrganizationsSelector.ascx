@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceOrganizationsSelector.ascx.cs" Inherits="SolidCP.Portal.SkinControls.SpaceOrganizationsSelector" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceOrganizationsSelector.ascx.cs" Inherits="FuseCP.Portal.SkinControls.SpaceOrganizationsSelector" %>
 <div class="col-xs-4">
     <div id="spanOrgsSelector" class="OrgsSelector" runat="server" >
     <div class="input-group col-xs-12">

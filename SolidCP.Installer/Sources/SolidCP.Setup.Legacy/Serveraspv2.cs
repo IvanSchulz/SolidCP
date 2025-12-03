@@ -37,10 +37,10 @@ using System.Configuration;
 using System.Windows.Forms;
 using System.Collections;
 using System.Text;
-using SolidCP.Setup.Actions;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Actions;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class Serveraspv2 : BaseSetup
 	{

@@ -1,7 +1,7 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeStorageUsageBreakdown.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeStorageUsageBreakdown" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeStorageUsageBreakdown.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeStorageUsageBreakdown" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 				<div class="panel-heading">
                     <h3 class="panel-title">
 					<asp:Image ID="Image1" SkinID="ExchangeStorage48" runat="server" />

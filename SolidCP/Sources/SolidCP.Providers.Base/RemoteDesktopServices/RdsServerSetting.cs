@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer.Base.RDS
+namespace FuseCP.EnterpriseServer.Base.RDS
 {
     public class RdsServerSetting
     {

@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class hMailServer5_EditAccount {
@@ -51,7 +51,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secStatusInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secStatusInfo;
         
         /// <summary>
         /// StatusInfoPanel control.
@@ -141,7 +141,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPersonalInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secPersonalInfo;
         
         /// <summary>
         /// PersonalInfoPanel control.
@@ -195,7 +195,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAutoresponder;
+        protected global::FuseCP.Portal.CollapsiblePanel secAutoresponder;
         
         /// <summary>
         /// AutoresponderPanel control.
@@ -303,7 +303,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secForwarding;
+        protected global::FuseCP.Portal.CollapsiblePanel secForwarding;
         
         /// <summary>
         /// ForwardingPanel control.
@@ -366,7 +366,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel Signature;
+        protected global::FuseCP.Portal.CollapsiblePanel Signature;
         
         /// <summary>
         /// SignaturePanel control.

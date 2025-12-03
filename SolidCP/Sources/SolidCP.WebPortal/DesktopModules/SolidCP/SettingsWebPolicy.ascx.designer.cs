@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SettingsWebPolicy {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secParkingPage;
+        protected global::FuseCP.Portal.CollapsiblePanel secParkingPage;
         
         /// <summary>
         /// ParkingPagePanel control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secHostNamePanel;
+        protected global::FuseCP.Portal.CollapsiblePanel secHostNamePanel;
         
         /// <summary>
         /// HostNamePanel control.
@@ -127,7 +127,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel WebPublishingProfile;
+        protected global::FuseCP.Portal.CollapsiblePanel WebPublishingProfile;
         
         /// <summary>
         /// WebPublishingProfilePanel control.
@@ -163,7 +163,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDefaultDocs;
+        protected global::FuseCP.Portal.CollapsiblePanel secDefaultDocs;
         
         /// <summary>
         /// DefaultDocsPanel control.
@@ -199,7 +199,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secGeneralSettings;
+        protected global::FuseCP.Portal.CollapsiblePanel secGeneralSettings;
         
         /// <summary>
         /// GeneralSettingsPanel control.
@@ -307,7 +307,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secExtensions;
+        protected global::FuseCP.Portal.CollapsiblePanel secExtensions;
         
         /// <summary>
         /// ExtensionsPanel control.
@@ -523,7 +523,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAnonymousAccount;
+        protected global::FuseCP.Portal.CollapsiblePanel secAnonymousAccount;
         
         /// <summary>
         /// AnonymousAccountPanel control.
@@ -550,7 +550,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor anonymousUsername;
+        protected global::FuseCP.Portal.UsernamePolicyEditor anonymousUsername;
         
         /// <summary>
         /// secAppVirtualDirectories control.
@@ -559,7 +559,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAppVirtualDirectories;
+        protected global::FuseCP.Portal.CollapsiblePanel secAppVirtualDirectories;
         
         /// <summary>
         /// AppVirtualDirectoriesPanel control.
@@ -586,7 +586,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor virtDirName;
+        protected global::FuseCP.Portal.UsernamePolicyEditor virtDirName;
         
         /// <summary>
         /// secFrontPage control.
@@ -595,7 +595,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secFrontPage;
+        protected global::FuseCP.Portal.CollapsiblePanel secFrontPage;
         
         /// <summary>
         /// FrontPagePanel control.
@@ -622,7 +622,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor frontPageUsername;
+        protected global::FuseCP.Portal.UsernamePolicyEditor frontPageUsername;
         
         /// <summary>
         /// lblFrontPagePassword control.
@@ -640,7 +640,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordPolicyEditor frontPagePassword;
+        protected global::FuseCP.Portal.PasswordPolicyEditor frontPagePassword;
         
         /// <summary>
         /// secSecuredFolders control.
@@ -649,7 +649,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSecuredFolders;
+        protected global::FuseCP.Portal.CollapsiblePanel secSecuredFolders;
         
         /// <summary>
         /// SecuredFoldersPanel control.
@@ -676,7 +676,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor securedUserNamePolicy;
+        protected global::FuseCP.Portal.UsernamePolicyEditor securedUserNamePolicy;
         
         /// <summary>
         /// lblPassword control.
@@ -694,7 +694,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordPolicyEditor securedUserPasswordPolicy;
+        protected global::FuseCP.Portal.PasswordPolicyEditor securedUserPasswordPolicy;
         
         /// <summary>
         /// lblGroupName control.
@@ -712,7 +712,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor securedGroupNamePolicy;
+        protected global::FuseCP.Portal.UsernamePolicyEditor securedGroupNamePolicy;
         
         /// <summary>
         /// secFolders control.
@@ -721,7 +721,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secFolders;
+        protected global::FuseCP.Portal.CollapsiblePanel secFolders;
         
         /// <summary>
         /// FoldersPanel control.

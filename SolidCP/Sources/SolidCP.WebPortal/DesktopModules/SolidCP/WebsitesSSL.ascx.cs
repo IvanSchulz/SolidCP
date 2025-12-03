@@ -43,16 +43,16 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.Common;
 using System.IO;
 using System.Linq;
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebsitesSSL : SolidCPControlBase
+    public partial class WebsitesSSL : FuseCPControlBase
     {
         public const string WEB_SSL_DELETE = "WEB_SSL_DELETE";
         public const string WEB_SSL_EXPORT = "WEB_SSL_EXPORT";

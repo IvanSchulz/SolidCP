@@ -33,10 +33,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Plugins.OfflinePayment")]
+[assembly: AssemblyTitle("FuseCP.Plugins.OfflinePayment")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Plugins.OfflinePayment")]
+[assembly: AssemblyProduct("FuseCP.Plugins.OfflinePayment")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Data;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public class DbSettings
     {
 
-        const string EnterpriseServerRegistryPath = "SOFTWARE\\SolidCP\\EnterpriseServer";
+        const string EnterpriseServerRegistryPath = "SOFTWARE\\FuseCP\\EnterpriseServer";
 
         private static string GetKeyFromRegistry(string Key)
         {
@@ -46,7 +46,7 @@ namespace SolidCP.EnterpriseServer.Data
 					string connectionKey = null;
 					if (OSInfo.IsNetFX)
 					{
-						//connectionKey = ConfigurationManager.AppSettings["SolidCP.AltConnectionString"];
+						//connectionKey = ConfigurationManager.AppSettings["FuseCP.AltConnectionString"];
 					}
 					else
 					{
@@ -90,7 +90,7 @@ namespace SolidCP.EnterpriseServer.Data
 					string connectionKey = null;
 					if (OSInfo.IsNetFX)
 					{
-						connectionKey = ConfigurationManager.AppSettings["SolidCP.AltConnectionString"];
+						connectionKey = ConfigurationManager.AppSettings["FuseCP.AltConnectionString"];
 					}
 					else
 					{
@@ -147,6 +147,6 @@ namespace SolidCP.EnterpriseServer.Data
 
 		public static bool AlwaysUseEntityFrameworkNetFX =>
 			Environment.GetEnvironmentVariable("SOLIDCP_ALWAYS_USE_ENTITY_FRAMEWORK") == "true" ||
-			string.Equals(ConfigurationManager.AppSettings["SolidCP.AlwaysUseEntityFramework"], "true", StringComparison.OrdinalIgnoreCase);
+			string.Equals(ConfigurationManager.AppSettings["FuseCP.AlwaysUseEntityFramework"], "true", StringComparison.OrdinalIgnoreCase);
 	}
 }

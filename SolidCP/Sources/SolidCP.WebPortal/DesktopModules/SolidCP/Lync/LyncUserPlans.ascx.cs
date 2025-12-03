@@ -32,13 +32,13 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.Lync
+namespace FuseCP.Portal.Lync
 {
-    public partial class LyncUserPlans : SolidCPModuleBase
+    public partial class LyncUserPlans : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

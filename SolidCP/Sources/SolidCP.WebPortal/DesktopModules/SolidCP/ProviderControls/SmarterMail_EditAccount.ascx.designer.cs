@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class SmarterMail_EditAccount {
@@ -142,7 +142,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAutoresponder;
+        protected global::FuseCP.Portal.CollapsiblePanel secAutoresponder;
         
         /// <summary>
         /// AutoresponderPanel control.
@@ -214,7 +214,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secForwarding;
+        protected global::FuseCP.Portal.CollapsiblePanel secForwarding;
         
         /// <summary>
         /// ForwardingPanel control.

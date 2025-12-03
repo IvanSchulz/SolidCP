@@ -31,9 +31,9 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
 	public class MySqlServer51 : MySqlServer50
 	{

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class ExchangeActiveSyncSettings {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// chkAllowNonProvisionable control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.HoursBox hoursRefreshInterval;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.HoursBox hoursRefreshInterval;
         
         /// <summary>
         /// secApplication control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secApplication;
+        protected global::FuseCP.Portal.CollapsiblePanel secApplication;
         
         /// <summary>
         /// ApplicationPanel control.
@@ -118,7 +118,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.SizeBox sizeMaxAttachmentSize;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.SizeBox sizeMaxAttachmentSize;
         
         /// <summary>
         /// secWSS control.
@@ -127,7 +127,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secWSS;
+        protected global::FuseCP.Portal.CollapsiblePanel secWSS;
         
         /// <summary>
         /// WSSPanel control.
@@ -163,7 +163,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPassword;
+        protected global::FuseCP.Portal.CollapsiblePanel secPassword;
         
         /// <summary>
         /// PasswordPanel control.
@@ -253,7 +253,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.SizeBox sizeNumberAttempts;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.SizeBox sizeNumberAttempts;
         
         /// <summary>
         /// locMinimumPasswordLength control.
@@ -271,7 +271,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.SizeBox sizeMinimumPasswordLength;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.SizeBox sizeMinimumPasswordLength;
         
         /// <summary>
         /// locTimeReenter control.
@@ -289,7 +289,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.SizeBox sizeTimeReenter;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.SizeBox sizeTimeReenter;
         
         /// <summary>
         /// locMinutes control.
@@ -316,7 +316,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.SizeBox sizePasswordExpiration;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.SizeBox sizePasswordExpiration;
         
         /// <summary>
         /// locDays control.
@@ -343,7 +343,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.SizeBox sizePasswordHistory;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.SizeBox sizePasswordHistory;
         
         /// <summary>
         /// btnSave control.

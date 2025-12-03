@@ -42,9 +42,9 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class UrlPage : BannerWizardPage
 	{
@@ -71,7 +71,7 @@ namespace SolidCP.Setup
 			chkBoxEmbed_CheckedChanged(this, EventArgs.Empty);
 
 			var installerPath = Wizard.SetupVariables.InstallerFolder;
-			var webClientsPath = Path.GetFullPath(Path.Combine(installerPath, "bin", "SolidCP.Web.Clients.dll"));
+			var webClientsPath = Path.GetFullPath(Path.Combine(installerPath, "bin", "FuseCP.Web.Clients.dll"));
 			var canEmbed = File.Exists(webClientsPath);
 			this.chkBoxEmbed.Enabled = canEmbed;
 
@@ -183,7 +183,7 @@ namespace SolidCP.Setup
 						return false;
 					}
 					else if (!File.Exists(Path.Combine(entservpath, "web.config")) ||
-						!File.Exists(Path.Combine(entservpath, "bin", "SolidCP.EnterpriseServer.dll")))
+						!File.Exists(Path.Combine(entservpath, "bin", "FuseCP.EnterpriseServer.dll")))
 					{
 						ShowWarning("There is no Enterprise Server installation in the specified path");
 						return false;
@@ -256,7 +256,7 @@ namespace SolidCP.Setup
 			lblURL.Enabled = txtURL.Enabled = !chkBoxEmbed.Checked;
 			
 			if (chkBoxEmbed.Checked) {
-				txtURL.Text = "assembly://SolidCP.EnterpriseServer";
+				txtURL.Text = "assembly://FuseCP.EnterpriseServer";
 				if (string.IsNullOrEmpty(txtPath.Text))
 				{
 					txtPath.Text = DefaultEntServerPath;

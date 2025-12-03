@@ -43,11 +43,11 @@ using System.Web.UI.HtmlControls;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Text;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class PowerDNS_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class PowerDNS_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         #region Constants
 

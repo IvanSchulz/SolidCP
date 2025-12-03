@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WebDavPortal.Helpers
+namespace FuseCP.WebDavPortal.Helpers
 {
     public class ViewDataHelper
     {

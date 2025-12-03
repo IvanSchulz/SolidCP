@@ -30,13 +30,13 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
 using System.Web;
 using System;
 ﻿using System.Collections.Specialized;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class VirtualMachinesProxmoxHelper
     {

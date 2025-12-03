@@ -1,4 +1,4 @@
-﻿using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,21 +9,21 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Converters;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using AspNetCoreSharedServer;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public abstract class UnixInstaller : Installer
 {
-	public override string InstallExeRootPath { get => base.InstallExeRootPath ?? $"{UnixAppRootPath}/{SolidCP.ToLower()}"; set => base.InstallExeRootPath = value; }
-	public override string InstallWebRootPath { get => base.InstallWebRootPath ?? $"/var/www/{SolidCP.ToLower()}"; set => base.InstallWebRootPath = value; }
-	public override string WebsiteLogsPath => $"/var/log/{SolidCP.ToLower()}";
-	public override string UnixServerServiceId => "solidcp-server";
-	public override string UnixEnterpriseServerServiceId => "solidcp-enterpriseserver";
-	public override string UnixPortalServiceId => "solidcp-portal";
-	public override string SolidCPGroup => SolidCP.ToLower();
-	public override string SolidCPUnixGroup => SolidCPGroup;
+	public override string InstallExeRootPath { get => base.InstallExeRootPath ?? $"{UnixAppRootPath}/{FuseCP.ToLower()}"; set => base.InstallExeRootPath = value; }
+	public override string InstallWebRootPath { get => base.InstallWebRootPath ?? $"/var/www/{FuseCP.ToLower()}"; set => base.InstallWebRootPath = value; }
+	public override string WebsiteLogsPath => $"/var/log/{FuseCP.ToLower()}";
+	public override string UnixServerServiceId => "fusecp-server";
+	public override string UnixEnterpriseServerServiceId => "fusecp-enterpriseserver";
+	public override string UnixPortalServiceId => "fusecp-portal";
+	public override string FuseCPGroup => FuseCP.ToLower();
+	public override string FuseCPUnixGroup => FuseCPGroup;
 	public UnixInstaller() : base() { }
 	bool installedAspNetCoreSharedServer = false;
 	public virtual void InstallAspNetCoreSharedServer()
@@ -190,10 +190,10 @@ public abstract class UnixInstaller : Installer
             var binFolder = (Settings.EnterpriseServer.RunOnNetCore ||
                 Settings.WebPortal.RunOnNetCore && Settings.WebPortal.EmbedEnterpriseServer) ?
                     "bin_dotnet" : "bin\\Code";
-            var dll = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, "SolidCP.SchedulerService.dll");
+            var dll = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, "FuseCP.SchedulerService.dll");
             string Command = $"dotnet \"{dll}\"";
             string Directory = Path.GetDirectoryName(dll);
-            string description = "SolidCP Scheduler Service";
+            string description = "FuseCP Scheduler Service";
             ServiceDescription service;
             if (IsSystemd)
             {
@@ -299,8 +299,8 @@ public abstract class UnixInstaller : Installer
 	{
 		Transaction(() =>
 		{
-			AddUnixGroup(SolidCPUnixGroup);
-			AddUnixUser(settings.Username, SolidCPUnixGroup, settings.Password);
+			AddUnixGroup(FuseCPUnixGroup);
+			AddUnixUser(settings.Username, FuseCPUnixGroup, settings.Password);
 		}).WithRollback(() => RemoveUser(settings.Username));
 	}
 	public override void RemoveUser(string username) => Shell.Standard.Exec($"userdel {username}");
@@ -442,28 +442,28 @@ public abstract class UnixInstaller : Installer
 		{
 			case Global.Server.ComponentCode:
 				return
-@"- Remove SolidCP Server website
-- Delete SolidCP Server folder.
+@"- Remove FuseCP Server website
+- Delete FuseCP Server folder.
 - Remove firewall rule.";
 			case Global.EntServer.ComponentCode:
 				return
-@"- Remove SolidCP EnterpriseServer website.
-- Delete SolidCP EnterpriseServer folder.
+@"- Remove FuseCP EnterpriseServer website.
+- Delete FuseCP EnterpriseServer folder.
 - Remove firewall rule.";
 			case Global.WebPortal.ComponentCode:
 				return
-@"- Remove SolidCP WebPortal website.
-- Delete SolidCP WebPortal folder.
+@"- Remove FuseCP WebPortal website.
+- Delete FuseCP WebPortal folder.
 - Remove firewall rule.";
 			case Global.WebDavPortal.ComponentCode:
 				return
-@"- Remove SolidCP EnterpriseServer website.
-- Delete SolidCP EnterpriseServer folder.
+@"- Remove FuseCP EnterpriseServer website.
+- Delete FuseCP EnterpriseServer folder.
 - Remove firewall rule.";
 			case Global.StandaloneServer.ComponentCode:
 				return
-@"- Remove SolidCP WebPortal website.
-- Delete SolidCP WebPortal, EnterpriseServer & Server folder.
+@"- Remove FuseCP WebPortal website.
+- Delete FuseCP WebPortal, EnterpriseServer & Server folder.
 - Remove firewall rule.";
 			default: throw new NotSupportedException();
 		}
@@ -476,6 +476,6 @@ public abstract class UnixInstaller : Installer
 	public override void RemoveWebPortalFolder() { }
 	public override string[] UserIsMemeberOf(CommonSettings settings)
 	{
-		return new string[] { SolidCPUnixGroup };
+		return new string[] { FuseCPUnixGroup };
 	}
 }

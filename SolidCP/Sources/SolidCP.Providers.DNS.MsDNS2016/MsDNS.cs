@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -31,10 +31,10 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.OS;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
     public class MsDNS2016 : MsDNS2012, IDnsServer
     {

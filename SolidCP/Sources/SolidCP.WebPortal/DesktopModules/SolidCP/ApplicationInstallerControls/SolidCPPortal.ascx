@@ -1,6 +1,6 @@
 <%@ Control Language="c#" AutoEventWireup="true" %>
-<%@ Implements interface="SolidCP.Portal.IWebInstallerSettings" %>
-<%@ Import namespace="SolidCP.EnterpriseServer" %>
+<%@ Implements interface="FuseCP.Portal.IWebInstallerSettings" %>
+<%@ Import namespace="FuseCP.EnterpriseServer" %>
 <%@ Import Namespace="System.Text" %>
 
 <script language="C#" runat="server">
@@ -18,7 +18,7 @@
 	<tr>
 		<td align="left" width=200 nowrap class=SubHead>Portal Name:</TD>
 		<td align="left" width=100% class=Normal>
-			<asp:textbox id="txtPortalName" runat="server" CssClass="form-control" Width="200px">SolidCP</asp:textbox>
+			<asp:textbox id="txtPortalName" runat="server" CssClass="form-control" Width="200px">FuseCP</asp:textbox>
 		</td>
 	</tr>
 	<tr>

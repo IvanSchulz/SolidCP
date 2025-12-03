@@ -1,4 +1,4 @@
-﻿#if NETFRAMEWORK
+#if NETFRAMEWORK
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -13,9 +13,9 @@ using System.Xml;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 	public enum Protocols { BasicHttp, BasicHttps, NetHttp, NetHttps, WSHttp, WSHttps, NetTcp, NetTcpSsl, RESTHttp, RESTHttps, gRPC, gRPCSsl, gRPCWeb, gRPCWebSsl, Assembly }
 

@@ -33,9 +33,9 @@
 using System;
 using System.Collections;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	/// <summary>
 	/// Summary description for IWebInstallerSettings.

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Configuration;
 
-namespace SolidCP.WebDavPortal.WebConfigSections
+namespace FuseCP.WebDavPortal.WebConfigSections
 {
     [ConfigurationCollection(typeof(OfficeOnlineElement))]
     public class OfficeOnlineElementCollection : ConfigurationElementCollection

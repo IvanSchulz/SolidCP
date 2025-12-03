@@ -37,9 +37,9 @@ using System.Collections.Concurrent;
 using System.Text;
 using System.IO;
 using System.Xml;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class AuditLog: ControllerBase
     {

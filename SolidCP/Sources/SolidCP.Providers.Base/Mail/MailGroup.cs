@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
 	/// <summary>
 	/// Summary description for MailGroupItem.

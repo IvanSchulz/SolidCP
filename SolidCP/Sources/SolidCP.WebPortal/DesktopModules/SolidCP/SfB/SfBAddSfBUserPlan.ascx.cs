@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP nor   the   names  of  its
+// - Neither  the  name  of  FuseCP nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -27,18 +27,18 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.Common;
-using SolidCP.Portal.Code.Helpers;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.Common;
+using FuseCP.Portal.Code.Helpers;
 
 
-namespace SolidCP.Portal.SfB
+namespace FuseCP.Portal.SfB
 {
-    public partial class SfBAddSfBUserPlan : SolidCPModuleBase
+    public partial class SfBAddSfBUserPlan : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

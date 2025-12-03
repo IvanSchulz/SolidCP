@@ -1,9 +1,9 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
 {
     public class VirtualMachineHelper: ControllerBase
     {

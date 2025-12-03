@@ -1,7 +1,7 @@
-using SolidCP.Core;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
+using FuseCP.Core;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 
 public class ConsoleUI : UI
@@ -61,10 +61,10 @@ public class ConsoleUI : UI
 			AddInteractivePage(() =>
 			{
 				var form = new ConsoleForm($@"
-Welcome to the SolidCP Setup Wizard
+Welcome to the FuseCP Setup Wizard
 ===================================
 
-This wizard will guide you through the installation of the SolidCP product.
+This wizard will guide you through the installation of the FuseCP product.
 
 It is recommended that you close all other applications before starting Setup. " +
 @"This will make it possible to update relevant system files without having " +
@@ -87,7 +87,7 @@ It is recommended that you close all other applications before starting Setup. "
 LICENSE AGREEMENT
 =================
 
-Copyright (c) 2016 - 2024, SolidCP. 
+Copyright (c) 2016 - 2024, FuseCP. 
 All rights Reserved 
 
 This project is distributed under the Creative Commons Share-alike license. 
@@ -345,7 +345,7 @@ Install Component to:
 					{
 						//creating user account
 						string userName = settings.ComponentName.Replace(" ", string.Empty);
-						userName = userName.Replace("SolidCP", "SCP");
+						userName = userName.Replace("FuseCP", "SCP");
 
 						var domain = "mydomain.com";
 
@@ -567,7 +567,7 @@ Insecure HTTP Warning:
 
 You've choosen an insecure http protocol for the server. That way you will only be able to access the server from localhost, a LAN IP, via an SSH Tunnel or VPN. You can access the server via SSH Tunnel by specifying the url 
 ssh://<username>:<password>@<host>/<remoteport>
-when adding the server in SolidCP Portal.
+when adding the server in FuseCP Portal.
 
 [  Next  ]  [  Back  ]")
 						.ShowDialog();
@@ -669,7 +669,7 @@ Password: [?DatabasePassword                               ]
 MySQL/MariaDB Settings:
 =======================
 
-(Note that by using MySQL/MariaDB, SolidCP will run slower than with SQL Server)
+(Note that by using MySQL/MariaDB, FuseCP will run slower than with SQL Server)
 
 Server:   [?DatabaseServer                               ]
 Database: [?DatabaseName                               ]
@@ -708,7 +708,7 @@ Password: [?DatabasePassword                               ]
 SQLite Settings:
 ================
 
-(Note that by using SQLite, SolidCP will run slower than with using SQL Server. It is not recommended to use SQLite on a production server.)
+(Note that by using SQLite, FuseCP will run slower than with using SQL Server. It is not recommended to use SQLite on a production server.)
 
 Database: [?DatabaseName                               ]
 
@@ -1148,7 +1148,7 @@ Configure Certificate Manually:
 Successful Installation
 =======================
 
-SolidCP Installer successfully has:
+FuseCP Installer successfully has:
 {string.Join(NewLine, Installer.Current.InstallLogs
 	.Select(line => $"- {line}"))}
 
@@ -1275,7 +1275,7 @@ If you proceed, the installer will completely uninstall {settings.ComponentName}
 		else
 		{
 			var form = new ConsoleForm($@"
-SolidCP Installer
+FuseCP Installer
 =================
 
 [ Application Settings ]
@@ -1516,7 +1516,7 @@ There is a new version {component.ComponentName}, {update.VersionName} available
 		{
 			if (!appStartup)
 			{
-				var title = $"SolidCP Installer, {version}";
+				var title = $"FuseCP Installer, {version}";
 				var form = new ConsoleForm($@"{title}
 {new string('=', title.Length)}
 
@@ -1530,11 +1530,11 @@ Component is already the newest version, there are no updates available;
 		}
 		else
 		{
-			var title = $"SolidCP Installer, {update.Version}";
+			var title = $"FuseCP Installer, {update.Version}";
 			var form = new ConsoleForm($@"{title}
 {new string('=', title.Length)}
 
-There is a new version SolidCP Installer, {update.Version}, available that can be installed.
+There is a new version FuseCP Installer, {update.Version}, available that can be installed.
 
 [  Install  ]  [  Back  ]
 ")
@@ -1566,11 +1566,11 @@ There is a new version SolidCP Installer, {update.Version}, available that can b
 	{
 		var rootUser = OSInfo.IsWindows ? "administrator" : "root";
 		var form = new ConsoleForm(@$"
-SolidCP Installer
+FuseCP Installer
 =================
 
-SolidCP Installer must run as {rootUser}.
-Please restart SolidCP Installer as {rootUser}.
+FuseCP Installer must run as {rootUser}.
+Please restart FuseCP Installer as {rootUser}.
 
 [    Exit    ]
 ")
@@ -2011,7 +2011,7 @@ Checking System Requirements
 Prerequisite Check Failed
 =========================
 
-SolidCP cannot be installed on this System.
+FuseCP cannot be installed on this System.
 
 [    Exit    ]
 ");
@@ -2043,7 +2043,7 @@ SolidCP cannot be installed on this System.
 		ConsoleForm form;
 		do
 		{
-			var template = string.Join(NewLine, new[] { "SolidCP Installer Log", "=====================" }
+			var template = string.Join(NewLine, new[] { "FuseCP Installer Log", "=====================" }
 				.Concat(Enumerable.Repeat("", height + 1))
 				.Concat(new[] { "  [  Down  ]  [  Up  ]  [  Exit  ]" }));
 			form = new ConsoleForm(template);
@@ -2055,7 +2055,7 @@ SolidCP cannot be installed on this System.
 			{
 				window = window.Concat(Enumerable.Repeat("", height - count));
 			}
-			form.Template = string.Join(NewLine, new[] { "SolidCP Installer Log", "=====================" }
+			form.Template = string.Join(NewLine, new[] { "FuseCP Installer Log", "=====================" }
 				.Concat(window)
 				.Concat(new[] { "", "  [  Down  ]  [  Up  ]  [  Exit  ]" }));
 			form.ShowDialog();

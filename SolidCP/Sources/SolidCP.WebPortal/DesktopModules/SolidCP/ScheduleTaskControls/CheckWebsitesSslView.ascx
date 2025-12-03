@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CheckWebsitesSslView.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.CheckWebsitesSslView" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CheckWebsitesSslView.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.CheckWebsitesSslView" %>
 <div>
     <br />
 	<table>

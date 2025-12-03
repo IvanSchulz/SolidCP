@@ -35,17 +35,17 @@ using System.Data;
 using System.Web;
 using System.Collections;
 using System.Collections.Generic;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for esApplicationsInstaller
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+    [WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("EnterpriseServerPolicy")]
     [ToolboxItem(false)]

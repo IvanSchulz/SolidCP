@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationMenu.ascx.cs" Inherits="SolidCP.Portal.OrganizationMenu" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationMenu.ascx.cs" Inherits="FuseCP.Portal.OrganizationMenu" %>
 
 <asp:Localize ID="locMenuTitle" runat="server" meta:resourcekey="locMenuTitle" Visible="false"></asp:Localize>
 <div id="orgMenu" runat="server">

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Text;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace SolidCP.Installer
+namespace FuseCP.Installer
 {
 	public class ResourceAssemblyLoader
 	{
@@ -45,7 +45,7 @@ namespace SolidCP.Installer
 				var path = AppDomain.CurrentDomain.BaseDirectory;
 				var resources = host.GetManifestResourceNames();
 				var fileName = Path.Combine(path, $"{name}.dll");
-				var copyToFile = name == "SolidCP.Installer.Core"; // save installer core to a file, so the domain can find it
+				var copyToFile = name == "FuseCP.Installer.Core"; // save installer core to a file, so the domain can find it
 				var assName = resources.FirstOrDefault(res => res.EndsWith($"{name}.dll", StringComparison.OrdinalIgnoreCase));
 				string pdbName = null;
 				if (assName != null)

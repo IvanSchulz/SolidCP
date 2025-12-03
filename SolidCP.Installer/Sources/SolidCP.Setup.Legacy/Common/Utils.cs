@@ -43,12 +43,12 @@ using System.Xml;
 using System.ServiceProcess;
 using System.DirectoryServices;
 using System.Linq;
-using SolidCP.Setup.Web;
+using FuseCP.Setup.Web;
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Net;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Utils class.

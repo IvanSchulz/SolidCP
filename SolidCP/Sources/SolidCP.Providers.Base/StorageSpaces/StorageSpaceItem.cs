@@ -1,6 +1,6 @@
-﻿using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Providers.StorageSpaces
+namespace FuseCP.Providers.StorageSpaces
 {
     public class StorageSpaceItem
     {

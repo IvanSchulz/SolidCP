@@ -38,14 +38,14 @@ using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Server;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Server;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class DomainLookupViewTask : SchedulerTask
     {

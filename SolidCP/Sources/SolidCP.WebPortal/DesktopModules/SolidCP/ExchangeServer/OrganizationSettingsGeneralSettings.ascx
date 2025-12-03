@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsGeneralSettings.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.OrganizationSettingsGeneralSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationSettingsGeneralSettings" %>
 
 
 

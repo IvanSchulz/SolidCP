@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 
 
@@ -39,7 +39,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaDiskspace;
+		protected global::FuseCP.Portal.Quota quotaDiskspace;
 
 		/// <summary>
 		/// lnkViewDiskspaceDetails control.
@@ -66,7 +66,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaBandwidth;
+		protected global::FuseCP.Portal.Quota quotaBandwidth;
 
 		/// <summary>
 		/// lnkViewBandwidthDetails control.
@@ -102,7 +102,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaDomains;
+		protected global::FuseCP.Portal.Quota quotaDomains;
 
 		/// <summary>
 		/// pnlSubDomains control.
@@ -129,7 +129,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaSubDomains;
+		protected global::FuseCP.Portal.Quota quotaSubDomains;
 
 		/// <summary>
 		/// pnlOrganizations control.
@@ -156,7 +156,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaOrganizations;
+		protected global::FuseCP.Portal.Quota quotaOrganizations;
 
 		/// <summary>
 		/// pnlUserAccounts control.
@@ -183,7 +183,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaUserAccounts;
+		protected global::FuseCP.Portal.Quota quotaUserAccounts;
 
 		/// <summary>
 		/// pnlDeletedUsers control.
@@ -210,7 +210,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaDeletedUsers;
+		protected global::FuseCP.Portal.Quota quotaDeletedUsers;
 
 		/// <summary>
 		/// pnlExchangeAccounts control.
@@ -237,7 +237,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaExchangeAccounts;
+		protected global::FuseCP.Portal.Quota quotaExchangeAccounts;
 
 		/// <summary>
 		/// pnlExchangeStorage control.
@@ -264,7 +264,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaExchangeStorage;
+		protected global::FuseCP.Portal.Quota quotaExchangeStorage;
 
 		/// <summary>
 		/// pnlMailAccounts control.
@@ -291,7 +291,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaMailAccounts;
+		protected global::FuseCP.Portal.Quota quotaMailAccounts;
 
 		/// <summary>
 		/// pnlOCSUsers control.
@@ -318,7 +318,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaOCSUsers;
+		protected global::FuseCP.Portal.Quota quotaOCSUsers;
 
 		/// <summary>
 		/// pnlLyncUsers control.
@@ -345,7 +345,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaLyncUsers;
+		protected global::FuseCP.Portal.Quota quotaLyncUsers;
 
 		/// <summary>
 		/// pnlLyncPhone control.
@@ -372,7 +372,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaLyncPhone;
+		protected global::FuseCP.Portal.Quota quotaLyncPhone;
 
 		/// <summary>
 		/// pnlSfBUsers control.
@@ -399,7 +399,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaSfBUsers;
+		protected global::FuseCP.Portal.Quota quotaSfBUsers;
 
 		/// <summary>
 		/// pnlSfBPhone control.
@@ -426,7 +426,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaSfBPhone;
+		protected global::FuseCP.Portal.Quota quotaSfBPhone;
 
 		/// <summary>
 		/// pnlBlackBerryUsers control.
@@ -453,7 +453,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaBlackBerryUsers;
+		protected global::FuseCP.Portal.Quota quotaBlackBerryUsers;
 
 		/// <summary>
 		/// pnlSharepointSites control.
@@ -480,7 +480,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaSharepointSites;
+		protected global::FuseCP.Portal.Quota quotaSharepointSites;
 
 		/// <summary>
 		/// pnlEnterpriseSharepointSites control.
@@ -507,7 +507,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaEnterpriseSharepointSites;
+		protected global::FuseCP.Portal.Quota quotaEnterpriseSharepointSites;
 
 		/// <summary>
 		/// pnlWebSites control.
@@ -534,7 +534,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaWebSites;
+		protected global::FuseCP.Portal.Quota quotaWebSites;
 
 		/// <summary>
 		/// pnlFtpAccounts control.
@@ -561,7 +561,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaFtpAccounts;
+		protected global::FuseCP.Portal.Quota quotaFtpAccounts;
 
 		/// <summary>
 		/// pnlMsSQL2008Databases control.
@@ -588,7 +588,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2008databases;
+		protected global::FuseCP.Portal.Quota quotamssql2008databases;
 
 		/// <summary>
 		/// pnlMsSQL2012Databases control.
@@ -615,7 +615,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2012databases;
+		protected global::FuseCP.Portal.Quota quotamssql2012databases;
 
 		/// <summary>
 		/// pnlMsSQL2014Databases control.
@@ -642,7 +642,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2014databases;
+		protected global::FuseCP.Portal.Quota quotamssql2014databases;
 
 		/// <summary>
 		/// pnlMsSQL2016Databases control.
@@ -669,7 +669,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2016databases;
+		protected global::FuseCP.Portal.Quota quotamssql2016databases;
 
 		/// <summary>
 		/// pnlMsSQL2017Databases control.
@@ -696,7 +696,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2017databases;
+		protected global::FuseCP.Portal.Quota quotamssql2017databases;
 
 		/// <summary>
 		/// pnlMsSQL2019Databases control.
@@ -723,7 +723,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2019databases;
+		protected global::FuseCP.Portal.Quota quotamssql2019databases;
 
 		/// <summary>
 		/// pnlMsSQL2022Databases control.
@@ -750,7 +750,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamssql2022databases;
+		protected global::FuseCP.Portal.Quota quotamssql2022databases;
 
 		/// <summary>
 		/// pnlMySQL5Databases control.
@@ -777,7 +777,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamysql5databases;
+		protected global::FuseCP.Portal.Quota quotamysql5databases;
 
 		/// <summary>
 		/// pnlMySQL8Databases control.
@@ -804,7 +804,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamysql8databases;
+		protected global::FuseCP.Portal.Quota quotamysql8databases;
 
 		/// <summary>
 		/// pnlMySQL9Databases control.
@@ -831,7 +831,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamysql9databases;
+		protected global::FuseCP.Portal.Quota quotamysql9databases;
 
 		/// <summary>
 		/// pnlMariaDBDatabases control.
@@ -858,7 +858,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotamariadbdatabases;
+		protected global::FuseCP.Portal.Quota quotamariadbdatabases;
 
 		/// <summary>
 		/// pnlHyperVForPC control.
@@ -885,7 +885,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaNumberOfVm;
+		protected global::FuseCP.Portal.Quota quotaNumberOfVm;
 
 		/// <summary>
 		/// pnlFolders control.
@@ -912,7 +912,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaNumberOfFolders;
+		protected global::FuseCP.Portal.Quota quotaNumberOfFolders;
 
 		/// <summary>
 		/// pnlEnterpriseStorage control.
@@ -939,7 +939,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaEnterpriseStorage;
+		protected global::FuseCP.Portal.Quota quotaEnterpriseStorage;
 
 		/// <summary>
 		/// pnlRdsCollections control.
@@ -966,7 +966,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaRdsCollections;
+		protected global::FuseCP.Portal.Quota quotaRdsCollections;
 
 		/// <summary>
 		/// pnlRdsServers control.
@@ -993,7 +993,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaRdsServers;
+		protected global::FuseCP.Portal.Quota quotaRdsServers;
 
 		/// <summary>
 		/// pnlRdsUsers control.
@@ -1020,7 +1020,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotaRdsUsers;
+		protected global::FuseCP.Portal.Quota quotaRdsUsers;
 
 		/// <summary>
 		/// pnlVPS2012Servers control.
@@ -1047,7 +1047,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotavps2012servers;
+		protected global::FuseCP.Portal.Quota quotavps2012servers;
 
 		/// <summary>
 		/// pnlVPS2012CpuQuota control.
@@ -1074,7 +1074,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotavps2012cpuquota;
+		protected global::FuseCP.Portal.Quota quotavps2012cpuquota;
 
 		/// <summary>
 		/// pnlVPS2012RamQuota control.
@@ -1101,7 +1101,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotavps2012ramquota;
+		protected global::FuseCP.Portal.Quota quotavps2012ramquota;
 
 		/// <summary>
 		/// pnlVPS2012HddQuota control.
@@ -1128,7 +1128,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.Quota quotavps2012hddquota;
+		protected global::FuseCP.Portal.Quota quotavps2012hddquota;
 
 		/// <summary>
 		/// btnViewQuotas control.

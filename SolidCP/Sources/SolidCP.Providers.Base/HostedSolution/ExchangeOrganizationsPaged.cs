@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.Exchange
+namespace FuseCP.Providers.Exchange
 {
 	/*public class ExchangeOrganizationsPaged
 	{

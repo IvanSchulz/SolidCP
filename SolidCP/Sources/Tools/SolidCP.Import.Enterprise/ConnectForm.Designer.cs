@@ -26,7 +26,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	partial class ConnectForm
 	{
@@ -56,7 +56,7 @@ namespace SolidCP.Import.Enterprise
 		/// </summary>
 		private void InitializeComponent()
 		{
-			SolidCP.Import.Enterprise.LineBox lineBox;
+			FuseCP.Import.Enterprise.LineBox lineBox;
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConnectForm));
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnConnect = new System.Windows.Forms.Button();
@@ -65,8 +65,8 @@ namespace SolidCP.Import.Enterprise
 			this.lblUserName = new System.Windows.Forms.Label();
 			this.lblPassword = new System.Windows.Forms.Label();
 			this.txtPassword = new System.Windows.Forms.TextBox();
-			this.animatedIcon = new SolidCP.Import.Enterprise.AnimatedIcon();
-			lineBox = new SolidCP.Import.Enterprise.LineBox();
+			this.animatedIcon = new FuseCP.Import.Enterprise.AnimatedIcon();
+			lineBox = new FuseCP.Import.Enterprise.LineBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -104,7 +104,7 @@ namespace SolidCP.Import.Enterprise
 			// 
 			// pictureBox
 			// 
-			this.pictureBox.Image = global::SolidCP.Import.Enterprise.Properties.Resources.ConnectLogo;
+			this.pictureBox.Image = global::FuseCP.Import.Enterprise.Properties.Resources.ConnectLogo;
 			this.pictureBox.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox.Name = "pictureBox";
 			this.pictureBox.Size = new System.Drawing.Size(410, 67);

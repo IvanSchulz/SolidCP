@@ -40,15 +40,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SCP = SolidCP.EnterpriseServer;
+using SCP = FuseCP.EnterpriseServer;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Xml;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserSpaces : SolidCPModuleBase
+    public partial class UserSpaces : FuseCPModuleBase
     {
         XmlNodeList xmlIcons = null;
         DataSet myPackages;

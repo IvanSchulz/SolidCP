@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -6,17 +6,17 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
         <LangVersion>13</LangVersion>
-        <AssemblyName>SolidCP.Installer</AssemblyName>
+        <AssemblyName>FuseCP.Installer</AssemblyName>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <StartupObject>SolidCP.UniversalInstaller.Program</StartupObject>
+        <StartupObject>FuseCP.UniversalInstaller.Program</StartupObject>
         <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-        <ApplicationIcon>Resources\SolidCP.ico</ApplicationIcon>
+        <ApplicationIcon>Resources\FuseCP.ico</ApplicationIcon>
         <EmbedReferences>true</EmbedReferences>
         <GenerateRuntimeConfigurationFiles>false</GenerateRuntimeConfigurationFiles>
         <DefineConstants Condition="$(EmbedReferences) == 'true'">$(DefineConstants);Costura</DefineConstants>
         <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
         <RestoreSources>$(RestoreSources);../../Lib;https://api.nuget.org/v3/index.json</RestoreSources>
-        <ApplicationManifest>SolidCP.Installer.manifest</ApplicationManifest>
+        <ApplicationManifest>FuseCP.Installer.manifest</ApplicationManifest>
         <UseAppHost>true</UseAppHost>
         <AppHostRuntimeIdentifier>win-x64</AppHostRuntimeIdentifier>
     </PropertyGroup>
@@ -32,7 +32,7 @@
     </PropertyGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\SolidCP.Setup\SolidCP.Setup.csproj">
+        <ProjectReference Include="..\FuseCP.Setup\FuseCP.Setup.csproj">
             <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
             <OutputItemType>Content</OutputItemType>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -44,24 +44,24 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Runtime\SolidCP.UniversalInstaller.Runtime.csproj" />
-        <!--<ProjectReference Include="..\SolidCP.UniversalInstaller.Runtime\SolidCP.UniversalInstaller.Runtime.csproj">
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Runtime\FuseCP.UniversalInstaller.Runtime.csproj" />
+        <!--<ProjectReference Include="..\FuseCP.UniversalInstaller.Runtime\FuseCP.UniversalInstaller.Runtime.csproj">
             <SetTargetFramework>TargetFramework=net10.0</SetTargetFramework>
         </ProjectReference>-->
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.Avalonia\SolidCP.UniversalInstaller.UI.Avalonia.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.Console\SolidCP.UniversalInstaller.UI.Console.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.Avalonia\FuseCP.UniversalInstaller.UI.Avalonia.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.Console\FuseCP.UniversalInstaller.UI.Console.csproj" />
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework) == 'net48'">
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.WinForms\SolidCP.UniversalInstaller.UI.WinForms.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.WinForms\FuseCP.UniversalInstaller.UI.WinForms.csproj">
             <SetTargetFramework>TargetFramework=net48</SetTargetFramework>
         </ProjectReference>
         <PackageReference Include="System.Security.Permissions" Version="10.0.0" />
     </ItemGroup>
     <ItemGroup Condition="$(TargetFramework) == 'net10.0'">
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.WinForms\SolidCP.UniversalInstaller.UI.WinForms.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.WinForms\FuseCP.UniversalInstaller.UI.WinForms.csproj">
             <SetTargetFramework>TargetFramework=net10.0-windows</SetTargetFramework>
         </ProjectReference>
         <FrameworkReference Include="Microsoft.WindowsDesktop.App" />
@@ -99,7 +99,7 @@
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework) == 'net10.0'">
-        <Content Include="SolidCP.Installer.runtimeconfig.json">
+        <Content Include="FuseCP.Installer.runtimeconfig.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
@@ -142,13 +142,13 @@
     <Target Name="DeleteDlls" AfterTargets="Build" Condition="$(EmbedReferences) == 'true' And $(TargetFramework) != '' ">
         <ItemGroup>
             <DllsToKeep Include="$(OutputPath)\**\Setup2.*" />
-            <DllsToKeep Include="$(OutputPath)\**\SolidCP.Installer.exe" />
-            <DllsToKeep Include="$(OutputPath)\**\SolidCP.Installer.dll" />
+            <DllsToKeep Include="$(OutputPath)\**\FuseCP.Installer.exe" />
+            <DllsToKeep Include="$(OutputPath)\**\FuseCP.Installer.dll" />
             <DllsToKeep Include="$(OutputPath)\**\installer.settings.json" />
-            <DllsToKeep Include="$(OutputPath)\**\SolidCP.Installer.runtimeconfig.json" />
-            <DllsToKeep Include="$(OutputPath)\**\SolidCP.Installer.deps.json" />
-            <DllsToKeep Include="$(OutputPath)\**\SolidCP.Installer.pdb" />
-            <DllsToKeep Include="$(OutputPath)\**\SolidCP.Installer.Core.deps.json" />
+            <DllsToKeep Include="$(OutputPath)\**\FuseCP.Installer.runtimeconfig.json" />
+            <DllsToKeep Include="$(OutputPath)\**\FuseCP.Installer.deps.json" />
+            <DllsToKeep Include="$(OutputPath)\**\FuseCP.Installer.pdb" />
+            <DllsToKeep Include="$(OutputPath)\**\FuseCP.Installer.Core.deps.json" />
             <DllsToDelete Include="$(OutputPath)\**\*.*" Exclude="@(DllsToKeep)" />
         </ItemGroup>
         <Delete Files="@(DllsToDelete)" />
@@ -163,11 +163,11 @@
 
     <Target Name="CopyOutput" AfterTargets="Build" Condition="$(TargetFramework) == 'net10.0'">
         <ItemGroup>
-            <OutputExe Include="$(OutputPath)\**\SolidCP.Installer.deps.json" />
-            <OutputExe Include="$(OutputPath)\**\SolidCP.Installer.runtimeconfig.json" />
-            <OutputExe Include="$(OutputPath)\**\SolidCP.Installer.*" />
+            <OutputExe Include="$(OutputPath)\**\FuseCP.Installer.deps.json" />
+            <OutputExe Include="$(OutputPath)\**\FuseCP.Installer.runtimeconfig.json" />
+            <OutputExe Include="$(OutputPath)\**\FuseCP.Installer.*" />
         </ItemGroup>
-        <Copy SourceFiles="@(OutputExe)" DestinationFolder="..\SolidCP.UniversalInstaller.Msi" />
+        <Copy SourceFiles="@(OutputExe)" DestinationFolder="..\FuseCP.UniversalInstaller.Msi" />
     </Target>
 
 </Project>

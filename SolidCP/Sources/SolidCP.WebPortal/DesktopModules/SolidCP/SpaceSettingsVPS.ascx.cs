@@ -35,11 +35,11 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SpaceSettingsVPS : SolidCPControlBase, IPackageSettingsEditorControl
+    public partial class SpaceSettingsVPS : FuseCPControlBase, IPackageSettingsEditorControl
     {
         public void BindSettings(PackageSettings settings)
         {

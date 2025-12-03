@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers.Database;
+using FuseCP.Providers.Database;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public interface IDatabaseEditDatabaseControl
     {

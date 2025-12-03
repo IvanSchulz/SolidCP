@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <AssemblyName>wcfcert</AssemblyName>
     <TargetFramework>net48</TargetFramework>
-    <OutputPath>..\SolidCP.Server\bin\LetsEncrypt\</OutputPath>
+    <OutputPath>..\FuseCP.Server\bin\LetsEncrypt\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Nullable>disable</Nullable>

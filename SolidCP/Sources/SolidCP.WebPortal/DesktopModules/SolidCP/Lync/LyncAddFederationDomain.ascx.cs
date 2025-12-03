@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class LyncAddFederationDomain : SolidCPModuleBase
+    public partial class LyncAddFederationDomain : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

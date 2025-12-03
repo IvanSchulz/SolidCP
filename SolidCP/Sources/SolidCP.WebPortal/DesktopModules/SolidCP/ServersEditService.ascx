@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditService.ascx.cs"
-	Inherits="SolidCP.Portal.ServersEditService" %>
+	Inherits="FuseCP.Portal.ServersEditService" %>
 <%@ Register Src="GlobalDnsRecordsControl.ascx" TagName="GlobalDnsRecordsControl"
 	TagPrefix="scp" %>
 <%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="scp" %>

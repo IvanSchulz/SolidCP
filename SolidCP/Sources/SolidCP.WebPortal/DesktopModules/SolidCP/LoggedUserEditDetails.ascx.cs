@@ -31,18 +31,18 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Web.Security;
 using System.Data;
 using System.Web;
 using System.Drawing;
 using System.Globalization;
 using System.Web.UI.WebControls;
-using SolidCP.WebPortal;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class LoggedUserEditDetails : SolidCPModuleBase
+    public partial class LoggedUserEditDetails : FuseCPModuleBase
     {
         const int redirectTimeout = Utils.CHANGE_PASSWORD_REDIRECT_TIMEOUT;
         const string changePasswordWarningKey = "LoggedUserEditDetails.ChangePasswordWarning";
@@ -111,7 +111,7 @@ namespace SolidCP.Portal
 
             if (user != null)
             {
-                userPassword.SetUserPolicy(user.UserId, UserSettings.SolidCP_POLICY, "PasswordPolicy");
+                userPassword.SetUserPolicy(user.UserId, UserSettings.FuseCP_POLICY, "PasswordPolicy");
 
                 // account info
                 txtFirstName.Text = PortalAntiXSS.DecodeOld(user.FirstName);

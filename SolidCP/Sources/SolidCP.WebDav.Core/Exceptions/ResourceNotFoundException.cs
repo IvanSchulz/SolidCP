@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Runtime.Serialization;
 
-namespace SolidCP.WebDav.Core.Exceptions
+namespace FuseCP.WebDav.Core.Exceptions
 {
     [Serializable]
     public class ResourceNotFoundException : Exception

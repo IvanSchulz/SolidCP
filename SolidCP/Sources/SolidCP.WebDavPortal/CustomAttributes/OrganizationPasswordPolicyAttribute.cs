@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDav.Core;
-using SolidCP.WebDav.Core.Config;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDav.Core;
+using FuseCP.WebDav.Core.Config;
 
-namespace SolidCP.WebDavPortal.CustomAttributes
+namespace FuseCP.WebDavPortal.CustomAttributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public class OrganizationPasswordPolicyAttribute : ValidationAttribute, IClientValidatable

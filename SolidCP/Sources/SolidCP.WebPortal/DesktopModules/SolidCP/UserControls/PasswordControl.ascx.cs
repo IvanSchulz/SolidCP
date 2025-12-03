@@ -45,12 +45,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class PasswordControl : SolidCPControlBase
+    public partial class PasswordControl : FuseCPControlBase
     {
         public const string EMPTY_PASSWORD = "";
         public const int MIN_PASSWORD_LENGTH = 1;
@@ -70,7 +70,7 @@ namespace SolidCP.Portal
         public string GetRandomPasswordUrl()
         {
             return Page.ClientScript.GetWebResourceUrl(
-                typeof(PasswordControl), "SolidCP.Portal.Scripts.RandomPassword.js");
+                typeof(PasswordControl), "FuseCP.Portal.Scripts.RandomPassword.js");
         }
 
         public string ValidationGroup

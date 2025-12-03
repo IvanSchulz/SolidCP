@@ -40,9 +40,9 @@ using System.Text;
 // Microsoft.Web.Services3;
 //using Microsoft.Web.Services3.Design;
 
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.Server.Client
+namespace FuseCP.Server.Client
 {
 	public class ServerProxyConfigurator
 	{
@@ -57,13 +57,13 @@ namespace SolidCP.Server.Client
 		RemoteServerSettings serverSettings = new RemoteServerSettings();
 		ServiceProviderSettings providerSettings = new ServiceProviderSettings();
 
-		public SolidCP.Providers.RemoteServerSettings ServerSettings
+		public FuseCP.Providers.RemoteServerSettings ServerSettings
 		{
 			get { return this.serverSettings; }
 			set { this.serverSettings = value; }
 		}
 
-		public SolidCP.Providers.ServiceProviderSettings ProviderSettings
+		public FuseCP.Providers.ServiceProviderSettings ProviderSettings
 		{
 			get { return this.providerSettings; }
 			set { this.providerSettings = value; }
@@ -90,7 +90,7 @@ namespace SolidCP.Server.Client
 
 		public bool? IsCore { get; set; } = null;
 
-		public void Configure(SolidCP.Web.Clients.ClientBase proxy)
+		public void Configure(FuseCP.Web.Clients.ClientBase proxy)
 		{
 			// configure proxy URL
 			if (!String.IsNullOrEmpty(serverUrl))

@@ -35,7 +35,7 @@ using System.Collections.Specialized;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for PackageSettings.

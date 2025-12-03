@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012.UserControls {
+namespace FuseCP.Portal.VPS2012.UserControls {
     
     
     public partial class DynamicMemoryControl {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPS2012.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDymanicMemory;
+        protected global::FuseCP.Portal.CollapsiblePanel secDymanicMemory;
         
         /// <summary>
         /// DymanicMemoryPanel control.
@@ -127,7 +127,7 @@ namespace SolidCP.Portal.VPS2012.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDymanicMemoryDisplay;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDymanicMemoryDisplay;
         
         /// <summary>
         /// trMinimumDisplay control.
@@ -253,7 +253,7 @@ namespace SolidCP.Portal.VPS2012.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDymanicMemorySummary;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDymanicMemorySummary;
         
         /// <summary>
         /// trMinimumSummary control.

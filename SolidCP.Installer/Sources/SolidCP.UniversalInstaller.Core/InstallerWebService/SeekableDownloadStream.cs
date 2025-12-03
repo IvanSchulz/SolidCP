@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Buffers;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,14 +8,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using NeoSmart.AsyncLock;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public class SeekableDownloadStream : System.IO.Stream
 {
 	public const int MB = 1024 * 1024;
 	public const int ChunkSize = 4 * MB;
 
-	//public FileStream MainStream = new FileStream(@"C:\GitHub\7zipTest\SolidCP-StandaloneServerSetup.7z", FileMode.Open, FileAccess.Read); 
+	//public FileStream MainStream = new FileStream(@"C:\GitHub\7zipTest\FuseCP-StandaloneServerSetup.7z", FileMode.Open, FileAccess.Read); 
 	
 	public Releases Releases;
 

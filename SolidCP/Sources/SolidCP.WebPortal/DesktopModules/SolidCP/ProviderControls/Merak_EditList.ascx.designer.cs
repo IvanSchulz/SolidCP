@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class Merak_EditList {
@@ -169,7 +169,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EmailControl txtModeratorEmail;
+        protected global::FuseCP.Portal.UserControls.EmailControl txtModeratorEmail;
         
         /// <summary>
         /// lblMaxMessageSize control.
@@ -232,6 +232,6 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailEditItems mailEditItems;
+        protected global::FuseCP.Portal.MailEditItems mailEditItems;
     }
 }

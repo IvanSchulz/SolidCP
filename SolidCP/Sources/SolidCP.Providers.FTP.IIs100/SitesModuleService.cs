@@ -31,17 +31,17 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System.Collections.Generic;
-using SolidCP.Providers;
-using SolidCP.Providers.FTP;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.FTP;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.FTP.IIs100
+namespace FuseCP.Providers.FTP.IIs100
 {
     using Microsoft.Web.Administration;
     using Microsoft.Web.Management.Ftp;
-	using SolidCP.Providers.FTP.IIs100.Authorization;
-	using SolidCP.Providers.FTP.IIs100.Config;
+	using FuseCP.Providers.FTP.IIs100.Authorization;
+	using FuseCP.Providers.FTP.IIs100.Config;
     using Microsoft.Web.Management.Server;
     using Microsoft.Web.Management.Utility;
     using System;

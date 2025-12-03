@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS
 {
     public enum PsScriptPoint
     {

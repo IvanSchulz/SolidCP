@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Installer
+namespace FuseCP.Installer
 {
 	partial class ApplicationForm
 	{
@@ -70,12 +70,12 @@ namespace SolidCP.Installer
             this.pnlRight = new System.Windows.Forms.Panel();
             this.pnlResultView = new System.Windows.Forms.Panel();
             this.pnlDescription = new System.Windows.Forms.Panel();
-            this.lineBox2 = new SolidCP.Installer.LineBox();
+            this.lineBox2 = new FuseCP.Installer.LineBox();
             this.lblResultViewPath = new System.Windows.Forms.Label();
             this.lblResultViewTitle = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.topLogoControl = new SolidCP.Installer.TopLogoControl();
+            this.topLogoControl = new FuseCP.Installer.TopLogoControl();
             this.statusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
@@ -241,7 +241,7 @@ namespace SolidCP.Installer
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "ApplicationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SolidCP Installer";
+            this.Text = "FuseCP Installer";
             this.Shown += new System.EventHandler(this.OnApplicationFormShown);
             this.statusBar.ResumeLayout(false);
             this.statusBar.PerformLayout();

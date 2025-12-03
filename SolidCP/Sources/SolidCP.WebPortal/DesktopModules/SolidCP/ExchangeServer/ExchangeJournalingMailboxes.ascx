@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeJournalingMailboxes.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeJournalingMailboxes" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeJournalingMailboxes.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeJournalingMailboxes" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -124,7 +124,7 @@
 </asp:GridView>
 <asp:ObjectDataSource ID="odsAccountsPaged" runat="server" EnablePaging="True"
     SelectCountMethod="GetExchangeAccountsPagedCount" SelectMethod="GetExchangeAccountsPaged"
-    SortParameterName="sortColumn" TypeName="SolidCP.Portal.ExchangeHelper"
+    SortParameterName="sortColumn" TypeName="FuseCP.Portal.ExchangeHelper"
     OnSelecting="odsAccountsPaged_Selecting" OnSelected="odsAccountsPaged_Selected">
     <SelectParameters>
         <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />

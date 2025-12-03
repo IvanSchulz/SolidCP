@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditVirtualDir.ascx.cs" Inherits="SolidCP.Portal.WebSitesEditVirtualDir" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditVirtualDir.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditVirtualDir" %>
 <%@ Register Src="WebSitesCustomErrorsControl.ascx" TagName="WebSitesCustomErrorsControl" TagPrefix="uc4" %>
 <%@ Register Src="WebSitesMimeTypesControl.ascx" TagName="WebSitesMimeTypesControl" TagPrefix="uc5" %>
 <%@ Register Src="VirtualDirectoryHomeFolderControl.ascx" TagName="VirtualDirectoryHomeFolderControl" TagPrefix="uc1" %>

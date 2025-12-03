@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class MSFTP70_Settings {
@@ -60,7 +60,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SelectIPAddress ipAddress;
+        protected global::FuseCP.Portal.SelectIPAddress ipAddress;
         
         /// <summary>
         /// lblSite control.
@@ -168,6 +168,6 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.Common_ActiveDirectoryIntegration ActiveDirectoryIntegration;
+        protected global::FuseCP.Portal.ProviderControls.Common_ActiveDirectoryIntegration ActiveDirectoryIntegration;
     }
 }

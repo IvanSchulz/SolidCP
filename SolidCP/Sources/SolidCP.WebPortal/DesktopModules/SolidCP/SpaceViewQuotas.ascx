@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceViewQuotas.ascx.cs" Inherits="SolidCP.Portal.SpaceViewQuotas" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceViewQuotas.ascx.cs" Inherits="FuseCP.Portal.SpaceViewQuotas" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="scp" %>
 <%@ Register Src="SpaceQuotasControl.ascx" TagName="SpaceQuotasControl" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

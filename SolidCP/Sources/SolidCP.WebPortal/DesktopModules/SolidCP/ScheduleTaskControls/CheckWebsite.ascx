@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CheckWebsite.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.CheckWebsite" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CheckWebsite.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.CheckWebsite" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="clpSendMessageIfHeader" runat="server"

@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.Providers.VirtualizationForPC
+namespace FuseCP.Providers.VirtualizationForPC
 {
     public static class MacAddressHelper
     {

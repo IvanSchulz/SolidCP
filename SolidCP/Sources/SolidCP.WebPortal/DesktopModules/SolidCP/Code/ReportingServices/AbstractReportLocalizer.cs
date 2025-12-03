@@ -42,7 +42,7 @@ using System.Web.UI.HtmlControls;
 using System.IO;
 using System.Xml;
 
-namespace SolidCP.Portal.ReportingServices
+namespace FuseCP.Portal.ReportingServices
 {
 	/// <summary>
 	/// This class encapsulates the algorithm of localization of Reports.

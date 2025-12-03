@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public static class Constants
     {
-        public const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "SolidCP.HyperV.UseDiskPartClearReadOnlyFlag";
+        public const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "FuseCP.HyperV.UseDiskPartClearReadOnlyFlag";
         public const string WMI_VIRTUALIZATION_NAMESPACE = @"root\virtualization\v2";
         public const string WMI_CIMV2_NAMESPACE = @"root\cimv2";
 

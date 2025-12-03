@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -31,35 +31,35 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-// SolidCP server module core files
-require_once(ROOTDIR. '/modules/addons/solidcp_module/lib/database.php');
-require_once(ROOTDIR. '/modules/addons/solidcp_module/lib/settings.php');
-require_once(ROOTDIR. '/modules/addons/solidcp_module/lib/enterpriseserver.php');
-require_once(ROOTDIR. '/modules/addons/solidcp_module/lib/solidcp_functions.php');
+// FuseCP server module core files
+require_once(ROOTDIR. '/modules/addons/fusecp_module/lib/database.php');
+require_once(ROOTDIR. '/modules/addons/fusecp_module/lib/settings.php');
+require_once(ROOTDIR. '/modules/addons/fusecp_module/lib/enterpriseserver.php');
+require_once(ROOTDIR. '/modules/addons/fusecp_module/lib/fusecp_functions.php');
 
 /**
- * SolidCP WHMCS Server Module
+ * FuseCP WHMCS Server Module
  *
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  */
 
 /**
- * Returns the SolidCP package / server configuration options
+ * Returns the FuseCP package / server configuration options
  *
  * @access public
  * @return array
  */
-function SolidCP_ConfigOptions()
+function FuseCP_ConfigOptions()
 {
 	return array('Package Name' => array( 'Type' => 'text', 'Size' => 25, 'Description' => 'Package Name'),
 				 'Web Space Quota' => array( 'Type' => 'text', 'Size' => 5, 'Description' => 'MB'),
 				 'Bandwidth Limit' => array( 'Type' => 'text', 'Size' => 5, 'Description' => 'MB'),
-				 'SolidCP Plan ID' => array( 'Type' => 'text', 'Size' => 4, 'Description' => 'SolidCP hosting plan id'),
+				 'FuseCP Plan ID' => array( 'Type' => 'text', 'Size' => 4, 'Description' => 'FuseCP hosting plan id'),
 				 'Parent Space ID' => array( 'Type' => 'text', 'Size' => 3, 'Description' => '* SpaceID that all accounts are created under', 'Default' => 1),
 				 'Different Potal URL' => array( 'Type' => 'yesno', 'Description' => 'Tick if portal address is different to server address'),
 				 'Portal URL' => array( 'Type' => 'text', 'Size' => 25, 'Description' => 'Portal URL, with http(s)://, no trailing slash'  ),
@@ -68,7 +68,7 @@ function SolidCP_ConfigOptions()
 				 'Create Mail Account' => array( 'Type' => 'yesno', 'Description' => 'Tick to create mail account' ),
 				 'Create FTP Account' => array( 'Type' => 'yesno', 'Description' => 'Tick to create FTP account' ),
                  'Create Temporary Domain' => array( 'Type' => 'yesno', 'Description' => 'Tick to create a temporary domain' ),
-				 'Send HTML Email' => array( 'Type' => 'yesno', 'Description' => 'Tick enable HTML email from SolidCP' ),
+				 'Send HTML Email' => array( 'Type' => 'yesno', 'Description' => 'Tick enable HTML email from FuseCP' ),
 				 'Create Website' => array( 'Type' => 'yesno', 'Description' => 'Tick to create Website' ),
 				 'Count Bandwidth / Diskspace' => array( 'Type' => 'yesno', 'Description' => 'Tick to update diskpace / bandwidth in WHMCS'),
 				 'Default Pointer' => array( 'Type' => 'text', 'Size' => 25, 'Description' => 'The default pointer (hostname) to use when creating a Website' ),
@@ -78,10 +78,10 @@ function SolidCP_ConfigOptions()
 /**
  * Metadata for server page
  */
-function SolidCP_MetaData()
+function FuseCP_MetaData()
 {
     return array(
-        'DisplayName' => 'SolidCP',
+        'DisplayName' => 'FuseCP',
         'DefaultNonSSLPort' => '9002',
         'DefaultSSLPort' => '9002',
     );
@@ -93,7 +93,7 @@ function SolidCP_MetaData()
  * @param array $params common module parameters
  * @return array
  */
-function SolidCP_TestConnection(array $params)
+function FuseCP_TestConnection(array $params)
 {
     try {
 	$serverUsername = $params['serverusername'];
@@ -101,7 +101,7 @@ function SolidCP_TestConnection(array $params)
 	$serverPort = $params['serverport'];
 	$serverHost = (empty($params['serverhostname']) ? $params['serverip'] : $params['serverhostname']);
 	$serverSecure = $params['serversecure'];
-        $scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+        $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
         $result = $scp->getUserByUsername($serverUsername);
         if ($result){
             $success = true;
@@ -109,12 +109,12 @@ function SolidCP_TestConnection(array $params)
         }
         else{
             $success = false;
-            $errorMsg = SolidCP_EnterpriseServer::getFriendlyError($result);
+            $errorMsg = FuseCP_EnterpriseServer::getFriendlyError($result);
         }
     } catch (Exception $e) {
         // Record the error in WHMCS's module log.
         logModuleCall(
-            'SolidCP',
+            'FuseCP',
             __FUNCTION__,
             $params,
             $e->getMessage(),
@@ -130,18 +130,18 @@ function SolidCP_TestConnection(array $params)
 }
 
 /**
- * Creates the SolidCP user account and package
+ * Creates the FuseCP user account and package
  * 
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_CreateAccount($params)
+function FuseCP_CreateAccount($params)
 {
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the SolidCP Module need to be performed. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
-        if($solidcp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the FuseCP Module need to be performed. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
+        if($fusecp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
         
 	// WHMCS server parameters & package parameters
 	$serverUsername = $params['serverusername'];
@@ -157,7 +157,7 @@ function SolidCP_CreateAccount($params)
 	$userId = $clientsDetails['userid'];
 	$serviceid = $params['serviceid'];
 		
-	// SolidCP API parameters
+	// FuseCP API parameters
 	$planId = $params['configoption4'];
 	$parentPackageId = $params['configoption5'];
 	$roleId = (($packageType == 'reselleraccount') ? 2 : 3);
@@ -173,8 +173,8 @@ function SolidCP_CreateAccount($params)
 	
 	try
 	{
-	    // Create the SolidCP Enterprise Server Client object instance
-	    $scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+	    // Create the FuseCP Enterprise Server Client object instance
+	    $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	    
 	    // Create the user's new account using the CreateUserWizard method
 	    $userParams = array('parentPackageId' => $parentPackageId,
@@ -204,12 +204,12 @@ function SolidCP_CreateAccount($params)
 	    if ($result < 0)
 	    {
 	    	// Something went wrong
-	    	throw new Exception('Fault: ' . SolidCP_EnterpriseServer::getFriendlyError($result), $result);
+	    	throw new Exception('Fault: ' . FuseCP_EnterpriseServer::getFriendlyError($result), $result);
 	    }
 	    // Log the module call
-	    SolidCP_logModuleCall(__FUNCTION__, $params, $result);
+	    FuseCP_logModuleCall(__FUNCTION__, $params, $result);
 	    
-	    // Get the newly created user's details from SolidCP so we can update the account details completely
+	    // Get the newly created user's details from FuseCP so we can update the account details completely
 	    $user = $scp->getUserByUsername($username);
 	    
 	    // Update the user's account details using the previous details + WHMCS's details (address, city, state etc.)
@@ -252,9 +252,9 @@ function SolidCP_CreateAccount($params)
 	    $scp->updateUserDetails($userParams);
             
             // Create configurable options as addons.
-            if($params['configoptions'] && $solidcp_settings->settings['ConfigurableOptionsActive'] == 1){
-                // Get the associated SolidCP addon id to the configurable option
-                $configurableoptions = solidcp_database::getServiceConfigurableOptions($serviceid);
+            if($params['configoptions'] && $fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
+                // Get the associated FuseCP addon id to the configurable option
+                $configurableoptions = fusecp_database::getServiceConfigurableOptions($serviceid);
                 if(is_array($configurableoptions) && $configurableoptions['status']=='error'){
                     throw new Exception($configurableoptions['description']);
                 }
@@ -271,7 +271,7 @@ function SolidCP_CreateAccount($params)
                         // If Optiontype is quantity or yes/no then 0 is allowed. Otherwise quantity will be 1.
                         if($addonqty == 0 && ($addonOptType == 3 || $addonOptType == 4)) continue;
                         elseif($addonOptType != 3 && $addonOptType != 4) $addonqty = 1;
-                        // Add the Addon Plan to the customer's SolidCP package / hosting space
+                        // Add the Addon Plan to the customer's FuseCP package / hosting space
                         $results = $scp->addPackageAddonById($packageId, $addonPlanId, $addonqty);
 
                         // Check the results to verify that the addon has been successfully allocated
@@ -284,7 +284,7 @@ function SolidCP_CreateAccount($params)
                             }
 
                             // Add log entry to client log
-                            logactivity("SolidCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonId}", $userId);
+                            logactivity("FuseCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonId}", $userId);
                         }
                         else
                         {
@@ -307,7 +307,7 @@ function SolidCP_CreateAccount($params)
 		logactivity($errorMessage, $userId);
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 		
 		// Notify failure - Houston we have a problem!
 		return $errorMessage;
@@ -315,18 +315,18 @@ function SolidCP_CreateAccount($params)
 }
 
 /**
- * Terminates the SolidCP user account and package
+ * Terminates the FuseCP user account and package
  *
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_TerminateAccount($params)
+function FuseCP_TerminateAccount($params)
 {
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the SolidCP Module need to be performed. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
-        if($solidcp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the FuseCP Module need to be performed. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
+        if($fusecp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
 
 	// WHMCS server parameters & package parameters
 	$serverUsername = $params['serverusername'];
@@ -342,10 +342,10 @@ function SolidCP_TerminateAccount($params)
 	
 	try
 	{
-		// Create the SolidCP Enterprise Server Client object instance
-		$scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		// Create the FuseCP Enterprise Server Client object instance
+		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 		
-		// Get the user's details from SolidCP - We need the userid
+		// Get the user's details from FuseCP - We need the userid
 		$user = $scp->getUserByUsername($username);
 		if (empty($user))
 		{
@@ -357,11 +357,11 @@ function SolidCP_TerminateAccount($params)
 		if ($result < 0)
 		{
 			// Something went wrong
-			throw new Exception('Fault: ' . SolidCP_EnterpriseServer::getFriendlyError($result), $result);
+			throw new Exception('Fault: ' . FuseCP_EnterpriseServer::getFriendlyError($result), $result);
 		}
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $result);
+		FuseCP_logModuleCall(__FUNCTION__, $params, $result);
 
 		// Notify success
 		return 'success';
@@ -375,7 +375,7 @@ function SolidCP_TerminateAccount($params)
 		logactivity($errorMessage, $userId);
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 		
 		// Notify failure - Houston we have a problem!
 		return $errorMessage;
@@ -383,18 +383,18 @@ function SolidCP_TerminateAccount($params)
 }
 
 /**
- * Suspends the SolidCP user account and package
+ * Suspends the FuseCP user account and package
  *
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_SuspendAccount($params)
+function FuseCP_SuspendAccount($params)
 {
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the SolidCP Module need to be performed. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
-        if($solidcp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the FuseCP Module need to be performed. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
+        if($fusecp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
 
 	// WHMCS server parameters & package parameters
 	$serverUsername = $params['serverusername'];
@@ -409,10 +409,10 @@ function SolidCP_SuspendAccount($params)
 	
 	try
 	{
-		// Create the SolidCP Enterprise Server Client object instance
-		$scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		// Create the FuseCP Enterprise Server Client object instance
+		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 		
-		// Get the user's details from SolidCP - We need the userid
+		// Get the user's details from FuseCP - We need the userid
 		$user = $scp->getUserByUsername($username);
 		if (empty($user))
 		{
@@ -420,15 +420,15 @@ function SolidCP_SuspendAccount($params)
 		}
 		
 		// Change the user's account and package account status
-		$result = $scp->changeUserStatus($user['UserId'], SolidCP_EnterpriseServer::USERSTATUS_SUSPENDED);
+		$result = $scp->changeUserStatus($user['UserId'], FuseCP_EnterpriseServer::USERSTATUS_SUSPENDED);
 		if ($result < 0)
 		{
 			// Something went wrong
-			throw new Exception('Fault: ' . SolidCP_EnterpriseServer::getFriendlyError($result), $result);
+			throw new Exception('Fault: ' . FuseCP_EnterpriseServer::getFriendlyError($result), $result);
 		}
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $result);
+		FuseCP_logModuleCall(__FUNCTION__, $params, $result);
 		
 		// Notify success
 		return 'success';
@@ -442,7 +442,7 @@ function SolidCP_SuspendAccount($params)
 		logactivity($errorMessage, $userId);
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 		
 		// Notify failure - Houston we have a problem!
 		return $errorMessage;
@@ -450,18 +450,18 @@ function SolidCP_SuspendAccount($params)
 }
 
 /**
- * Unsuspends the SolidCP user account and package
+ * Unsuspends the FuseCP user account and package
  *
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_UnsuspendAccount($params)
+function FuseCP_UnsuspendAccount($params)
 {
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the SolidCP Module need to be performed. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
-        if($solidcp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the FuseCP Module need to be performed. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
+        if($fusecp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
 
 	// WHMCS server parameters & package parameters
 	$serverUsername = $params['serverusername'];
@@ -476,10 +476,10 @@ function SolidCP_UnsuspendAccount($params)
 	
 	try
 	{
-		// Create the SolidCP Enterprise Server Client object instance
-		$scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		// Create the FuseCP Enterprise Server Client object instance
+		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	
-		// Get the user's details from SolidCP - We need the userid
+		// Get the user's details from FuseCP - We need the userid
 		$user = $scp->getUserByUsername($username);
 		if (empty($user))
 		{
@@ -487,15 +487,15 @@ function SolidCP_UnsuspendAccount($params)
 		}
 	
 		// Change the user's account and package account status
-		$result = $scp->changeUserStatus($user['UserId'], SolidCP_EnterpriseServer::USERSTATUS_ACTIVE);
+		$result = $scp->changeUserStatus($user['UserId'], FuseCP_EnterpriseServer::USERSTATUS_ACTIVE);
 		if ($result < 0)
 		{
 			// Something went wrong
-			throw new Exception('Fault: ' . SolidCP_EnterpriseServer::getFriendlyError($result), $result);
+			throw new Exception('Fault: ' . FuseCP_EnterpriseServer::getFriendlyError($result), $result);
 		}
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $result);
+		FuseCP_logModuleCall(__FUNCTION__, $params, $result);
 	
 		// Notify success
 		return 'success';
@@ -509,7 +509,7 @@ function SolidCP_UnsuspendAccount($params)
 		logactivity($errorMessage, $userId);
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 	
 		// Notify failure - Houston we have a problem!
 		return $errorMessage;
@@ -517,18 +517,18 @@ function SolidCP_UnsuspendAccount($params)
 }
 
 /**
- * Changes the SolidCP user account password
+ * Changes the FuseCP user account password
  *
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_ChangePassword($params)
+function FuseCP_ChangePassword($params)
 {
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the SolidCP Module need to be performed. Please contact your hosting partner!";
-        if($solidcp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please contact your hosting partner!";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the FuseCP Module need to be performed. Please contact your hosting partner!";
+        if($fusecp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please contact your hosting partner!";
 
 	// WHMCS server parameters & package parameters
 	$serverUsername = $params['serverusername'];
@@ -544,10 +544,10 @@ function SolidCP_ChangePassword($params)
 	
 	try
 	{
-		// Create the SolidCP Enterprise Server Client object instance
-		$scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		// Create the FuseCP Enterprise Server Client object instance
+		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	
-		// Get the user's details from SolidCP - We need the userid
+		// Get the user's details from FuseCP - We need the userid
 		$user = $scp->getUserByUsername($username);
 		if (empty($user))
 		{
@@ -559,16 +559,16 @@ function SolidCP_ChangePassword($params)
 		if ($result < 0)
 		{
 			// Something went wrong
-			throw new Exception('Fault: ' . SolidCP_EnterpriseServer::getFriendlyError($result), $result);
+			throw new Exception('Fault: ' . FuseCP_EnterpriseServer::getFriendlyError($result), $result);
 		}
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $result);
+		FuseCP_logModuleCall(__FUNCTION__, $params, $result);
                 
                 $command = "updateclientproduct";
                 $values["serviceid"] = $serviceid;
                 $values["servicepassword"] = $password;
-                $result = localAPI($command, $values, $solidcp_settings->settings['WhmcsAdmin']);
+                $result = localAPI($command, $values, $fusecp_settings->settings['WhmcsAdmin']);
                 if ($result['result']!="success") echo "An Error Occurred: ".$result['result'];
 		// Notify success
 		return 'success';
@@ -582,7 +582,7 @@ function SolidCP_ChangePassword($params)
 		logactivity($errorMessage, $userId);
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 	
 		// Notify failure - Houston we have a problem!
 		return $errorMessage;
@@ -590,18 +590,18 @@ function SolidCP_ChangePassword($params)
 }
 
 /**
- * Changes the SolidCP user hosting package
+ * Changes the FuseCP user hosting package
  *
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_ChangePackage($params)
+function FuseCP_ChangePackage($params)
 {
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the SolidCP Module need to be performed. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
-        if($solidcp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'SolidCP Module' in the Admin Panel!";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return "The first configuration of the FuseCP Module need to be performed. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
+        if($fusecp_settings->settings['NeedMigration'] == 1) return "A migration from an old to this new module need to be performed first. Please go to 'Addons' -> 'FuseCP Module' in the Admin Panel!";
 
         // WHMCS server parameters & package parameters
 	$serverUsername = $params['serverusername'];
@@ -615,23 +615,23 @@ function SolidCP_ChangePackage($params)
 	$serviceid = $params['serviceid'];
 	$domain = $params['domain'];
 	
-	// SolidCP API parameters
+	// FuseCP API parameters
 	$planId = $params['configoption4'];
 	$packageName = $params['configoption1'];
 	
 	try
 	{
-		// Create the SolidCP Enterprise Server Client object instance
-		$scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		// Create the FuseCP Enterprise Server Client object instance
+		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	
-		// Get the user's details from SolidCP - We need the userid
+		// Get the user's details from FuseCP - We need the userid
 		$user = $scp->getUserByUsername($username);
 		if (empty($user))
 		{
 			throw new Exception("User {$username} does not exist - Cannot change package for unknown user");
 		}
 
-                // Get the user's package details from SolidCP - We need the PackageId
+                // Get the user's package details from FuseCP - We need the PackageId
 		$package = $scp->getUserPackages($user['UserId']);
                 
                 // Delete all existing Addons.
@@ -650,9 +650,9 @@ function SolidCP_ChangePackage($params)
                 }
 
                 // Create configurable options as addons.
-                if($params['configoptions'] && $solidcp_settings->settings['ConfigurableOptionsActive'] == 1){
-                    // Get the associated SolidCP addon id to the configurable option
-                    $configurableoptions = solidcp_database::getServiceConfigurableOptions($serviceid);
+                if($params['configoptions'] && $fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
+                    // Get the associated FuseCP addon id to the configurable option
+                    $configurableoptions = fusecp_database::getServiceConfigurableOptions($serviceid);
                     if(is_array($configurableoptions) && $configurableoptions['status']=='error'){
                         throw new Exception($configurableoptions['description']);
                     }
@@ -680,7 +680,7 @@ function SolidCP_ChangePackage($params)
                                 // If Optiontype is quantity or yes/no then 0 is allowed. Otherwise quantity will be 1.
                                 if($addonqty == 0 && ($addonOptType == 3 || $addonOptType == 4)) continue;
                                 elseif($addonOptType != 3 && $addonOptType != 4) $addonqty = 1;
-                                // Add the Addon Plan to the customer's SolidCP package / hosting space
+                                // Add the Addon Plan to the customer's FuseCP package / hosting space
                                 $results = $scp->addPackageAddonById($packageId, $addonPlanId, $addonqty);
 
                                 // Check the results to verify that the addon has been successfully allocated
@@ -693,7 +693,7 @@ function SolidCP_ChangePackage($params)
                                     }
 
                                     // Add log entry to client log
-                                    logactivity("SolidCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonId}", $userId);
+                                    logactivity("FuseCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonId}", $userId);
                                 }
                                 else
                                 {
@@ -706,8 +706,8 @@ function SolidCP_ChangePackage($params)
                 }
 
                 // Create WHMCS addons as addons.
-                if($solidcp_settings->settings['AddonsActive'] == 1){
-                    $addons = solidcp_database::getServiceAddons($serviceid);
+                if($fusecp_settings->settings['AddonsActive'] == 1){
+                    $addons = fusecp_database::getServiceAddons($serviceid);
                     if(is_array($addons) && $addons['status']=='error'){
                         throw new Exception($addons['description']);
                     }
@@ -729,7 +729,7 @@ function SolidCP_ChangePackage($params)
                                 }
 
                                 // Add log entry to client log
-                                logactivity("SolidCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonId}", $userId);
+                                logactivity("FuseCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonId}", $userId);
                             }
                             else
                             {
@@ -741,16 +741,16 @@ function SolidCP_ChangePackage($params)
                     }
                 }
 
-                // Update the user's SolidCP package
+                // Update the user's FuseCP package
 		$result = $scp->updatePackageLiteral($package['PackageId'], $package['StatusId'], $planId, $package['PurchaseDate'], $packageName, $package['PackageComments']);
 		if ($result < 0)
 		{
 			// Something went wrong
-			throw new Exception('Fault: ' . SolidCP_EnterpriseServer::getFriendlyError($result), $result);
+			throw new Exception('Fault: ' . FuseCP_EnterpriseServer::getFriendlyError($result), $result);
 		}
 
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $result);
+		FuseCP_logModuleCall(__FUNCTION__, $params, $result);
 
 		// Notify success
 		return 'success';
@@ -764,7 +764,7 @@ function SolidCP_ChangePackage($params)
 		logactivity($errorMessage, $userId);
 		
 		// Log the module call
-		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 	
 		// Notify failure - Houston we have a problem!
 		return $errorMessage;
@@ -772,17 +772,17 @@ function SolidCP_ChangePackage($params)
 }
 
 /**
- * Updates the WHMCS service's usage details from SolidCP
+ * Updates the WHMCS service's usage details from FuseCP
  * 
  * @param aray $params WHMCS parameters
  * @throws Exception
  */
-function SolidCP_UsageUpdate($params)
+function FuseCP_UsageUpdate($params)
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return false;
-    if($solidcp_settings->settings['NeedMigration'] == 1) return false;
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return false;
+    if($fusecp_settings->settings['NeedMigration'] == 1) return false;
 
     // WHMCS server parameters & package parameters
     $serverUsername = $params['serverusername'];
@@ -797,9 +797,9 @@ function SolidCP_UsageUpdate($params)
     try
     {
 
-        // Query for SolidCP user accounts assigned to this server
+        // Query for FuseCP user accounts assigned to this server
         // Only services that have packages that have "Tick to update diskpace / bandwidth in WHMCS" enabled
-        $services = solidcp_database::getUsageUpdateServices($serverid);
+        $services = fusecp_database::getUsageUpdateServices($serverid);
         if(is_array($services) && $services['status']=='error'){
             throw new Exception($services['description']);
         }
@@ -814,34 +814,34 @@ function SolidCP_UsageUpdate($params)
                 $disklimit = $service->configoption2;
                 $bwidthlimit = $service->configoption3;
 
-                // Create the SolidCP Enterprise Server Client object instance
-                $scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+                // Create the FuseCP Enterprise Server Client object instance
+                $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 
-                // Get the user's details from SolidCP - We need the userid
+                // Get the user's details from FuseCP - We need the userid
                 $user = $scp->getUserByUsername($username);
                 if (empty($user))
                 {
                         throw new Exception("User {$username} does not exist - Cannot calculate usage for unknown user");
                 }
 
-                // Get the user's package details from SolidCP - We need the PackageId
+                // Get the user's package details from FuseCP - We need the PackageId
                 $package = $scp->getUserPackages($user['UserId']);
 
                 // Gather the bandwidth / diskspace usage stats
 				// WHMCS bills for overages on calendar month so date range should reflect calendar month
-                $bwidthusage = SolidCP_CalculateUsage(
+                $bwidthusage = FuseCP_CalculateUsage(
 					$scp->getPackageBandwidthUsage(
 						$package['PackageId'], 
 						date('Y-m-01'), 
 						date('Y-m-t')), 
-					SolidCP_EnterpriseServer::USAGE_BANDWIDTH);
+					FuseCP_EnterpriseServer::USAGE_BANDWIDTH);
                 
-				$diskusage = SolidCP_CalculateUsage($scp->getPackageDiskspaceUsage($package['PackageId']), SolidCP_EnterpriseServer::USAGE_DISKSPACE);
+				$diskusage = FuseCP_CalculateUsage($scp->getPackageDiskspaceUsage($package['PackageId']), FuseCP_EnterpriseServer::USAGE_DISKSPACE);
 
                 // Update WHMCS's service details
-                solidcp_database::setUsage($serviceid, $diskusage, $disklimit, $bwidthusage, $bwidthlimit);
+                fusecp_database::setUsage($serviceid, $diskusage, $disklimit, $bwidthusage, $bwidthlimit);
                 // Log the module call
-                SolidCP_logModuleCall(__FUNCTION__, $params, $package);
+                FuseCP_logModuleCall(__FUNCTION__, $params, $package);
             }
         }
     }
@@ -851,7 +851,7 @@ function SolidCP_UsageUpdate($params)
             $errorMessage = "UsageUpdate Fault: (Code: {$e->getCode()}, Message: {$e->getMessage()}, Service ID: {$serviceid})";
 
             // Log the module call
-            SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+            FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
 
             // Log to WHMCS
             logactivity($errorMessage, $userId);
@@ -860,21 +860,21 @@ function SolidCP_UsageUpdate($params)
 }
 
 /**
- * Returns the SolidCP one-click login link
+ * Returns the FuseCP one-click login link
  *
  * @param array $params WHMCS parameters
  * @throws Exception
  * @return string
  */
-function SolidCP_LoginLink($params)
+function FuseCP_LoginLink($params)
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return false;
-    if($solidcp_settings->settings['NeedMigration'] == 1) return false;
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return false;
+    if($fusecp_settings->settings['NeedMigration'] == 1) return false;
 
     // WHMCS does not return the full hosting account details, we will query for what we need
-    $service = solidcp_database::getService($params['serviceid']);
+    $service = fusecp_database::getService($params['serviceid']);
         
     // Display the link only if the account is Active or Suspended
     if (in_array($service->domainstatus, array('Active', 'Suspended')))
@@ -892,10 +892,10 @@ function SolidCP_LoginLink($params)
     	
     	try
     	{
-    		// Create the SolidCP Enterprise Server Client object instance
-    		$scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+    		// Create the FuseCP Enterprise Server Client object instance
+    		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
     	
-    		// Get the user's details from SolidCP - We need the userid
+    		// Get the user's details from FuseCP - We need the userid
     		$user = $scp->getUserByUsername($username);
     		if (empty($user))
     		{
@@ -903,13 +903,13 @@ function SolidCP_LoginLink($params)
     		}
     		
     		// Load the client area language file
-    		$LANG = SolidCP_LoadClientLanguage();
+    		$LANG = FuseCP_LoadClientLanguage();
     		
     		// Print the link
-    		echo "<a href=\"{$params['configoption7']}/Default.aspx?pid=Home&UserID={$user['UserId']}\" target=\"_blank\" title=\"{$LANG['SolidCP_adminarea_gotoSolidCPaccount']}\">{$LANG['SolidCP_adminarea_gotoSolidCPaccount']}</a><br />";
+    		echo "<a href=\"{$params['configoption7']}/Default.aspx?pid=Home&UserID={$user['UserId']}\" target=\"_blank\" title=\"{$LANG['FuseCP_adminarea_gotoFuseCPaccount']}\">{$LANG['FuseCP_adminarea_gotoFuseCPaccount']}</a><br />";
     		
     		// Log the module call
-    		SolidCP_logModuleCall(__FUNCTION__, $params, $user);
+    		FuseCP_logModuleCall(__FUNCTION__, $params, $user);
     	}
     	catch (Exception $e)
     	{
@@ -920,7 +920,7 @@ function SolidCP_LoginLink($params)
     		logactivity($errorMessage, $userId);
     		
     		// Log the module call
-    		SolidCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
+    		FuseCP_logModuleCall(__FUNCTION__, $params, $e->getMessage());
     	}
     }
 }
@@ -933,22 +933,22 @@ function SolidCP_LoginLink($params)
  * @throws Exception
  * @return array
  */
-function SolidCP_ClientArea($params)
+function FuseCP_ClientArea($params)
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return false;
-    if($solidcp_settings->settings['NeedMigration'] == 1) return false;
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return false;
+    if($fusecp_settings->settings['NeedMigration'] == 1) return false;
 
     // WHMCS server parameters & package parameters
     $username = $params['username'];
     $password = $params['password'];
     
     // Load the client area language file
-    SolidCP_LoadClientLanguage();
+    FuseCP_LoadClientLanguage();
     
     // Return template information
-    return array('templatefile' => '/templates/clientarea.tpl', 'vars' => array('SolidCP_url' => $params['configoption7'], 'username' => $username, 'password' => $password));
+    return array('templatefile' => '/templates/clientarea.tpl', 'vars' => array('FuseCP_url' => $params['configoption7'], 'username' => $username, 'password' => $password));
 }
 
 /**
@@ -959,7 +959,7 @@ function SolidCP_ClientArea($params)
  * @param mixed $params
  * @param mixed $response
  */
-function SolidCP_logModuleCall($function, $params, $response)
+function FuseCP_logModuleCall($function, $params, $response)
 {
     // Get the module name
     $callerData = explode('_', $function);
@@ -980,7 +980,7 @@ function SolidCP_logModuleCall($function, $params, $response)
 * @param str $url
 * @return  string
 */
-function SolidCP_callExtApiUrl($url) {
+function FuseCP_callExtApiUrl($url) {
     $mc_call = curl_init();
     $timeout = 30;
     curl_setopt($mc_call, CURLOPT_URL, $url);

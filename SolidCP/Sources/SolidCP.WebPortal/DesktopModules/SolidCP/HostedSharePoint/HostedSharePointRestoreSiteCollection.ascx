@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" Codebehind="HostedSharePointRestoreSiteCollection.ascx.cs"
-	Inherits="SolidCP.Portal.HostedSharePointRestoreSiteCollection" %>
+	Inherits="FuseCP.Portal.HostedSharePointRestoreSiteCollection" %>
 <%@ Register Src="../UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
 	TagPrefix="scp" %>	

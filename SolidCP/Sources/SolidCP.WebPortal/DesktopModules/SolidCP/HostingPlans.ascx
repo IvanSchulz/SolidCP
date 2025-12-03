@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingPlans.ascx.cs" Inherits="SolidCP.Portal.HostingPlans" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingPlans.ascx.cs" Inherits="FuseCP.Portal.HostingPlans" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="uc3" %>
 <div class="FormButtonsBar right">
 	<CPCC:StyleButton ID="btnAddItem" runat="server" CssClass="btn btn-primary" OnClick="btnAddItem_Click" >
@@ -37,4 +37,4 @@
 	</Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsPlans" runat="server" SelectMethod="GetRawHostingPlans"
-TypeName="SolidCP.Portal.HostingPlansHelper" OnSelected="odsPlans_Selected"></asp:ObjectDataSource>
+TypeName="FuseCP.Portal.HostingPlansHelper" OnSelected="odsPlans_Selected"></asp:ObjectDataSource>

@@ -40,12 +40,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SettingsOperatingSystemPolicy {
-        protected SolidCP.Portal.CollapsiblePanel secOdbc;
+        protected FuseCP.Portal.CollapsiblePanel secOdbc;
         protected System.Web.UI.WebControls.Panel OdbcPanel;
         protected System.Web.UI.WebControls.Label lblDsnName;
-        protected SolidCP.Portal.UsernamePolicyEditor dsnNamePolicy;
+        protected FuseCP.Portal.UsernamePolicyEditor dsnNamePolicy;
     }
 }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SfB {
+namespace FuseCP.Portal.SfB {
     
     
     public partial class CreateSfBUser {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// ExistingUserTable control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.UserSelector userSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.UserSelector userSelector;
         
         /// <summary>
         /// locPlanName control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SfB.UserControls.SfBUserPlanSelector planSelector;
+        protected global::FuseCP.Portal.SfB.UserControls.SfBUserPlanSelector planSelector;
         
         /// <summary>
         /// pnEnterpriseVoice control.

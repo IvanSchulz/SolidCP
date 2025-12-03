@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSFTP60_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MSFTP60_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSFTP60_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MSFTP60_Settings" %>
 <%@ Register Src="Common_ActiveDirectoryIntegration.ascx" TagName="ActiveDirectoryIntegration" TagPrefix="uc1" %>
 <table cellpadding="4" cellspacing="0" width="100%">
 	<tr>

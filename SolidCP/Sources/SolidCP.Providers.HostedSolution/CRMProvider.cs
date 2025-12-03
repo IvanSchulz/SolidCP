@@ -40,9 +40,9 @@ using System.Net;
 using System.Reflection;
 using System.Security.Principal;
 
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Server.Utils;
 using Microsoft.Crm;
 using Microsoft.Crm.Admin.AdminService;
 using Microsoft.Crm.ConfigurationDatabase;
@@ -53,7 +53,7 @@ using Microsoft.Crm.Tools.Admin;
 using Microsoft.Win32;
 using Microsoft.Crm.Setup.Common.Update;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class CRMProvider : HostingServiceProviderBase, ICRM
 	{
@@ -1526,7 +1526,7 @@ namespace SolidCP.Providers.HostedSolution
 
 		public override bool IsInstalled()
 		{
-			if (!SolidCP.Providers.OS.OSInfo.IsWindows) return false;
+			if (!FuseCP.Providers.OS.OSInfo.IsWindows) return false;
 
 			string value = string.Empty;
 			try

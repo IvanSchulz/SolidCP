@@ -1,8 +1,8 @@
-﻿using AutoMapper;
-using SolidCP.WebDavPortal.Mapping.Profiles.Account;
-using SolidCP.WebDavPortal.Mapping.Profiles.Webdav;
+using AutoMapper;
+using FuseCP.WebDavPortal.Mapping.Profiles.Account;
+using FuseCP.WebDavPortal.Mapping.Profiles.Webdav;
 
-namespace SolidCP.WebDavPortal.Mapping
+namespace FuseCP.WebDavPortal.Mapping
 {
     public class AutoMapperPortalConfiguration
     {

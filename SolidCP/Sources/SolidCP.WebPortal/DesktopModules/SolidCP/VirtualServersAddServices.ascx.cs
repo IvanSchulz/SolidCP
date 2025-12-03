@@ -42,9 +42,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class VirtualServersAddServices : SolidCPModuleBase
+    public partial class VirtualServersAddServices : FuseCPModuleBase
     {
         DataSet dsServers = null;
         protected void Page_Load(object sender, EventArgs e)

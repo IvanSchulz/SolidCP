@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Shows copy process.

@@ -42,11 +42,11 @@ using System.Security;
 using System.Security.AccessControl;
 using System.Security.Principal;
 
-using SolidCP.Providers.OS;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Utils;
 
 
-namespace SolidCP.Providers.Utils
+namespace FuseCP.Providers.Utils
 {
 
     #region Enums
@@ -728,7 +728,7 @@ namespace SolidCP.Providers.Utils
                         objUser.Properties["sn"].Value = user.FullName.Substring(spaceIdx + 1);
                     }
 
-                    objUser.Properties["description"].Value = String.IsNullOrEmpty(user.Description) ? "SolidCP System Account" : user.Description;
+                    objUser.Properties["description"].Value = String.IsNullOrEmpty(user.Description) ? "FuseCP System Account" : user.Description;
 
                     if (user.MsIIS_FTPDir != string.Empty)
                     {

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileManager.ascx.cs" Inherits="SolidCP.Portal.FileManager" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileManager.ascx.cs" Inherits="FuseCP.Portal.FileManager" %>
 <%@ Register Src="UserControls/FileNameControl.ascx" TagName="FileNameControl" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="uc4" %>
@@ -400,7 +400,7 @@
 	</asp:GridView>
 	<asp:Literal ID="litPath" runat="server" Visible="false" Text="\"></asp:Literal>
 	<asp:ObjectDataSource ID="odsFilesPaged" runat="server"
-		SelectMethod="GetFiles" TypeName="SolidCP.Portal.FilesHelper" MaximumRowsParameterName="" StartRowIndexParameterName="" OnSelected="odsFilesPaged_Selected" 
+		SelectMethod="GetFiles" TypeName="FuseCP.Portal.FilesHelper" MaximumRowsParameterName="" StartRowIndexParameterName="" OnSelected="odsFilesPaged_Selected" 
 		OnSelecting="odsFilesPaged_Selecting">
 		<SelectParameters>
 			<asp:ControlParameter ControlID="litPath" Name="path" PropertyName="Text" />

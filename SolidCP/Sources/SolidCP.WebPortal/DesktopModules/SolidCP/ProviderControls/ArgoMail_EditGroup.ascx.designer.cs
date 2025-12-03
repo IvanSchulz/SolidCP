@@ -40,10 +40,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class ArgoMail_EditGroup {
         protected System.Web.UI.WebControls.Label lblGroupMembers;
-        protected SolidCP.Portal.MailEditItems mailEditItems;
+        protected FuseCP.Portal.MailEditItems mailEditItems;
     }
 }

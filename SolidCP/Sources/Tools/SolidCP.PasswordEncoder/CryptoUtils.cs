@@ -32,7 +32,7 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Configuration;
 
-namespace SolidCP.PasswordEncoder
+namespace FuseCP.PasswordEncoder
 {
     /// <summary>
     /// Summary description for CryptoUtils.

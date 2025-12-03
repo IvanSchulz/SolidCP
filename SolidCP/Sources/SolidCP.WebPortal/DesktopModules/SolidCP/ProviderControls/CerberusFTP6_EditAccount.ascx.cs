@@ -36,11 +36,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.FTP;
+using FuseCP.Providers.FTP;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class CerberusFTP6_EditAccount : SolidCPControlBase, IFtpAccountEditControl
+    public partial class CerberusFTP6_EditAccount : FuseCPControlBase, IFtpAccountEditControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -33,7 +33,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public abstract class BaseReport<T> where T : BaseStatistics
 	{

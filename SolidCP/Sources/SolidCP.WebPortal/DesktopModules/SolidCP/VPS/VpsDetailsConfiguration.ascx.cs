@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.Common;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VpsDetailsConfiguration : SolidCPModuleBase
+    public partial class VpsDetailsConfiguration : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

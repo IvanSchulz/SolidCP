@@ -35,7 +35,7 @@ using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
 	/// <summary>
 	/// Summary description for SoapObject.
@@ -110,7 +110,7 @@ namespace SolidCP.Providers
                 // set service item properties
                 foreach (string pair in sobj.Properties)
                 {
-                    try //TODO: that try catch is a dirty fix. Without it we get that issue System.ArgumentException: Object of type 'System.String' cannot be converted to type 'SolidCP.Providers.Virtualization.VirtualHardDiskInfo[]'.
+                    try //TODO: that try catch is a dirty fix. Without it we get that issue System.ArgumentException: Object of type 'System.String' cannot be converted to type 'FuseCP.Providers.Virtualization.VirtualHardDiskInfo[]'.
                         //possible that method works only with simple objects.
                     {
                         int idx = pair.IndexOf('=');

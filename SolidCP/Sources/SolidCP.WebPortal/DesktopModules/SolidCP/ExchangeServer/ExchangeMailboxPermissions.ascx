@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxPermissions.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeMailboxPermissions" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxPermissions.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeMailboxPermissions" %>
 <%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/AccountsListWithPermissions.ascx" TagName="AccountsListWithPermissions" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="uc1" %>

@@ -40,11 +40,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-	public partial class RejectedSenders : SolidCPControlBase
+	public partial class RejectedSenders : FuseCPControlBase
     {
 		public void SetAccounts(ExchangeAccount[] accounts)
 		{

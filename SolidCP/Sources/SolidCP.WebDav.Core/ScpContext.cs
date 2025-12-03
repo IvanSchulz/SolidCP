@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
-using SolidCP.WebDav.Core.Scp.Framework;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.WebDav.Core.Scp.Framework;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     public class ScpContext
     {

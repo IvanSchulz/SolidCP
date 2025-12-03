@@ -33,12 +33,12 @@
 using System;
 using System.Web;
 using System.Web.Mvc;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Security.Cryptography;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Security.Cryptography;
 
-namespace SolidCP.WebDav.Core.Scp.Framework
+namespace FuseCP.WebDav.Core.Scp.Framework
 {
     // SCP.Services
 
@@ -251,12 +251,12 @@ namespace SolidCP.WebDav.Core.Scp.Framework
             object p = proxy;
 
             // configure proxy
-			ConfigureEnterpriseServerProxy((SolidCP.Web.Clients.ClientBase)p, secureCalls);
+			ConfigureEnterpriseServerProxy((FuseCP.Web.Clients.ClientBase)p, secureCalls);
 
             return proxy;
         }
 
-        public void ConfigureEnterpriseServerProxy(SolidCP.Web.Clients.ClientBase proxy, bool applyPolicy)
+        public void ConfigureEnterpriseServerProxy(FuseCP.Web.Clients.ClientBase proxy, bool applyPolicy)
         {
             // load ES properties
             string serverUrl = WebDavAppConfigManager.Instance.EnterpriseServerUrl;
@@ -268,8 +268,8 @@ namespace SolidCP.WebDav.Core.Scp.Framework
             if (applyPolicy)
             {
 
-                cnfg.Username = WebDavAppConfigManager.Instance.SolidCPConstantUserParameters.Login;
-                cnfg.Password = _cryptography.Decrypt(WebDavAppConfigManager.Instance.SolidCPConstantUserParameters.Password);
+                cnfg.Username = WebDavAppConfigManager.Instance.FuseCPConstantUserParameters.Login;
+                cnfg.Password = _cryptography.Decrypt(WebDavAppConfigManager.Instance.FuseCPConstantUserParameters.Password);
             }
 
             cnfg.Configure(proxy);

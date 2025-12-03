@@ -30,10 +30,10 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-﻿using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+﻿using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public interface  IBlackBerry
     {

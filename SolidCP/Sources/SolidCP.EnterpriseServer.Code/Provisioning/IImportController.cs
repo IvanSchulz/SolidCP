@@ -33,7 +33,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public interface IImportController
     {

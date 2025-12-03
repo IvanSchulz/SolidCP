@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.StorageSpaces
+namespace FuseCP.Portal.StorageSpaces
 {
-    public partial class StorageSpacesList : SolidCPModuleBase
+    public partial class StorageSpacesList : FuseCPModuleBase
     {
         /// private List<ServerInfo> _servers; -- compiler indicates this is never referenced
 

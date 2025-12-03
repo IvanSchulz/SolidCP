@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Domains.ascx.cs" Inherits="SolidCP.Portal.Domains" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Domains.ascx.cs" Inherits="FuseCP.Portal.Domains" %>
  <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
  <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
  <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="scp" %>
@@ -153,7 +153,7 @@
  	<PagerSettings Mode="NumericFirstLast" />
  </asp:GridView>
  <asp:ObjectDataSource ID="odsDomainsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetDomainsPagedCount"
-     SelectMethod="GetDomainsPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.ServersHelper" OnSelected="odsDomainsPaged_Selected">
+     SelectMethod="GetDomainsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.ServersHelper" OnSelected="odsDomainsPaged_Selected">
      <SelectParameters>
          <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="-1" />
          <asp:QueryStringParameter Name="serverId" QueryStringField="ServerID" DefaultValue="0" Type="Int32" />

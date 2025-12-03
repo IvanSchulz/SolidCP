@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox {
+namespace FuseCP.Portal.Proxmox {
     
     
     public partial class VpsDetailsConfiguration {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// tabs-Steuerelement
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.Proxmox.UserControls.ServerTabs tabs;
         
         /// <summary>
         /// messageBox-Steuerelement
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// secSoftware-Steuerelement
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSoftware;
+        protected global::FuseCP.Portal.CollapsiblePanel secSoftware;
         
         /// <summary>
         /// SoftwarePanel-Steuerelement
@@ -82,7 +82,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.Generation GenerationSetting;
+        protected global::FuseCP.Portal.Proxmox.UserControls.Generation GenerationSetting;
         
         /// <summary>
         /// secResources-Steuerelement
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secResources;
+        protected global::FuseCP.Portal.CollapsiblePanel secResources;
         
         /// <summary>
         /// ResourcesPanel-Steuerelement
@@ -163,7 +163,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.DynamicMemoryControl DynamicMemorySetting;
+        protected global::FuseCP.Portal.Proxmox.UserControls.DynamicMemoryControl DynamicMemorySetting;
         
         /// <summary>
         /// secSnapshots-Steuerelement
@@ -172,7 +172,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSnapshots;
+        protected global::FuseCP.Portal.CollapsiblePanel secSnapshots;
         
         /// <summary>
         /// SnapshotsPanel-Steuerelement
@@ -208,7 +208,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDvd;
+        protected global::FuseCP.Portal.CollapsiblePanel secDvd;
         
         /// <summary>
         /// DvdPanel-Steuerelement
@@ -226,7 +226,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDvdInstalled;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDvdInstalled;
         
         /// <summary>
         /// secBios-Steuerelement
@@ -235,7 +235,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secBios;
+        protected global::FuseCP.Portal.CollapsiblePanel secBios;
         
         /// <summary>
         /// BiosPanel-Steuerelement
@@ -253,7 +253,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionBootFromCD;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionBootFromCD;
         
         /// <summary>
         /// secActions-Steuerelement
@@ -262,7 +262,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secActions;
+        protected global::FuseCP.Portal.CollapsiblePanel secActions;
         
         /// <summary>
         /// ActionsPanel-Steuerelement
@@ -280,7 +280,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionStartShutdown;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionStartShutdown;
         
         /// <summary>
         /// optionReset-Steuerelement
@@ -289,7 +289,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionReset;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionReset;
         
         /// <summary>
         /// optionPauseResume-Steuerelement
@@ -298,7 +298,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionPauseResume;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionPauseResume;
         
         /// <summary>
         /// optionReinstall-Steuerelement
@@ -307,7 +307,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionReinstall;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionReinstall;
         
         /// <summary>
         /// optionReboot-Steuerelement
@@ -316,7 +316,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionReboot;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionReboot;
         
         /// <summary>
         /// secNetwork-Steuerelement
@@ -325,7 +325,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secNetwork;
+        protected global::FuseCP.Portal.CollapsiblePanel secNetwork;
         
         /// <summary>
         /// NetworkPanel-Steuerelement
@@ -343,7 +343,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionExternalNetwork;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionExternalNetwork;
         
         /// <summary>
         /// optionPrivateNetwork-Steuerelement
@@ -352,7 +352,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionPrivateNetwork;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionPrivateNetwork;
         
         /// <summary>
         /// btnEdit-Steuerelement
@@ -397,7 +397,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl password;
+        protected global::FuseCP.Portal.PasswordControl password;
         
         /// <summary>
         /// btnChangePassword-Steuerelement

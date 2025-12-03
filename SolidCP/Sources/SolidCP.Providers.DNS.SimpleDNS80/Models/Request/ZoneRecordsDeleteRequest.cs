@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -31,9 +31,9 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Newtonsoft.Json;
-using SolidCP.Providers.DNS.SimpleDNS80.Models.Response;
+using FuseCP.Providers.DNS.SimpleDNS80.Models.Response;
 
-namespace SolidCP.Providers.DNS.SimpleDNS80.Models.Request
+namespace FuseCP.Providers.DNS.SimpleDNS80.Models.Request
 {
     public class ZoneRecordsDeleteRequest : ZoneRecordsResponse
     {

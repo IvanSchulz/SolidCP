@@ -53,13 +53,13 @@ using MailKit.Security;
 using MailKit.Net.Smtp;
 using System.Security.Cryptography;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.WebPortal;
 using System.Collections;
 using System.Security.Authentication;
 
-namespace SolidCP.Portal;
+namespace FuseCP.Portal;
 
 
 public class PortalUtils
@@ -637,7 +637,7 @@ public class PortalUtils
 		{
 			UserInfo user = usersService.GetUserById(userId);
 
-			// change SolidCP account password
+			// change FuseCP account password
 			int result = usersService.ChangeUserPassword(userId, newPassword);
 			if (result < 0)
 				return result;
@@ -668,7 +668,7 @@ public class PortalUtils
 
 		try
 		{
-			// update user in SolidCP
+			// update user in FuseCP
 			return usersService.UpdateUserTask(taskId, user);
 		}
 		catch (Exception ex)
@@ -684,7 +684,7 @@ public class PortalUtils
 
 		try
 		{
-			// add user to SolidCP server
+			// add user to FuseCP server
 			// TODO correct value for prameter notes (instead of null).
 			return usersService.AddUser(user, sendLetter, password, null);
 		}
@@ -701,7 +701,7 @@ public class PortalUtils
 
 		try
 		{
-			// add user to SolidCP server
+			// add user to FuseCP server
 			return usersService.DeleteUser(userId);
 		}
 		catch (Exception ex)
@@ -717,7 +717,7 @@ public class PortalUtils
 
 		try
 		{
-			// add user to SolidCP server
+			// add user to FuseCP server
 			return usersService.ChangeUserStatus(userId, status);
 		}
 		catch (Exception ex)
@@ -745,7 +745,7 @@ public class PortalUtils
 		 string preferredLocale, string theme)
 	{
 		// store last successful username in the cookie
-		HttpCookie cookie = new HttpCookie("SolidCPLogin", username);
+		HttpCookie cookie = new HttpCookie("FuseCPLogin", username);
 		cookie.Expires = DateTime.Now.AddDays(7);
 		cookie.Secure = FormsAuthentication.RequireSSL;
 		cookie.HttpOnly = true;

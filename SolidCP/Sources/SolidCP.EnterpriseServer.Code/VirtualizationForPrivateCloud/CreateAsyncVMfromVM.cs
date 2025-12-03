@@ -35,13 +35,13 @@
 //using System.Web;
 //using System.Threading;
 //using System.ComponentModel;
-//using SolidCP.Providers;
-//using SolidCP.Providers.Common;
-//using SolidCP.Providers.ResultObjects;
-//using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.VirtualizationForPC;
+//using FuseCP.Providers;
+//using FuseCP.Providers.Common;
+//using FuseCP.Providers.ResultObjects;
+//using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.VirtualizationForPC;
 
-//namespace SolidCP.EnterpriseServer
+//namespace FuseCP.EnterpriseServer
 //{
 //    public class CreateAsyncVMfromVM
 //    {
@@ -108,10 +108,10 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Threading;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.VirtualizationForPC;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.VirtualizationForPC;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CreateVMFromVMAsyncWorker: ControllerAsyncBase
     {

@@ -39,9 +39,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
     public class IceWarp : HostingServiceProviderBase, IMailServer, IDisposable
     {
@@ -966,7 +966,7 @@ namespace SolidCP.Providers.Mail
             var emailParts = new MailAddress(mailbox.Name);
             if (!accountObject.CanCreateMailbox(emailParts.User, emailParts.User, mailbox.Password, emailParts.Host))
             {
-                var ex = new Exception("Cannot create account because of password policy in IceWarp server, invalid username, alias or domain. Check if the password policy is different in IceWarp and SolidCP. Also perhaps your IceWarp disallows username in password?");
+                var ex = new Exception("Cannot create account because of password policy in IceWarp server, invalid username, alias or domain. Check if the password policy is different in IceWarp and FuseCP. Also perhaps your IceWarp disallows username in password?");
                 Log.WriteError(ex);
                 throw ex;
             }

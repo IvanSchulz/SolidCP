@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsSharedSSLSites.ascx.cs" Inherits="SolidCP.Portal.SpaceSettingsSharedSSLSites" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsSharedSSLSites.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsSharedSSLSites" %>
 <%@ Register Src="UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 

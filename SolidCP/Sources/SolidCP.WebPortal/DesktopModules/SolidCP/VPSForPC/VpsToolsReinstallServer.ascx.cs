@@ -36,9 +36,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
-    public partial class VpsToolsReinstallServer : SolidCPModuleBase
+    public partial class VpsToolsReinstallServer : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

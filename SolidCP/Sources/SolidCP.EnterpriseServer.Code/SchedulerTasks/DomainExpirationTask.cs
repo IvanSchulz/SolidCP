@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -38,11 +38,11 @@ using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.EnterpriseServer.Data;
 using Whois.NET;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class DomainExpirationTask: SchedulerTask
     {

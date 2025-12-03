@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 using Renci.SshNet;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     /// <summary>
     /// A class supporting uri's for SshTunnel's. The syntax of the url's for SshTunnels is as follows:
@@ -26,7 +26,7 @@ namespace SolidCP.Providers.OS
     ///   to the loopback address on the sshhost
     /// - The port on the remotehost or sshhost to connect to
     /// - protocol: The protocol to use when connecting over the SshTunnel, either http or https. When connecting to servers via 
-    ///   ordinary SolidCP.Web.Clients access, this parameter is not needed and the protocol will be determined automatically and
+    ///   ordinary FuseCP.Web.Clients access, this parameter is not needed and the protocol will be determined automatically and
     ///   will default to http. If you still want to connect using https, specify this parameter like protocol=https in the
     ///   ServerUrl
     /// - keyfile: A comma separated list of key files used to connect via ssh, if no password is specified

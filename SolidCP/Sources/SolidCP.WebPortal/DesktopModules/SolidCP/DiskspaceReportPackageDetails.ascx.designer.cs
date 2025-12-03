@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class DiskspaceReportPackageDetails {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SpaceDetailsHeaderControl spaceDetails;
+        protected global::FuseCP.Portal.SpaceDetailsHeaderControl spaceDetails;
         
         /// <summary>
         /// secSummary control.
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSummary;
+        protected global::FuseCP.Portal.CollapsiblePanel secSummary;
         
         /// <summary>
         /// SummaryPanel control.

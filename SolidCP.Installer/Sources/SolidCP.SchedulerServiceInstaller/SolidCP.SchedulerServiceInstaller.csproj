@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <TargetFramework>net48</TargetFramework>
     <WixCATargetsPath Condition=" '$(WixCATargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.CA.targets</WixCATargetsPath>
-    <AssemblyTitle>SolidCP.SchedulerServiceInstaller</AssemblyTitle>
-    <Product>SolidCP.SchedulerServiceInstaller</Product>
-    <Copyright>Copyright ©  2013</Copyright>
+    <AssemblyTitle>FuseCP.SchedulerServiceInstaller</AssemblyTitle>
+    <Product>FuseCP.SchedulerServiceInstaller</Product>
+    <Copyright>Copyright �  2013</Copyright>
     <OutputPath>..\Setup.SchedulerService\bin\$(Configuration)</OutputPath>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Optimize>true</Optimize>
@@ -26,51 +26,51 @@
     <Content Include="CustomAction.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-    <ProjectReference Include="..\SolidCP.Setup.Legacy\SolidCP.Setup.Legacy.csproj" />
-    <!--<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Unix\SolidCP.Providers.OS.Unix.csproj">
+    <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+    <ProjectReference Include="..\FuseCP.Setup.Legacy\FuseCP.Setup.Legacy.csproj" />
+    <!--<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Unix\FuseCP.Providers.OS.Unix.csproj">
 			<Project>{1273d02f-6c5c-4752-86ce-99d504f6cffa}</Project>
-			<Name>SolidCP.Providers.OS.Unix</Name>
+			<Name>FuseCP.Providers.OS.Unix</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2003\SolidCP.Providers.OS.Windows2003.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2003\FuseCP.Providers.OS.Windows2003.csproj">
 			<Project>{899b3048-46be-4c4d-9d41-0043c8b0d11e}</Project>
-			<Name>SolidCP.Providers.OS.Windows2003</Name>
+			<Name>FuseCP.Providers.OS.Windows2003</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2008\SolidCP.Providers.OS.Windows2008.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2008\FuseCP.Providers.OS.Windows2008.csproj">
 			<Project>{bed2f43f-2dd8-45cf-ad7c-86799897c575}</Project>
-			<Name>SolidCP.Providers.OS.Windows2008</Name>
+			<Name>FuseCP.Providers.OS.Windows2008</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2012\SolidCP.Providers.OS.Windows2012.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2012\FuseCP.Providers.OS.Windows2012.csproj">
 			<Project>{27130bbb-76fa-411e-8b4d-51cd4dc821af}</Project>
-			<Name>SolidCP.Providers.OS.Windows2012</Name>
+			<Name>FuseCP.Providers.OS.Windows2012</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2016\SolidCP.Providers.OS.Windows2016.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2016\FuseCP.Providers.OS.Windows2016.csproj">
 			<Project>{4396082e-ec55-4741-a183-d0e374adc2fd}</Project>
-			<Name>SolidCP.Providers.OS.Windows2016</Name>
+			<Name>FuseCP.Providers.OS.Windows2016</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2019\SolidCP.Providers.OS.Windows2019.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2019\FuseCP.Providers.OS.Windows2019.csproj">
 			<Project>{c4b1ea53-1417-473f-bb8e-e71be84db3a5}</Project>
-			<Name>SolidCP.Providers.OS.Windows2019</Name>
+			<Name>FuseCP.Providers.OS.Windows2019</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.OS.Windows2022\SolidCP.Providers.OS.Windows2022.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.OS.Windows2022\FuseCP.Providers.OS.Windows2022.csproj">
 			<Project>{05b23c2b-15ce-48ef-995c-c5e517a04011}</Project>
-			<Name>SolidCP.Providers.OS.Windows2022</Name>
+			<Name>FuseCP.Providers.OS.Windows2022</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs100\SolidCP.Providers.Web.IIs100.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs100\FuseCP.Providers.Web.IIs100.csproj">
 			<Project>{9b99f215-5029-4779-bc2f-6d83cbb42205}</Project>
-			<Name>SolidCP.Providers.Web.IIs100</Name>
+			<Name>FuseCP.Providers.Web.IIs100</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs60\SolidCP.Providers.Web.IIs60.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs60\FuseCP.Providers.Web.IIs60.csproj">
 			<Project>{9be0317d-e42e-4ff6-9a87-8c801f046ea1}</Project>
-			<Name>SolidCP.Providers.Web.IIs60</Name>
+			<Name>FuseCP.Providers.Web.IIs60</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIs70.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIs70.csproj">
 			<Project>{1b9dce85-c664-49fc-b6e1-86c63cab88d1}</Project>
-			<Name>SolidCP.Providers.Web.IIs70</Name>
+			<Name>FuseCP.Providers.Web.IIs70</Name>
 		</ProjectReference>
-		<ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Web.IIs80\SolidCP.Providers.Web.IIs80.csproj">
+		<ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Web.IIs80\FuseCP.Providers.Web.IIs80.csproj">
 			<Project>{6e348968-461d-45a1-b235-4f552947b9f1}</Project>
-			<Name>SolidCP.Providers.Web.IIs80</Name>
+			<Name>FuseCP.Providers.Web.IIs80</Name>
 		</ProjectReference>-->
   </ItemGroup>
   <ItemGroup>

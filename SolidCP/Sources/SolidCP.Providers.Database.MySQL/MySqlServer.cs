@@ -42,13 +42,13 @@ using System.Reflection;
 using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.OS;
-using SolidCP.Providers;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers;
 
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
 	public class MySqlServer : HostingServiceProviderBase, IDatabaseServer
 	{

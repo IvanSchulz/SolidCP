@@ -1,6 +1,6 @@
-﻿using System.IO;
+using System.IO;
 
-namespace SolidCP.LinuxVmConfig
+namespace FuseCP.LinuxVmConfig
 {
     public enum OsVersionEnum
     {

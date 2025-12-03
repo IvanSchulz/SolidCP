@@ -35,9 +35,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	/// <summary>This class is a generic helper hosting the PowerShell runtime.</summary>
 	/// <remarks>It's probably a good idea to move to some utility module.</remarks>

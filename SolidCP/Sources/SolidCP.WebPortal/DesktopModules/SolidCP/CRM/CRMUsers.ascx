@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMUsers.ascx.cs" Inherits="SolidCP.Portal.CRM.CRMUsers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMUsers.ascx.cs" Inherits="FuseCP.Portal.CRM.CRMUsers" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
@@ -65,7 +65,7 @@
 							SelectCountMethod="GetCRMUsersPagedCount"
 							SelectMethod="GetCRMUsersPaged"
 							SortParameterName="sortColumn"
-							TypeName="SolidCP.Portal.CrmHelper"
+							TypeName="FuseCP.Portal.CrmHelper"
 							OnSelected="odsAccountsPaged_Selected">
 						<SelectParameters>
 							<asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />							

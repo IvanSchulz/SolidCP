@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMStorageSettings.ascx.cs" Inherits="SolidCP.Portal.CRMStorageSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMStorageSettings.ascx.cs" Inherits="FuseCP.Portal.CRMStorageSettings" %>
 <%@ Register Src="../ExchangeServer/UserControls/Breadcrumb.ascx" TagName="Breadcrumb"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"

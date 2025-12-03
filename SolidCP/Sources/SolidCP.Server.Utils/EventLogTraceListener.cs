@@ -36,7 +36,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 
-namespace SolidCP.Server.Utils
+namespace FuseCP.Server.Utils
 {
     public class EventLogTraceListener : TraceListener
     {
@@ -91,7 +91,7 @@ namespace SolidCP.Server.Utils
             this.eventLog.ModifyOverflowPolicy(OverflowAction.OverwriteAsNeeded, 0);
         }
 
-        public EventLogTraceListener() : this("SolidCP") { }
+        public EventLogTraceListener() : this("FuseCP") { }
 
         private EventInstance CreateEventInstance(TraceEventType severity, int id)
         {

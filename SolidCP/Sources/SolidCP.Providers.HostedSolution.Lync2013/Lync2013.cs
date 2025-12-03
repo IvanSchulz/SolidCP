@@ -39,7 +39,7 @@ using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using Microsoft.Rtc.Management.WritableConfig.Settings.Edge;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class Lync2013 : LyncBase
     {

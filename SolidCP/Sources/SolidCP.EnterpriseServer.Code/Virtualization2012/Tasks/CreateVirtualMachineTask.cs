@@ -1,10 +1,10 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -13,7 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Tasks
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Tasks
 {
     public class CreateVirtualMachineTask: ControllerBase
     {

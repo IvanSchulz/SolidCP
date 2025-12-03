@@ -35,11 +35,11 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012.UserControls
+namespace FuseCP.Portal.VPS2012.UserControls
 {
-    public partial class FormTitle : SolidCPControlBase
+    public partial class FormTitle : FuseCPControlBase
     {
         public string Text
         {

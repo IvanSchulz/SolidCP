@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Mail;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class IceWarp_EditList : SolidCPControlBase, IMailEditListControl
+    public partial class IceWarp_EditList : FuseCPControlBase, IMailEditListControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

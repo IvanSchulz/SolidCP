@@ -1,6 +1,6 @@
-﻿using SolidCP.WebDav.Core.Entities.Account.Enums;
+using FuseCP.WebDav.Core.Entities.Account.Enums;
 
-namespace SolidCP.WebDav.Core.Entities.Account
+namespace FuseCP.WebDav.Core.Entities.Account
 {
     public class UserPortalSettings
     {

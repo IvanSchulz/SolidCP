@@ -36,23 +36,23 @@ using System.Web;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Collections.Generic;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
-using SolidCP.EnterpriseServer.Base.Common;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer.Base.Common;
+using FuseCP.Providers.Common;
 
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers;
-using SolidCP.Providers.DomainLookup;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers;
+using FuseCP.Providers.DomainLookup;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for esApplicationsInstaller
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+    [WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("EnterpriseServerPolicy")]
     [ToolboxItem(false)]

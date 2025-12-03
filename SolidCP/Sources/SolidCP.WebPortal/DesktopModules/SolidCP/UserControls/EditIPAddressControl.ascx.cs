@@ -36,12 +36,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
 	[Flags]
 	public enum IPValidationMode { V4 = 1, V6 = 2, V4AndV6 = 3 };
 
-    public partial class EditIPAddressControl : SolidCPControlBase
+    public partial class EditIPAddressControl : FuseCPControlBase
     {
 
 		public IPValidationMode Validation { get; set; }

@@ -1,4 +1,4 @@
-// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -36,19 +36,19 @@ using System.Web;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using SolidCP.Web.Services;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for esVirtualizationServer
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+    [WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("EnterpriseServerPolicy")]
     [ToolboxItem(false)]

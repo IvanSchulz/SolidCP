@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net48</TargetFramework>
@@ -15,7 +15,7 @@
         <PostBuildEvent />
     </PropertyGroup>
     <Target Name="AfterBuildMigrated">
-        <Exec Command="$(ProjectDir)..\..\Resources\ILMerge.exe &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\Lib\Ionic.Zip.Reduced.dll&quot; /out:$(ProjectDir)..\SolidCP.Installer\Updater.exe /ndebug" />
+        <Exec Command="$(ProjectDir)..\..\Resources\ILMerge.exe &quot;$(TargetPath)&quot; &quot;$(ProjectDir)..\..\Lib\Ionic.Zip.Reduced.dll&quot; /out:$(ProjectDir)..\FuseCP.Installer\Updater.exe /ndebug" />
     </Target>
     <ItemGroup>
         <PackageReference Include="DotNetZip.NetStandard" Version="1.12.0" OutputItemType="EmbeddedResource" />

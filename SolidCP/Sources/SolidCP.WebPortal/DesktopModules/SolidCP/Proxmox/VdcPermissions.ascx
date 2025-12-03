@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPermissions.ascx.cs" Inherits="SolidCP.Portal.Proxmox.VdcPermissions" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPermissions.ascx.cs" Inherits="FuseCP.Portal.Proxmox.VdcPermissions" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="wsp" %>

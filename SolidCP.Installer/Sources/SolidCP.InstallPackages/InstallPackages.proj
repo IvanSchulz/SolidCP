@@ -8,15 +8,15 @@
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <BuildConfiguration>$(Configuration)</BuildConfiguration>
 		<RootFolder>..\..\..</RootFolder>
-		<TrunkFolder>$(RootFolder)\SolidCP</TrunkFolder>
+		<TrunkFolder>$(RootFolder)\FuseCP</TrunkFolder>
 
-		<SetupTrunkFolder>$(RootFolder)\SolidCP.Installer</SetupTrunkFolder>
+		<SetupTrunkFolder>$(RootFolder)\FuseCP.Installer</SetupTrunkFolder>
 		<SetupBuildFolder>$(SetupTrunkFolder)\Build\$(BuildConfiguration)</SetupBuildFolder>
 		<MSBuildCommunityTasksPath>$(RootFolder)\MSBuildCommunityTasks</MSBuildCommunityTasksPath>
 
 		<BuildFolder>$(TrunkFolder)\Build\$(BuildConfiguration)</BuildFolder>
 		<DeployFolder>$(TrunkFolder)\Deploy\$(BuildConfiguration)</DeployFolder>
-        <PackagesFolder>$(SetupTrunkFolder)\Sources\SolidCP.InstallPackages</PackagesFolder>
+        <PackagesFolder>$(SetupTrunkFolder)\Sources\FuseCP.InstallPackages</PackagesFolder>
 
 		<GZipCmd Condition=" '$(OS)' == 'Windows_NT' ">"$(RootFolder)\tools\gzip\bin\gzip.exe"</GZipCmd>
 		<GZipCmd Condition=" '$(OS)' == 'Unix' ">gzip</GZipCmd>
@@ -36,8 +36,8 @@
     </Target>
     
     <Target Name="BuildUniversalInstaller" Condition=" '$(OS)' == 'Unix' ">
-        <Exec Command="$(NuGetCmd) restore $(SetupTrunkFolder)\Sources\SolidCP.Installer.sln" />
-        <MSBuild Projects="$(SetupTrunkFolder)\Sources\SolidCP.Installer.sln" Properties="Configuration=$(Configuration)" />
+        <Exec Command="$(NuGetCmd) restore $(SetupTrunkFolder)\Sources\FuseCP.Installer.sln" />
+        <MSBuild Projects="$(SetupTrunkFolder)\Sources\FuseCP.Installer.sln" Properties="Configuration=$(Configuration)" />
     </Target>
 
     <Target Name="CleanOutput" DependsOnTargets="BuildWpkg;BuildUniversalInstaller">
@@ -50,7 +50,7 @@
 
     <Target Name="Dos2Unix" DependsOnTargets="CleanOutput">
         <ItemGroup>
-            <TextFiles Include="$(PackagesFolder)\src\bin\solidcp-installer" />        
+            <TextFiles Include="$(PackagesFolder)\src\bin\fusecp-installer" />        
             <TextFiles Include="$(PackagesFolder)\src\doc\*.*" />
             <TextFiles Include="$(PackagesFolder)\src\man\*.*" />
             <TextFiles Include="$(PackagesFolder)\src\dektop\*.*" />
@@ -75,30 +75,30 @@
             <DocFilesDebian Include="$(PackagesFolder)\src\doc\*.*" Exclude="@(DocFilesDebianExclude)" />
         </ItemGroup>
 
-		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\SolidCP.Installer.dll" DestinationFolder="$(PackagesFolder)\Debian\usr\share\solidcp\Installer" />
-		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\SolidCP.Installer.deps.json" DestinationFolder="$(PackagesFolder)\Debian\usr\share\solidcp\Installer" />
-		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\SolidCP.Installer.runtimeconfig.json" DestinationFolder="$(PackagesFolder)\Debian\usr\share\solidcp\Installer" />
-		<Copy SourceFiles="$(PackagesFolder)\src\man\solidcp-installer.1" DestinationFiles="$(PackagesFolder)\Debian\usr\share\man\man1\solidcp-installer.1" />
-		<Copy SourceFiles="$(PackagesFolder)\src\icon\SolidCP.png" DestinationFiles="$(PackagesFolder)\Debian\usr\share\pixmaps\SolidCP.png" />
-		<Copy SourceFiles="$(PackagesFolder)\src\desktop\solidcp-installer.desktop" DestinationFolder="$(PackagesFolder)\Debian\usr\share\applications" />
-		<Copy SourceFiles="@(DocFilesDebian)" DestinationFolder="$(PackagesFolder)\Debian\usr\share\doc\solidcp" />
+		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\FuseCP.Installer.dll" DestinationFolder="$(PackagesFolder)\Debian\usr\share\fusecp\Installer" />
+		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\FuseCP.Installer.deps.json" DestinationFolder="$(PackagesFolder)\Debian\usr\share\fusecp\Installer" />
+		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\FuseCP.Installer.runtimeconfig.json" DestinationFolder="$(PackagesFolder)\Debian\usr\share\fusecp\Installer" />
+		<Copy SourceFiles="$(PackagesFolder)\src\man\fusecp-installer.1" DestinationFiles="$(PackagesFolder)\Debian\usr\share\man\man1\fusecp-installer.1" />
+		<Copy SourceFiles="$(PackagesFolder)\src\icon\FuseCP.png" DestinationFiles="$(PackagesFolder)\Debian\usr\share\pixmaps\FuseCP.png" />
+		<Copy SourceFiles="$(PackagesFolder)\src\desktop\fusecp-installer.desktop" DestinationFolder="$(PackagesFolder)\Debian\usr\share\applications" />
+		<Copy SourceFiles="@(DocFilesDebian)" DestinationFolder="$(PackagesFolder)\Debian\usr\share\doc\fusecp" />
         <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PackagesFolder)\Debian\usr\bin" />
 
-        <Delete Files="$(PackagesFolder)\Debian\usr\share\man\man1\solidcp-installer.1.gz" />
-        <Exec Command="$(GZipCmd) -9 -n &quot;$(PackagesFolder)\Debian\usr\share\man\man1\solidcp-installer.1&quot;"
+        <Delete Files="$(PackagesFolder)\Debian\usr\share\man\man1\fusecp-installer.1.gz" />
+        <Exec Command="$(GZipCmd) -9 -n &quot;$(PackagesFolder)\Debian\usr\share\man\man1\fusecp-installer.1&quot;"
              LogStandardErrorAsError="true">
             <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfZip" />
         </Exec>
         <Message Text="$(OutputOfZip)" />
-        <Delete Files="$(PackagesFolder)\Debian\usr\share\man\man1\solidcp-installer" />
+        <Delete Files="$(PackagesFolder)\Debian\usr\share\man\man1\fusecp-installer" />
 
-        <Delete Files="$(PackagesFolder)\Debian\usr\share\doc\solidcp\changelog.Debian.gz" />
-        <Exec Command="$(GZipCmd) -9 -n &quot;$(PackagesFolder)\Debian\usr\share\doc\solidcp\changelog.Debian&quot;"
+        <Delete Files="$(PackagesFolder)\Debian\usr\share\doc\fusecp\changelog.Debian.gz" />
+        <Exec Command="$(GZipCmd) -9 -n &quot;$(PackagesFolder)\Debian\usr\share\doc\fusecp\changelog.Debian&quot;"
              LogStandardErrorAsError="true">
              <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfGZip" />
         </Exec>
         <Message Text="$(OutputOfGZip)" />
-        <Delete Files="$(PackagesFolder)\Debian\usr\share\doc\solidcp\changelog.Debian" />
+        <Delete Files="$(PackagesFolder)\Debian\usr\share\doc\fusecp\changelog.Debian" />
 
         <Exec Command="powershell -NonInteractive -ExecutionPolicy Unrestricted -command  &quot;&amp; { .\src\scripts\ConfigureDebian.ps1 '$(FileVersion)' }&quot;"
             LogStandardErrorAsError="true" />
@@ -107,7 +107,7 @@
             <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfWpkg" />
         </Exec>
         <Message Text="$(OutputOfWpkg)" />
-        <Move SourceFiles="$(PackagesFolder)\Debian\solidcp.deb" DestinationFiles="$(PackagesFolder)\bin\solidcp_$(FileVersion)-1_all.deb" />
+        <Move SourceFiles="$(PackagesFolder)\Debian\fusecp.deb" DestinationFiles="$(PackagesFolder)\bin\fusecp_$(FileVersion)-1_all.deb" />
 
     </Target>
 
@@ -120,22 +120,22 @@
             <DocFilesFedora Include="$(PackagesFolder)\src\doc\*.*" Exclude="@(DocFilesFedoraExclude)" /> 
             <BinFilesFedora Include="$(PackagesFolder)\src\bin\*.*" />
         </ItemGroup>
-		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\SolidCP.Installer.dll" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\solidcp\Installer" />
-		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\SolidCP.Installer.deps.json" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\solidcp\Installer" />
-		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\SolidCP.UniversalInstaller\bin\$(Configuration)\net10.0\SolidCP.Installer.runtimeconfig.json" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\solidcp\Installer" />
-		<Copy SourceFiles="$(PackagesFolder)\src\man\solidcp-installer.1" DestinationFiles="$(PackagesFolder)\Fedora\usr\share\man\man1\solidcp-installer.1" />
-		<Copy SourceFiles="$(PackagesFolder)\src\icon\SolidCP.png" DestinationFiles="$(PackagesFolder)\Fedora\usr\share\pixmaps\SolidCP.png" />
-		<Copy SourceFiles="$(PackagesFolder)\src\desktop\solidcp-installer.desktop" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\applications" />
-		<Copy SourceFiles="@(DocFilesFedora)" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\doc\solidcp" />
+		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\FuseCP.Installer.dll" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\fusecp\Installer" />
+		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\FuseCP.Installer.deps.json" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\fusecp\Installer" />
+		<Copy SourceFiles="$(SetupTrunkFolder)\Sources\FuseCP.UniversalInstaller\bin\$(Configuration)\net10.0\FuseCP.Installer.runtimeconfig.json" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\fusecp\Installer" />
+		<Copy SourceFiles="$(PackagesFolder)\src\man\fusecp-installer.1" DestinationFiles="$(PackagesFolder)\Fedora\usr\share\man\man1\fusecp-installer.1" />
+		<Copy SourceFiles="$(PackagesFolder)\src\icon\FuseCP.png" DestinationFiles="$(PackagesFolder)\Fedora\usr\share\pixmaps\FuseCP.png" />
+		<Copy SourceFiles="$(PackagesFolder)\src\desktop\fusecp-installer.desktop" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\applications" />
+		<Copy SourceFiles="@(DocFilesFedora)" DestinationFolder="$(PackagesFolder)\Fedora\usr\share\doc\fusecp" />
         <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(PackagesFolder)\Fedora\usr\bin" />
 
-        <Delete Files="$(PackagesFolder)\Fedora\usr\share\man\man1\solidcp-installer.1.gz" />
-        <Exec Command="$(GZipCmd) -9 -n &quot;$(PackagesFolder)\Fedora\usr\share\man\man1\solidcp-installer.1&quot;"
+        <Delete Files="$(PackagesFolder)\Fedora\usr\share\man\man1\fusecp-installer.1.gz" />
+        <Exec Command="$(GZipCmd) -9 -n &quot;$(PackagesFolder)\Fedora\usr\share\man\man1\fusecp-installer.1&quot;"
              LogStandardErrorAsError="true">
             <Output TaskParameter="ConsoleOutput" PropertyName="OutputOfZip" />
         </Exec>
         <Message Text="$(OutputOfZip)" />
-        <Delete Files="$(PackagesFolder)\Fedora\usr\share\man\man1\solidcp-installer" />
+        <Delete Files="$(PackagesFolder)\Fedora\usr\share\man\man1\fusecp-installer" />
 
         <Exec Command="powershell -NonInteractive -ExecutionPolicy Unrestricted -command  &quot;&amp; { .\src\scripts\ConfigureFedora.ps1 '$(FileVersion)' }&quot;"
              LogStandardErrorAsError="true" />

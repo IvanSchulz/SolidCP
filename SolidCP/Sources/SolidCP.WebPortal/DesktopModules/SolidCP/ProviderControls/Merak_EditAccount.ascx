@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Merak_EditAccount.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Merak_EditAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Merak_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Merak_EditAccount" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 

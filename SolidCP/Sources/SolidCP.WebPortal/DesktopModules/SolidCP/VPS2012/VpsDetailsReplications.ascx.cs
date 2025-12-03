@@ -37,13 +37,13 @@ using System.Collections.Generic;
 ﻿using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-﻿using SolidCP.EnterpriseServer;
-﻿using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+﻿using FuseCP.EnterpriseServer;
+﻿using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VpsDetailsReplications : SolidCPModuleBase
+    public partial class VpsDetailsReplications : FuseCPModuleBase
     {
         private const string DateFormat = "MM/dd/yyyy h:mm:ss tt";
         private const string na = "n/a";

@@ -33,9 +33,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	public class EnomRegistrar : SystemPluginBase, IDomainRegistrar
 	{

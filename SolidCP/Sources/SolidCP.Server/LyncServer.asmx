@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="LyncServer.asmx.cs" Class="SolidCP.Server.LyncServer" %>
+<%@ WebService Language="C#" CodeBehind="LyncServer.asmx.cs" Class="FuseCP.Server.LyncServer" %>

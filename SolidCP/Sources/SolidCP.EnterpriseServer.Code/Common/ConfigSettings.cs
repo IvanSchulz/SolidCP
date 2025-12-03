@@ -33,10 +33,10 @@
 using System;
 using System.Configuration;
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
-using SolidCP.Web.Services;
+using FuseCP.Providers.OS;
+using FuseCP.Web.Services;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for ConfigSettings.
@@ -44,7 +44,7 @@ namespace SolidCP.EnterpriseServer
 	public class ConfigSettings
 	{
 
-		const string EnterpriseServerRegistryPath = "SOFTWARE\\SolidCP\\EnterpriseServer";
+		const string EnterpriseServerRegistryPath = "SOFTWARE\\FuseCP\\EnterpriseServer";
 
 		private static string GetKeyFromRegistry(string Key)
 		{
@@ -76,7 +76,7 @@ namespace SolidCP.EnterpriseServer
 					string key;
 					if (OSInfo.IsNetFX)
 					{
-						key = ConfigurationManager.AppSettings["SolidCP.AltCryptoKey"];
+						key = ConfigurationManager.AppSettings["FuseCP.AltCryptoKey"];
 					}
 					else
 					{
@@ -93,7 +93,7 @@ namespace SolidCP.EnterpriseServer
 					{
 						if (OSInfo.IsNetFX)
 						{
-							cryptoKey = ConfigurationManager.AppSettings["SolidCP.CryptoKey"];
+							cryptoKey = ConfigurationManager.AppSettings["FuseCP.CryptoKey"];
 						}
 						else
 						{
@@ -115,8 +115,8 @@ namespace SolidCP.EnterpriseServer
 				{
 					if (OSInfo.IsNetFX)
 					{
-						encryptionEnabled = (ConfigurationManager.AppSettings["SolidCP.EncryptionEnabled"] != null)
-						? bool.Parse(ConfigurationManager.AppSettings["SolidCP.EncryptionEnabled"]) : true;
+						encryptionEnabled = (ConfigurationManager.AppSettings["FuseCP.EncryptionEnabled"] != null)
+						? bool.Parse(ConfigurationManager.AppSettings["FuseCP.EncryptionEnabled"]) : true;
 					} else
 					{
 						encryptionEnabled = Web.Services.Configuration.EncryptionEnabled;
@@ -135,7 +135,7 @@ namespace SolidCP.EnterpriseServer
 				{
 					if (OSInfo.IsNetFX)
 					{
-						webApplicationPath = ConfigurationManager.AppSettings["SolidCP.EnterpriseServer.WebApplicationsPath"];
+						webApplicationPath = ConfigurationManager.AppSettings["FuseCP.EnterpriseServer.WebApplicationsPath"];
 					}
 					else
 					{
@@ -172,7 +172,7 @@ namespace SolidCP.EnterpriseServer
 					if (OSInfo.IsNetFX)
 					{
 						serverRequestTimeout = Utils.ParseInt(
-							ConfigurationManager.AppSettings["SolidCP.EnterpriseServer.ServerRequestTimeout"], -1);
+							ConfigurationManager.AppSettings["FuseCP.EnterpriseServer.ServerRequestTimeout"], -1);
 					}
 					else
 					{

@@ -37,10 +37,10 @@ using System.Net;
 using System.Data;
 using System.Xml;
 using System.Xml.Linq;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public interface IInstallerWebService
 	{
@@ -72,10 +72,10 @@ namespace SolidCP.UniversalInstaller
 			{
 				string url = Settings.Installer.WebServiceUrl;
 				if (string.IsNullOrEmpty(url)) url = UseDebugWebService ?
-                        "http://solidcp.mooo.com/Services/InstallerService-Beta.asmx" :
-                        "http://installer.solidcp.com/Services/InstallerService-1.0.asmx";
+                        "http://fusecp.mooo.com/Services/InstallerService-Beta.asmx" :
+                        "http://installer.fusecp.com/Services/InstallerService-1.0.asmx";
 
-				var type = GetType($"SolidCP.UniversalInstaller.InstallerWebService, SolidCP.UniversalInstaller.Runtime.{
+				var type = GetType($"FuseCP.UniversalInstaller.InstallerWebService, FuseCP.UniversalInstaller.Runtime.{
 					(OSInfo.IsCore ? "NetCore" : "NetFX")}");
 
 				var webService = Activator.CreateInstance(type, url) as IInstallerWebService;
@@ -102,7 +102,7 @@ namespace SolidCP.UniversalInstaller
 			}
 		}
 
-		public const string GitHubUrl = "https://github.com/FuseCP/SolidCP";
+		public const string GitHubUrl = "https://github.com/FuseCP/FuseCP";
  		public GitHubReleases GitHub => new GitHubReleases(Settings.Installer.GitHubUrl ?? GitHubUrl);
 		public Releases Releases => new Releases();
 	}

@@ -1,8 +1,8 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.UseCase
 {
     public class ImportVirtualMachineHandler: ControllerBase
     {

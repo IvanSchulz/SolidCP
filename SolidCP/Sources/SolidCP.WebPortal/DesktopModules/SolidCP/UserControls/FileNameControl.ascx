@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileNameControl.ascx.cs" Inherits="SolidCP.Portal.FileNameControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileNameControl.ascx.cs" Inherits="FuseCP.Portal.FileNameControl" %>
 <asp:TextBox ID="txtFileName" runat="server" Width="200"></asp:TextBox>
 <asp:RequiredFieldValidator ID="valRequireNewName" runat="server" meta:resourcekey="valRequireNewName" ControlToValidate="txtFileName"
     CssClass="NormalBold" Display="Dynamic" ErrorMessage="*" ValidationGroup="NewFileName"></asp:RequiredFieldValidator>

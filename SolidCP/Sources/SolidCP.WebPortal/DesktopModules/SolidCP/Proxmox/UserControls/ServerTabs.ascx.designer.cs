@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox.UserControls {
+namespace FuseCP.Portal.Proxmox.UserControls {
     
     
     public partial class ServerTabs {
@@ -118,6 +118,6 @@ namespace SolidCP.Portal.Proxmox.UserControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
     }
 }

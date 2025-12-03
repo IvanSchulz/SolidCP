@@ -4,7 +4,7 @@ Version 1.5.2
 - [HyperV2012R2+] Fix for cpuCores on HyperV2012R2
 - [Installer] Add partial offline installer option, using network only for version retrieval
 - [Installer] Fix issue where installer updater throws a fatal error due to SQL update.
-- [Installer] Disable overwriting of the SolidCP.Installer.exe.config file during re-installation/repairing
+- [Installer] Disable overwriting of the FuseCP.Installer.exe.config file during re-installation/repairing
 - [HyperV2012R2+] Rewritten PowerShell function Convert-VHD to a native WMI variant.
 - [HyperV2012R2+] Add methods for handling WMI jobs
 - Fix VirtualHardDiskFormat as mentioned in the MS documentation
@@ -41,8 +41,8 @@ Version 1.5.0
 - [AuditLog] Add missing tasks for VPS2012
 - [Twilio] Fixes for updated packages
 - [WebDavPortal] Check if user must change password
-- [SolidCP.WHMCSModule] ClientEdit hook - fix for MFA
-- [SolidCP.WHMCSModule] Fix for PHP8
+- [FuseCP.WHMCSModule] ClientEdit hook - fix for MFA
+- [FuseCP.WHMCSModule] Fix for PHP8
 - Installer support for SQL 2022
 - [Exchange] Global search - check additional email addresses for any mailbox types
 - Send password reset request for existing users
@@ -73,7 +73,7 @@ Version 1.5.0
 - [SmarterMail100] Fix for Signature to only be set when not blank
 - [SmarterMail100] Fix for getting mail accoount into. API now requires domain access token key
 - [SmarterMail100] Fixing UpdateAccount due to API changes also some log cleanup
-- [SmarterMail100] Fix for suspending hosting space in SolidCP not causing domain to be disabled.
+- [SmarterMail100] Fix for suspending hosting space in FuseCP not causing domain to be disabled.
 - [SmarterMail100] Fix for Deleting Space and/or User Account in SCP does not remove the domain off the SM server
 - [SmarterMail100] Fixed creating groups
 - [SmarterMail100] Added tinymce to the Signature and Autoresponder messages so they can be html when using latest SmarterMail
@@ -110,7 +110,7 @@ Version 1.4.9
 - [HyperV2012R2+] Added - support for automatic detection of VM configuration versions -berkut1
 - [HyperV2012R2+] Shows a more convenient and correct progress bar status when installing virtual machines. (useful for for third party services) -berkut1
 - [Package] Added the ability to move a package to another user (User Hosting Space -> Edit Space Detail -> Change User) -berkut1
-- [Guacamole] Update SolidCPAuthenticationProvider to version 1.3.0 -bcischulz
+- [Guacamole] Update FuseCPAuthenticationProvider to version 1.3.0 -bcischulz
 - Fix for #104 (user groups bug) -bluechip
 - [HyperV2012R2+] Fixed removing vhdx via HyperV Remote. -berkut1
 - [HyperV2012R2+] Possible fix - "Error while converting VHD: Thread was being aborted" - berkut1
@@ -130,8 +130,8 @@ Version 1.4.9
 - Fix for DeletePackage -bluechip
 - [HyperV2012R2+] Allocate IPs & VLANs with not assigned server if no assigned to the server exist -bluechip
 - [Portal/HyperV2012R2+] Hidden Reboot/Reset/ShutDown/Etc buttons from clients for 15 minutes until OS deployment is complete. -berkut1
-- [Guacamole] Guac v1.4.0, guac logger, solidcp branding extension, new manual for production deploy -  spardoko 
-- Powershell SolidCP-Auto-Upgrade.ps1 changes for v1.4.9
+- [Guacamole] Guac v1.4.0, guac logger, fusecp branding extension, new manual for production deploy -  spardoko 
+- Powershell FuseCP-Auto-Upgrade.ps1 changes for v1.4.9
 - Added SQL 2022 support
 - Updated most Reference packages
 - Increased requirements to .net v4.8
@@ -191,7 +191,7 @@ Version 1.4.7
 - [WebDavPortal] Checking users permissions when creating a subfolder - bluechip
 - Create Organization - fix default Org ID filling - bluechip
 - [RDS] Remove not used RDS Server from deployment - bluechip
-- [Hosted Organization] Activate users in OU, after activation of the SolidCP account. - bluechip
+- [Hosted Organization] Activate users in OU, after activation of the FuseCP account. - bluechip
 - Space Quotas - small localization changes - bluechip
 -  Add custom DNS records from RDS service ( #40 )  - bluechip
 - [DNS] Add Service DNS records at Domain creation - bluechip
@@ -253,7 +253,7 @@ Version 1.4.4
 - Fix for a RDS quota Names
 - Exchange Retention Policy tag modification allow number quota for amount
 - Fix for importing * webhost
-- SolidCP Linux-VM config service - bluechip
+- FuseCP Linux-VM config service - bluechip
 - [SimpleDNS v8] Creating records with text have an issue
 - Fix's issue with Cloud portal not loading folders in sub dirs.
 - Add choice of Secure Boot Template in Hyper-V OS-Template settings. - bluechip
@@ -267,7 +267,7 @@ Version 1.4.4
 - VPS autodiscover if it was moved - bluechip
 - MsSQL 2019 Support added
 - Change to the Drive mappings so it will use the Hosted Org Preferred Domain Controller
-- Allow change of OS provider versions from inside SolidCP
+- Allow change of OS provider versions from inside FuseCP
 
 Version 1.4.3
 - Added Exchange 2019 provider.
@@ -282,7 +282,7 @@ Version 1.4.3
 - (VPS2012/2016/2019) Fixed: Reinstall VPS did not return a VM id. Changed the logic of the VM re-installation. - Genadij
 - (VPS2012/2016/2019) Fixed: The reinstall method doesn't work for HyperV Remote Host - Genadij
 - (VPS2012/2016/2019) Fixed: Some problems with HyperV remote host.  - Genadij
-- (VPS2012/2016/2019) Fixed: A possible bug when SolidCP cannot change VM state if VM is in a busy state (that bug prevented to delete some VM). - Genadij
+- (VPS2012/2016/2019) Fixed: A possible bug when FuseCP cannot change VM state if VM is in a busy state (that bug prevented to delete some VM). - Genadij
 - (VPS2012/2016/2019) Fixed: Issues with updating Dynamic RAM. - Genadij
 - (VPS2012/2016/2019) Fixed: Ignore a legacy adapter checkbox for generation 2. - Genadij
 - (VPS2012/2016/2019) Fixed: Server importing did not check quotas.  - Genadij
@@ -303,10 +303,10 @@ Version 1.4.3
 - Small changes for localization of the Copy sent items Exchange feature  - Bogdan
 - Fixed the bug where the IP addresses assigned to the serveradmin and could not be deleted. - Genadij
 - Change to allow better debugging on an RDS server which no longer has a IP Address
-- Change to SolidCP-Auto-Upgrade.ps1 to allow for different SolidCP Server port
+- Change to FuseCP-Auto-Upgrade.ps1 to allow for different FuseCP Server port
 - MySQL 8.0 SQL Fix
 - Added [ServiceDefaultProperties] for MariaDB 10.3
-- Fix for CerberusFTP6 on SolidCP Server v2
+- Fix for CerberusFTP6 on FuseCP Server v2
 - MySQL8 changes for support of older login support
 - Bugfixes for BIND-DNS service: - Wolfgang Voos
 - Changes to Import Enterprise tool to support non Exchange accounts.
@@ -355,7 +355,7 @@ Thank you to all contributors on this release with a special thanks to Genadij J
 - Fixed bug with deleting hosting space with VM element.
 - Fixed bug with deleting IP-address when removing Hosting Space.
 - HTML cosmetic fixes.
-- The SolidCP has become more friendly when creating VMs.
+- The FuseCP has become more friendly when creating VMs.
 - Default sorting of hosting space is set by name.
 - RDS 2016 & RDS 2019 Providers.
 - Fix for the FSRM detection on machines not in English.
@@ -455,7 +455,7 @@ Version 1.3.0:
 - Hosting Plan only displays available services
 - Space Item button fix
 - Small Website fixes
-- SolidCP Portal, Enterprise and Installer pushed to asp.net v4.5
+- FuseCP Portal, Enterprise and Installer pushed to asp.net v4.5
 - NuGet packages updated to latest version / correct framework.
 - Whoisclient updated to v3
 - AnyCPU + Optimize code set on all projects
@@ -513,13 +513,13 @@ Version 1.2.0:
 - Fixed up hosting plan and Addons pages
 - Added Mailcleaner support for all other mail providers
 - Fixed Dialog box width
-- Added dialog box to several slow functions in SolidCP
+- Added dialog box to several slow functions in FuseCP
 - Fixed AD Password Policy
 - Fix for Edit RDS Server page error when clicking update
 - Added WYSIWYG editors for Exchange Disclaimers and a default template
 - Fix for SimpleDNS primary NS
 - Fix for RDS Drive mappings for multple Users
-- Added German language to the SolidCP base
+- Added German language to the FuseCP base
 - Added IIS Virtual Directory support (not just virtual apps)
 
 
@@ -605,7 +605,7 @@ Version 1.0.2 Beta:
 - Added MS FTP 10 support
 - Added Automatic update support through portal (Files only)
 - Fixed database scripts
-- Fixed Search for large SolidCP deployments
+- Fixed Search for large FuseCP deployments
 - Fixed RDS Tabs
 - Fixed Lync simple url
 - Fixed Cloud storage permissions

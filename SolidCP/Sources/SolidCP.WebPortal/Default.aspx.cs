@@ -47,11 +47,11 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Globalization;
 using System.Diagnostics;
-using SolidCP.Portal;
-using SolidCP.Providers.OS;
+using FuseCP.Portal;
+using FuseCP.Providers.OS;
 using System.Linq;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
     public partial class DefaultPage : System.Web.UI.Page
     {
@@ -529,7 +529,7 @@ namespace SolidCP.WebPortal
                     }
                 }
                 else // when app is precompiled there is no App_GlobalResources directory so use a file with the
-                     // resource names instead. The file is created by the SolidCP.WebPortal.csproj when you execute
+                     // resource names instead. The file is created by the FuseCP.WebPortal.csproj when you execute
                      // its Deploy target
                 {
                     var resNamesFile = HttpContext.Current.Server.MapPath("~/App_Data/App_GlobalResources.list");

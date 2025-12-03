@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Common;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Server.Utils;
 using System.Text;
 using System.Management.Automation.Runspaces;
 
-namespace SolidCP.Providers.HostedSolution.Proxmox
+namespace FuseCP.Providers.HostedSolution.Proxmox
 {
 	public class HostedSolutionLog
 	{

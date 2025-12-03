@@ -33,7 +33,7 @@
 ﻿using System;
 using System.Data;
 
-namespace SolidCP.EnterpriseServer.Code.MailServers
+namespace FuseCP.EnterpriseServer.Code.MailServers
 {
     public class QuotaLimit
     {

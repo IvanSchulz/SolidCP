@@ -1,1 +1,1 @@
-<%@ WebService Language="C#" CodeBehind="TestWithAuthentication.asmx.cs" Class="SolidCP.Server.TestWithAuthentication" %>
+<%@ WebService Language="C#" CodeBehind="TestWithAuthentication.asmx.cs" Class="FuseCP.Server.TestWithAuthentication" %>

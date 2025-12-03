@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class OrganizationFoldersManager : ControllerBase
     {

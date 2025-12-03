@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SharePointGroupsEditGroup : SolidCPModuleBase
+    public partial class SharePointGroupsEditGroup : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

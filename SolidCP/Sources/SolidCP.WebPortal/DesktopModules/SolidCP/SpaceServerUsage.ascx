@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceServerUsage.ascx.cs" Inherits="SolidCP.Portal.SpaceServerUsage" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceServerUsage.ascx.cs" Inherits="FuseCP.Portal.SpaceServerUsage" %>
 <%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <asp:UpdatePanel ID="upUsage" runat="server" UpdateMode="Conditional">
     <ContentTemplate>

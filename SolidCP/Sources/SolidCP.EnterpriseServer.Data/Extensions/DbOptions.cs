@@ -1,4 +1,4 @@
-﻿#if NetCore
+#if NetCore
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 
 	public class DbOptions<T>: DbContextOptions<T> where T: Microsoft.EntityFrameworkCore.DbContext

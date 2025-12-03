@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public class TwilioParameters: AbstractConfigCollection
     {

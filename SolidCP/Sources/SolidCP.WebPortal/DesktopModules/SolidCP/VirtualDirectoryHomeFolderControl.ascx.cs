@@ -41,12 +41,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Web;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class VirtualDirectoryHomeFolderControl : SolidCPControlBase
+    public partial class VirtualDirectoryHomeFolderControl : FuseCPControlBase
     {
         private bool isVirtualDirectory;
         public bool IsVirtualDirectory

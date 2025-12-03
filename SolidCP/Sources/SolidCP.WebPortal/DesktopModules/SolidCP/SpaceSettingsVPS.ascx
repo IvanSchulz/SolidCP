@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsVPS.ascx.cs" Inherits="SolidCP.Portal.SpaceSettingsVPS" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsVPS.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsVPS" %>
 
 <fieldset>
     <legend>

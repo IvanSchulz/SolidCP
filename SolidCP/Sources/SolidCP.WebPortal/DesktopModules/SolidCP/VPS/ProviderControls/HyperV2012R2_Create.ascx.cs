@@ -30,11 +30,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class HyperV2012R2_Create : SolidCPControlBase, IVirtualMachineSettingsControl
+    public partial class HyperV2012R2_Create : FuseCPControlBase, IVirtualMachineSettingsControl
     {
         private bool _isEditMode;
 

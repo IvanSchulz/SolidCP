@@ -45,13 +45,13 @@ using System.Security.Permissions;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-using SolidCP.Installer.Core;
-using SolidCP.Installer.Configuration;
-using SolidCP.Providers.OS;
+using FuseCP.Installer.Core;
+using FuseCP.Installer.Configuration;
+using FuseCP.Providers.OS;
 using System.Xml;
 using System.Data;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	public class UserDecisionEventArgs : EventArgs
 	{
@@ -80,9 +80,9 @@ namespace SolidCP.Installer.Common
 				//
 				var typeDefString = sectionDef.Attributes["type"].Value;
 				//
-				if (typeDefString.EndsWith("SolidCP.Installer.Core") == false)
+				if (typeDefString.EndsWith("FuseCP.Installer.Core") == false)
 				{
-					sectionDef.Attributes["type"].Value = "SolidCP.Installer.Configuration.InstallerSection, SolidCP.Installer.Core";
+					sectionDef.Attributes["type"].Value = "FuseCP.Installer.Configuration.InstallerSection, FuseCP.Installer.Core";
 					//
 					configXmlDoc.Save(appConfigPath);
 				}
@@ -299,11 +299,11 @@ namespace SolidCP.Installer.Common
 
 					var args = new UserDecisionEventArgs
 						{
-							UserMessage = "SolidCP Installer has detected that Microsoft Internet Information Services (IIS) " +
+							UserMessage = "FuseCP Installer has detected that Microsoft Internet Information Services (IIS) " +
 						"are running in 64-bit mode. It is recommended to switch IIS to 32-bit mode to " +
 						"enable compatibility with 32-bit applications. " +
 						"Please note that 64-bit web applications will not work in 32-bit mode.\n" +
-						"Do you want SolidCP Installer to switch IIS to 32-bit mode?"
+						"Do you want FuseCP Installer to switch IIS to 32-bit mode?"
 						};
 
 					if (callback != null)
@@ -414,7 +414,7 @@ namespace SolidCP.Installer.Common
 		{
 			//check only one instance
 			bool createdNew = true;
-			mutex = new Mutex(true, "SolidCP Installer", out createdNew);
+			mutex = new Mutex(true, "FuseCP Installer", out createdNew);
 			return createdNew;
 		}
 

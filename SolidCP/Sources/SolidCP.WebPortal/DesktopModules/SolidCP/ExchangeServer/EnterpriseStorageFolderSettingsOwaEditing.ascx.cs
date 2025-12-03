@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class EnterpriseStorageFolderSettingsOwaEditing : SolidCPModuleBase
+    public partial class EnterpriseStorageFolderSettingsOwaEditing : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -39,7 +39,7 @@ using System.Security.Principal;
 using System.Reflection;
 using Renci.SshNet.Messages;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	/// <summary>
 	/// Installer Log.
@@ -81,7 +81,7 @@ namespace SolidCP.UniversalInstaller
 		{
 			get
 			{
-				string fileName = "SolidCP.Installer.log";
+				string fileName = "FuseCP.Installer.log";
 				//
 				if (string.IsNullOrEmpty(fileName))
 				{

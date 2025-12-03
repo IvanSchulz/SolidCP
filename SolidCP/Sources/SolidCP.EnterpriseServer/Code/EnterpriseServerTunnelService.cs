@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
 using System.DirectoryServices;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
-using SolidCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Server.Client;
 
-[assembly:TunnelService(typeof(SolidCP.EnterpriseServer.EnterpriseServerTunnelService))]
+[assembly:TunnelService(typeof(FuseCP.EnterpriseServer.EnterpriseServerTunnelService))]
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class EnterpriseServerTunnelService: EnterpriseServerTunnelServiceBase
     {

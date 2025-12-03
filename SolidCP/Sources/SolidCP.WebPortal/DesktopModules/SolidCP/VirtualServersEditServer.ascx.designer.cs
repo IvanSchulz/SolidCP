@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class VirtualServersEditServer {
@@ -73,7 +73,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secServices;
+        protected global::FuseCP.Portal.CollapsiblePanel secServices;
         
         /// <summary>
         /// ServicesPanel control.
@@ -145,7 +145,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDnsRecords;
+        protected global::FuseCP.Portal.CollapsiblePanel secDnsRecords;
         
         /// <summary>
         /// DnsRecordsPanel control.
@@ -163,7 +163,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.GlobalDnsRecordsControl GlobalDnsRecordsControl;
+        protected global::FuseCP.Portal.GlobalDnsRecordsControl GlobalDnsRecordsControl;
         
         /// <summary>
         /// secPreviewDomain control.
@@ -172,7 +172,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPreviewDomain;
+        protected global::FuseCP.Portal.CollapsiblePanel secPreviewDomain;
         
         /// <summary>
         /// PreviewDomainPanel control.

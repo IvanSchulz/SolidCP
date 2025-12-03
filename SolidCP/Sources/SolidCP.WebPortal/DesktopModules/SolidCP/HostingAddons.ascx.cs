@@ -41,9 +41,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class HostingAddons : SolidCPModuleBase
+    public partial class HostingAddons : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {           

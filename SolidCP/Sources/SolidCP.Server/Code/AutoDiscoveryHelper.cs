@@ -33,13 +33,13 @@
 ﻿using System;
 using System.IO;
 //using System.Configuration;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Utils;
 using System.Reflection;
 
-namespace SolidCP.Server.Code
+namespace FuseCP.Server.Code
 {
     public class AutoDiscoveryHelper
     {

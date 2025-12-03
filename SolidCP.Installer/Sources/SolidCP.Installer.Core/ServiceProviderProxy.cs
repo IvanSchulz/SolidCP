@@ -33,11 +33,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Installer.Configuration;
+using FuseCP.Installer.Configuration;
 using System.Net;
-using SolidCP.Installer.Services;
+using FuseCP.Installer.Services;
 
-namespace SolidCP.Installer.Core
+namespace FuseCP.Installer.Core
 {
 	public class ServiceProviderProxy
 	{
@@ -52,7 +52,7 @@ namespace SolidCP.Installer.Core
 			}
 			else
 			{
-				webService.Url = "http://installer.solidcp.com/Services/InstallerService-1.0.asmx";
+				webService.Url = "http://installer.fusecp.com/Services/InstallerService-1.0.asmx";
 			}
 
 			// check if we need to add a proxy to access Internet

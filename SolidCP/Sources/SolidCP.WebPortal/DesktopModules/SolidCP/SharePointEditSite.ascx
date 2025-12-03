@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointEditSite.ascx.cs" Inherits="SolidCP.Portal.SharePointEditSite" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointEditSite.ascx.cs" Inherits="FuseCP.Portal.SharePointEditSite" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc3" %>

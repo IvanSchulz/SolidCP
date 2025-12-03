@@ -37,7 +37,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Management;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	class ChangeAdministratorPasswordModule : IProvisioningModule
 	{

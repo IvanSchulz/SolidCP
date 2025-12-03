@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -195,7 +195,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
     <value>Private Network</value>
   </data>
   <data name="locResellerAccountText.Text" xml:space="preserve">
-    <value>For automatic provisioning of SolidCP control panel inside VPS please enter SolidCP reseller account details below:</value>
+    <value>For automatic provisioning of FuseCP control panel inside VPS please enter FuseCP reseller account details below:</value>
   </data>
   <data name="locResellerConfirmPassword.Text" xml:space="preserve">
     <value>Confirm password:</value>

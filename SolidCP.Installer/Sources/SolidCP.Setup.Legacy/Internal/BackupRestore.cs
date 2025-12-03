@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Xml;
 using Ionic.Zip;
 
-namespace SolidCP.Setup.Internal
+namespace FuseCP.Setup.Internal
 {
     public class BackupRestore
     {
@@ -16,7 +16,7 @@ namespace SolidCP.Setup.Internal
             public DateTime Date;
             public Version Version;
         }
-        public const string MainConfig = "SolidCP.config";
+        public const string MainConfig = "FuseCP.config";
         const string BackupDirectory = "Backup";
         const string ConfigDirectory = "Config";
         const string AppZip = @"App\app.zip";        

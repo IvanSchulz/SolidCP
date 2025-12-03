@@ -36,12 +36,12 @@ using System.Linq;
 using System.Text;
 using System.Collections.Generic;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class OrganizationAddDomainName : SolidCPModuleBase
+    public partial class OrganizationAddDomainName : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

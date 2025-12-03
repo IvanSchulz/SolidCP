@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,82 +32,82 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP Enterprise Server Client
+ * FuseCP Enterprise Server Client
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/addonautomation.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/configurableoptions.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/database.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/migration.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/settings.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/addonautomation.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/configurableoptions.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/database.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/migration.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/settings.php');
 
 /**
- * solidcp_module_config
+ * fusecp_module_config
  *
  * @access public
  * @return array
  */
-function solidcp_module_config()
+function fusecp_module_config()
 {
-    return array('name' => 'SolidCP Module',
-                 'description' => 'SolidCP Module for automating product configurable options, addons and sync to SolidCP',
+    return array('name' => 'FuseCP Module',
+                 'description' => 'FuseCP Module for automating product configurable options, addons and sync to FuseCP',
                  'version' => '1.1.4',
-                 'author' => '<a href="https://solidcp.com/" target="_blank">SolidCP</a>',
+                 'author' => '<a href="https://fusecp.com/" target="_blank">FuseCP</a>',
                  'language' => 'english');
 }
 
 /**
- * solidcp_module_activate
+ * fusecp_module_activate
  *
  * @access public
  * @return array
  */
-function solidcp_module_activate()
+function fusecp_module_activate()
 {
-    // Create the SolidCP Module settings table
-    $e = solidcp_database::createSettingsTable();
+    // Create the FuseCP Module settings table
+    $e = fusecp_database::createSettingsTable();
     if($e['status']!='success') return $e;
 
-    // Create the SolidCP Addon table
-    $e = solidcp_database::createAddonsTable();
+    // Create the FuseCP Addon table
+    $e = fusecp_database::createAddonsTable();
     if($e['status']!='success') return $e;
     
-    // Create the SolidCP Configurable Options table
-    $e = solidcp_database::createConfigurableOptionsTable();
+    // Create the FuseCP Configurable Options table
+    $e = fusecp_database::createConfigurableOptionsTable();
     if($e['status']!='success') return $e;
     
     return array('status' => 'success', 'description' => 'The module has been activated successfully');
 }
 
 /**
- * solidcp_module_deactivate
+ * fusecp_module_deactivate
  *
  * @access public
  * @return array
  */
-function solidcp_module_deactivate()
+function fusecp_module_deactivate()
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['DeleteTablesOnDeactivate'] == 1){
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['DeleteTablesOnDeactivate'] == 1){
 
-        // Delete the SolidCP Module settings table
-        $e = solidcp_database::deleteSettingsTable();
+        // Delete the FuseCP Module settings table
+        $e = fusecp_database::deleteSettingsTable();
         if($e['status']!='success') return $e;
 
-        // Delete the SolidCP Addon table
-        $e = solidcp_database::deleteAddonsTable();
+        // Delete the FuseCP Addon table
+        $e = fusecp_database::deleteAddonsTable();
         if($e['status']!='success') return $e;
 
-        // Delete the SolidCP Configurable Options table
-        $e = solidcp_database::deleteConfigurableOptionsTable();
+        // Delete the FuseCP Configurable Options table
+        $e = fusecp_database::deleteConfigurableOptionsTable();
         if($e['status']!='success') return $e;
         
         return array('status' => 'success', 'description' => 'The module has been deactivated and the tables have been deleted successfully');
@@ -117,13 +117,13 @@ function solidcp_module_deactivate()
 }
 
 /**
- * solidcp_moduleupgrade
+ * fusecp_moduleupgrade
  *
  * @param $vars array
  * @access public
  * @return array
  */
-function solidcp_module_upgrade($vars)
+function fusecp_module_upgrade($vars)
 {
     // Module versions
     $version = $vars['version'];
@@ -131,12 +131,12 @@ function solidcp_module_upgrade($vars)
 }
 
 /**
- * Displays the SolidCP configurable module output
+ * Displays the FuseCP configurable module output
  *
  * @access public
  * @return mixed
  */
-function solidcp_module_output($params)
+function fusecp_module_output($params)
 {   
     define('DS', DIRECTORY_SEPARATOR);
     
@@ -148,80 +148,80 @@ function solidcp_module_output($params)
     $scp_smarty->assign('LANG',$params['_lang']);
     $scp_smarty->assign('params',$params);
 
-    if($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="migration"){
-        $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
+    if($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="migration"){
+        $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
         $result = startMigration($_POST['command'],$_POST['value1'],$_POST['value2'],$_POST['option']);
         $html_ids = getHTMLids($_POST['command'],$_POST['value1'],$_POST['value2']);
         $scp_smarty->assign('html_ids',$html_ids);
         $template = "ajax".DS."migration.tpl";
     }
-    elseif($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="save_settings"){
-        $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
-        $solidcp_settings = new solidcp_settings;
-        $solidcp_settings->getSettings();
-        $result = $solidcp_settings->setSettings($_POST);
+    elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="save_settings"){
+        $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
+        $fusecp_settings = new fusecp_settings;
+        $fusecp_settings->getSettings();
+        $result = $fusecp_settings->setSettings($_POST);
         $template = "ajax".DS."savesettings.tpl";
     }
     else{
         checkMigration();
-        $solidcp_settings = new solidcp_settings;
-        $result = $solidcp_settings->getSettings();
-        $scp_smarty->assign('admins',$solidcp_settings->admins);
-        $scp_smarty->assign('settings',$solidcp_settings->settings);
-        if($solidcp_settings->settings['ConfigurableOptionsActive'] == 1){
-            $solidcp_configurable = new solidcp_configurableoptions();
+        $fusecp_settings = new fusecp_settings;
+        $result = $fusecp_settings->getSettings();
+        $scp_smarty->assign('admins',$fusecp_settings->admins);
+        $scp_smarty->assign('settings',$fusecp_settings->settings);
+        if($fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
+            $fusecp_configurable = new fusecp_configurableoptions();
         }
-        if($solidcp_settings->settings['AddonsActive'] == 1){
-            $solidcp_addon = new solidcp_addonautomation();
+        if($fusecp_settings->settings['AddonsActive'] == 1){
+            $fusecp_addon = new fusecp_addonautomation();
         }
-        if($solidcp_settings->settings['NeedMigration']){
+        if($fusecp_settings->settings['NeedMigration']){
                 $scp_smarty->assign('migrationsteps',migrationSteps());
         }
-        if($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="load") {
-            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
+        if($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="load") {
+            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
             $template = "admin_".str_replace("#", "", strip_tags ($_POST['area'])).".tpl";
         }
-        elseif($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="edit_configurable") {
-            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
-            $result = $solidcp_configurable->setConfigurableOption($_POST);
+        elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="edit_configurable") {
+            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
+            $result = $fusecp_configurable->setConfigurableOption($_POST);
 			$scp_smarty->assign('searchConf', $_POST['searchConf']);
 			$scp_smarty->assign('showOnlyAssignedConf', $_POST['showOnlyAssignedConf']);
             $template = "admin_configurable.tpl";
         }
-        elseif($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="delete_configurable") {
-            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
-            $result = $solidcp_configurable->deleteConfigurableOption($_POST['id']);
+        elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="delete_configurable") {
+            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
+            $result = $fusecp_configurable->deleteConfigurableOption($_POST['id']);
 			$scp_smarty->assign('searchConf', $_POST['searchConf']);
 			$scp_smarty->assign('showOnlyAssignedConf', $_POST['showOnlyAssignedConf']);
             $template = "admin_configurable.tpl";
         }
-        elseif($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="edit_addon") {
-            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
-            $result = $solidcp_addon->setAddonAutomation($_POST);
+        elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="edit_addon") {
+            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
+            $result = $fusecp_addon->setAddonAutomation($_POST);
 			$scp_smarty->assign('searchAddon', $_POST['searchAddon']);
 			$scp_smarty->assign('showOnlyAssignedAddon', $_POST['showOnlyAssignedAddon']);
             $template = "admin_addon.tpl";
         }
-        elseif($_POST['ajax']==1 && $_POST['module']=="solidcp_module" && $_POST['action']=="delete_addon") {
-            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS."ajax";
-            $result = $solidcp_addon->deleteAddonAutomation($_POST['id']);
+        elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="delete_addon") {
+            $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
+            $result = $fusecp_addon->deleteAddonAutomation($_POST['id']);
 			$scp_smarty->assign('searchAddon', $_POST['searchAddon']);
 			$scp_smarty->assign('showOnlyAssignedAddon', $_POST['showOnlyAssignedAddon']);
             $template = "admin_addon.tpl";
         }
         else $template = "admin.tpl";
-        if($solidcp_settings->settings['ConfigurableOptionsActive'] == 1){
-            $res = $solidcp_configurable->getConfigurableOptions();
+        if($fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
+            $res = $fusecp_configurable->getConfigurableOptions();
 			if ($res['status'] == 'error') $result = $res;
-            $scp_smarty->assign('configurableoptions',$solidcp_configurable->configurableoptions);
+            $scp_smarty->assign('configurableoptions',$fusecp_configurable->configurableoptions);
         }
-        if($solidcp_settings->settings['AddonsActive'] == 1){
-            $res = $solidcp_addon->getAddonAutomation();
+        if($fusecp_settings->settings['AddonsActive'] == 1){
+            $res = $fusecp_addon->getAddonAutomation();
 			if ($res['status'] == 'error') $result = $res;
-            $scp_smarty->assign('addonautomation',$solidcp_addon->addonautomation);
+            $scp_smarty->assign('addonautomation',$fusecp_addon->addonautomation);
         }
 
     }
     $scp_smarty->assign('result',$result);
-    $scp_smarty->display(ROOTDIR.DS."modules".DS."addons".DS."solidcp_module".DS."templates".DS.$template);
+    $scp_smarty->display(ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS.$template);
 }

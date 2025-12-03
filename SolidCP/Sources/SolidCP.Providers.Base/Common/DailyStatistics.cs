@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
 	/// <summary>
 	/// Summary description for DailyStatistics.

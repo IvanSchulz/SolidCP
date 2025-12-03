@@ -34,20 +34,20 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public class Global
 	{
 		public const string VisualInstallerShell = "VisualInstallerShell";
 		public const string SilentInstallerShell = "SilentInstallerShell";
-		public const string DefaultInstallPathRoot = @"C:\SolidCP";
+		public const string DefaultInstallPathRoot = @"C:\FuseCP";
 		public const string LoopbackIPv4 = "127.0.0.1";
 		public const string InstallerProductCode = "cfg core";
 		public const string InstallerProductUnixCode = "cfg core unix";
-		public const string DefaultProductName = "SolidCP";
+		public const string DefaultProductName = "FuseCP";
 
 		public abstract class Parameters
 		{
@@ -91,8 +91,8 @@ namespace SolidCP.UniversalInstaller
 			public const string InstallConnectionString = "InstallConnectionString";
 			public const string Release = "Release";
 			public const string UIType = "UIType";
-			public const string SchedulerServiceFileName = "SolidCP.SchedulerService.exe";
-			public const string SchedulerServiceName = "SolidCP Scheduler";
+			public const string SchedulerServiceFileName = "FuseCP.SchedulerService.exe";
+			public const string SchedulerServiceName = "FuseCP Scheduler";
 			public const string DatabaseUser = "DatabaseUser";
 			public const string DatabaseUserPassword = "DatabaseUserPassword";
 		}
@@ -100,7 +100,7 @@ namespace SolidCP.UniversalInstaller
 		public abstract class Messages
 		{
 			public const string NotEnoughPermissionsError = "You do not have the appropriate permissions to perform this operation. Make sure you are running the application from the local disk and you have local system administrator privileges.";
-			public const string InstallerVersionIsObsolete = "SolidCP Installer {0} or higher required.";
+			public const string InstallerVersionIsObsolete = "FuseCP Installer {0} or higher required.";
 			public const string ComponentIsAlreadyInstalled = "Component or its part is already installed.";
 			public const string ComponentIsNotInstalled = "Component or its part is not installed.";
 			public const string AnotherInstanceIsRunning = "Another instance of the installation process is already running.";
@@ -123,7 +123,7 @@ namespace SolidCP.UniversalInstaller
 
 			public const string ComponentName = "Server";
 			public const string ComponentCode = "server";
-			public const string ComponentDescription = "SolidCP Server is a set of services running on the remote server to be controlled. Server application should be reachable from Enterprise Server one.";
+			public const string ComponentDescription = "FuseCP Server is a set of services running on the remote server to be controlled. Server application should be reachable from Enterprise Server one.";
 			public const string ServiceAccount = "SCPServer";
 			public const string DefaultPort = "9003";
 			public const string DefaultIP = "127.0.0.1";
@@ -145,14 +145,14 @@ namespace SolidCP.UniversalInstaller
 		public abstract class WebDavPortal
         {
             public const string ComponentName = "WebDavPortal";
-            public const string ComponentDescription = "SolidCP WebDav Portal is a client frontend for viewing and editing their WebDav Enterprise storage files.";
+            public const string ComponentDescription = "FuseCP WebDav Portal is a client frontend for viewing and editing their WebDav Enterprise storage files.";
             public const string ServiceAccount = "SCPWebDav";
             public const string DefaultPort = "9004";
             public const string DefaultIP = "";
             public const string ComponentCode = "WebDavPortal";
             public const string SetupController = "WebDavPortal";
 			public const string DefaultDbServer = @"localhost\sqlexpress";
-			public const string DefaultDatabase = "SolidCP";
+			public const string DefaultDatabase = "FuseCP";
 			public const string AspNetConnectionStringFormat = "server={0};Initial Catalog={1};uid={2};pwd={3};";
 
 			public static string[] ServiceUserMembership
@@ -184,7 +184,7 @@ namespace SolidCP.UniversalInstaller
 		public abstract class WebPortal
 		{
 			public const string ComponentName = "Portal";
-			public const string ComponentDescription = "SolidCP Portal is a control panel itself with user interface which allows managing user accounts, hosting spaces, web sites, FTP accounts, files, etc.";
+			public const string ComponentDescription = "FuseCP Portal is a control panel itself with user interface which allows managing user accounts, hosting spaces, web sites, FTP accounts, files, etc.";
 			public const string ServiceAccount = "SCPPortal";
 			public const string DefaultPort = "9001";
 			public const string DefaultIP = "";
@@ -214,13 +214,13 @@ namespace SolidCP.UniversalInstaller
 		public abstract class EntServer
 		{
 			public const string ComponentName = "Enterprise Server";
-			public const string ComponentDescription = "Enterprise Server is the heart of SolidCP system. It includes all business logic of the application. Enterprise Server should have access to Server and be accessible from Portal applications.";
+			public const string ComponentDescription = "Enterprise Server is the heart of FuseCP system. It includes all business logic of the application. Enterprise Server should have access to Server and be accessible from Portal applications.";
 			public const string ServiceAccount = "SCPEnterprise";
 			public const string DefaultPort = "9002";
 			public const string DefaultIP = "127.0.0.1";
 			public const string DefaultDomain = "";
 			public const string DefaultDbServer = @"localhost\sqlexpress";
-			public const string DefaultDatabase = "SolidCP";
+			public const string DefaultDatabase = "FuseCP";
 			public const string AspNetConnectionStringFormat = "server={0};Initial Catalog={1};uid={2};pwd={3};";
 			public const string ComponentCode = "enterprise server";
 			public const string SetupController = "EnterpriseServer";

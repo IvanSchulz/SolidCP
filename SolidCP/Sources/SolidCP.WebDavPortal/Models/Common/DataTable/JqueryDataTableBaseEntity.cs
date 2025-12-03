@@ -1,7 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 
-namespace SolidCP.WebDavPortal.Models.Common.DataTable
+namespace FuseCP.WebDavPortal.Models.Common.DataTable
 {
     public abstract class JqueryDataTableBaseEntity 
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-namespace SolidCP.Providers.OS;
+namespace FuseCP.Providers.OS;
 
 
 public class SystemdServiceController : ServiceController

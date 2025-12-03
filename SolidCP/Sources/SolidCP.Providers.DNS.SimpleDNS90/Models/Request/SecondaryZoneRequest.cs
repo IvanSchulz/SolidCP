@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,7 +32,7 @@
 
 using Newtonsoft.Json;
 
-namespace SolidCP.Providers.DNS.SimpleDNS90.Models.Request
+namespace FuseCP.Providers.DNS.SimpleDNS90.Models.Request
 {
     public partial class SecondaryZoneRequest
     {

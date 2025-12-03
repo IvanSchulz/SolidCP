@@ -44,13 +44,13 @@ using System.Web.UI.HtmlControls;
 using System.Text.RegularExpressions;
 using System.Web.Services.Protocols;
 using System.IO;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class MessageBox : SolidCPControlBase, IMessageBoxControl, INamingContainer
+	public partial class MessageBox : FuseCPControlBase, IMessageBoxControl, INamingContainer
 	{
-		const string SolidCPGithubUrl = "https://github.com/FuseCP/SolidCP";
+		const string FuseCPGithubUrl = "https://github.com/FuseCP/FuseCP";
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			//this.Visible = false;
@@ -95,12 +95,12 @@ namespace SolidCP.Portal
 					litPackageName.Text = PanelSecurity.PackageId.ToString();
 					var stacktxt = ex.ToString().Trim();
 					var stackhtml = stacktxt;
-					var fileVersion = OSInfo.SolidCPVersion;
+					var fileVersion = OSInfo.FuseCPVersion;
 					stackhtml = Regex.Replace(stackhtml, @"(?<=\n\s*at\s+.+?\)\s+in\s+)(?:[A-Za-z]:\\|/)[^:]+(?=:line\s+[0-9]+(?:\r?\n|$))", match =>
 					{
 						var file = match.Value.Replace(Path.DirectorySeparatorChar, '/');
-						file = Regex.Replace(file, @"^.*?(?=/SolidCP/(?:Sources|Lib)/)", "");
-						return $@"<a href=""{SolidCPGithubUrl}/tree/v{fileVersion}{file}"">{file}</a>";
+						file = Regex.Replace(file, @"^.*?(?=/FuseCP/(?:Sources|Lib)/)", "");
+						return $@"<a href=""{FuseCPGithubUrl}/tree/v{fileVersion}{file}"">{file}</a>";
 					}, RegexOptions.Multiline);
 					stackhtml = stackhtml.Replace("\n", "<br/>");
 					litStackTrace.Text = stackhtml;
@@ -126,11 +126,11 @@ namespace SolidCP.Portal
 					emailMessage = $@"
 <html>
 	<head>
-		<title>SolidCP Error User Report</title>
+		<title>FuseCP Error User Report</title>
 	</head>
 	<body>
 
-		<h1>SolidCP Error User Report</h1>
+		<h1>FuseCP Error User Report</h1>
 
 		<p>
 			{sb.ToString().Replace("\n", "<br/>\n")}

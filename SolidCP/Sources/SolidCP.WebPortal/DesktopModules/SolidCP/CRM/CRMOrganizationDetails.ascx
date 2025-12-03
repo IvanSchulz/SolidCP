@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMOrganizationDetails.ascx.cs" Inherits="SolidCP.Portal.CRM.CRMOrganizationDetails" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMOrganizationDetails.ascx.cs" Inherits="FuseCP.Portal.CRM.CRMOrganizationDetails" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>

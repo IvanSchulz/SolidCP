@@ -42,9 +42,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class Common_ActiveDirectoryIntegration : SolidCPControlBase
+    public partial class Common_ActiveDirectoryIntegration : FuseCPControlBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

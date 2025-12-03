@@ -37,13 +37,13 @@ using System.Configuration;
 using System.Windows.Forms;
 using System.Collections;
 using System.Text;
-using SolidCP.Setup.Actions;
-using Data = SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Actions;
+using Data = FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class EnterpriseServer : BaseSetup
 	{

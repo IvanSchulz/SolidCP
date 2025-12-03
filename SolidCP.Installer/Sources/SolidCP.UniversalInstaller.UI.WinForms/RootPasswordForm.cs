@@ -38,7 +38,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public partial class RootPasswordForm : Form
 	{

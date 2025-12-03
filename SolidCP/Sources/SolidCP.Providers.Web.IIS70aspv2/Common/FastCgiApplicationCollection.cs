@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Providers.Web.Iis.Common
+namespace FuseCP.Providers.Web.Iis.Common
 {
     using Microsoft.Web.Administration;
     using Utility;

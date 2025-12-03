@@ -38,10 +38,10 @@ using System.Data;
 using System.Configuration;
 using System.Collections;
 using System.Web.UI;
-using SolidCP.Providers.OS;
-using SolidCP.Server.Code;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Code;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     public partial class DefaultPage : System.Web.UI.Page
     {

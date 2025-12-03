@@ -1,6 +1,6 @@
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (143, 167, N'VirtualMachine', N'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (143, 167, N'VirtualMachine', N'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
 
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (144, 167, N'VirtualSwitch', N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (144, 167, N'VirtualSwitch', N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
 
 INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota]) VALUES (673, 167, 1, N'PROXMOX.ServersNumber', N'Number of VPS', 2, 0, 41, NULL)
 

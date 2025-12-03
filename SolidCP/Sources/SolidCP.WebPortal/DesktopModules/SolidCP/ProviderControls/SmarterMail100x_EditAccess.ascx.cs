@@ -34,15 +34,15 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Database;
-using SolidCP.Providers.Mail;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Database;
+using FuseCP.Providers.Mail;
 using System.Xml;
 using System.Linq;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class SmarterMail100x_EditAccess : SolidCPControlBase, IMailEditDomainControl
+    public partial class SmarterMail100x_EditAccess : FuseCPControlBase, IMailEditDomainControl
     {
         private List<Country> selectedCountries
         {

@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for ServerInfo.

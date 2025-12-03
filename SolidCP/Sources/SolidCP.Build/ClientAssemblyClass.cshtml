@@ -7,11 +7,11 @@
 
 @using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory
 
-@namespace SolidCP.Build
+@namespace FuseCP.Build
 @inherits RazorBlade.PlainTextTemplate
 
-[System.CodeDom.Compiler.GeneratedCodeAttribute("SolidCP.Build", "1.0")]
-public partial class @(Class.Identifier)AssemblyClient: SolidCP.Web.Clients.ClientAssemblyBase, I@(Class.Identifier) {
+[System.CodeDom.Compiler.GeneratedCodeAttribute("FuseCP.Build", "1.0")]
+public partial class @(Class.Identifier)AssemblyClient: FuseCP.Web.Clients.ClientAssemblyBase, I@(Class.Identifier) {
 
     @foreach (var method in WebMethods
        .Select(m => new

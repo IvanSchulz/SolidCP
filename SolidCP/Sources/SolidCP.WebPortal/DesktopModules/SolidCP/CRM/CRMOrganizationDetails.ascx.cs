@@ -37,14 +37,14 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.CRM
+namespace FuseCP.Portal.CRM
 {
-    public partial class CRMOrganizationDetails : SolidCPModuleBase
+    public partial class CRMOrganizationDetails : FuseCPModuleBase
     {
 
         private StringDictionary ConvertArrayToDictionary(string[] settings)

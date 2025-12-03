@@ -1,4 +1,4 @@
-﻿#if NETFRAMEWORK
+#if NETFRAMEWORK
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ using System.Data.Entity.Spatial;
 using System.Security;
 using System.Security.Permissions;
 
-namespace SolidCP.EnterpriseServer.Data;
+namespace FuseCP.EnterpriseServer.Data;
 
 public class GenericDbProviderServices: EF.DbProviderServices
 {

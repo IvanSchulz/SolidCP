@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SettingsExchangePolicy {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secMailboxPassword;
+        protected global::FuseCP.Portal.CollapsiblePanel secMailboxPassword;
         
         /// <summary>
         /// MailboxPasswordPanel control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordPolicyEditor mailboxPasswordPolicy;
+        protected global::FuseCP.Portal.PasswordPolicyEditor mailboxPasswordPolicy;
         
         /// <summary>
         /// secOrg control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secOrg;
+        protected global::FuseCP.Portal.CollapsiblePanel secOrg;
         
         /// <summary>
         /// OrgIdPanel control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.OrgIdPolicyEditor orgIdPolicy;
+        protected global::FuseCP.Portal.UserControls.OrgIdPolicyEditor orgIdPolicy;
         
         /// <summary>
         /// threeOrg control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel threeOrg;
+        protected global::FuseCP.Portal.CollapsiblePanel threeOrg;
         
         /// <summary>
         /// OrgPanel control.
@@ -91,6 +91,6 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.OrgPolicyEditor orgPolicy;
+        protected global::FuseCP.Portal.UserControls.OrgPolicyEditor orgPolicy;
     }
 }

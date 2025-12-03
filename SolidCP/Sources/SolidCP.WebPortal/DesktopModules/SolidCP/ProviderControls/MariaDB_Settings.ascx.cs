@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Configuration;
 using System.Collections;
@@ -12,10 +12,10 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using System.Web.DynamicData;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ProviderControls {
-    public partial class MariaDB_Settings : SolidCPControlBase, IHostingServiceProviderSettings {
+namespace FuseCP.Portal.ProviderControls {
+    public partial class MariaDB_Settings : FuseCPControlBase, IHostingServiceProviderSettings {
         protected void Page_Load(object sender, EventArgs e) {
             if(!IsPostBack) {
                 //RenderFtuNote();

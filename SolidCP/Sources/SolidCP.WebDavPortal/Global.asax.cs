@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Web;
 using System.Web.Http;
@@ -9,19 +9,19 @@ using System.Web.Script.Serialization;
 using System.Web.Security;
 using System.Web.SessionState;
 using AutoMapper;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDavPortal.App_Start;
-using SolidCP.WebDavPortal.Controllers;
-using SolidCP.WebDavPortal.CustomAttributes;
-using SolidCP.WebDavPortal.DependencyInjection;
-using SolidCP.WebDavPortal.HttpHandlers;
-using SolidCP.WebDavPortal.Mapping;
-using SolidCP.Server.Utils;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDavPortal.App_Start;
+using FuseCP.WebDavPortal.Controllers;
+using FuseCP.WebDavPortal.CustomAttributes;
+using FuseCP.WebDavPortal.DependencyInjection;
+using FuseCP.WebDavPortal.HttpHandlers;
+using FuseCP.WebDavPortal.Mapping;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.WebDavPortal
+namespace FuseCP.WebDavPortal
 {
     public class MvcApplication : HttpApplication
     {

@@ -1,5 +1,5 @@
-﻿using Microsoft.Management.Infrastructure;
-using SolidCP.Providers.Utils;
+using Microsoft.Management.Infrastructure;
+using FuseCP.Providers.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Management.Automation.Runspaces;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class HardDriveHelper
     {

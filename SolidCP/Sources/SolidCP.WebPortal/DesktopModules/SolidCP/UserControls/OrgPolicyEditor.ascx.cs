@@ -36,9 +36,9 @@ using System.Text;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
     public partial class OrgPolicyEditor : UserControl
     {

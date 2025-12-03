@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Diagnostics;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	public abstract class Installer
 	{

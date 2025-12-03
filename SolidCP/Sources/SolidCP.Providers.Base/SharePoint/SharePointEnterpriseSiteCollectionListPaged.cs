@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
 	[Serializable]
 	public class SharePointEnterpriseSiteCollectionListPaged

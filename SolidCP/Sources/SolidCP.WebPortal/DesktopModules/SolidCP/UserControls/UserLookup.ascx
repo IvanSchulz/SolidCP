@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserLookup.ascx.cs" Inherits="SolidCP.Portal.UserLookup" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserLookup.ascx.cs" Inherits="FuseCP.Portal.UserLookup" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserDetails.ascx" TagName="UserDetails" TagPrefix="uc1" %>
 <%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 <asp:UpdatePanel ID="UserPanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
@@ -58,7 +58,7 @@
         </Columns>
     </asp:GridView>
     <asp:ObjectDataSource ID="odsUsersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetLoggedUsersPagedCount"
-        SelectMethod="GetLoggedUsersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.UsersHelper" OnSelected="odsUsersPaged_Selected">
+        SelectMethod="GetLoggedUsersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.UsersHelper" OnSelected="odsUsersPaged_Selected">
         <SelectParameters>
             <asp:ControlParameter ControlID="searchBox" Name="filterColumn" PropertyName="FilterColumn" />
              <asp:ControlParameter ControlID="searchBox" Name="filterValue" PropertyName="FilterValue" />

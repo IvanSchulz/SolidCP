@@ -1,4 +1,4 @@
-﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using System.Collections.Immutable;
 
-namespace SolidCP.Build
+namespace FuseCP.Build
 {
 	public static class INamedTypeSymbolExtensions
 	{
@@ -44,7 +44,7 @@ namespace SolidCP.Build
 			return classDeclaration.Members.OfType<MethodDeclarationSyntax>()
 						.Where(m => m.AttributeLists
 							.Any(l => l.Attributes
-							.Any(a => ((INamedTypeSymbol)model.GetTypeInfo(a).Type).GetFullTypeName() == "SolidCP.Web.Services.WebMethodAttribute")))
+							.Any(a => ((INamedTypeSymbol)model.GetTypeInfo(a).Type).GetFullTypeName() == "FuseCP.Web.Services.WebMethodAttribute")))
 						.ToArray();
 
 		}
@@ -80,7 +80,7 @@ namespace SolidCP.Build
 			return List(AttributeList(SeparatedList<AttributeSyntax>(attributes.Attributes
 				.Select(at => Attribute(ParseName(((INamedTypeSymbol)model.GetTypeInfo(at.Name).Type).GetFullTypeName()))
 					.WithArgumentList(at.ArgumentList))
-				.Where(at => at.Name == "SolidCP.Providers.SoapHeaderAttribute")));
+				.Where(at => at.Name == "FuseCP.Providers.SoapHeaderAttribute")));
 		}*/
 		public static MethodDeclarationSyntax[] GlobalizedWebMethods(this ClassDeclarationSyntax classDeclaration, IEnumerable<MethodDeclarationSyntax> methods, SemanticModel model)
 		{
@@ -93,11 +93,11 @@ namespace SolidCP.Build
 								.Select(p => Parameter(p.AttributeLists, p.Modifiers, p.Type.Globalized(model), p.Identifier, p.Default)))));
 					var soapHeaderAttribute = m.AttributeLists
 						.SelectMany(at => at.Attributes)
-						.FirstOrDefault(at => Regex.IsMatch(at.Name.ToString(), "(?:(?:SolidCP.)?Providers.)?SoapHeader(?:Attribute)?"));
+						.FirstOrDefault(at => Regex.IsMatch(at.Name.ToString(), "(?:(?:FuseCP.)?Providers.)?SoapHeader(?:Attribute)?"));
 					if (soapHeaderAttribute != null)
 					{
 						methodDecl = methodDecl
-							.WithAttributeLists(SingletonList(AttributeList(SingletonSeparatedList(Attribute(IdentifierName("SolidCP.Providers.SoapHeader"),
+							.WithAttributeLists(SingletonList(AttributeList(SingletonSeparatedList(Attribute(IdentifierName("FuseCP.Providers.SoapHeader"),
 								soapHeaderAttribute.ArgumentList)))));
 					}
 					return methodDecl;
@@ -111,8 +111,8 @@ namespace SolidCP.Build
 	public class WebServices : IIncrementalGenerator
 	{
 
-		public const string WebServiceAttributeName = "SolidCP.Web.Services.WebServiceAttribute";
-		public const bool Debug = false; // Set to true to debug SolidCP.Build
+		public const string WebServiceAttributeName = "FuseCP.Web.Services.WebServiceAttribute";
+		public const bool Debug = false; // Set to true to debug FuseCP.Build
 		public const bool EmitOpenApiTypes = false;
         public const bool EmitSwaggerWcfSecurity = true;
 
@@ -152,7 +152,7 @@ namespace SolidCP.Build
 				var attr = ws.Class.AttributeLists
 					.SelectMany(l => l.Attributes)
 					.FirstOrDefault(a =>
-						((INamedTypeSymbol)ws.Model.GetTypeInfo(a).Type).GetFullTypeName() == "SolidCP.Web.Services.WebServiceAttribute");
+						((INamedTypeSymbol)ws.Model.GetTypeInfo(a).Type).GetFullTypeName() == "FuseCP.Web.Services.WebServiceAttribute");
 
 				var parent = ws.Class.Parent;
 				while (parent != null && !(parent is BaseNamespaceDeclarationSyntax)) parent = parent.Parent;
@@ -160,8 +160,8 @@ namespace SolidCP.Build
 				if (parent == null)
 				{
 					oldNS = null;
-					serverNS = NamespaceDeclaration(IdentifierName("SolidCP.Services"));
-					clientNS = NamespaceDeclaration(IdentifierName("SolidCP.Client"));
+					serverNS = NamespaceDeclaration(IdentifierName("FuseCP.Services"));
+					clientNS = NamespaceDeclaration(IdentifierName("FuseCP.Client"));
 
 					serverTree = CompilationUnit()
 						.WithUsings(((CompilationUnitSyntax)oldTree).Usings)
@@ -277,13 +277,13 @@ namespace SolidCP.Build
 				var policy = ws.Class.AttributeLists
 					.SelectMany(a => a.Attributes)
 					.FirstOrDefault(a => 
-						((INamedTypeSymbol)ws.Model.GetTypeInfo(a).Type).GetFullTypeName() == "SolidCP.Web.Services.PolicyAttribute");
+						((INamedTypeSymbol)ws.Model.GetTypeInfo(a).Type).GetFullTypeName() == "FuseCP.Web.Services.PolicyAttribute");
 
 				AttributeListSyntax hasPolicy = null;
 
 				if (policy != null)
 				{
-					hasPolicy = AttributeList(SingletonSeparatedList(Attribute(ParseName("SolidCP.Web.Clients.HasPolicy"))
+					hasPolicy = AttributeList(SingletonSeparatedList(Attribute(ParseName("FuseCP.Web.Clients.HasPolicy"))
 						.WithArgumentList(policy.ArgumentList)));
 				}
 

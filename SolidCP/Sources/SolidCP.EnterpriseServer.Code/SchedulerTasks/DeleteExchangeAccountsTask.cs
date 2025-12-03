@@ -31,10 +31,10 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Server.Client;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Server.Client;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class DeleteExchangeAccountsTask : SchedulerTask
     {

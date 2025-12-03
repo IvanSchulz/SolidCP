@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
-using SolidCP.WebDav.Core.Security.Authorization.Enums;
+using System.Collections.Generic;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.WebDav.Core.Security.Authorization.Enums;
 
-namespace SolidCP.WebDav.Core.Interfaces.Security
+namespace FuseCP.WebDav.Core.Interfaces.Security
 {
     public interface IWebDavAuthorizationService
     {

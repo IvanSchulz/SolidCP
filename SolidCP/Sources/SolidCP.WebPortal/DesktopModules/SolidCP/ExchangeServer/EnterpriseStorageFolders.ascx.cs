@@ -33,16 +33,16 @@
 using System;
 using System.Text;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
-using SolidCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class EnterpriseStorageFolders : SolidCPModuleBase
+    public partial class EnterpriseStorageFolders : FuseCPModuleBase
     {
         #region Constants
 

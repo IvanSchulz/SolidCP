@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchBox.ascx.cs" Inherits="SolidCP.Portal.SearchBox" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchBox.ascx.cs" Inherits="FuseCP.Portal.SearchBox" %>
 
 <script type="text/javascript">
     //<![CDATA[

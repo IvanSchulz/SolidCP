@@ -42,13 +42,13 @@ using System.Text.RegularExpressions;
 using System.Web;
 #endif
 
-using SolidCP.Providers;
-using OS = SolidCP.Server.Client;
-using SolidCP.Server.Client;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Web;
+using FuseCP.Providers;
+using OS = FuseCP.Server.Client;
+using FuseCP.Server.Client;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.EnterpriseServer;
+namespace FuseCP.EnterpriseServer;
 
 public class FilesController: ControllerBase
 {

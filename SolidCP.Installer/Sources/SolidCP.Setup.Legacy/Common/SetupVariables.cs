@@ -34,10 +34,10 @@ using System;
 using System.Xml;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Setup.Common;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Common;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Variables container.
@@ -136,7 +136,7 @@ namespace SolidCP.Setup
 
 		public int DatabasePort { get; set; }
 
-		public SolidCP.EnterpriseServer.Data.DbType DatabaseType { get; set; }
+		public FuseCP.EnterpriseServer.Data.DbType DatabaseType { get; set; }
 		/// <summary>
 		/// Database install connection string
 		/// </summary>

@@ -48,7 +48,7 @@ using System.Threading;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.UniversalInstaller.Core;
+namespace FuseCP.UniversalInstaller.Core;
 
 public class LoaderEventArgs<T> : EventArgs
 {

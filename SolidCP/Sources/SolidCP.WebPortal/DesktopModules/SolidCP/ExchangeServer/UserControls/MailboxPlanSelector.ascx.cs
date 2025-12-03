@@ -33,9 +33,9 @@
 using System;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class MailboxPlanSelector : SolidCPControlBase
+    public partial class MailboxPlanSelector : FuseCPControlBase
     {
         private void UpdateMailboxPlanSelected()
         {
@@ -112,7 +112,7 @@ namespace SolidCP.Portal.ExchangeServer.UserControls
         private void BindMailboxPlans()
         {
 
-            SolidCP.Providers.HostedSolution.ExchangeMailboxPlan[] plans = ES.Services.ExchangeServer.GetExchangeMailboxPlans(PanelRequest.ItemID, Archiving);
+            FuseCP.Providers.HostedSolution.ExchangeMailboxPlan[] plans = ES.Services.ExchangeServer.GetExchangeMailboxPlans(PanelRequest.ItemID, Archiving);
 
             if (AddNone)
             {
@@ -123,7 +123,7 @@ namespace SolidCP.Portal.ExchangeServer.UserControls
                 ddlMailboxPlan.Items.Add(li);
             }
 
-            foreach (SolidCP.Providers.HostedSolution.ExchangeMailboxPlan plan in plans)
+            foreach (FuseCP.Providers.HostedSolution.ExchangeMailboxPlan plan in plans)
             {
                 if (!archiving && plan.IsForJournaling != isForJournaling) continue;
                 ListItem li = new ListItem();

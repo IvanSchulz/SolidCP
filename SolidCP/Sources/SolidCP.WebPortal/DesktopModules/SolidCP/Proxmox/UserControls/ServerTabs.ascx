@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerTabs.ascx.cs"
-    Inherits="SolidCP.Portal.Proxmox.UserControls.ServerTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerTabs.ascx.cs"
+    Inherits="FuseCP.Portal.Proxmox.UserControls.ServerTabs" %>
 <%@ Register Src="../../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="wsp" %>
 <%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="wsp" %>
 

@@ -31,25 +31,25 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
 
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
 
-namespace SolidCP.Portal.Lync
+namespace FuseCP.Portal.Lync
 {
-    public partial class CreateLyncUser : SolidCPModuleBase
+    public partial class CreateLyncUser : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                SolidCP.Providers.HostedSolution.LyncUserPlan[] plans = ES.Services.Lync.GetLyncUserPlans(PanelRequest.ItemID);
+                FuseCP.Providers.HostedSolution.LyncUserPlan[] plans = ES.Services.Lync.GetLyncUserPlans(PanelRequest.ItemID);
 
                 BindPhoneNumbers();
 
@@ -84,7 +84,7 @@ namespace SolidCP.Portal.Lync
 
             bool enterpriseVoice = false;
 
-            SolidCP.Providers.HostedSolution.LyncUserPlan plan = planSelector.plan;
+            FuseCP.Providers.HostedSolution.LyncUserPlan plan = planSelector.plan;
             if (plan != null)
                 enterpriseVoice = plan.EnterpriseVoice && enterpriseVoiceQuota && (ddlPhoneNumber.Items.Count > 0);
 

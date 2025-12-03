@@ -35,7 +35,7 @@ using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Updater.Common
+namespace FuseCP.Updater.Common
 {
 	internal sealed class User32
 	{

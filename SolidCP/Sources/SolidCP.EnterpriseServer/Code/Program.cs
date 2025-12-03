@@ -1,6 +1,6 @@
-﻿#if !NETFRAMEWORK
+#if !NETFRAMEWORK
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public static class Program
 	{

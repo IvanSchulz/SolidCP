@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012 {
+namespace FuseCP.Portal.VPS2012 {
     
     
     public partial class VdcExternalNetwork {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.PackageIPAddresses packageAddresses;
+        protected global::FuseCP.Portal.UserControls.PackageIPAddresses packageAddresses;
         
         /// <summary>
         /// secQuotas control.
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota addressesQuota;
+        protected global::FuseCP.Portal.Quota addressesQuota;
         
         /// <summary>
         /// locBandwidthQuota control.
@@ -73,6 +73,6 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota bandwidthQuota;
+        protected global::FuseCP.Portal.Quota bandwidthQuota;
     }
 }

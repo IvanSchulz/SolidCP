@@ -50,14 +50,14 @@ using System.Xml;
 //using Microsoft.Deployment.WindowsInstaller;
 using WixToolset.Dtf.WindowsInstaller;
 
-using SolidCP.Setup;
-using SolidCP.Setup.Internal;
-using SolidCP.WIXInstaller.Common;
-using SolidCP.WIXInstaller.Common.Util;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Setup;
+using FuseCP.Setup.Internal;
+using FuseCP.WIXInstaller.Common;
+using FuseCP.WIXInstaller.Common.Util;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.WIXInstaller
+namespace FuseCP.WIXInstaller
 {
     public class CustomActions
     {
@@ -77,7 +77,7 @@ namespace SolidCP.WIXInstaller
             try
             {
                 var Hash = Ctx.CustomActionData.ToNonGenericDictionary() as Hashtable;
-                var Scpa = new SolidCP.Setup.Actions.ConfigureStandaloneServerAction();
+                var Scpa = new FuseCP.Setup.Actions.ConfigureStandaloneServerAction();
                 Scpa.ServerSetup = new SetupVariables { };
                 Scpa.EnterpriseServerSetup = new SetupVariables { };
                 Scpa.PortalSetup = new SetupVariables { };
@@ -91,7 +91,7 @@ namespace SolidCP.WIXInstaller
                 Scpa.ServerSetup.WebSiteIP = GetParam(Hash, "ServerWebSiteIP");
                 Scpa.ServerSetup.WebSitePort = GetParam(Hash, "ServerWebSitePort");
                 Scpa.ServerSetup.ServerPassword = GetParam(Hash, "ServerPassword");
-                var Make = Scpa as SolidCP.Setup.Actions.IInstallAction;
+                var Make = Scpa as FuseCP.Setup.Actions.IInstallAction;
                 Make.Run(null);
             }
             catch (Exception ex)
@@ -216,7 +216,7 @@ namespace SolidCP.WIXInstaller
             Func<IEnumerable<string>, string> FindMainConfig = (IEnumerable<string> Dirs) =>
             {
                 // Looking into directories with next priority: 
-                // Previous installation directory and her backup, "SolidCP" directories on fixed drives and their backups.
+                // Previous installation directory and her backup, "FuseCP" directories on fixed drives and their backups.
                 // The last chance is an update from an installation based on previous installer version that installed to "Program Files".
                 // Regular directories.
                 foreach (var Dir in Dirs)
@@ -239,8 +239,8 @@ namespace SolidCP.WIXInstaller
                 }
                 // Looking into platform specific Program Files.
                 {
-                    var InstallerMainCfg = "SolidCP.Installer.exe.config";
-                    var InstallerName = "SolidCP Installer";
+                    var InstallerMainCfg = "FuseCP.Installer.exe.config";
+                    var InstallerName = "FuseCP Installer";
                     var PFolderType = Environment.Is64BitOperatingSystem ? Environment.SpecialFolder.ProgramFilesX86 : Environment.SpecialFolder.ProgramFiles;
                     var PFiles = Environment.GetFolderPath(PFolderType);
                     var Result = Path.Combine(PFiles, InstallerName, InstallerMainCfg);
@@ -636,22 +636,22 @@ namespace SolidCP.WIXInstaller
         [CustomAction]
         public static ActionResult RecapListUI(Session session)
         {
-            const string F_SCP = "SolidCP";
+            const string F_SCP = "FuseCP";
             const string F_Server = "ServerFeature";
             const string F_EServer = "EnterpriseServerFeature";
             const string F_Portal = "PortalFeature";
             const string F_Scheduler = "SchedulerServiceFeature";
             const string F_WDPosrtal = "WebDavPortalFeature";
-            var S_Install = new List<string> { "Copy SolidCP Server files", "Add SolidCP Server website" };
-            var ES_Install = new List<string> { "Copy SolidCP Enterprise Server files", "Install SolidCP database and updates", "Add SolidCP Enterprise Server website" };
-            var P_Install = new List<string> { "Copy SolidCP Portal files", "Add SolidCP Enterprise Portal website" };
-            var SCH_Install = new List<string> { "Copy SolidCP Scheduler Service files", "Install Scheduler Service Windows Service" };
-            var WDP_Install = new List<string> { "Copy SolidCP WebDav Portal files" };
-            var S_Uninstall = new List<string> { "Delete SolidCP Server files", "Remove SolidCP Server website" };
-            var ES_Uninstall = new List<string> { "Delete SolidCP Enterprise Server files", "Keep SolidCP database and updates", "Remove SolidCP Enterprise Server website" };
-            var P_Uninstall = new List<string> { "Delete SolidCP Portal files", "Remove SolidCP Enterprise Portal website" };
-            var SCH_Uninstall = new List<string> { "Delete SolidCP Scheduler Service files", "Remove Scheduler Service Windows Service" };
-            var WDP_Uninstall = new List<string> { "Delete SolidCP WebDav Portal files" };
+            var S_Install = new List<string> { "Copy FuseCP Server files", "Add FuseCP Server website" };
+            var ES_Install = new List<string> { "Copy FuseCP Enterprise Server files", "Install FuseCP database and updates", "Add FuseCP Enterprise Server website" };
+            var P_Install = new List<string> { "Copy FuseCP Portal files", "Add FuseCP Enterprise Portal website" };
+            var SCH_Install = new List<string> { "Copy FuseCP Scheduler Service files", "Install Scheduler Service Windows Service" };
+            var WDP_Install = new List<string> { "Copy FuseCP WebDav Portal files" };
+            var S_Uninstall = new List<string> { "Delete FuseCP Server files", "Remove FuseCP Server website" };
+            var ES_Uninstall = new List<string> { "Delete FuseCP Enterprise Server files", "Keep FuseCP database and updates", "Remove FuseCP Enterprise Server website" };
+            var P_Uninstall = new List<string> { "Delete FuseCP Portal files", "Remove FuseCP Enterprise Portal website" };
+            var SCH_Uninstall = new List<string> { "Delete FuseCP Scheduler Service files", "Remove Scheduler Service Windows Service" };
+            var WDP_Uninstall = new List<string> { "Delete FuseCP WebDav Portal files" };
             var RecapList = new List<string>();
             var EmptyList = new List<string>();
             var Ctx = session;
@@ -1233,7 +1233,7 @@ namespace SolidCP.WIXInstaller
         {
             var doc = new XmlDocument();
             doc.Load(Cfg);
-            string xPath = "configuration/appSettings/add[@key=\"SolidCP.EncryptionEnabled\"]";
+            string xPath = "configuration/appSettings/add[@key=\"FuseCP.EncryptionEnabled\"]";
             XmlElement encryptionNode = doc.SelectSingleNode(xPath) as XmlElement;
             bool encryptionEnabled = false;
             if (encryptionNode != null)

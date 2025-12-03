@@ -42,20 +42,20 @@ using System.Xml;
 using System.Threading;
 using System.Windows.Forms;
 
-using SolidCP.Setup.Common;
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
+using FuseCP.Setup.Common;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
 using System.Data.SqlClient;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
 using System.Reflection;
 using System.Collections.Specialized;
-using SolidCP.Setup.Actions;
+using FuseCP.Setup.Actions;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class ExpressInstallPage2 : BannerWizardPage
 	{

@@ -34,13 +34,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using SolidCP.EnterpriseServer.Code.SharePoint;
-using SolidCP.Server.Client;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.SharePoint;
+using FuseCP.EnterpriseServer.Code.SharePoint;
+using FuseCP.Server.Client;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.SharePoint;
 
-namespace SolidCP.EnterpriseServer.Code.HostedSolution
+namespace FuseCP.EnterpriseServer.Code.HostedSolution
 {
     public class ReportController: ControllerBase
     {

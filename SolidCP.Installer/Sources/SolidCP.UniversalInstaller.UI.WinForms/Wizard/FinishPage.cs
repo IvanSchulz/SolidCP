@@ -40,7 +40,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class FinishPage : BannerWizardPage
 	{

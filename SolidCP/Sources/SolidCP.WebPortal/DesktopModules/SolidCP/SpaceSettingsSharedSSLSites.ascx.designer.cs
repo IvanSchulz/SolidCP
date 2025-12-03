@@ -40,12 +40,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SpaceSettingsSharedSSLSites {
-        protected SolidCP.Portal.CollapsiblePanel tblSharedSslSites;
+        protected FuseCP.Portal.CollapsiblePanel tblSharedSslSites;
         protected System.Web.UI.WebControls.Panel SharedSslSitesPanel;
         protected System.Web.UI.WebControls.Label lblSharedSslSites;
-        protected SolidCP.Portal.UserControls.EditDomainsList domainsList;
+        protected FuseCP.Portal.UserControls.EditDomainsList domainsList;
     }
 }

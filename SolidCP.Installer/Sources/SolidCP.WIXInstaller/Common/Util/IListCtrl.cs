@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 //using Microsoft.Deployment.WindowsInstaller;
 using WixToolset.Dtf.WindowsInstaller;
 
-namespace SolidCP.WIXInstaller.Common.Util
+namespace FuseCP.WIXInstaller.Common.Util
 {
     internal interface IListCtrl
     {        

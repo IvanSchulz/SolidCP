@@ -34,9 +34,9 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.Services;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
     /// <summary>
     /// Summary description for $codebehindclassname$
@@ -57,7 +57,7 @@ namespace SolidCP.Portal.VPSForPC
             string snapshotId = req["SnapshotID"];
 
             byte[] res = ES.Services.VPS.GetSnapshotThumbnail(itemId, snapshotId,
-                SolidCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
+                FuseCP.Providers.Virtualization.ThumbnailSize.Medium160x120);
             if (res != null)
             {
                 context.Response.OutputStream.Write(res, 0, res.Length);

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WebDav.Core.Security.Authorization.Enums
+namespace FuseCP.WebDav.Core.Security.Authorization.Enums
 {
     [Flags]
     public enum WebDavPermissions

@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Peers.ascx.cs" Inherits="SolidCP.Portal.Peers" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Peers.ascx.cs" Inherits="FuseCP.Portal.Peers" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <div class="FormButtonsBar right">
 	<CPCC:StyleButton ID="btnAddItem" runat="server" CssClass="btn btn-primary" OnClick="btnAddItem_Click" >
          <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddItem"/>
@@ -37,5 +37,5 @@
 	</Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsUserPeers" runat="server"
-    SelectMethod="GetUserPeers" TypeName="SolidCP.Portal.UsersHelper" OnSelected="odsUserPeers_Selected" MaximumRowsParameterName="" StartRowIndexParameterName="">
+    SelectMethod="GetUserPeers" TypeName="FuseCP.Portal.UsersHelper" OnSelected="odsUserPeers_Selected" MaximumRowsParameterName="" StartRowIndexParameterName="">
 </asp:ObjectDataSource>

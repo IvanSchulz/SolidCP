@@ -35,20 +35,20 @@ using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Collections;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 using System.ComponentModel;
-using SolidCP.Providers;
-using SolidCP.Providers.EnterpriseStorage;
-using SolidCP.Providers.OS;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Web;
+using FuseCP.Providers;
+using FuseCP.Providers.EnterpriseStorage;
+using FuseCP.Providers.OS;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// <summary>
     /// Summary description for EnterpriseStorage
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/server/")]
+    [WebService(Namespace = "http://smbsaas/fusecp/server/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("ServerPolicy")]
     [ToolboxItem(false)]

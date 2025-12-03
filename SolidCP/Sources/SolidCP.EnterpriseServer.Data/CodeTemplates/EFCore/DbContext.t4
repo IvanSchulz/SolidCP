@@ -35,7 +35,7 @@
         "System",
         "System.Collections.Generic",
         "System.Collections.Concurrent",
-        "SolidCP.EnterpriseServer.Data.Configuration"
+        "FuseCP.EnterpriseServer.Data.Configuration"
     };
 
     var usingscore = new List<string>()
@@ -475,7 +475,7 @@ namespace <#= NamespaceHint.Replace(".Data.Configuration.Sources", ".Context") #
     }
 }
 
-namespace SolidCP.EnterpriseServer.Data {
+namespace FuseCP.EnterpriseServer.Data {
 
 <#= aliases #>
 

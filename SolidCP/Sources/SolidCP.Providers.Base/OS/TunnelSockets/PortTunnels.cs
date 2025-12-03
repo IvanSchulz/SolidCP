@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     public class TunnelApplication
     {
@@ -24,7 +24,7 @@ namespace SolidCP.Providers.OS
     }
 
     /// <summary>
-    /// Used to forward a local port on the SolidCP.WebPanel server to a port on a server where SolidCP.Server is running.
+    /// Used to forward a local port on the FuseCP.WebPanel server to a port on a server where FuseCP.Server is running.
     /// The forwarding is done over WebSockets.
     /// </summary>
     public class PortTunnels

@@ -1,11 +1,11 @@
-﻿using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public class MacInstaller : UnixInstaller
 {

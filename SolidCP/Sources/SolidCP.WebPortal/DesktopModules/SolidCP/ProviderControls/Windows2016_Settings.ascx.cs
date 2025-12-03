@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of SolidCP  nor   the   names  of  its
+// - Neither  the  name  of FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -38,9 +38,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class Windows2016_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class Windows2016_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

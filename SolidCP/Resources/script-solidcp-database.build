@@ -4,7 +4,7 @@
 	<target name="script">
 
         <!-- Generate SQL Scripts -->
-        <scriptdatabase	output="build-SolidCP-database.sql"
+        <scriptdatabase	output="build-FuseCP-database.sql"
 			server="TFS01"
 			database="${database}">
 

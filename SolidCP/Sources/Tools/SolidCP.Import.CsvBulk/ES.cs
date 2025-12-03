@@ -30,11 +30,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.Web.Clients;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.Web.Clients;
 
-namespace SolidCP.Import.CsvBulk
+namespace FuseCP.Import.CsvBulk
 {
 	/// <summary>
 	/// ES Proxy class

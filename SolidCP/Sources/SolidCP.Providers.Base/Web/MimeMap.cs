@@ -36,7 +36,7 @@ using System.Net;
 using System.Collections;
 using System.ComponentModel;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	public class MimeMap
 	{

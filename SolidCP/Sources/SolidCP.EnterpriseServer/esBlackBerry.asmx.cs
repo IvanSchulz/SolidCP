@@ -30,17 +30,17 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-﻿using SolidCP.Web.Services;
-using SolidCP.EnterpriseServer.Code.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+﻿using FuseCP.Web.Services;
+using FuseCP.EnterpriseServer.Code.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for esBlackBerry
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/enterpriseserver")]
+    [WebService(Namespace = "http://smbsaas/fusecp/enterpriseserver")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("EnterpriseServerPolicy")]
     public class esBlackBerry : WebService

@@ -42,17 +42,17 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.Common;
-using SolidCP.Portal.Code.Helpers;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.Common;
+using FuseCP.Portal.Code.Helpers;
+using FuseCP.Providers.ResultObjects;
 using System.Collections.Specialized;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class WebSitesEditSite : SolidCPModuleBase
+	public partial class WebSitesEditSite : FuseCPModuleBase
 	{
 		/// <summary>
 		/// Use this variable to define additional tabs to in the control

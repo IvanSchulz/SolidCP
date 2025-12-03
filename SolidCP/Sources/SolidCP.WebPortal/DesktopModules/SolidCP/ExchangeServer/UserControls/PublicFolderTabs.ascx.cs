@@ -41,11 +41,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.Portal.Code.UserControls;
+using FuseCP.Portal.Code.UserControls;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class PublicFolderTabs : SolidCPControlBase
+    public partial class PublicFolderTabs : FuseCPControlBase
     {
         private string selectedTab;
         public string SelectedTab

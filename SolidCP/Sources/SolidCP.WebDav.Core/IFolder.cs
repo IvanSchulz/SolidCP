@@ -7,11 +7,11 @@ using System.Net.Security;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Exceptions;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Exceptions;
 using System.Reflection;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     namespace Client
     {

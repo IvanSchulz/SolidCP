@@ -1,16 +1,16 @@
 {
   "schema": "1.0",
-  "type": "SolidCP-servers",
-  "name": "SolidCP",
+  "type": "FuseCP-servers",
+  "name": "FuseCP",
   "license": "Creative Commons Share-alike",
   "category": "provisioning",
   "description": {
-    "name": "SolidCP",
-    "tagline": "SolidCP Module for automating product configurable options, addons and sync to SolidCP",
-    "long": "This plugin automates the process of creating resources inside SolidCP",
+    "name": "FuseCP",
+    "tagline": "FuseCP Module for automating product configurable options, addons and sync to FuseCP",
+    "long": "This plugin automates the process of creating resources inside FuseCP",
     "features": [
-      "SolidCP User",
-      "SolidCP Hosting Space",
+      "FuseCP User",
+      "FuseCP Hosting Space",
       "Domain name",
       "DNS",
       "Website",
@@ -19,17 +19,17 @@
     ]
   },
   "support": {
-    "homepage": "https://www.SolidCP.com",
-    "docs_url": "https://www.SolidCP.com/kb/",
-    "support_url": "https://www.solidcp.com/forum"
+    "homepage": "https://www.FuseCP.com",
+    "docs_url": "https://www.FuseCP.com/kb/",
+    "support_url": "https://www.fusecp.com/forum"
   },
   "logo": {
     "filename": "logo.png"
   },
   "authors": [
     {
-      "name": "SolidCP",
-      "homepage": "https:\/\/www.solidcp.com\/"
+      "name": "FuseCP",
+      "homepage": "https:\/\/www.fusecp.com\/"
     }
   ]
 }

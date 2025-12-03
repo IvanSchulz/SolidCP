@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
         <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -70,11 +70,11 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\CPCC\CPCC.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj"
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj"
             AdditionalProperties="TargetFrameworks=net48" />
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
     </ItemGroup>
 </Project>

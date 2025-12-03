@@ -30,7 +30,7 @@ using System;
 using System.IO;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
 	public class Sps30 : Sps20
 	{

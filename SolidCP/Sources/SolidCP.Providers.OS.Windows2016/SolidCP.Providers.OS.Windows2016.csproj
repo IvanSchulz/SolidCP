@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	<RootNamespace>SolidCP.Providers.OS</RootNamespace>
+	<RootNamespace>FuseCP.Providers.OS</RootNamespace>
     <TargetFramework>net48</TargetFramework>
     <WarningsAsErrors>618</WarningsAsErrors>
-    <OutputPath>..\SolidCP.Server\bin\Providers\</OutputPath>
+    <OutputPath>..\FuseCP.Server\bin\Providers\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -41,7 +41,7 @@
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-    <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+    <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+    <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
   </ItemGroup>
 </Project>

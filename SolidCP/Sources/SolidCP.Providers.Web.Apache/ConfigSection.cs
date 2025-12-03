@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.ComponentModel.Design;
 
-namespace SolidCP.Providers.Web.Apache
+namespace FuseCP.Providers.Web.Apache
 {
 	public partial class ConfigSection : KeyedCollection<string, ConfigSection.Setting>
 	{

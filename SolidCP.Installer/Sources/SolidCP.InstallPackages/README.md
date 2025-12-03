@@ -32,4 +32,4 @@ In order to build the Packages use
 
 msbuild -p:FileVersion=<Version>
 
-where <Version> is the version number of SolidCP.
+where <Version> is the version number of FuseCP.

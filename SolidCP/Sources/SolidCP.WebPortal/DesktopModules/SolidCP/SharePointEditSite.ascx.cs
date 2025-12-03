@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.SharePoint;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.SharePoint;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SharePointEditSite : SolidCPModuleBase
+    public partial class SharePointEditSite : FuseCPModuleBase
     {
         SharePointSite item = null;
 

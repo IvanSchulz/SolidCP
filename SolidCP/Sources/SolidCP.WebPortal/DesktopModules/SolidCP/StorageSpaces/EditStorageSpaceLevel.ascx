@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditStorageSpaceLevel.ascx.cs" Inherits="SolidCP.Portal.StorageSpaces.EditStorageSpaceLevel" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditStorageSpaceLevel.ascx.cs" Inherits="FuseCP.Portal.StorageSpaces.EditStorageSpaceLevel" %>
 
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>

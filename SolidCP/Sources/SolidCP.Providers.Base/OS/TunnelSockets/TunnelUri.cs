@@ -1,4 +1,4 @@
-﻿using Renci.SshNet;
+using Renci.SshNet;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 
     public enum TunnelOption { None, Fallback, Listener, WebSocket }

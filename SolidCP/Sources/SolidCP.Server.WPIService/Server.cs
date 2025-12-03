@@ -37,7 +37,7 @@ using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Threading;
 
-namespace SolidCP.Server.WPIService
+namespace FuseCP.Server.WPIService
 {
     class Server
     {

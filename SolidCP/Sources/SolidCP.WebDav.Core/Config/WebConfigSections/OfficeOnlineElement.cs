@@ -1,6 +1,6 @@
-﻿using System.Configuration;
+using System.Configuration;
 
-namespace SolidCP.WebDavPortal.WebConfigSections
+namespace FuseCP.WebDavPortal.WebConfigSections
 {
     public class OfficeOnlineElement : ConfigurationElement
     {

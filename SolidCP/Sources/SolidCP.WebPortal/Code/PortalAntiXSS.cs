@@ -38,10 +38,10 @@ using System.Web;
 using Microsoft.Security.Application;
 
 //usage
-//<%@ Import Namespace="SolidCP.Portal" %>
-//using SolidCP.Portal;
+//<%@ Import Namespace="FuseCP.Portal" %>
+//using FuseCP.Portal;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class PortalAntiXSS
     {

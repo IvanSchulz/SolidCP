@@ -34,11 +34,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class SmarterMail_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class SmarterMail_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         public const string MailFilterDestinations = "MailFilterDestinations";
 

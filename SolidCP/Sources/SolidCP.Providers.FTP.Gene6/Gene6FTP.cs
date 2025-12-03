@@ -37,12 +37,12 @@ using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils.LogParser;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils.LogParser;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
     public class Gene6 : HostingServiceProviderBase, IFtpServer
     {

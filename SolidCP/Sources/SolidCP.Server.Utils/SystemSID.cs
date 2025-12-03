@@ -33,7 +33,7 @@
 
 using System;
 
-namespace SolidCP.Providers.Utils
+namespace FuseCP.Providers.Utils
 {
     /// <summary>
     /// Summary description for SystemSID.

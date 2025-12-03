@@ -41,11 +41,11 @@ using System.Text;
 using System.Windows.Forms;
 using Ionic.Zip;
 
-using SolidCP.Installer.Services;
-using SolidCP.Installer.Common;
-using SolidCP.Installer.Core;
+using FuseCP.Installer.Services;
+using FuseCP.Installer.Common;
+using FuseCP.Installer.Core;
 
-namespace SolidCP.Installer.Controls
+namespace FuseCP.Installer.Controls
 {
     public delegate void OperationProgressDelegate(int percentage);
 

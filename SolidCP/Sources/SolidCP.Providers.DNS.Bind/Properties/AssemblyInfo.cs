@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -37,8 +37,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Providers.DNS.Bind")]
-[assembly: AssemblyProduct("SolidCP.Providers.DNS.Bind")]
+[assembly: AssemblyTitle("FuseCP.Providers.DNS.Bind")]
+[assembly: AssemblyProduct("FuseCP.Providers.DNS.Bind")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

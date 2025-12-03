@@ -33,7 +33,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SolidCP.Providers.RemoteDesktopServices
+namespace FuseCP.Providers.RemoteDesktopServices
 {
     [Serializable]
     public class RdsCollection

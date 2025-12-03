@@ -1,11 +1,11 @@
-﻿<#@ template hostSpecific="true" #>
+<#@ template hostSpecific="true" #>
 <#@ assembly name="Microsoft.EntityFrameworkCore" #>
 <#@ assembly name="Microsoft.EntityFrameworkCore.Design" #>
 <#@ assembly name="Microsoft.EntityFrameworkCore.Relational" #>
 <#@ assembly name="Microsoft.Extensions.DependencyInjection.Abstractions" #>
 <#@ assembly name="System.Text.RegularExpressions" #>
 <#@ assembly name="System.Runtime" #>
-<#@ assembly name="SolidCP.EnterpriseServer.Data.NetCore" #>
+<#@ assembly name="FuseCP.EnterpriseServer.Data.NetCore" #>
 <#@ parameter name="EntityType" type="Microsoft.EntityFrameworkCore.Metadata.IEntityType" #>
 <#@ parameter name="Options" type="Microsoft.EntityFrameworkCore.Scaffolding.ModelCodeGenerationOptions" #>
 <#@ parameter name="NamespaceHint" type="System.String" #>
@@ -22,7 +22,7 @@
 <#@ import namespace="Microsoft.EntityFrameworkCore.Metadata" #>
 <#@ import namespace="Microsoft.EntityFrameworkCore.Scaffolding" #>
 <#@ import namespace="Microsoft.Extensions.DependencyInjection" #>
-<#@ import namespace="SolidCP.EnterpriseServer.Data.Scaffolding" #>
+<#@ import namespace="FuseCP.EnterpriseServer.Data.Scaffolding" #>
 <#
     Console.WriteLine($"Writing Configuration\\Sources\\{EntityType.Name}Configuration.cs");
 
@@ -40,9 +40,9 @@
     {
         "System",
         "System.Collections.Generic",
-        "SolidCP.EnterpriseServer.Data.Extensions",
-        "SolidCP.EnterpriseServer.Data.Entities",
-        "SolidCP.EnterpriseServer.Data.Configuration"
+        "FuseCP.EnterpriseServer.Data.Extensions",
+        "FuseCP.EnterpriseServer.Data.Entities",
+        "FuseCP.EnterpriseServer.Data.Configuration"
     };
     var usingscore = new List<string>()
     {

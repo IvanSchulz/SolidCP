@@ -1,17 +1,17 @@
-﻿<####################################################################################################
+<####################################################################################################
 SolidSCP - web.config Fix Script
 
-v1.0    1st September 2016:    First release of the SolidCP web.config Fix Script
+v1.0    1st September 2016:    First release of the FuseCP web.config Fix Script
 v1.1    2nd September 2016:    2nd release - Added Portal to the script so the new features are added
 
-Written By Marc Banyard for the SolidCP Project (c) 2016 SolidCP
+Written By Marc Banyard for the FuseCP Project (c) 2016 FuseCP
 
 The script needs to be run from the server that holds your Enterprise Server
 as the script will query the database to get the servers that form part of your
-SolidCP setup and apply the fix to each one in turn.
+FuseCP setup and apply the fix to each one in turn.
 
-Copyright (c) 2016, SolidCP
-SolidCP is distributed under the Creative Commons Share-alike license
+Copyright (c) 2016, FuseCP
+FuseCP is distributed under the Creative Commons Share-alike license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -23,7 +23,7 @@ are permitted provided that the following conditions are met:
   this list of conditions  and  the  following  disclaimer in  the documentation
   and/or other materials provided with the distribution.
 
-- Neither the name of  SolidCP  nor the names of its contributors may be used to
+- Neither the name of  FuseCP  nor the names of its contributors may be used to
   endorse or  promote  products  derived  from  this  software  without specific
   prior written permission.
 
@@ -138,24 +138,24 @@ Function dPressAnyKeyToExit()                               # Function to press 
 
 ####################################################################################################################################################################################
 Import-Module WebAdministration
-$SCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "SolidCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"}).physicalPath) # SolidCP Enterprise Server Files Location
-$SCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "SolidCP Portal|WebsitePanel Portal|DotNetPanel Portal"}).physicalPath)                                  # SolidCP Portal Files Location
+$SCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"}).physicalPath) # FuseCP Enterprise Server Files Location
+$SCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"}).physicalPath)                                  # FuseCP Portal Files Location
 $SCP_Database_Name  = ( (([xml](Get-Content "$SCP_EntSvr_Dir\Web.config")).configuration.connectionStrings.add.connectionString) | `
                         Select-String '((Initial\sCatalog)|((Database)))\s*=(?<ic>[a-z\s0-9]+?);' | `
                         ForEach-Object  {$_.Matches} | `
-                        ForEach-Object {$_.Groups["ic"].Value} ) # Get the SolidCP Database Name from the Enterprise Server Connection String in the web.config file
+                        ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Name from the Enterprise Server Connection String in the web.config file
 $SCP_Database_Servr = ( (([xml](Get-Content "$SCP_EntSvr_Dir\Web.config")).configuration.connectionStrings.add.connectionString) | `
                         Select-String 'server=(?<ic>[^;]+?);' | `
                         ForEach-Object  {$_.Matches} | `
-                        ForEach-Object {$_.Groups["ic"].Value} ) # Get the SolidCP Database Server from the Enterprise Server Connection String in the web.config file
+                        ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Server from the Enterprise Server Connection String in the web.config file
 
 # Update the Enterprise Server web.config file and remove the Windows Authentication that some people had mistakenly set
 ModifyXML "$SCP_EntSvr_Dir\web.config" "Delete" "//configuration/system.webServer"
 Write-Host "`t Enterprise Server - web.config Upgraded" -ForegroundColor Green
 
-# Set the correct values in the "bin\SolidCP.SchedulerService.exe.config" file so they match the ones in the "web.config" file for the Connection String and the CryptoKey
-ModifyXML "C:\SolidCP\Enterprise Server\bin\SolidCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" (ModifyXML "C:\SolidCP\Enterprise Server\web.config" "Get" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString")
-ModifyXML "C:\SolidCP\Enterprise Server\bin\SolidCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='SolidCP.CryptoKey']/@value"                  (ModifyXML "C:\SolidCP\Enterprise Server\web.config" "Get" "//configuration/appSettings/add[@key='SolidCP.CryptoKey']/@value")
+# Set the correct values in the "bin\FuseCP.SchedulerService.exe.config" file so they match the ones in the "web.config" file for the Connection String and the CryptoKey
+ModifyXML "C:\FuseCP\Enterprise Server\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" (ModifyXML "C:\FuseCP\Enterprise Server\web.config" "Get" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString")
+ModifyXML "C:\FuseCP\Enterprise Server\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value"                  (ModifyXML "C:\FuseCP\Enterprise Server\web.config" "Get" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value")
 Write-Host "`t Enterprise Server - Schedular Config File Upgraded" -ForegroundColor Green
 
 # Update the Portal web.config file and the additional items if they are missing
@@ -165,7 +165,7 @@ Write-Host "`t Enterprise Server - Schedular Config File Upgraded" -ForegroundCo
 ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" 'system.net'
 ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net" "settings"
 ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net/settings" "servicePointManager" @( ("checkCertificateName","false"), ("checkCertificateRevocationList","false") )
-# Update the web.config file to make sure it is up to date with the new Settings for v1.1.0 of SolidCP
+# Update the web.config file to make sure it is up to date with the new Settings for v1.1.0 of FuseCP
 ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "configSections"
 ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","jsEngineSwitcher")
 (Get-Content "$SCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"jsEngineSwitcher`" />", "    <sectionGroup name=`"jsEngineSwitcher`">`n    </sectionGroup>" | Set-Content "$SCP_Portal_Dir\web.config"
@@ -224,8 +224,8 @@ for ($i = 0; $i -lt ($SCP_UNC_Test.count); $i++) { # Loop through each server in
 	# Define the Variables to be used per Server
 	$SCP_UNCsvr_Name = $SCP_UNC_Test.ServerName[$i]
 	$SCP_Server_Root = ($SCP_UNC_Test.ServerUrl[$i] -replace "http://|https://|:9003", "")
-	# Loop through the hard drive on the Remote Server to find the SolidCP Server directory
-	foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_Server_Root\c$\" -Include ("WebsitePanel", "SolidCP", "DotNetPanel")).FullName)) {
+	# Loop through the hard drive on the Remote Server to find the FuseCP Server directory
+	foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_Server_Root\c$\" -Include ("WebsitePanel", "FuseCP", "DotNetPanel")).FullName)) {
 		If ($RemoteServer.name -eq "Server") {$SCP_UNCsvr_Dir = $RemoteServer.FullName}
 	}
 	if (Test-Path "$SCP_UNCsvr_Dir") {

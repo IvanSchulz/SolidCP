@@ -1,4 +1,4 @@
-﻿namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     [Persistent]
     public class VmReplication

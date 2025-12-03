@@ -1,4 +1,4 @@
-﻿using Renci.SshNet;
+using Renci.SshNet;
 using Renci.SshNet.Common;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Threading;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     /// <summary>
     /// A class that implements ssh port forwarding of a local port to a remote port over ssh

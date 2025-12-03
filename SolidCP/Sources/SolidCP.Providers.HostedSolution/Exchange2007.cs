@@ -48,12 +48,12 @@ using System.Security.AccessControl;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.ResultObjects;
 using Microsoft.Exchange.Data.Directory.Recipient;
 using Microsoft.Win32;
 
@@ -61,7 +61,7 @@ using Microsoft.Exchange.Data;
 using Microsoft.Exchange.Data.Directory;
 using Microsoft.Exchange.Data.Storage;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class Exchange2007 : HostingServiceProviderBase, IExchangeServer
 	{
@@ -74,7 +74,7 @@ namespace SolidCP.Providers.HostedSolution
 		#endregion
 
 		#region Constants
-		private const string CONFIG_CLEAR_QUERYBASEDN = "SolidCP.Exchange.ClearQueryBaseDN";
+		private const string CONFIG_CLEAR_QUERYBASEDN = "FuseCP.Exchange.ClearQueryBaseDN";
 		#endregion
 
 		#region Properties
@@ -7213,7 +7213,7 @@ namespace SolidCP.Providers.HostedSolution
 
 		public override bool IsInstalled()
 		{
-			if (!SolidCP.Providers.OS.OSInfo.IsWindows) return false;
+			if (!FuseCP.Providers.OS.OSInfo.IsWindows) return false;
 
 			int value = 0;
 			RegistryKey root = Registry.LocalMachine;

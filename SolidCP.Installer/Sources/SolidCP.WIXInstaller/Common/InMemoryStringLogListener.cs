@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Text;
 
-namespace SolidCP.WIXInstaller.Common
+namespace FuseCP.WIXInstaller.Common
 {
     class InMemoryStringLogListener : TraceListener
     {

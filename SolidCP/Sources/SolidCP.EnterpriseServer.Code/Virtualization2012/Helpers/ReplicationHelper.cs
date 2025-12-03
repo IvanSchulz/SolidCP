@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Server.Client;
-//using SolidCP.Providers.Virtualization2012;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Server.Client;
+//using FuseCP.Providers.Virtualization2012;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012
 {
     public class ReplicationHelper: ControllerBase
     {

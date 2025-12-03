@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailForwardingsEditForwarding.ascx.cs"
-	Inherits="SolidCP.Portal.MailForwardingsEditForwarding" %>
+	Inherits="FuseCP.Portal.MailForwardingsEditForwarding" %>
 <%@ Register TagPrefix="dnc" TagName="EmailAddress" Src="MailEditAddress.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
 	TagPrefix="scp" %>

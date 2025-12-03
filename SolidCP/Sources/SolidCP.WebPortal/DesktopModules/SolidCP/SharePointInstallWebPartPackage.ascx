@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointInstallWebPartPackage.ascx.cs" Inherits="SolidCP.Portal.SharePointInstallWebPartPackage" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointInstallWebPartPackage.ascx.cs" Inherits="FuseCP.Portal.SharePointInstallWebPartPackage" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <div class="panel-body form-horizontal">
 <table cellSpacing="0" cellPadding="5" width="100%">

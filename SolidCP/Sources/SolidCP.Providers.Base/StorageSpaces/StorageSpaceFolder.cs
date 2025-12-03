@@ -1,7 +1,7 @@
-﻿using System.IO;
-using SolidCP.Providers.OS;
+using System.IO;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Providers.StorageSpaces
+namespace FuseCP.Providers.StorageSpaces
 {
     public class StorageSpaceFolder : StorageSpaceItem
     {

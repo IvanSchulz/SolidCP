@@ -32,12 +32,12 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.BlackBerry
+namespace FuseCP.Portal.BlackBerry
 {
-    public partial class EditBlackBerryUser :  SolidCPModuleBase
+    public partial class EditBlackBerryUser :  FuseCPModuleBase
     {
         public const string CANNOT_GET_BLACKBERRY_STATS = "CANNOT_GET_BLACKBERRY_STATS";
 

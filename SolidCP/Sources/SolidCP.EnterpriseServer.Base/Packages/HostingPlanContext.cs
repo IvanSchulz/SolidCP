@@ -36,7 +36,7 @@ using System.Text;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class HostingPlanContext
     {

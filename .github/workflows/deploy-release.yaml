@@ -142,7 +142,7 @@ jobs:
 
 
     - name: Run deploy-release.bat
-      working-directory: SolidCP
+      working-directory: FuseCP
       run: .\deploy-release.bat
 
     - name: Publish build artifacts
@@ -150,19 +150,19 @@ jobs:
       with: 
         name: ${{ steps.sanitize_name_step.outputs.sanitized_artifact_name }}
         path: |
-          SolidCP\Deploy\Release\**\*.zip
-          SolidCP\Deploy\Release\**\*.7z
-          SolidCP\Deploy\Release\**\*.msi
-          SolidCP\Deploy\Release\**\*.exe
-          SolidCP\Deploy\Release\Packages
-          SolidCP\Deploy\Release\Database
-          !SolidCP\Deploy\Release\Install
-          !SolidCP\Deploy\Release\Update
+          FuseCP\Deploy\Release\**\*.zip
+          FuseCP\Deploy\Release\**\*.7z
+          FuseCP\Deploy\Release\**\*.msi
+          FuseCP\Deploy\Release\**\*.exe
+          FuseCP\Deploy\Release\Packages
+          FuseCP\Deploy\Release\Database
+          !FuseCP\Deploy\Release\Install
+          !FuseCP\Deploy\Release\Update
         compression-level: 9
         retention-days: 1
 
     #- name: Run unit tests
-    #  working-directory: SolidCP\Sources
+    #  working-directory: FuseCP\Sources
     #  continue-on-error: true
     #  run: |
-    #    dotnet test SolidCP.Tests.sln -v n --logger trx --configuration Release
+    #    dotnet test FuseCP.Tests.sln -v n --logger trx --configuration Release

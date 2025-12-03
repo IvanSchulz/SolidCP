@@ -2,16 +2,16 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 
   <?include Config.wxi?>
-  <?define VERSION="!(bind.FileVersion.SolidCP.Installer.exe)"?>
+  <?define VERSION="!(bind.FileVersion.FuseCP.Installer.exe)"?>
   
-  <Product Id="*" Name="SolidCP Installer" Language="1033" Version="$(var.VERSION)" Manufacturer="SolidCP" UpgradeCode="629ccd5c-1f6d-4168-bbe6-01c69e232f43">
+  <Product Id="*" Name="FuseCP Installer" Language="1033" Version="$(var.VERSION)" Manufacturer="FuseCP" UpgradeCode="629ccd5c-1f6d-4168-bbe6-01c69e232f43">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
 		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." Schedule="afterInstallExecute"/>
     
     <MediaTemplate EmbedCab="yes" />
      
-		<Feature Id="ProductFeature" Title="SolidCP Installer" Level="1">
+		<Feature Id="ProductFeature" Title="FuseCP Installer" Level="1">
       <ComponentRef Id="ProductFiles" />
       <ComponentRef Id="ConfigFile" />
       <ComponentRef Id="ApplicationShortcut" />
@@ -25,8 +25,8 @@
     <WixVariable Id="WixUIBannerBmp" Value="bannrbmp.bmp" />
     <WixVariable Id="WixUIDialogBmp" Value="dlgbmp.bmp" />
 
-    <Icon Id="SolidCP.ico" SourceFile="SolidCP.ico"/>
-    <Property Id="ARPPRODUCTICON" Value="SolidCP.ico" />
+    <Icon Id="FuseCP.ico" SourceFile="FuseCP.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="FuseCP.ico" />
 
 
   </Product>
@@ -34,10 +34,10 @@
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
-				<Directory Id="INSTALLFOLDER" Name="SolidCP Installer" />
+				<Directory Id="INSTALLFOLDER" Name="FuseCP Installer" />
 			</Directory>
       <Directory Id="ProgramMenuFolder">
-        <Directory Id="ApplicationProgramsFolder" Name="SolidCP" />
+        <Directory Id="ApplicationProgramsFolder" Name="FuseCP" />
       </Directory>
 		</Directory>
 	</Fragment>
@@ -47,14 +47,14 @@
       <!-- Binaries -->
       <DirectoryRef Id="INSTALLFOLDER">
        <Component Id="ProductFiles" Guid="A89FA6CF-53E2-4390-9E9D-11CD4297D738">
-        <!--<File Id="SolidCP.Installer.Core.dll" Source="$(var.BUILDPATH)\SolidCP.Installer.Core.dll" />-->
-        <File Id="SolidCP.Installer.exe" Source="$(var.BUILDPATH)\SolidCP.Installer.exe" />
-         <!-- <File Id="SolidCP.Installer.exe.config" Source="$(var.BUILDPATH)\SolidCP.Installer.exe.config" /> -->
-        <File Id="SolidCP.SilentInstaller.exe" Source="$(var.BUILDPATH)\SolidCP.SilentInstaller.exe" />
+        <!--<File Id="FuseCP.Installer.Core.dll" Source="$(var.BUILDPATH)\FuseCP.Installer.Core.dll" />-->
+        <File Id="FuseCP.Installer.exe" Source="$(var.BUILDPATH)\FuseCP.Installer.exe" />
+         <!-- <File Id="FuseCP.Installer.exe.config" Source="$(var.BUILDPATH)\FuseCP.Installer.exe.config" /> -->
+        <File Id="FuseCP.SilentInstaller.exe" Source="$(var.BUILDPATH)\FuseCP.SilentInstaller.exe" />
         <!--<File Id="DotNetZip" Source="$(var.BUILDPATH)\DotNetZip.dll" />-->
       </Component>
         <Component Id="ConfigFile" Guid="B12FA6CF-53E2-4390-9E9D-11CD4297D739" NeverOverwrite="yes">
-          <File Id="SolidCP.Installer.exe.config" Source="$(var.BUILDPATH)\SolidCP.Installer.exe.config" />
+          <File Id="FuseCP.Installer.exe.config" Source="$(var.BUILDPATH)\FuseCP.Installer.exe.config" />
         </Component>
       </DirectoryRef>
     
@@ -62,12 +62,12 @@
       <DirectoryRef Id="ApplicationProgramsFolder"> 
        <Component Id="ApplicationShortcut" Guid="2135C88C-E14C-4280-B553-2D8B41468F95">
         <Shortcut Id="ApplicationStartMenuShortcut"
-          Name="SolidCP Installer"
-          Description="SolidCP Installer"
-          Target="[INSTALLFOLDER]SolidCP.Installer.exe"
+          Name="FuseCP Installer"
+          Description="FuseCP Installer"
+          Target="[INSTALLFOLDER]FuseCP.Installer.exe"
           WorkingDirectory="INSTALLFOLDER"/>
         <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
-        <RegistryValue Root="HKCU" Key="Software\SolidCP\SolidCP Installer" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+        <RegistryValue Root="HKCU" Key="Software\FuseCP\FuseCP Installer" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
       </Component>
     </DirectoryRef>
 

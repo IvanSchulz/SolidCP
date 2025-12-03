@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		VersionInfo.cs = VersionInfo.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.VmConfig", "SolidCP.VmConfig\SolidCP.VmConfig.csproj", "{58FEFE0B-A0E7-4FB3-9E60-91E18BEECDA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.VmConfig", "FuseCP.VmConfig\FuseCP.VmConfig.csproj", "{58FEFE0B-A0E7-4FB3-9E60-91E18BEECDA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.VmConfig.Common", "SolidCP.VmConfig.Common\SolidCP.VmConfig.Common.csproj", "{456AA9C9-AB1C-490D-AD33-33EADE1071C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.VmConfig.Common", "FuseCP.VmConfig.Common\FuseCP.VmConfig.Common.csproj", "{456AA9C9-AB1C-490D-AD33-33EADE1071C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

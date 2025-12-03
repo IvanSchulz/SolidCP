@@ -1,6 +1,6 @@
-﻿using System.Configuration;
+using System.Configuration;
 
-namespace SolidCP.WebDav.Core.Config.WebConfigSections
+namespace FuseCP.WebDav.Core.Config.WebConfigSections
 {
     [ConfigurationCollection(typeof(OwaSupportedBrowsersElement))]
     public class OwaSupportedBrowsersElementCollection : ConfigurationElementCollection

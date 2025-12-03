@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDavPortal.Models.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDavPortal.Models.Common;
 
-namespace SolidCP.WebDavPortal.Models
+namespace FuseCP.WebDavPortal.Models
 {
     public class AccountModel
     {

@@ -1,4 +1,4 @@
-﻿#if NETFRAMEWORK
+#if NETFRAMEWORK
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -14,7 +14,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SQLite;
 using Npgsql;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public class DbConfiguration : System.Data.Entity.DbConfiguration
 	{

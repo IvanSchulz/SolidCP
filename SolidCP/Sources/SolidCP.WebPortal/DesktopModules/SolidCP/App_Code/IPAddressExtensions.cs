@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Xml;
 using System.Net;
 using System.IO;
@@ -7,8 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections.Specialized;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal;
 
 namespace Knom.Helpers.Net
 {

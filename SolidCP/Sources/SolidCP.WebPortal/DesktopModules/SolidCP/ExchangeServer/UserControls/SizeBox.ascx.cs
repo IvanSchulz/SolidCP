@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
     public partial class SizeBox : System.Web.UI.UserControl
     {

@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	[Serializable]
 	public class ExecutionResult

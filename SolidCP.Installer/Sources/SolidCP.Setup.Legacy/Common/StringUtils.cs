@@ -36,7 +36,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SolidCP.Setup.Common
+namespace FuseCP.Setup.Common
 {
     public class StringUtils
     {

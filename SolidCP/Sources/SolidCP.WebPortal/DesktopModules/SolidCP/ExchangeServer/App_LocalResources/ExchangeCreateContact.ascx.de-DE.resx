@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -124,7 +124,7 @@
     <value>Kontakt erstellen</value>
   </data>
   <data name="FormComments.Text" xml:space="preserve">
-    <value>&lt;p&gt;&lt;b&gt;Anzeigename&lt;/b&gt; wird im globalen Adressbuch in Outlook und OWA (Webmail) angezeigt.&lt;/p&gt;&lt;p&gt;Sie kÃ¶nnen sowohl interne als auch externe E-Mail-Adressen im "E-Mail-Adresse"-Feld angeben.&lt;/p&gt;</value>
+    <value>&lt;p&gt;&lt;b&gt;Anzeigename&lt;/b&gt; wird im globalen Adressbuch in Outlook und OWA (Webmail) angezeigt.&lt;/p&gt;&lt;p&gt;Sie können sowohl interne als auch externe E-Mail-Adressen im "E-Mail-Adresse"-Feld angeben.&lt;/p&gt;</value>
   </data>
   <data name="locDisplayName.Text" xml:space="preserve">
     <value>Anzeigename: *</value>
@@ -142,7 +142,7 @@
     <value>Kontakte</value>
   </data>
   <data name="valCorrectEmail.ErrorMessage" xml:space="preserve">
-    <value>Bitte geben Sie einen gÃ¼ltige E-Mail-Adresse ein, wie z.B. irgendwer@solidcp.com</value>
+    <value>Bitte geben Sie einen gültige E-Mail-Adresse ein, wie z.B. irgendwer@fusecp.com</value>
   </data>
   <data name="valCorrectEmail.Text" xml:space="preserve">
     <value>*</value>

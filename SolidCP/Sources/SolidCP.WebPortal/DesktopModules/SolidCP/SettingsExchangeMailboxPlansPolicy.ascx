@@ -1,11 +1,11 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangeMailboxPlansPolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsExchangeMailboxPlansPolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangeMailboxPlansPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsExchangeMailboxPlansPolicy" %>
 <%@ Register Src="ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
 <%@ Register Src="ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
     <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
     <scp:SimpleMessageBox id="messageBox" runat="server" />
@@ -139,7 +139,7 @@
 			<table>
                 <tr>
 					<td class="FormLabel200" align="right">
-                        <asp:Localize ID="locAutoReplyEnabled" runat="server" meta:resourcekey="locAutoReplyEnabled" Text="Automatic Replies via SolidCP"></asp:Localize>
+                        <asp:Localize ID="locAutoReplyEnabled" runat="server" meta:resourcekey="locAutoReplyEnabled" Text="Automatic Replies via FuseCP"></asp:Localize>
 					</td>
                     <td style="padding-left: 5px;">
                         <asp:CheckBox ID="chkAutoReplyEnabled" runat="server" Text="" />

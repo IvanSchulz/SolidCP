@@ -34,7 +34,7 @@ using System;
 using System.Collections.Specialized;
 using System.Text;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     public class ServiceProviderSettings
     {

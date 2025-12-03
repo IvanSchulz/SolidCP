@@ -32,16 +32,16 @@
 
 using System.Linq;
 
-namespace SolidCP.Providers.Web.Handlers
+namespace FuseCP.Providers.Web.Handlers
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
     using Microsoft.Web.Administration;
-    using SolidCP.Providers.Web.Iis.Common;
+    using FuseCP.Providers.Web.Iis.Common;
     using Microsoft.Web.Management.Server;
-	using SolidCP.Providers.Utils;
-	using SolidCP.Server.Utils;
+	using FuseCP.Providers.Utils;
+	using FuseCP.Server.Utils;
 
 	internal sealed class HandlersModuleService : ConfigurationModuleService
 	{

@@ -31,18 +31,18 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.HostedSolution;
 
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
 
-namespace SolidCP.Portal.Lync
+namespace FuseCP.Portal.Lync
 {
-    public partial class EditLyncUser : SolidCPModuleBase
+    public partial class EditLyncUser : FuseCPModuleBase
     {
        
         protected void Page_Load(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace SolidCP.Portal.Lync
 
             bool enterpriseVoice = false;
 
-            SolidCP.Providers.HostedSolution.LyncUserPlan plan = planSelector.plan;
+            FuseCP.Providers.HostedSolution.LyncUserPlan plan = planSelector.plan;
             if (plan != null)
                 enterpriseVoice = plan.EnterpriseVoice && enterpriseVoiceQuota && (ddlPhoneNumber.Items.Count > 0);
 
@@ -130,7 +130,7 @@ namespace SolidCP.Portal.Lync
 
             if (user.LevelId > 0 && cntx.Groups.ContainsKey(ResourceGroups.ServiceLevels))
             {
-                SolidCP.EnterpriseServer.Base.HostedSolution.ServiceLevel serviceLevel = ES.Services.Organizations.GetSupportServiceLevel(user.LevelId);
+                FuseCP.EnterpriseServer.Base.HostedSolution.ServiceLevel serviceLevel = ES.Services.Organizations.GetSupportServiceLevel(user.LevelId);
 
                 litServiceLevel.Visible = true;
                 litServiceLevel.Text = serviceLevel.LevelName;

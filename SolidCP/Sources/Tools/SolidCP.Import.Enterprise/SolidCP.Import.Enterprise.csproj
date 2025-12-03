@@ -6,7 +6,7 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <OutputType>WinExe</OutputType>
         <ApplicationIcon>application.ico</ApplicationIcon>
-        <StartupObject>SolidCP.Import.Enterprise.Program</StartupObject>
+        <StartupObject>FuseCP.Import.Enterprise.Program</StartupObject>
         <PublishUrl>publish\</PublishUrl>
         <NoWarn>NU1605</NoWarn>
         <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
@@ -149,11 +149,11 @@
         <None Include="Resources\UserSmallIcon.ico" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\..\SolidCP.EnterpriseServer.Code\SolidCP.EnterpriseServer.Code.csproj" />
-        <ProjectReference Include="..\..\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj" />
-        <ProjectReference Include="..\..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj" />
-        <ProjectReference Include="..\..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\..\FuseCP.EnterpriseServer.Code\FuseCP.EnterpriseServer.Code.csproj" />
+        <ProjectReference Include="..\..\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj" />
+        <ProjectReference Include="..\..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj" />
+        <ProjectReference Include="..\..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
     </ItemGroup>
 </Project>

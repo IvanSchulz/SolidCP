@@ -1,4 +1,4 @@
-ï»¿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -41,11 +41,11 @@ using System.Runtime.Remoting;
 using System.Text;
 using System.Reflection;
 using Microsoft.Win32;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
 
 using System.Management;
 using System.Management.Automation;
@@ -55,12 +55,12 @@ using System.DirectoryServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Xml;
-using SolidCP.EnterpriseServer.Base.RDS;
+using FuseCP.EnterpriseServer.Base.RDS;
 using System.Security.Principal;
 using System.Security.AccessControl;
 
 
-namespace SolidCP.Providers.RemoteDesktopServices
+namespace FuseCP.Providers.RemoteDesktopServices
 {
     public class Windows2012 : HostingServiceProviderBase, IRemoteDesktopServices
     {
@@ -80,7 +80,7 @@ namespace SolidCP.Providers.RemoteDesktopServices
         private const string RdsCollectionComputersGroupDescription = "SCP RDS Collection Computers";
         private const string RdsServersOU = "RDSServersOU";
         private const string RdsServersRootOU = "RDSRootServersOU";
-        private const string RDSHelpDeskComputerGroup = "SolidCP-RDSHelpDesk-Computer";        
+        private const string RDSHelpDeskComputerGroup = "FuseCP-RDSHelpDesk-Computer";        
         private const string RDSHelpDeskGroup = "SCP-HelpDeskAdministrators";
         private const string RDSHelpDeskGroupDescription = "SCP Help Desk Administrators";
         private const string LocalAdministratorsGroupName = "Administrators";
@@ -1474,7 +1474,7 @@ namespace SolidCP.Providers.RemoteDesktopServices
                 string.Format("$ADSI = [ADSI] \"{0}\"", GetGpoPath(gpoId)),
                 "$SID = New-Object System.Security.Principal.SecurityIdentifier(\"S-1-5-11\")",
                 "$AthUsers = $SID.Translate([System.Security.Principal.NTAccount]).value",
-                "$ADSI.psbase.ObjectSecurity.Access | ForEach-Object {\nif ($_.IdentityReference â€“eq $AthUsers) {\n$ADSI.psbase.ObjectSecurity.RemoveAccessRule($_)\n}\n}",
+                "$ADSI.psbase.ObjectSecurity.Access | ForEach-Object {\nif ($_.IdentityReference –eq $AthUsers) {\n$ADSI.psbase.ObjectSecurity.RemoveAccessRule($_)\n}\n}",
                 "$AclRule = New-Object System.DirectoryServices.ActiveDirectoryAccessRule([System.Security.Principal.IdentityReference]$SID.Translate([System.Security.Principal.NTAccount]), [System.DirectoryServices.ActiveDirectoryRights]\"GenericRead\", [System.Security.AccessControl.AccessControlType]\"Allow\")",
                 "$ADSI.psbase.ObjectSecurity.AddAccessRule($AclRule)",
                 "$ADSI.psbase.CommitChanges()",
@@ -1703,8 +1703,8 @@ namespace SolidCP.Providers.RemoteDesktopServices
         {
             var scripts = new List<string>
             {                
-                string.Format("$mypwd = ConvertTo-SecureString -String {0} -Force â€“AsPlainText", password),
-                string.Format("Import-PfxCertificate â€“FilePath \"{0}\" cert:\\localMachine\\my -Password $mypwd", certificatePath),
+                string.Format("$mypwd = ConvertTo-SecureString -String {0} -Force –AsPlainText", password),
+                string.Format("Import-PfxCertificate –FilePath \"{0}\" cert:\\localMachine\\my -Password $mypwd", certificatePath),
                 string.Format("$cert = Get-Item cert:\\LocalMachine\\My\\{0}", thumbprint),
                 string.Format("$path = (Get-WmiObject -class \"Win32_TSGeneralSetting\" -Namespace root\\cimv2\\terminalservices -Filter \"TerminalName='RDP-tcp'\").__path"),
                 string.Format("Set-WmiInstance -Path $path -argument @{0}", string.Format("{{SSLCertificateSHA1Hash=\"{0}\"}}", thumbprint))

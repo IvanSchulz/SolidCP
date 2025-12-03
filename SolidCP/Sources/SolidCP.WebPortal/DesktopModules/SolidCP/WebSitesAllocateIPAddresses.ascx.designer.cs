@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class WebSitesAllocateIPAddresses {
@@ -52,6 +52,6 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.AllocatePackageIPAddresses allocateAddresses;
+        protected global::FuseCP.Portal.UserControls.AllocatePackageIPAddresses allocateAddresses;
     }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.Management.Infrastructure;
+using Microsoft.Management.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Management.Automation.Runspaces;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class SnapshotHelper
     {

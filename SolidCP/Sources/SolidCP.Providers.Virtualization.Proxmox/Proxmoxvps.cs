@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2017, Centron GmbH
+// Copyright (c) 2017, Centron GmbH
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -55,18 +55,18 @@ using System.Dynamic;
 using System.Threading;
 
 using System.Xml;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.HostedSolution.Proxmox;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.HostedSolution.Proxmox;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using System.Configuration;
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using SolidCP.Providers.Virtualization.Extensions;
-using SolidCP.Providers.Virtualization.Proxmox;
+using FuseCP.Providers.Virtualization.Extensions;
+using FuseCP.Providers.Virtualization.Proxmox;
 
 using Renci.SshNet;
 using Renci.SshNet.Common;
@@ -78,7 +78,7 @@ using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class Proxmoxvps : HostingServiceProviderBase, IVirtualizationServerProxmox, IDisposable
     {
@@ -258,7 +258,7 @@ namespace SolidCP.Providers.Virtualization
         #region Fields
         // proxmox
         private const string THUMB_PRINT_TEXT = "PROXMOX VPS";
-        private const string SNAPSHOT_DESCR = "SolidCP Snapshot";
+        private const string SNAPSHOT_DESCR = "FuseCP Snapshot";
         private const string PROXMOX_REALM = "pam";
         public RestResponse Response;
         //private string upid;
@@ -1081,7 +1081,7 @@ namespace SolidCP.Providers.Virtualization
 
         public string SnapshotScreenshotFile(string snapshotId)
         {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SolidCP", "Snapshots", $"proxmox-screenshot-{snapshotId}.png");
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FuseCP", "Snapshots", $"proxmox-screenshot-{snapshotId}.png");
         }
 
         public JobResult CreateSnapshot(string vmId)

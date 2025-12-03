@@ -41,11 +41,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.Providers.SharePoint;
+using FuseCP.Providers.SharePoint;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class HostedSharePointEnterpriseBackupSiteCollection : SolidCPModuleBase
+	public partial class HostedSharePointEnterpriseBackupSiteCollection : FuseCPModuleBase
 	{
 		private const string BACKUP_EXTENSION = ".bsh";
 

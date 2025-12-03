@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Win32;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	[Serializable]
 	public sealed class ExecutionContext

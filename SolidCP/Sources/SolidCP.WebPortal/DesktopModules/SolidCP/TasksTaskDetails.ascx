@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TasksTaskDetails.ascx.cs" Inherits="SolidCP.Portal.TasksTaskDetails" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TasksTaskDetails.ascx.cs" Inherits="FuseCP.Portal.TasksTaskDetails" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <div class="panel-body form-horizontal">
 <asp:Timer runat="server" Interval="4000" ID="tasksTimer" />

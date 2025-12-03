@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class FileManager {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// MessageBoxUpdatePanel control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
                 
         /// <summary>
         /// cmdUpload control.
@@ -415,7 +415,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup copyDestination;
+        protected global::FuseCP.Portal.FileLookup copyDestination;
         
         /// <summary>
         /// btnCancelCopy control.
@@ -469,7 +469,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup moveDestination;
+        protected global::FuseCP.Portal.FileLookup moveDestination;
         
         /// <summary>
         /// btnCancelMove control.
@@ -523,7 +523,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileNameControl txtFileName;
+        protected global::FuseCP.Portal.FileNameControl txtFileName;
         
         /// <summary>
         /// lblFileContentOptional control.
@@ -595,7 +595,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileNameControl txtFolderName;
+        protected global::FuseCP.Portal.FileNameControl txtFolderName;
         
         /// <summary>
         /// btnCancelCreateFolder control.
@@ -649,7 +649,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileNameControl txtZipName;
+        protected global::FuseCP.Portal.FileNameControl txtZipName;
         
         /// <summary>
         /// btnCancelZip control.
@@ -703,7 +703,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileNameControl txtDatabaseName;
+        protected global::FuseCP.Portal.FileNameControl txtDatabaseName;
         
         /// <summary>
         /// btnCancelCreateDatabase control.
@@ -973,7 +973,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileNameControl txtRenameFile;
+        protected global::FuseCP.Portal.FileNameControl txtRenameFile;
         
         /// <summary>
         /// btnCancelRename control.
@@ -1144,7 +1144,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota Quota1;
+        protected global::FuseCP.Portal.Quota Quota1;
         
         /// <summary>
         /// btnRecalcDiskspace control.

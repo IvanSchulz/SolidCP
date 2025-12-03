@@ -1,61 +1,61 @@
 [
     {
         "id": 200,
-        "application": "SolidCP",
+        "application": "FuseCP",
         "name": "Standalone Server Setup",
         "code": "standalone",
         "platforms": "windows,unix",
-        "description": "Express setup for standalone server configuration. It installs Portal, Enterprise, and Server components on the same server and configures SolidCP using sample settings.",
-        "fullFile": "SolidCP-StandaloneServerSetup.zip",
+        "description": "Express setup for standalone server configuration. It installs Portal, Enterprise, and Server components on the same server and configures FuseCP using sample settings.",
+        "fullFile": "FuseCP-StandaloneServerSetup.zip",
         "installerPath": "Setup\\Setup2.dll",
-        "installerType": "SolidCP.Setup.StandaloneServer200"
+        "installerType": "FuseCP.Setup.StandaloneServer200"
     },
     {
         "id": 250,
-        "application": "SolidCP",
+        "application": "FuseCP",
         "name": "Portal",
         "code": "portal",
         "platforms": "windows,unix",
-        "description": "SolidCP Portal is a user interface to the control panel which allows managing user accounts, hosting spaces, web sites, FTP accounts, files, etc.",
-        "fullFile": "SolidCP-Portal.zip",
-        "updateFile": "SolidCP-Portal-Update.zip",
+        "description": "FuseCP Portal is a user interface to the control panel which allows managing user accounts, hosting spaces, web sites, FTP accounts, files, etc.",
+        "fullFile": "FuseCP-Portal.zip",
+        "updateFile": "FuseCP-Portal-Update.zip",
         "installerPath": "Setup\\Setup2.dll",
-        "installerType": "SolidCP.Setup.Portal200"
+        "installerType": "FuseCP.Setup.Portal200"
     },
     {
         "id": 350,
-        "application": "SolidCP",
+        "application": "FuseCP",
         "name": "Enterprise Server",
         "code": "enterprise server",
         "platforms": "windows,unix",
-        "description": "Enterprise Server is the core of SolidCP system. It includes all business logic of the application. Enterprise Server should have access to Server and be accessible from Portal applications.",
-        "fullFile": "SolidCP-EnterpriseServer.zip",
-        "updateFile": "SolidCP-EnterpriseServer-Update.zip",
+        "description": "Enterprise Server is the core of FuseCP system. It includes all business logic of the application. Enterprise Server should have access to Server and be accessible from Portal applications.",
+        "fullFile": "FuseCP-EnterpriseServer.zip",
+        "updateFile": "FuseCP-EnterpriseServer-Update.zip",
         "installerPath": "Setup\\Setup2.dll",
-        "installerType": "SolidCP.Setup.EnterpriseServer200"
+        "installerType": "FuseCP.Setup.EnterpriseServer200"
     },
     {
         "id": 450,
-        "application": "SolidCP",
+        "application": "FuseCP",
         "name": "Server",
         "code": "server",
         "platforms": "windows,unix",
-        "description": "SolidCP Server is a set of services running on the remote server to be controlled. Server application should be reachable from Enterprise Server one.",
-        "fullFile": "SolidCP-Server.zip",
-        "updateFile": "SolidCP-Server-Update.zip",
+        "description": "FuseCP Server is a set of services running on the remote server to be controlled. Server application should be reachable from Enterprise Server one.",
+        "fullFile": "FuseCP-Server.zip",
+        "updateFile": "FuseCP-Server-Update.zip",
         "installerPath": "Setup\\Setup2.dll",
-        "installerType": "SolidCP.Setup.Server200"
+        "installerType": "FuseCP.Setup.Server200"
     },
     {
         "id": 550,
-        "application": "SolidCP",
+        "application": "FuseCP",
         "name": "Cloud Storage Portal",
         "code": "WebDavPortal",
         "platforms": "windows",
-        "description": "SolidCP Cloud Storage Portal is a client frontend for viewing and editing their Cloud (WebDav) storage files.",
-        "fullFile": "SolidCP-Web-Dav-Portal.zip",
-        "updateFile": "SolidCP-Web-Dav-Portal.zip",
+        "description": "FuseCP Cloud Storage Portal is a client frontend for viewing and editing their Cloud (WebDav) storage files.",
+        "fullFile": "FuseCP-Web-Dav-Portal.zip",
+        "updateFile": "FuseCP-Web-Dav-Portal.zip",
         "installerPath": "Setup\\Setup2.dll",
-        "installerType": "SolidCP.Setup.WebDavPortal200"
+        "installerType": "FuseCP.Setup.WebDavPortal200"
     }
 ]

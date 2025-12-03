@@ -49,7 +49,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Linq;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	public static class UiUtils
 	{

@@ -35,9 +35,9 @@ using System.Collections.Generic;
 using System.Web;
 using System.Threading;
 
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CreateServerAsyncWorker: ControllerAsyncBase
     {

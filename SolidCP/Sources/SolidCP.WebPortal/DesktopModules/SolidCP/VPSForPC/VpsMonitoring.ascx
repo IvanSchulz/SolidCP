@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsMonitoring.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VpsMonitoring" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsMonitoring.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VpsMonitoring" %>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
     Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
@@ -19,7 +19,7 @@
 <div runat="server" id="divWrapper">
 <script type="text/javascript">
     function ShowASPanel(chartType) {
-        var sUrl = "/DesktopModules/SolidCP/VPSForPC/MonitoringPage.aspx" + "?ItemID=" + $("#<%=hItemId.ClientID%>").val() + '&chartType=' + chartType;
+        var sUrl = "/DesktopModules/FuseCP/VPSForPC/MonitoringPage.aspx" + "?ItemID=" + $("#<%=hItemId.ClientID%>").val() + '&chartType=' + chartType;
         var win = $.window({
             title: "Performance Counter: " + chartType,
             url: sUrl,

@@ -40,7 +40,7 @@ using System.Globalization;
 using System.Text;
 using System.Linq;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class ActiveDirectoryUtils
     {

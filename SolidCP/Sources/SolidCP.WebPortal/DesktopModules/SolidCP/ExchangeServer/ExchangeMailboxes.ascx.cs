@@ -33,15 +33,15 @@
 using System;
 using System.Linq;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 using System.Collections.Generic;
 using System.Web.UI;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxes : SolidCPModuleBase
+    public partial class ExchangeMailboxes : FuseCPModuleBase
     {
         private bool ArchivingBoxes
         {

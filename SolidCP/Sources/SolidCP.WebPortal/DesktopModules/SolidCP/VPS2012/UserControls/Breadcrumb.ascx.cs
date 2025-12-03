@@ -35,9 +35,9 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.VPS2012.UserControls
+namespace FuseCP.Portal.VPS2012.UserControls
 {
     public partial class Breadcrumb : System.Web.UI.UserControl
     {

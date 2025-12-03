@@ -35,9 +35,9 @@ using System.Linq;
 using System.Management.Automation;
 using Microsoft.Management.Infrastructure;
 using Microsoft.Management.Infrastructure.Generic;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	/// <summary>Copy fields from CimInstance#DnsServerResourceRecord into DnsRecord</summary>
 	/// <remarks>It's also possible to access native CIM object, and use Mgmtclassgen.exe for that.</remarks>

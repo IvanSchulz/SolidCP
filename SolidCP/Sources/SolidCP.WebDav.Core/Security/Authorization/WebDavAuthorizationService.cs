@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Cobalt;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Extensions;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
-using SolidCP.WebDav.Core.Security.Authorization.Enums;
-using SolidCP.WebDav.Core.Scp.Framework;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Extensions;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.WebDav.Core.Security.Authorization.Enums;
+using FuseCP.WebDav.Core.Scp.Framework;
 
-namespace SolidCP.WebDav.Core.Security.Authorization
+namespace FuseCP.WebDav.Core.Security.Authorization
 {
     public class WebDavAuthorizationService : IWebDavAuthorizationService
     {

@@ -8,11 +8,11 @@
 
 @using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory
 
-@namespace SolidCP.Build
+@namespace FuseCP.Build
 @inherits RazorBlade.PlainTextTemplate
 
-[System.CodeDom.Compiler.GeneratedCodeAttribute("SolidCP.Build", "1.0")]
-public partial class @(Class.Identifier): SolidCP.Web.Clients.ClientBase<I@(Class.Identifier), @(Class.Identifier)AssemblyClient>, I@(Class.Identifier) {
+[System.CodeDom.Compiler.GeneratedCodeAttribute("FuseCP.Build", "1.0")]
+public partial class @(Class.Identifier): FuseCP.Web.Clients.ClientBase<I@(Class.Identifier), @(Class.Identifier)AssemblyClient>, I@(Class.Identifier) {
 
 	@foreach (var method in WebMethods
 		.Select(m => new {
@@ -31,7 +31,7 @@ public partial class @(Class.Identifier): SolidCP.Web.Clients.ClientBase<I@(Clas
 				m => m.IsKind(SyntaxKind.OutKeyword) || m.IsKind(SyntaxKind.RefKeyword)))),
 			HasSoapHeader = m.AttributeLists
 				.SelectMany(at => at.Attributes)
-				.Any(at => Regex.IsMatch(at.Name.ToString(), "(?:(?:SolidCP.)?Providers.)?SoapHeader(?:Attribute)?"))
+				.Any(at => Regex.IsMatch(at.Name.ToString(), "(?:(?:FuseCP.)?Providers.)?SoapHeader(?:Attribute)?"))
 		}))
 	{
 		@method.Normal.NormalizeWhitespace()

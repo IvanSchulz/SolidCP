@@ -28,13 +28,13 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class EnterpriseStorageSpaces : SolidCPModuleBase
+    public partial class EnterpriseStorageSpaces : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -68,7 +68,7 @@ namespace SolidCP.Portal.ExchangeServer
 
         private void BindEnterpriseStorageSpaces()
         {
-            SolidCP.Providers.OS.SystemFile[] list = ES.Services.EnterpriseStorage.GetEnterpriseFolders(PanelRequest.ItemID);
+            FuseCP.Providers.OS.SystemFile[] list = ES.Services.EnterpriseStorage.GetEnterpriseFolders(PanelRequest.ItemID);
 
             gvSpaces.DataSource = list;
             gvSpaces.DataBind();

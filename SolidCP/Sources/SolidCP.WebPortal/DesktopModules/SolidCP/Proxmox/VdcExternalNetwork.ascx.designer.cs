@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox {
+namespace FuseCP.Portal.Proxmox {
     
     
     public partial class VdcExternalNetwork {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.PackageIPAddresses packageAddresses;
+        protected global::FuseCP.Portal.UserControls.PackageIPAddresses packageAddresses;
         
         /// <summary>
         /// secQuotas-Steuerelement
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel-Steuerelement
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota addressesQuota;
+        protected global::FuseCP.Portal.Quota addressesQuota;
         
         /// <summary>
         /// locBandwidthQuota-Steuerelement
@@ -73,6 +73,6 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota bandwidthQuota;
+        protected global::FuseCP.Portal.Quota bandwidthQuota;
     }
 }

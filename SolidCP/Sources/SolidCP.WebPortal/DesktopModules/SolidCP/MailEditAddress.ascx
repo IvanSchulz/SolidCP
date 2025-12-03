@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEditAddress.ascx.cs" Inherits="SolidCP.Portal.MailEditAddress" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEditAddress.ascx.cs" Inherits="FuseCP.Portal.MailEditAddress" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc2" %>
 <%@ Register TagPrefix="dnc" TagName="SelectDomain" Src="DomainsSelectDomainControl.ascx" %>
 

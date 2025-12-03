@@ -33,29 +33,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.Utils;
 using System.Management;
 using System.Xml;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 using System.Linq;
 using System.Management.Automation.Runspaces;
 
 using Vds = Microsoft.Storage.Vds;
 using System.Configuration;
 
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.VirtualizationForPC.SVMMService;
-using SolidCP.Providers.VirtualizationForPC.MonitoringWebService;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.VirtualizationForPC.SVMMService;
+using FuseCP.Providers.VirtualizationForPC.MonitoringWebService;
 
 using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.Management.Automation;
 using System.Collections.ObjectModel;
 
-namespace SolidCP.Providers.VirtualizationForPC
+namespace FuseCP.Providers.VirtualizationForPC
 {
 	public static class PowerShellExtensions
 	{
@@ -239,7 +239,7 @@ namespace SolidCP.Providers.VirtualizationForPC
 	public class HyperVForPC : HostingServiceProviderBase, IVirtualizationServerForPC
 	{
 		#region Constants
-		private const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "SolidCP.HyperV.UseDiskPartClearReadOnlyFlag";
+		private const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "FuseCP.HyperV.UseDiskPartClearReadOnlyFlag";
 		private const string WMI_VIRTUALIZATION_NAMESPACE = @"root\virtualization";
 		private const string WMI_CIMV2_NAMESPACE = @"root\cimv2";
 
@@ -824,7 +824,7 @@ namespace SolidCP.Providers.VirtualizationForPC
 							sourceVM = client.GetVirtualMachineByName(sourceName);
 						}
 
-						if (sourceVM.Status == SolidCP.Providers.VirtualizationForPC.SVMMService.VMComputerSystemStateInfo.UpdateFailed)
+						if (sourceVM.Status == FuseCP.Providers.VirtualizationForPC.SVMMService.VMComputerSystemStateInfo.UpdateFailed)
 						{
 							throw new Exception(String.Format("Creation Failed. Template not stoped. Current state = {0}", sourceVM.Status));
 						}
@@ -1211,16 +1211,16 @@ namespace SolidCP.Providers.VirtualizationForPC
 			}
 
 			// The virtual computer system must be in the powered off or saved state prior to calling this method.
-			if (vm.State == SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.Saved
-				|| vm.State == SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.PowerOff
-				|| vm.State == SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.CreationFailed
-				|| vm.State == SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.Stored
-				|| vm.State == SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.IncompleteVMConfig)
+			if (vm.State == FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.Saved
+				|| vm.State == FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.PowerOff
+				|| vm.State == FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.CreationFailed
+				|| vm.State == FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.Stored
+				|| vm.State == FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.IncompleteVMConfig)
 			{
 				// delete network adapters and ports
 				try
 				{
-					if (vm.State == SolidCP.Providers.Virtualization.VMComputerSystemStateInfo.PowerOff)
+					if (vm.State == FuseCP.Providers.Virtualization.VMComputerSystemStateInfo.PowerOff)
 					{
 						DeleteNetworkAdapters(vm.VmGuid);
 					}
@@ -1755,7 +1755,7 @@ namespace SolidCP.Providers.VirtualizationForPC
 
 				if ((pdOneVM != null) && (pdOneVM.Length > 0))
 				{
-					SolidCP.Providers.VirtualizationForPC.MonitoringWebService.PerformanceDataValue[] retData =
+					FuseCP.Providers.VirtualizationForPC.MonitoringWebService.PerformanceDataValue[] retData =
 						client.GetMonitoringPerformanceValues(MonitoringServerNameSettings, pdOneVM[0], startPeriod, endPeriod);
 
 					int index = 1;
@@ -1767,7 +1767,7 @@ namespace SolidCP.Providers.VirtualizationForPC
 
 					for (int i = 0; i < retData.Length; i = i + index)
 					{
-						SolidCP.Providers.VirtualizationForPC.MonitoringWebService.PerformanceDataValue curr = retData[i];
+						FuseCP.Providers.VirtualizationForPC.MonitoringWebService.PerformanceDataValue curr = retData[i];
 
 						ret.Add(new Virtualization.PerformanceDataValue()
 						{

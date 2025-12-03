@@ -38,9 +38,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections.Specialized;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class CerberusFTP6_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class CerberusFTP6_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

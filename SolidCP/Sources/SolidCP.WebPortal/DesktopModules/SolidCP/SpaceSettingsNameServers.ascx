@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsNameServers.ascx.cs" Inherits="SolidCP.Portal.SpaceSettingsNameServers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsNameServers.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsNameServers" %>
 <%@ Register Src="UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 

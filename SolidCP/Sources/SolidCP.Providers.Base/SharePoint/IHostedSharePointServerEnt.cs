@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
     /// <summary>
     /// Exposes functionality for share point server provider hosted in conjunction with organization management provider and 

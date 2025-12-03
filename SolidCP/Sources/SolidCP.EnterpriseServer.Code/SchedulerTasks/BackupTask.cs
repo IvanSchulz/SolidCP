@@ -35,7 +35,7 @@ using System.Data;
 using System.Threading;
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Represents scheduler task that performs hosting space backup.

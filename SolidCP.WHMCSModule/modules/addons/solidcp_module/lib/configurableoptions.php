@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,22 +32,22 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP configurable options class
+ * FuseCP configurable options class
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
 
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/var_definition.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/var_definition.php');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-Class solidcp_configurableoptions{
+Class fusecp_configurableoptions{
     
     public $configurableoptions = NULL;
     
@@ -65,9 +65,9 @@ Class solidcp_configurableoptions{
 				ORDER BY name, `order`, sortorder");
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't read the SolidCP configurable options: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't read the FuseCP configurable options: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
-        return array('status' => 'success', 'description' => "SolidCP configurable options were read successfully.");
+        return array('status' => 'success', 'description' => "FuseCP configurable options were read successfully.");
     }
     
     public function setConfigurableOption($new){
@@ -100,9 +100,9 @@ Class solidcp_configurableoptions{
 			}
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't write the SolidCP configurable options: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't write the FuseCP configurable options: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
-        return array('status' => 'success', 'description' => "SolidCP configurable option was written successfully.");
+        return array('status' => 'success', 'description' => "FuseCP configurable option was written successfully.");
     }
     
     public function deleteConfigurableOption($whmcs_id){
@@ -113,9 +113,9 @@ Class solidcp_configurableoptions{
                     ->delete();
         }
         catch (Exception $e){
-            return array('status' => 'error', 'description' => "Couldn't delete the SolidCP configurable option: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
+            return array('status' => 'error', 'description' => "Couldn't delete the FuseCP configurable option: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
         }
-        return array('status' => 'success', 'description' => "SolidCP configurable option was deleted successfully.");
+        return array('status' => 'success', 'description' => "FuseCP configurable option was deleted successfully.");
     }
 
 }

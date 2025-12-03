@@ -36,9 +36,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-    public partial class VdcAuditLog : SolidCPModuleBase
+    public partial class VdcAuditLog : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

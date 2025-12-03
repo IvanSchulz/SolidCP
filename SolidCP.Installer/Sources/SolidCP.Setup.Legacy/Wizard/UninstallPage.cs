@@ -42,12 +42,12 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class UninstallPage : BannerWizardPage
 	{
@@ -260,7 +260,7 @@ namespace SolidCP.Setup
 			{
 				Log.WriteStart("Deleting menu shortcut");
 				string programs = Environment.GetFolderPath(Environment.SpecialFolder.Programs);
-				string path = Path.Combine(programs, "SolidCP Software");
+				string path = Path.Combine(programs, "FuseCP Software");
 				path = Path.Combine(path, fileName);
 				if (File.Exists(path))
 				{
@@ -398,7 +398,7 @@ namespace SolidCP.Setup
 				{
 					string appPoolName = AppConfig.GetComponentSettingStringValue(componentId, "ApplicationPool");
 					if (string.IsNullOrEmpty(appPoolName))
-						appPoolName = WebUtils.SolidCP_ADMIN_POOL;
+						appPoolName = WebUtils.FuseCP_ADMIN_POOL;
 					action = new InstallAction(ActionTypes.DeleteApplicationPool);
 					action.Name = appPoolName;
 					action.Description = "Deleting application pool...";
@@ -775,7 +775,7 @@ namespace SolidCP.Setup
 		private void DeleteUnixWebSite(string port)
 		{
 			Log.WriteStart("Deleting web site");
-			var serviceId = (UniversalInstaller.Installer.Current as UniversalInstaller.UnixInstaller)?.UnixServerServiceId ?? "solidcp-server";
+			var serviceId = (UniversalInstaller.Installer.Current as UniversalInstaller.UnixInstaller)?.UnixServerServiceId ?? "fusecp-server";
 
 			try
 			{

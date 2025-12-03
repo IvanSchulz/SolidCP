@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -41,11 +41,11 @@ using System.Runtime.Remoting;
 using System.Text;
 using System.Reflection;
 using Microsoft.Win32;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
 
 using System.Management;
 using System.Management.Automation;
@@ -55,14 +55,14 @@ using System.DirectoryServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Xml;
-using SolidCP.EnterpriseServer.Base.RDS;
+using FuseCP.EnterpriseServer.Base.RDS;
 using System.Security.Principal;
 using System.Security.AccessControl;
 
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.RemoteDesktopServices;
 
 
-namespace SolidCP.Providers.RemoteDesktopServices
+namespace FuseCP.Providers.RemoteDesktopServices
 {
     public class Windows2016 : Windows2012
     {

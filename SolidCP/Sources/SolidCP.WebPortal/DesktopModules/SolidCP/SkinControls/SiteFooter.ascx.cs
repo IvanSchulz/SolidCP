@@ -41,7 +41,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     public partial class SiteFooter : System.Web.UI.UserControl
     {

@@ -1,16 +1,16 @@
-﻿using AjaxControlToolkit;
+using AjaxControlToolkit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.RemoteDesktopServices;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class RdsLocalAdmins : SolidCPModuleBase
+    public partial class RdsLocalAdmins : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

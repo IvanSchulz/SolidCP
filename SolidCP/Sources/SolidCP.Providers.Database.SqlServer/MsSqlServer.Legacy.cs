@@ -38,11 +38,11 @@ using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
 	public class MsSqlServer : HostingServiceProviderBase, IDatabaseServer
 	{

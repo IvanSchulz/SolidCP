@@ -33,7 +33,7 @@
 using System;
 using Microsoft.Win32;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 /// <summary>
 /// Registry helper class.
@@ -47,7 +47,7 @@ public sealed class RegistryUtils
 	{
 	}
 
-	internal const string ProductKey = "SOFTWARE\\DotNetPark\\SolidCP\\";
+	internal const string ProductKey = "SOFTWARE\\DotNetPark\\FuseCP\\";
 	internal const string CompanyKey = "SOFTWARE\\DotNetPark\\";
 
 	/// <summary>

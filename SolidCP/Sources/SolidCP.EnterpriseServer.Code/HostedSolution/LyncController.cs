@@ -35,14 +35,14 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.Xml;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer.Code.HostedSolution
+namespace FuseCP.EnterpriseServer.Code.HostedSolution
 {
     public class LyncController: ControllerBase
     {

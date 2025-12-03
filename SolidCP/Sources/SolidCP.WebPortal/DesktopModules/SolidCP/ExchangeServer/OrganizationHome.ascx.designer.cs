@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class OrganizationHome {
@@ -118,7 +118,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer domainStats;
+        protected global::FuseCP.Portal.QuotaViewer domainStats;
         
         /// <summary>
         /// lnkUsers control.
@@ -136,7 +136,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer userStats;
+        protected global::FuseCP.Portal.QuotaViewer userStats;
         
         /// <summary>
         /// lnkDeletedUsers control.
@@ -154,7 +154,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer deletedUserStats;
+        protected global::FuseCP.Portal.QuotaViewer deletedUserStats;
         
         /// <summary>
         /// securGroupsStat control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer groupStats;
+        protected global::FuseCP.Portal.QuotaViewer groupStats;
         
         /// <summary>
         /// exchangeStatsPanel control.
@@ -217,7 +217,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer mailboxesStats;
+        protected global::FuseCP.Portal.QuotaViewer mailboxesStats;
         
         /// <summary>
         /// lnkSharedMailboxes control.
@@ -235,7 +235,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer mailboxesSharedStats;
+        protected global::FuseCP.Portal.QuotaViewer mailboxesSharedStats;
         
         /// <summary>
         /// lnkResourceMailboxes control.
@@ -253,7 +253,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer mailboxesResourceStats;
+        protected global::FuseCP.Portal.QuotaViewer mailboxesResourceStats;
         
         /// <summary>
         /// lnkJournalingMailboxes control.
@@ -271,7 +271,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer mailboxesJournalingStats;
+        protected global::FuseCP.Portal.QuotaViewer mailboxesJournalingStats;
         
         /// <summary>
         /// rowContacts control.
@@ -298,7 +298,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer contactsStats;
+        protected global::FuseCP.Portal.QuotaViewer contactsStats;
         
         /// <summary>
         /// rowLists control.
@@ -325,7 +325,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer listsStats;
+        protected global::FuseCP.Portal.QuotaViewer listsStats;
         
         /// <summary>
         /// rowFolders control.
@@ -352,7 +352,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer foldersStats;
+        protected global::FuseCP.Portal.QuotaViewer foldersStats;
         
         /// <summary>
         /// rowExchangeStorage control.
@@ -379,7 +379,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer exchangeStorageStats;
+        protected global::FuseCP.Portal.QuotaViewer exchangeStorageStats;
         
         /// <summary>
         /// rowExchangeLitigationHold control.
@@ -406,7 +406,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer exchangeLitigationHoldStats;
+        protected global::FuseCP.Portal.QuotaViewer exchangeLitigationHoldStats;
         
         /// <summary>
         /// rowExchangeArchiving control.
@@ -433,7 +433,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer exchangeArchivingStatus;
+        protected global::FuseCP.Portal.QuotaViewer exchangeArchivingStatus;
         
         /// <summary>
         /// besStatsPanel control.
@@ -469,7 +469,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer besUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer besUsersStats;
         
         /// <summary>
         /// sfbStatsPanel control.
@@ -505,7 +505,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer sfbUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer sfbUsersStats;
         
         /// <summary>
         /// lyncStatsPanel control.
@@ -541,7 +541,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer lyncUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer lyncUsersStats;
         
         /// <summary>
         /// sharePointStatsPanel control.
@@ -577,7 +577,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer siteCollectionsStats;
+        protected global::FuseCP.Portal.QuotaViewer siteCollectionsStats;
         
         /// <summary>
         /// sharePointEnterpriseStatsPanel control.
@@ -613,7 +613,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer enterpriseSiteCollectionsStats;
+        protected global::FuseCP.Portal.QuotaViewer enterpriseSiteCollectionsStats;
         
         /// <summary>
         /// ocsStatsPanel control.
@@ -649,7 +649,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer ocsUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer ocsUsersStats;
         
         /// <summary>
         /// crmStatsPanel control.
@@ -685,7 +685,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer crmUsersStats;
         
         /// <summary>
         /// lnkLimitedCRMUsers control.
@@ -703,7 +703,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmLimitedUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer crmLimitedUsersStats;
         
         /// <summary>
         /// lnkESSCRMUsers control.
@@ -721,7 +721,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmESSUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer crmESSUsersStats;
         
         /// <summary>
         /// lnkCRMDBSize control.
@@ -739,7 +739,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmDBSize;
+        protected global::FuseCP.Portal.QuotaViewer crmDBSize;
         
         /// <summary>
         /// crm2013StatsPanel control.
@@ -775,7 +775,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmProfessionalUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer crmProfessionalUsersStats;
         
         /// <summary>
         /// lnkBasicCRMUsers control.
@@ -793,7 +793,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmBasicUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer crmBasicUsersStats;
         
         /// <summary>
         /// lnkEssentialCRMUsers control.
@@ -811,7 +811,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crmEssentialUsersStats;
+        protected global::FuseCP.Portal.QuotaViewer crmEssentialUsersStats;
         
         /// <summary>
         /// lnkCRM2013DBSize control.
@@ -829,7 +829,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer crm2013DBSize;
+        protected global::FuseCP.Portal.QuotaViewer crm2013DBSize;
         
         /// <summary>
         /// enterpriseStorageStatsPanel control.
@@ -865,7 +865,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer enterpriseStorageSpaceStats;
+        protected global::FuseCP.Portal.QuotaViewer enterpriseStorageSpaceStats;
         
         /// <summary>
         /// lnkEnterpriseStorageFolders control.
@@ -883,7 +883,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer enterpriseStorageFoldersStats;
+        protected global::FuseCP.Portal.QuotaViewer enterpriseStorageFoldersStats;
         
         /// <summary>
         /// serviceLevelsStatsPanel control.
@@ -937,7 +937,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer rdsServers;
+        protected global::FuseCP.Portal.QuotaViewer rdsServers;
         
         /// <summary>
         /// lnkRdsCollections control.
@@ -955,7 +955,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer rdsCollections;
+        protected global::FuseCP.Portal.QuotaViewer rdsCollections;
         
         /// <summary>
         /// lnkRdsUsers control.
@@ -973,6 +973,6 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer rdsUsers;
+        protected global::FuseCP.Portal.QuotaViewer rdsUsers;
     }
 }

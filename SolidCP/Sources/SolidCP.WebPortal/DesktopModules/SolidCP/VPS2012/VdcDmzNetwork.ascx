@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcDmzNetwork.ascx.cs" Inherits="SolidCP.Portal.VPS2012.VdcDmzNetwork" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcDmzNetwork.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VdcDmzNetwork" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
@@ -49,7 +49,7 @@
 						    SelectCountMethod="GetPackageDmzIPAddressesCount"
 						    SelectMethod="GetPackageDmzIPAddresses"
 						    SortParameterName="sortColumn"
-						    TypeName="SolidCP.Portal.VirtualMachines2012Helper"
+						    TypeName="FuseCP.Portal.VirtualMachines2012Helper"
 						    OnSelected="odsDmzAddressesPaged_Selected">
 					    <SelectParameters>
 						    <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="0" />						    

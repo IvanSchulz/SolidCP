@@ -31,7 +31,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SolidCP.PasswordEncoder
+namespace FuseCP.PasswordEncoder
 {
     static class Program
     {

@@ -1,4 +1,4 @@
-﻿using SolidCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Entities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public class TempIdSet: IQueryable<int>, IDisposable
 	{

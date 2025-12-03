@@ -33,7 +33,7 @@
 using System;
 using System.ServiceProcess;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	static class Program
 	{

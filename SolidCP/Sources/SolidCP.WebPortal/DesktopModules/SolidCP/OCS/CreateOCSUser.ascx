@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CreateOCSUser.ascx.cs" Inherits="SolidCP.Portal.OCS.CreateOCSUser" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CreateOCSUser.ascx.cs" Inherits="FuseCP.Portal.OCS.CreateOCSUser" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"

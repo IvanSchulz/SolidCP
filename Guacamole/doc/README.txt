@@ -26,5 +26,5 @@ To use the Guacamole Feature for VPS2012 some additional Steps are required:
 
 5) copy the Files of html directory to your Webserver vcproxy.yourdomain.com /
 6) Edit the config.inc.php
-7) Edit the SolidCP -> Servers -> VPS2012 -> Guacamole Section
+7) Edit the FuseCP -> Servers -> VPS2012 -> Guacamole Section
 

@@ -35,12 +35,12 @@ using System.Data;
 using System.Text;
 using System.Web.UI.WebControls;
 using System.Xml;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class AuditLogControl : SolidCPControlBase
+    public partial class AuditLogControl : FuseCPControlBase
     {
         private string logSource;
         public string LogSource

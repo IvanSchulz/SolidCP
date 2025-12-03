@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnableAsyncTasksSupport.ascx.cs" Inherits="SolidCP.Portal.EnableAsyncTasksSupport" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnableAsyncTasksSupport.ascx.cs" Inherits="FuseCP.Portal.EnableAsyncTasksSupport" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <input type="hidden" id="taskID" runat="server" />
 

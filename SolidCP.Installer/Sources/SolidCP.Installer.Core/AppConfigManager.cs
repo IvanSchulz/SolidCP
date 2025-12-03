@@ -33,19 +33,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Installer.Common;
+using FuseCP.Installer.Common;
 using System.Configuration;
-using SolidCP.Installer.Configuration;
+using FuseCP.Installer.Configuration;
 using System.IO;
 using System.Reflection;
 
 
-namespace SolidCP.Installer.Core
+namespace FuseCP.Installer.Core
 {
 	public sealed class AppConfigManager
 	{
 		private static System.Configuration.Configuration appConfig;
-		public const string AppConfigFileNameWithoutExtension = "SolidCP.Installer.exe";
+		public const string AppConfigFileNameWithoutExtension = "FuseCP.Installer.exe";
 
 		static AppConfigManager()
 		{

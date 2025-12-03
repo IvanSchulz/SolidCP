@@ -40,12 +40,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SpaceSettingsNameServers {
-        protected SolidCP.Portal.CollapsiblePanel secNameServers;
+        protected FuseCP.Portal.CollapsiblePanel secNameServers;
         protected System.Web.UI.WebControls.Panel NameServersPanel;
         protected System.Web.UI.WebControls.Label lblNameServers;
-        protected SolidCP.Portal.UserControls.EditDomainsList domainsList;
+        protected FuseCP.Portal.UserControls.EditDomainsList domainsList;
     }
 }

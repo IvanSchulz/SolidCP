@@ -1,4 +1,4 @@
-﻿// This file is auto generated, do not edit.
+// This file is auto generated, do not edit.
 #if ScaffoldedEntities
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities.Sources;
+namespace FuseCP.EnterpriseServer.Data.Entities.Sources;
 
 #if NetCore
 [Index("AccountId", Name = "WebDavPortalUsersSettingsIdx_AccountId")]

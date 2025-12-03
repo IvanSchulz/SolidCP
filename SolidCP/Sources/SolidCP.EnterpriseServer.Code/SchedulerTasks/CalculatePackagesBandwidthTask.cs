@@ -36,10 +36,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 
-using SolidCP.Providers;
-using SolidCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CalculatePackagesBandwidthTask : SchedulerTask
     {

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.EnterpriseServer.Data;
+namespace FuseCP.EnterpriseServer.Data;
 
 interface IMigratableDbContext : IDisposable
 {

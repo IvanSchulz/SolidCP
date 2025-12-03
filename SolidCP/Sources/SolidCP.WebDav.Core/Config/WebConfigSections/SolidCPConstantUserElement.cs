@@ -1,8 +1,8 @@
-﻿using System.Configuration;
+using System.Configuration;
 
-namespace SolidCP.WebDav.Core.Config.WebConfigSections
+namespace FuseCP.WebDav.Core.Config.WebConfigSections
 {
-    public class SolidCPConstantUserElement : ConfigurationElement
+    public class FuseCPConstantUserElement : ConfigurationElement
     {
         private const string LoginKey = "login";
         private const string PasswordKey = "password";

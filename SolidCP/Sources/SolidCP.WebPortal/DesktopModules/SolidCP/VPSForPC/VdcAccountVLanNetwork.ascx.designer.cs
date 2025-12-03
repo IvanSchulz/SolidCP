@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPSForPC {
+namespace FuseCP.Portal.VPSForPC {
     
     
     public partial class VdcAccountVLanNetwork {
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.Menu menu;
         
         /// <summary>
         /// gvVlans control.

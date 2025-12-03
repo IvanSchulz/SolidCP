@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceQuotasControl.ascx.cs" Inherits="SolidCP.Portal.SpaceQuotasControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceQuotasControl.ascx.cs" Inherits="FuseCP.Portal.SpaceQuotasControl" %>
 <%@ Register Src="UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="uc1" %>
 
 <asp:Repeater ID="dlGroups" runat="server" EnableViewState="false">

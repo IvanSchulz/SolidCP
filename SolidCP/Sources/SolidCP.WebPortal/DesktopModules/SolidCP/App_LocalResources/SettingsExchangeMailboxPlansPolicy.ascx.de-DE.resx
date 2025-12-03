@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnAddMailboxPlan.Text" xml:space="preserve">
-    <value>Neu hinzufÃ¼gen</value>
+    <value>Neu hinzufügen</value>
   </data>
   <data name="btnSetDefaultMailboxPlan.Text" xml:space="preserve">
     <value>Standard-Postfach-Plan festlegen</value>
@@ -148,13 +148,13 @@
     <value>Standard-Postfach-Plan</value>
   </data>
   <data name="gvMailboxPlanEdit.Header" xml:space="preserve">
-    <value>AuswÃ¤hlen</value>
+    <value>Auswählen</value>
   </data>
   <data name="gvMailboxPlans.Empty" xml:space="preserve">
-    <value>Es gibt noch keine Postfach-PlÃ¤ne. Um ein neuen Postfach-Plan hinzuzufÃ¼gen, klicken Sie auf "Neuen Postfach-Plan hinzufÃ¼gen".</value>
+    <value>Es gibt noch keine Postfach-Pläne. Um ein neuen Postfach-Plan hinzuzufügen, klicken Sie auf "Neuen Postfach-Plan hinzufügen".</value>
   </data>
   <data name="gvMailboxPlanSelect.Header" xml:space="preserve">
-    <value>AuswÃ¤hlen</value>
+    <value>Auswählen</value>
   </data>
   <data name="locDays.Text" xml:space="preserve">
     <value>Tage</value>
@@ -166,19 +166,19 @@
     <value>KB</value>
   </data>
   <data name="locKeepDeletedItems.Text" xml:space="preserve">
-    <value>GelÃ¶schte Objekte aufbewahren fÃ¼r:</value>
+    <value>Gelöschte Objekte aufbewahren für:</value>
   </data>
   <data name="locMailboxSize.Text" xml:space="preserve">
-    <value>PostfachgrÃ¶ÃŸe (MB):</value>
+    <value>Postfachgröße (MB):</value>
   </data>
   <data name="locMaxReceiveMessageSizeKB.Text" xml:space="preserve">
-    <value>Maximale EmpfangsgrÃ¶ÃŸe einer E-Mail [KB]</value>
+    <value>Maximale Empfangsgröße einer E-Mail [KB]</value>
   </data>
   <data name="locMaxRecipients.Text" xml:space="preserve">
-    <value>Maximale EmpfÃ¤nger:</value>
+    <value>Maximale Empfänger:</value>
   </data>
   <data name="locMaxSendMessageSizeKB.Text" xml:space="preserve">
-    <value>Maximale SendegrÃ¶ÃŸe einer E-Mail [KB]</value>
+    <value>Maximale Sendegröße einer E-Mail [KB]</value>
   </data>
   <data name="locProhibitSend.Text" xml:space="preserve">
     <value>Senden verbieten ab:</value>
@@ -187,10 +187,10 @@
     <value>Senden und Empfangen verbieten ab:</value>
   </data>
   <data name="locTitle.Text" xml:space="preserve">
-    <value>Postfach-Plan hinzufÃ¼gen</value>
+    <value>Postfach-Plan hinzufügen</value>
   </data>
   <data name="locWhenSizeExceeds.Text" xml:space="preserve">
-    <value>Wenn die PostfachgrÃ¶ÃŸe die folgende Menge Ã¼berschreitet:</value>
+    <value>Wenn die Postfachgröße die folgende Menge überschreitet:</value>
   </data>
   <data name="secDeleteRetention.Text" xml:space="preserve">
     <value>Aufbewahrung gel. Elemente</value>
@@ -208,22 +208,22 @@
     <value>Kontingente</value>
   </data>
   <data name="valRequireMailboxPlan.ErrorMessage" xml:space="preserve">
-    <value>Bitte gÃ¼ltigen Postfach-Plan angeben</value>
+    <value>Bitte gültigen Postfach-Plan angeben</value>
   </data>
   <data name="valRequireMailboxPlan.Text" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="btnAddMailboxPlanToOrganizations.Text" xml:space="preserve">
-    <value>Postfach-Planvorlage zu allen Mandanten hinzufÃ¼gen</value>
+    <value>Postfach-Planvorlage zu allen Mandanten hinzufügen</value>
   </data>
   <data name="btnStampUnassigned.Text" xml:space="preserve">
-    <value>Nicht zugeordnete PostfÃ¤cher anpassen</value>
+    <value>Nicht zugeordnete Postfächer anpassen</value>
   </data>
   <data name="secTools.Text" xml:space="preserve">
     <value>Werkzeuge</value>
   </data>
   <data name="btnStamp.Text" xml:space="preserve">
-    <value>PostfÃ¤cher neu anpassen</value>
+    <value>Postfächer neu anpassen</value>
   </data>
   <data name="btnUpdateMailboxPlan.Text" xml:space="preserve">
     <value>Aktualisieren</value>
@@ -232,7 +232,7 @@
     <value>Litigation Hold aktivieren</value>
   </data>
   <data name="locRecoverableItemsSpace.Text" xml:space="preserve">
-    <value>Speicher fÃ¼r wiederherstellbare Elemente (MB):</value>
+    <value>Speicher für wiederherstellbare Elemente (MB):</value>
   </data>
   <data name="locRecoverableItemsWarning.Text" xml:space="preserve">
     <value>Warnung ab:</value>
@@ -253,24 +253,24 @@
     <value>Standard</value>
   </data>
   <data name="btnAddMailboxPlanText.Text" xml:space="preserve">
-    <value>Neu hinzufÃ¼gen</value>
+    <value>Neu hinzufügen</value>
   </data>
   <data name="btnSetDefaultMailboxPlanText.Text" xml:space="preserve">
     <value>Standard-Postfach-Plan festlegen</value>
   </data>
   <data name="btnStampText.Text" xml:space="preserve">
-    <value>PostfÃ¤cher neu anpassen</value>
+    <value>Postfächer neu anpassen</value>
   </data>
   <data name="btnStampUnassignedText.Text" xml:space="preserve">
-    <value>Nicht zugeordnete PostfÃ¤cher anpassen</value>
+    <value>Nicht zugeordnete Postfächer anpassen</value>
   </data>
   <data name="btnUpdateMailboxPlanText.Text" xml:space="preserve">
     <value>Aktualisieren</value>
   </data>
   <data name="locAutoReplyEnabled.Text" xml:space="preserve">
-    <value>Automatische Antworten Ã¼ber SolidCP</value>
+    <value>Automatische Antworten über FuseCP</value>
   </data>
   <data name="chkIsForJournaling.Text" xml:space="preserve">
-    <value>Nur fÃ¼r Journal-PostfÃ¤cher</value>
+    <value>Nur für Journal-Postfächer</value>
   </data>
 </root>

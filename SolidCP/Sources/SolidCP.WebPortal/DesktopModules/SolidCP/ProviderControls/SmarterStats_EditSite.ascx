@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterStats_EditSite.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterStats_EditSite" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterStats_EditSite.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterStats_EditSite" %>
 <table width="100%" cellpadding="3" border="0">
     <tr>
         <td class="SubHead" width="200" nowrap height="25px">

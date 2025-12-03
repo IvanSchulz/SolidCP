@@ -32,17 +32,17 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.RemoteDesktopServices;
-using SolidCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.RemoteDesktopServices;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class AssignedRDSServers : SolidCPModuleBase
+    public partial class AssignedRDSServers : FuseCPModuleBase
     {
         public bool VisableDeleteServer;
 

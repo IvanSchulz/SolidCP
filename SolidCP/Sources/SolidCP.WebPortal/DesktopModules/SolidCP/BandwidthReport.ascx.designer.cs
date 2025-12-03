@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class BandwidthReport {
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl calStartDate;
+        protected global::FuseCP.Portal.CalendarControl calStartDate;
         
         /// <summary>
         /// lblTo control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl calEndDate;
+        protected global::FuseCP.Portal.CalendarControl calEndDate;
         
         /// <summary>
         /// btnDisplay control.

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	public enum WindowsServiceStartMode { Demand, Boot, System, Auto, Disabled, DelayedAuto }
 	public enum WindowsServiceType { Own, Share, Interact, Kernel, Filesys, Rec, Userown, Usershare }

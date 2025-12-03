@@ -40,10 +40,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SpaceSettingsExchangeServer {
-        protected SolidCP.Portal.CollapsiblePanel secTempDomain;
+        protected FuseCP.Portal.CollapsiblePanel secTempDomain;
         protected System.Web.UI.WebControls.Panel TempDomainPanel;
         protected System.Web.UI.WebControls.Label lblTempDomain;
         protected System.Web.UI.WebControls.TextBox txtTempDomain;

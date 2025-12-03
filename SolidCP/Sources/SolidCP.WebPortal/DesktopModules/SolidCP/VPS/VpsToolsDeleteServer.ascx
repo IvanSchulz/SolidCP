@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsToolsDeleteServer.ascx.cs" Inherits="SolidCP.Portal.VPS.VpsToolsDeleteServer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsToolsDeleteServer.ascx.cs" Inherits="FuseCP.Portal.VPS.VpsToolsDeleteServer" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>

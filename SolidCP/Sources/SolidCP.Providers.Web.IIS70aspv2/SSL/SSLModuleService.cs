@@ -31,19 +31,19 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Microsoft.Web.Administration;
-using SolidCP.Providers.Common;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Server.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using CertEnrollInterop;
 using System.Security.Cryptography.X509Certificates;
-using SolidCP.Providers.Web.Iis.Common;
+using FuseCP.Providers.Web.Iis.Common;
 using System.Security;
-using SolidCP.Providers.Web.Iis.WebObjects;
+using FuseCP.Providers.Web.Iis.WebObjects;
 
-namespace SolidCP.Providers.Web.Iis
+namespace FuseCP.Providers.Web.Iis
 {
 	public class SSLModuleService : ConfigurationModuleService
 	{

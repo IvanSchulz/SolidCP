@@ -37,10 +37,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Providers.FTP.FileZilla")]
+[assembly: AssemblyTitle("FuseCP.Providers.FTP.FileZilla")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Providers.FTP.FileZilla")]
+[assembly: AssemblyProduct("FuseCP.Providers.FTP.FileZilla")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

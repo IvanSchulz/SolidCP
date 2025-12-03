@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer.UserControls {
+namespace FuseCP.Portal.ExchangeServer.UserControls {
     
     public partial class Breadcrumb {
         protected System.Web.UI.WebControls.HyperLink lnkHome;

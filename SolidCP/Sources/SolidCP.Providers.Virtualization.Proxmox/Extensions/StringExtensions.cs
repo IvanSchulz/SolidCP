@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Providers.Virtualization.Extensions
+namespace FuseCP.Providers.Virtualization.Extensions
 {
     public static class StringExtensions
     {

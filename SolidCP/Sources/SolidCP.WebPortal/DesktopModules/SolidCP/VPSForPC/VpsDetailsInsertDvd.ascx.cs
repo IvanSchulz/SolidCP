@@ -35,11 +35,11 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
-    public partial class VpsDetailsInsertDvd : SolidCPModuleBase
+    public partial class VpsDetailsInsertDvd : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

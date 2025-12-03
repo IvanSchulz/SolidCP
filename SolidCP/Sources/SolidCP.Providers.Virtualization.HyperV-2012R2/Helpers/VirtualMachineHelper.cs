@@ -1,5 +1,5 @@
-﻿using Microsoft.Management.Infrastructure;
-using SolidCP.Providers.HostedSolution;
+using Microsoft.Management.Infrastructure;
+using FuseCP.Providers.HostedSolution;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Management.Automation.Runspaces;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class VirtualMachineHelper
     {
@@ -125,7 +125,7 @@ namespace SolidCP.Providers.Virtualization
             }
             catch
             {
-                //Nothing to do here — the panel works so fast that we can even get an exception while fetching the VM Heartbeat :D
+                //Nothing to do here � the panel works so fast that we can even get an exception while fetching the VM Heartbeat :D
             }
 
             return status;

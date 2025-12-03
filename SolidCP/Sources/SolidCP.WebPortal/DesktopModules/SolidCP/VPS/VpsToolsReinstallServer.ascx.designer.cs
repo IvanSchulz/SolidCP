@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS {
+namespace FuseCP.Portal.VPS {
     
     
     public partial class VpsToolsReinstallServer {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// imgIcon control.
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.FormTitle locTitle;
+        protected global::FuseCP.Portal.VPS.UserControls.FormTitle locTitle;
         
         /// <summary>
         /// menu control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPS.UserControls.Menu menu;
         
         /// <summary>
         /// messageBox control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// tabs control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.VPS.UserControls.ServerTabs tabs;
         
         /// <summary>
         /// validatorsSummary control.
@@ -118,7 +118,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl password;
+        protected global::FuseCP.Portal.PasswordControl password;
         
         /// <summary>
         /// chkPreserveExistingFiles control.

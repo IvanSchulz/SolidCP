@@ -37,7 +37,7 @@ using System.Text;
 
 using Ionic.Zip;
 
-namespace SolidCP.Setup.Common
+namespace FuseCP.Setup.Common
 {
 	/// <summary>
 	/// Shows progress of file zipping.

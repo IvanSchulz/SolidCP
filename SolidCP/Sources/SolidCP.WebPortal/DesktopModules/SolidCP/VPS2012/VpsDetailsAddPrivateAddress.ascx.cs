@@ -1,4 +1,4 @@
-// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VpsDetailsAddPrivateAddress : SolidCPModuleBase
+    public partial class VpsDetailsAddPrivateAddress : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

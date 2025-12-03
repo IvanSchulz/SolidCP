@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.UserControls {
+namespace FuseCP.Portal.UserControls {
     
     
     public partial class AuditLogControl {

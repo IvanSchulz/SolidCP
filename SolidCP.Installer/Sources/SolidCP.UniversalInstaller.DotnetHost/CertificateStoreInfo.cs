@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 using System.Reflection;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller.Core.DotnetHost
+namespace FuseCP.UniversalInstaller.Core.DotnetHost
 {
 	public class CertificateStoreInfo
 	{
@@ -60,8 +60,8 @@ namespace SolidCP.UniversalInstaller.Core.DotnetHost
 		{
 			assembly = assembly ?? Assembly.GetExecutingAssembly();
 			var res = assembly.GetManifestResourceNames()
-				.FirstOrDefault(name => name.EndsWith("SolidCP.Setup.DotnetHost.dll"));
-			var fileName = $"{Path.GetTempFileName()}.SolidCP.Setup.DotnetHost.dll";
+				.FirstOrDefault(name => name.EndsWith("FuseCP.Setup.DotnetHost.dll"));
+			var fileName = $"{Path.GetTempFileName()}.FuseCP.Setup.DotnetHost.dll";
 			using (var stream = assembly.GetManifestResourceStream(res))
 			using (var file = new FileStream(fileName, FileMode.Create, FileAccess.Write))
 			{

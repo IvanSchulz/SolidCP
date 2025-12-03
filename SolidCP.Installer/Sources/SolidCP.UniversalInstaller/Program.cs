@@ -1,9 +1,9 @@
-﻿
+
 using System;
 using System.Text.RegularExpressions;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
  
 public class Program
 {
@@ -21,8 +21,8 @@ public class Program
 		// Import Mono.Posix.NETStandard
 		var dummy = Mono.Unix.Native.FilePermissions.ACCESSPERMS;
 #endif
-		// Import SolidCP.Providers.Base
-		SolidCP.Providers.Common.BoolResult dummy2 = null;
+		// Import FuseCP.Providers.Base
+		FuseCP.Providers.Common.BoolResult dummy2 = null;
 	}
 
 	const string CancelFileName = "WaitCursor.cancel";

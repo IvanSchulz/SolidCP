@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSCollections.ascx.cs" Inherits="SolidCP.Portal.RDS.RDSCollections" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSCollections.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSCollections" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -81,7 +81,7 @@
     <scp:QuotaViewer ID="collectionsQuota" runat="server" QuotaTypeId="2" DisplayGauge="true" />
 </div>
 <asp:ObjectDataSource ID="odsRDSCollectionsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetRDSCollectonsPagedCount"
-    SelectMethod="GetRDSCollectonsPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.RDSHelper">
+    SelectMethod="GetRDSCollectonsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.RDSHelper">
     <SelectParameters>
         <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
         <asp:ControlParameter Name="filterValue" ControlID="txtSearchValue" PropertyName="Text" />

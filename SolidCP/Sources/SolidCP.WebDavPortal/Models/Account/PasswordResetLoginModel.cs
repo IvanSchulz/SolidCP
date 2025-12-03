@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using SolidCP.WebDavPortal.Models.Common;
-using SolidCP.WebDavPortal.Resources;
+using System.ComponentModel.DataAnnotations;
+using FuseCP.WebDavPortal.Models.Common;
+using FuseCP.WebDavPortal.Resources;
 
-namespace SolidCP.WebDavPortal.Models.Account
+namespace FuseCP.WebDavPortal.Models.Account
 {
     public class PasswordResetLoginModel 
     {

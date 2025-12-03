@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Linq;
 using WixToolset.Dtf.WindowsInstaller;
 using Microsoft.Win32;
 
-using SolidCP.Setup;
+using FuseCP.Setup;
 
-namespace SolidCP.WIXInstaller.Common
+namespace FuseCP.WIXInstaller.Common
 {
     public delegate string InstallToolDelegate (params string[] Components);
     internal static class Tool

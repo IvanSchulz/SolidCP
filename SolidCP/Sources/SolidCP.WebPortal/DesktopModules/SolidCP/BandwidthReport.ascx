@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BandwidthReport.ascx.cs" Inherits="SolidCP.Portal.BandwidthReport" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BandwidthReport.ascx.cs" Inherits="FuseCP.Portal.BandwidthReport" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/CalendarControl.ascx" TagName="CalendarControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
@@ -106,7 +106,7 @@
     </Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsReport" runat="server" EnablePaging="True" SelectCountMethod="GetPackagesBandwidthPagedCount"
-    SelectMethod="GetPackagesBandwidthPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.ReportsHelper" OnSelected="odsReport_Selected">
+    SelectMethod="GetPackagesBandwidthPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.ReportsHelper" OnSelected="odsReport_Selected">
     <SelectParameters>
         <asp:QueryStringParameter DefaultValue="-1" Name="packageId" QueryStringField="SpaceID" />
         <asp:ControlParameter ControlID="litStartDate" Name="sStartDate" PropertyName="Text" />

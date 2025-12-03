@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer.Data.Configuration;
-using SolidCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Configuration;
+using FuseCP.EnterpriseServer.Data.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
 #if NetCore
@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Configuration;
+namespace FuseCP.EnterpriseServer.Data.Configuration;
 
 public partial class UsersDetailedConfiguration: EntityTypeConfiguration<UsersDetailed>
 {

@@ -36,7 +36,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Represents base type for task objects intended for scheduling.

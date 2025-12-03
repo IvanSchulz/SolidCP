@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="StorageSpaceServices.asmx.cs" Class="SolidCP.Server.StorageSpaceServices" %>
+<%@ WebService Language="C#" CodeBehind="StorageSpaceServices.asmx.cs" Class="FuseCP.Server.StorageSpaceServices" %>

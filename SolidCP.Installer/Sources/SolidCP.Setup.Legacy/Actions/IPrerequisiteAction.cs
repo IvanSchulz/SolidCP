@@ -32,11 +32,11 @@
 
 using System;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public interface IPrerequisiteAction
 	{
-		bool Run(SolidCP.Setup.SetupVariables vars);
+		bool Run(FuseCP.Setup.SetupVariables vars);
 		// The event
 		event EventHandler<ActionProgressEventArgs<bool>> Complete;
 	}

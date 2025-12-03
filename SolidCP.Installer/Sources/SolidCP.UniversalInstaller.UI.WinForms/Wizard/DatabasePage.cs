@@ -40,12 +40,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
-using Data = SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
+using Data = FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller.Core;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class DatabasePage : BannerWizardPage
 	{
@@ -69,7 +69,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			this.Description = string.Format("Enter the connection information for the {0} database.", component);
 			this.lblIntro.Text = "The connection information will be used by the Setup Wizard to install the database objects only. Click Next to continue.";
 			this.txtSqlServerServer.Text = Settings.DatabaseServer == "localhost" ? "(local)" : Settings.DatabaseServer;
-			txtSqlServerDatabase.Text = txtMySqlDatabase.Text = txtSqliteDatabase.Text = Settings.DatabaseName ?? "SolidCP";
+			txtSqlServerDatabase.Text = txtMySqlDatabase.Text = txtSqliteDatabase.Text = Settings.DatabaseName ?? "FuseCP";
 			txtSqlServerLogin.Text = Settings.DatabaseUser ?? "sa";
 			txtMySqlUser.Text = Settings.DatabaseUser ?? "root";
 			txtSqlServerPassword.Text = txtMySqlPassword.Text = Settings.DatabasePassword;

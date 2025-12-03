@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Setup.Common
+namespace FuseCP.Setup.Common
 {
 	[Serializable] 
 	internal class WebException : Exception

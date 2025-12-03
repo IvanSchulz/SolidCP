@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" Codebehind="HostedSharePointEnterpriseEditSiteCollection.ascx.cs" Inherits="SolidCP.Portal.HostedSharePointEnterpriseEditSiteCollection" %>
+<%@ Control Language="C#" AutoEventWireup="true" Codebehind="HostedSharePointEnterpriseEditSiteCollection.ascx.cs" Inherits="FuseCP.Portal.HostedSharePointEnterpriseEditSiteCollection" %>
 <%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceMenu.ascx.cs" Inherits="SolidCP.Portal.SpaceMenu" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceMenu.ascx.cs" Inherits="FuseCP.Portal.SpaceMenu" %>
 
 <asp:Localize ID="locMenuTitle" runat="server" meta:resourcekey="locMenuTitle" Visible="false"></asp:Localize>
 

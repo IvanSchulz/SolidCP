@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox.UserControls {
+namespace FuseCP.Portal.Proxmox.UserControls {
     
     
     public partial class DynamicMemoryControl {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox.UserControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDymanicMemory;
+        protected global::FuseCP.Portal.CollapsiblePanel secDymanicMemory;
         
         /// <summary>
         /// DymanicMemoryPanel-Steuerelement
@@ -127,7 +127,7 @@ namespace SolidCP.Portal.Proxmox.UserControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDymanicMemoryDisplay;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDymanicMemoryDisplay;
         
         /// <summary>
         /// trMinimumDisplay-Steuerelement
@@ -253,7 +253,7 @@ namespace SolidCP.Portal.Proxmox.UserControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDymanicMemorySummary;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDymanicMemorySummary;
         
         /// <summary>
         /// trMinimumSummary-Steuerelement

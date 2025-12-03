@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Lync.UserControls {
+namespace FuseCP.Portal.Lync.UserControls {
     
     
     public partial class LyncUserSettings {
@@ -60,6 +60,6 @@ namespace SolidCP.Portal.Lync.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.EmailAddress email;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.EmailAddress email;
     }
 }

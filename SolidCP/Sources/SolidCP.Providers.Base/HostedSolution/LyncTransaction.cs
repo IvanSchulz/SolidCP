@@ -32,7 +32,7 @@
 
 using System.Collections.Generic;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class LyncTransaction
     {

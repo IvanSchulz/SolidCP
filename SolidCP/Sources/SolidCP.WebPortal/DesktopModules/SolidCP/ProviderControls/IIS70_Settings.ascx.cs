@@ -45,9 +45,9 @@ using System.Net;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-	public partial class IIS70_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+	public partial class IIS70_Settings : FuseCPControlBase, IHostingServiceProviderSettings
 	{
 		private string FilteredAppIds;
 

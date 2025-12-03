@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -19,7 +19,7 @@ using System.Xml.Serialization;
 using Renci.SshNet;
 using System.Xml;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     /// <summary>
     /// Implements a Socket, that can be a connetion over a WebSocket, a Socket or an SshTunnel. The WebSocket supports

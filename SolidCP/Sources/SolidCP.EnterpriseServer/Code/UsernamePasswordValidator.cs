@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Concurrent;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class UserCacheEntry
 	{
@@ -97,6 +97,6 @@ namespace SolidCP.EnterpriseServer
 			return true;
 		}
 
-		public static void Init() { SolidCP.Web.Services.UserNamePasswordValidator.ValidateEnterpriseServer = Validate; }
+		public static void Init() { FuseCP.Web.Services.UserNamePasswordValidator.ValidateEnterpriseServer = Validate; }
 	}
 }

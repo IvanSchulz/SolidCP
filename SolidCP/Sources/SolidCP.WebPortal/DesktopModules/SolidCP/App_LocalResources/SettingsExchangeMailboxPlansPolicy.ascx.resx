@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -268,7 +268,7 @@
     <value>Update</value>
   </data>
   <data name="locAutoReplyEnabled.Text" xml:space="preserve">
-    <value>Automatic Replies via SolidCP</value>
+    <value>Automatic Replies via FuseCP</value>
   </data>
   <data name="chkIsForJournaling.Text" xml:space="preserve">
     <value>For journaling mailboxes only</value>

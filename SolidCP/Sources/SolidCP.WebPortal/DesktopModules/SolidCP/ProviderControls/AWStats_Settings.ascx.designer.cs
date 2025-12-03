@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class AWStats_Settings {
         protected System.Web.UI.WebControls.Label lblCgiBinFolder;

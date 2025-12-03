@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <RootNamespace>SolidCP.WebPortal</RootNamespace>
-        <AssemblyName>SolidCP.WebPortal</AssemblyName>
+        <RootNamespace>FuseCP.WebPortal</RootNamespace>
+        <AssemblyName>FuseCP.WebPortal</AssemblyName>
         <TargetFrameworks>net10.0;net48</TargetFrameworks>
         <LangVersion>13</LangVersion>
         <Nullable>disable</Nullable>
@@ -58,7 +58,7 @@
         <!-- Create App_GlobalResources.list file, because there is no App_GlobalResources folder anymore -->
         <Exec Command="powershell &quot;Get-ChildItem App_GlobalResources -recurse -include *.resx | ForEach-Object { $_.Name } &gt; $(DeployDir)\App_Data\App_GlobalResources.list&quot;" />
         <!-- Correct ExternalProbingPaths in web.config -->
-        <Exec Command="powershell &quot;(Get-Content Web.config) -replace '\.\.\\SolidCP.EnterpriseServer', '..\EnterpriseServer' | Set-Content -Path $(DeployDir)\Web.config&quot;" />
+        <Exec Command="powershell &quot;(Get-Content Web.config) -replace '\.\.\\FuseCP.EnterpriseServer', '..\EnterpriseServer' | Set-Content -Path $(DeployDir)\Web.config&quot;" />
     </Target>
     <ItemGroup>
         <PackageReference Include="AdvancedStringBuilder" Version="0.1.1" />
@@ -110,7 +110,7 @@
         <PackageReference Include="EstrellasDeEsperanza.WebFormsForCore.WebGrease" Version="1.4.2" />
         <PackageReference Include="EstrellasDeEsperanza.WebFormsForCore.AjaxControlToolkit" Version="1.4.2" />
         
-        <!-- .NET 10 for SolidCP.EnterpriseServer.Data -->
+        <!-- .NET 10 for FuseCP.EnterpriseServer.Data -->
         <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.0" />
         <PackageReference Include="Microsoft.Extensions.Primitives" Version="10.0.0" />
         <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.0" />
@@ -153,7 +153,7 @@
         <Compile Remove="obj\**\*.cs" />
         <Compile Include="*.cs" />
         <Compile Include="..\VersionInfo.cs" Link="Code\VersionInfo.cs" />
-        <Compile Include="DesktopModules\SolidCP\Code\Framework\ES.cs" Link="Code\ES.cs" />
+        <Compile Include="DesktopModules\FuseCP\Code\Framework\ES.cs" Link="Code\ES.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Update="Default.aspx.cs">
             <SubType>ASPXCodeBehind</SubType>
@@ -192,11 +192,11 @@
     <ItemGroup>
         <!--<ProjectReference Include="..\..\Lib\WebFormsForCore\src\WebFormsForCore.Web\WebFormsForCore.Web.csproj" />-->
         <ProjectReference Include="..\CPCC\CPCC.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj" />
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Services\SolidCP.Web.Services.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Services\FuseCP.Web.Services.csproj" />
     </ItemGroup>
     <ItemGroup>
         <None Remove="obj\**\*.*" />
@@ -238,11 +238,11 @@
             <FilesToMove Include="bin\Microsoft.ReportViewer.*" />
             <FilesToMove Include="bin\Microsoft.Extensions.*" />
             <FilesToMove Include="bin\Microsoft.Web.*" />
-            <FilesToMove Include="bin\SolidCP.Server.Client.*" />
+            <FilesToMove Include="bin\FuseCP.Server.Client.*" />
             <FilesToMove Include="bin\MsieJavaScriptEngine.*" />
             <FilesToMove Include="bin\Renci.SshNet.*" />
-            <FilesToMove Include="bin\SolidCP.EnterpriseServer.Client.*" />
-            <FilesToMove Include="bin\SolidCP.Providers.*" Exclude="bin\SolidCP.Providers.Virtualization.NoVNC.*" />
+            <FilesToMove Include="bin\FuseCP.EnterpriseServer.Client.*" />
+            <FilesToMove Include="bin\FuseCP.Providers.*" Exclude="bin\FuseCP.Providers.Virtualization.NoVNC.*" />
             <FilesToMove Include="bin\WebGrease.*" />
             <FilesToMove Include="bin\JavaScriptEngineSwitcher.*" />
             <FilesToMove Include="bin\System.*" />
@@ -266,7 +266,7 @@
     <!--<Target Name="CopyDepsJson" Condition="$(TargetFramework) != 'net48'" AfterTargets="Build">
         
         <ItemGroup>
-            <DepsJson Include="SolidCP.WebPortal.deps.json" />
+            <DepsJson Include="FuseCP.WebPortal.deps.json" />
         </ItemGroup>
 
         <Copy SourceFiles="@(DepsJson)" DestinationFolder="$(OutputPath)" />

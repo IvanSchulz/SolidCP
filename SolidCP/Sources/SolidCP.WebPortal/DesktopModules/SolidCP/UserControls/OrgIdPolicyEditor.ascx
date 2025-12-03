@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrgIdPolicyEditor.ascx.cs" Inherits="SolidCP.Portal.UserControls.OrgIdPolicyEditor" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrgIdPolicyEditor.ascx.cs" Inherits="FuseCP.Portal.UserControls.OrgIdPolicyEditor" %>
 <asp:UpdatePanel runat="server" ID="OrgIdPolicyPanel" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate>
         <asp:CheckBox id="enablePolicyCheckBox" runat="server" meta:resourcekey="enablePolicyCheckBox" Text="Enable Policy" CssClass="NormalBold" AutoPostBack="true" OnCheckedChanged="EnablePolicy_CheckedChanged"/>

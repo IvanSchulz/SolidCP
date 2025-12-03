@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsImportZone.ascx.cs" Inherits="SolidCP.Portal.DomainsImportZone" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsImportZone.ascx.cs" Inherits="FuseCP.Portal.DomainsImportZone" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 
 <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />

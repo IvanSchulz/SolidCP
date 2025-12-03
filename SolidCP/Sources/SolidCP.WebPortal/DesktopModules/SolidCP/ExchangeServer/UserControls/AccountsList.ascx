@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AccountsList.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.AccountsList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AccountsList.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.AccountsList" %>
 <%@ Register Src="../../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
 
 <asp:UpdatePanel ID="AccountsUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">

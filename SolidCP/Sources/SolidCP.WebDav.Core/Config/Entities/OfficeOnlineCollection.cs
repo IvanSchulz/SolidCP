@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using SolidCP.EnterpriseServer;
-using SolidCP.WebDavPortal.WebConfigSections;
+using FuseCP.EnterpriseServer;
+using FuseCP.WebDavPortal.WebConfigSections;
 
-namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public class OfficeOnlineCollection : AbstractConfigCollection, IReadOnlyCollection<OfficeOnlineElement>
     {

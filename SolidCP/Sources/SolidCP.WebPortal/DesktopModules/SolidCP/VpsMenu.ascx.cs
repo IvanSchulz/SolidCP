@@ -34,11 +34,11 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.WebPortal;
-namespace SolidCP.Portal
+using FuseCP.EnterpriseServer;
+using FuseCP.WebPortal;
+namespace FuseCP.Portal
 {
-    public partial class VpsMenu : SolidCPModuleBase
+    public partial class VpsMenu : FuseCPModuleBase
     {
         private const string PID_SPACE_VPS = "SpaceVPS2012";
         private const string PID_SPACE_PROXMOX = "SpaceProxmox";
@@ -115,7 +115,7 @@ namespace SolidCP.Portal
         {
             MenuItem item = new MenuItem();
             item.Text = GetLocalizedString("Text." + text);
-            var hostModule = GetAllControlsOfType<SolidCPModuleBase>(this.Page);
+            var hostModule = GetAllControlsOfType<FuseCPModuleBase>(this.Page);
             if (hostModule.Count > 0)
             {
                 item.NavigateUrl = hostModule.LastOrDefault().EditUrl("SpaceID", PanelSecurity.PackageId.ToString(), key); // PortalUtils.EditUrl("ItemID", ItemID.ToString(), key, "SpaceID=" + PackageId);

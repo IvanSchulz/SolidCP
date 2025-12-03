@@ -34,10 +34,10 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Templates.AST;
+using FuseCP.Templates.AST;
 using System.Collections;
 
-namespace SolidCP.Templates
+namespace FuseCP.Templates
 {
     /// <summary>
     /// Template allows to process block of texts containing special directives such as variables,

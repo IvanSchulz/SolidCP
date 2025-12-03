@@ -1,9 +1,9 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailGroups.ascx.cs" Inherits="SolidCP.Portal.MailGroups" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailGroups.ascx.cs" Inherits="FuseCP.Portal.MailGroups" %>
 <%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="scp" %>
 
 <scp:SpaceServiceItems ID="itemsList" runat="server"
     CreateButtonText="btnAddAccount"
     CreateControlID="edit_item"
     GroupName="Mail"
-    TypeName="SolidCP.Providers.Mail.MailGroup, SolidCP.Providers.Base"
+    TypeName="FuseCP.Providers.Mail.MailGroup, FuseCP.Providers.Base"
     QuotaName="Mail.Groups" />

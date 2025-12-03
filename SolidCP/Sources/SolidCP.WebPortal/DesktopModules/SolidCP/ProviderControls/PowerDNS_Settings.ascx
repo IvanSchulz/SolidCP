@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PowerDNS_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.PowerDNS_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PowerDNS_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.PowerDNS_Settings" %>
 <%@ Register Src="Common_IPAddressesList.ascx" TagName="IPAddressesList" TagPrefix="common" %>
 <%@ Register Src="Common_SecondaryDNSServers.ascx" TagName="SecondaryDNSServers" TagPrefix="common" %>
 <%@ Register Src="../UserControls/ScheduleInterval.ascx" TagName="ScheduleInterval" TagPrefix="common" %>

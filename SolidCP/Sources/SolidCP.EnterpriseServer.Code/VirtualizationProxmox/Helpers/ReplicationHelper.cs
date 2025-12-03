@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Server.Client;
-// SolidCP.Providers.VirtualizationProxmox;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Server.Client;
+// FuseCP.Providers.VirtualizationProxmox;
 
-namespace SolidCP.EnterpriseServer.Code.VirtualizationProxmox
+namespace FuseCP.EnterpriseServer.Code.VirtualizationProxmox
 {
     public static class ReplicationHelper
     {

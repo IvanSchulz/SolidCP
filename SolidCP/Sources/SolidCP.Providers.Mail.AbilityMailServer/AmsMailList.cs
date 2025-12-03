@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
 	public class AmsMailList
 	{

@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net.Mail;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class MailTemplate
     {

@@ -41,9 +41,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class ServerServicesControl : SolidCPControlBase
+    public partial class ServerServicesControl : FuseCPControlBase
     {
         DataSet dsServices = null;
 

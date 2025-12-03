@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.FTP;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.FTP;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class FtpAccountEditAccount : SolidCPModuleBase
+    public partial class FtpAccountEditAccount : FuseCPModuleBase
     {
         FtpAccount item = null;
 

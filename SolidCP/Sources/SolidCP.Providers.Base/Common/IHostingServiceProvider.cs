@@ -32,9 +32,9 @@
 
 using System;
 using System.Collections;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
 	/// <summary>
 	/// Summary description for IPanelServiceProvider.

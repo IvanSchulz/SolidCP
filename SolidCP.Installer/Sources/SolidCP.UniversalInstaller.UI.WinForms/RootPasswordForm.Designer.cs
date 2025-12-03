@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	partial class RootPasswordForm
 	{
@@ -89,7 +89,7 @@ namespace SolidCP.UniversalInstaller
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(246, 34);
 			this.label1.TabIndex = 3;
-			this.label1.Text = "SolidCP Installer needs to run with root privileges. Please specify the root pass" +
+			this.label1.Text = "FuseCP Installer needs to run with root privileges. Please specify the root pass" +
     "word:";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 

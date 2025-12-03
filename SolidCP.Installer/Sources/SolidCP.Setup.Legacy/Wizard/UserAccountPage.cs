@@ -42,10 +42,10 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class UserAccountPage : BannerWizardPage
 	{
@@ -85,7 +85,7 @@ namespace SolidCP.Setup
 
 				//creating user account
 				string userName = component.Replace(" ", string.Empty);
-				userName = userName.Replace("SolidCP", "WP");
+				userName = userName.Replace("FuseCP", "WP");
 
 				txtUserName.Text = userName;
 				txtDomain.Text = "mydomain.com";

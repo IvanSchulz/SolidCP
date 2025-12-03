@@ -36,7 +36,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace SolidCP.Templates
+namespace FuseCP.Templates
 {
     internal class Lexer
     {

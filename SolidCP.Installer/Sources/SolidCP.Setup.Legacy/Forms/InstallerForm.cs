@@ -39,7 +39,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Lifetime;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class InstallerForm : Form
 	{

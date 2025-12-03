@@ -32,12 +32,12 @@
 
 using System;
 using System.ComponentModel;
-using SolidCP.Providers.Common;
-using SolidCP.Server.Code;
-using SolidCP.Web.Services;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.Common;
+using FuseCP.Server.Code;
+using FuseCP.Web.Services;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
 	/// <summary>
 	/// Summary description for AutoDiscovery

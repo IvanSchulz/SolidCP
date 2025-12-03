@@ -35,7 +35,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SolidCP.PasswordEncoder
+namespace FuseCP.PasswordEncoder
 {
     public partial class MainForm : Form
     {

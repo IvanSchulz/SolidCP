@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography.X509Certificates;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	public class CertificateInfo
 	{

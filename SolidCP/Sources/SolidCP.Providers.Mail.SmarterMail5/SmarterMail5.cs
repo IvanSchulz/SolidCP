@@ -37,16 +37,16 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Web.Services.Protocols;
 using System.Xml.XPath;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Mail.SM5;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Mail.SM5;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Win32;
 
 
 
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
     public class SmarterMail5 : HostingServiceProviderBase, IMailServer
     {
@@ -188,7 +188,7 @@ namespace SolidCP.Providers.Mail
 
                 string[] requestedDomainDefaults = defaultRequestedSettings.settingValues;
 
-				//domain Path is taken from SolidCP Service settings
+				//domain Path is taken from FuseCP Service settings
 
                 SM5.GenericResult result = null;
 

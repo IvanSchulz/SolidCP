@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.Server.Client;
-//using SolidCP.Providers.VirtualizationProxmox;
+using FuseCP.Server.Client;
+//using FuseCP.Providers.VirtualizationProxmox;
 
-namespace SolidCP.EnterpriseServer.Code.VirtualizationProxmox
+namespace FuseCP.EnterpriseServer.Code.VirtualizationProxmox
 {
     public class VirtualizationHelperProxmox: ControllerBase
     {

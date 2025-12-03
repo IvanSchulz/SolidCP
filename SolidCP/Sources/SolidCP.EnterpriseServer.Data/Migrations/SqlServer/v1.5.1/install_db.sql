@@ -5614,245 +5614,245 @@ SET IDENTITY_INSERT [dbo].[Packages] OFF
 GO
 INSERT [dbo].[PackagesTreeCache] ([ParentPackageID], [PackageID]) VALUES (1, 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1, 1, N'Windows2003', N'Windows Server 2003', N'SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003', N'Windows2003', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1, 1, N'Windows2003', N'Windows Server 2003', N'FuseCP.Providers.OS.Windows2003, FuseCP.Providers.OS.Windows2003', N'Windows2003', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (2, 2, N'IIS60', N'Internet Information Services 6.0', N'SolidCP.Providers.Web.IIs60, SolidCP.Providers.Web.IIs60', N'IIS60', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (2, 2, N'IIS60', N'Internet Information Services 6.0', N'FuseCP.Providers.Web.IIs60, FuseCP.Providers.Web.IIs60', N'IIS60', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (3, 3, N'MSFTP60', N'Microsoft FTP Server 6.0', N'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs60', N'MSFTP60', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (3, 3, N'MSFTP60', N'Microsoft FTP Server 6.0', N'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs60', N'MSFTP60', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (4, 4, N'MailEnable', N'MailEnable Server 1.x - 7.x', N'SolidCP.Providers.Mail.MailEnable, SolidCP.Providers.Mail.MailEnable', N'MailEnable', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (4, 4, N'MailEnable', N'MailEnable Server 1.x - 7.x', N'FuseCP.Providers.Mail.MailEnable, FuseCP.Providers.Mail.MailEnable', N'MailEnable', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (5, 5, N'MSSQL', N'Microsoft SQL Server 2000', N'SolidCP.Providers.Database.MsSqlServer, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (5, 5, N'MSSQL', N'Microsoft SQL Server 2000', N'FuseCP.Providers.Database.MsSqlServer, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (6, 6, N'MySQL', N'MySQL Server 4.x', N'SolidCP.Providers.Database.MySqlServer, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (6, 6, N'MySQL', N'MySQL Server 4.x', N'FuseCP.Providers.Database.MySqlServer, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (7, 7, N'MSDNS', N'Microsoft DNS Server', N'SolidCP.Providers.DNS.MsDNS, SolidCP.Providers.DNS.MsDNS', N'MSDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (7, 7, N'MSDNS', N'Microsoft DNS Server', N'FuseCP.Providers.DNS.MsDNS, FuseCP.Providers.DNS.MsDNS', N'MSDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (8, 8, N'AWStats', N'AWStats Statistics Service', N'SolidCP.Providers.Statistics.AWStats, SolidCP.Providers.Statistics.AWStats', N'AWStats', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (8, 8, N'AWStats', N'AWStats Statistics Service', N'FuseCP.Providers.Statistics.AWStats, FuseCP.Providers.Statistics.AWStats', N'AWStats', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (9, 7, N'SimpleDNS', N'SimpleDNS Plus 4.x', N'SolidCP.Providers.DNS.SimpleDNS, SolidCP.Providers.DNS.SimpleDNS', N'SimpleDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (9, 7, N'SimpleDNS', N'SimpleDNS Plus 4.x', N'FuseCP.Providers.DNS.SimpleDNS, FuseCP.Providers.DNS.SimpleDNS', N'SimpleDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (10, 8, N'SmarterStats', N'SmarterStats 3.x', N'SolidCP.Providers.Statistics.SmarterStats, SolidCP.Providers.Statistics.SmarterStats', N'SmarterStats', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (10, 8, N'SmarterStats', N'SmarterStats 3.x', N'FuseCP.Providers.Statistics.SmarterStats, FuseCP.Providers.Statistics.SmarterStats', N'SmarterStats', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (11, 4, N'SmarterMail', N'SmarterMail 2.x', N'SolidCP.Providers.Mail.SmarterMail2, SolidCP.Providers.Mail.SmarterMail2', N'SmarterMail', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (11, 4, N'SmarterMail', N'SmarterMail 2.x', N'FuseCP.Providers.Mail.SmarterMail2, FuseCP.Providers.Mail.SmarterMail2', N'SmarterMail', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (12, 3, N'Gene6FTP', N'Gene6 FTP Server 3.x', N'SolidCP.Providers.FTP.Gene6, SolidCP.Providers.FTP.Gene6', N'Gene6FTP', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (12, 3, N'Gene6FTP', N'Gene6 FTP Server 3.x', N'FuseCP.Providers.FTP.Gene6, FuseCP.Providers.FTP.Gene6', N'Gene6FTP', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (13, 4, N'Merak', N'Merak Mail Server 8.0.3 - 9.2.x', N'SolidCP.Providers.Mail.Merak, SolidCP.Providers.Mail.Merak', N'Merak', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (13, 4, N'Merak', N'Merak Mail Server 8.0.3 - 9.2.x', N'FuseCP.Providers.Mail.Merak, FuseCP.Providers.Mail.Merak', N'Merak', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (14, 4, N'SmarterMail', N'SmarterMail 3.x - 4.x', N'SolidCP.Providers.Mail.SmarterMail3, SolidCP.Providers.Mail.SmarterMail3', N'SmarterMail', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (14, 4, N'SmarterMail', N'SmarterMail 3.x - 4.x', N'FuseCP.Providers.Mail.SmarterMail3, FuseCP.Providers.Mail.SmarterMail3', N'SmarterMail', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (16, 10, N'MSSQL', N'Microsoft SQL Server 2005', N'SolidCP.Providers.Database.MsSqlServer2005, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (16, 10, N'MSSQL', N'Microsoft SQL Server 2005', N'FuseCP.Providers.Database.MsSqlServer2005, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (17, 11, N'MySQL', N'MySQL Server 5.0', N'SolidCP.Providers.Database.MySqlServer50, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (17, 11, N'MySQL', N'MySQL Server 5.0', N'FuseCP.Providers.Database.MySqlServer50, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (18, 4, N'MDaemon', N'MDaemon 9.x - 11.x', N'SolidCP.Providers.Mail.MDaemon, SolidCP.Providers.Mail.MDaemon', N'MDaemon', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (18, 4, N'MDaemon', N'MDaemon 9.x - 11.x', N'FuseCP.Providers.Mail.MDaemon, FuseCP.Providers.Mail.MDaemon', N'MDaemon', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (19, 4, N'ArgoMail', N'ArGoSoft Mail Server 1.x', N'SolidCP.Providers.Mail.ArgoMail, SolidCP.Providers.Mail.ArgoMail', N'ArgoMail', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (19, 4, N'ArgoMail', N'ArGoSoft Mail Server 1.x', N'FuseCP.Providers.Mail.ArgoMail, FuseCP.Providers.Mail.ArgoMail', N'ArgoMail', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (20, 4, N'hMailServer', N'hMailServer 4.2', N'SolidCP.Providers.Mail.hMailServer, SolidCP.Providers.Mail.hMailServer', N'hMailServer', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (20, 4, N'hMailServer', N'hMailServer 4.2', N'FuseCP.Providers.Mail.hMailServer, FuseCP.Providers.Mail.hMailServer', N'hMailServer', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (21, 4, N'AbilityMailServer', N'Ability Mail Server 2.x', N'SolidCP.Providers.Mail.AbilityMailServer, SolidCP.Providers.Mail.AbilityMailServer', N'AbilityMailServer', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (21, 4, N'AbilityMailServer', N'Ability Mail Server 2.x', N'FuseCP.Providers.Mail.AbilityMailServer, FuseCP.Providers.Mail.AbilityMailServer', N'AbilityMailServer', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (22, 4, N'hMailServer43', N'hMailServer 4.3', N'SolidCP.Providers.Mail.hMailServer43, SolidCP.Providers.Mail.hMailServer43', N'hMailServer43', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (22, 4, N'hMailServer43', N'hMailServer 4.3', N'FuseCP.Providers.Mail.hMailServer43, FuseCP.Providers.Mail.hMailServer43', N'hMailServer43', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (24, 7, N'Bind', N'ISC BIND 8.x - 9.x', N'SolidCP.Providers.DNS.IscBind, SolidCP.Providers.DNS.Bind', N'Bind', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (24, 7, N'Bind', N'ISC BIND 8.x - 9.x', N'FuseCP.Providers.DNS.IscBind, FuseCP.Providers.DNS.Bind', N'Bind', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (25, 3, N'ServU', N'Serv-U FTP 6.x', N'SolidCP.Providers.FTP.ServU, SolidCP.Providers.FTP.ServU', N'ServU', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (25, 3, N'ServU', N'Serv-U FTP 6.x', N'FuseCP.Providers.FTP.ServU, FuseCP.Providers.FTP.ServU', N'ServU', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (26, 3, N'FileZilla', N'FileZilla FTP Server 0.9', N'SolidCP.Providers.FTP.FileZilla, SolidCP.Providers.FTP.FileZilla', N'FileZilla', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (26, 3, N'FileZilla', N'FileZilla FTP Server 0.9', N'FuseCP.Providers.FTP.FileZilla, FuseCP.Providers.FTP.FileZilla', N'FileZilla', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (27, 12, N'Exchange2007', N'Hosted Microsoft Exchange Server 2007', N'SolidCP.Providers.HostedSolution.Exchange2007, SolidCP.Providers.HostedSolution', N'Exchange', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (27, 12, N'Exchange2007', N'Hosted Microsoft Exchange Server 2007', N'FuseCP.Providers.HostedSolution.Exchange2007, FuseCP.Providers.HostedSolution', N'Exchange', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (28, 7, N'SimpleDNS', N'SimpleDNS Plus 5.x', N'SolidCP.Providers.DNS.SimpleDNS5, SolidCP.Providers.DNS.SimpleDNS50', N'SimpleDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (28, 7, N'SimpleDNS', N'SimpleDNS Plus 5.x', N'FuseCP.Providers.DNS.SimpleDNS5, FuseCP.Providers.DNS.SimpleDNS50', N'SimpleDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (29, 4, N'SmarterMail', N'SmarterMail 5.x', N'SolidCP.Providers.Mail.SmarterMail5, SolidCP.Providers.Mail.SmarterMail5', N'SmarterMail50', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (29, 4, N'SmarterMail', N'SmarterMail 5.x', N'FuseCP.Providers.Mail.SmarterMail5, FuseCP.Providers.Mail.SmarterMail5', N'SmarterMail50', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (30, 11, N'MySQL', N'MySQL Server 5.1', N'SolidCP.Providers.Database.MySqlServer51, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (30, 11, N'MySQL', N'MySQL Server 5.1', N'FuseCP.Providers.Database.MySqlServer51, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (31, 8, N'SmarterStats', N'SmarterStats 4.x', N'SolidCP.Providers.Statistics.SmarterStats4, SolidCP.Providers.Statistics.SmarterStats', N'SmarterStats', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (31, 8, N'SmarterStats', N'SmarterStats 4.x', N'FuseCP.Providers.Statistics.SmarterStats4, FuseCP.Providers.Statistics.SmarterStats', N'SmarterStats', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (32, 12, N'Exchange2010', N'Hosted Microsoft Exchange Server 2010', N'SolidCP.Providers.HostedSolution.Exchange2010, SolidCP.Providers.HostedSolution', N'Exchange', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (32, 12, N'Exchange2010', N'Hosted Microsoft Exchange Server 2010', N'FuseCP.Providers.HostedSolution.Exchange2010, FuseCP.Providers.HostedSolution', N'Exchange', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (55, 7, N'NetticaDNS', N'Nettica DNS', N'SolidCP.Providers.DNS.Nettica, SolidCP.Providers.DNS.Nettica', N'NetticaDNS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (55, 7, N'NetticaDNS', N'Nettica DNS', N'FuseCP.Providers.DNS.Nettica, FuseCP.Providers.DNS.Nettica', N'NetticaDNS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (56, 7, N'PowerDNS', N'PowerDNS', N'SolidCP.Providers.DNS.PowerDNS, SolidCP.Providers.DNS.PowerDNS', N'PowerDNS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (56, 7, N'PowerDNS', N'PowerDNS', N'FuseCP.Providers.DNS.PowerDNS, FuseCP.Providers.DNS.PowerDNS', N'PowerDNS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (60, 4, N'SmarterMail', N'SmarterMail 6.x', N'SolidCP.Providers.Mail.SmarterMail6, SolidCP.Providers.Mail.SmarterMail6', N'SmarterMail60', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (60, 4, N'SmarterMail', N'SmarterMail 6.x', N'FuseCP.Providers.Mail.SmarterMail6, FuseCP.Providers.Mail.SmarterMail6', N'SmarterMail60', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (61, 4, N'Merak', N'Merak Mail Server 10.x', N'SolidCP.Providers.Mail.Merak10, SolidCP.Providers.Mail.Merak10', N'Merak', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (61, 4, N'Merak', N'Merak Mail Server 10.x', N'FuseCP.Providers.Mail.Merak10, FuseCP.Providers.Mail.Merak10', N'Merak', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (62, 8, N'SmarterStats', N'SmarterStats 5.x +', N'SolidCP.Providers.Statistics.SmarterStats5, SolidCP.Providers.Statistics.SmarterStats', N'SmarterStats', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (62, 8, N'SmarterStats', N'SmarterStats 5.x +', N'FuseCP.Providers.Statistics.SmarterStats5, FuseCP.Providers.Statistics.SmarterStats', N'SmarterStats', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (63, 4, N'hMailServer5', N'hMailServer 5.x', N'SolidCP.Providers.Mail.hMailServer5, SolidCP.Providers.Mail.hMailServer5', N'hMailServer5', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (63, 4, N'hMailServer5', N'hMailServer 5.x', N'FuseCP.Providers.Mail.hMailServer5, FuseCP.Providers.Mail.hMailServer5', N'hMailServer5', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (64, 4, N'SmarterMail', N'SmarterMail 7.x - 8.x', N'SolidCP.Providers.Mail.SmarterMail7, SolidCP.Providers.Mail.SmarterMail7', N'SmarterMail60', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (64, 4, N'SmarterMail', N'SmarterMail 7.x - 8.x', N'FuseCP.Providers.Mail.SmarterMail7, FuseCP.Providers.Mail.SmarterMail7', N'SmarterMail60', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (65, 4, N'SmarterMail', N'SmarterMail 9.x', N'SolidCP.Providers.Mail.SmarterMail9, SolidCP.Providers.Mail.SmarterMail9', N'SmarterMail60', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (65, 4, N'SmarterMail', N'SmarterMail 9.x', N'FuseCP.Providers.Mail.SmarterMail9, FuseCP.Providers.Mail.SmarterMail9', N'SmarterMail60', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (66, 4, N'SmarterMail', N'SmarterMail 10.x +', N'SolidCP.Providers.Mail.SmarterMail10, SolidCP.Providers.Mail.SmarterMail10', N'SmarterMail100', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (66, 4, N'SmarterMail', N'SmarterMail 10.x +', N'FuseCP.Providers.Mail.SmarterMail10, FuseCP.Providers.Mail.SmarterMail10', N'SmarterMail100', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (67, 4, N'SmarterMail', N'SmarterMail 100.x +', N'SolidCP.Providers.Mail.SmarterMail100, SolidCP.Providers.Mail.SmarterMail100', N'SmarterMail100x', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (67, 4, N'SmarterMail', N'SmarterMail 100.x +', N'FuseCP.Providers.Mail.SmarterMail100, FuseCP.Providers.Mail.SmarterMail100', N'SmarterMail100x', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (90, 12, N'Exchange2010SP2', N'Hosted Microsoft Exchange Server 2010 SP2', N'SolidCP.Providers.HostedSolution.Exchange2010SP2, SolidCP.Providers.HostedSolution', N'Exchange', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (90, 12, N'Exchange2010SP2', N'Hosted Microsoft Exchange Server 2010 SP2', N'FuseCP.Providers.HostedSolution.Exchange2010SP2, FuseCP.Providers.HostedSolution', N'Exchange', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (91, 12, N'Exchange2013', N'Hosted Microsoft Exchange Server 2013', N'SolidCP.Providers.HostedSolution.Exchange2013, SolidCP.Providers.HostedSolution.Exchange2013', N'Exchange', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (91, 12, N'Exchange2013', N'Hosted Microsoft Exchange Server 2013', N'FuseCP.Providers.HostedSolution.Exchange2013, FuseCP.Providers.HostedSolution.Exchange2013', N'Exchange', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (92, 12, N'Exchange2016', N'Hosted Microsoft Exchange Server 2016', N'SolidCP.Providers.HostedSolution.Exchange2016, SolidCP.Providers.HostedSolution.Exchange2016', N'Exchange', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (92, 12, N'Exchange2016', N'Hosted Microsoft Exchange Server 2016', N'FuseCP.Providers.HostedSolution.Exchange2016, FuseCP.Providers.HostedSolution.Exchange2016', N'Exchange', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (93, 12, N'Exchange2016', N'Hosted Microsoft Exchange Server 2019', N'SolidCP.Providers.HostedSolution.Exchange2019, SolidCP.Providers.HostedSolution.Exchange2019', N'Exchange', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (93, 12, N'Exchange2016', N'Hosted Microsoft Exchange Server 2019', N'FuseCP.Providers.HostedSolution.Exchange2019, FuseCP.Providers.HostedSolution.Exchange2019', N'Exchange', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (100, 1, N'Windows2008', N'Windows Server 2008', N'SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008', N'Windows2008', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (100, 1, N'Windows2008', N'Windows Server 2008', N'FuseCP.Providers.OS.Windows2008, FuseCP.Providers.OS.Windows2008', N'Windows2008', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (101, 2, N'IIS70', N'Internet Information Services 7.0', N'SolidCP.Providers.Web.IIs70, SolidCP.Providers.Web.IIs70', N'IIS70', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (101, 2, N'IIS70', N'Internet Information Services 7.0', N'FuseCP.Providers.Web.IIs70, FuseCP.Providers.Web.IIs70', N'IIS70', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (102, 3, N'MSFTP70', N'Microsoft FTP Server 7.0', N'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs70', N'MSFTP70', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (102, 3, N'MSFTP70', N'Microsoft FTP Server 7.0', N'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs70', N'MSFTP70', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (103, 13, N'Organizations', N'Hosted Organizations', N'SolidCP.Providers.HostedSolution.OrganizationProvider, SolidCP.Providers.HostedSolution', N'Organizations', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (103, 13, N'Organizations', N'Hosted Organizations', N'FuseCP.Providers.HostedSolution.OrganizationProvider, FuseCP.Providers.HostedSolution', N'Organizations', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (104, 1, N'Windows2012', N'Windows Server 2012', N'SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012', N'Windows2012', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (104, 1, N'Windows2012', N'Windows Server 2012', N'FuseCP.Providers.OS.Windows2012, FuseCP.Providers.OS.Windows2012', N'Windows2012', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (105, 2, N'IIS80', N'Internet Information Services 8.0', N'SolidCP.Providers.Web.IIs80, SolidCP.Providers.Web.IIs80', N'IIS70', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (105, 2, N'IIS80', N'Internet Information Services 8.0', N'FuseCP.Providers.Web.IIs80, FuseCP.Providers.Web.IIs80', N'IIS70', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (106, 3, N'MSFTP80', N'Microsoft FTP Server 8.0', N'SolidCP.Providers.FTP.MsFTP80, SolidCP.Providers.FTP.IIs80', N'MSFTP70', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (106, 3, N'MSFTP80', N'Microsoft FTP Server 8.0', N'FuseCP.Providers.FTP.MsFTP80, FuseCP.Providers.FTP.IIs80', N'MSFTP70', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (110, 3, N'CerberusFTP6', N'Cerberus FTP Server 6.x', N'SolidCP.Providers.FTP.CerberusFTP6, SolidCP.Providers.FTP.CerberusFTP6', N'CerberusFTP6', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (110, 3, N'CerberusFTP6', N'Cerberus FTP Server 6.x', N'FuseCP.Providers.FTP.CerberusFTP6, FuseCP.Providers.FTP.CerberusFTP6', N'CerberusFTP6', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (111, 1, N'Windows2016', N'Windows Server 2016', N'SolidCP.Providers.OS.Windows2016, SolidCP.Providers.OS.Windows2016', N'Windows2008', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (111, 1, N'Windows2016', N'Windows Server 2016', N'FuseCP.Providers.OS.Windows2016, FuseCP.Providers.OS.Windows2016', N'Windows2008', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (112, 2, N'IIS100', N'Internet Information Services 10.0', N'SolidCP.Providers.Web.IIs100, SolidCP.Providers.Web.IIs100', N'IIS70', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (112, 2, N'IIS100', N'Internet Information Services 10.0', N'FuseCP.Providers.Web.IIs100, FuseCP.Providers.Web.IIs100', N'IIS70', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (113, 3, N'MSFTP100', N'Microsoft FTP Server 10.0', N'SolidCP.Providers.FTP.MsFTP100, SolidCP.Providers.FTP.IIs100', N'MSFTP70', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (113, 3, N'MSFTP100', N'Microsoft FTP Server 10.0', N'FuseCP.Providers.FTP.MsFTP100, FuseCP.Providers.FTP.IIs100', N'MSFTP70', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (135, 42, N'HeliconZoo', N'Web Application Engines', N'SolidCP.Providers.Web.HeliconZoo.HeliconZoo, SolidCP.Providers.Web.HeliconZoo', N'HeliconZoo', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (135, 42, N'HeliconZoo', N'Web Application Engines', N'FuseCP.Providers.Web.HeliconZoo.HeliconZoo, FuseCP.Providers.Web.HeliconZoo', N'HeliconZoo', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (160, 4, N'IceWarp', N'IceWarp Mail Server', N'SolidCP.Providers.Mail.IceWarp, SolidCP.Providers.Mail.IceWarp', N'IceWarp', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (160, 4, N'IceWarp', N'IceWarp Mail Server', N'FuseCP.Providers.Mail.IceWarp, FuseCP.Providers.Mail.IceWarp', N'IceWarp', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (200, 20, N'HostedSharePoint30', N'Hosted Windows SharePoint Services 3.0', N'SolidCP.Providers.HostedSolution.HostedSharePointServer, SolidCP.Providers.HostedSolution', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (200, 20, N'HostedSharePoint30', N'Hosted Windows SharePoint Services 3.0', N'FuseCP.Providers.HostedSolution.HostedSharePointServer, FuseCP.Providers.HostedSolution', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (201, 21, N'CRM', N'Hosted MS CRM 4.0', N'SolidCP.Providers.HostedSolution.CRMProvider, SolidCP.Providers.HostedSolution', N'CRM', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (201, 21, N'CRM', N'Hosted MS CRM 4.0', N'FuseCP.Providers.HostedSolution.CRMProvider, FuseCP.Providers.HostedSolution', N'CRM', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (202, 22, N'MsSQL', N'Microsoft SQL Server 2008', N'SolidCP.Providers.Database.MsSqlServer2008, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (202, 22, N'MsSQL', N'Microsoft SQL Server 2008', N'FuseCP.Providers.Database.MsSqlServer2008, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (203, 31, N'BlackBerry 4.1', N'BlackBerry 4.1', N'SolidCP.Providers.HostedSolution.BlackBerryProvider, SolidCP.Providers.HostedSolution', N'BlackBerry', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (203, 31, N'BlackBerry 4.1', N'BlackBerry 4.1', N'FuseCP.Providers.HostedSolution.BlackBerryProvider, FuseCP.Providers.HostedSolution', N'BlackBerry', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (204, 31, N'BlackBerry 5.0', N'BlackBerry 5.0', N'SolidCP.Providers.HostedSolution.BlackBerry5Provider, SolidCP.Providers.HostedSolution', N'BlackBerry5', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (204, 31, N'BlackBerry 5.0', N'BlackBerry 5.0', N'FuseCP.Providers.HostedSolution.BlackBerry5Provider, FuseCP.Providers.HostedSolution', N'BlackBerry5', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (205, 32, N'OCS', N'Office Communications Server 2007 R2', N'SolidCP.Providers.HostedSolution.OCS2007R2, SolidCP.Providers.HostedSolution', N'OCS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (205, 32, N'OCS', N'Office Communications Server 2007 R2', N'FuseCP.Providers.HostedSolution.OCS2007R2, FuseCP.Providers.HostedSolution', N'OCS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (206, 32, N'OCSEdge', N'OCS Edge server', N'SolidCP.Providers.HostedSolution.OCSEdge2007R2, SolidCP.Providers.HostedSolution', N'OCS_Edge', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (206, 32, N'OCSEdge', N'OCS Edge server', N'FuseCP.Providers.HostedSolution.OCSEdge2007R2, FuseCP.Providers.HostedSolution', N'OCS_Edge', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (208, 20, N'HostedSharePoint2010', N'Hosted SharePoint Foundation 2010', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2010, SolidCP.Providers.HostedSolution', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (208, 20, N'HostedSharePoint2010', N'Hosted SharePoint Foundation 2010', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2010, FuseCP.Providers.HostedSolution', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (209, 23, N'MsSQL', N'Microsoft SQL Server 2012', N'SolidCP.Providers.Database.MsSqlServer2012, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (209, 23, N'MsSQL', N'Microsoft SQL Server 2012', N'FuseCP.Providers.Database.MsSqlServer2012, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (250, 41, N'Lync2010', N'Microsoft Lync Server 2010 Multitenant Hosting Pack', N'SolidCP.Providers.HostedSolution.Lync2010, SolidCP.Providers.HostedSolution', N'Lync', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (250, 41, N'Lync2010', N'Microsoft Lync Server 2010 Multitenant Hosting Pack', N'FuseCP.Providers.HostedSolution.Lync2010, FuseCP.Providers.HostedSolution', N'Lync', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (300, 30, N'HyperV', N'Microsoft Hyper-V', N'SolidCP.Providers.Virtualization.HyperV, SolidCP.Providers.Virtualization.HyperV', N'HyperV', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (300, 30, N'HyperV', N'Microsoft Hyper-V', N'FuseCP.Providers.Virtualization.HyperV, FuseCP.Providers.Virtualization.HyperV', N'HyperV', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (301, 11, N'MySQL', N'MySQL Server 5.5', N'SolidCP.Providers.Database.MySqlServer55, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (301, 11, N'MySQL', N'MySQL Server 5.5', N'FuseCP.Providers.Database.MySqlServer55, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (302, 11, N'MySQL', N'MySQL Server 5.6', N'SolidCP.Providers.Database.MySqlServer56, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (302, 11, N'MySQL', N'MySQL Server 5.6', N'FuseCP.Providers.Database.MySqlServer56, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (303, 11, N'MySQL', N'MySQL Server 5.7', N'SolidCP.Providers.Database.MySqlServer57, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (303, 11, N'MySQL', N'MySQL Server 5.7', N'FuseCP.Providers.Database.MySqlServer57, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (304, 90, N'MySQL', N'MySQL Server 8.0', N'SolidCP.Providers.Database.MySqlServer80, SolidCP.Providers.Database.MySQL', N'MySQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (304, 90, N'MySQL', N'MySQL Server 8.0', N'FuseCP.Providers.Database.MySqlServer80, FuseCP.Providers.Database.MySQL', N'MySQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (350, 33, N'HyperV2012R2', N'Microsoft Hyper-V 2012 R2', N'SolidCP.Providers.Virtualization.HyperV2012R2, SolidCP.Providers.Virtualization.HyperV2012R2', N'HyperV2012R2', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (350, 33, N'HyperV2012R2', N'Microsoft Hyper-V 2012 R2', N'FuseCP.Providers.Virtualization.HyperV2012R2, FuseCP.Providers.Virtualization.HyperV2012R2', N'HyperV2012R2', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (351, 33, N'HyperVvmm', N'Microsoft Hyper-V Virtual Machine Management', N'SolidCP.Providers.Virtualization.HyperVvmm, SolidCP.Providers.Virtualization.HyperVvmm', N'HyperVvmm', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (351, 33, N'HyperVvmm', N'Microsoft Hyper-V Virtual Machine Management', N'FuseCP.Providers.Virtualization.HyperVvmm, FuseCP.Providers.Virtualization.HyperVvmm', N'HyperVvmm', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (352, 33, N'HyperV2016', N'Microsoft Hyper-V 2016', N'SolidCP.Providers.Virtualization.HyperV2016, SolidCP.Providers.Virtualization.HyperV2016', N'HyperV2012R2', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (352, 33, N'HyperV2016', N'Microsoft Hyper-V 2016', N'FuseCP.Providers.Virtualization.HyperV2016, FuseCP.Providers.Virtualization.HyperV2016', N'HyperV2012R2', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (370, 167, N'Proxmox', N'Proxmox Virtualization', N'SolidCP.Providers.Virtualization.Proxmoxvps, SolidCP.Providers.Virtualization.Proxmoxvps', N'Proxmox', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (370, 167, N'Proxmox', N'Proxmox Virtualization', N'FuseCP.Providers.Virtualization.Proxmoxvps, FuseCP.Providers.Virtualization.Proxmoxvps', N'Proxmox', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (400, 40, N'HyperVForPC', N'Microsoft Hyper-V For Private Cloud', N'SolidCP.Providers.VirtualizationForPC.HyperVForPC, SolidCP.Providers.VirtualizationForPC.HyperVForPC', N'HyperVForPrivateCloud', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (400, 40, N'HyperVForPC', N'Microsoft Hyper-V For Private Cloud', N'FuseCP.Providers.VirtualizationForPC.HyperVForPC, FuseCP.Providers.VirtualizationForPC.HyperVForPC', N'HyperVForPrivateCloud', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (410, 7, N'MSDNS.2012', N'Microsoft DNS Server 2012+', N'SolidCP.Providers.DNS.MsDNS2012, SolidCP.Providers.DNS.MsDNS2012', N'MSDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (410, 7, N'MSDNS.2012', N'Microsoft DNS Server 2012+', N'FuseCP.Providers.DNS.MsDNS2012, FuseCP.Providers.DNS.MsDNS2012', N'MSDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (600, 44, N'EnterpriseStorage2012', N'Enterprise Storage Windows 2012', N'SolidCP.Providers.EnterpriseStorage.Windows2012, SolidCP.Providers.EnterpriseStorage.Windows2012', N'EnterpriseStorage', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (600, 44, N'EnterpriseStorage2012', N'Enterprise Storage Windows 2012', N'FuseCP.Providers.EnterpriseStorage.Windows2012, FuseCP.Providers.EnterpriseStorage.Windows2012', N'EnterpriseStorage', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (700, 49, N'StorageSpace2012', N'Storage Spaces Windows 2012', N'SolidCP.Providers.StorageSpaces.Windows2012, SolidCP.Providers.StorageSpaces.Windows2012', N'StorageSpaceServices', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (700, 49, N'StorageSpace2012', N'Storage Spaces Windows 2012', N'FuseCP.Providers.StorageSpaces.Windows2012, FuseCP.Providers.StorageSpaces.Windows2012', N'StorageSpaceServices', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1201, 21, N'CRM', N'Hosted MS CRM 2011', N'SolidCP.Providers.HostedSolution.CRMProvider2011, SolidCP.Providers.HostedSolution.CRM2011', N'CRM2011', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1201, 21, N'CRM', N'Hosted MS CRM 2011', N'FuseCP.Providers.HostedSolution.CRMProvider2011, FuseCP.Providers.HostedSolution.CRM2011', N'CRM2011', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1202, 24, N'CRM', N'Hosted MS CRM 2013', N'SolidCP.Providers.HostedSolution.CRMProvider2013, SolidCP.Providers.HostedSolution.Crm2013', N'CRM2011', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1202, 24, N'CRM', N'Hosted MS CRM 2013', N'FuseCP.Providers.HostedSolution.CRMProvider2013, FuseCP.Providers.HostedSolution.Crm2013', N'CRM2011', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1203, 46, N'MsSQL', N'Microsoft SQL Server 2014', N'SolidCP.Providers.Database.MsSqlServer2014, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1203, 46, N'MsSQL', N'Microsoft SQL Server 2014', N'FuseCP.Providers.Database.MsSqlServer2014, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1205, 24, N'CRM', N'Hosted MS CRM 2015', N'SolidCP.Providers.HostedSolution.CRMProvider2015, SolidCP.Providers.HostedSolution.Crm2015', N'CRM2011', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1205, 24, N'CRM', N'Hosted MS CRM 2015', N'FuseCP.Providers.HostedSolution.CRMProvider2015, FuseCP.Providers.HostedSolution.Crm2015', N'CRM2011', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1206, 24, N'CRM', N'Hosted MS CRM 2016', N'SolidCP.Providers.HostedSolution.CRMProvider2016, SolidCP.Providers.HostedSolution.Crm2016', N'CRM2011', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1206, 24, N'CRM', N'Hosted MS CRM 2016', N'FuseCP.Providers.HostedSolution.CRMProvider2016, FuseCP.Providers.HostedSolution.Crm2016', N'CRM2011', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1301, 20, N'HostedSharePoint2013', N'Hosted SharePoint Foundation 2013', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2013, SolidCP.Providers.HostedSolution.SharePoint2013', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1301, 20, N'HostedSharePoint2013', N'Hosted SharePoint Foundation 2013', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2013, FuseCP.Providers.HostedSolution.SharePoint2013', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1306, 20, N'HostedSharePoint2016', N'Hosted SharePoint Foundation 2016', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2016, SolidCP.Providers.HostedSolution.SharePoint2016', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1306, 20, N'HostedSharePoint2016', N'Hosted SharePoint Foundation 2016', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2016, FuseCP.Providers.HostedSolution.SharePoint2016', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1401, 41, N'Lync2013', N'Microsoft Lync Server 2013 Enterprise Edition', N'SolidCP.Providers.HostedSolution.Lync2013, SolidCP.Providers.HostedSolution.Lync2013', N'Lync', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1401, 41, N'Lync2013', N'Microsoft Lync Server 2013 Enterprise Edition', N'FuseCP.Providers.HostedSolution.Lync2013, FuseCP.Providers.HostedSolution.Lync2013', N'Lync', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1402, 41, N'Lync2013HP', N'Microsoft Lync Server 2013 Multitenant Hosting Pack', N'SolidCP.Providers.HostedSolution.Lync2013HP, SolidCP.Providers.HostedSolution.Lync2013HP', N'Lync', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1402, 41, N'Lync2013HP', N'Microsoft Lync Server 2013 Multitenant Hosting Pack', N'FuseCP.Providers.HostedSolution.Lync2013HP, FuseCP.Providers.HostedSolution.Lync2013HP', N'Lync', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1403, 52, N'SfB2015', N'Microsoft Skype for Business Server 2015', N'SolidCP.Providers.HostedSolution.SfB2015, SolidCP.Providers.HostedSolution.SfB2015', N'SfB', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1403, 52, N'SfB2015', N'Microsoft Skype for Business Server 2015', N'FuseCP.Providers.HostedSolution.SfB2015, FuseCP.Providers.HostedSolution.SfB2015', N'SfB', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1404, 52, N'SfB2019', N'Microsoft Skype for Business Server 2019', N'SolidCP.Providers.HostedSolution.SfB2019, SolidCP.Providers.HostedSolution.SfB2019', N'SfB', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1404, 52, N'SfB2019', N'Microsoft Skype for Business Server 2019', N'FuseCP.Providers.HostedSolution.SfB2019, FuseCP.Providers.HostedSolution.SfB2019', N'SfB', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1501, 45, N'RemoteDesktopServices2012', N'Remote Desktop Services Windows 2012', N'SolidCP.Providers.RemoteDesktopServices.Windows2012,SolidCP.Providers.RemoteDesktopServices.Windows2012', N'RDS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1501, 45, N'RemoteDesktopServices2012', N'Remote Desktop Services Windows 2012', N'FuseCP.Providers.RemoteDesktopServices.Windows2012,FuseCP.Providers.RemoteDesktopServices.Windows2012', N'RDS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1502, 45, N'RemoteDesktopServices2012', N'Remote Desktop Services Windows 2016', N'SolidCP.Providers.RemoteDesktopServices.Windows2016,SolidCP.Providers.RemoteDesktopServices.Windows2016', N'RDS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1502, 45, N'RemoteDesktopServices2012', N'Remote Desktop Services Windows 2016', N'FuseCP.Providers.RemoteDesktopServices.Windows2016,FuseCP.Providers.RemoteDesktopServices.Windows2016', N'RDS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1503, 45, N'RemoteDesktopServices2019', N'Remote Desktop Services Windows 2019', N'SolidCP.Providers.RemoteDesktopServices.Windows2019,SolidCP.Providers.RemoteDesktopServices.Windows2019', N'RDS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1503, 45, N'RemoteDesktopServices2019', N'Remote Desktop Services Windows 2019', N'FuseCP.Providers.RemoteDesktopServices.Windows2019,FuseCP.Providers.RemoteDesktopServices.Windows2019', N'RDS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1504, 45, N'RemoteDesktopServices2022', N'Remote Desktop Services Windows 2022', N'SolidCP.Providers.RemoteDesktopServices.Windows2019,SolidCP.Providers.RemoteDesktopServices.Windows2019', N'RDS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1504, 45, N'RemoteDesktopServices2022', N'Remote Desktop Services Windows 2022', N'FuseCP.Providers.RemoteDesktopServices.Windows2019,FuseCP.Providers.RemoteDesktopServices.Windows2019', N'RDS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1505, 45, N'RemoteDesktopServices2025', N'Remote Desktop Services Windows 2025', N'SolidCP.Providers.RemoteDesktopServices.Windows2025,SolidCP.Providers.RemoteDesktopServices.Windows2019', N'RDS', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1505, 45, N'RemoteDesktopServices2025', N'Remote Desktop Services Windows 2025', N'FuseCP.Providers.RemoteDesktopServices.Windows2025,FuseCP.Providers.RemoteDesktopServices.Windows2019', N'RDS', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1550, 50, N'MariaDB', N'MariaDB 10.1', N'SolidCP.Providers.Database.MariaDB101, SolidCP.Providers.Database.MariaDB', N'MariaDB', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1550, 50, N'MariaDB', N'MariaDB 10.1', N'FuseCP.Providers.Database.MariaDB101, FuseCP.Providers.Database.MariaDB', N'MariaDB', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1552, 73, N'HostedSharePoint2013Ent', N'Hosted SharePoint Enterprise 2013', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2013Ent, SolidCP.Providers.HostedSolution.SharePoint2013Ent', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1552, 73, N'HostedSharePoint2013Ent', N'Hosted SharePoint Enterprise 2013', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2013Ent, FuseCP.Providers.HostedSolution.SharePoint2013Ent', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1560, 50, N'MariaDB', N'MariaDB 10.2', N'SolidCP.Providers.Database.MariaDB102, SolidCP.Providers.Database.MariaDB', N'MariaDB', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1560, 50, N'MariaDB', N'MariaDB 10.2', N'FuseCP.Providers.Database.MariaDB102, FuseCP.Providers.Database.MariaDB', N'MariaDB', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1570, 50, N'MariaDB', N'MariaDB 10.3', N'SolidCP.Providers.Database.MariaDB103, SolidCP.Providers.Database.MariaDB', N'MariaDB', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1570, 50, N'MariaDB', N'MariaDB 10.3', N'FuseCP.Providers.Database.MariaDB103, FuseCP.Providers.Database.MariaDB', N'MariaDB', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1571, 50, N'MariaDB', N'MariaDB 10.4', N'SolidCP.Providers.Database.MariaDB104, SolidCP.Providers.Database.MariaDB', N'MariaDB', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1571, 50, N'MariaDB', N'MariaDB 10.4', N'FuseCP.Providers.Database.MariaDB104, FuseCP.Providers.Database.MariaDB', N'MariaDB', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1572, 50, N'MariaDB', N'MariaDB 10.5', N'SolidCP.Providers.Database.MariaDB105, SolidCP.Providers.Database.MariaDB', N'MariaDB', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1572, 50, N'MariaDB', N'MariaDB 10.5', N'FuseCP.Providers.Database.MariaDB105, FuseCP.Providers.Database.MariaDB', N'MariaDB', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1601, 61, N'MailCleaner', N'Mail Cleaner', N'SolidCP.Providers.Filters.MailCleaner, SolidCP.Providers.Filters.MailCleaner', N'MailCleaner', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1601, 61, N'MailCleaner', N'Mail Cleaner', N'FuseCP.Providers.Filters.MailCleaner, FuseCP.Providers.Filters.MailCleaner', N'MailCleaner', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1602, 61, N'SpamExperts', N'SpamExperts Mail Filter', N'SolidCP.Providers.Filters.SpamExperts, SolidCP.Providers.Filters.SpamExperts', N'SpamExperts', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1602, 61, N'SpamExperts', N'SpamExperts Mail Filter', N'FuseCP.Providers.Filters.SpamExperts, FuseCP.Providers.Filters.SpamExperts', N'SpamExperts', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1701, 71, N'MsSQL', N'Microsoft SQL Server 2016', N'SolidCP.Providers.Database.MsSqlServer2016, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1701, 71, N'MsSQL', N'Microsoft SQL Server 2016', N'FuseCP.Providers.Database.MsSqlServer2016, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1702, 73, N'HostedSharePoint2016Ent', N'Hosted SharePoint Enterprise 2016', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2016Ent, SolidCP.Providers.HostedSolution.SharePoint2016Ent', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1702, 73, N'HostedSharePoint2016Ent', N'Hosted SharePoint Enterprise 2016', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2016Ent, FuseCP.Providers.HostedSolution.SharePoint2016Ent', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1703, 7, N'SimpleDNS', N'SimpleDNS Plus 6.x', N'SolidCP.Providers.DNS.SimpleDNS6, SolidCP.Providers.DNS.SimpleDNS60', N'SimpleDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1703, 7, N'SimpleDNS', N'SimpleDNS Plus 6.x', N'FuseCP.Providers.DNS.SimpleDNS6, FuseCP.Providers.DNS.SimpleDNS60', N'SimpleDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1704, 72, N'MsSQL', N'Microsoft SQL Server 2017', N'SolidCP.Providers.Database.MsSqlServer2017, SolidCP.Providers.Database.SqlServer', N'MSSQL', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1704, 72, N'MsSQL', N'Microsoft SQL Server 2017', N'FuseCP.Providers.Database.MsSqlServer2017, FuseCP.Providers.Database.SqlServer', N'MSSQL', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1705, 74, N'MsSQL', N'Microsoft SQL Server 2019', N'SolidCP.Providers.Database.MsSqlServer2019, SolidCP.Providers.Database.SqlServer', N'MSSQL', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1705, 74, N'MsSQL', N'Microsoft SQL Server 2019', N'FuseCP.Providers.Database.MsSqlServer2019, FuseCP.Providers.Database.SqlServer', N'MSSQL', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1706, 75, N'MsSQL', N'Microsoft SQL Server 2022', N'SolidCP.Providers.Database.MsSqlServer2022, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1706, 75, N'MsSQL', N'Microsoft SQL Server 2022', N'FuseCP.Providers.Database.MsSqlServer2022, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1711, 73, N'HostedSharePoint2019', N'Hosted SharePoint 2019', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2019, SolidCP.Providers.HostedSolution.SharePoint2019', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1711, 73, N'HostedSharePoint2019', N'Hosted SharePoint 2019', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2019, FuseCP.Providers.HostedSolution.SharePoint2019', N'HostedSharePoint30', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1800, 1, N'Windows2019', N'Windows Server 2019', N'SolidCP.Providers.OS.Windows2019, SolidCP.Providers.OS.Windows2019', N'Windows2012', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1800, 1, N'Windows2019', N'Windows Server 2019', N'FuseCP.Providers.OS.Windows2019, FuseCP.Providers.OS.Windows2019', N'Windows2012', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1801, 33, N'HyperV2019', N'Microsoft Hyper-V 2019', N'SolidCP.Providers.Virtualization.HyperV2019, SolidCP.Providers.Virtualization.HyperV2019', N'HyperV2012R2', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1801, 33, N'HyperV2019', N'Microsoft Hyper-V 2019', N'FuseCP.Providers.Virtualization.HyperV2019, FuseCP.Providers.Virtualization.HyperV2019', N'HyperV2012R2', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1802, 1, N'Windows2022', N'Windows Server 2022', N'SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022', N'Windows2012', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1802, 1, N'Windows2022', N'Windows Server 2022', N'FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022', N'Windows2012', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1803, 33, N'HyperV2022', N'Microsoft Hyper-V 2022', N'SolidCP.Providers.Virtualization.HyperV2022, SolidCP.Providers.Virtualization.HyperV2022', N'HyperV2012R2', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1803, 33, N'HyperV2022', N'Microsoft Hyper-V 2022', N'FuseCP.Providers.Virtualization.HyperV2022, FuseCP.Providers.Virtualization.HyperV2022', N'HyperV2012R2', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1804, 1, N'Windows2025', N'Windows Server 2025', N'SolidCP.Providers.OS.Windows2025, SolidCP.Providers.OS.Windows2025', N'Windows2012', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1804, 1, N'Windows2025', N'Windows Server 2025', N'FuseCP.Providers.OS.Windows2025, FuseCP.Providers.OS.Windows2025', N'Windows2012', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1805, 33, N'HyperV2025', N'Microsoft Hyper-V 2025', N'SolidCP.Providers.Virtualization.HyperV2025, SolidCP.Providers.Virtualization.HyperV2025', N'HyperV2012R2', 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1805, 33, N'HyperV2025', N'Microsoft Hyper-V 2025', N'FuseCP.Providers.Virtualization.HyperV2025, FuseCP.Providers.Virtualization.HyperV2025', N'HyperV2012R2', 1)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1901, 7, N'SimpleDNS', N'SimpleDNS Plus 8.x', N'SolidCP.Providers.DNS.SimpleDNS8, SolidCP.Providers.DNS.SimpleDNS80', N'SimpleDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1901, 7, N'SimpleDNS', N'SimpleDNS Plus 8.x', N'FuseCP.Providers.DNS.SimpleDNS8, FuseCP.Providers.DNS.SimpleDNS80', N'SimpleDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1902, 7, N'MSDNS.2016', N'Microsoft DNS Server 2016', N'SolidCP.Providers.DNS.MsDNS2016, SolidCP.Providers.DNS.MsDNS2016', N'MSDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1902, 7, N'MSDNS.2016', N'Microsoft DNS Server 2016', N'FuseCP.Providers.DNS.MsDNS2016, FuseCP.Providers.DNS.MsDNS2016', N'MSDNS', NULL)
 GO
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1903, 7, N'SimpleDNS', N'SimpleDNS Plus 9.x', N'SolidCP.Providers.DNS.SimpleDNS9, SolidCP.Providers.DNS.SimpleDNS90', N'SimpleDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1903, 7, N'SimpleDNS', N'SimpleDNS Plus 9.x', N'FuseCP.Providers.DNS.SimpleDNS9, FuseCP.Providers.DNS.SimpleDNS90', N'SimpleDNS', NULL)
 GO
 INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (2, 6, 1, N'MySQL4.Databases', N'Databases', 2, 1, 7, NULL, NULL)
 GO
@@ -6474,7 +6474,7 @@ INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDe
 GO
 INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (728, 33, 14, N'VPS2012.PrivateVLANsNumber', N'Number of Private Network VLANs', 2, 0, NULL, NULL, NULL)
 GO
-INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (729, 12, 32, N'Exchange2013.AutoReply', N'Automatic Replies via SolidCP Allowed', 1, 0, NULL, NULL, NULL)
+INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (729, 12, 32, N'Exchange2013.AutoReply', N'Automatic Replies via FuseCP Allowed', 1, 0, NULL, NULL, NULL)
 GO
 INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (730, 33, 6, N'VPS2012.AdditionalVhdCount', N'Additional Hard Drives per VPS', 3, 0, NULL, NULL, NULL)
 GO
@@ -6539,37 +6539,37 @@ INSERT [dbo].[ResourceGroupDnsRecords] ([RecordID], [RecordOrder], [GroupID], [R
 GO
 SET IDENTITY_INSERT [dbo].[ResourceGroupDnsRecords] OFF
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (1, N'OS', 1, N'SolidCP.EnterpriseServer.OperatingSystemController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (1, N'OS', 1, N'FuseCP.EnterpriseServer.OperatingSystemController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (2, N'Web', 2, N'SolidCP.EnterpriseServer.WebServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (2, N'Web', 2, N'FuseCP.EnterpriseServer.WebServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (3, N'FTP', 3, N'SolidCP.EnterpriseServer.FtpServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (3, N'FTP', 3, N'FuseCP.EnterpriseServer.FtpServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (4, N'Mail', 4, N'SolidCP.EnterpriseServer.MailServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (4, N'Mail', 4, N'FuseCP.EnterpriseServer.MailServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (5, N'MsSQL2000', 7, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (5, N'MsSQL2000', 7, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (6, N'MySQL4', 11, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (6, N'MySQL4', 11, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (7, N'DNS', 17, N'SolidCP.EnterpriseServer.DnsServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (7, N'DNS', 17, N'FuseCP.EnterpriseServer.DnsServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (8, N'Statistics', 18, N'SolidCP.EnterpriseServer.StatisticsServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (8, N'Statistics', 18, N'FuseCP.EnterpriseServer.StatisticsServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (10, N'MsSQL2005', 8, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (10, N'MsSQL2005', 8, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (11, N'MySQL5', 12, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (11, N'MySQL5', 12, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (12, N'Exchange', 5, NULL, 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (13, N'Hosted Organizations', 6, NULL, 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (20, N'Sharepoint Foundation Server', 14, N'SolidCP.EnterpriseServer.HostedSharePointServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (20, N'Sharepoint Foundation Server', 14, N'FuseCP.EnterpriseServer.HostedSharePointServerController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (21, N'Hosted CRM', 16, NULL, 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (22, N'MsSQL2008', 9, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (22, N'MsSQL2008', 9, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (23, N'MsSQL2012', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (23, N'MsSQL2012', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (24, N'Hosted CRM2013', 16, NULL, 1)
 GO
@@ -6585,35 +6585,35 @@ INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupContr
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (41, N'Lync', 24, NULL, 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (42, N'HeliconZoo', 2, N'SolidCP.EnterpriseServer.HeliconZooController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (42, N'HeliconZoo', 2, N'FuseCP.EnterpriseServer.HeliconZooController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (44, N'EnterpriseStorage', 26, N'SolidCP.EnterpriseServer.EnterpriseStorageController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (44, N'EnterpriseStorage', 26, N'FuseCP.EnterpriseServer.EnterpriseStorageController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (45, N'RDS', 27, NULL, 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (46, N'MsSQL2014', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (46, N'MsSQL2014', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (47, N'Service Levels', 2, NULL, 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (49, N'StorageSpaceServices', 26, N'SolidCP.EnterpriseServer.StorageSpacesController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (49, N'StorageSpaceServices', 26, N'FuseCP.EnterpriseServer.StorageSpacesController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (50, N'MariaDB', 11, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (50, N'MariaDB', 11, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (52, N'SfB', 26, NULL, 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (61, N'MailFilters', 5, NULL, 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (71, N'MsSQL2016', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (71, N'MsSQL2016', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (72, N'MsSQL2017', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (72, N'MsSQL2017', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (73, N'Sharepoint Enterprise Server', 15, N'SolidCP.EnterpriseServer.HostedSharePointServerEntController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (73, N'Sharepoint Enterprise Server', 15, N'FuseCP.EnterpriseServer.HostedSharePointServerEntController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (74, N'MsSQL2019', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (74, N'MsSQL2019', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (75, N'MsSQL2022', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (75, N'MsSQL2022', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (90, N'MySQL8', 12, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (90, N'MySQL8', 12, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 GO
 INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (167, N'Proxmox', 20, NULL, 1)
 GO
@@ -6808,95 +6808,95 @@ INSERT [dbo].[ScheduleTaskParameters] ([TaskID], [ParameterID], [DataTypeID], [D
 GO
 INSERT [dbo].[ScheduleTaskParameters] ([TaskID], [ParameterID], [DataTypeID], [DefaultValue], [ParameterOrder]) VALUES (N'SCHEDULE_TASK_ZIP_FILES', N'ZIP_FILE', N'String', N'\archive.zip', 2)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', N'SolidCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, SolidCP.EnterpriseServer.Code', 0)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', N'FuseCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, FuseCP.EnterpriseServer.Code', 0)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_AUDIT_LOG_REPORT', N'SolidCP.EnterpriseServer.AuditLogReportTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_AUDIT_LOG_REPORT', N'FuseCP.EnterpriseServer.AuditLogReportTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_BACKUP', N'SolidCP.EnterpriseServer.BackupTask, SolidCP.EnterpriseServer.Code', 1)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_BACKUP', N'FuseCP.EnterpriseServer.BackupTask, FuseCP.EnterpriseServer.Code', 1)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_BACKUP_DATABASE', N'SolidCP.EnterpriseServer.BackupDatabaseTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_BACKUP_DATABASE', N'FuseCP.EnterpriseServer.BackupDatabaseTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', N'SolidCP.EnterpriseServer.CalculateExchangeDiskspaceTask, SolidCP.EnterpriseServer.Code', 2)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', N'FuseCP.EnterpriseServer.CalculateExchangeDiskspaceTask, FuseCP.EnterpriseServer.Code', 2)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', N'SolidCP.EnterpriseServer.CalculatePackagesBandwidthTask, SolidCP.EnterpriseServer.Code', 1)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', N'FuseCP.EnterpriseServer.CalculatePackagesBandwidthTask, FuseCP.EnterpriseServer.Code', 1)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', N'SolidCP.EnterpriseServer.CalculatePackagesDiskspaceTask, SolidCP.EnterpriseServer.Code', 1)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', N'FuseCP.EnterpriseServer.CalculatePackagesDiskspaceTask, FuseCP.EnterpriseServer.Code', 1)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', N'SolidCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, SolidCP.EnterpriseServer.Code', 0)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', N'FuseCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, FuseCP.EnterpriseServer.Code', 0)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CHECK_WEBSITE', N'SolidCP.EnterpriseServer.CheckWebSiteTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_CHECK_WEBSITE', N'FuseCP.EnterpriseServer.CheckWebSiteTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS', N'SolidCP.EnterpriseServer.DeleteExchangeAccountsTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS', N'FuseCP.EnterpriseServer.DeleteExchangeAccountsTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_DOMAIN_EXPIRATION', N'SolidCP.EnterpriseServer.DomainExpirationTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_DOMAIN_EXPIRATION', N'FuseCP.EnterpriseServer.DomainExpirationTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_DOMAIN_LOOKUP', N'SolidCP.EnterpriseServer.DomainLookupViewTask, SolidCP.EnterpriseServer.Code', 1)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_DOMAIN_LOOKUP', N'FuseCP.EnterpriseServer.DomainLookupViewTask, FuseCP.EnterpriseServer.Code', 1)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_FTP_FILES', N'SolidCP.EnterpriseServer.FTPFilesTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_FTP_FILES', N'FuseCP.EnterpriseServer.FTPFilesTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_GENERATE_INVOICES', N'SolidCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, SolidCP.EnterpriseServer.Code', 0)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_GENERATE_INVOICES', N'FuseCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, FuseCP.EnterpriseServer.Code', 0)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', N'SolidCP.EnterpriseServer.HostedSolutionReportTask, SolidCP.EnterpriseServer.Code', 2)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', N'FuseCP.EnterpriseServer.HostedSolutionReportTask, FuseCP.EnterpriseServer.Code', 2)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', N'SolidCP.EnterpriseServer.NotifyOverusedDatabasesTask, SolidCP.EnterpriseServer.Code', 2)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', N'FuseCP.EnterpriseServer.NotifyOverusedDatabasesTask, FuseCP.EnterpriseServer.Code', 2)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', N'SolidCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, SolidCP.EnterpriseServer.Code', 0)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', N'FuseCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, FuseCP.EnterpriseServer.Code', 0)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', N'SolidCP.EnterpriseServer.RunSystemCommandTask, SolidCP.EnterpriseServer.Code', 1)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', N'FuseCP.EnterpriseServer.RunSystemCommandTask, FuseCP.EnterpriseServer.Code', 1)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_SEND_MAIL', N'SolidCP.EnterpriseServer.SendMailNotificationTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_SEND_MAIL', N'FuseCP.EnterpriseServer.SendMailNotificationTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', N'SolidCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, SolidCP.EnterpriseServer.Code', 0)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', N'FuseCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, FuseCP.EnterpriseServer.Code', 0)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_SUSPEND_PACKAGES', N'SolidCP.EnterpriseServer.SuspendOverusedPackagesTask, SolidCP.EnterpriseServer.Code', 2)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_SUSPEND_PACKAGES', N'FuseCP.EnterpriseServer.SuspendOverusedPackagesTask, FuseCP.EnterpriseServer.Code', 2)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', N'SolidCP.EnterpriseServer.UserPasswordExpirationNotificationTask, SolidCP.EnterpriseServer.Code', 1)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', N'FuseCP.EnterpriseServer.UserPasswordExpirationNotificationTask, FuseCP.EnterpriseServer.Code', 1)
 GO
-INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_ZIP_FILES', N'SolidCP.EnterpriseServer.ZipFilesTask, SolidCP.EnterpriseServer.Code', 3)
+INSERT [dbo].[ScheduleTasks] ([TaskID], [TaskType], [RoleID]) VALUES (N'SCHEDULE_TASK_ZIP_FILES', N'FuseCP.EnterpriseServer.ZipFilesTask, FuseCP.EnterpriseServer.Code', 3)
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_AUDIT_LOG_REPORT', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/AuditLogReportView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_AUDIT_LOG_REPORT', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/AuditLogReportView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_BACKUP', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/Backup.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_BACKUP', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/Backup.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_BACKUP_DATABASE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/BackupDatabase.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_BACKUP_DATABASE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/BackupDatabase.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CHECK_WEBSITE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/CheckWebsite.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_CHECK_WEBSITE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/CheckWebsite.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_DOMAIN_EXPIRATION', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/DomainExpirationView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_DOMAIN_EXPIRATION', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/DomainExpirationView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_DOMAIN_LOOKUP', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/DomainLookupView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_DOMAIN_LOOKUP', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/DomainLookupView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_FTP_FILES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/SendFilesViaFtp.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_FTP_FILES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/SendFilesViaFtp.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_GENERATE_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_GENERATE_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/HostedSolutionReport.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/HostedSolutionReport.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/ExecuteSystemCommand.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/ExecuteSystemCommand.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_SEND_MAIL', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/SendEmailNotification.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_SEND_MAIL', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/SendEmailNotification.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_SUSPEND_PACKAGES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_SUSPEND_PACKAGES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx')
 GO
-INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_ZIP_FILES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/SolidCP/ScheduleTaskControls/ZipFiles.ascx')
+INSERT [dbo].[ScheduleTaskViewConfiguration] ([TaskID], [ConfigurationID], [Environment], [Description]) VALUES (N'SCHEDULE_TASK_ZIP_FILES', N'ASP_NET', N'ASP.NET', N'~/DesktopModules/FuseCP/ScheduleTaskControls/ZipFiles.ascx')
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (1, N'UsersHome', N'%SYSTEMDRIVE%\HostingSpaces')
 GO
@@ -7381,7 +7381,7 @@ INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [Property
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (101, N'ProtectedUsersFile', N'.htpasswd')
 GO
-INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (101, N'SecureFoldersModuleAssembly', N'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0')
+INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (101, N'SecureFoldersModuleAssembly', N'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0')
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (101, N'WebGroupName', N'SCP_IUSRS')
 GO
@@ -7431,7 +7431,7 @@ INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [Property
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (105, N'ProtectedUsersFile', N'.htpasswd')
 GO
-INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (105, N'SecureFoldersModuleAssembly', N'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0')
+INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (105, N'SecureFoldersModuleAssembly', N'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0')
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (105, N'sslusesni', N'True')
 GO
@@ -7485,7 +7485,7 @@ INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [Property
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (112, N'ProtectedUsersFile', N'.htpasswd')
 GO
-INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (112, N'SecureFoldersModuleAssembly', N'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0')
+INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (112, N'SecureFoldersModuleAssembly', N'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0')
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (112, N'sslusesni', N'True')
 GO
@@ -7679,115 +7679,115 @@ INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [Property
 GO
 INSERT [dbo].[ServiceDefaultProperties] ([ProviderID], [PropertyName], [PropertyValue]) VALUES (1903, N'SimpleDnsUrl', N'http://127.0.0.1:8053')
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (2, 1, N'HomeFolder', N'SolidCP.Providers.OS.HomeFolder, SolidCP.Providers.Base', 15, 1, 0, 0, 1, 0, 0, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (2, 1, N'HomeFolder', N'FuseCP.Providers.OS.HomeFolder, FuseCP.Providers.Base', 15, 1, 0, 0, 1, 0, 0, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (5, 5, N'MsSQL2000Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 9, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (5, 5, N'MsSQL2000Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 9, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (6, 5, N'MsSQL2000User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 10, 0, 0, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (6, 5, N'MsSQL2000User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 10, 0, 0, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (7, 6, N'MySQL4Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 13, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (7, 6, N'MySQL4Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 13, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (8, 6, N'MySQL4User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 14, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (8, 6, N'MySQL4User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 14, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (9, 3, N'FTPAccount', N'SolidCP.Providers.FTP.FtpAccount, SolidCP.Providers.Base', 3, 0, 1, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (9, 3, N'FTPAccount', N'FuseCP.Providers.FTP.FtpAccount, FuseCP.Providers.Base', 3, 0, 1, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (10, 2, N'WebSite', N'SolidCP.Providers.Web.WebSite, SolidCP.Providers.Base', 2, 1, 1, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (10, 2, N'WebSite', N'FuseCP.Providers.Web.WebSite, FuseCP.Providers.Base', 2, 1, 1, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (11, 4, N'MailDomain', N'SolidCP.Providers.Mail.MailDomain, SolidCP.Providers.Base', 8, 0, 1, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (11, 4, N'MailDomain', N'FuseCP.Providers.Mail.MailDomain, FuseCP.Providers.Base', 8, 0, 1, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (12, 7, N'DNSZone', N'SolidCP.Providers.DNS.DnsZone, SolidCP.Providers.Base', 0, 0, 0, 1, 1, 0, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (12, 7, N'DNSZone', N'FuseCP.Providers.DNS.DnsZone, FuseCP.Providers.Base', 0, 0, 0, 1, 1, 0, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (13, 1, N'Domain', N'SolidCP.Providers.OS.Domain, SolidCP.Providers.Base', 1, 0, 0, 0, 0, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (13, 1, N'Domain', N'FuseCP.Providers.OS.Domain, FuseCP.Providers.Base', 1, 0, 0, 0, 0, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (14, 8, N'StatisticsSite', N'SolidCP.Providers.Statistics.StatsSite, SolidCP.Providers.Base', 17, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (14, 8, N'StatisticsSite', N'FuseCP.Providers.Statistics.StatsSite, FuseCP.Providers.Base', 17, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (15, 4, N'MailAccount', N'SolidCP.Providers.Mail.MailAccount, SolidCP.Providers.Base', 4, 1, 0, 0, 0, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (15, 4, N'MailAccount', N'FuseCP.Providers.Mail.MailAccount, FuseCP.Providers.Base', 4, 1, 0, 0, 0, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (16, 4, N'MailAlias', N'SolidCP.Providers.Mail.MailAlias, SolidCP.Providers.Base', 5, 0, 0, 0, 0, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (16, 4, N'MailAlias', N'FuseCP.Providers.Mail.MailAlias, FuseCP.Providers.Base', 5, 0, 0, 0, 0, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (17, 4, N'MailList', N'SolidCP.Providers.Mail.MailList, SolidCP.Providers.Base', 7, 0, 0, 0, 0, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (17, 4, N'MailList', N'FuseCP.Providers.Mail.MailList, FuseCP.Providers.Base', 7, 0, 0, 0, 0, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (18, 4, N'MailGroup', N'SolidCP.Providers.Mail.MailGroup, SolidCP.Providers.Base', 6, 0, 0, 0, 0, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (18, 4, N'MailGroup', N'FuseCP.Providers.Mail.MailGroup, FuseCP.Providers.Base', 6, 0, 0, 0, 0, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (20, 1, N'ODBCDSN', N'SolidCP.Providers.OS.SystemDSN, SolidCP.Providers.Base', 22, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (20, 1, N'ODBCDSN', N'FuseCP.Providers.OS.SystemDSN, FuseCP.Providers.Base', 22, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (21, 10, N'MsSQL2005Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 11, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (21, 10, N'MsSQL2005Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 11, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (22, 10, N'MsSQL2005User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 12, 0, 0, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (22, 10, N'MsSQL2005User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 12, 0, 0, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (23, 11, N'MySQL5Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 15, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (23, 11, N'MySQL5Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 15, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (24, 11, N'MySQL5User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 16, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (24, 11, N'MySQL5User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 16, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (25, 2, N'SharedSSLFolder', N'SolidCP.Providers.Web.SharedSSLFolder, SolidCP.Providers.Base', 21, 0, 0, 0, 1, 1, 0, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (25, 2, N'SharedSSLFolder', N'FuseCP.Providers.Web.SharedSSLFolder, FuseCP.Providers.Base', 21, 0, 0, 0, 1, 1, 0, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (28, 7, N'SecondaryDNSZone', N'SolidCP.Providers.DNS.SecondaryDnsZone, SolidCP.Providers.Base', 0, 0, 0, 1, 1, 0, 0, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (28, 7, N'SecondaryDNSZone', N'FuseCP.Providers.DNS.SecondaryDnsZone, FuseCP.Providers.Base', 0, 0, 0, 1, 1, 0, 0, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (29, 13, N'Organization', N'SolidCP.Providers.HostedSolution.Organization, SolidCP.Providers.Base', 1, 1, 0, 1, 1, 1, 0, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (29, 13, N'Organization', N'FuseCP.Providers.HostedSolution.Organization, FuseCP.Providers.Base', 1, 1, 0, 1, 1, 1, 0, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (30, 13, N'OrganizationDomain', N'SolidCP.Providers.HostedSolution.OrganizationDomain, SolidCP.Providers.Base', 1, NULL, NULL, NULL, NULL, NULL, 0, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (30, 13, N'OrganizationDomain', N'FuseCP.Providers.HostedSolution.OrganizationDomain, FuseCP.Providers.Base', 1, NULL, NULL, NULL, NULL, NULL, 0, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (31, 22, N'MsSQL2008Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (31, 22, N'MsSQL2008Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (32, 22, N'MsSQL2008User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (32, 22, N'MsSQL2008User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (33, 30, N'VirtualMachine', N'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (33, 30, N'VirtualMachine', N'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (34, 30, N'VirtualSwitch', N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (34, 30, N'VirtualSwitch', N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (35, 40, N'VMInfo', N'SolidCP.Providers.Virtualization.VMInfo, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (35, 40, N'VMInfo', N'FuseCP.Providers.Virtualization.VMInfo, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (36, 40, N'VirtualSwitch', N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (36, 40, N'VirtualSwitch', N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (37, 23, N'MsSQL2012Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (37, 23, N'MsSQL2012Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (38, 23, N'MsSQL2012User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (38, 23, N'MsSQL2012User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (39, 46, N'MsSQL2014Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (39, 46, N'MsSQL2014Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (40, 46, N'MsSQL2014User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (40, 46, N'MsSQL2014User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (41, 33, N'VirtualMachine', N'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (41, 33, N'VirtualMachine', N'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (42, 33, N'VirtualSwitch', N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (42, 33, N'VirtualSwitch', N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (71, 71, N'MsSQL2016Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (71, 71, N'MsSQL2016Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (72, 71, N'MsSQL2016User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (72, 71, N'MsSQL2016User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (73, 72, N'MsSQL2017Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (73, 72, N'MsSQL2017Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (74, 72, N'MsSQL2017User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (74, 72, N'MsSQL2017User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (75, 90, N'MySQL8Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 18, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (75, 90, N'MySQL8Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 18, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (76, 90, N'MySQL8User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 19, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (76, 90, N'MySQL8User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 19, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (77, 74, N'MsSQL2019Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (77, 74, N'MsSQL2019Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (78, 74, N'MsSQL2019User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (78, 74, N'MsSQL2019User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (79, 75, N'MsSQL2022Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (79, 75, N'MsSQL2022Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (80, 75, N'MsSQL2022User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (80, 75, N'MsSQL2022User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (143, 167, N'VirtualMachine', N'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (143, 167, N'VirtualMachine', N'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (144, 167, N'VirtualSwitch', N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (144, 167, N'VirtualSwitch', N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2, 0, 0, 1, 1, 1, 0, 0)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (200, 20, N'SharePointFoundationSiteCollection', N'SolidCP.Providers.SharePoint.SharePointSiteCollection, SolidCP.Providers.Base', 25, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (200, 20, N'SharePointFoundationSiteCollection', N'FuseCP.Providers.SharePoint.SharePointSiteCollection, FuseCP.Providers.Base', 25, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (202, 50, N'MariaDBDatabase', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (202, 50, N'MariaDBDatabase', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (203, 50, N'MariaDBUser', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (203, 50, N'MariaDBUser', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 GO
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (204, 73, N'SharePointEnterpriseSiteCollection', N'SolidCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, SolidCP.Providers.Base', 100, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (204, 73, N'SharePointEnterpriseSiteCollection', N'FuseCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, FuseCP.Providers.Base', 100, 1, 0, 0, 1, 1, 1, 1)
 GO
 INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) VALUES (N'AccessIpsSettings', N'AccessIps', N'')
 GO
 INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) VALUES (N'AuthenticationSettings', N'CanPeerChangeMfa', N'True')
 GO
-INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) VALUES (N'AuthenticationSettings', N'MfaTokenAppDisplayName', N'SolidCP')
+INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) VALUES (N'AuthenticationSettings', N'MfaTokenAppDisplayName', N'FuseCP')
 GO
 INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) VALUES (N'BackupSettings', N'BackupsPath', N'c:\HostingBackups')
 GO
@@ -7799,7 +7799,7 @@ INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) 
 GO
 INSERT [dbo].[SystemSettings] ([SettingsName], [PropertyName], [PropertyValue]) VALUES (N'SmtpSettings', N'SmtpUsername', N'postmaster')
 GO
-INSERT [dbo].[Themes] ([ThemeID], [DisplayName], [LTRName], [RTLName], [Enabled], [DisplayOrder]) VALUES (1, N'SolidCP v1', N'Default', N'Default', 1, 1)
+INSERT [dbo].[Themes] ([ThemeID], [DisplayName], [LTRName], [RTLName], [Enabled], [DisplayOrder]) VALUES (1, N'FuseCP v1', N'Default', N'Default', 1, 1)
 GO
 INSERT [dbo].[ThemeSettings] ([ThemeID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'Style', N'Light', N'light-theme')
 GO
@@ -7957,9 +7957,9 @@ If you have any questions regarding your hosting account, feel free to contact o
 
 <p>
 Best regards,<br />
-SolidCP.<br />
-Web Site: <a href="https://solidcp.com">https://solidcp.com</a><br />
-E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>
+FuseCP.<br />
+Web Site: <a href="https://fusecp.com">https://fusecp.com</a><br />
+E-Mail: <a href="mailto:support@fusecp.com">support@fusecp.com</a>
 </p>
 </ad:if>
 
@@ -7977,7 +7977,7 @@ E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'AccountSummaryLetter', N'Priority', N'Normal')
 GO
-INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'AccountSummaryLetter', N'Subject', N'<ad:if test="#Signup#">SolidCP  account has been created for<ad:else>SolidCP  account summary for</ad:if> #user.FirstName# #user.LastName#')
+INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'AccountSummaryLetter', N'Subject', N'<ad:if test="#Signup#">FuseCP  account has been created for<ad:else>FuseCP  account summary for</ad:if> #user.FirstName# #user.LastName#')
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'AccountSummaryLetter', N'TextBody', N'=================================
    Hosting Account Information
@@ -7986,7 +7986,7 @@ INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [Property
 
 New user account has been created and below you can find its summary information.
 
-Control Panel URL: https://panel.solidcp.com
+Control Panel URL: https://panel.fusecp.com
 Username: #user.Username#
 Password: #user.Password#
 </ad:if>
@@ -8009,9 +8009,9 @@ Maximum Number of Sub-Domains: <ad:NumericQuota space="#SpaceContexts[Space.Pack
 <ad:if test="#Signup#">If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
 Best regards,
-SolidCP.
-Web Site: https://solidcp.com">
-E-Mail: support@solidcp.com
+FuseCP.
+Web Site: https://fusecp.com">
+E-Mail: support@fusecp.com
 </ad:if><ad:template name="NumericQuota"><ad:if test="#space.Quotas.ContainsKey(quota)#"><ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if><ad:else>0</ad:if></ad:template>')
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'BandwidthXLST', N'Transform', N'<?xml version="1.0" encoding="UTF-8"?>
@@ -8916,9 +8916,9 @@ If you have any questions regarding your hosting account, feel free to contact o
 
 <p>
 Best regards,<br />
-SolidCP.<br />
-Web Site: <a href="https://solidcp.com">https://solidcp.com</a><br />
-E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>
+FuseCP.<br />
+Web Site: <a href="https://fusecp.com">https://fusecp.com</a><br />
+E-Mail: <a href="mailto:support@fusecp.com">support@fusecp.com</a>
 </p>
 
 </div>
@@ -8937,16 +8937,16 @@ Hello #user.FirstName#,
 
 Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login.
 
-Control Panel URL: https://panel.solidcp.com
+Control Panel URL: https://panel.fusecp.com
 Username: #user.Username#
 One Time Password: #user.Password#
 
 If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
 Best regards,
-SolidCP.
-Web Site: https://solidcp.com"
-E-Mail: support@solidcp.com')
+FuseCP.
+Web Site: https://fusecp.com"
+E-Mail: support@fusecp.com')
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'RDSSetupLetter', N'CC', N'support@HostingCompany.com')
 GO
@@ -9003,15 +9003,15 @@ INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [Property
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'SharePointPolicy', N'UserPasswordPolicy', N'True;5;20;0;1;0;True;;0;;;False;False;0;')
 GO
-INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'SolidCPPolicy', N'DemoMessage', N'When user account is in demo mode the majority of operations are
+INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'FuseCPPolicy', N'DemoMessage', N'When user account is in demo mode the majority of operations are
 disabled, especially those ones that modify or delete records.
 You are welcome to ask your questions or place comments about
-this demo on  <a href="http://forum.SolidCP.net"
-target="_blank">SolidCP  Support Forum</a>')
+this demo on  <a href="http://forum.FuseCP.net"
+target="_blank">FuseCP  Support Forum</a>')
 GO
-INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'SolidCPPolicy', N'ForbiddenIP', N'')
+INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'FuseCPPolicy', N'ForbiddenIP', N'')
 GO
-INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'SolidCPPolicy', N'PasswordPolicy', N'True;6;20;0;1;0;True;;0;;;False;False;0;')
+INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'FuseCPPolicy', N'PasswordPolicy', N'True;6;20;0;1;0;True;;0;;;False;False;0;')
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'UserPasswordExpirationLetter', N'From', N'support@HostingCompany.com')
 GO
@@ -9359,8 +9359,8 @@ INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [Property
 </head>
 <body>
 <div id="PageOutline">
-	<h1>This web site has just been created from <a href="https://www.SolidCP.com">SolidCP </a> and it is still under construction.</h1>
-	<h2>The web site is hosted by <a href="https://solidcp.com">SolidCP</a>.</h2>
+	<h1>This web site has just been created from <a href="https://www.FuseCP.com">FuseCP </a> and it is still under construction.</h1>
+	<h2>The web site is hosted by <a href="https://fusecp.com">FuseCP</a>.</h2>
 </div>
 </body>
 </html>')
@@ -9385,8 +9385,8 @@ INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [Property
 		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;database=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>
 		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>
 		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>
-		hostingProviderForumLink="https://solidcp.com/support"
-		controlPanelLink="https://panel.solidcp.com/"
+		hostingProviderForumLink="https://fusecp.com/support"
+		controlPanelLink="https://panel.fusecp.com/"
 	/>
 </ad:if>
 <ad:if test="#IsDefined("FtpAccount")#">
@@ -9401,8 +9401,8 @@ INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [Property
 		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;database=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>
 		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>
 		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>
-		hostingProviderForumLink="https://solidcp.com/support"
-		controlPanelLink="https://panel.solidcp.com/"
+		hostingProviderForumLink="https://fusecp.com/support"
+		controlPanelLink="https://panel.fusecp.com/"
     />
 </ad:if>
 </publishData>
@@ -9413,7 +9413,7 @@ Username: #User.Username#
 Password: #User.Password#
 
 Technical Contact:
-support@solidcp.com
+support@fusecp.com
 -->')
 GO
 INSERT [dbo].[UserSettings] ([UserID], [SettingsName], [PropertyName], [PropertyValue]) VALUES (1, N'WebPolicy', N'PythonInstalled', N'False')
@@ -13444,7 +13444,7 @@ WHERE TypeName = @ItemTypeName
 AND ((@GroupID IS NULL) OR (@GroupID IS NOT NULL AND GroupID = @GroupID))
 
 -- Fix to allow plans assigned to serveradmin
-IF (@ItemTypeName = 'SolidCP.Providers.HostedSolution.Organization, SolidCP.Providers.Base')
+IF (@ItemTypeName = 'FuseCP.Providers.HostedSolution.Organization, FuseCP.Providers.Base')
 BEGIN
 	IF NOT EXISTS (SELECT * FROM ServiceItems WHERE PackageID = 1)
 	BEGIN

@@ -1,14 +1,14 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Tasks
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Tasks
 {
     public class ReinstallVirtualMachineTask: ControllerBase
     {

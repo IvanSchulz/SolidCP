@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Web.UI;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.Code.Helpers
+namespace FuseCP.Portal.Code.Helpers
 {
 
     public static class VirtualMachineSettingExtensions

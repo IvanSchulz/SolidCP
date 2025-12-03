@@ -36,7 +36,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
+namespace FuseCP.Providers.VirtualizationForPC.VirtualizationWebService {
     using System.Runtime.Serialization;
     using System;
     
@@ -352,7 +352,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private long AllocatedRAMField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceTypeField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -378,7 +378,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceType {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceType {
             get {
                 return this.DeviceTypeField;
             }
@@ -481,7 +481,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceTypeField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int LimitField;
@@ -512,7 +512,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceType {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualDeviceTypeInfo DeviceType {
             get {
                 return this.DeviceTypeField;
             }
@@ -625,7 +625,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private bool BiosNumLockField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrderField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime CreationTimeField;
@@ -637,10 +637,10 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private string NotesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo ParentSnapshotField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo ParentSnapshotField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SettingTypeField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SettingTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -666,7 +666,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrder {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrder {
             get {
                 return this.BootOrderField;
             }
@@ -718,7 +718,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo ParentSnapshot {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo ParentSnapshot {
             get {
                 return this.ParentSnapshotField;
             }
@@ -731,7 +731,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SettingType {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SettingType {
             get {
                 return this.SettingTypeField;
             }
@@ -786,13 +786,13 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private bool BiosNumLockField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrderField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime CreationTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualSystemHealthStateInfo HealthStateField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualSystemHealthStateInfo HealthStateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string HostServerNameField;
@@ -801,7 +801,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private string InstanceIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo MemorySettingField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo MemorySettingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private long MemoryUsageField;
@@ -813,16 +813,16 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         private int ProcessorLoadField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo ProcessorSettingField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo ProcessorSettingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo[] SnapshotsField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo[] SnapshotsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.EnabledStateInfo StateField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.EnabledStateInfo StateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SystemSettingField;
+        private FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SystemSettingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UpTimeField;
@@ -854,7 +854,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrder {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.BootDeviceTypeInfo[] BootOrder {
             get {
                 return this.BootOrderField;
             }
@@ -880,7 +880,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualSystemHealthStateInfo HealthState {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualSystemHealthStateInfo HealthState {
             get {
                 return this.HealthStateField;
             }
@@ -919,7 +919,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo MemorySetting {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo MemorySetting {
             get {
                 return this.MemorySettingField;
             }
@@ -971,7 +971,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo ProcessorSetting {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo ProcessorSetting {
             get {
                 return this.ProcessorSettingField;
             }
@@ -984,7 +984,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo[] Snapshots {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo[] Snapshots {
             get {
                 return this.SnapshotsField;
             }
@@ -997,7 +997,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.EnabledStateInfo State {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.EnabledStateInfo State {
             get {
                 return this.StateField;
             }
@@ -1010,7 +1010,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SystemSetting {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo SystemSetting {
             get {
                 return this.SystemSettingField;
             }
@@ -1126,144 +1126,144 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/CreateVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/CreateVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/CreateVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        bool CreateVirtualSystem(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password);
+        bool CreateVirtualSystem(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/MountVirtualHardDisk", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/MountVirtualHardDiskResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/MountVirtualHardDiskHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         string MountVirtualHardDisk(string virtualDiskPath, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/UnmountVirtualHardDisk", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/UnmountVirtualHardDiskResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/UnmountVirtualHardDiskHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool UnmountVirtualHardDisk(string virtualDiskPath, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/DefineVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/DefineVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/DefineVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        bool DefineVirtualSystem(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password);
+        bool DefineVirtualSystem(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/RemoveVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/RemoveVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/RemoveVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool RemoveVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/StartVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/StartVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/StartVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool StartVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/TurnoffVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/TurnoffVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/TurnoffVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool TurnoffVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/PauseVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/PauseVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/PauseVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool PauseVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ResumeVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ResumeVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ResumeVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool ResumeVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/SnapshotVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/SnapshotVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/SnapshotVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool SnapshotVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/SaveVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/SaveVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/SaveVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool SaveVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ResetVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ResetVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ResetVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool ResetVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ShutdownVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ShutdownVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ShutdownVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         bool ShutdownVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemMemorySetting", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemMemorySettingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemMemorySettingHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        bool ChangeVirtualSystemMemorySetting(string systemName, string serverName, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo setting, string domain, string userName, string password);
+        bool ChangeVirtualSystemMemorySetting(string systemName, string serverName, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo setting, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemProcessorSetting", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemProcessorSettingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemProcessorSettingHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        bool ChangeVirtualSystemProcessorSetting(string systemName, string serverName, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo setting, string domain, string userName, string password);
+        bool ChangeVirtualSystemProcessorSetting(string systemName, string serverName, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo setting, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemSetting", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemSettingResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/ChangeVirtualSystemSettingHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        bool ChangeVirtualSystemSetting(string systemName, string serverName, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo setting, string domain, string userName, string password);
+        bool ChangeVirtualSystemSetting(string systemName, string serverName, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo setting, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystems", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemsResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemsHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo[] GetVirtualSystems(string serverName, string domain, string userName, string password);
+        FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo[] GetVirtualSystems(string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystem", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
-        SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo GetVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
+        FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo GetVirtualSystem(string systemName, string serverName, string domain, string userName, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemThumbnailImage", ReplyAction="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemThumbnailImageResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
+        [System.ServiceModel.FaultContractAttribute(typeof(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.HostingServiceFault), Action="http://Microsoft.Hosting.Virtualization.ServiceContracts/2007/04/IVirtualizationP" +
             "rovisioningService/GetVirtualSystemThumbnailImageHostingServiceFaultFault", Name="HostingServiceFault", Namespace="http://Microsoft.Hosting.FaultContracts/2007/04")]
         byte[] GetVirtualSystemThumbnailImage(int imgWidth, int imgHeight, string systemName, string serverName, string domain, string userName, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IVirtualizationProvisioningServiceChannel : SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.IVirtualizationProvisioningService, System.ServiceModel.IClientChannel {
+    public interface IVirtualizationProvisioningServiceChannel : FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.IVirtualizationProvisioningService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class VirtualizationProvisioningServiceClient : System.ServiceModel.ClientBase<SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.IVirtualizationProvisioningService>, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.IVirtualizationProvisioningService {
+    public partial class VirtualizationProvisioningServiceClient : System.ServiceModel.ClientBase<FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.IVirtualizationProvisioningService>, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.IVirtualizationProvisioningService {
         
         public VirtualizationProvisioningServiceClient() {
         }
@@ -1284,7 +1284,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
                 base(binding, remoteAddress) {
         }
         
-        public bool CreateVirtualSystem(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password) {
+        public bool CreateVirtualSystem(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password) {
             return base.Channel.CreateVirtualSystem(request, serverName, domain, userName, password);
         }
         
@@ -1296,7 +1296,7 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
             return base.Channel.UnmountVirtualHardDisk(virtualDiskPath, serverName, domain, userName, password);
         }
         
-        public bool DefineVirtualSystem(SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password) {
+        public bool DefineVirtualSystem(FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualMachineProvisioningRequest request, string serverName, string domain, string userName, string password) {
             return base.Channel.DefineVirtualSystem(request, serverName, domain, userName, password);
         }
         
@@ -1336,23 +1336,23 @@ namespace SolidCP.Providers.VirtualizationForPC.VirtualizationWebService {
             return base.Channel.ShutdownVirtualSystem(systemName, serverName, domain, userName, password);
         }
         
-        public bool ChangeVirtualSystemMemorySetting(string systemName, string serverName, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo setting, string domain, string userName, string password) {
+        public bool ChangeVirtualSystemMemorySetting(string systemName, string serverName, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.MemorySettingInfo setting, string domain, string userName, string password) {
             return base.Channel.ChangeVirtualSystemMemorySetting(systemName, serverName, setting, domain, userName, password);
         }
         
-        public bool ChangeVirtualSystemProcessorSetting(string systemName, string serverName, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo setting, string domain, string userName, string password) {
+        public bool ChangeVirtualSystemProcessorSetting(string systemName, string serverName, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.ProcessorSettingInfo setting, string domain, string userName, string password) {
             return base.Channel.ChangeVirtualSystemProcessorSetting(systemName, serverName, setting, domain, userName, password);
         }
         
-        public bool ChangeVirtualSystemSetting(string systemName, string serverName, SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo setting, string domain, string userName, string password) {
+        public bool ChangeVirtualSystemSetting(string systemName, string serverName, FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemSettingInfo setting, string domain, string userName, string password) {
             return base.Channel.ChangeVirtualSystemSetting(systemName, serverName, setting, domain, userName, password);
         }
         
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo[] GetVirtualSystems(string serverName, string domain, string userName, string password) {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo[] GetVirtualSystems(string serverName, string domain, string userName, string password) {
             return base.Channel.GetVirtualSystems(serverName, domain, userName, password);
         }
         
-        public SolidCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo GetVirtualSystem(string systemName, string serverName, string domain, string userName, string password) {
+        public FuseCP.Providers.VirtualizationForPC.VirtualizationWebService.VirtualComputerSystemInfo GetVirtualSystem(string systemName, string serverName, string domain, string userName, string password) {
             return base.Channel.GetVirtualSystem(systemName, serverName, domain, userName, password);
         }
         

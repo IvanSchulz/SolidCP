@@ -32,11 +32,11 @@
 
 using System;
 using System.Web;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class HostingAddonsEditAddon : SolidCPModuleBase
+    public partial class HostingAddonsEditAddon : FuseCPModuleBase
     {
 		protected bool ShouldCopyCurrentHostingAddon()
 		{

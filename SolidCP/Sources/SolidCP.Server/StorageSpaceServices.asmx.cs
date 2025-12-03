@@ -1,22 +1,22 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Web;
-using SolidCP.Web.Services;
-using SolidCP.Providers;
-using SolidCP.Providers.EnterpriseStorage;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.Server.Utils;
+using FuseCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.EnterpriseStorage;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// <summary>
     /// Summary description for StorageSpace
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/server/")]
+    [WebService(Namespace = "http://smbsaas/fusecp/server/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("ServerPolicy")]
     [ToolboxItem(false)]

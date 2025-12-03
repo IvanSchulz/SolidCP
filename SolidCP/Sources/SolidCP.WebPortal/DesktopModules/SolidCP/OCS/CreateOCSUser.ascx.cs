@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.OCS
+namespace FuseCP.Portal.OCS
 {
-    public partial class CreateOCSUser : SolidCPModuleBase
+    public partial class CreateOCSUser : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

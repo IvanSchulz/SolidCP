@@ -34,10 +34,10 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Xml.Serialization;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Runtime.Serialization;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
 	/// <summary>
 	/// Summary description for ServiceProviderItem.

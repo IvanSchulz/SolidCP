@@ -32,11 +32,11 @@
 
 using System;
 using System.Collections.Specialized;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class BlackBerry5_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class BlackBerry5_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

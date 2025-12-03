@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.UserControls;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.UserControls;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserCreateSpace : SolidCPModuleBase
+    public partial class UserCreateSpace : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

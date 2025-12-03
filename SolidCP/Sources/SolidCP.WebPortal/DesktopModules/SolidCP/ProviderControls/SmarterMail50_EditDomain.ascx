@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail50_EditDomain.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail50_EditDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail50_EditDomain.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail50_EditDomain" %>
 <%@ Register Src="SmarterMail50_EditDomain_Features.ascx" TagName="SmarterMail50_EditDomain_Features"
     TagPrefix="uc4" %>
 <%@ Register Src="SmarterMail50_EditDomain_Sharing.ascx" TagName="SmarterMail50_EditDomain_Sharing"

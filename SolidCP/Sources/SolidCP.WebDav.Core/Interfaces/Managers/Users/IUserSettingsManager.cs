@@ -1,7 +1,7 @@
-﻿using SolidCP.WebDav.Core.Entities.Account;
-using SolidCP.WebDav.Core.Entities.Account.Enums;
+using FuseCP.WebDav.Core.Entities.Account;
+using FuseCP.WebDav.Core.Entities.Account.Enums;
 
-namespace SolidCP.WebDav.Core.Interfaces.Managers.Users
+namespace FuseCP.WebDav.Core.Interfaces.Managers.Users
 {
     public interface IUserSettingsManager
     {

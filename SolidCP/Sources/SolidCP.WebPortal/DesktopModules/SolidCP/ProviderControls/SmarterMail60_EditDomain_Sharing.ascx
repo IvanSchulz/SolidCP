@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail60_EditDomain_Sharing.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail60_EditDomain_Sharing" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail60_EditDomain_Sharing.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail60_EditDomain_Sharing" %>
 <table width="100%">
     <tr>
         <td width="200px" align="right"><asp:Label ID="Label1" runat="server" meta:resourcekey="cbGlobalAddressList"/></td>

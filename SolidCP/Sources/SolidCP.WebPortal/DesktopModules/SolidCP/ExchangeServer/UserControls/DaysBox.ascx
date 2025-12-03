@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DaysBox.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.DaysBox" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DaysBox.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.DaysBox" %>
 <asp:TextBox ID="txtValue" runat="server" CssClass="TextBox50" MaxLength="4"></asp:TextBox>
 <asp:Localize ID="locDays" runat="server" meta:resourcekey="locDays" Text="days"></asp:Localize>
 <asp:RegularExpressionValidator ID="valRequireCorrectNumber" runat="server" meta:resourcekey="valRequireCorrectNumber"

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ContactTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.ContactTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ContactTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.ContactTabs" %>
             <asp:DataList ID="dlTabs" runat="server" RepeatDirection="Horizontal"
                 RepeatLayout="Flow" EnableViewState="false">
                 <ItemStyle Wrap="False" />

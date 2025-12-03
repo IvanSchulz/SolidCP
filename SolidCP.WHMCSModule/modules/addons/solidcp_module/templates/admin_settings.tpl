@@ -27,7 +27,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">{$LANG.SolidCP_saverunning}</h4>
+                <h4 class="modal-title">{$LANG.FuseCP_saverunning}</h4>
             </div>
             <div class="modal-body">
             <div class="progress">
@@ -38,30 +38,30 @@
         </div>
     </div>
 </div>
-<h3>{$LANG.SolidCP_general_settings}</h3>
+<h3>{$LANG.FuseCP_general_settings}</h3>
 <div id="servicecontent_settings">
-    {if $settings.NeedFirstConfiguration eq 1}<div class="errorbox">{$LANG.SolidCP_needfirstconfiguration}</div>{/if}
+    {if $settings.NeedFirstConfiguration eq 1}<div class="errorbox">{$LANG.FuseCP_needfirstconfiguration}</div>{/if}
     {if $result.status eq "error"}<div class="errorbox">{$result.description}</div>{/if}
 </div>
 <form class="form-horizontal" role="form" id="settings_form" action="{$params['modulelink']}" method="POST">
     <input type="hidden" name="action" value="save_settings">
-    <input type="hidden" name="module" value="solidcp_module">
+    <input type="hidden" name="module" value="fusecp_module">
     <table class="form" width="100%" border="0" cellspacing="2" cellpadding="3">
         <tr>
-            <td class="fieldlabel">{$LANG.SolidCP_setting_AddonsActive}:</td>
-            <td class="fieldarea"><input type="checkbox" name="AddonsActive" {if $settings.AddonsActive eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_setting_AddonsActive_tooltip}" /></td>
-            <td class="fieldlabel">{$LANG.SolidCP_setting_ConfigurableOptionsActive}:</td>
-            <td class="fieldarea"><input type="checkbox" name="ConfigurableOptionsActive" {if $settings.ConfigurableOptionsActive eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_setting_ConfigurableOptionsActive_tooltip}" /></td>
+            <td class="fieldlabel">{$LANG.FuseCP_setting_AddonsActive}:</td>
+            <td class="fieldarea"><input type="checkbox" name="AddonsActive" {if $settings.AddonsActive eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_setting_AddonsActive_tooltip}" /></td>
+            <td class="fieldlabel">{$LANG.FuseCP_setting_ConfigurableOptionsActive}:</td>
+            <td class="fieldarea"><input type="checkbox" name="ConfigurableOptionsActive" {if $settings.ConfigurableOptionsActive eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_setting_ConfigurableOptionsActive_tooltip}" /></td>
         </tr>
         <tr>
-            <td class="fieldlabel">{$LANG.SolidCP_setting_SyncActive}:</td>
-            <td class="fieldarea"><input type="checkbox" name="SyncActive" {if $settings.SyncActive eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_setting_SyncActive_tooltip}" /></td>
-            <td class="fieldlabel">{$LANG.SolidCP_setting_DeleteTablesOnDeactivate}:</td>
-            <td class="fieldarea"><input type="checkbox" name="DeleteTablesOnDeactivate" {if $settings.DeleteTablesOnDeactivate eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_setting_DeleteTablesOnDeactivate_tooltip}" /></td>
+            <td class="fieldlabel">{$LANG.FuseCP_setting_SyncActive}:</td>
+            <td class="fieldarea"><input type="checkbox" name="SyncActive" {if $settings.SyncActive eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_setting_SyncActive_tooltip}" /></td>
+            <td class="fieldlabel">{$LANG.FuseCP_setting_DeleteTablesOnDeactivate}:</td>
+            <td class="fieldarea"><input type="checkbox" name="DeleteTablesOnDeactivate" {if $settings.DeleteTablesOnDeactivate eq 1} checked {/if}data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_setting_DeleteTablesOnDeactivate_tooltip}" /></td>
         </tr>
         <tr>
-            <td class="fieldlabel">{$LANG.SolidCP_setting_WhmcsAdmin}:</td>
-            <td class="fieldarea"><select class="form-control" name="WhmcsAdmin" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.SolidCP_setting_WhmcsAdmin_tooltip}">
+            <td class="fieldlabel">{$LANG.FuseCP_setting_WhmcsAdmin}:</td>
+            <td class="fieldarea"><select class="form-control" name="WhmcsAdmin" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_setting_WhmcsAdmin_tooltip}">
             {foreach from=$admins item=admin}
                 <option id="{$admin->username}"{if $settings.WhmcsAdmin eq $admin->username} selected {/if}>{$admin->username}</option>
             {/foreach}    
@@ -71,8 +71,8 @@
         </tr>
     </table>
     <div class="btn-container">
-        <input type="submit" onclick="runSaveSettingsCommand();return false;" value="{$LANG.SolidCP_save_changes}" class="btn btn-primary">
-        <input type="reset" value="{$LANG.SolidCP_cancel_changes}" class="btn btn-default" />
+        <input type="submit" onclick="runSaveSettingsCommand();return false;" value="{$LANG.FuseCP_save_changes}" class="btn btn-primary">
+        <input type="reset" value="{$LANG.FuseCP_cancel_changes}" class="btn btn-default" />
     </div>
     <input type="hidden" name="tab" id="tab" value="0" />
 </form>

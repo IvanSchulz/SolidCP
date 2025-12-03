@@ -33,11 +33,11 @@
 using System;
 using System.Text;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UsernameControl : SolidCPControlBase
+    public partial class UsernameControl : FuseCPControlBase
     {
         public Unit Width
         {

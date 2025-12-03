@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -31,13 +31,13 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System.Collections.Generic;
-using SolidCP.Providers.Filters;
-using SolidCP.EnterpriseServer.Base;
-using SolidCP.Server.Client;
+using FuseCP.Providers.Filters;
+using FuseCP.EnterpriseServer.Base;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Specialized;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class SpamExpertsController: ControllerBase
     {

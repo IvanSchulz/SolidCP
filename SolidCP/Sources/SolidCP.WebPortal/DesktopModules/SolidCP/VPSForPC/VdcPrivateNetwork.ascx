@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPrivateNetwork.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VdcPrivateNetwork" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPrivateNetwork.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VdcPrivateNetwork" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
@@ -54,7 +54,7 @@
 						    SelectCountMethod="GetPackagePrivateIPAddressesCount"
 						    SelectMethod="GetPackagePrivateIPAddresses"
 						    SortParameterName="sortColumn"
-						    TypeName="SolidCP.Portal.VirtualMachinesHelper"
+						    TypeName="FuseCP.Portal.VirtualMachinesHelper"
 						    OnSelected="odsPrivateAddressesPaged_Selected">
 					    <SelectParameters>
 						    <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="0" />						    

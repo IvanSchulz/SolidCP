@@ -33,7 +33,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace SolidCP.Providers.Common
+namespace FuseCP.Providers.Common
 {
     public class ResultObject
     {

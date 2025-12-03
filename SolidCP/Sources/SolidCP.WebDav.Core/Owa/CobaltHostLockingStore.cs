@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Cobalt;
-using SolidCP.WebDav.Core;
+using FuseCP.WebDav.Core;
 
-namespace SolidCP.WebDav.Core.Owa
+namespace FuseCP.WebDav.Core.Owa
 {
     public class CobaltHostLockingStore : HostLockingStore
     {

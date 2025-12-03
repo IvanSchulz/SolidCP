@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Login.ascx.cs" Inherits="SolidCP.Portal.Login" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Login.ascx.cs" Inherits="FuseCP.Portal.Login" %>
 
 <div class="panel-body form-group" runat="server" id="userPwdDiv">
     <div class="row">

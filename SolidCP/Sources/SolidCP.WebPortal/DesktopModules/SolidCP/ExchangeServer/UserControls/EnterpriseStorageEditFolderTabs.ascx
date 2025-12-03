@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageEditFolderTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.EnterpriseStorageEditFolderTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageEditFolderTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.EnterpriseStorageEditFolderTabs" %>
         
             <asp:DataList ID="esTabs" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" EnableViewState="false">
                 <ItemStyle Wrap="False" />

@@ -36,7 +36,7 @@ using System.ComponentModel;
 using System.Configuration.Install;
 using System.ServiceProcess;
 
-namespace SolidCP.SchedulerService
+namespace FuseCP.SchedulerService
 {
     [RunInstaller(true)]
     public class SchedulerServiceInstaller : Installer
@@ -49,9 +49,9 @@ namespace SolidCP.SchedulerService
             var serviceInstaller = new ServiceInstaller();
 
             processInstaller.Account = ServiceAccount.LocalSystem;
-            serviceInstaller.DisplayName = "SolidCP Scheduler";
+            serviceInstaller.DisplayName = "FuseCP Scheduler";
             serviceInstaller.StartType = ServiceStartMode.Automatic;
-            serviceInstaller.ServiceName = "SolidCP Scheduler";
+            serviceInstaller.ServiceName = "FuseCP Scheduler";
 
             Installers.Add(processInstaller);
             Installers.Add(serviceInstaller);

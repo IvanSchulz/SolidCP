@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,14 +12,14 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Text;
 using Microsoft.Search.Interop;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 //using Scripting;
 
-namespace SolidCP.Providers.StorageSpaces
+namespace FuseCP.Providers.StorageSpaces
 {
-    public class Windows2016 : SolidCP.Providers.OS.Windows2016, IStorageSpace
+    public class Windows2016 : FuseCP.Providers.OS.Windows2016, IStorageSpace
     {
         #region Properties
         internal string PrimaryDomainController

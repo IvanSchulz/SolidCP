@@ -1,6 +1,6 @@
 <%@ Control Language="c#" AutoEventWireup="true"%>
-<%@ Implements interface="SolidCP.Portal.IWebInstallerSettings" %>
-<%@ Import namespace="SolidCP.EnterpriseServer" %>
+<%@ Implements interface="FuseCP.Portal.IWebInstallerSettings" %>
+<%@ Import namespace="FuseCP.EnterpriseServer" %>
 <script language="C#" runat="server">
 		void Page_Load()
 		{

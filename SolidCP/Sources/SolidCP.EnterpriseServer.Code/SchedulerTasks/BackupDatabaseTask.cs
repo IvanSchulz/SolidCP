@@ -35,9 +35,9 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers.Database;
+using FuseCP.Providers.Database;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class BackupDatabaseTask : SchedulerTask
     {

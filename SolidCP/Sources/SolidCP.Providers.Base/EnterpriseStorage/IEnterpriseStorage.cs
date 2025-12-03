@@ -33,10 +33,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Web;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.Providers.EnterpriseStorage
+namespace FuseCP.Providers.EnterpriseStorage
 {
     /// <summary>
     /// Summary description for IEnterpriseStorage.

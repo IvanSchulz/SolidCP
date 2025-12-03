@@ -62,7 +62,7 @@ namespace CSSFriendly
 					string imageUrl = img.ImageUrl; // save original URL
 
 					// change original URL to empty
-					img.ImageUrl = Page.ClientScript.GetWebResourceUrl(this.GetType(), "SolidCP.WebPortal.Code.Adapters.empty.gif");
+					img.ImageUrl = Page.ClientScript.GetWebResourceUrl(this.GetType(), "FuseCP.WebPortal.Code.Adapters.empty.gif");
 
 					imageUrl = img.ResolveClientUrl(imageUrl);
 					img.Attributes["style"] =

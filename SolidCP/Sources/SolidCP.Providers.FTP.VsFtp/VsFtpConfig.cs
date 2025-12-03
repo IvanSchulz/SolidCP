@@ -38,11 +38,11 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Linq;
 
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.FTP;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.FTP;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
 	public class VsFtpConfig
 	{

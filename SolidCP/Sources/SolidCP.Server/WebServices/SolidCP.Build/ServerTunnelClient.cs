@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Virtualization;
 
-[assembly:TunnelClient(typeof(SolidCP.Server.Client.ServerTunnelClient))]
+[assembly:TunnelClient(typeof(FuseCP.Server.Client.ServerTunnelClient))]
 
-namespace SolidCP.Server.Client
+namespace FuseCP.Server.Client
 {
     public class ServerTunnelClient: ServerTunnelClientBase
     {

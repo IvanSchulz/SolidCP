@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchObject.ascx.cs" Inherits="SolidCP.Portal.SearchObject" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchObject.ascx.cs" Inherits="FuseCP.Portal.SearchObject" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <script>
     var estop = function (e) {
@@ -91,7 +91,7 @@
 </asp:GridView>
 
 <asp:ObjectDataSource ID="odsObjectsPaged" runat="server" EnablePaging="True" SelectCountMethod="SearchObjectItemsPagedCount"
-    SelectMethod="SearchObjectItemsPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.PackagesHelper" OnSelected="odsObjectPaged_Selected" OnSelecting="odsObjectPaged_Selecting">
+    SelectMethod="SearchObjectItemsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.PackagesHelper" OnSelected="odsObjectPaged_Selected" OnSelecting="odsObjectPaged_Selecting">
     <SelectParameters>
         <asp:QueryStringParameter Name="filterColumn" QueryStringField="Criteria" />
         <asp:QueryStringParameter Name="filterValue" QueryStringField="Query" />
@@ -100,7 +100,7 @@
 </asp:ObjectDataSource>
 
 <asp:ObjectDataSource ID="odsObjectTypes" runat="server" EnablePaging="false"
-    SelectMethod="SearchObjectTypes" SortParameterName="sortColumn" TypeName="SolidCP.Portal.PackagesHelper">
+    SelectMethod="SearchObjectTypes" SortParameterName="sortColumn" TypeName="FuseCP.Portal.PackagesHelper">
     <SelectParameters>
         <asp:QueryStringParameter Name="filterColumn" QueryStringField="Criteria" />
         <asp:QueryStringParameter Name="filterValue" QueryStringField="Query" />

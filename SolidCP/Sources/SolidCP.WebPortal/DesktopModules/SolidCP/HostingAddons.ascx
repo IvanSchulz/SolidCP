@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingAddons.ascx.cs" Inherits="SolidCP.Portal.HostingAddons" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingAddons.ascx.cs" Inherits="FuseCP.Portal.HostingAddons" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <div class="FormButtonsBar right">
 	<CPCC:StyleButton ID="btnAddItem" runat="server" CssClass="btn btn-primary" OnClick="btnAddItem_Click" >
         <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddItem"/>
@@ -27,4 +27,4 @@
 	</Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsAddons" runat="server" SelectMethod="GetRawHostingAddons"
-    TypeName="SolidCP.Portal.HostingPlansHelper" OnSelected="odsAddons_Selected"></asp:ObjectDataSource>
+    TypeName="FuseCP.Portal.HostingPlansHelper" OnSelected="odsAddons_Selected"></asp:ObjectDataSource>

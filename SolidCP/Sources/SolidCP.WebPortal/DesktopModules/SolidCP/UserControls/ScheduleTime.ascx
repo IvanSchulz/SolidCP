@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ScheduleTime.ascx.cs" Inherits="SolidCP.Portal.ScheduleTime" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ScheduleTime.ascx.cs" Inherits="FuseCP.Portal.ScheduleTime" %>
 
 <asp:TextBox ID="txtHours" runat="server" CssClass="form-control" Width="100px">12</asp:TextBox>
 :

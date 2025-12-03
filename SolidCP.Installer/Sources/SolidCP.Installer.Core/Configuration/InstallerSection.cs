@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
 
-namespace SolidCP.Installer.Configuration
+namespace FuseCP.Installer.Configuration
 {
 	/// <summary>
 	/// Provides configuration system support for the <installerSettings> configuration section. 

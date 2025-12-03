@@ -40,12 +40,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.UniversalInstaller.WinForms;
+namespace FuseCP.UniversalInstaller.WinForms;
 
 public partial class UninstallPage : BannerWizardPage
 {

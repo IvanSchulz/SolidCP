@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +8,13 @@ using System.ServiceModel;
 using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
 using System.ServiceModel.Channels;
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.Web.Clients
+namespace FuseCP.Web.Clients
 {
 	public class SoapHeaderClientMessageInspector : IClientMessageInspector
 	{
-		public const string Namespace = "http://solidcp.com/headers/";
+		public const string Namespace = "http://fusecp.com/headers/";
 
 		public ClientBase Client;
 		public object SoapHeader => Client.SoapHeader;

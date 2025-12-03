@@ -36,7 +36,7 @@ using System.Windows.Forms;
 
 using System.DirectoryServices;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public partial class OUForm : BaseForm
 	{

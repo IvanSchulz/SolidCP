@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Gene6FTP_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Gene6FTP_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Gene6FTP_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Gene6FTP_Settings" %>
 <table cellpadding="4" cellspacing="0" width="100%">
 	<tr>
 	    <td class="SubHead" nowrap="nowrap">

@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	partial class InstallFolderPage
 	{
@@ -113,7 +113,7 @@ namespace SolidCP.Setup
 			this.lblIntro.Name = "lblIntro";
 			this.lblIntro.Size = new System.Drawing.Size(457, 56);
 			this.lblIntro.TabIndex = 5;
-			this.lblIntro.Text = "Setup will install SolidCP in the following folder. To install in a different" +
+			this.lblIntro.Text = "Setup will install FuseCP in the following folder. To install in a different" +
 				" folder, click Browse and select another folder. Click Next to continue.";
 			// 
 			// lblSpaceRequired

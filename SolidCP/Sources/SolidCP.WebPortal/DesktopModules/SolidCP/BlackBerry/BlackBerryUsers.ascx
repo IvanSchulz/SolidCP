@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BlackBerryUsers.ascx.cs"
-    Inherits="SolidCP.Portal.BlackBerry.BlackBerryUsers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BlackBerryUsers.ascx.cs"
+    Inherits="FuseCP.Portal.BlackBerry.BlackBerryUsers" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
@@ -70,7 +70,7 @@
                                 </Columns>
                             </asp:GridView>
                             <asp:ObjectDataSource ID="odsAccountsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetBlackBerryUsersPagedCount"
-                                SelectMethod="GetBlackBerryUsersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.BlackBerryHelper">
+                                SelectMethod="GetBlackBerryUsersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.BlackBerryHelper">
                                 <SelectParameters>
                                     <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
                                     <asp:ControlParameter Name="filterColumn" ControlID="ddlSearchColumn" PropertyName="SelectedValue" />

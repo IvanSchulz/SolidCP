@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AutoUpdateServers.ascx.cs" Inherits="SolidCP.Portal.AutoUpdateServers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AutoUpdateServers.ascx.cs" Inherits="FuseCP.Portal.AutoUpdateServers" %>
 <%@ Register TagPrefix="scp" TagName="ProductVersion" Src="SkinControls/ProductVersion.ascx" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
     <div class="buttons-in-panel-header">
 <asp:Label ID="lblSelectVersion" runat="server">Select version</asp:Label>
@@ -26,7 +26,7 @@
 </div>
 <div class="panel-footer text-right">
     <div class="pull-left">
-    <asp:Label ID="lblUpdateMessage" runat="server" CssClass="pull-left" Text="This will update all servers to version:" /> <scp:ProductVersion id="scpVersion" runat="server" AssemblyName="SolidCP.Portal.Modules"/><br />
+    <asp:Label ID="lblUpdateMessage" runat="server" CssClass="pull-left" Text="This will update all servers to version:" /> <scp:ProductVersion id="scpVersion" runat="server" AssemblyName="FuseCP.Portal.Modules"/><br />
 	</div>
     <asp:Button ID="btnUpdateServers" runat="server" meta:resourcekey="btnUpdateServers" Text="Update Servers" CssClass="btn btn-success" OnClick="btnUpdateServers_Click" />
 </div>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012 {
+namespace FuseCP.Portal.VPS2012 {
     
     
     public partial class VdcAddExternalAddress {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// allocateAddresses control.
@@ -28,6 +28,6 @@ namespace SolidCP.Portal.VPS2012 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.AllocatePackageIPAddresses allocateAddresses;
+        protected global::FuseCP.Portal.UserControls.AllocatePackageIPAddresses allocateAddresses;
     }
 }

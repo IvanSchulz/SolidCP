@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,9 +35,9 @@ using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 using System.Xml;
-using SolidCP.Providers.Filters;
+using FuseCP.Providers.Filters;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class APIMailCleanerHelper: ControllerBase
     {
@@ -67,14 +67,14 @@ namespace SolidCP.EnterpriseServer
         private string GetServiceURLFromPackageId(int packageId)
         {
             //String l_URL = string.Empty;
-            //var fileter =  SolidCP.Portal.ES.Services.Servers.GetPackageServiceProvider(PanelSecurity.PackageId, ResourceGroups.Filters);
+            //var fileter =  FuseCP.Portal.ES.Services.Servers.GetPackageServiceProvider(PanelSecurity.PackageId, ResourceGroups.Filters);
             var l_URL = ServerController.GetMailFilterUrl(packageId, ResourceGroups.Filters);
 
 
 
             //var Session = System.Web.HttpContext.Current.Session;
             //var l_PackageID  =  Session["currentPackage"];//server id
-            //System.Data.DataSet dsServers = SolidCP.Portal.ES.Services.Servers.GetRawServers();
+            //System.Data.DataSet dsServers = FuseCP.Portal.ES.Services.Servers.GetRawServers();
             //if (dsServers == null)
             //    return String.Empty;
 
@@ -84,13 +84,13 @@ namespace SolidCP.EnterpriseServer
 
             ////+ " And ServiceName = 'Mail Cleaner'"
             //int l_ServiceID = 0;
-            //SolidCP.EnterpriseServer.ServiceInfo l_oServiceInfo = null;
+            //FuseCP.EnterpriseServer.ServiceInfo l_oServiceInfo = null;
             //Boolean MailFilterAdded = false;
             //foreach (System.Data.DataRowView l_oServiceRow in l_Services)
             //{
             //    l_ServiceID = Convert.ToInt16( l_oServiceRow["ServiceID"]);
-            //    l_oServiceInfo = SolidCP.Portal.ES.Services.Servers.GetServiceInfo(Convert.ToInt16(l_ServiceID));
-            //    var l_oProvider = SolidCP.Portal.ES.Services.Servers.GetProvider(l_oServiceInfo.ProviderId);
+            //    l_oServiceInfo = FuseCP.Portal.ES.Services.Servers.GetServiceInfo(Convert.ToInt16(l_ServiceID));
+            //    var l_oProvider = FuseCP.Portal.ES.Services.Servers.GetProvider(l_oServiceInfo.ProviderId);
             //    if (l_oProvider.ProviderName.ToUpper().Equals("MAILCLEANER"))
             //    {
             //        MailFilterAdded = true;
@@ -103,13 +103,13 @@ namespace SolidCP.EnterpriseServer
 
 
             //// load service properties and bind them
-            //string[] settings = SolidCP.Portal.ES.Services.Servers.GetServiceSettings(Convert.ToInt16(l_ServiceID));
+            //string[] settings = FuseCP.Portal.ES.Services.Servers.GetServiceSettings(Convert.ToInt16(l_ServiceID));
             //if (settings == null)
             //    return String.Empty;
 
             //var l_ServiceSettings = ConvertArrayToDictionary(settings);
             //// load resource group details
-            ////var resourceGroup = SolidCP.Portal.ES.Services.Servers.GetResourceGroup(provider.GroupId);
+            ////var resourceGroup = FuseCP.Portal.ES.Services.Servers.GetResourceGroup(provider.GroupId);
             //l_URL = l_ServiceSettings["apiurl"];
 
             if (!String.IsNullOrEmpty(l_URL))

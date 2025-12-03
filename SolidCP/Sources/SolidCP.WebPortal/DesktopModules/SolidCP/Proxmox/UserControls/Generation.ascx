@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Generation.ascx.cs" Inherits="SolidCP.Portal.Proxmox.UserControls.Generation" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Generation.ascx.cs" Inherits="FuseCP.Portal.Proxmox.UserControls.Generation" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register TagPrefix="wsp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
 
 <% if (Mode != VirtualMachineSettingsMode.Summary){ %>

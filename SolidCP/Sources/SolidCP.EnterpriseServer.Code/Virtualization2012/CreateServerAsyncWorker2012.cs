@@ -35,10 +35,10 @@ using System.Collections.Generic;
 using System.Web;
 using System.Threading;
 
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Tasks;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Tasks;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CreateServerAsyncWorker2012: ControllerAsyncBase
     {

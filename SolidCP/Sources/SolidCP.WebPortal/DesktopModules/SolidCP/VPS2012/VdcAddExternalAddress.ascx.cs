@@ -33,12 +33,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VdcAddExternalAddress : SolidCPModuleBase
+    public partial class VdcAddExternalAddress : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

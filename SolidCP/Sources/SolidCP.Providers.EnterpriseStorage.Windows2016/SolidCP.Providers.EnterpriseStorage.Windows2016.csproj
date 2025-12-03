@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net48</TargetFramework>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -7,7 +7,7 @@
 		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
 		<LangVersion>11</LangVersion>
 		<Nullable>disable</Nullable>
-		<OutputPath>..\SolidCP.Server\bin\Providers\</OutputPath>
+		<OutputPath>..\FuseCP.Server\bin\Providers\</OutputPath>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<DebugType>portable</DebugType>
@@ -24,12 +24,12 @@
 			<Private>false</Private>
 			<SpecificVersion>False</SpecificVersion>
 		</Reference>
-		<ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.OS.Windows2022\SolidCP.Providers.OS.Windows2022.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.Web.IIs60\SolidCP.Providers.Web.IIs60.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIs70.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.Web.IIs80\SolidCP.Providers.Web.IIs80.csproj" />
-		<ProjectReference Include="..\SolidCP.Providers.Web.WebDav\SolidCP.Providers.Web.WebDav.csproj" />
-		<ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.OS.Windows2022\FuseCP.Providers.OS.Windows2022.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Web.IIs60\FuseCP.Providers.Web.IIs60.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIs70.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Web.IIs80\FuseCP.Providers.Web.IIs80.csproj" />
+		<ProjectReference Include="..\FuseCP.Providers.Web.WebDav\FuseCP.Providers.Web.WebDav.csproj" />
+		<ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
 	</ItemGroup>
 </Project>

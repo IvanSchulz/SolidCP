@@ -33,10 +33,10 @@
 using System;
 using System.Threading;
 using System.Xml;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Provides methods for rolling back after an error.

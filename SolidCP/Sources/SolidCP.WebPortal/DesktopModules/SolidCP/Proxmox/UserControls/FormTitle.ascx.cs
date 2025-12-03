@@ -36,12 +36,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Portal.Proxmox;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Portal.Proxmox;
 
-namespace SolidCP.Portal.Proxmox.UserControls
+namespace FuseCP.Portal.Proxmox.UserControls
 {
-    public partial class FormTitle : SolidCPControlBase
+    public partial class FormTitle : FuseCPControlBase
     {
         public string Text
         {

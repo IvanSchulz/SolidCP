@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditFeedsList.ascx.cs" Inherits="SolidCP.Portal.UserControls.EditFeedsList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditFeedsList.ascx.cs" Inherits="FuseCP.Portal.UserControls.EditFeedsList" %>
 <div style="width:100%;">
 	<div class="FormButtonsBar">
 		<CPCC:StyleButton id="btnAddFeed" runat="server" meta:resourcekey="btnAddFeed" Text="Add" CssClass="btn btn-primary" CausesValidation="false" OnClick="BtnAddClick"/>

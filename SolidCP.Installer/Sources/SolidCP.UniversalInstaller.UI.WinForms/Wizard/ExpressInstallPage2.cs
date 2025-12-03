@@ -45,13 +45,13 @@ using System.Reflection;
 using System.Collections.Specialized;
 using System.Data.SqlClient;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class ExpressInstallPage2 : BannerWizardPage
 	{

@@ -39,9 +39,9 @@ using System.Linq;
 using System.Web.UI.WebControls;
 
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public abstract class ActionListControlBase<TEnum> : SolidCPControlBase 
+    public abstract class ActionListControlBase<TEnum> : FuseCPControlBase 
     {
         public event CancelEventHandler ExecutingAction;
 

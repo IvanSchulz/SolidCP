@@ -42,9 +42,9 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using AjaxControlToolkit;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class CalendarControl : SolidCPControlBase
+    public partial class CalendarControl : FuseCPControlBase
     {
         public DateTime SelectedDate
         {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class OdbcEditSource {
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernameControl dsnName;
+        protected global::FuseCP.Portal.UsernameControl dsnName;
         
         /// <summary>
         /// lblDriver control.
@@ -118,7 +118,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup fileLookup;
+        protected global::FuseCP.Portal.FileLookup fileLookup;
         
         /// <summary>
         /// rowDatabaseUser control.
@@ -199,7 +199,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl passwordControl;
+        protected global::FuseCP.Portal.PasswordControl passwordControl;
         
         /// <summary>
         /// btnDelete control.

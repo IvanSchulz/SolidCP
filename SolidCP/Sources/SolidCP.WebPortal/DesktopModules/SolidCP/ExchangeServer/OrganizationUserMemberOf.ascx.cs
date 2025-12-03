@@ -33,13 +33,13 @@
 using System;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
-    public partial class UserMemberOf : SolidCPModuleBase
+    public partial class UserMemberOf : FuseCPModuleBase
     {
         protected PackageContext cntx;
 

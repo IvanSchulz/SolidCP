@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     #region Security enums
     public enum ControlFlags

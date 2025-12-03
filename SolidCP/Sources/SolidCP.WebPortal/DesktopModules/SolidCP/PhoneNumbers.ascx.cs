@@ -33,13 +33,13 @@
 using System;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Text;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class PhoneNumbers : SolidCPModuleBase
+    public partial class PhoneNumbers : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

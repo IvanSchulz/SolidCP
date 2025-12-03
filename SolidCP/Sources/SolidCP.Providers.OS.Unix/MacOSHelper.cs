@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	public static class MacOSHelper
 	{

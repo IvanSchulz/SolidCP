@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 
 
@@ -75,7 +75,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.PasswordControl userPassword;
+		protected global::FuseCP.Portal.PasswordControl userPassword;
 
 		/// <summary>
 		/// lblFirstName control.
@@ -201,7 +201,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.UserControls.EmailControl txtEmail;
+		protected global::FuseCP.Portal.UserControls.EmailControl txtEmail;
 
 		/// <summary>
 		/// lblSecondaryEmail control.
@@ -228,7 +228,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.UserControls.EmailControl txtSecondaryEmail;
+		protected global::FuseCP.Portal.UserControls.EmailControl txtSecondaryEmail;
 
 		/// <summary>
 		/// lblMailFormat control.
@@ -399,7 +399,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.CollapsiblePanel headContact;
+		protected global::FuseCP.Portal.CollapsiblePanel headContact;
 
 		/// <summary>
 		/// pnlContact control.
@@ -417,7 +417,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.ContactDetails contact;
+		protected global::FuseCP.Portal.ContactDetails contact;
 
 		/// <summary>
 		/// btnCancel control.

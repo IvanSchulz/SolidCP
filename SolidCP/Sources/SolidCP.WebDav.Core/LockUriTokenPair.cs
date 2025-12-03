@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     namespace Client
     {

@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox {
+namespace FuseCP.Portal.Proxmox {
     
     
     public partial class VpsDetailsReplications {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// tabs-Steuerelement
@@ -28,7 +28,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.Proxmox.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.Proxmox.UserControls.ServerTabs tabs;
         
         /// <summary>
         /// messageBox-Steuerelement
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// validatorsSummary-Steuerelement
@@ -109,7 +109,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secReplication;
+        protected global::FuseCP.Portal.CollapsiblePanel secReplication;
         
         /// <summary>
         /// ReplicationPanel-Steuerelement
@@ -523,7 +523,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel StatisticCollapsiblePanel;
+        protected global::FuseCP.Portal.CollapsiblePanel StatisticCollapsiblePanel;
         
         /// <summary>
         /// StatisticPanel-Steuerelement
@@ -667,7 +667,7 @@ namespace SolidCP.Portal.Proxmox {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel PendingReplicationCollapsiblePanel;
+        protected global::FuseCP.Portal.CollapsiblePanel PendingReplicationCollapsiblePanel;
         
         /// <summary>
         /// PendingReplicationPanel-Steuerelement

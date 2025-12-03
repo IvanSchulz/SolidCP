@@ -35,10 +35,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Web;
 using System.Web.Caching;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using AspNetSecurity = System.Web.Security;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for UsersDB.
@@ -48,10 +48,10 @@ namespace SolidCP.Portal
         private const int USER_CACHE_TIMEOUT = 30; // minutes
         private const int USER_SETTINGS_CACHE_TIMEOUT = 1; // minutes
 
-        private const string DEFAULT_ADMIN_ROLE = "SolidCP Administrators";
-        private const string DEFAULT_RESELLER_ROLE = "SolidCP Resellers";
+        private const string DEFAULT_ADMIN_ROLE = "FuseCP Administrators";
+        private const string DEFAULT_RESELLER_ROLE = "FuseCP Resellers";
         private const string DEFAULT_CSR_ROLE = "CSR";
-        private const string DEFAULT_USER_ROLE = "SolidCP Users";
+        private const string DEFAULT_USER_ROLE = "FuseCP Users";
 
         #region Users ODS Methods (for Selected User)
         DataSet dsUsersPaged;
@@ -216,7 +216,7 @@ namespace SolidCP.Portal
 
         public static int AddUser(List<string> log, int portalId, UserInfo user, bool sendLetter, string password)
         {
-			// add user to SolidCP server
+			// add user to FuseCP server
 			//TODO supply correct value for parameter notes.
 			return ES.Services.Users.AddUser(user, sendLetter, password, null);
         }
@@ -233,13 +233,13 @@ namespace SolidCP.Portal
 
         public static int DeleteUser(int portalId, int userId)
         {
-            // delete SolidCP user
+            // delete FuseCP user
             return ES.Services.Users.DeleteUser(userId);
         }
 
         public static int UpdateUser(int portalId, UserInfo user)
         {
-            // update user in SolidCP
+            // update user in FuseCP
             int result = ES.Services.Users.UpdateUser(user);
 
             if (result < 0)

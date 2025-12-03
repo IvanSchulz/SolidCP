@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox.RemoteDesktop {
+namespace FuseCP.Portal.Proxmox.RemoteDesktop {
     
     
     public partial class Connect {

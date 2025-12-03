@@ -35,11 +35,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
 
-namespace SolidCP.Import.CsvBulk
+namespace FuseCP.Import.CsvBulk
 {
 	public enum AccountTypes
 	{

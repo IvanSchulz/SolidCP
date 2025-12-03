@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailDomainsAddPointer.ascx.cs" Inherits="SolidCP.Portal.MailDomainsAddPointer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailDomainsAddPointer.ascx.cs" Inherits="FuseCP.Portal.MailDomainsAddPointer" %>
 <%@ Register Src="DomainsSelectDomainControl.ascx" TagName="DomainsSelectDomainControl" TagPrefix="uc1" %>
 <div class="panel-body form-horizontal">
     <table cellspacing="0" cellpadding="4" width="100%">

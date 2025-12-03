@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditList.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.IceWarp_EditList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IceWarp_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 

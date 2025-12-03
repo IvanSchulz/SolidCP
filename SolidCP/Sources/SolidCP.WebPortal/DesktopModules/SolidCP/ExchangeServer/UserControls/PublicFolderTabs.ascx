@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PublicFolderTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.PublicFolderTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PublicFolderTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.PublicFolderTabs" %>
             <asp:DataList ID="dlTabs" runat="server" RepeatDirection="Horizontal"
                 RepeatLayout="Flow" EnableViewState="false">
                 <ItemStyle Wrap="False" />

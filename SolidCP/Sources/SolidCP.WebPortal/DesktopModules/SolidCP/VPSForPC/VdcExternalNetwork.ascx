@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcExternalNetwork.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VdcExternalNetwork" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcExternalNetwork.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VdcExternalNetwork" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>

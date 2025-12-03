@@ -36,14 +36,14 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Virtualization;
-using SolidCP.WebPortal;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
+using FuseCP.WebPortal;
+using FuseCP.EnterpriseServer;
 using System.Text;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-    public partial class VdcPrivateNetwork : SolidCPModuleBase
+    public partial class VdcPrivateNetwork : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

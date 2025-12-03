@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExecuteSystemCommand.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.ExecuteSystemCommand" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExecuteSystemCommand.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.ExecuteSystemCommand" %>
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>
             <td class="SubHead" nowrap valign="top">

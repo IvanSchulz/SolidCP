@@ -1,7 +1,7 @@
-﻿using System.ServiceModel;
-using SolidCP.Web.Services;
+using System.ServiceModel;
+using FuseCP.Web.Services;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
 	public class PasswordValidator
 	{
@@ -10,7 +10,7 @@ namespace SolidCP.Server
 
 		public static void Init()
 		{
-			SolidCP.Web.Services.UserNamePasswordValidator.ValidateServer = Validate;
+			FuseCP.Web.Services.UserNamePasswordValidator.ValidateServer = Validate;
 		}
 
 	}

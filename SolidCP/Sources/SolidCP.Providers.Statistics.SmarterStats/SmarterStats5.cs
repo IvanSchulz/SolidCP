@@ -38,7 +38,7 @@ using Microsoft.Win32;
 
 
 
-namespace SolidCP.Providers.Statistics
+namespace FuseCP.Providers.Statistics
 {
     class SmarterStats5 : SmarterStats
     {

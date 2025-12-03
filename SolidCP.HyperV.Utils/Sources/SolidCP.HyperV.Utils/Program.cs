@@ -39,7 +39,7 @@ using System.Management;
 using Vds = Microsoft.Storage.Vds;
 using System.Diagnostics;
 
-namespace SolidCP.HyperV.Utils
+namespace FuseCP.HyperV.Utils
 {
     class Program
     {

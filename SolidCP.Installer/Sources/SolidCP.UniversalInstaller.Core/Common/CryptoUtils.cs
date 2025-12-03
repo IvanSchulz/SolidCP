@@ -41,11 +41,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Linq;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
 using System.Net;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	/// <summary>
 	/// Utils class.

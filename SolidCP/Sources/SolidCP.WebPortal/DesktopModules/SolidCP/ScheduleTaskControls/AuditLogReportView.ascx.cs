@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -33,11 +33,11 @@
 using System;
 using System.Data;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.UserControls.ScheduleTaskView;
-using SCP = SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.UserControls.ScheduleTaskView;
+using SCP = FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ScheduleTaskControls
+namespace FuseCP.Portal.ScheduleTaskControls
 {
     public partial class AuditLogReportView : EmptyView
     {

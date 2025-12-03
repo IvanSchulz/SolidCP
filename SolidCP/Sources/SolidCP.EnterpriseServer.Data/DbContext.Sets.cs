@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Entities;
 #if NETFRAMEWORK
 using System.Data.Entity;
 #elif NETCOREAPP
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
-	using Version = SolidCP.EnterpriseServer.Data.Entities.Version;
-	using GlobalDnsRecord = SolidCP.EnterpriseServer.Data.Entities.GlobalDnsRecord;
-	using BackgroundTask = SolidCP.EnterpriseServer.Data.Entities.BackgroundTask;
-	using BackgroundTaskParameter = SolidCP.EnterpriseServer.Data.Entities.BackgroundTaskParameter;
+	using Version = FuseCP.EnterpriseServer.Data.Entities.Version;
+	using GlobalDnsRecord = FuseCP.EnterpriseServer.Data.Entities.GlobalDnsRecord;
+	using BackgroundTask = FuseCP.EnterpriseServer.Data.Entities.BackgroundTask;
+	using BackgroundTaskParameter = FuseCP.EnterpriseServer.Data.Entities.BackgroundTaskParameter;
 
 	public partial class DbContext
 	{

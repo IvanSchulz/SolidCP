@@ -32,11 +32,11 @@
 
 using System;
 using System.Collections.Generic;
-using SolidCP.WebPortal;
-using SolidCP.EnterpriseServer;
-namespace SolidCP.Portal.ExchangeServer.UserControls
+using FuseCP.WebPortal;
+using FuseCP.EnterpriseServer;
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class Menu : SolidCPControlBase
+    public partial class Menu : FuseCPControlBase
     {
 
         public class MenuGroup

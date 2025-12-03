@@ -31,7 +31,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	internal class ProgressManager
 	{

@@ -29,16 +29,16 @@
 using System;
 using System.Configuration;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.Providers.Statistics;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.Providers.Statistics;
 
-namespace SolidCP.AWStats.Viewer
+namespace FuseCP.AWStats.Viewer
 {
 	/// <summary>
-	/// Summary description for SolidCPAuthenticationProvider.
+	/// Summary description for FuseCPAuthenticationProvider.
 	/// </summary>
-	public class SolidCPAuthenticationProvider : AuthenticationProvider
+	public class FuseCPAuthenticationProvider : AuthenticationProvider
 	{
 		public override AuthenticationResult AuthenticateUser(string domain, string username, string password)
 		{
@@ -96,7 +96,7 @@ namespace SolidCP.AWStats.Viewer
             string username, string password)
         {
             // create ES configurator
-            string serverUrl = ConfigurationManager.AppSettings["AWStats.SolidCPAuthenticationProvider.EnterpriseServer"];
+            string serverUrl = ConfigurationManager.AppSettings["AWStats.FuseCPAuthenticationProvider.EnterpriseServer"];
             if (String.IsNullOrEmpty(serverUrl))
                 throw new Exception("Enterprise Server URL could not be empty");
 

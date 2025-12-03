@@ -40,11 +40,11 @@ using System.Xml;
 using System.Security.Cryptography;
 using System.Security.Cryptography.Xml;
 
-using SolidCP.Providers;
-using OS = SolidCP.Server.Client;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers;
+using OS = FuseCP.Server.Client;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class BackupController : ControllerBase
 	{

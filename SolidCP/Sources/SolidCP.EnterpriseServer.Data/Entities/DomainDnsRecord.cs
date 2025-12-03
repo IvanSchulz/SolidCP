@@ -1,14 +1,14 @@
-﻿#if ScaffoldedEntities
+#if ScaffoldedEntities
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using SolidCP.Providers.DNS;
+using FuseCP.Providers.DNS;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities;
+namespace FuseCP.EnterpriseServer.Data.Entities;
 
 #if NetCore
 [Index("DomainId", Name = "DomainDnsRecordsIdx_DomainId")]

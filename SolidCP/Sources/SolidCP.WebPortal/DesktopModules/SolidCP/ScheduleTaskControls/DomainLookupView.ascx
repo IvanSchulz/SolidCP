@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainLookupView.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.DomainLookupView" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainLookupView.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.DomainLookupView" %>
 
 <table cellspacing="0" cellpadding="4" width="100%">
     <tr>

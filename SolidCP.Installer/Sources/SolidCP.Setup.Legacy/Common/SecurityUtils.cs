@@ -37,10 +37,10 @@ using System.DirectoryServices;
 using System.DirectoryServices.ActiveDirectory;
 using System.Collections.Generic;
 using System.Management;
-using SolidCP.Setup.Windows;
+using FuseCP.Setup.Windows;
 using System.Globalization;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Security utils class.

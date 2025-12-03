@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class StorageSpacesController: ControllerBase
     {

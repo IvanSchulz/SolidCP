@@ -1,4 +1,4 @@
-﻿#if !NETSTANDARD
+#if !NETSTANDARD
 
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ using System.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public static class DynamicFunctions
 	{
@@ -37,7 +37,7 @@ namespace SolidCP.EnterpriseServer.Data
 				null);
 
 			var efFunctions = Expression.Property(null, typeof(EF), nameof(EF.Functions));
-			// Сall the method with all the required arguments
+			// ?all the method with all the required arguments
 			var call = Expression.Call(efLikeMethod, efFunctions, property, likeExpressionParameter);
 #endif
 			return Expression.Lambda<Func<T, bool>>(call, param);

@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ScheduleTaskControls {
+namespace FuseCP.Portal.ScheduleTaskControls {
     
     
     /// <summary>

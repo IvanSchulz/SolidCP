@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012.UserControls {
+namespace FuseCP.Portal.VPS2012.UserControls {
     
     
     public partial class FormTitle {

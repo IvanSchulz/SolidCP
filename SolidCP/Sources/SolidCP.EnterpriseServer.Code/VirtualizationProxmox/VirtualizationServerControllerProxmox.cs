@@ -1,4 +1,4 @@
-ï»¿// Copyright (c) 2017, Centron GmbH
+// Copyright (c) 2017, Centron GmbH
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -34,31 +34,31 @@
 using System;
 using System.Data;
 using System.Xml;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
-using SolidCP.Providers;
+using FuseCP.Providers;
 using System.Text;
 using System.Collections;
 using System.Net.Mail;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
-using SolidCP.EnterpriseServer.Code.VirtualizationProxmox;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
-//using SolidCP.Providers.VirtualizationProxmox;
+using FuseCP.EnterpriseServer.Code.VirtualizationProxmox;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
+//using FuseCP.Providers.VirtualizationProxmox;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class VirtualizationServerControllerProxmox: ControllerBase
     {
 
-        private const string SHUTDOWN_REASON = "SolidCP - Initiated by user";
-        private const string SHUTDOWN_REASON_CHANGE_CONFIG = "SolidCP - changing VPS configuration";
+        private const string SHUTDOWN_REASON = "FuseCP - Initiated by user";
+        private const string SHUTDOWN_REASON_CHANGE_CONFIG = "FuseCP - changing VPS configuration";
         private const Int64 Size1G = 0x40000000;
         private const string MS_MAC_PREFIX = "00155D"; // IEEE prefix of MS MAC addresses
 
@@ -178,7 +178,7 @@ namespace SolidCP.EnterpriseServer
         }
         #endregion
 
-        #region VPS Create â€“ Name & OS
+        #region VPS Create – Name & OS
         public LibraryItem[] GetOperatingSystemTemplates(int packageId)
         {
             // load service settings
@@ -1569,7 +1569,7 @@ namespace SolidCP.EnterpriseServer
         }
         #endregion
 
-        #region VPS â€“ General
+        #region VPS – General
 
         public List<ConcreteJob> GetVirtualMachineJobs(int itemId)
         {
@@ -1967,7 +1967,7 @@ namespace SolidCP.EnterpriseServer
         }
         #endregion
 
-        #region VPS â€“ Edit Configuration
+        #region VPS – Edit Configuration
         public ResultObject UpdateVirtualMachineConfiguration(int itemId, int cpuCores, int ramMB, int hddGB, int snapshots, bool dvdInstalled, bool bootFromCD, bool numLock, bool startShutdownAllowed, bool pauseResumeAllowed, bool rebootAllowed, bool resetAllowed, bool reinstallAllowed, bool externalNetworkEnabled, bool privateNetworkEnabled, VirtualMachine otherSettings)
         {
             ResultObject res = new ResultObject();
@@ -2991,7 +2991,7 @@ namespace SolidCP.EnterpriseServer
         }
         #endregion
 
-        #region Network â€“ Private
+        #region Network – Private
         public NetworkAdapterDetails GetPrivateNetworkDetails(int packageId)
         {
             // load service

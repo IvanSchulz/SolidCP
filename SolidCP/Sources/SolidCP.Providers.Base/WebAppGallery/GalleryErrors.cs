@@ -34,7 +34,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.WebAppGallery
+namespace FuseCP.Providers.WebAppGallery
 {
 	public static class GalleryErrors
 	{

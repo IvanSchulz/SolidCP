@@ -32,11 +32,11 @@
 
 using System;
 using System.Collections.Specialized;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class NetticaDNS_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class NetticaDNS_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         //public const string Password = "Password";
         

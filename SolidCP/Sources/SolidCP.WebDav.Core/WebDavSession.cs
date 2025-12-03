@@ -1,7 +1,7 @@
 using System;
 using System.Net;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     /// <summary>
     /// WebDav.Client Namespace.

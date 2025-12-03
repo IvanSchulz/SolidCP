@@ -44,10 +44,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class ServiceAddressPage : BannerWizardPage
 	{

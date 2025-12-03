@@ -1,7 +1,7 @@
-﻿using SolidCP.EnterpriseServer;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Web;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Web;
 
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Web;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class AsyncLoadHandler : IHttpHandler
     {

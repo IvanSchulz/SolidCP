@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.StorageSpaces;
+using FuseCP.Providers.StorageSpaces;
 
-namespace SolidCP.Portal.StorageSpaces
+namespace FuseCP.Portal.StorageSpaces
 {
-    public partial class EditStorageSpaceLevel : SolidCPModuleBase
+    public partial class EditStorageSpaceLevel : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

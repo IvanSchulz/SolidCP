@@ -36,9 +36,9 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Configuration;
 using Microsoft.Win32;
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for CryptoUtils.

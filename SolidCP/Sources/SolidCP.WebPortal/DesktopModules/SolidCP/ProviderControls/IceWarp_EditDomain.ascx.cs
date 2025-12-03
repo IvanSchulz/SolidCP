@@ -35,12 +35,12 @@ using System;
 ﻿using System.Collections.Specialized;
 ﻿using System.Linq;
 ﻿using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Mail;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class IceWarp_EditDomain : SolidCPControlBase, IMailEditDomainControl
+    public partial class IceWarp_EditDomain : FuseCPControlBase, IMailEditDomainControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

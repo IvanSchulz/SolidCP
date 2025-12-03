@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Configuration;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Win32;
 
-namespace SolidCP.WebDav.Core.Security.Cryptography
+namespace FuseCP.WebDav.Core.Security.Cryptography
 {
     public class CryptoUtils : ICryptography
     {
-        private string EnterpriseServerRegistryPath = "SOFTWARE\\SolidCP\\EnterpriseServer";
+        private string EnterpriseServerRegistryPath = "SOFTWARE\\FuseCP\\EnterpriseServer";
 
         private string CryptoKey
         {
             get
             {
-                string Key = ConfigurationManager.AppSettings["SolidCP.AltCryptoKey"];
+                string Key = ConfigurationManager.AppSettings["FuseCP.AltCryptoKey"];
                 string value = string.Empty;
 
                 if (!string.IsNullOrEmpty(Key))
@@ -32,7 +32,7 @@ namespace SolidCP.WebDav.Core.Security.Cryptography
                 if (!string.IsNullOrEmpty(value))
                     return value;
                 else
-                    return ConfigurationManager.AppSettings["SolidCP.CryptoKey"];
+                    return ConfigurationManager.AppSettings["FuseCP.CryptoKey"];
 
             }
         }
@@ -41,8 +41,8 @@ namespace SolidCP.WebDav.Core.Security.Cryptography
         {
             get
             {
-                return (ConfigurationManager.AppSettings["SolidCP.EncryptionEnabled"] != null)
-                    ? Boolean.Parse(ConfigurationManager.AppSettings["SolidCP.EncryptionEnabled"]) : true;
+                return (ConfigurationManager.AppSettings["FuseCP.EncryptionEnabled"] != null)
+                    ? Boolean.Parse(ConfigurationManager.AppSettings["FuseCP.EncryptionEnabled"]) : true;
             }
         }
 

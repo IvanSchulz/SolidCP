@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Use EntityFramework for database access</value>
   </data>
   <data name="locPoweredBy.Text" xml:space="preserve">
-    <value>Powered by &lt;a href="https://solidcp.com" target="_blank"&gt;SolidCP&lt;/a&gt;.</value>
+    <value>Powered by &lt;a href="https://fusecp.com" target="_blank"&gt;FuseCP&lt;/a&gt;.</value>
   </data>
   <data name="locVersion.Text" xml:space="preserve">
     <value>Version</value>

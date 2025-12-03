@@ -40,7 +40,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.ReportingServices
+namespace FuseCP.Portal.ReportingServices
 {
 	/// <summary>
 	/// Base interface for classes that utilize access to the localization resources.

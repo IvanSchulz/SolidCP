@@ -40,7 +40,7 @@ using System.Runtime.Serialization;
 using System.Globalization;
 using System.Text;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
     public class SecureSessionModule : IHttpModule
     {
@@ -76,7 +76,7 @@ namespace SolidCP.WebPortal
                 {
                     if ((authCookie != null))
                     {
-                        SolidCP.Portal.PortalUtils.UserSignOut();
+                        FuseCP.Portal.PortalUtils.UserSignOut();
                     } 
                     return;
                 }
@@ -92,7 +92,7 @@ namespace SolidCP.WebPortal
                 // Throw an exception if the MACs don't match 
                 if (String.CompareOrdinal(mac1, mac2) != 0)
                 {
-                    SolidCP.Portal.PortalUtils.UserSignOut();
+                    FuseCP.Portal.PortalUtils.UserSignOut();
                 }
 
                 // Strip the MAC from the cookie before ASP.NET sees it 

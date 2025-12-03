@@ -40,10 +40,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class ArgoMail_EditAccount {
-        protected SolidCP.Portal.CollapsiblePanel secAutoresponder;
+        protected FuseCP.Portal.CollapsiblePanel secAutoresponder;
         protected System.Web.UI.WebControls.Panel AutoresponderPanel;
         protected System.Web.UI.WebControls.Label lblResponderEnabled;
         protected System.Web.UI.WebControls.CheckBox chkResponderEnabled;
@@ -51,7 +51,7 @@ namespace SolidCP.Portal.ProviderControls {
         protected System.Web.UI.WebControls.TextBox txtSubject;
         protected System.Web.UI.WebControls.Label lblMessage;
         protected System.Web.UI.WebControls.TextBox txtMessage;
-        protected SolidCP.Portal.CollapsiblePanel secForwarding;
+        protected FuseCP.Portal.CollapsiblePanel secForwarding;
         protected System.Web.UI.WebControls.Panel ForwardingPanel;
         protected System.Web.UI.WebControls.Label lblForwardTo;
         protected System.Web.UI.WebControls.TextBox txtForward;

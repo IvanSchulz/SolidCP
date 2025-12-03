@@ -1,8 +1,8 @@
-﻿using System.Configuration;
-using SolidCP.WebDav.Core.Config.Entities;
-using SolidCP.WebDavPortal.WebConfigSections;
+using System.Configuration;
+using FuseCP.WebDav.Core.Config.Entities;
+using FuseCP.WebDavPortal.WebConfigSections;
 
-namespace SolidCP.WebDav.Core.Config
+namespace FuseCP.WebDav.Core.Config
 {
     public class WebDavAppConfigManager : IWebDavAppConfig
     {
@@ -12,7 +12,7 @@ namespace SolidCP.WebDav.Core.Config
         private WebDavAppConfigManager()
         {
             _configSection = ((WebDavExplorerConfigurationSettingsSection) ConfigurationManager.GetSection(WebDavExplorerConfigurationSettingsSection.SectionName));
-            SolidCPConstantUserParameters = new SolidCPConstantUserParameters();
+            FuseCPConstantUserParameters = new FuseCPConstantUserParameters();
             ElementsRendering = new ElementsRendering();
             SessionKeys = new SessionKeysCollection();
             FileIcons = new FileIconsDictionary();
@@ -55,7 +55,7 @@ namespace SolidCP.WebDav.Core.Config
         }
 
         public ElementsRendering ElementsRendering { get; private set; }
-        public SolidCPConstantUserParameters SolidCPConstantUserParameters { get; private set; }
+        public FuseCPConstantUserParameters FuseCPConstantUserParameters { get; private set; }
         public TwilioParameters TwilioParameters { get; private set; }
         public SessionKeysCollection SessionKeys { get; private set; }
         public FileIconsDictionary FileIcons { get; private set; }

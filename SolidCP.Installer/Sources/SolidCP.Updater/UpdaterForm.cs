@@ -43,11 +43,11 @@ using System.Windows.Forms;
 using System.Diagnostics;
 
 
-using SolidCP.Updater.Common;
-using SolidCP.Updater.Services;
+using FuseCP.Updater.Common;
+using FuseCP.Updater.Services;
 using Ionic.Zip;
 
-namespace SolidCP.Updater
+namespace FuseCP.Updater
 {
 	internal partial class UpdaterForm : Form
 	{
@@ -276,7 +276,7 @@ namespace SolidCP.Updater
 		private void ShowError()
 		{
 			string message = "An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com";
+				"Please contact Technical Support at support@fusecp.com";
 			MessageBox.Show(this, message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 	}

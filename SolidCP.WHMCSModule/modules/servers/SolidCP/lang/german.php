@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -33,14 +33,14 @@
 
 
 /**
- * SolidCP WHMCS Server Module Client Area Language
+ * FuseCP WHMCS Server Module Client Area Language
  *
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  */
-$_MOD_LANG['SolidCP_clientarea_oneclicklogin'] = 'Im Control Panel anmelden (Ein-Click-Login)';
-$_MOD_LANG['SolidCP_adminarea_gotoSolidCPaccount'] = 'Kundenkonto im Control Panel ansehen';
+$_MOD_LANG['FuseCP_clientarea_oneclicklogin'] = 'Im Control Panel anmelden (Ein-Click-Login)';
+$_MOD_LANG['FuseCP_adminarea_gotoFuseCPaccount'] = 'Kundenkonto im Control Panel ansehen';

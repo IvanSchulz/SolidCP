@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SendToControl.ascx.cs" Inherits="SolidCP.Portal.UserControls.SendToControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SendToControl.ascx.cs" Inherits="FuseCP.Portal.UserControls.SendToControl" %>
 <div>
     <div>
         <fieldset>

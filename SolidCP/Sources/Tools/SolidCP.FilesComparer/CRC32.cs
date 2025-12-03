@@ -30,7 +30,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.FilesComparer
+namespace FuseCP.FilesComparer
 {
 	public class CRC32
 	{

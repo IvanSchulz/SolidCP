@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SchedulesEditSchedule.ascx.cs" Inherits="SolidCP.Portal.SchedulesEditSchedule" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SchedulesEditSchedule.ascx.cs" Inherits="FuseCP.Portal.SchedulesEditSchedule" %>
 <%@ Register Src="UserControls/ScheduleTime.ascx" TagName="ScheduleTime" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/ScheduleInterval.ascx" TagName="ScheduleInterval" TagPrefix="uc2" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

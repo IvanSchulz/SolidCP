@@ -36,7 +36,7 @@ using System.Text;
 using System.IO;
 using System.Threading;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public class ActionProgressEventArgs<T> : EventArgs
 	{
@@ -301,9 +301,9 @@ namespace SolidCP.Setup.Actions
 			var args = new ActionErrorEventArgs
 			{
 				ErrorMessage = "An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.",
+				"FuseCP Installer home directory.",
 				OriginalException = ex,
 			};
 			//

@@ -33,7 +33,7 @@
 using System; 
 using System.Collections;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 { 
 	public interface IMailServer 
 	{

@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -30,14 +30,14 @@ using System;
 using System.Globalization;
 using System.IO;
 using CertEnrollInterop;
-using SolidCP.Providers.Common;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Server.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Iis
+namespace FuseCP.Providers.Web.Iis
 {
     public class SSLModuleService100 : SSLModuleService
     {

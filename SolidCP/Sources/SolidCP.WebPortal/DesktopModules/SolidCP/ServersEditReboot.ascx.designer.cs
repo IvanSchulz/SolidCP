@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class ServersEditReboot {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ServerHeaderControl ServerHeaderControl1;
+        protected global::FuseCP.Portal.ServerHeaderControl ServerHeaderControl1;
         
         /// <summary>
         /// btnReboot control.

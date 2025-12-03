@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
 
 
@@ -30,7 +30,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.Common_IPAddressesList iPAddressesList;
+        protected global::FuseCP.Portal.ProviderControls.Common_IPAddressesList iPAddressesList;
 
         /// <summary>
         /// lblAllowZoneTransfers control.
@@ -102,7 +102,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleInterval intRefresh;
+        protected global::FuseCP.Portal.ScheduleInterval intRefresh;
 
         /// <summary>
         /// lblRetryInterval control.
@@ -120,7 +120,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleInterval intRetry;
+        protected global::FuseCP.Portal.ScheduleInterval intRetry;
 
         /// <summary>
         /// lblExpireLimit control.
@@ -138,7 +138,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleInterval intExpire;
+        protected global::FuseCP.Portal.ScheduleInterval intExpire;
 
         /// <summary>
         /// lblMinimumTtl control.
@@ -156,7 +156,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ScheduleInterval intTtl;
+        protected global::FuseCP.Portal.ScheduleInterval intTtl;
 
         /// <summary>
         /// lblRecordDefaultTTL control.
@@ -210,7 +210,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.Common_SecondaryDNSServers secondaryDNSServers;
+        protected global::FuseCP.Portal.ProviderControls.Common_SecondaryDNSServers secondaryDNSServers;
 
         /// <summary>
         /// lblNameServers control.
@@ -228,6 +228,6 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditDomainsList nameServers;
+        protected global::FuseCP.Portal.UserControls.EditDomainsList nameServers;
     }
 }

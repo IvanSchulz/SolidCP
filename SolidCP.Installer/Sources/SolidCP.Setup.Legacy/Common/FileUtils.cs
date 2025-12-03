@@ -38,11 +38,11 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Linq;
 using Ionic.Zip;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
 using System.Security.Policy;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// File utils.

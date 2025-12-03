@@ -38,11 +38,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Caching;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for PackagesHelper

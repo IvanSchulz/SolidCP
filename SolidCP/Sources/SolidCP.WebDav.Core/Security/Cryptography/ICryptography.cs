@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Security.Cryptography
+namespace FuseCP.WebDav.Core.Security.Cryptography
 {
     public interface ICryptography
     {

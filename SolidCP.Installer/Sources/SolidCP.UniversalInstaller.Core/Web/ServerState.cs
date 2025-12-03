@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.UniversalInstaller.Web
+namespace FuseCP.UniversalInstaller.Web
 {
 	/// <summary>
 	/// Server states.

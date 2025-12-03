@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationDeletedUsers.ascx.cs" Inherits="SolidCP.Portal.HostedSolution.OrganizationDeletedUsers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationDeletedUsers.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.OrganizationDeletedUsers" %>
 
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
@@ -100,7 +100,7 @@
 							SelectCountMethod="GetOrganizationDeletedUsersPagedCount"
 							SelectMethod="GetOrganizationDeletedUsersPaged"
 							SortParameterName="sortColumn"
-							TypeName="SolidCP.Portal.OrganizationsHelper"
+							TypeName="FuseCP.Portal.OrganizationsHelper"
 							OnSelected="odsAccountsPaged_Selected">
 						<SelectParameters>
 							<asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />							

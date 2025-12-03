@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS.RemoteDesktop {
+namespace FuseCP.Portal.VPS.RemoteDesktop {
     
     
     public partial class Connect {

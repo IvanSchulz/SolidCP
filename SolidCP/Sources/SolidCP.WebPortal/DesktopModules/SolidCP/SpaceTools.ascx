@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceTools.ascx.cs" Inherits="SolidCP.Portal.SpaceTools" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceTools.ascx.cs" Inherits="FuseCP.Portal.SpaceTools" %>
 <div class="widget">
 							<div class="widget-header clearfix">
 								<h3><i class="fa fa-user"></i> <span><asp:Localize id="ToolsHeader" runat="server" meta:resourcekey="ToolsHeader" Text="Tools"></asp:Localize></span></h3>

@@ -41,13 +41,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.WebPortal;
 using System.Text;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class UserCustomers : SolidCPModuleBase
+	public partial class UserCustomers : FuseCPModuleBase
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

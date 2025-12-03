@@ -39,20 +39,20 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-using SolidCP.Server;
-using OS = SolidCP.Server.Client;
-using SolidCP.Server.Client;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-//using OS = SolidCP.Providers.OS;
+using FuseCP.Server;
+using OS = FuseCP.Server.Client;
+using FuseCP.Server.Client;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+//using OS = FuseCP.Providers.OS;
 using System.Collections;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Providers.DNS;
 using System.Linq;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class OperatingSystemController : ControllerBase, IImportController, IBackupController
     {

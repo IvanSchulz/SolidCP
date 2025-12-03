@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2015, Outercurve Foundation.
+// Copyright (c) 2015, Outercurve Foundation.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -33,9 +33,9 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Server.Utils")]
+[assembly: AssemblyTitle("FuseCP.Server.Utils")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyProduct("SolidCP.Server.Utils")]
+[assembly: AssemblyProduct("FuseCP.Server.Utils")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

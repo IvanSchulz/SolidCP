@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Entities.Account.Enums
+namespace FuseCP.WebDav.Core.Entities.Account.Enums
 {
     public enum FolderViewTypes
     {

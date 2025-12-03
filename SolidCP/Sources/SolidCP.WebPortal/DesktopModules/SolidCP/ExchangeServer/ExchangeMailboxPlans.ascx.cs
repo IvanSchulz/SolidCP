@@ -33,13 +33,13 @@
 using System;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Portal.SkinControls;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Portal.SkinControls;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxPlans : SolidCPModuleBase
+    public partial class ExchangeMailboxPlans : FuseCPModuleBase
     {
         private bool RetentionPolicy
         {

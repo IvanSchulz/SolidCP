@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Portal.Code.UserControls;
+using FuseCP.Portal.Code.UserControls;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class OrganizationSettingsTabs : SolidCPControlBase
+    public partial class OrganizationSettingsTabs : FuseCPControlBase
     {
         public string SelectedTab { get; set; }
 

@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class BackupWizard : SolidCPModuleBase
+    public partial class BackupWizard : FuseCPModuleBase
     {
 		private KeyValueBunch backupSetContent;
 

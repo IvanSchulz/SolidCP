@@ -60,23 +60,23 @@ using System.Data.Entity;
 using System.Text.RegularExpressions;
 using Microsoft.ApplicationBlocks.Data;
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.RemoteDesktopServices;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.EnterpriseServer.Code;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.RemoteDesktopServices;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Code;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 using MySqlX.XDevAPI.Common;
 //using Humanizer.Localisation;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for DataProvider.
-	/// The source code of the Stored Procedures can be found in the SolidCP.EnterpriseServer.Data project in the
+	/// The source code of the Stored Procedures can be found in the FuseCP.EnterpriseServer.Data project in the
 	/// Migrations\SqlServer\StoredProcedures folder.
 	/// </summary>
 	public class DataProvider : Data.DbContext
@@ -2713,7 +2713,7 @@ namespace SolidCP.EnterpriseServer
 				SqlParameter prmUserId = new SqlParameter("@UserID", SqlDbType.Int);
 				prmUserId.Direction = ParameterDirection.Output;
 
-				// add user to SolidCP Users table
+				// add user to FuseCP Users table
 				SqlHelper.ExecuteNonQuery(NativeConnectionString, CommandType.StoredProcedure,
 					 ObjectQualifier + "AddUser",
 					 prmUserId,
@@ -7549,7 +7549,7 @@ namespace SolidCP.EnterpriseServer
 				using (var transaction = Database.BeginTransaction())
 				{
 					// Fix to allow plans assigned to serveradmin
-					if (itemTypeName == "SolidCP.Providers.HostedSolution.Organization, SolidCP.Providers.Base")
+					if (itemTypeName == "FuseCP.Providers.HostedSolution.Organization, FuseCP.Providers.Base")
 					{
 						if (!ServiceItems.Any(s => s.PackageId == 1))
 						{

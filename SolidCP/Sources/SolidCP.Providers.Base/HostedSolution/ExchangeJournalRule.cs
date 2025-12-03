@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class ExchangeJournalRule
     {

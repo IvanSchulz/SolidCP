@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileZilla_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.FileZilla_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileZilla_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.FileZilla_Settings" %>
 <table cellpadding="4" cellspacing="0" width="100%">
 	<tr>
 		<td class="SubHead" style="width:200px;">

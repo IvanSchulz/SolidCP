@@ -1,4 +1,4 @@
-// Copyright (c) 2022, SolidCP
+// Copyright (c) 2022, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -36,7 +36,7 @@ using System.Text;
 using System.Management;
 using System.Diagnostics;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     internal class Wmi
     {

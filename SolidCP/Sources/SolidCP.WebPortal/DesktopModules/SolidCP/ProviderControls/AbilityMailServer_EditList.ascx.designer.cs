@@ -40,10 +40,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class AbilityMailServer_EditList {
         protected System.Web.UI.WebControls.Label lblMembers;
-        protected SolidCP.Portal.MailEditItems mailEditItems;
+        protected FuseCP.Portal.MailEditItems mailEditItems;
     }
 }

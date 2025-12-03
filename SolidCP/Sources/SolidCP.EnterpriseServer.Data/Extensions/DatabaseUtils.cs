@@ -39,19 +39,19 @@ using System.Linq;
 using System.Reflection;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Text;
-using Data = SolidCP.EnterpriseServer.Data;
+using Data = FuseCP.EnterpriseServer.Data;
 #if NETFRAMEWORK
 using System.Data.SQLite;
 #else
 using Microsoft.Data.Sqlite;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	/// <summary>
-	/// Sql utils class used by the SolidCP Installer.
+	/// Sql utils class used by the FuseCP Installer.
 	/// </summary>
 	public sealed class DatabaseUtils
 	{
@@ -1710,7 +1710,7 @@ SELECT DatabaseVersion FROM Version");
 					{
 						if (Providers.OS.OSInfo.IsCore)
 						{
-							var contextType = Type.GetType("SolidCP.EnterpriseServer.Data.SqliteDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+							var contextType = Type.GetType("FuseCP.EnterpriseServer.Data.SqliteDbContext, FuseCP.EnterpriseServer.Data.NetCore");
 							//using (var context = new SqliteDbContext(masterConnectionString, false))
 							using (var context = Activator.CreateInstance(contextType, new object[] { masterConnectionString, false }) as IMigratableDbContext)
 							{

@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class CRM_Settings {
@@ -151,7 +151,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SelectIPAddress ddlCrmIpAddress;
+        protected global::FuseCP.Portal.SelectIPAddress ddlCrmIpAddress;
         
         /// <summary>
         /// lblPort control.

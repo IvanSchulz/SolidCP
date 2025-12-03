@@ -1,7 +1,7 @@
-﻿using System.Web;
+using System.Web;
 using System.Web.Mvc;
 
-namespace SolidCP.WebDavPortal
+namespace FuseCP.WebDavPortal
 {
     public class FilterConfig
     {

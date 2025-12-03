@@ -44,9 +44,9 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
 
-using SolidCP.Setup.Web;
+using FuseCP.Setup.Web;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class ServiceAddressPage : BannerWizardPage
 	{
@@ -94,7 +94,7 @@ namespace SolidCP.Setup
 				XmlDocument doc = new XmlDocument();
 				doc.Load(path);
 
-				XmlElement ipNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.HostIP']") as XmlElement;
+				XmlElement ipNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.HostIP']") as XmlElement;
 				if (ipNode != null)
 				{
 					Wizard.SetupVariables.ServiceIP = ipNode.GetAttribute("value");
@@ -104,7 +104,7 @@ namespace SolidCP.Setup
 					Log.WriteInfo("Service host IP setting not found");
 				}
 				
-				XmlElement portNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.HostPort']") as XmlElement;
+				XmlElement portNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.HostPort']") as XmlElement;
 				if (portNode != null)
 				{
 					Wizard.SetupVariables.ServicePort = portNode.GetAttribute("value");

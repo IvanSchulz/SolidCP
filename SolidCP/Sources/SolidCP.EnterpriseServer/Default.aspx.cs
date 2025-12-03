@@ -44,10 +44,10 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
 // embedded resources
-[assembly: WebResource("SolidCP.EnterpriseServer.Images.logo.png", "image/png")]
+[assembly: WebResource("FuseCP.EnterpriseServer.Images.logo.png", "image/png")]
 
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public partial class DefaultPage : System.Web.UI.Page
     {
@@ -63,7 +63,7 @@ namespace SolidCP.EnterpriseServer
                 litVersion.Text = ((AssemblyFileVersionAttribute)attrs[0]).Version;
 
 			/* imgLogo.ImageUrl = Page.ClientScript.GetWebResourceUrl(
-				typeof(DefaultPage), "SolidCP.EnterpriseServer.Images.logo.png"); */
+				typeof(DefaultPage), "FuseCP.EnterpriseServer.Images.logo.png"); */
         }
     }
 }

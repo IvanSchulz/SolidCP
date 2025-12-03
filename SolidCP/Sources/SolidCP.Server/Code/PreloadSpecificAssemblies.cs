@@ -1,7 +1,7 @@
-﻿using System.Reflection;
-using SolidCP.Providers.OS;
+using System.Reflection;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
 	public class PreloadSpecificAssemblies
 	{

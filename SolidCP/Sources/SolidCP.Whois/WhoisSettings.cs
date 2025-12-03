@@ -31,7 +31,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	internal class WhoisSettings
 	{

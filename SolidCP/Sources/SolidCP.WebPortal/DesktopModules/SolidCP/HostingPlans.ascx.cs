@@ -41,15 +41,15 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class HostingPlans : SolidCPModuleBase
+    public partial class HostingPlans : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {            
            // set display preferences
            gvPlans.PageSize = UsersHelper.GetDisplayItemsPerPage();
-           gvPlans.Columns[2].Visible = (PanelSecurity.EffectiveUser.Role == SolidCP.EnterpriseServer.UserRole.Administrator);
+           gvPlans.Columns[2].Visible = (PanelSecurity.EffectiveUser.Role == FuseCP.EnterpriseServer.UserRole.Administrator);
         }
 
         protected void odsPlans_Selected(object sender, ObjectDataSourceStatusEventArgs e)

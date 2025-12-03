@@ -1,8 +1,8 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SolidCP.Server.DefaultPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FuseCP.Server.DefaultPage" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>SolidCP Server</title>
+    <title>FuseCP Server</title>
     <style>
 		BODY
 		{
@@ -83,7 +83,7 @@
 			</table>
             <br />
 			<asp:HyperLink runat="server" id="lnkDocs" NavigateUrl="~/swagger">API Documentation</asp:HyperLink> <br />
-            <a href="https://solidcp.com">SolidCP</a> &COPY; Copyright <%=DateTime.Now.Year%> All Rights Reserved.
+            <a href="https://fusecp.com">FuseCP</a> &COPY; Copyright <%=DateTime.Now.Year%> All Rights Reserved.
 		</div>
     </form>
 </body>

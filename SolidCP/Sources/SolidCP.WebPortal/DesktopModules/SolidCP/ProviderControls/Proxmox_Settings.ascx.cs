@@ -37,13 +37,13 @@ using System.Data;
 using System.Linq;
 using System.Web.Services.Description;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-	public partial class Proxmox_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+	public partial class Proxmox_Settings : FuseCPControlBase, IHostingServiceProviderSettings
 	{
 		// Distinguish between Proxmox and Proxmox (localhost)
 		protected bool IsLocal {
@@ -53,7 +53,7 @@ namespace SolidCP.Portal.ProviderControls
 				{
 					var service = ES.Services.Servers.GetServiceInfo(PanelRequest.ServiceId);
 					var provider = ES.Services.Servers.GetProvider(service.ProviderId);
-					isLocal = IsLocal = provider.ProviderType == "SolidCP.Providers.Virtualization.ProxmoxvpsLocal, SolidCP.Providers.Virtualization.Proxmoxvps";
+					isLocal = IsLocal = provider.ProviderType == "FuseCP.Providers.Virtualization.ProxmoxvpsLocal, FuseCP.Providers.Virtualization.Proxmoxvps";
 				}
 				return isLocal.Value;
 			}

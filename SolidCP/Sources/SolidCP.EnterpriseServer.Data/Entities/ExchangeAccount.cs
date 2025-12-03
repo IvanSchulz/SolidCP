@@ -1,6 +1,6 @@
-﻿// This file is auto generated, do not edit.
+// This file is auto generated, do not edit.
 #if ScaffoldedEntities
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities;
+namespace FuseCP.EnterpriseServer.Data.Entities;
 
 #if NetCore
 [Index("ItemId", Name = "ExchangeAccountsIdx_ItemID")]

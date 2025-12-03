@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TimeZones.ascx.cs" Inherits="SolidCP.Portal.TimeZones" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TimeZones.ascx.cs" Inherits="FuseCP.Portal.TimeZones" %>
 <asp:DropDownList ID="ddlZones" runat="server" CssClass="form-control">
 	<asp:ListItem value="1">(GMT-12:00) International Date Line West</asp:ListItem>
 	<asp:ListItem value="2">(GMT-11:00) Midway Island, Samoa</asp:ListItem>

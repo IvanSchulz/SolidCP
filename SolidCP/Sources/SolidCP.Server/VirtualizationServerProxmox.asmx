@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="VirtualizationServerProxmox.asmx.cs" Class="SolidCP.Server.VirtualizationServerProxmox" %>
+<%@ WebService Language="C#" CodeBehind="VirtualizationServerProxmox.asmx.cs" Class="FuseCP.Server.VirtualizationServerProxmox" %>

@@ -45,14 +45,14 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class ServerPasswordControl : SolidCPControlBase
+    public partial class ServerPasswordControl : FuseCPControlBase
     {
-        public const string EMPTY_PASSWORD = "$SolidCP!@";
+        public const string EMPTY_PASSWORD = "$FuseCP!@";
         public const int MIN_PASSWORD_LENGTH = 1;
 
         public bool ValidationEnabled

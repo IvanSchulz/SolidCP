@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingAddonsEditAddon.ascx.cs" Inherits="SolidCP.Portal.HostingAddonsEditAddon" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingAddonsEditAddon.ascx.cs" Inherits="FuseCP.Portal.HostingAddonsEditAddon" %>
 <%@ Register Src="HostingPlansQuotas.ascx" TagName="HostingPlansQuotas" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 

@@ -31,13 +31,13 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeJournalingMailboxGeneralSettings : SolidCPModuleBase
+    public partial class ExchangeJournalingMailboxGeneralSettings : FuseCPModuleBase
     {
 
         private PackageContext cntx = null;

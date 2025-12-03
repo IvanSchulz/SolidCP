@@ -43,9 +43,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Authenticator;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for UserController.
@@ -96,7 +96,7 @@ namespace SolidCP.EnterpriseServer
 				}
 
 				//Get the password policy
-				UserSettings userSettings = UserController.GetUserSettings(user.UserId, UserSettings.SolidCP_POLICY);
+				UserSettings userSettings = UserController.GetUserSettings(user.UserId, UserSettings.FuseCP_POLICY);
 				int lockOut = -1;
 
 				if (!string.IsNullOrEmpty(userSettings["PasswordPolicy"]))
@@ -245,7 +245,7 @@ namespace SolidCP.EnterpriseServer
 				return new string[0];
 
 			var authSettings = SystemController.GetSystemSettingsInternal(SystemSettings.AUTHENTICATION_SETTINGS, false);
-			var mfaTokenAppDisplayName = authSettings == null ? "SolidCP" : authSettings[SystemSettings.MFA_TOKEN_APP_DISPLAY_NAME];
+			var mfaTokenAppDisplayName = authSettings == null ? "FuseCP" : authSettings[SystemSettings.MFA_TOKEN_APP_DISPLAY_NAME];
 
 			TwoFactorAuthenticator twoFactorAuthenticator = new TwoFactorAuthenticator();
 			var faSetupCode = twoFactorAuthenticator.GenerateSetupCode(mfaTokenAppDisplayName, $"{user.Username}", CryptoUtils.Decrypt(user.PinSecret), false);

@@ -32,12 +32,12 @@
 
 using System;
 using System.Collections.Generic;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxMemberOf : SolidCPModuleBase
+    public partial class ExchangeMailboxMemberOf : FuseCPModuleBase
     {
         protected PackageContext cntx;
 

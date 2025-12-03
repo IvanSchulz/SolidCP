@@ -1,8 +1,8 @@
-﻿using System;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDavPortal.Models.Common.DataTable;
+using System;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDavPortal.Models.Common.DataTable;
 
-namespace SolidCP.WebDavPortal.Models.FileSystem
+namespace FuseCP.WebDavPortal.Models.FileSystem
 {
     public class ResourceTableItemModel : JqueryDataTableBaseEntity
     {

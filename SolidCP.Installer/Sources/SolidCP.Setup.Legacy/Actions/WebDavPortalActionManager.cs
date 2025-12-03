@@ -35,10 +35,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Xml;
-using SolidCP.UniversalInstaller;
-using SolidCP.Setup.Common;
+using FuseCP.UniversalInstaller;
+using FuseCP.Setup.Common;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public class SetWebDavPortalWebSettingsAction : Action, IPrepareDefaultsAction
 	{

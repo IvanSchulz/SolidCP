@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSSessionLimit.ascx.cs" Inherits="SolidCP.Portal.RDS.UserControls.RDSSessionLimit" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSSessionLimit.ascx.cs" Inherits="FuseCP.Portal.RDS.UserControls.RDSSessionLimit" %>
 <asp:DropDownList ID="SessionLimit" runat="server" CssClass="form-control">
     <asp:ListItem Value="0" Text="Never" />
     <asp:ListItem Value="1" Text="1 minute" />

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailListsEditList.ascx.cs" Inherits="SolidCP.Portal.MailListsEditList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailListsEditList.ascx.cs" Inherits="FuseCP.Portal.MailListsEditList" %>
 <%@ Register TagPrefix="dnc" TagName="EmailAddress" Src="MailEditAddress.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
 	TagPrefix="scp" %>

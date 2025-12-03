@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace SolidCP.EnterpriseServer.Base.Reports
+namespace FuseCP.EnterpriseServer.Base.Reports
 {
 	public static class OverusageReportUtils
 	{

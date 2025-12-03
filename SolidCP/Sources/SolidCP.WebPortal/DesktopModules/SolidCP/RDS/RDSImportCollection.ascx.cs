@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.RDS
+namespace FuseCP.Portal.RDS
 {
-    public partial class RDSImportCollection : SolidCPModuleBase
+    public partial class RDSImportCollection : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

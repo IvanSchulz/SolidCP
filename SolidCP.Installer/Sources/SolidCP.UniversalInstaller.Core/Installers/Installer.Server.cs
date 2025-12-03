@@ -1,9 +1,9 @@
 using System;
 using System.Reflection;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
 using System.Globalization;
 using System.Security.Policy;
 using System.Diagnostics.Contracts;
@@ -17,19 +17,19 @@ using Newtonsoft.Json.Converters;
 using static Azure.Core.HttpHeader;
 using static System.Collections.Specialized.BitVector32;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public abstract partial class Installer
 {
-	public virtual string ServerSiteId => $"{SolidCP}Server";
-	public virtual string UnixServerServiceId => "solidcp-server";
+	public virtual string ServerSiteId => $"{FuseCP}Server";
+	public virtual string UnixServerServiceId => "fusecp-server";
 
 	public virtual void InstallServerPrerequisites() { }
 	public virtual void RemoveServerPrerequisites() { }
 	public virtual void CreateServerUser() => CreateUser(Settings.Server);
 	public virtual void RemoveServerUser() => RemoveUser(Settings.Server.Username);
 	public virtual void SetServerFilePermissions() => SetFilePermissions(Settings.Server.InstallPath, Settings.Server.Username);
-	public virtual void SetServerFileOwner() => SetFileOwner(Settings.Server.InstallPath, Settings.Server.Username, SolidCPGroup);
+	public virtual void SetServerFileOwner() => SetFileOwner(Settings.Server.InstallPath, Settings.Server.Username, FuseCPGroup);
 	public virtual void InstallServer()
 	{
 		InstallServerPrerequisites();
@@ -68,13 +68,13 @@ public abstract partial class Installer
 	public virtual void InstallServerWebsite()
 	{
 		var web = Settings.Server.InstallPath;
-		var dll = Path.Combine(web, "bin_dotnet", "SolidCP.Server.dll");
+		var dll = Path.Combine(web, "bin_dotnet", "FuseCP.Server.dll");
 		InstallWebsite(ServerSiteId,
 			web,
 			Settings.Server,
-			SolidCPUnixGroup,
+			FuseCPUnixGroup,
 			dll,
-			"SolidCP.Server service, the server management service for the SolidCP control panel.",
+			"FuseCP.Server service, the server management service for the FuseCP control panel.",
 			UnixServerServiceId);
 	}
 	public virtual void RemoveServerWebsite()
@@ -113,7 +113,7 @@ public abstract partial class Installer
 
 			Settings.Server.ServerPasswordSHA = Settings.Server.ServerPassword = "";
 			// server password
-			var password = configuration?.Element("SolidCP.server/security/password");
+			var password = configuration?.Element("FuseCP.server/security/password");
 			if (password != null)
 			{
 				Settings.Server.ServerPasswordSHA = password.Attribute("value")?.Value;
@@ -140,14 +140,14 @@ public abstract partial class Installer
 			new XAttribute("type", "SwaggerWcf.Configuration.SwaggerWcfSection, SwaggerWcf")));
 		var swaggerwcf = XElement.Parse(@"<swaggerwcf>
 		<settings>
-			<setting name=""InfoDescription"" value=""SolidCP Server Service"" />
+			<setting name=""InfoDescription"" value=""FuseCP Server Service"" />
 			<setting name=""InfoVersion"" value=""2.0.0"" />
 			<setting name=""InfoTermsOfService"" value=""Terms of Service"" />
-			<setting name=""InfoTitle"" value=""SolidCP Server Service"" />
-			<setting name=""InfoContactName"" value=""SolidCP"" />
-			<setting name=""InfoContactUrl"" value=""http://solidcp.com/forum"" />
-			<setting name=""InfoContactEmail"" value=""support@solidcp.com"" />
-			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/SolidCP/blob/master/LICENSE.txt"" />
+			<setting name=""InfoTitle"" value=""FuseCP Server Service"" />
+			<setting name=""InfoContactName"" value=""FuseCP"" />
+			<setting name=""InfoContactUrl"" value=""http://fusecp.com/forum"" />
+			<setting name=""InfoContactEmail"" value=""support@fusecp.com"" />
+			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/master/LICENSE.txt"" />
 			<setting name=""InfoLicenseName"" value=""Creative Commons Share-alike"" />
 		</settings>
 	</swaggerwcf>");
@@ -278,7 +278,7 @@ public abstract partial class Installer
 		ConfigureCertificateNetFX(settings, configuration);
 
 		// Server password
-		var server = configuration.Element("SolidCP.server");
+		var server = configuration.Element("FuseCP.server");
 		var security = server?.Element("security");
 		var password = security?.Element("password");
 		var pwsha = string.IsNullOrEmpty(settings.ServerPassword) ? settings.ServerPasswordSHA : CryptoUtils.ComputeSHAServerPassword(settings.ServerPassword);

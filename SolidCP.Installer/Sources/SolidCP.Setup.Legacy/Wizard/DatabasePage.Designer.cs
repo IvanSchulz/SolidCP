@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	partial class DatabasePage
 	{
@@ -171,7 +171,7 @@ namespace SolidCP.Setup
 			this.txtSqlServerDatabase.Name = "txtSqlServerDatabase";
 			this.txtSqlServerDatabase.Size = new System.Drawing.Size(248, 20);
 			this.txtSqlServerDatabase.TabIndex = 10;
-			this.txtSqlServerDatabase.Text = "SolidCP";
+			this.txtSqlServerDatabase.Text = "FuseCP";
 			// 
 			// lblDatabase
 			// 
@@ -253,7 +253,7 @@ namespace SolidCP.Setup
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(398, 13);
 			this.label8.TabIndex = 24;
-			this.label8.Text = "(Note that by using MySQL/MariaDB, SolidCP will run slower than with SQL Server)";
+			this.label8.Text = "(Note that by using MySQL/MariaDB, FuseCP will run slower than with SQL Server)";
 			// 
 			// txtMySqlPort
 			// 
@@ -295,7 +295,7 @@ namespace SolidCP.Setup
 			this.txtMySqlDatabase.Name = "txtMySqlDatabase";
 			this.txtMySqlDatabase.Size = new System.Drawing.Size(248, 20);
 			this.txtMySqlDatabase.TabIndex = 20;
-			this.txtMySqlDatabase.Text = "SolidCP";
+			this.txtMySqlDatabase.Text = "FuseCP";
 			// 
 			// label3
 			// 
@@ -356,7 +356,7 @@ namespace SolidCP.Setup
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(377, 26);
 			this.label7.TabIndex = 23;
-			this.label7.Text = "(Note that by using SQLite, SolidCP will run slower than with using SQL Server.\r\n" +
+			this.label7.Text = "(Note that by using SQLite, FuseCP will run slower than with using SQL Server.\r\n" +
     " It is not recommended to use SQLite on a production server.)";
 			// 
 			// txtSqliteDatabase
@@ -366,7 +366,7 @@ namespace SolidCP.Setup
 			this.txtSqliteDatabase.Name = "txtSqliteDatabase";
 			this.txtSqliteDatabase.Size = new System.Drawing.Size(248, 20);
 			this.txtSqliteDatabase.TabIndex = 22;
-			this.txtSqliteDatabase.Text = "SolidCP";
+			this.txtSqliteDatabase.Text = "FuseCP";
 			// 
 			// label6
 			// 

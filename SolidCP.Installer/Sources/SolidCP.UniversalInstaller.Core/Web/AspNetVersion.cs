@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.UniversalInstaller.Web
+namespace FuseCP.UniversalInstaller.Web
 {
     /// <summary>
     /// ASP.NET versions

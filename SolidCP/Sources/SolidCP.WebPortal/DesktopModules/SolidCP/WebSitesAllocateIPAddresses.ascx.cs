@@ -36,9 +36,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebSitesAllocateIPAddresses : SolidCPModuleBase
+    public partial class WebSitesAllocateIPAddresses : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

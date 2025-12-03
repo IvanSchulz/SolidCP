@@ -1,351 +1,351 @@
--- SolidCP Migration from Other panels
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003' WHERE ProviderID = 1
+-- FuseCP Migration from Other panels
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.OS.Windows2003, FuseCP.Providers.OS.Windows2003' WHERE ProviderID = 1
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Web.IIs60, SolidCP.Providers.Web.IIs60' WHERE ProviderID = 2
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Web.IIs60, FuseCP.Providers.Web.IIs60' WHERE ProviderID = 2
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs60' WHERE ProviderID = 3
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs60' WHERE ProviderID = 3
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.MailEnable, SolidCP.Providers.Mail.MailEnable' WHERE ProviderID = 4
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.MailEnable, FuseCP.Providers.Mail.MailEnable' WHERE ProviderID = 4
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MsSqlServer, SolidCP.Providers.Database.SqlServer' WHERE ProviderID = 5
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MsSqlServer, FuseCP.Providers.Database.SqlServer' WHERE ProviderID = 5
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MySqlServer, SolidCP.Providers.Database.MySQL' WHERE ProviderID = 6
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MySqlServer, FuseCP.Providers.Database.MySQL' WHERE ProviderID = 6
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.MsDNS, SolidCP.Providers.DNS.MsDNS' WHERE ProviderID = 7
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.MsDNS, FuseCP.Providers.DNS.MsDNS' WHERE ProviderID = 7
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Statistics.AWStats, SolidCP.Providers.Statistics.AWStats' WHERE ProviderID = 8
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Statistics.AWStats, FuseCP.Providers.Statistics.AWStats' WHERE ProviderID = 8
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.SimpleDNS, SolidCP.Providers.DNS.SimpleDNS' WHERE ProviderID = 9
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.SimpleDNS, FuseCP.Providers.DNS.SimpleDNS' WHERE ProviderID = 9
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Statistics.SmarterStats, SolidCP.Providers.Statistics.SmarterStats' WHERE ProviderID = 10
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Statistics.SmarterStats, FuseCP.Providers.Statistics.SmarterStats' WHERE ProviderID = 10
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail2, SolidCP.Providers.Mail.SmarterMail2' WHERE ProviderID = 11
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail2, FuseCP.Providers.Mail.SmarterMail2' WHERE ProviderID = 11
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.FTP.Gene6, SolidCP.Providers.FTP.Gene6' WHERE ProviderID = 12
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.FTP.Gene6, FuseCP.Providers.FTP.Gene6' WHERE ProviderID = 12
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.Merak, SolidCP.Providers.Mail.Merak' WHERE ProviderID = 13
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.Merak, FuseCP.Providers.Mail.Merak' WHERE ProviderID = 13
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail3, SolidCP.Providers.Mail.SmarterMail3' WHERE ProviderID = 14
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail3, FuseCP.Providers.Mail.SmarterMail3' WHERE ProviderID = 14
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MsSqlServer2005, SolidCP.Providers.Database.SqlServer' WHERE ProviderID = 16
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MsSqlServer2005, FuseCP.Providers.Database.SqlServer' WHERE ProviderID = 16
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MySqlServer50, SolidCP.Providers.Database.MySQL' WHERE ProviderID = 17
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MySqlServer50, FuseCP.Providers.Database.MySQL' WHERE ProviderID = 17
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.MDaemon, SolidCP.Providers.Mail.MDaemon' WHERE ProviderID = 18
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.MDaemon, FuseCP.Providers.Mail.MDaemon' WHERE ProviderID = 18
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.ArgoMail, SolidCP.Providers.Mail.ArgoMail' WHERE ProviderID = 19
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.ArgoMail, FuseCP.Providers.Mail.ArgoMail' WHERE ProviderID = 19
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.hMailServer, SolidCP.Providers.Mail.hMailServer' WHERE ProviderID = 20
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.hMailServer, FuseCP.Providers.Mail.hMailServer' WHERE ProviderID = 20
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.AbilityMailServer, SolidCP.Providers.Mail.AbilityMailServer' WHERE ProviderID = 21
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.AbilityMailServer, FuseCP.Providers.Mail.AbilityMailServer' WHERE ProviderID = 21
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.hMailServer43, SolidCP.Providers.Mail.hMailServer43' WHERE ProviderID = 22
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.hMailServer43, FuseCP.Providers.Mail.hMailServer43' WHERE ProviderID = 22
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.IscBind, SolidCP.Providers.DNS.Bind' WHERE ProviderID = 24
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.IscBind, FuseCP.Providers.DNS.Bind' WHERE ProviderID = 24
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.FTP.ServU, SolidCP.Providers.FTP.ServU' WHERE ProviderID = 25
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.FTP.ServU, FuseCP.Providers.FTP.ServU' WHERE ProviderID = 25
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.FTP.FileZilla, SolidCP.Providers.FTP.FileZilla' WHERE ProviderID = 26
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.FTP.FileZilla, FuseCP.Providers.FTP.FileZilla' WHERE ProviderID = 26
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Exchange2007, SolidCP.Providers.HostedSolution' WHERE ProviderID = 27
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Exchange2007, FuseCP.Providers.HostedSolution' WHERE ProviderID = 27
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.SimpleDNS5, SolidCP.Providers.DNS.SimpleDNS50' WHERE ProviderID = 28
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.SimpleDNS5, FuseCP.Providers.DNS.SimpleDNS50' WHERE ProviderID = 28
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail5, SolidCP.Providers.Mail.SmarterMail5' WHERE ProviderID = 29
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail5, FuseCP.Providers.Mail.SmarterMail5' WHERE ProviderID = 29
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MySqlServer51, SolidCP.Providers.Database.MySQL' WHERE ProviderID = 30
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MySqlServer51, FuseCP.Providers.Database.MySQL' WHERE ProviderID = 30
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Statistics.SmarterStats4, SolidCP.Providers.Statistics.SmarterStats' WHERE ProviderID = 31
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Statistics.SmarterStats4, FuseCP.Providers.Statistics.SmarterStats' WHERE ProviderID = 31
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Exchange2010, SolidCP.Providers.HostedSolution' WHERE ProviderID = 32
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Exchange2010, FuseCP.Providers.HostedSolution' WHERE ProviderID = 32
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.Nettica, SolidCP.Providers.DNS.Nettica' WHERE ProviderID = 55
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.Nettica, FuseCP.Providers.DNS.Nettica' WHERE ProviderID = 55
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.PowerDNS, SolidCP.Providers.DNS.PowerDNS' WHERE ProviderID = 56
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.PowerDNS, FuseCP.Providers.DNS.PowerDNS' WHERE ProviderID = 56
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail6, SolidCP.Providers.Mail.SmarterMail6' WHERE ProviderID = 60
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail6, FuseCP.Providers.Mail.SmarterMail6' WHERE ProviderID = 60
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.Merak10, SolidCP.Providers.Mail.Merak10' WHERE ProviderID = 61
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.Merak10, FuseCP.Providers.Mail.Merak10' WHERE ProviderID = 61
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Statistics.SmarterStats5, SolidCP.Providers.Statistics.SmarterStats' WHERE ProviderID = 62
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Statistics.SmarterStats5, FuseCP.Providers.Statistics.SmarterStats' WHERE ProviderID = 62
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.hMailServer5, SolidCP.Providers.Mail.hMailServer5' WHERE ProviderID = 63
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.hMailServer5, FuseCP.Providers.Mail.hMailServer5' WHERE ProviderID = 63
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail7, SolidCP.Providers.Mail.SmarterMail7' WHERE ProviderID = 64
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail7, FuseCP.Providers.Mail.SmarterMail7' WHERE ProviderID = 64
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail9, SolidCP.Providers.Mail.SmarterMail9' WHERE ProviderID = 65
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail9, FuseCP.Providers.Mail.SmarterMail9' WHERE ProviderID = 65
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.SmarterMail10, SolidCP.Providers.Mail.SmarterMail10' WHERE ProviderID = 66
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.SmarterMail10, FuseCP.Providers.Mail.SmarterMail10' WHERE ProviderID = 66
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Exchange2010SP2, SolidCP.Providers.HostedSolution' WHERE ProviderID = 90
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Exchange2010SP2, FuseCP.Providers.HostedSolution' WHERE ProviderID = 90
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Exchange2013, SolidCP.Providers.HostedSolution.Exchange2013' WHERE ProviderID = 91
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Exchange2013, FuseCP.Providers.HostedSolution.Exchange2013' WHERE ProviderID = 91
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008' WHERE ProviderID = 100
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.OS.Windows2008, FuseCP.Providers.OS.Windows2008' WHERE ProviderID = 100
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Web.IIs70, SolidCP.Providers.Web.IIs70' WHERE ProviderID = 101
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Web.IIs70, FuseCP.Providers.Web.IIs70' WHERE ProviderID = 101
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs70' WHERE ProviderID = 102
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs70' WHERE ProviderID = 102
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.OrganizationProvider, SolidCP.Providers.HostedSolution' WHERE ProviderID = 103
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.OrganizationProvider, FuseCP.Providers.HostedSolution' WHERE ProviderID = 103
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012' WHERE ProviderID = 104
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.OS.Windows2012, FuseCP.Providers.OS.Windows2012' WHERE ProviderID = 104
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Web.IIs80, SolidCP.Providers.Web.IIs80' WHERE ProviderID = 105
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Web.IIs80, FuseCP.Providers.Web.IIs80' WHERE ProviderID = 105
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.FTP.MsFTP80, SolidCP.Providers.FTP.IIs80' WHERE ProviderID = 106
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.FTP.MsFTP80, FuseCP.Providers.FTP.IIs80' WHERE ProviderID = 106
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Web.HeliconZoo.HeliconZoo, SolidCP.Providers.Web.HeliconZoo' WHERE ProviderID = 135
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Web.HeliconZoo.HeliconZoo, FuseCP.Providers.Web.HeliconZoo' WHERE ProviderID = 135
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Mail.IceWarp, SolidCP.Providers.Mail.IceWarp' WHERE ProviderID = 160
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Mail.IceWarp, FuseCP.Providers.Mail.IceWarp' WHERE ProviderID = 160
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.HostedSharePointServer, SolidCP.Providers.HostedSolution' WHERE ProviderID = 200
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.HostedSharePointServer, FuseCP.Providers.HostedSolution' WHERE ProviderID = 200
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.CRMProvider, SolidCP.Providers.HostedSolution' WHERE ProviderID = 201
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.CRMProvider, FuseCP.Providers.HostedSolution' WHERE ProviderID = 201
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MsSqlServer2008, SolidCP.Providers.Database.SqlServer' WHERE ProviderID = 202
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MsSqlServer2008, FuseCP.Providers.Database.SqlServer' WHERE ProviderID = 202
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.BlackBerryProvider, SolidCP.Providers.HostedSolution' WHERE ProviderID = 203
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.BlackBerryProvider, FuseCP.Providers.HostedSolution' WHERE ProviderID = 203
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.BlackBerry5Provider, SolidCP.Providers.HostedSolution' WHERE ProviderID = 204
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.BlackBerry5Provider, FuseCP.Providers.HostedSolution' WHERE ProviderID = 204
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.OCS2007R2, SolidCP.Providers.HostedSolution' WHERE ProviderID = 205
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.OCS2007R2, FuseCP.Providers.HostedSolution' WHERE ProviderID = 205
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.OCSEdge2007R2, SolidCP.Providers.HostedSolution' WHERE ProviderID = 206
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.OCSEdge2007R2, FuseCP.Providers.HostedSolution' WHERE ProviderID = 206
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.HostedSharePointServer2010, SolidCP.Providers.HostedSolution' WHERE ProviderID = 208
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.HostedSharePointServer2010, FuseCP.Providers.HostedSolution' WHERE ProviderID = 208
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MsSqlServer2012, SolidCP.Providers.Database.SqlServer' WHERE ProviderID = 209
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MsSqlServer2012, FuseCP.Providers.Database.SqlServer' WHERE ProviderID = 209
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Lync2010, SolidCP.Providers.HostedSolution' WHERE ProviderID = 250
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Lync2010, FuseCP.Providers.HostedSolution' WHERE ProviderID = 250
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Virtualization.HyperV, SolidCP.Providers.Virtualization.HyperV' WHERE ProviderID = 300
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Virtualization.HyperV, FuseCP.Providers.Virtualization.HyperV' WHERE ProviderID = 300
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MySqlServer55, SolidCP.Providers.Database.MySQL' WHERE ProviderID = 301
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MySqlServer55, FuseCP.Providers.Database.MySQL' WHERE ProviderID = 301
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MySqlServer56, SolidCP.Providers.Database.MySQL' WHERE ProviderID = 302
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MySqlServer56, FuseCP.Providers.Database.MySQL' WHERE ProviderID = 302
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Virtualization.HyperV2012R2, SolidCP.Providers.Virtualization.HyperV2012R2' WHERE ProviderID = 350
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Virtualization.HyperV2012R2, FuseCP.Providers.Virtualization.HyperV2012R2' WHERE ProviderID = 350
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.VirtualizationForPC.HyperVForPC, SolidCP.Providers.VirtualizationForPC.HyperVForPC' WHERE ProviderID = 400
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.VirtualizationForPC.HyperVForPC, FuseCP.Providers.VirtualizationForPC.HyperVForPC' WHERE ProviderID = 400
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.DNS.MsDNS2012, SolidCP.Providers.DNS.MsDNS2012' WHERE ProviderID = 410
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.DNS.MsDNS2012, FuseCP.Providers.DNS.MsDNS2012' WHERE ProviderID = 410
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.EnterpriseStorage.Windows2012, SolidCP.Providers.EnterpriseStorage.Windows2012' WHERE ProviderID = 600
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.EnterpriseStorage.Windows2012, FuseCP.Providers.EnterpriseStorage.Windows2012' WHERE ProviderID = 600
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.StorageSpaces.Windows2012, SolidCP.Providers.StorageSpaces.Windows2012' WHERE ProviderID = 700
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.StorageSpaces.Windows2012, FuseCP.Providers.StorageSpaces.Windows2012' WHERE ProviderID = 700
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.CRMProvider2011, SolidCP.Providers.HostedSolution.CRM2011' WHERE ProviderID = 1201
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.CRMProvider2011, FuseCP.Providers.HostedSolution.CRM2011' WHERE ProviderID = 1201
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.CRMProvider2013, SolidCP.Providers.HostedSolution.Crm2013' WHERE ProviderID = 1202
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.CRMProvider2013, FuseCP.Providers.HostedSolution.Crm2013' WHERE ProviderID = 1202
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.Database.MsSqlServer2014, SolidCP.Providers.Database.SqlServer' WHERE ProviderID = 1203
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.Database.MsSqlServer2014, FuseCP.Providers.Database.SqlServer' WHERE ProviderID = 1203
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.CRMProvider2015, SolidCP.Providers.HostedSolution.Crm2015' WHERE ProviderID = 1205
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.CRMProvider2015, FuseCP.Providers.HostedSolution.Crm2015' WHERE ProviderID = 1205
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.HostedSharePointServer2013, SolidCP.Providers.HostedSolution.SharePoint2013' WHERE ProviderID = 1301
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.HostedSharePointServer2013, FuseCP.Providers.HostedSolution.SharePoint2013' WHERE ProviderID = 1301
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Lync2013, SolidCP.Providers.HostedSolution.Lync2013' WHERE ProviderID = 1401
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Lync2013, FuseCP.Providers.HostedSolution.Lync2013' WHERE ProviderID = 1401
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Lync2013HP, SolidCP.Providers.HostedSolution.Lync2013HP' WHERE ProviderID = 1402
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Lync2013HP, FuseCP.Providers.HostedSolution.Lync2013HP' WHERE ProviderID = 1402
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.RemoteDesktopServices.Windows2012,SolidCP.Providers.RemoteDesktopServices.Windows2012' WHERE ProviderID = 1501
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.RemoteDesktopServices.Windows2012,FuseCP.Providers.RemoteDesktopServices.Windows2012' WHERE ProviderID = 1501
 Go
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.HostedSharePointServer2013Ent, SolidCP.Providers.HostedSolution.SharePoint2013Ent' WHERE ProviderID = 1503
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.HostedSharePointServer2013Ent, FuseCP.Providers.HostedSolution.SharePoint2013Ent' WHERE ProviderID = 1503
 Go
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.OS.HomeFolder, SolidCP.Providers.Base' WHERE ItemTypeID = 2
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.OS.HomeFolder, FuseCP.Providers.Base' WHERE ItemTypeID = 2
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 5
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 5
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 6
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 6
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 7
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 7
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 8
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 8
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.FTP.FtpAccount, SolidCP.Providers.Base' WHERE ItemTypeID = 9
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.FTP.FtpAccount, FuseCP.Providers.Base' WHERE ItemTypeID = 9
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Web.WebSite, SolidCP.Providers.Base' WHERE ItemTypeID = 10
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Web.WebSite, FuseCP.Providers.Base' WHERE ItemTypeID = 10
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Mail.MailDomain, SolidCP.Providers.Base' WHERE ItemTypeID = 11
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Mail.MailDomain, FuseCP.Providers.Base' WHERE ItemTypeID = 11
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.DNS.DnsZone, SolidCP.Providers.Base' WHERE ItemTypeID = 12
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.DNS.DnsZone, FuseCP.Providers.Base' WHERE ItemTypeID = 12
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.OS.Domain, SolidCP.Providers.Base' WHERE ItemTypeID = 13
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.OS.Domain, FuseCP.Providers.Base' WHERE ItemTypeID = 13
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Statistics.StatsSite, SolidCP.Providers.Base' WHERE ItemTypeID = 14
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Statistics.StatsSite, FuseCP.Providers.Base' WHERE ItemTypeID = 14
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Mail.MailAccount, SolidCP.Providers.Base' WHERE ItemTypeID = 15
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Mail.MailAccount, FuseCP.Providers.Base' WHERE ItemTypeID = 15
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Mail.MailAlias, SolidCP.Providers.Base' WHERE ItemTypeID = 16
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Mail.MailAlias, FuseCP.Providers.Base' WHERE ItemTypeID = 16
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Mail.MailList, SolidCP.Providers.Base' WHERE ItemTypeID = 17
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Mail.MailList, FuseCP.Providers.Base' WHERE ItemTypeID = 17
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Mail.MailGroup, SolidCP.Providers.Base' WHERE ItemTypeID = 18
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Mail.MailGroup, FuseCP.Providers.Base' WHERE ItemTypeID = 18
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.OS.SystemDSN, SolidCP.Providers.Base' WHERE ItemTypeID = 20
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.OS.SystemDSN, FuseCP.Providers.Base' WHERE ItemTypeID = 20
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 21
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 21
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 22
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 22
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 23
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 23
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 24
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 24
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Web.SharedSSLFolder, SolidCP.Providers.Base' WHERE ItemTypeID = 25
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Web.SharedSSLFolder, FuseCP.Providers.Base' WHERE ItemTypeID = 25
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.DNS.SecondaryDnsZone, SolidCP.Providers.Base' WHERE ItemTypeID = 28
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.DNS.SecondaryDnsZone, FuseCP.Providers.Base' WHERE ItemTypeID = 28
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.HostedSolution.Organization, SolidCP.Providers.Base' WHERE ItemTypeID = 29
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.HostedSolution.Organization, FuseCP.Providers.Base' WHERE ItemTypeID = 29
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.HostedSolution.OrganizationDomain, SolidCP.Providers.Base' WHERE ItemTypeID = 30
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.HostedSolution.OrganizationDomain, FuseCP.Providers.Base' WHERE ItemTypeID = 30
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 31
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 31
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 32
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 32
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base' WHERE ItemTypeID = 33
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base' WHERE ItemTypeID = 33
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base' WHERE ItemTypeID = 34
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base' WHERE ItemTypeID = 34
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Virtualization.VMInfo, SolidCP.Providers.Base' WHERE ItemTypeID = 35
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Virtualization.VMInfo, FuseCP.Providers.Base' WHERE ItemTypeID = 35
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base' WHERE ItemTypeID = 36
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base' WHERE ItemTypeID = 36
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 37
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 37
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 38
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 38
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base' WHERE ItemTypeID = 39
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base' WHERE ItemTypeID = 39
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base' WHERE ItemTypeID = 40
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base' WHERE ItemTypeID = 40
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base' WHERE ItemTypeID = 41
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base' WHERE ItemTypeID = 41
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base' WHERE ItemTypeID = 42
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base' WHERE ItemTypeID = 42
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.SharePoint.SharePointSiteCollection, SolidCP.Providers.Base' WHERE ItemTypeID = 200
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.SharePoint.SharePointSiteCollection, FuseCP.Providers.Base' WHERE ItemTypeID = 200
 GO
-UPDATE ServiceItemTypes SET TypeName = N'SolidCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, SolidCP.Providers.Base' WHERE ItemTypeID = 201
+UPDATE ServiceItemTypes SET TypeName = N'FuseCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, FuseCP.Providers.Base' WHERE ItemTypeID = 201
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.OperatingSystemController' WHERE GroupName = 'OS'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.OperatingSystemController' WHERE GroupName = 'OS'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.WebServerController' WHERE GroupName = 'Web'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.WebServerController' WHERE GroupName = 'Web'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.FtpServerController' WHERE GroupName = 'FTP'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.FtpServerController' WHERE GroupName = 'FTP'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.MailServerController' WHERE GroupName = 'Mail'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.MailServerController' WHERE GroupName = 'Mail'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2000'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2000'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MySQL4'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MySQL4'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DnsServerController' WHERE GroupName = 'DNS'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DnsServerController' WHERE GroupName = 'DNS'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.StatisticsServerController' WHERE GroupName = 'Statistics'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.StatisticsServerController' WHERE GroupName = 'Statistics'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2005'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2005'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MySQL5'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MySQL5'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.HostedSharePointServerController' WHERE GroupName = 'Sharepoint Foundation Server'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.HostedSharePointServerController' WHERE GroupName = 'Sharepoint Foundation Server'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2008'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2008'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2012'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2012'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.HeliconZooController' WHERE GroupName = 'HeliconZoo'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.HeliconZooController' WHERE GroupName = 'HeliconZoo'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.EnterpriseStorageController' WHERE GroupName = 'EnterpriseStorage'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.EnterpriseStorageController' WHERE GroupName = 'EnterpriseStorage'
 GO
-UPDATE ResourceGroups SET GroupController = N'SolidCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2014'
+UPDATE ResourceGroups SET GroupController = N'FuseCP.EnterpriseServer.DatabaseServerController' WHERE GroupName = 'MsSQL2014'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.ZipFilesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_ZIP_FILES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.ZipFilesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_ZIP_FILES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.BackupTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_BACKUP'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.BackupTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_BACKUP'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.BackupDatabaseTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_BACKUP_DATABASE'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.BackupDatabaseTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_BACKUP_DATABASE'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.CalculateExchangeDiskspaceTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.CalculateExchangeDiskspaceTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.CalculatePackagesBandwidthTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.CalculatePackagesBandwidthTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.CalculatePackagesDiskspaceTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.CalculatePackagesDiskspaceTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.CheckWebSiteTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CHECK_WEBSITE'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.CheckWebSiteTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_CHECK_WEBSITE'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.DeleteExchangeAccountsTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.DeleteExchangeAccountsTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.DomainExpirationTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_EXPIRATION'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.DomainExpirationTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_EXPIRATION'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.DomainLookupViewTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_LOOKUP'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.DomainLookupViewTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_LOOKUP'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.FTPFilesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_FTP_FILES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.FTPFilesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_FTP_FILES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_GENERATE_INVOICES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_GENERATE_INVOICES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.HostedSolutionReportTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.HostedSolutionReportTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.NotifyOverusedDatabasesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.NotifyOverusedDatabasesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.RunSystemCommandTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.RunSystemCommandTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.SendMailNotificationTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_SEND_MAIL'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.SendMailNotificationTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_SEND_MAIL'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.SuspendOverusedPackagesTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_PACKAGES'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.SuspendOverusedPackagesTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_PACKAGES'
 GO
-UPDATE ScheduleTasks SET TaskType = N'SolidCP.EnterpriseServer.UserPasswordExpirationNotificationTask, SolidCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION'
+UPDATE ScheduleTasks SET TaskType = N'FuseCP.EnterpriseServer.UserPasswordExpirationNotificationTask, FuseCP.EnterpriseServer.Code' WHERE TaskID = 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/Backup.ascx' WHERE TaskID = 'SCHEDULE_TASK_BACKUP'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/Backup.ascx' WHERE TaskID = 'SCHEDULE_TASK_BACKUP'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/BackupDatabase.ascx' WHERE TaskID = 'SCHEDULE_TASK_BACKUP_DATABASE'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/BackupDatabase.ascx' WHERE TaskID = 'SCHEDULE_TASK_BACKUP_DATABASE'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/CheckWebsite.ascx' WHERE TaskID = 'SCHEDULE_TASK_CHECK_WEBSITE'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/CheckWebsite.ascx' WHERE TaskID = 'SCHEDULE_TASK_CHECK_WEBSITE'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/DomainExpirationView.ascx' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_EXPIRATION'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/DomainExpirationView.ascx' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_EXPIRATION'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/DomainLookupView.ascx' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_LOOKUP'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/DomainLookupView.ascx' WHERE TaskID = 'SCHEDULE_TASK_DOMAIN_LOOKUP'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/SendFilesViaFtp.ascx' WHERE TaskID = 'SCHEDULE_TASK_FTP_FILES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/SendFilesViaFtp.ascx' WHERE TaskID = 'SCHEDULE_TASK_FTP_FILES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_GENERATE_INVOICES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_GENERATE_INVOICES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/HostedSolutionReport.ascx' WHERE TaskID = 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/HostedSolutionReport.ascx' WHERE TaskID = 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx' WHERE TaskID = 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx' WHERE TaskID = 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/ExecuteSystemCommand.ascx' WHERE TaskID = 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/ExecuteSystemCommand.ascx' WHERE TaskID = 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/SendEmailNotification.ascx' WHERE TaskID = 'SCHEDULE_TASK_SEND_MAIL'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/SendEmailNotification.ascx' WHERE TaskID = 'SCHEDULE_TASK_SEND_MAIL'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_PACKAGES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx' WHERE TaskID = 'SCHEDULE_TASK_SUSPEND_PACKAGES'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx' WHERE TaskID = 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx' WHERE TaskID = 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION'
 GO
-UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/SolidCP/ScheduleTaskControls/ZipFiles.ascx' WHERE TaskID = 'SCHEDULE_TASK_ZIP_FILES'
+UPDATE ScheduleTaskViewConfiguration SET Description = N'~/DesktopModules/FuseCP/ScheduleTaskControls/ZipFiles.ascx' WHERE TaskID = 'SCHEDULE_TASK_ZIP_FILES'
 GO
 
 
@@ -453,9 +453,9 @@ UPDATE [HostingPlanQuotas] SET [QuotaID] = '707' WHERE [QuotaID] = '686'
 GO
 ALTER TABLE [HostingPlanQuotas] CHECK CONSTRAINT [FK_HostingPlanQuotas_Quotas]
 
-IF NOT EXISTS (SELECT * FROM [dbo].[ResourceGroups] WHERE [GroupName] = 'MsSQL2016' AND [GroupController] like 'SolidCP%')
+IF NOT EXISTS (SELECT * FROM [dbo].[ResourceGroups] WHERE [GroupName] = 'MsSQL2016' AND [GroupController] like 'FuseCP%')
 BEGIN
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (71, N'MsSQL2016', 10, N'SolidCP.EnterpriseServer.DatabaseServerController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (71, N'MsSQL2016', 10, N'FuseCP.EnterpriseServer.DatabaseServerController', 1)
 END
 GO
 
@@ -479,11 +479,11 @@ GO
 DELETE FROM [ServiceItemTypes] WHERE [GroupID] = '51' AND [TypeName] like 'MSPControl%'
 GO
 
-IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Microsoft SQL Server 2016' AND [ProviderType] like 'SolidCP%')
+IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Microsoft SQL Server 2016' AND [ProviderType] like 'FuseCP%')
 BEGIN
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1701, 71, N'MsSQL', N'Microsoft SQL Server 2016', N'SolidCP.Providers.Database.MsSqlServer2016, SolidCP.Providers.Database.SqlServer', N'MSSQL', NULL)
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (71, 71, N'MsSQL2016Database', N'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
-INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (72, 71, N'MsSQL2016User', N'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1701, 71, N'MsSQL', N'Microsoft SQL Server 2016', N'FuseCP.Providers.Database.MsSqlServer2016, FuseCP.Providers.Database.SqlServer', N'MSSQL', NULL)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (71, 71, N'MsSQL2016Database', N'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1, 1, 0, 0, 1, 1, 1, 1)
+INSERT [dbo].[ServiceItemTypes] ([ItemTypeID], [GroupID], [DisplayName], [TypeName], [TypeOrder], [CalculateDiskspace], [CalculateBandwidth], [Suspendable], [Disposable], [Searchable], [Importable], [Backupable]) VALUES (72, 71, N'MsSQL2016User', N'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1, 0, 0, 0, 1, 1, 1, 1)
 END
 GO
 
@@ -506,9 +506,9 @@ GO
 
 
 -- SimpleDNS 6.x
-IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = '1703' AND [ProviderType] like 'SolidCP%')
+IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [ProviderID] = '1703' AND [ProviderType] like 'FuseCP%')
 BEGIN
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1703, 7, N'SimpleDNS', N'SimpleDNS Plus 6.x', N'SolidCP.Providers.DNS.SimpleDNS6, SolidCP.Providers.DNS.SimpleDNS60', N'SimpleDNS', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1703, 7, N'SimpleDNS', N'SimpleDNS Plus 6.x', N'FuseCP.Providers.DNS.SimpleDNS6, FuseCP.Providers.DNS.SimpleDNS60', N'SimpleDNS', NULL)
 END
 GO
 
@@ -521,9 +521,9 @@ DELETE FROM [Providers] WHERE [ProviderID] = '35' AND [ProviderType] like 'MSPCo
 GO
 
 -- Windows 2016
-IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Windows Server 2016' AND [ProviderType] like 'SolidCP%')
+IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Windows Server 2016' AND [ProviderType] like 'FuseCP%')
 BEGIN
-INSERT [Providers] ([ProviderID], [GroupId], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES(111, 1, N'Windows2016', N'Windows Server 2016', N'SolidCP.Providers.OS.Windows2016, SolidCP.Providers.OS.Windows2016', N'Windows2016', NULL)
+INSERT [Providers] ([ProviderID], [GroupId], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES(111, 1, N'Windows2016', N'Windows Server 2016', N'FuseCP.Providers.OS.Windows2016, FuseCP.Providers.OS.Windows2016', N'Windows2016', NULL)
 END
 GO
 
@@ -535,9 +535,9 @@ DELETE FROM [Providers] WHERE [ProviderID] = '107' AND [ProviderType] like 'MSPC
 GO
 
 -- IIS100
-IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Internet Information Services 10.0' AND [ProviderType] like 'SolidCP%')
+IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Internet Information Services 10.0' AND [ProviderType] like 'FuseCP%')
 BEGIN
-INSERT [Providers] ([ProviderID], [GroupId], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES(112, 2, N'IIS100', N'Internet Information Services 10.0', N'SolidCP.Providers.Web.IIs100, SolidCP.Providers.Web.IIs100', N'IIS70', NULL)
+INSERT [Providers] ([ProviderID], [GroupId], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES(112, 2, N'IIS100', N'Internet Information Services 10.0', N'FuseCP.Providers.Web.IIs100, FuseCP.Providers.Web.IIs100', N'IIS70', NULL)
 END
 GO
 
@@ -549,9 +549,9 @@ DELETE FROM [Providers] WHERE [ProviderID] = '108' AND [ProviderType] like 'MSPC
 GO
 
 -- MSFTP100
-IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Microsoft FTP Server 10.0' AND [ProviderType] like 'SolidCP%')
+IF NOT EXISTS (SELECT * FROM [dbo].[Providers] WHERE [DisplayName] = 'Microsoft FTP Server 10.0' AND [ProviderType] like 'FuseCP%')
 BEGIN
-INSERT [Providers] ([ProviderID], [GroupId], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES(113, 3, N'MSFTP100', N'Microsoft FTP Server 10.0', N'SolidCP.Providers.FTP.MsFTP100, SolidCP.Providers.FTP.IIs100', N'IIS70', NULL)
+INSERT [Providers] ([ProviderID], [GroupId], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES(113, 3, N'MSFTP100', N'Microsoft FTP Server 10.0', N'FuseCP.Providers.FTP.MsFTP100, FuseCP.Providers.FTP.IIs100', N'IIS70', NULL)
 END
 GO
 
@@ -567,7 +567,7 @@ DELETE FROM [Providers] WHERE [ProviderID] = '110' AND [ProviderType] like 'MSPC
 GO
 
 -- MySQL 5.7
-UPDATE [Providers] SET [ProviderType] = 'SolidCP.Providers.Database.MySqlServer57, SolidCP.Providers.Database.MySQL' WHERE [ProviderID] = '303' AND [ProviderType] like 'MSPControl%'
+UPDATE [Providers] SET [ProviderType] = 'FuseCP.Providers.Database.MySqlServer57, FuseCP.Providers.Database.MySQL' WHERE [ProviderID] = '303' AND [ProviderType] like 'MSPControl%'
 GO
 
 -- CRM 2016
@@ -607,26 +607,26 @@ PRIMARY KEY CLUSTERED
 GO
 
 -- Exchange 2016
-UPDATE Providers SET ProviderType = N'SolidCP.Providers.HostedSolution.Exchange2016, SolidCP.Providers.HostedSolution.Exchange2016' WHERE ProviderID = 92
+UPDATE Providers SET ProviderType = N'FuseCP.Providers.HostedSolution.Exchange2016, FuseCP.Providers.HostedSolution.Exchange2016' WHERE ProviderID = 92
 Go
 
 -- Sharepoint
 UPDATE [dbo].[Providers] SET DisplayName = 'Hosted SharePoint Foundation 2013' WHERE DisplayName = 'Hosted SharePoint  2013'
 GO
 
-UPDATE [dbo].[ResourceGroups] SET GroupController = N'SolidCP.EnterpriseServer.HostedSharePointServerController' WHERE GroupName = 'Sharepoint Foundation Server'
+UPDATE [dbo].[ResourceGroups] SET GroupController = N'FuseCP.EnterpriseServer.HostedSharePointServerController' WHERE GroupName = 'Sharepoint Foundation Server'
 GO
 
 UPDATE [dbo].[ResourceGroups] SET GroupName = 'Sharepoint Enterprise Server' WHERE GroupName = 'Sharepoint Server'
 GO
 
-UPDATE [dbo].[ResourceGroups] SET GroupController = 'SolidCP.EnterpriseServer.HostedSharePointServerEntController' WHERE GroupName = 'Sharepoint Enterprise Server'
+UPDATE [dbo].[ResourceGroups] SET GroupController = 'FuseCP.EnterpriseServer.HostedSharePointServerEntController' WHERE GroupName = 'Sharepoint Enterprise Server'
 GO
 
-INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (72, N'Sharepoint Enterprise Server', 15, N'SolidCP.EnterpriseServer.HostedSharePointServerEntController', 1)
+INSERT [dbo].[ResourceGroups] ([GroupID], [GroupName], [GroupOrder], [GroupController], [ShowGroup]) VALUES (72, N'Sharepoint Enterprise Server', 15, N'FuseCP.EnterpriseServer.HostedSharePointServerEntController', 1)
 GO
 
-INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1705, 72, N'HostedSharePoint2016Ent', N'Hosted SharePoint Enterprise 2016', N'SolidCP.Providers.HostedSolution.HostedSharePointServer2016Ent, SolidCP.Providers.HostedSolution.SharePoint2016Ent', N'HostedSharePoint30', NULL)
+INSERT [dbo].[Providers] ([ProviderID], [GroupID], [ProviderName], [DisplayName], [ProviderType], [EditorControl], [DisableAutoDiscovery]) VALUES (1705, 72, N'HostedSharePoint2016Ent', N'Hosted SharePoint Enterprise 2016', N'FuseCP.Providers.HostedSolution.HostedSharePointServer2016Ent, FuseCP.Providers.HostedSolution.SharePoint2016Ent', N'HostedSharePoint30', NULL)
 GO
 
 UPDATE [ServiceDefaultProperties] SET [ProviderID]='1705' WHERE [ProviderID] = '1504'

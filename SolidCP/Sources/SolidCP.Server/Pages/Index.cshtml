@@ -1,7 +1,7 @@
-﻿@page "/"
+@page "/"
 @using System.Reflection
-@using SolidCP.Providers.OS
-@using SolidCP.Server.Code
+@using FuseCP.Providers.OS
+@using FuseCP.Server.Code
 
 @functions {
     string Version {get; set; }
@@ -22,7 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head id="Head1" runat="server">
-    <title>SolidCP Server</title>
+    <title>FuseCP Server</title>
     <style>
         BODY {
             margin: 0px;
@@ -97,7 +97,7 @@
             </table>
             <br />
             <a href="swagger/index.html">API Documentation</a><br />
-            <a href="https://solidcp.com">SolidCP</a> &COPY; Copyright @DateTime.Now.Year All Rights Reserved.
+            <a href="https://fusecp.com">FuseCP</a> &COPY; Copyright @DateTime.Now.Year All Rights Reserved.
         </div>
     </form>
 </body>

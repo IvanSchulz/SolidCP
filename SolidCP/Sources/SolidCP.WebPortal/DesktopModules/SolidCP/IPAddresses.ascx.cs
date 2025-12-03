@@ -33,13 +33,13 @@
 using System;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Text;
-using SolidCP.Portal.Code.Helpers;
+using FuseCP.Portal.Code.Helpers;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class IPAddresses : SolidCPModuleBase
+    public partial class IPAddresses : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

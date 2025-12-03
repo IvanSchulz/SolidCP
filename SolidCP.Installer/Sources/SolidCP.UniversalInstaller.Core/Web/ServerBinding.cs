@@ -31,9 +31,9 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.UniversalInstaller.Web
+namespace FuseCP.UniversalInstaller.Web
 {
 	/// <summary>
 	/// Summary description for ServerBinding.

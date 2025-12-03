@@ -31,9 +31,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Configuration;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.FixDefaultPublicFolderMailbox
+namespace FuseCP.FixDefaultPublicFolderMailbox
 {
     class Fix
     {

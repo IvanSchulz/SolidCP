@@ -1,6 +1,6 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNestedSpacesSummary.ascx.cs" Inherits="SolidCP.Portal.SpaceNestedSpacesSummary" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNestedSpacesSummary.ascx.cs" Inherits="FuseCP.Portal.SpaceNestedSpacesSummary" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <div class="panel-body form-horizontal">
     <div class="FormRow">

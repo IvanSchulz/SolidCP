@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="VirtualMachineImage.ashx.cs" Class="SolidCP.Portal.Proxmox.VirtualMachineImage" %>
+<%@ WebHandler Language="C#" CodeBehind="VirtualMachineImage.ashx.cs" Class="FuseCP.Portal.Proxmox.VirtualMachineImage" %>

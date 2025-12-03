@@ -40,9 +40,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.Code.Framework
+namespace FuseCP.Portal.Code.Framework
 {
 	/// <summary>
 	/// Exposes functionality that is required to be implemented by scheduler task views.

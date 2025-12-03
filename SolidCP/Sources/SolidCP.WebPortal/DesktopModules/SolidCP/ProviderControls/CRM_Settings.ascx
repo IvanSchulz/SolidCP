@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRM_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.CRM_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRM_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.CRM_Settings" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="scp" %>
 <table>
     <tr>

@@ -1,6 +1,6 @@
-﻿using System.Collections;
+using System.Collections;
 
-namespace SolidCP.WebDavPortal.Models.Common.DataTable
+namespace FuseCP.WebDavPortal.Models.Common.DataTable
 {
     public class JqueryDataTablesResponse
     {

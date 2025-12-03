@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.UniversalInstaller.WinForms;
+namespace FuseCP.UniversalInstaller.WinForms;
 
 public enum CheckTypes
 {

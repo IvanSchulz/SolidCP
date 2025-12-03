@@ -32,7 +32,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	/* Method template to create a new TLD match
 	 * WHOIS server response is read line-by-line so this template works almost for all types of response

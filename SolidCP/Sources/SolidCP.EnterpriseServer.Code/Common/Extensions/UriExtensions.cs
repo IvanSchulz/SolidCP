@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
 
-namespace SolidCP.EnterpriseServer.Extensions
+namespace FuseCP.EnterpriseServer.Extensions
 {
     public static class UriExtensions
     {

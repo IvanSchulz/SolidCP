@@ -32,12 +32,12 @@
 
 using System;
 using System.Collections.Specialized;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Mail;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class MailAccountsEditAccount : SolidCPModuleBase
+    public partial class MailAccountsEditAccount : FuseCPModuleBase
     {
         MailAccount item = null;
         

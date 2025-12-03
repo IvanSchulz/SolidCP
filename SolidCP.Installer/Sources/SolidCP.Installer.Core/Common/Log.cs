@@ -35,12 +35,12 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 
-using SolidCP.Installer.Configuration;
+using FuseCP.Installer.Configuration;
 using System.Security.Principal;
-using SolidCP.Installer.Core;
+using FuseCP.Installer.Core;
 using System.Reflection;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	/// <summary>
 	/// Installer Log.
@@ -81,7 +81,7 @@ namespace SolidCP.Installer.Common
 		{
 			get
 			{
-				string fileName = "SolidCP.Installer.log";
+				string fileName = "FuseCP.Installer.log";
 				//
 				if (string.IsNullOrEmpty(fileName))
 				{

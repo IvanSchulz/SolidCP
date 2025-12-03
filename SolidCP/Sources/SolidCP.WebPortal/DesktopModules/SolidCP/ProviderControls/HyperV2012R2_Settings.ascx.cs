@@ -37,14 +37,14 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.Virtualization;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class HyperV2012R2_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class HyperV2012R2_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

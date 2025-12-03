@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using System.DirectoryServices.AccountManagement;
 using System.Threading;
 using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.Security;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Server.Utils;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Scp.Framework;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Server.Utils;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Scp.Framework;
 
-namespace SolidCP.WebDav.Core.Security.Authentication
+namespace FuseCP.WebDav.Core.Security.Authentication
 {
     public class FormsAuthenticationService : IAuthenticationService
     {

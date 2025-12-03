@@ -38,15 +38,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Common;
-using SolidCP.Portal.SkinControls;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.Portal.SkinControls;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeAddMailboxPlan : SolidCPModuleBase
+    public partial class ExchangeAddMailboxPlan : FuseCPModuleBase
     {
         private bool RetentionPolicy
         {

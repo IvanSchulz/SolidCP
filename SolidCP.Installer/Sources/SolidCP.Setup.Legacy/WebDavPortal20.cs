@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     /// <summary>
     /// Release 2.1.0

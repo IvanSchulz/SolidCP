@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceServiceItems.ascx.cs" Inherits="SolidCP.Portal.UserControls.SpaceServiceItems" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceServiceItems.ascx.cs" Inherits="FuseCP.Portal.UserControls.SpaceServiceItems" %>
 <%@ Register Src="Quota.ascx" TagName="Quota" TagPrefix="scp" %>
 <%@ Register Src="ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
 <%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
@@ -114,7 +114,7 @@
 </asp:GridView>
 <asp:ObjectDataSource ID="odsItemsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetServiceItemsPagedCount"
     SelectMethod="GetServiceItemsPaged" SortParameterName="sortColumn"
-        TypeName="SolidCP.Portal.ServiceItemsHelper" OnSelected="odsItemsPaged_Selected">
+        TypeName="FuseCP.Portal.ServiceItemsHelper" OnSelected="odsItemsPaged_Selected">
     <SelectParameters>
         <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="-1" />
         <asp:ControlParameter Name="groupName" ControlID="litGroupName" PropertyName="Text" />

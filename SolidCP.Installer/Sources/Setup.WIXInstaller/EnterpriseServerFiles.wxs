@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="INSTALLENTERPRISESERVERFOLDER">
@@ -149,28 +149,28 @@
                 <File Id="filAE0F06EEECF8167A48DDB21E7D83B9A1" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\RestSharp.dll" />
             </Component>
             <Component Id="cmpD7D14A3D650289856200114FC18A95A5" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{A5B92150-8B44-4F94-96A6-EAA96F6BE469}">
-                <File Id="fil2831CE7AEB6701AE834685EE2EAC29CC" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.Common.Utils.dll" />
+                <File Id="fil2831CE7AEB6701AE834685EE2EAC29CC" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.Common.Utils.dll" />
             </Component>
             <Component Id="cmp891FCB096F999CDF9643478432CA78B5" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{2AC29D83-DD39-41AD-855F-2E8F3D30EB46}">
-                <File Id="filB11D8A66D050CDD202D6F1B79F4E2A0E" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.EnterpriseServer.Base.dll" />
+                <File Id="filB11D8A66D050CDD202D6F1B79F4E2A0E" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.EnterpriseServer.Base.dll" />
             </Component>
             <Component Id="cmp87C3409399440EAF858CD2E930A005C3" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{55573255-A5D4-416B-9C5C-CFF48E21FF38}">
-                <File Id="fil98832ABFEB9E275E2D8E45D4F70AC357" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.EnterpriseServer.Code.dll" />
+                <File Id="fil98832ABFEB9E275E2D8E45D4F70AC357" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.EnterpriseServer.Code.dll" />
             </Component>
             <Component Id="cmp5DA550530F24F69A68418D31A1471E90" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{2D2FCD00-2999-4D06-AF68-EFCFB58EAB05}">
-                <File Id="filF7E5D68674F09DA0A80126E8AF73A90C" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.EnterpriseServer.dll" />
+                <File Id="filF7E5D68674F09DA0A80126E8AF73A90C" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.EnterpriseServer.dll" />
             </Component>
             <Component Id="cmp7318B2012C8217B4A61242C2A95D5E26" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{11985C3B-3E66-44DF-8BDF-B526E86DA4EE}">
-                <File Id="fil9D280CC9C52EF36327CE56DD32B72F75" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.EnterpriseServer.dll.config" />
+                <File Id="fil9D280CC9C52EF36327CE56DD32B72F75" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.EnterpriseServer.dll.config" />
             </Component>
             <Component Id="cmp844C48EC31A9C822CE0D491F9E31248E" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{1A99AB49-B963-4656-85BD-375A2358AE0E}">
-                <File Id="filE132F0C4ED246C14360FBDEA5B6FAC9B" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.Providers.Base.dll" />
+                <File Id="filE132F0C4ED246C14360FBDEA5B6FAC9B" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.Providers.Base.dll" />
             </Component>
             <Component Id="cmpFD117CB88A559F23ED42885434F1B318" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{18548C57-A7CF-4DFD-BE33-E3E82A384D04}">
-                <File Id="filB97868F2CDEAC99A6903B4A9D7ADD19D" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.Server.Client.dll" />
+                <File Id="filB97868F2CDEAC99A6903B4A9D7ADD19D" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.Server.Client.dll" />
             </Component>
             <Component Id="cmp2501F2442D1BA881A32EC88F898D3479" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{73762EE0-C29A-42C6-9E25-480F31AEE4F8}">
-                <File Id="fil418B096CC3EE913ADF96AF53324D94A5" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\SolidCP.Templates.dll" />
+                <File Id="fil418B096CC3EE913ADF96AF53324D94A5" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\FuseCP.Templates.dll" />
             </Component>
             <Component Id="cmpE64EFE1D071F0FA5AC5C2E1AF28DDE29" Directory="dir6CE36061E3999438B9BA89FF4216AA69" Guid="{AA8C12EB-BDB7-4FB6-97DC-3BFDAFB2E536}">
                 <File Id="fil8D082E3F519A6F0B6D7F5E73C5ADA9F4" KeyPath="yes" Source="!(wix.BUILDESPATH)\bin\Twilio.Api.dll" />

@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class HyperV2016_Settings {
@@ -766,7 +766,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl externalPreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl externalPreferredNameServer;
         
         /// <summary>
         /// locAlternateNameServer-Steuerelement
@@ -784,7 +784,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl externalAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl externalAlternateNameServer;
         
         /// <summary>
         /// chkAssignIPAutomatically-Steuerelement
@@ -883,7 +883,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl managePreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl managePreferredNameServer;
         
         /// <summary>
         /// ManageAlternateNameServerRow-Steuerelement
@@ -910,7 +910,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl manageAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl manageAlternateNameServer;
         
         /// <summary>
         /// PrivUpdatePanel-Steuerelement
@@ -973,7 +973,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privateIPAddress;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateIPAddress;
         
         /// <summary>
         /// privateSubnetMask-Steuerelement
@@ -1009,7 +1009,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privateDefaultGateway;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateDefaultGateway;
         
         /// <summary>
         /// locPrivPreferredNameServer-Steuerelement
@@ -1027,7 +1027,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privatePreferredNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privatePreferredNameServer;
         
         /// <summary>
         /// locPrivAlternateNameServer-Steuerelement
@@ -1045,7 +1045,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl privateAlternateNameServer;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateAlternateNameServer;
         
         /// <summary>
         /// locHostname-Steuerelement

@@ -43,7 +43,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	/// <summary>
 	/// Main application form
@@ -455,7 +455,7 @@ namespace SolidCP.LocalizationToolkit
 					Directory.CreateDirectory(LanguagePacksDirectory);
 				}
 				//zip lang pack
-				string zipFile = string.Format("SolidCP Language Pack {0} {1}.zip", locale, GetApplicationVersion());
+				string zipFile = string.Format("FuseCP Language Pack {0} {1}.zip", locale, GetApplicationVersion());
 				ZipUtils.Zip("Tmp", "LanguagePacks\\" + zipFile);
 				DeleteTmpDir();
 				FinishProgress();
@@ -507,7 +507,7 @@ namespace SolidCP.LocalizationToolkit
 		internal void ShowError(Exception ex)
 		{
 			string message = string.Format("An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@SolidCP.net\n\n{0}", ex);
+				"Please contact Technical Support at support@FuseCP.net\n\n{0}", ex);
 			MessageBox.Show(this, message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
@@ -645,8 +645,8 @@ namespace SolidCP.LocalizationToolkit
 				importedFileName = dialog.FileName;
 
 				string file = Path.GetFileNameWithoutExtension(importedFileName);
-                string filePrefix1 = "SolidCP Language Pack ";
-                string filePrefix2 = "SolidCP_Language_Pack_";
+                string filePrefix1 = "FuseCP Language Pack ";
+                string filePrefix2 = "FuseCP_Language_Pack_";
                 if (file.StartsWith(filePrefix1))
 				{
                     file = file.Substring(filePrefix1.Length);
@@ -659,7 +659,7 @@ namespace SolidCP.LocalizationToolkit
 				}
 				else
 				{
-					ShowInfo("Please select SolidCP Language Pack file.");
+					ShowInfo("Please select FuseCP Language Pack file.");
 					return;
 				}
 

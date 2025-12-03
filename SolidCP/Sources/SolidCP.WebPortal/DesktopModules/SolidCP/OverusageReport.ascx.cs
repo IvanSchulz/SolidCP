@@ -46,15 +46,15 @@ using System.Reflection;
 
 using Microsoft.Reporting.WebForms;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal;
-using SolidCP.Portal.ReportingServices;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal;
+using FuseCP.Portal.ReportingServices;
 using System.Text;
 using System.Globalization;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class OverusageReport : SolidCPModuleBase
+	public partial class OverusageReport : FuseCPModuleBase
 	{
 		#region Data
 		public const string OverusageReportName = "OverusageReport";
@@ -443,7 +443,7 @@ namespace SolidCP.Portal
 		protected string GetReportFullPath(string reportName)
 		{
 			return HttpContext.Current.Server.MapPath(
-				String.Format("~/DesktopModules/SolidCP/Reports/{0}.rdlc", reportName)
+				String.Format("~/DesktopModules/FuseCP/Reports/{0}.rdlc", reportName)
 				);
 		}
 

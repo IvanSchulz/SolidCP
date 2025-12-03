@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,8 +8,8 @@
     <ProjectGuid>{FFE9BFD3-AAB8-4703-AF8F-A41F0D878DB8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SolidCP.Ecommerce.EnterpriseServer</RootNamespace>
-    <AssemblyName>SolidCP.Products.DomainName</AssemblyName>
+    <RootNamespace>FuseCP.Ecommerce.EnterpriseServer</RootNamespace>
+    <AssemblyName>FuseCP.Products.DomainName</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -37,7 +37,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\SolidCP.EnterpriseServer\bin\</OutputPath>
+    <OutputPath>..\FuseCP.EnterpriseServer\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -47,7 +47,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>portable</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\SolidCP.EnterpriseServer\bin\</OutputPath>
+    <OutputPath>..\FuseCP.EnterpriseServer\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -67,13 +67,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj">
+    <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj">
       <Project>{C09CE910-F16B-48A1-B2CC-C99B8C1CF775}</Project>
-      <Name>SolidCP.EnterpriseServer.Base</Name>
+      <Name>FuseCP.EnterpriseServer.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SolidCP.EnterpriseServer\SolidCP.EnterpriseServer.csproj">
+    <ProjectReference Include="..\FuseCP.EnterpriseServer\FuseCP.EnterpriseServer.csproj">
       <Project>{59C7623A-5181-48A5-880A-C9B82B48F589}</Project>
-      <Name>SolidCP.EnterpriseServer</Name>
+      <Name>FuseCP.EnterpriseServer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

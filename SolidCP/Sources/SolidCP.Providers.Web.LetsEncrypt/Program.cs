@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.IO;
 
-namespace SolidCP.Providers.Web.LetsEncrypt
+namespace FuseCP.Providers.Web.LetsEncrypt
 {
 	public static class MyExtensions
 	{

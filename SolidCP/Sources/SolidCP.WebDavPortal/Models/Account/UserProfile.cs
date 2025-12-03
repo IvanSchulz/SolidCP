@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Security.AccessControl;
-using SolidCP.WebDavPortal.CustomAttributes;
-using SolidCP.WebDavPortal.Models.Common;
-using SolidCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDavPortal.CustomAttributes;
+using FuseCP.WebDavPortal.Models.Common;
+using FuseCP.WebDavPortal.UI.Routes;
 
-namespace SolidCP.WebDavPortal.Models.Account
+namespace FuseCP.WebDavPortal.Models.Account
 {
     public class UserProfile 
     {

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.guacamole
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.guacamole
 {
     public class guacadata
     {

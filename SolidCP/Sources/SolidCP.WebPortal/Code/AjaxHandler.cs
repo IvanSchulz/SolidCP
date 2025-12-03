@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Web;
 using System.Web.Script.Serialization;
 using System.Collections.Generic;
 using System.Data;
-using SolidCP.Portal;
+using FuseCP.Portal;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
-    public class SolidCPAjaxHandler : IHttpHandler
+    public class FuseCPAjaxHandler : IHttpHandler
     {
 
         public bool IsReusable { get { return true; } }
@@ -140,7 +140,7 @@ namespace SolidCP.WebPortal
             }
         }
 
-        protected const string ModuleName = "SolidCP";
+        protected const string ModuleName = "FuseCP";
 
         protected string GetTypeDisplayName(string type)
         {

@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SolidCP.EnterpriseServer {
+namespace FuseCP.EnterpriseServer {
 
 	public struct IPAddress : IComparable {
 		public Int128 Address;

@@ -1,5 +1,5 @@
-﻿using MySqlX.XDevAPI.Common;
-using SolidCP.Providers.OS;
+using MySqlX.XDevAPI.Common;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using System.Runtime.Loader;
 #endif
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 #if NETCOREAPP
 public class SetupAssemblyLoadContext : AssemblyLoadContext
@@ -58,13 +58,13 @@ public class SetupAssemblyLoadContext : AssemblyLoadContext
 }
 #endif
 
-// This class exists in SolidCP.UniversalInstaller, SolidCP.Setup and in
-// SolidCP.UniversalInstaller.Runtime. It is responsible for loading the assemblies in the
-// EmbeddedResources. The version in SolidCP.Setup is for NET Standard and relies on the
-// version in SolidCP.UniversalInstaller.Runtime that is NetFX & NetCore specific.
+// This class exists in FuseCP.UniversalInstaller, FuseCP.Setup and in
+// FuseCP.UniversalInstaller.Runtime. It is responsible for loading the assemblies in the
+// EmbeddedResources. The version in FuseCP.Setup is for NET Standard and relies on the
+// version in FuseCP.UniversalInstaller.Runtime that is NetFX & NetCore specific.
 public class AssemblyLoader
 {
-	public const string TmpFolder = "SolidCPInstallerAssemblyLoaderDlls";
+	public const string TmpFolder = "FuseCPInstallerAssemblyLoaderDlls";
 	public const string NativeDllsFolder = "NativeDlls";
 	public const string NativeDllsNetFXFolder = "NativeNetFXDlls";
 	public const string NativeDllsNetCoreFolder = "NativeNetCoreDlls";
@@ -187,9 +187,9 @@ public class AssemblyLoader
 			var loadContext = getContext.Invoke(null, new[] { mainAssembly });
 			loader.AssemblyLoadContext = loadContext;
 
-			var core = loader.ResolveAssembly(null, new AssemblyName("SolidCP.UniversalInstaller.Core"));
-			var runtime = loader.ResolveAssembly(null, new AssemblyName($"SolidCP.UniversalInstaller.Runtime.{(IsCore ? "NetCore" : "NetFX")}"));
-			var loaderRuntimeType = runtime.GetType("SolidCP.UniversalInstaller.AssemblyLoader");
+			var core = loader.ResolveAssembly(null, new AssemblyName("FuseCP.UniversalInstaller.Core"));
+			var runtime = loader.ResolveAssembly(null, new AssemblyName($"FuseCP.UniversalInstaller.Runtime.{(IsCore ? "NetCore" : "NetFX")}"));
+			var loaderRuntimeType = runtime.GetType("FuseCP.UniversalInstaller.AssemblyLoader");
 			loader.LoaderRuntime = Activator.CreateInstance(loaderRuntimeType);
 			var assCtx = loaderRuntimeType.GetMethod("InitAssemblyLoadContext");
 			assCtx.Invoke(loader.LoaderRuntime, new object[] { loader.AssembliesPath, loader.MainAssembly });

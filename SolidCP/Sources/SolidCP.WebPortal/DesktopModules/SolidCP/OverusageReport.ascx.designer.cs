@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 #if Reporting
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class OverusageReport {
@@ -20,7 +20,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel bandwidthCollapsiblePanel;
+        protected global::FuseCP.Portal.CollapsiblePanel bandwidthCollapsiblePanel;
         
         /// <summary>
         /// bandwidthSearchCriteria control.
@@ -56,7 +56,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl startDateCalendar;
+        protected global::FuseCP.Portal.CalendarControl startDateCalendar;
         
         /// <summary>
         /// endDateLabel control.
@@ -74,7 +74,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl endDateCalendar;
+        protected global::FuseCP.Portal.CalendarControl endDateCalendar;
         
         /// <summary>
         /// prevMonthLink control.
@@ -101,7 +101,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel exportCollapsiblePanel;
+        protected global::FuseCP.Portal.CollapsiblePanel exportCollapsiblePanel;
         
         /// <summary>
         /// exportPanel control.

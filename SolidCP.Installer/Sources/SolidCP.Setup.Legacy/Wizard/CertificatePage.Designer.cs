@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	partial class CertificatePage
 	{
@@ -232,7 +232,7 @@ namespace SolidCP.Setup
 			// 
 			// btnOpenCertFile
 			// 
-			this.btnOpenCertFile.Image = global::SolidCP.Setup.Legacy.Properties.Resources.Icons_MenuFileOpenIcon;
+			this.btnOpenCertFile.Image = global::FuseCP.Setup.Legacy.Properties.Resources.Icons_MenuFileOpenIcon;
 			this.btnOpenCertFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnOpenCertFile.Location = new System.Drawing.Point(234, 91);
 			this.btnOpenCertFile.Name = "btnOpenCertFile";

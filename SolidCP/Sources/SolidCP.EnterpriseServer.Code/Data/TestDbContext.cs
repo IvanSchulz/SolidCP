@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code
+namespace FuseCP.EnterpriseServer.Code
 {
 	// For use with LINQPad
 	public class TestDbContext: Data.SqlServerDbContext

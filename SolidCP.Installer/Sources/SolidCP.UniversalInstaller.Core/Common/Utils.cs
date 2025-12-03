@@ -48,13 +48,13 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Linq;
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	/// <summary>
 	/// Utils class.

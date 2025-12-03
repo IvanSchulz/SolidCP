@@ -43,11 +43,11 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Xml;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserAccountMenu : SolidCPModuleBase
+    public partial class UserAccountMenu : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

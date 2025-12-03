@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DynamicMemoryControl.ascx.cs" Inherits="SolidCP.Portal.VPS2012.UserControls.DynamicMemoryControl" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DynamicMemoryControl.ascx.cs" Inherits="FuseCP.Portal.VPS2012.UserControls.DynamicMemoryControl" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
 <%@ Register TagPrefix="scp" TagName="CheckBoxOption" Src="../../UserControls/CheckBoxOption.ascx" %>
 

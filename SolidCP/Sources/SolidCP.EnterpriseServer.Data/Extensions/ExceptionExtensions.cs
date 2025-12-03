@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity.Validation;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Extensions
+namespace FuseCP.EnterpriseServer.Data.Extensions
 {
 	public static class ExceptionExtensions
 	{

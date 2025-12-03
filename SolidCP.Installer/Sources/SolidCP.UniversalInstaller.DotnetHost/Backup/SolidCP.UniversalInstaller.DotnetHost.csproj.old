@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -9,17 +9,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="SolidCP.UniversalInstaller.DotnetHost.runtimeconfig.json" />
+	  <None Remove="FuseCP.UniversalInstaller.DotnetHost.runtimeconfig.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="SolidCP.UniversalInstaller.DotnetHost.runtimeconfig.json">
+	  <Content Include="FuseCP.UniversalInstaller.DotnetHost.runtimeconfig.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
+	  <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
 	</ItemGroup>
 
 </Project>

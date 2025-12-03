@@ -34,7 +34,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SolidCP.Providers.Common
+namespace FuseCP.Providers.Common
 {
     public class PasswdHelper
     {

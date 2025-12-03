@@ -32,12 +32,12 @@
 
 using System;
 using System.Text;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class SimpleMessageBox : SolidCPControlBase
+    public partial class SimpleMessageBox : FuseCPControlBase
     {        
 
         protected void Page_Load(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace SolidCP.Portal.UserControls
 			if (resultCode == BusinessErrorCodes.ERROR_USER_ACCOUNT_DEMO)
 			{
 				UserSettings scpSettings = UsersHelper.GetCachedUserSettings(
-					PanelSecurity.EffectiveUserId, UserSettings.SolidCP_POLICY);
+					PanelSecurity.EffectiveUserId, UserSettings.FuseCP_POLICY);
 				if (!String.IsNullOrEmpty(scpSettings["DemoMessage"]))
 				{
 					localizedDescription = scpSettings["DemoMessage"];

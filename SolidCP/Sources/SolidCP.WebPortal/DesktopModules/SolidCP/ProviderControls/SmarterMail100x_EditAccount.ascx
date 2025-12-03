@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail100x_EditAccount.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail100x_EditAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail100x_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail100x_EditAccount" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 <script src='/tinymce/tinymce.min.js'></script>
 

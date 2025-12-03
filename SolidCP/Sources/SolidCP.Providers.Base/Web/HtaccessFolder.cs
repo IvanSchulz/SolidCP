@@ -35,10 +35,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 using System.Linq;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	public class HtaccessFolder : IComparable
 	{

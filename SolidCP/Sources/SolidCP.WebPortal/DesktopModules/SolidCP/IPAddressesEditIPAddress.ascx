@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IPAddressesEditIPAddress.ascx.cs" Inherits="SolidCP.Portal.IPAddressesEditIPAddress" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IPAddressesEditIPAddress.ascx.cs" Inherits="FuseCP.Portal.IPAddressesEditIPAddress" %>
 <%@ Register Src="UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 

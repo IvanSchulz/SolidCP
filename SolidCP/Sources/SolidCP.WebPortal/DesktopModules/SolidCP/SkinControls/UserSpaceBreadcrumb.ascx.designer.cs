@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SkinControls {
+namespace FuseCP.Portal.SkinControls {
     
     
     public partial class UserSpaceBreadcrumb {
@@ -127,7 +127,7 @@ namespace SolidCP.Portal.SkinControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SkinControls.SpaceOrganizationsSelector SpaceOrgsSelector;
+        protected global::FuseCP.Portal.SkinControls.SpaceOrganizationsSelector SpaceOrgsSelector;
         
         /// <summary>
         /// CurrentNode control.

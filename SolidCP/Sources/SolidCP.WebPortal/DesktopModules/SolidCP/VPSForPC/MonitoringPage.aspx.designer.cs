@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 
 #if Reporting
-namespace SolidCP.Portal.VPSForPC {
+namespace FuseCP.Portal.VPSForPC {
     
     
     public partial class MonitoringPage {

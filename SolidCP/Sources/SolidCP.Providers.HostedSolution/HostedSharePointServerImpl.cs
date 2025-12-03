@@ -35,12 +35,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Security.Principal;
 
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.Utils;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     /// <summary>
     /// Represents SharePoint management functionality implementation.

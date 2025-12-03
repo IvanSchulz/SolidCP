@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Resources;
-using SolidCP.WebDav.Core.Attributes.Resources;
+using FuseCP.WebDav.Core.Attributes.Resources;
 
-namespace SolidCP.WebDav.Core.Extensions
+namespace FuseCP.WebDav.Core.Extensions
 {
     public static class EnumExtensions
     {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class UserCustomersSummary {
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel allCustomers;
+        protected global::FuseCP.Portal.CollapsiblePanel allCustomers;
         
         /// <summary>
         /// AllCustomersPanel control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel byStatus;
+        protected global::FuseCP.Portal.CollapsiblePanel byStatus;
         
         /// <summary>
         /// ByStatusPanel control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel byRole;
+        protected global::FuseCP.Portal.CollapsiblePanel byRole;
         
         /// <summary>
         /// ByRolePanel control.

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsPackageSummaryLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsPackageSummaryLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsPackageSummaryLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsPackageSummaryLetter" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <table>

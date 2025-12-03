@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditWebGroup.ascx.cs" Inherits="SolidCP.Portal.WebSitesEditWebGroup" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditWebGroup.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditWebGroup" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc2" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <div class="panel-body form-horizontal">

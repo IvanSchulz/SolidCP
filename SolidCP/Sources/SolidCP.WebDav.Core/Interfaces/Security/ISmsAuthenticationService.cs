@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WebDav.Core.Interfaces.Security
+namespace FuseCP.WebDav.Core.Interfaces.Security
 {
     public interface ISmsAuthenticationService
     {

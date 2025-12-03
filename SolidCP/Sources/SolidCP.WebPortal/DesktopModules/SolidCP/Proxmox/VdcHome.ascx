@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcHome.ascx.cs" Inherits="SolidCP.Portal.Proxmox.VdcHome" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcHome.ascx.cs" Inherits="FuseCP.Portal.Proxmox.VdcHome" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="wsp" %>
@@ -102,7 +102,7 @@
 						    SelectCountMethod="GetVirtualMachinesCount"
 						    SelectMethod="GetVirtualMachines"
 						    SortParameterName="sortColumn"
-						    TypeName="SolidCP.Portal.VirtualMachinesProxmoxHelper"
+						    TypeName="FuseCP.Portal.VirtualMachinesProxmoxHelper"
 						    OnSelected="odsServersPaged_Selected">
 					    <SelectParameters>
 						    <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="0" />						    

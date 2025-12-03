@@ -32,12 +32,12 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeContactGeneralSettings : SolidCPModuleBase
+    public partial class ExchangeContactGeneralSettings : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

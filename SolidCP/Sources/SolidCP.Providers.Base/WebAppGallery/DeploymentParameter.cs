@@ -32,7 +32,7 @@
 
 ﻿using System.Xml.Serialization;
 using System;
-namespace SolidCP.Providers.WebAppGallery
+namespace FuseCP.Providers.WebAppGallery
 {
     [Flags]
     public enum DeploymentParameterValidationKind

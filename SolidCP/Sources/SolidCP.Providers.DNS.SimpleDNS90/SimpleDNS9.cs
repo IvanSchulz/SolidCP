@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -38,16 +38,16 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.Providers.DNS.SimpleDNS90;
-using SolidCP.Providers.DNS.SimpleDNS90.Models;
-using SolidCP.Providers.DNS.SimpleDNS90.Models.Request;
-using SolidCP.Providers.DNS.SimpleDNS90.Models.Response;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.DNS.SimpleDNS90;
+using FuseCP.Providers.DNS.SimpleDNS90.Models;
+using FuseCP.Providers.DNS.SimpleDNS90.Models.Request;
+using FuseCP.Providers.DNS.SimpleDNS90.Models.Response;
+using FuseCP.Server.Utils;
 
 // ReSharper disable InconsistentNaming
 // ReSharper disable InvertIf
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
     public class SimpleDNS9 : HostingServiceProviderBase, IDnsServer
     {

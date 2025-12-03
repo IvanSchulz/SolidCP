@@ -33,9 +33,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 
 {
     /// <summary>

@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 using Newtonsoft.Json.Serialization;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Specialized;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.guacamole;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.guacamole;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
 {
     public class GuacaHelper: ControllerBase
     {
@@ -70,7 +70,7 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
             {
                 //Encryption.GenerateIV(out iv); // Random IV
                 string cryptedcookie = Encryption.Encrypt(cookie, key[0], key[1]);
-                //string urlstring = UrlEncodeBase64(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}|{1}", cryptedcookie, key[1])))); // Random IV mit übergeben
+                //string urlstring = UrlEncodeBase64(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}|{1}", cryptedcookie, key[1])))); // Random IV mit �bergeben
                 string urlstring = UrlEncodeBase64(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}", cryptedcookie))));
                 return String.Format("{0}?e={1}&Resolution=", guacaserverurl, urlstring);
             }

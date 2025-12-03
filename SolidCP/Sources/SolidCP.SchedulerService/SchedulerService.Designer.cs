@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.SchedulerService
+namespace FuseCP.SchedulerService
 {
     partial class SchedulerService
     {
@@ -61,7 +61,7 @@ namespace SolidCP.SchedulerService
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "SolidCP.SchedulerService";
+            this.ServiceName = "FuseCP.SchedulerService";
         }
 
         #endregion

@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <ApplicationIcon>SolidCP.ico</ApplicationIcon>
+        <ApplicationIcon>FuseCP.ico</ApplicationIcon>
         <TargetFramework>net48</TargetFramework>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -11,7 +11,7 @@
         <LangVersion>12</LangVersion>
         <!--<PreBuildEvent>COPY "$(ProjectDir)App.$(Configuration).config" "$(ProjectDir)App.config" /Y</PreBuildEvent>
         <RunPostBuildEvent>Always</RunPostBuildEvent>-->
-        <ApplicationManifest>SolidCP.Installer.manifest</ApplicationManifest>
+        <ApplicationManifest>FuseCP.Installer.manifest</ApplicationManifest>
         <RestoreSources>$(RestoreSources);../../Lib;https://api.nuget.org/v3/index.json</RestoreSources>
         <EmbeddReferences>false</EmbeddReferences>
         <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
@@ -22,7 +22,7 @@
     <Target Name="CopyResources" BeforeTargets="ResolveReferences">
         <Message Text="Copying Installer Resources" Importance="high" />
         <ItemGroup>
-            <FilesToCopy Include="..\..\Build\$(Configuration)\SolidCP.Updater.exe" />
+            <FilesToCopy Include="..\..\Build\$(Configuration)\FuseCP.Updater.exe" />
         </ItemGroup>
         <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         </ItemGroup>
@@ -38,19 +38,19 @@
         <ItemGroup>
             <FilesToDelete Include="bin\$(Configuration)\**\*.*" />
             <FilesToDelete Remove="bin\$(Configuration)\Data\**\*.*" />
-            <FilesToDelete Remove="bin\$(Configuration)\SolidCP.Installer.exe" />
+            <FilesToDelete Remove="bin\$(Configuration)\FuseCP.Installer.exe" />
             <FilesToDelete Remove="bin\$(Configuration)\Setup.dll" Condition=" '$(Configuration)' == 'Debug' " />
             <FilesToDelete Remove="bin\$(Configuration)\Setup.pdb" Condition=" '$(Configuration)' == 'Debug' " />
-            <FilesToDelete Remove="bin\$(Configuration)\SolidCP.Installer.exe.config" />
-            <FilesToDelete Remove="bin\$(Configuration)\SolidCP.Installer.pdb" />
-            <FilesToDelete Remove="bin\$(Configuration)\SolidCP.SilentInstaller.exe" />
-            <FilesToDelete Remove="bin\$(Configuration)\SolidCP.SilentInstaller.exe.config" />
-            <FilesToDelete Remove="bin\$(Configuration)\SolidCP.SilentInstaller.pdb" />
+            <FilesToDelete Remove="bin\$(Configuration)\FuseCP.Installer.exe.config" />
+            <FilesToDelete Remove="bin\$(Configuration)\FuseCP.Installer.pdb" />
+            <FilesToDelete Remove="bin\$(Configuration)\FuseCP.SilentInstaller.exe" />
+            <FilesToDelete Remove="bin\$(Configuration)\FuseCP.SilentInstaller.exe.config" />
+            <FilesToDelete Remove="bin\$(Configuration)\FuseCP.SilentInstaller.pdb" />
         </ItemGroup>
         <Delete Files="@(FilesToDelete)" ContinueOnError="true" />
     </Target>
     <ItemGroup>
-      <None Remove="Resources\SolidCP.Updater.exe" />
+      <None Remove="Resources\FuseCP.Updater.exe" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="DotNetZip.NetStandard" Version="1.12.0" />
@@ -143,7 +143,7 @@
             <DependentUpon>TopLogoControl.cs</DependentUpon>
         </Compile>
         <EmbeddedResource Include="App.Release.config" />
-        <EmbeddedResource Include="Resources\SolidCP.Updater.exe" />
+        <EmbeddedResource Include="Resources\FuseCP.Updater.exe" />
         <EmbeddedResource Update="ApplicationForm.resx">
             <SubType>Designer</SubType>
             <DependentUpon>ApplicationForm.cs</DependentUpon>
@@ -193,7 +193,7 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="Resources\Network16.ico" />
-        <None Include="SolidCP.Installer.manifest">
+        <None Include="FuseCP.Installer.manifest">
             <SubType>Designer</SubType>
         </None>
     </ItemGroup>
@@ -231,7 +231,7 @@
         <None Include="Resources\Folder16.ico" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="Resources\SolidCP.ico" />
+        <None Include="Resources\FuseCP.ico" />
     </ItemGroup>
     <ItemGroup>
         <EmbeddedResource Update="Controls\ProgressIcon.resx">
@@ -244,14 +244,14 @@
         <None Include="Resources\%24this.Icon.ico" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="SolidCP.ico" />
+        <None Include="FuseCP.ico" />
     </ItemGroup>
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\SolidCP.Setup.Legacy\SolidCP.Setup.Legacy.csproj" />
+        <ProjectReference Include="..\FuseCP.Setup.Legacy\FuseCP.Setup.Legacy.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Installer.Core\SolidCP.Installer.Core.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Installer.Core\FuseCP.Installer.Core.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" />
     </ItemGroup>
 </Project>

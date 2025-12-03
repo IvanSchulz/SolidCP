@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail60_EditList.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail60_EditList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail60_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail60_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
-<%@ Register TagPrefix="scp" Namespace="SolidCP.WebPortal.Code.Controls" Assembly="SolidCP.WebPortal" %>
+<%@ Register TagPrefix="scp" Namespace="FuseCP.WebPortal.Code.Controls" Assembly="FuseCP.WebPortal" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <table cellSpacing="0" cellPadding="3" width="100%">

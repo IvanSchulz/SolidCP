@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class MSFTP60_Settings {
         protected System.Web.UI.WebControls.Label lblSite;
@@ -50,6 +50,6 @@ namespace SolidCP.Portal.ProviderControls {
         protected System.Web.UI.WebControls.Label lblBuildUncFilesPath;
         protected System.Web.UI.WebControls.CheckBox chkBuildUncFilesPath;
         protected System.Web.UI.WebControls.Label lblADIntegration;
-        protected SolidCP.Portal.ProviderControls.Common_ActiveDirectoryIntegration ActiveDirectoryIntegration;
+        protected FuseCP.Portal.ProviderControls.Common_ActiveDirectoryIntegration ActiveDirectoryIntegration;
     }
 }

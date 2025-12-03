@@ -1,9 +1,9 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -11,11 +11,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.UseCase
 {
     public class UpdateVirtualMachineResourceHandler: ControllerBase
     {
-        private const string SHUTDOWN_REASON_CHANGE_CONFIG = "SolidCP - changing VPS configuration";
+        private const string SHUTDOWN_REASON_CHANGE_CONFIG = "FuseCP - changing VPS configuration";
         private const short MINIMUM_DYNAMIC_MEMORY_BUFFER = 5;
 
         public UpdateVirtualMachineResourceHandler(ControllerBase provider): base(provider) { }

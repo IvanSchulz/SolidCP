@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Data;
 using System.Data.Common;
-using SolidCP.Providers.OS;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 using System.Configuration;
 using System.Linq;
 using System.IO;
@@ -18,7 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
     public partial class DbContext : IDisposable
     {
@@ -223,23 +223,23 @@ namespace SolidCP.EnterpriseServer.Data
                         {
 						    default:
 						    case DbType.SqlServer:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.SqlServerDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.SqlServerDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                             case DbType.MySql:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.MySqlDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.MySqlDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                             case DbType.MariaDb:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.MySqlDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.MySqlDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                             case DbType.PostgreSql:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.PostgreSqlDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.PostgreSqlDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                             case DbType.Sqlite:
                             case DbType.SqliteFX:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.SqliteDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.SqliteDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                             case DbType.Oracle:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.OracleDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.OracleDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                         }
                     } else {
@@ -247,23 +247,23 @@ namespace SolidCP.EnterpriseServer.Data
                         {
 						    default:
 						    case DbType.SqlServer:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.SqlServerDbContext, SolidCP.EnterpriseServer.Data.NetFX");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.SqlServerDbContext, FuseCP.EnterpriseServer.Data.NetFX");
                                 break;
                             case DbType.MySql:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.MySqlDbContext, SolidCP.EnterpriseServer.Data.NetFX");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.MySqlDbContext, FuseCP.EnterpriseServer.Data.NetFX");
                                 break;
                             case DbType.MariaDb:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.MySqlDbContext, SolidCP.EnterpriseServer.Data.NetFX");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.MySqlDbContext, FuseCP.EnterpriseServer.Data.NetFX");
                                 break;
                             case DbType.PostgreSql:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.PostgreSqlDbContext, SolidCP.EnterpriseServer.Data.NetFX");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.PostgreSqlDbContext, FuseCP.EnterpriseServer.Data.NetFX");
                                 break;
                             case DbType.Sqlite:
                             case DbType.SqliteFX:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.SqliteDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.SqliteDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
                             case DbType.Oracle:
-                                contextType = Type.GetType("SolidCP.EnterpriseServer.Data.OracleDbContext, SolidCP.EnterpriseServer.Data.NetCore");
+                                contextType = Type.GetType("FuseCP.EnterpriseServer.Data.OracleDbContext, FuseCP.EnterpriseServer.Data.NetCore");
                                 break;
   
                         }

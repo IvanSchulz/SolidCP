@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class UserActions {
@@ -136,7 +136,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxPlanSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxPlanSelector;
         
         /// <summary>
         /// btnMailboxPlanCancel control.

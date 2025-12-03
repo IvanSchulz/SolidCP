@@ -33,7 +33,7 @@
 using System;
 using System.Web;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for PanelRequest.

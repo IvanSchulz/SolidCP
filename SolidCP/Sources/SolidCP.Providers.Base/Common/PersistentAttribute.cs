@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class)]
 	public class PersistentAttribute : Attribute

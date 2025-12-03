@@ -41,7 +41,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.Controls
+namespace FuseCP.UniversalInstaller.Controls
 {
     public delegate void OperationProgressDelegate(int percentage);
 

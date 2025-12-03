@@ -31,7 +31,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 
-namespace SolidCP.FixDefaultPublicFolderMailbox
+namespace FuseCP.FixDefaultPublicFolderMailbox
 {
     /// <summary>
     /// Simple log
@@ -45,7 +45,7 @@ namespace SolidCP.FixDefaultPublicFolderMailbox
         {
         }
 
-        private static string logFile = "SolidCP.FixDefaultPublicFolderMailbox.log";
+        private static string logFile = "FuseCP.FixDefaultPublicFolderMailbox.log";
 
         /// <summary>
         /// Initializes trace listeners.

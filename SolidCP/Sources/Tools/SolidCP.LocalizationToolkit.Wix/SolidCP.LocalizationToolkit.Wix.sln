@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SolidCP.LocalizationToolkit.Wix", "SolidCP.LocalizationToolkit.Wix.wixproj", "{3F3F1C39-6719-4862-BB45-4C227F13B821}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "FuseCP.LocalizationToolkit.Wix", "FuseCP.LocalizationToolkit.Wix.wixproj", "{3F3F1C39-6719-4862-BB45-4C227F13B821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.LocalizationToolkit", "..\SolidCP.LocalizationToolkit\SolidCP.LocalizationToolkit.csproj", "{BF0D3398-FBC6-4B0E-B3FC-F60C6581DB4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.LocalizationToolkit", "..\FuseCP.LocalizationToolkit\FuseCP.LocalizationToolkit.csproj", "{BF0D3398-FBC6-4B0E-B3FC-F60C6581DB4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

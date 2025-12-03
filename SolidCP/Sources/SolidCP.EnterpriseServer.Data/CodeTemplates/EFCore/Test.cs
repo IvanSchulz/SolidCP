@@ -1,4 +1,4 @@
-﻿#if NetCore
+#if NetCore
 using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
@@ -15,7 +15,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Scaffolding;
 using System.Reflection;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	internal class Test
 	{
@@ -30,8 +30,8 @@ namespace SolidCP.EnterpriseServer.Data
 
 			var match = Regex.Match("", @$"^using\s+{Regex.Escape(EntityType.Name)}\s*=.*?$", RegexOptions.Multiline);
 
-			var scp = Assembly.Load("SolidCP.EnterpriseServer.Data.Core");
-			var scaffoldType = scp.GetType("SolidCP.EnterpriseServer.Data.Scaffolding.Scaffold, SolidCP.EnterpriseServer.Data.Core");
+			var scp = Assembly.Load("FuseCP.EnterpriseServer.Data.Core");
+			var scaffoldType = scp.GetType("FuseCP.EnterpriseServer.Data.Scaffolding.Scaffold, FuseCP.EnterpriseServer.Data.Core");
 			var getEntityDataMethod = scaffoldType.GetMethod("GetEntityData");
 			var entityData = (StringBuilder)getEntityDataMethod.Invoke(null, new object[] { EntityType, Options, 12 });
 

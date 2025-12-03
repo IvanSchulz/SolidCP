@@ -34,9 +34,9 @@ using System;
 using System.ComponentModel;
 using System.IO;
 using System.Xml;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class EmbedEnterpriseServerPage : BannerWizardPage
 	{
@@ -69,7 +69,7 @@ namespace SolidCP.Setup
 			get
 			{
 				var installerPath = Wizard.SetupVariables.InstallerFolder;
-				var webClientsPath = Path.GetFullPath(Path.Combine(installerPath, "bin", "SolidCP.Web.Clients.dll"));
+				var webClientsPath = Path.GetFullPath(Path.Combine(installerPath, "bin", "FuseCP.Web.Clients.dll"));
 				return File.Exists(webClientsPath);
 			}
 		}
@@ -132,7 +132,7 @@ namespace SolidCP.Setup
 				var embed = chkBoxEmbed.Checked;
 				Wizard.SetupVariables.EmbedEnterpriseServer = embed;
 				Wizard.SetupVariables.ExposeEnterpriseServerWebservices = chkExpose.Checked;
-				if (embed) Wizard.SetupVariables.EnterpriseServerURL = "assembly://SolidCP.EnterpriseServer";
+				if (embed) Wizard.SetupVariables.EnterpriseServerURL = "assembly://FuseCP.EnterpriseServer";
 			}
 			catch
 			{

@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class MDaemon_EditList {
         protected System.Web.UI.WebControls.Label lblReplyTo;
@@ -54,6 +54,6 @@ namespace SolidCP.Portal.ProviderControls {
         protected System.Web.UI.WebControls.Label lblModeratorAddress;
         protected System.Web.UI.WebControls.TextBox txtModeratorEmail;
         protected System.Web.UI.WebControls.Label lblMembers;
-        protected SolidCP.Portal.MailEditItems mailEditItems;
+        protected FuseCP.Portal.MailEditItems mailEditItems;
     }
 }

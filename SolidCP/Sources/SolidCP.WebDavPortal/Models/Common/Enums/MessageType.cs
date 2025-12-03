@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDavPortal.Models.Common.Enums
+namespace FuseCP.WebDavPortal.Models.Common.Enums
 {
     public enum MessageType
     {

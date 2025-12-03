@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Backup.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.Backup" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Backup.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.Backup" %>
 <%@ Register Src="../UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="scp" %>
 
 	<table cellspacing="0" cellpadding="4" width="100%">

@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.Providers.DomainLookup
+namespace FuseCP.Providers.DomainLookup
 {
     public enum DomainDnsRecordStatuses
     {

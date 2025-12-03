@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Routing;
 using System.Net;
 using System.IO;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.Portal;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.Portal;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
     public class VncWebSocketHandler : IHttpHandler, IRouteHandler
     {

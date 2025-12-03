@@ -35,7 +35,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
     //[Designer(typeof(WizardPageDesigner))]
     public class BannerWizardPage : WizardPageBase

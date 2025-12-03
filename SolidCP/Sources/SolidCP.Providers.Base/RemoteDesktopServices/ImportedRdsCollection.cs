@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.EnterpriseServer.Base.RDS;
+using FuseCP.EnterpriseServer.Base.RDS;
 
-namespace SolidCP.Providers.RemoteDesktopServices
+namespace FuseCP.Providers.RemoteDesktopServices
 {
     public class ImportedRdsCollection
     {

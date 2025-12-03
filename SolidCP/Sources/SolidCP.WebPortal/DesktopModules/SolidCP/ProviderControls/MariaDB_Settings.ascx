@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" CodeBehind="MariaDB_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MariaDB_Settings" %>
+<%@ Control Language="C#" CodeBehind="MariaDB_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MariaDB_Settings" %>
 <%--<fieldset>
     <legend>
         <asp:Label runat="server" CssClass="NormalBold" meta:resourcekey="lblFtuNote" />

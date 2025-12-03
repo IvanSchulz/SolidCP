@@ -1,11 +1,11 @@
-﻿using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM
 {
     public class NetworkVLANHelper: ControllerBase
     {

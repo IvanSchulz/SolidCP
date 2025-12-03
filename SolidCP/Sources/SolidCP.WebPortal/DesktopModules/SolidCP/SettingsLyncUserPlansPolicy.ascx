@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsLyncUserPlansPolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsLyncUserPlansPolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsLyncUserPlansPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsLyncUserPlansPolicy" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>

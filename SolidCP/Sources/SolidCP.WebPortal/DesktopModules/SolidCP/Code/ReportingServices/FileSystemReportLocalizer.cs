@@ -41,7 +41,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.IO;
 
-namespace SolidCP.Portal.ReportingServices
+namespace FuseCP.Portal.ReportingServices
 {
 	/// <summary>
 	/// Class that is used to load Reporting Services report files from local file system.

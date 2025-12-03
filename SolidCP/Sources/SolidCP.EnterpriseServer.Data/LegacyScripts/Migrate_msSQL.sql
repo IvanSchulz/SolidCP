@@ -1,4 +1,4 @@
--- This is to upgrade from SolidCP .net to FuseCP CoreWCF
+-- This is to upgrade from FuseCP .net to FuseCP CoreWCF
 
 -- Removing Helicon Zoo
 -- GroupID: 42

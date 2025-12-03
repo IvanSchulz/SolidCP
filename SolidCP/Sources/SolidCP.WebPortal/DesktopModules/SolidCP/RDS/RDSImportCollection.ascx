@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSImportCollection.ascx.cs" Inherits="SolidCP.Portal.RDS.RDSImportCollection" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSImportCollection.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSImportCollection" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>

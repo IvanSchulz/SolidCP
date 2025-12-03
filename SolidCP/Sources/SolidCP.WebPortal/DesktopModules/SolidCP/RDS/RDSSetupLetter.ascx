@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSSetupLetter.ascx.cs" Inherits="SolidCP.Portal.RDS.RDSSeupLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSSetupLetter.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSSeupLetter" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>

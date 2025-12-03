@@ -34,12 +34,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class OCS_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class OCS_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
        
 

@@ -43,7 +43,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.Controls
+namespace FuseCP.UniversalInstaller.Controls
 {
 	/// <summary>
 	/// Component control

@@ -33,7 +33,7 @@
 ﻿using System;
 using System.Web;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
     public partial class TestVirtualMachineTemplate : System.Web.UI.Page
     {

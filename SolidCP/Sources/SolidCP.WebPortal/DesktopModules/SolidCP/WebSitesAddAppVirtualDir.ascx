@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesAddAppVirtualDir.ascx.cs" Inherits="SolidCP.Portal.WebSitesAddAppVirtualDir" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesAddAppVirtualDir.ascx.cs" Inherits="FuseCP.Portal.WebSitesAddAppVirtualDir" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>

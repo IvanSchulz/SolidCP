@@ -26,7 +26,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	partial class ApplicationForm
 	{
@@ -363,7 +363,7 @@ namespace SolidCP.Import.Enterprise
             this.MinimumSize = new System.Drawing.Size(630, 500);
             this.Name = "ApplicationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SolidCP Enterprise Import Tool";
+            this.Text = "FuseCP Enterprise Import Tool";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormClosing);
             this.grpOrganization.ResumeLayout(false);
             this.grpOrganization.PerformLayout();

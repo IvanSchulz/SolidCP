@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.SharePoint;
+using FuseCP.Providers.SharePoint;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class HostedSharePointEnterpriseStorageUsage : SolidCPModuleBase
+    public partial class HostedSharePointEnterpriseStorageUsage : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

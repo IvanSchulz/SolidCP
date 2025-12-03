@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsEditor : SolidCPModuleBase
+    public partial class SettingsEditor : FuseCPModuleBase
     {
         private string SettingsName
         {
@@ -153,7 +153,7 @@ namespace SolidCP.Portal
                     foreach (Control control in settingsPlace.Controls)
                     {
                         string[] parts;
-                        if (control is SettingsSolidCPPolicy)
+                        if (control is SettingsFuseCPPolicy)
                         {
                             if (!PasswordPolicyValidation(settings["PasswordPolicy"]))
                             {

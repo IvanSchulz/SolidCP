@@ -46,14 +46,14 @@ using System.Reflection;
 using System.Collections.Specialized;
 using System.Data.SqlClient;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Web;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class ProgressPage : BannerWizardPage
 	{
@@ -249,9 +249,9 @@ namespace SolidCP.UniversalInstaller.WinForms
 		protected override void ShowError()
 		{
 			ShowError("An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.");
+				"FuseCP Installer home directory.");
 			SetProgressText("Rollback ...");
 		}
 

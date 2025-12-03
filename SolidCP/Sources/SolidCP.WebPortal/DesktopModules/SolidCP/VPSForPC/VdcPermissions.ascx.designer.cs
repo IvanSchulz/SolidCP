@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPSForPC {
+namespace FuseCP.Portal.VPSForPC {
     
     
     public partial class VdcPermissions {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// imgIcon control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.Menu menu;
         
         /// <summary>
         /// messageBox control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// secVdcPermissions control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secVdcPermissions;
+        protected global::FuseCP.Portal.CollapsiblePanel secVdcPermissions;
         
         /// <summary>
         /// VdcPermissionsPanel control.
@@ -100,7 +100,7 @@ namespace SolidCP.Portal.VPSForPC {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secVpsPermissions;
+        protected global::FuseCP.Portal.CollapsiblePanel secVpsPermissions;
         
         /// <summary>
         /// VpsPermissionsPanel control.

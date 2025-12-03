@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSServers.ascx.cs" Inherits="SolidCP.Portal.RDSServers" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSServers.ascx.cs" Inherits="FuseCP.Portal.RDSServers" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
@@ -62,7 +62,7 @@
     </div>
 </div>
 <asp:ObjectDataSource ID="odsRDSServersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetRDSServersPagedCount"
-            SelectMethod="GetRDSServersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.RDSHelper" OnSelected="odsRDSServersPaged_Selected">
+            SelectMethod="GetRDSServersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.RDSHelper" OnSelected="odsRDSServersPaged_Selected">
             <SelectParameters>
                 <asp:ControlParameter Name="filterValue" ControlID="txtSearchValue" PropertyName="Text" />                                
                 <asp:ControlParameter Name="filterColumn" ControlID="ddlSearchColumn" PropertyName="SelectedValue" />

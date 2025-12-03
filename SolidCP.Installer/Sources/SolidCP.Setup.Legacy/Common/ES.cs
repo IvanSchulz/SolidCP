@@ -34,11 +34,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
-using SolidCP.Web.Clients;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
+using FuseCP.Web.Clients;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class ServerContext
 	{

@@ -33,9 +33,9 @@
 using System;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.Lync.UserControls
+namespace FuseCP.Portal.Lync.UserControls
 {
-    public partial class LyncUserPlanSelector : SolidCPControlBase
+    public partial class LyncUserPlanSelector : FuseCPControlBase
     {
 
         private string planToSelect;
@@ -79,12 +79,12 @@ namespace SolidCP.Portal.Lync.UserControls
 			}
         }
 
-        public SolidCP.Providers.HostedSolution.LyncUserPlan plan
+        public FuseCP.Providers.HostedSolution.LyncUserPlan plan
         {
             get
             {
-                SolidCP.Providers.HostedSolution.LyncUserPlan[] plans = ES.Services.Lync.GetLyncUserPlans(PanelRequest.ItemID);
-                foreach (SolidCP.Providers.HostedSolution.LyncUserPlan planitem in plans)
+                FuseCP.Providers.HostedSolution.LyncUserPlan[] plans = ES.Services.Lync.GetLyncUserPlans(PanelRequest.ItemID);
+                foreach (FuseCP.Providers.HostedSolution.LyncUserPlan planitem in plans)
                 {
                     if (planitem.LyncUserPlanId.ToString() == planId) return planitem;
                 }
@@ -94,9 +94,9 @@ namespace SolidCP.Portal.Lync.UserControls
 
         private void BindPlans()
 		{
-            SolidCP.Providers.HostedSolution.LyncUserPlan[] plans = ES.Services.Lync.GetLyncUserPlans(PanelRequest.ItemID);
+            FuseCP.Providers.HostedSolution.LyncUserPlan[] plans = ES.Services.Lync.GetLyncUserPlans(PanelRequest.ItemID);
 
-            foreach (SolidCP.Providers.HostedSolution.LyncUserPlan plan in plans)
+            foreach (FuseCP.Providers.HostedSolution.LyncUserPlan plan in plans)
 			{
 				ListItem li = new ListItem();
                 li.Text = plan.LyncUserPlanName;

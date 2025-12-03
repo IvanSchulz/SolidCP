@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Virtualization;
 
-[assembly:TunnelClient(typeof(SolidCP.EnterpriseServer.Client.EnterpriseServerTunnelClient))]
+[assembly:TunnelClient(typeof(FuseCP.EnterpriseServer.Client.EnterpriseServerTunnelClient))]
 
-namespace SolidCP.EnterpriseServer.Client
+namespace FuseCP.EnterpriseServer.Client
 {
     public class EnterpriseServerTunnelClient : EnterpriseServerTunnelClientBase
     {

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -37,7 +37,7 @@ using System.Collections.Generic;
 using System.Timers;
 using System.Text;
 
-namespace SolidCP.LinuxVmConfig
+namespace FuseCP.LinuxVmConfig
 {
     class Program
     {
@@ -94,7 +94,7 @@ namespace SolidCP.LinuxVmConfig
         {
             const string rcConf = "/etc/rc.conf";
             const string compatLinux = "/compat/linux";
-            const string serviceName = "solidcp";
+            const string serviceName = "fusecp";
             const string servicesPath = "/etc/rc.d/";
             string userName = Environment.UserName;
             string appPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -103,7 +103,7 @@ namespace SolidCP.LinuxVmConfig
 
             config.Add("#!/bin/sh");
             config.Add("");
-            config.Add("# SolidCP LinuxVmConfig Service");
+            config.Add("# FuseCP LinuxVmConfig Service");
             config.Add("# PROVIDE: " + serviceName);
             config.Add("# REQUIRE: DAEMON networking");
             config.Add("# BEFORE:  LOGIN");
@@ -113,7 +113,7 @@ namespace SolidCP.LinuxVmConfig
             config.Add("name=" + serviceName);
             config.Add("rcvar=" + serviceName + "_enable");
             config.Add(serviceName + "_user=\"" + userName + "\"");
-            config.Add("command=\"" + appPath + "SolidCP.LinuxVmConfig" + "\"");
+            config.Add("command=\"" + appPath + "FuseCP.LinuxVmConfig" + "\"");
             config.Add("pidfile=\"/var/run/" + serviceName + ".pid\"");
             config.Add("");
             config.Add("start_cmd=\"" + serviceName + "_start\"");
@@ -128,15 +128,15 @@ namespace SolidCP.LinuxVmConfig
             config.Add("   if [ -e \"${pidfile}\" ]; then");
             config.Add("      kill -s TERM `cat ${pidfile}`");
             config.Add("   else");
-            config.Add("      echo \"SolidCP.VmConfig is not running\"");
+            config.Add("      echo \"FuseCP.VmConfig is not running\"");
             config.Add("   fi");
             config.Add("}");
             config.Add("");
             config.Add(serviceName + "_status() {");
             config.Add("   if [ -e \"${pidfile}\" ]; then");
-            config.Add("      echo \"SolidCP.VmConfig is running as pid `cat ${pidfile}`\"");
+            config.Add("      echo \"FuseCP.VmConfig is running as pid `cat ${pidfile}`\"");
             config.Add("   else");
-            config.Add("      echo \"SolidCP.VmConfig is not running\"");
+            config.Add("      echo \"FuseCP.VmConfig is not running\"");
             config.Add("   fi");
             config.Add("}");
             config.Add("");
@@ -162,7 +162,7 @@ namespace SolidCP.LinuxVmConfig
 
         private static void InstallService_Linux()
         {
-            const string serviceName = "solidcp.service";
+            const string serviceName = "fusecp.service";
             const string servicesPath = "/etc/systemd/system/";
             string userName = Environment.UserName;
             string appPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -172,11 +172,11 @@ namespace SolidCP.LinuxVmConfig
 
             List<string> config = new List<string>();
             config.Add("[Unit]");
-            config.Add("Description=SolidCP LinuxVmConfig Service");
+            config.Add("Description=FuseCP LinuxVmConfig Service");
             config.Add("[Service]");
             config.Add("User=" + userName);
             config.Add("WorkingDirectory=" + appPath);
-            config.Add("ExecStart=" + appPath + "SolidCP.LinuxVmConfig");
+            config.Add("ExecStart=" + appPath + "FuseCP.LinuxVmConfig");
             config.Add("SuccessExitStatus=0");
             config.Add("TimeoutStopSec=infinity");
             config.Add("Restart=on-failure");
@@ -300,7 +300,7 @@ namespace SolidCP.LinuxVmConfig
                 {
                     if (!string.IsNullOrEmpty(strResult) && strResult.StartsWith(TaskPrefix) && strResult != CurrentTaskName)
                     {
-                        //save only SolidCP tasks
+                        //save only FuseCP tasks
                         results.Add(strResult);
                     }
                 }
@@ -333,7 +333,7 @@ namespace SolidCP.LinuxVmConfig
                             continue; // wrong task format
                         }
 
-                        //save only SolidCP tasks
+                        //save only FuseCP tasks
                         if (!tasks.ContainsKey(taskId))
                             tasks.Add(taskId, strTask);
                     }
@@ -440,7 +440,7 @@ namespace SolidCP.LinuxVmConfig
             {
                 if (!string.IsNullOrEmpty(strTask) && strTask.StartsWith(TaskPrefix) && strTask != CurrentTaskName)
                 {
-                    //save only SolidCP tasks
+                    //save only FuseCP tasks
                     tasks.Add(strTask);
                 }
             }

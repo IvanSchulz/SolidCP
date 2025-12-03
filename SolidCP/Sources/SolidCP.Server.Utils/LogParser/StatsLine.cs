@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.Utils.LogParser
+namespace FuseCP.Providers.Utils.LogParser
 {
 	/// <summary>
 	/// Summary description for StatsLine.

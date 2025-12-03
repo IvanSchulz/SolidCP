@@ -36,7 +36,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace SolidCP.Server.Utils
+namespace FuseCP.Server.Utils
 {
 	public class PInvoke
 	{

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainControl.ascx.cs" Inherits="SolidCP.Portal.UserControls.DomainControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainControl.ascx.cs" Inherits="FuseCP.Portal.UserControls.DomainControl" %>
 
 <div class="form-group">
      <asp:Label ID="lblAddress" runat="server" Text="Domain Name" CssClass="col-sm-2"  AssociatedControlID="txtDomainName"></asp:Label>

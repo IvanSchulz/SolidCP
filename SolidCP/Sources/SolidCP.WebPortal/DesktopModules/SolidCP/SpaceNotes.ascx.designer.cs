@@ -40,9 +40,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SpaceNotes {
-        protected SolidCP.Portal.EditItemComments packageComments;
+        protected FuseCP.Portal.EditItemComments packageComments;
     }
 }

@@ -34,8 +34,8 @@ using System;
 using System.Globalization;
 using System.IO;
 using CertEnrollInterop;
-using SolidCP.Providers.Common;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Server.Utils;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -45,7 +45,7 @@ using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.DirectoryServices;
 
-namespace SolidCP.Providers.Web.Iis
+namespace FuseCP.Providers.Web.Iis
 {
     public class SSLModuleService100 : SSLModuleService
     {
@@ -159,7 +159,7 @@ namespace SolidCP.Providers.Web.Iis
 
                 // This sets the correct path for the Exe file.
                 var Path = AppDomain.CurrentDomain.BaseDirectory;
-                Log.WriteInfo("SolidCP Server path: {0}", Path);
+                Log.WriteInfo("FuseCP Server path: {0}", Path);
                 string command = AppDomain.CurrentDomain.BaseDirectory + "bin\\LetsEncrypt\\wacs.exe";
 
                 runSpace = OpenRunspace();

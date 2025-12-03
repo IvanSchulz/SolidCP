@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
 
 
@@ -21,7 +21,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
 
         /// <summary>
         /// breadcrumb control.
@@ -30,7 +30,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.Breadcrumb breadcrumb;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.Breadcrumb breadcrumb;
 
         /// <summary>
         /// menu control.
@@ -39,7 +39,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.Menu menu;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.Menu menu;
 
         /// <summary>
         /// Image1 control.
@@ -66,7 +66,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
 
         /// <summary>
         /// btnAddSpace control.
@@ -102,6 +102,6 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer spacesQuota;
+        protected global::FuseCP.Portal.QuotaViewer spacesQuota;
     }
 }

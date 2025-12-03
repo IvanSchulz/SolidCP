@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsUserPasswordResetLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsUserPasswordResetLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsUserPasswordResetLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsUserPasswordResetLetter" %>
 
 
 <table>

@@ -38,12 +38,12 @@ using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using Microsoft.Web.Administration;
 using Microsoft.Web.Management.Server;
-using SolidCP.Providers;
-using SolidCP.Providers.HeliconZoo;
+using FuseCP.Providers;
+using FuseCP.Providers.HeliconZoo;
 
 
 
-namespace SolidCP.Providers.Web.HeliconZoo
+namespace FuseCP.Providers.Web.HeliconZoo
 {
     public class HeliconZoo : HostingServiceProviderBase, IHeliconZooServer
     {

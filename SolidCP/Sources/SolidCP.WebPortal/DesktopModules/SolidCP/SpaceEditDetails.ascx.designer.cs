@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 
 
@@ -93,7 +93,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CalendarControl PurchaseDate;
+        protected global::FuseCP.Portal.CalendarControl PurchaseDate;
 
         /// <summary>
         /// lblChangeUser control.
@@ -165,7 +165,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ServerDetails serverDetails;
+        protected global::FuseCP.Portal.ServerDetails serverDetails;
 
         /// <summary>
         /// secAddons control.
@@ -174,7 +174,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAddons;
+        protected global::FuseCP.Portal.CollapsiblePanel secAddons;
 
         /// <summary>
         /// AddonsPanel control.
@@ -210,7 +210,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
 
         /// <summary>
         /// QuotasPanel control.
@@ -264,7 +264,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SpaceQuotasControl packageQuotas;
+        protected global::FuseCP.Portal.SpaceQuotasControl packageQuotas;
 
         /// <summary>
         /// editPackageQuotas control.
@@ -273,7 +273,7 @@ namespace SolidCP.Portal
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.HostingPlansQuotas editPackageQuotas;
+        protected global::FuseCP.Portal.HostingPlansQuotas editPackageQuotas;
 
         /// <summary>
         /// btnCancel control.

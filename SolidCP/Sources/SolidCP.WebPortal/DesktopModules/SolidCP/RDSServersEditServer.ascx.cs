@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class RDSServersEditServer : SolidCPModuleBase
+    public partial class RDSServersEditServer : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

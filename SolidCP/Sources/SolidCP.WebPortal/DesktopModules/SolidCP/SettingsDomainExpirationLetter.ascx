@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsDomainExpirationLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsDomainExpirationLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsDomainExpirationLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsDomainExpirationLetter" %>
 <table>
     <tr>
         <td class="SubHead" width="150" nowrap><asp:Label ID="lblFrom" runat="server" meta:resourcekey="lblFrom" Text="From:"></asp:Label></td>

@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System;
 using System.Data;
 using System.IO;
@@ -41,9 +41,9 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Xsl;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class BandwidthReport : SolidCPModuleBase
+    public partial class BandwidthReport : FuseCPModuleBase
     {
         public string StartDate
         {

@@ -37,10 +37,10 @@ using System.Configuration;
 using System.Collections;
 using System.Text;
 using System.Linq;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class Portal : BaseSetup
 	{

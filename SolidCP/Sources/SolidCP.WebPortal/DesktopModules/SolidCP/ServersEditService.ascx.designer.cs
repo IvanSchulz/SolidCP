@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class ServersEditService {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// ServerHeaderControl control.
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ServerHeaderControl ServerHeaderControl;
+        protected global::FuseCP.Portal.ServerHeaderControl ServerHeaderControl;
         
         /// <summary>
         /// lblGroup control.
@@ -199,7 +199,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel DnsRecrodsHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel DnsRecrodsHeader;
         
         /// <summary>
         /// DnsRecrodsPanel control.
@@ -217,7 +217,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.GlobalDnsRecordsControl GlobalDnsRecordsControl;
+        protected global::FuseCP.Portal.GlobalDnsRecordsControl GlobalDnsRecordsControl;
         
         /// <summary>
         /// pnlQuota control.

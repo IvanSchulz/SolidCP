@@ -32,13 +32,13 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.Lync.UserControls
+namespace FuseCP.Portal.Lync.UserControls
 {
-    public partial class LyncUserSettings : SolidCPControlBase
+    public partial class LyncUserSettings : FuseCPControlBase
     {
 
         private string sipAddressToSelect;
@@ -125,9 +125,9 @@ namespace SolidCP.Portal.Lync.UserControls
                 email.Visible = false;
                 ddlSipAddresses.Visible = true;
 
-                SolidCP.EnterpriseServer.ExchangeEmailAddress[] emails = ES.Services.ExchangeServer.GetMailboxEmailAddresses(PanelRequest.ItemID, PanelRequest.AccountID);
+                FuseCP.EnterpriseServer.ExchangeEmailAddress[] emails = ES.Services.ExchangeServer.GetMailboxEmailAddresses(PanelRequest.ItemID, PanelRequest.AccountID);
 
-                foreach (SolidCP.EnterpriseServer.ExchangeEmailAddress mail in emails)
+                foreach (FuseCP.EnterpriseServer.ExchangeEmailAddress mail in emails)
                 {
                     ListItem li = new ListItem();
                     li.Text = mail.EmailAddress;

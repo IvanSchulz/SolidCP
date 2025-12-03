@@ -32,13 +32,13 @@
 
 using System;
 using System.Collections.Generic;
-using SolidCP.Portal.Code.UserControls;
-using SolidCP.WebPortal;
-using SolidCP.EnterpriseServer;
+using FuseCP.Portal.Code.UserControls;
+using FuseCP.WebPortal;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-    public partial class MailboxTabs : SolidCPControlBase
+    public partial class MailboxTabs : FuseCPControlBase
     {
         private string selectedTab;
         public string SelectedTab

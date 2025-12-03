@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +6,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Diagnostics;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Reflection;
 using System.IO;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
     public class IISExpress: IDisposable
     {

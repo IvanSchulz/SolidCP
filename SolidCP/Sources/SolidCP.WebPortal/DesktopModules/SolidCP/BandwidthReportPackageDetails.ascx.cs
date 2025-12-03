@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class BandwidthReportPackageDetails : SolidCPModuleBase
+    public partial class BandwidthReportPackageDetails : FuseCPModuleBase
     {
         private int bandwidthTotal;
         public int BandwidthTotal

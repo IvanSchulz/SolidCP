@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace SolidCP.EnterpriseServer.Data.Migrations.MySql
+namespace FuseCP.EnterpriseServer.Data.Migrations.MySql
 {
     /// <inheritdoc />
     public partial class RemovedOldWindowsProviders : Migration
@@ -61,9 +61,9 @@ namespace SolidCP.EnterpriseServer.Data.Migrations.MySql
                 columns: new[] { "ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType" },
                 values: new object[,]
                 {
-                    { 1, null, "Windows Server 2003", "Windows2003", 1, "Windows2003", "SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003" },
-                    { 100, null, "Windows Server 2008", "Windows2008", 1, "Windows2008", "SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008" },
-                    { 104, null, "Windows Server 2012", "Windows2012", 1, "Windows2012", "SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012" }
+                    { 1, null, "Windows Server 2003", "Windows2003", 1, "Windows2003", "FuseCP.Providers.OS.Windows2003, FuseCP.Providers.OS.Windows2003" },
+                    { 100, null, "Windows Server 2008", "Windows2008", 1, "Windows2008", "FuseCP.Providers.OS.Windows2008, FuseCP.Providers.OS.Windows2008" },
+                    { 104, null, "Windows Server 2012", "Windows2012", 1, "Windows2012", "FuseCP.Providers.OS.Windows2012, FuseCP.Providers.OS.Windows2012" }
                 });
 
             migrationBuilder.InsertData(

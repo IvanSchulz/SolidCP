@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsPreviewDomain.ascx.cs" Inherits="SolidCP.Portal.SpaceSettingsPreviewDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsPreviewDomain.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsPreviewDomain" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="secPreviewDomain" runat="server"

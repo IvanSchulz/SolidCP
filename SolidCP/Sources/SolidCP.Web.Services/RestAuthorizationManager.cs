@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -11,7 +11,7 @@ using CoreWCF;
 using CoreWCF.Web;
 #endif
 
-namespace SolidCP.Web.Services {
+namespace FuseCP.Web.Services {
 	public class RestAuthorizationManager : ServiceAuthorizationManager
 	{
 		bool HasApi(string adr, string api) => Regex.IsMatch(adr, $"/{api}/[a-zA-Z0-9_]+(?:\\?|$)");
@@ -77,7 +77,7 @@ namespace SolidCP.Web.Services {
 			else
 			{
 				//No authorization header was provided, so challenge the client to provide before proceeding:  
-				WebOperationContext.Current.OutgoingResponse.Headers.Add("WWW-Authenticate: Basic realm=\"SolidCP\"");
+				WebOperationContext.Current.OutgoingResponse.Headers.Add("WWW-Authenticate: Basic realm=\"FuseCP\"");
 				//Throw an exception with the associated HTTP status code equivalent to HTTP status 401  
 				throw new WebFaultException(HttpStatusCode.Unauthorized);
 			}

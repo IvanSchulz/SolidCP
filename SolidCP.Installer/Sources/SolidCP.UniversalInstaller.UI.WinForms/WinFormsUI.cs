@@ -6,11 +6,11 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using Renci.SshNet.Messages;
-using SolidCP.Providers.OS;
-using SolidCP.Updater;
+using FuseCP.Providers.OS;
+using FuseCP.Updater;
 
 
-namespace SolidCP.UniversalInstaller {
+namespace FuseCP.UniversalInstaller {
 
     public class WinFormsUI: UI {
 
@@ -135,7 +135,7 @@ namespace SolidCP.UniversalInstaller {
         
 		public override void ShowError(Exception ex)
 		{
-			MessageBox.Show($"Error: {ex}", "SolidCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show($"Error: {ex}", "FuseCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
 		public override void PassArguments(Hashtable args)
@@ -156,7 +156,7 @@ namespace SolidCP.UniversalInstaller {
 				!Environment.GetCommandLineArgs().Any(arg => arg.Equals("nockech", StringComparison.OrdinalIgnoreCase)) &&
 				Installer.Current.CheckForInstallerUpdate(out component))
 			{
-				if (MessageBox.Show("There is an update for SolidCP Installer available. Do you want to install the update?",
+				if (MessageBox.Show("There is an update for FuseCP Installer available. Do you want to install the update?",
 					"Update for Installer available", MessageBoxButtons.YesNo) == DialogResult.Yes)
 				{
 					if (Installer.Current.DownloadInstallerUpdate(component))
@@ -203,10 +203,10 @@ namespace SolidCP.UniversalInstaller {
 		{
 			Log.WriteError("Fatal error occured.", e.Exception);
 			string message = "A fatal error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.";
-			MessageBox.Show(message, "SolidCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				"FuseCP Installer home directory.";
+			MessageBox.Show(message, "FuseCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			Application.Exit();
 		}
 
@@ -217,10 +217,10 @@ namespace SolidCP.UniversalInstaller {
 		{
 			Log.WriteError("Fatal error occured.", (Exception)e.ExceptionObject);
 			string message = "A fatal error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.";
-			MessageBox.Show(message, "SolidCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				"FuseCP Installer home directory.";
+			MessageBox.Show(message, "FuseCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			Process.GetCurrentProcess().Kill();
 		}
 

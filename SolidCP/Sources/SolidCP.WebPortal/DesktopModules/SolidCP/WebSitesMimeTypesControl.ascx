@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesMimeTypesControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesMimeTypesControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesMimeTypesControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesMimeTypesControl" %>
 <div style="width:400px">
     <div class="FormButtonsBar">
         <asp:Button id="btnAdd" runat="server" meta:resourcekey="btnAddMime" Text="Add MIME" CssClass="Button2" CausesValidation="false" OnClick="btnAdd_Click"/>

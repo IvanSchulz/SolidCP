@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UsernameControl.ascx.cs" Inherits="SolidCP.Portal.UsernameControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UsernameControl.ascx.cs" Inherits="FuseCP.Portal.UsernameControl" %>
 <div class="input-group col-sm-12">
     <asp:Label ID="litPrefix" runat="server" CssClass="input-group-addon"></asp:Label>
     <asp:textbox id="txtName" runat="server" CssClass="form-control" MaxLength="100" style="text-transform: lowercase;" onkeyup="this.value = this.value.toLowerCase();" ></asp:textbox>

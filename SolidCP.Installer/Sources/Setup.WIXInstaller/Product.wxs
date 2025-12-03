@@ -7,12 +7,12 @@
     <Product Id="*" Name="$(var.NAME)" Language="1033" Version="$(var.VERSION)" Manufacturer="$(var.MANUFACTURER)"
              UpgradeCode="F59D3AED-C1B8-46B4-AFE2-A97F3B7DFB5E">
         <Package  InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Description="$(var.NAME) $(var.VERSION)" Comments="$(var.DESCRIPTION)" />
-        <Media Id="1" EmbedCab="yes" Cabinet="SolidCP_cab" />
+        <Media Id="1" EmbedCab="yes" Cabinet="FuseCP_cab" />
         <!-- Use WIX_UPGRADE_DETECTED -->
         <MajorUpgrade DowngradeErrorMessage="A later version of [ProductName] is already installed."  AllowSameVersionUpgrades="yes" />
-        <Feature Id ="SolidCP" Title="Website Panel" Level="1" ConfigurableDirectory="SCP_INSTALL_DIR" AllowAdvertise="no" Display="expand"
+        <Feature Id ="FuseCP" Title="Website Panel" Level="1" ConfigurableDirectory="SCP_INSTALL_DIR" AllowAdvertise="no" Display="expand"
                  Description="$(var.DESCRIPTION)">
-            <ComponentGroupRef Id="SolidCPFiles" />
+            <ComponentGroupRef Id="FuseCPFiles" />
             <Feature Id="ServerFeature" Title="$(var.ServerTitle)" Level="1" ConfigurableDirectory="PI_SERVER_INSTALL_DIR" AllowAdvertise="no"
                      Description="$(var.ServerDescription)">
                 <ComponentGroupRef Id="ServerFiles" />
@@ -30,13 +30,13 @@
                 <ComponentGroupRef Id="SchedulerServiceFiles" />
             </Feature>
             <Feature Id ="WebDavPortalFeature" Title="WebDAV Portal" Level="100" ConfigurableDirectory="PI_WEBDAVPORTAL_INSTALL_DIR" AllowAdvertise ="no"
-                     Description="SolidCP WebDAV Portal">
+                     Description="FuseCP WebDAV Portal">
                 <ComponentGroupRef Id="WebDavPortalFiles"/>
             </Feature>
         </Feature>
         <!--Destinations.-->
         <Directory Id="TARGETDIR" Name="SourceDir">
-            <Directory Id="SCP_INSTALL_DIR" Name="SolidCP">
+            <Directory Id="SCP_INSTALL_DIR" Name="FuseCP">
                 <Directory Id="PI_SERVER_INSTALL_DIR" Name="Server" />
                 <Directory Id="PI_ESERVER_INSTALL_DIR" Name="Enterprise Server" />
                 <Directory Id="PI_PORTAL_INSTALL_DIR" Name="Portal" />
@@ -57,7 +57,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify SolidCP Server web settings." />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify FuseCP Server web settings." />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Web Settings" />
                 <Control Type="Text" Id="IPaddressLabel" Width="73" Height="15" X="38" Y="79" Text="IP address:" />
                 <Control Type="ComboBox" Id="SERVER_IP_COMBO" Width="214" Height="15" X="34" Y="98" Property="PI_SERVER_IP">
@@ -80,7 +80,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify SolidCP Server security settings." />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify FuseCP Server security settings." />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Security Settings" />
                 <Control Type="ComboBox" Property="PI_SERVER_CREATENEWACCOUNT" Id="ServerCreateNewAccountCombo" Width="163" Height="16" X="142" Y="90" ComboList="yes" Sorted="yes">
                   <ComboBox Property="PI_SERVER_CREATENEWACCOUNT">
@@ -133,7 +133,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify SolidCP Enterprise Server web settings." />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify FuseCP Enterprise Server web settings." />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Web Settings" />
                 <Control Type="Text" Id="IPaddressLabel" Width="73" Height="15" X="38" Y="79" Text="IP address:" />
                 <Control Type="ComboBox" Id="ESERVER_IP_COMBO" Width="214" Height="15" X="34" Y="98" Property="PI_ESERVER_IP">
@@ -154,7 +154,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify SolidCP Enterprise Server security settings." />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify FuseCP Enterprise Server security settings." />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Security Settings" />
                 <Control Type="ComboBox" Property="PI_ESERVER_CREATENEWACCOUNT" Id="EServerCreateNewAccountCombo" Width="163" Height="16" X="142" Y="90" ComboList="yes" Sorted="yes">
                   <ComboBox Property="PI_ESERVER_CREATENEWACCOUNT">
@@ -209,7 +209,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Configure SolidCP database connection string" />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Configure FuseCP database connection string" />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Database connection string" />
                 <Control Type="Text" Id="ServerLabel" Width="50" Height="17" X="75" Y="68" Text="SQL Server:" />
                 <Control Type="ComboBox" Id="SqlServerCombo" Width="163" Height="15" X="142" Y="68" Property="DB_SERVER">
@@ -265,7 +265,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify SolidCP Portal web settings." />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify FuseCP Portal web settings." />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Web Settings" />
                 <Control Type="Text" Id="IPaddressLabel" Width="73" Height="15" X="38" Y="79" Text="IP address:" />
                 <Control Type="ComboBox" Id="PORTAL_IP_COMBO" Width="214" Height="15" X="34" Y="98" Property="PI_PORTAL_IP">
@@ -286,7 +286,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify SolidCP Portal security settings." />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Specify FuseCP Portal security settings." />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Security Settings" />
                 <Control Type="ComboBox" Property="PI_PORTAL_CREATENEWACCOUNT" Id="PortalCreateNewAccountCombo" Width="163" Height="16" X="142" Y="90" ComboList="yes" Sorted="yes">
                   <ComboBox Property="PI_PORTAL_CREATENEWACCOUNT">
@@ -462,7 +462,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Configure SolidCP database connection string" />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Configure FuseCP database connection string" />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Database connection string" />
                 <Control Type="Text" Id="CryptoKeyLabel" Width="50" Height="17" X="75" Y="68" Text="Crypto key:" />
                 <Control Type="Edit" Id="CryptoKeyEdit" Width="163" Height="15" X="142" Y="68" Property="PI_SCHEDULER_CRYPTO_KEY" />
@@ -698,8 +698,8 @@
             <!--ExitDialog-->
             <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1</Publish>
         </UI>
-        <Icon Id="SolidCP.ico" SourceFile="$(var.ICONLOGO)" />
-        <Binary Id="Assembly_CA" SourceFile="bin\SolidCP.WIXInstaller.CA.dll" />
+        <Icon Id="FuseCP.ico" SourceFile="$(var.ICONLOGO)" />
+        <Binary Id="Assembly_CA" SourceFile="bin\FuseCP.WIXInstaller.CA.dll" />
         <Binary Id="MsiExt.ActiveDirectory" SourceFile="..\..\..\tools\msiext\CustomActions\ActiveDirectory.dll" />
         <Binary Id="bannrbmp" SourceFile="bannrbmp.bmp" />
         <Binary Id="passmark" SourceFile="passmark.ico" />
@@ -718,13 +718,13 @@
         <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Open installation log file." />
         <Property Id="WixShellExecTarget" Value="[TempFolder]\SCPInstallation.log.txt" />
         <!--Add/Remove props. Public properties should be always in CAPS.-->
-        <Property Id="ARPPRODUCTICON" Value="SolidCP.ico" />
+        <Property Id="ARPPRODUCTICON" Value="FuseCP.ico" />
         <!--UI props.-->
         <Property Id="BannerBitmap">bannrbmp</Property>
         <!--SQL props.-->
         <Property Id="DB_SERVER" Secure="yes" Value="localhost\SQLExpress" />
         <Property Id="DB_CONN" Secure="yes" />
-        <Property Id="DB_DATABASE" Secure="yes" Value="SolidCP" />
+        <Property Id="DB_DATABASE" Secure="yes" Value="FuseCP" />
         <Property Id="DB_AUTH" Secure="yes" Value="Windows Authentication" />
         <Property Id="DB_LOGIN" Secure="yes" />
         <Property Id="DB_PASSWORD" Secure="yes" />
@@ -861,7 +861,7 @@
         <CustomAction Id="CA_GetDbSkip" BinaryKey="Assembly_CA" DllEntry="GetDbSkip" />
         <!--Run corresponding install scripts.-->
         <!-- Prepare and backup when upgrading from old to new installer type.
-             Yes, session variables and custom action data are identical almost for corresponding SolidCP components in prepare and install scripts.
+             Yes, session variables and custom action data are identical almost for corresponding FuseCP components in prepare and install scripts.
              Prepare scripts must be run before normal installation process and file copying.-->
         <CustomAction Id="CA_PropertyOnServerPrepare" Property="CA_OnServerPrepare" Value="ApplicationName=$(var.NAME);ComponentName=$(var.ServerTitle);ComponentCode=server;ComponentDescription=$(var.ServerDescription);Version=$(var.VERSION);InstallationFolder=[PI_SERVER_INSTALL_DIR];InstallerFolder=[SCP_INSTALL_DIR];Installer=Microsoft Windows Installer;InstallerType=MSI;InstallerPath=[OriginalDatabase];IISVersion=[];SetupXml=[];WebSiteIP=[PI_SERVER_IP];WebSitePort=[PI_SERVER_PORT];WebSiteDomain=[PI_SERVER_HOST];UserDomain=[PI_SERVER_DOMAIN];UserAccount=[PI_SERVER_LOGIN];UserPassword=[PI_SERVER_PASSWORD];NewUserAccount=[PI_SERVER_CREATENEWACCOUNT];ServerPassword=[SERVER_ACCESS_PASSWORD];EnterpriseServerUrl=[PI_ESERVER_URL];ServerAdminPassword=[SERVERADMIN_PASSWORD];DatabaseServer=[DB_SERVER];DatabaseName=[DB_DATABASE];DbServerAdmin=[DB_LOGIN];DbServerAdminPassword=[DB_PASSWORD];DbAuth=[DB_AUTH];BaseDirectory=[SCP_INSTALL_DIR];MODE_UP=[WIX_UPGRADE_DETECTED];MODE_RUP=[UPGRADINGPRODUCTCODE];ComponentId=[COMPFOUND_SERVER_ID];MainConfig=[COMPFOUND_SERVER_MAIN_CFG]" />
         <CustomAction Id="CA_OnServerPrepare" BinaryKey="Assembly_CA" DllEntry="OnServerPrepare" Impersonate="yes" Execute="deferred" HideTarget="no" />
@@ -1048,11 +1048,11 @@
         </DirectoryRef>
     </Fragment>
     <Fragment>
-        <ComponentGroup Id="SolidCPFiles">
-            <Component Id ="comp_SolidCP_config" Directory="SCP_INSTALL_DIR" Guid="{28CD1ADB-562C-4E38-A3B6-325D3A2718B1}">
-                <File Id="file_SolidCP_config" KeyPath="yes" Source="SolidCP.config" />
+        <ComponentGroup Id="FuseCPFiles">
+            <Component Id ="comp_FuseCP_config" Directory="SCP_INSTALL_DIR" Guid="{28CD1ADB-562C-4E38-A3B6-325D3A2718B1}">
+                <File Id="file_FuseCP_config" KeyPath="yes" Source="FuseCP.config" />
             </Component>
-            <Component Id="comp_SolidCP_reg_locator" Directory="SCP_INSTALL_DIR" Guid="{CC35E1B5-3E29-4AD1-991C-2904E4DCB099}">
+            <Component Id="comp_FuseCP_reg_locator" Directory="SCP_INSTALL_DIR" Guid="{CC35E1B5-3E29-4AD1-991C-2904E4DCB099}">
                 <RegistryValue Root='HKLM' Key='SOFTWARE\[ProductName]'
                                            Name='Base' Value='[SCP_INSTALL_DIR]'
                                            Type='string' />

@@ -1,5 +1,5 @@
-﻿using Microsoft.Management.Infrastructure;
-using SolidCP.Providers.HostedSolution;
+using Microsoft.Management.Infrastructure;
+using FuseCP.Providers.HostedSolution;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +9,7 @@ using System.Management.Automation.Runspaces;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     internal static class JobHelper
     {

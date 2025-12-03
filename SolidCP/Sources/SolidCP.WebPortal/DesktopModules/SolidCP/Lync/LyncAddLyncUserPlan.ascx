@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncAddLyncUserPlan.ascx.cs" Inherits="SolidCP.Portal.Lync.LyncAddLyncUserPlan" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncAddLyncUserPlan.ascx.cs" Inherits="FuseCP.Portal.Lync.LyncAddLyncUserPlan" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
 <%@ Register Src="../ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>

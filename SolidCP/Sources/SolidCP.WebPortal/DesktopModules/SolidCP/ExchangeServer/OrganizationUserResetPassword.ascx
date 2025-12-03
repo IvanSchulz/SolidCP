@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationUserResetPassword.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.OrganizationUserResetPassword" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationUserResetPassword.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationUserResetPassword" %>
 
 <%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
 

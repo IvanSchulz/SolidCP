@@ -1,5 +1,5 @@
 # Created by Trevor Robinson
-# SolidCP 2018
+# FuseCP 2018
 Import-Module activedirectory
 
 #This script is designed to setup dSHeuristics for the AD Domain.

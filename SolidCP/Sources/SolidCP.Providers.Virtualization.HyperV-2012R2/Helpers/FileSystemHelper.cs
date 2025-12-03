@@ -1,6 +1,6 @@
-﻿using Microsoft.Management.Infrastructure;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
+using Microsoft.Management.Infrastructure;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class FileSystemHelper
     {

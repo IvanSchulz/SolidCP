@@ -42,9 +42,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class EnterpriseStorage_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class EnterpriseStorage_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         public const string UseStorageSpaces = "UseStorageSpaces";
 

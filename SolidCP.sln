@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
@@ -7,351 +7,351 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{090571C8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpkg", "tools\wpkg\wpkg.csproj", "{60406EF3-E83A-4849-8B77-42B9207C7A82}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP", "SolidCP", "{BFA93E3F-8A57-4630-9A66-BBDC6306F8EA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP", "FuseCP", "{BFA93E3F-8A57-4630-9A66-BBDC6306F8EA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{176F6BE7-34E6-407D-9216-22D845C6C16B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.NoVNC.Core", "SolidCP\Lib\novnc-solidcp\SolidCP.Providers.Virtualization.NoVNC.Core.csproj", "{111AE751-04C7-4C63-AC93-AA5546991CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.NoVNC.Core", "FuseCP\Lib\novnc-fusecp\FuseCP.Providers.Virtualization.NoVNC.Core.csproj", "{111AE751-04C7-4C63-AC93-AA5546991CC6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.NoVNC", "SolidCP\Lib\novnc-solidcp\SolidCP.Providers.Virtualization.NoVNC.csproj", "{E55C48AA-4C32-463F-8070-B17CFD64155B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.NoVNC", "FuseCP\Lib\novnc-fusecp\FuseCP.Providers.Virtualization.NoVNC.csproj", "{E55C48AA-4C32-463F-8070-B17CFD64155B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{F4F82578-99B9-47C3-8265-A59FB58206F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPCC", "SolidCP\Sources\CPCC\CPCC.csproj", "{08091082-8BCF-4CAE-9EA9-83DAECC2840A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPCC", "FuseCP\Sources\CPCC\CPCC.csproj", "{08091082-8BCF-4CAE-9EA9-83DAECC2840A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Build", "SolidCP\Sources\SolidCP.Build\SolidCP.Build.csproj", "{F66EFF2B-BD79-4059-A8A0-5F3D0A2AEC0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Build", "FuseCP\Sources\FuseCP.Build\FuseCP.Build.csproj", "{F66EFF2B-BD79-4059-A8A0-5F3D0A2AEC0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Common.Utils", "SolidCP\Sources\SolidCP.Common.Utils\SolidCP.Common.Utils.csproj", "{6C31BE7A-751C-478E-93E2-3FF2F7A802FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Common.Utils", "FuseCP\Sources\FuseCP.Common.Utils\FuseCP.Common.Utils.csproj", "{6C31BE7A-751C-478E-93E2-3FF2F7A802FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer", "SolidCP\Sources\SolidCP.EnterpriseServer\SolidCP.EnterpriseServer.csproj", "{5ED2A8A5-D068-4092-9F93-E630C4E2ABF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer", "FuseCP\Sources\FuseCP.EnterpriseServer\FuseCP.EnterpriseServer.csproj", "{5ED2A8A5-D068-4092-9F93-E630C4E2ABF0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Base", "SolidCP\Sources\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj", "{A70331A8-2FB9-409B-8653-5BCDA65DA16D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Base", "FuseCP\Sources\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj", "{A70331A8-2FB9-409B-8653-5BCDA65DA16D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Client", "SolidCP\Sources\SolidCP.EnterpriseServer.Client\SolidCP.EnterpriseServer.Client.csproj", "{98D9141C-8DC6-4B9B-9C9E-9535C0620E84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Client", "FuseCP\Sources\FuseCP.EnterpriseServer.Client\FuseCP.EnterpriseServer.Client.csproj", "{98D9141C-8DC6-4B9B-9C9E-9535C0620E84}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Code", "SolidCP\Sources\SolidCP.EnterpriseServer.Code\SolidCP.EnterpriseServer.Code.csproj", "{8008AE50-D4AC-4BDD-81CC-2FAD0FBF8336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Code", "FuseCP\Sources\FuseCP.EnterpriseServer.Code\FuseCP.EnterpriseServer.Code.csproj", "{8008AE50-D4AC-4BDD-81CC-2FAD0FBF8336}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Data", "SolidCP\Sources\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj", "{897D8D0C-7144-4B5A-B115-B7E9FEF3C9A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Data", "FuseCP\Sources\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj", "{897D8D0C-7144-4B5A-B115-B7E9FEF3C9A9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Tests", "SolidCP\Sources\SolidCP.EnterpriseServer.Tests\SolidCP.EnterpriseServer.Tests.csproj", "{2BBF2318-B8D2-4E1C-A77B-9337865CB25D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Tests", "FuseCP\Sources\FuseCP.EnterpriseServer.Tests\FuseCP.EnterpriseServer.Tests.csproj", "{2BBF2318-B8D2-4E1C-A77B-9337865CB25D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.2Checkout", "SolidCP\Sources\SolidCP.Gateways.2Checkout\SolidCP.Plugins.2Checkout.csproj", "{853BC6D3-B284-43A7-A16E-B12BD09BE2CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.2Checkout", "FuseCP\Sources\FuseCP.Gateways.2Checkout\FuseCP.Plugins.2Checkout.csproj", "{853BC6D3-B284-43A7-A16E-B12BD09BE2CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.AuthorizeNet", "SolidCP\Sources\SolidCP.Gateways.AuthorizeNet\SolidCP.Plugins.AuthorizeNet.csproj", "{40511E36-13E2-4171-BDED-2CFA63C13E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.AuthorizeNet", "FuseCP\Sources\FuseCP.Gateways.AuthorizeNet\FuseCP.Plugins.AuthorizeNet.csproj", "{40511E36-13E2-4171-BDED-2CFA63C13E83}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.OfflinePayment", "SolidCP\Sources\SolidCP.Gateways.OfflinePayment\SolidCP.Plugins.OfflinePayment.csproj", "{5725B263-5852-4D6B-BEB4-96E5B03E3E2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.OfflinePayment", "FuseCP\Sources\FuseCP.Gateways.OfflinePayment\FuseCP.Plugins.OfflinePayment.csproj", "{5725B263-5852-4D6B-BEB4-96E5B03E3E2A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.PayPalPro", "SolidCP\Sources\SolidCP.Gateways.PayPal\SolidCP.Plugins.PayPalPro.csproj", "{B4AFF70B-3924-421F-8FAE-489A734C3028}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.PayPalPro", "FuseCP\Sources\FuseCP.Gateways.PayPal\FuseCP.Plugins.PayPalPro.csproj", "{B4AFF70B-3924-421F-8FAE-489A734C3028}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.PayPalStandard", "SolidCP\Sources\SolidCP.Gateways.PayPalStandard\SolidCP.Plugins.PayPalStandard.csproj", "{ECC9968C-5398-4A84-B19E-7DA5458516F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.PayPalStandard", "FuseCP\Sources\FuseCP.Gateways.PayPalStandard\FuseCP.Plugins.PayPalStandard.csproj", "{ECC9968C-5398-4A84-B19E-7DA5458516F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Products.DomainName", "SolidCP\Sources\SolidCP.Products.DomainName\SolidCP.Products.DomainName.csproj", "{5FB37A84-F29C-4C6D-A361-CB39CCB69350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Products.DomainName", "FuseCP\Sources\FuseCP.Products.DomainName\FuseCP.Products.DomainName.csproj", "{5FB37A84-F29C-4C6D-A361-CB39CCB69350}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Products.HostingAddon", "SolidCP\Sources\SolidCP.Products.HostingAddon\SolidCP.Products.HostingAddon.csproj", "{68334A82-4B99-4B05-BC44-9B2846145FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Products.HostingAddon", "FuseCP\Sources\FuseCP.Products.HostingAddon\FuseCP.Products.HostingAddon.csproj", "{68334A82-4B99-4B05-BC44-9B2846145FE8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Products.HostingPlan", "SolidCP\Sources\SolidCP.Products.HostingPlan\SolidCP.Products.HostingPlan.csproj", "{1C5EEA8B-D15C-4822-9243-F92AFD4B8A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Products.HostingPlan", "FuseCP\Sources\FuseCP.Products.HostingPlan\FuseCP.Products.HostingPlan.csproj", "{1C5EEA8B-D15C-4822-9243-F92AFD4B8A88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Base", "SolidCP\Sources\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj", "{4110722D-EA34-43A2-9B5A-063A20911D4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Base", "FuseCP\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj", "{4110722D-EA34-43A2-9B5A-063A20911D4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Database.MariaDB", "SolidCP\Sources\SolidCP.Providers.Database.MariaDB\SolidCP.Providers.Database.MariaDB.csproj", "{4C1A892E-C41A-4A8B-A13A-E82BD77A4FB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Database.MariaDB", "FuseCP\Sources\FuseCP.Providers.Database.MariaDB\FuseCP.Providers.Database.MariaDB.csproj", "{4C1A892E-C41A-4A8B-A13A-E82BD77A4FB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Database.MySQL", "SolidCP\Sources\SolidCP.Providers.Database.MySQL\SolidCP.Providers.Database.MySQL.csproj", "{5416C7D3-A28B-42DA-8E10-A3CB63A7A2C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Database.MySQL", "FuseCP\Sources\FuseCP.Providers.Database.MySQL\FuseCP.Providers.Database.MySQL.csproj", "{5416C7D3-A28B-42DA-8E10-A3CB63A7A2C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Database.SqlServer", "SolidCP\Sources\SolidCP.Providers.Database.SqlServer\SolidCP.Providers.Database.SqlServer.csproj", "{B425D26D-42FC-4202-AB82-149ABFBF427F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Database.SqlServer", "FuseCP\Sources\FuseCP.Providers.Database.SqlServer\FuseCP.Providers.Database.SqlServer.csproj", "{B425D26D-42FC-4202-AB82-149ABFBF427F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.Bind", "SolidCP\Sources\SolidCP.Providers.DNS.Bind\SolidCP.Providers.DNS.Bind.csproj", "{B301C86A-4969-48B5-8E7D-4240F91E5887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.Bind", "FuseCP\Sources\FuseCP.Providers.DNS.Bind\FuseCP.Providers.DNS.Bind.csproj", "{B301C86A-4969-48B5-8E7D-4240F91E5887}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.MsDNS", "SolidCP\Sources\SolidCP.Providers.DNS.MsDNS\SolidCP.Providers.DNS.MsDNS.csproj", "{918DD9D6-BF5F-4D43-92D6-9C24CDCB958C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.MsDNS", "FuseCP\Sources\FuseCP.Providers.DNS.MsDNS\FuseCP.Providers.DNS.MsDNS.csproj", "{918DD9D6-BF5F-4D43-92D6-9C24CDCB958C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.MsDNS2012", "SolidCP\Sources\SolidCP.Providers.DNS.MsDNS2012\SolidCP.Providers.DNS.MsDNS2012.csproj", "{E8CF9990-7717-48B4-8087-D39D604180E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.MsDNS2012", "FuseCP\Sources\FuseCP.Providers.DNS.MsDNS2012\FuseCP.Providers.DNS.MsDNS2012.csproj", "{E8CF9990-7717-48B4-8087-D39D604180E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.MsDNS2016", "SolidCP\Sources\SolidCP.Providers.DNS.MsDNS2016\SolidCP.Providers.DNS.MsDNS2016.csproj", "{626A3F17-2738-4044-8E72-2E298C0937B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.MsDNS2016", "FuseCP\Sources\FuseCP.Providers.DNS.MsDNS2016\FuseCP.Providers.DNS.MsDNS2016.csproj", "{626A3F17-2738-4044-8E72-2E298C0937B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.Nettica", "SolidCP\Sources\SolidCP.Providers.DNS.Nettica\SolidCP.Providers.DNS.Nettica.csproj", "{A1DB8BE9-59AE-4DC6-9778-7D02E3F87837}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.Nettica", "FuseCP\Sources\FuseCP.Providers.DNS.Nettica\FuseCP.Providers.DNS.Nettica.csproj", "{A1DB8BE9-59AE-4DC6-9778-7D02E3F87837}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.PowerDNS", "SolidCP\Sources\SolidCP.Providers.DNS.PowerDNS\SolidCP.Providers.DNS.PowerDNS.csproj", "{AD95A9A4-6949-4DF7-9533-39B541EC1A54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.PowerDNS", "FuseCP\Sources\FuseCP.Providers.DNS.PowerDNS\FuseCP.Providers.DNS.PowerDNS.csproj", "{AD95A9A4-6949-4DF7-9533-39B541EC1A54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.SimpleDNS", "SolidCP\Sources\SolidCP.Providers.DNS.SimpleDNS\SolidCP.Providers.DNS.SimpleDNS.csproj", "{93D9664E-7449-4ED8-A1CD-ACB8BE320390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.SimpleDNS", "FuseCP\Sources\FuseCP.Providers.DNS.SimpleDNS\FuseCP.Providers.DNS.SimpleDNS.csproj", "{93D9664E-7449-4ED8-A1CD-ACB8BE320390}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.SimpleDNS50", "SolidCP\Sources\SolidCP.Providers.DNS.SimpleDNS50\SolidCP.Providers.DNS.SimpleDNS50.csproj", "{F4D8F61C-541E-45B2-931F-B49D558554BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.SimpleDNS50", "FuseCP\Sources\FuseCP.Providers.DNS.SimpleDNS50\FuseCP.Providers.DNS.SimpleDNS50.csproj", "{F4D8F61C-541E-45B2-931F-B49D558554BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.SimpleDNS60", "SolidCP\Sources\SolidCP.Providers.DNS.SimpleDNS60\SolidCP.Providers.DNS.SimpleDNS60.csproj", "{28B1A97D-2E2C-42A1-940E-C6601BB3BC62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.SimpleDNS60", "FuseCP\Sources\FuseCP.Providers.DNS.SimpleDNS60\FuseCP.Providers.DNS.SimpleDNS60.csproj", "{28B1A97D-2E2C-42A1-940E-C6601BB3BC62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.SimpleDNS80", "SolidCP\Sources\SolidCP.Providers.DNS.SimpleDNS80\SolidCP.Providers.DNS.SimpleDNS80.csproj", "{0CA01A35-C96D-46DB-89C9-56ED0D86A57E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.SimpleDNS80", "FuseCP\Sources\FuseCP.Providers.DNS.SimpleDNS80\FuseCP.Providers.DNS.SimpleDNS80.csproj", "{0CA01A35-C96D-46DB-89C9-56ED0D86A57E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.DNS.SimpleDNS90", "SolidCP\Sources\SolidCP.Providers.DNS.SimpleDNS90\SolidCP.Providers.DNS.SimpleDNS90.csproj", "{5A478237-7003-4581-B4A4-13FA1A4C445D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.DNS.SimpleDNS90", "FuseCP\Sources\FuseCP.Providers.DNS.SimpleDNS90\FuseCP.Providers.DNS.SimpleDNS90.csproj", "{5A478237-7003-4581-B4A4-13FA1A4C445D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.EnterpriseStorage.Windows2012", "SolidCP\Sources\SolidCP.Providers.EnterpriseStorage.Windows2012\SolidCP.Providers.EnterpriseStorage.Windows2012.csproj", "{8F7BE5D9-76F9-45CF-95A0-C61FB9D7F6D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.EnterpriseStorage.Windows2012", "FuseCP\Sources\FuseCP.Providers.EnterpriseStorage.Windows2012\FuseCP.Providers.EnterpriseStorage.Windows2012.csproj", "{8F7BE5D9-76F9-45CF-95A0-C61FB9D7F6D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Filters.MailCleaner", "SolidCP\Sources\SolidCP.Providers.Filters.MailCleaner\SolidCP.Providers.Filters.MailCleaner.csproj", "{C94BABC6-5A97-445F-9AE4-4BDB35D67200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Filters.MailCleaner", "FuseCP\Sources\FuseCP.Providers.Filters.MailCleaner\FuseCP.Providers.Filters.MailCleaner.csproj", "{C94BABC6-5A97-445F-9AE4-4BDB35D67200}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Filters.SpamExperts", "SolidCP\Sources\SolidCP.Providers.Filters.SpamExperts\SolidCP.Providers.Filters.SpamExperts.csproj", "{89623648-B344-4816-A736-FC75F6988043}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Filters.SpamExperts", "FuseCP\Sources\FuseCP.Providers.Filters.SpamExperts\FuseCP.Providers.Filters.SpamExperts.csproj", "{89623648-B344-4816-A736-FC75F6988043}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.CerberusFTP6", "SolidCP\Sources\SolidCP.Providers.FTP.CerberusFTP6\SolidCP.Providers.FTP.CerberusFTP6.csproj", "{FEC2524C-7486-4CD5-B869-4286866BF76B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.CerberusFTP6", "FuseCP\Sources\FuseCP.Providers.FTP.CerberusFTP6\FuseCP.Providers.FTP.CerberusFTP6.csproj", "{FEC2524C-7486-4CD5-B869-4286866BF76B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.FileZilla", "SolidCP\Sources\SolidCP.Providers.FTP.FileZilla\SolidCP.Providers.FTP.FileZilla.csproj", "{FCD6FD97-89AF-4875-A1F6-1D83F32D20A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.FileZilla", "FuseCP\Sources\FuseCP.Providers.FTP.FileZilla\FuseCP.Providers.FTP.FileZilla.csproj", "{FCD6FD97-89AF-4875-A1F6-1D83F32D20A2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.Gene6", "SolidCP\Sources\SolidCP.Providers.FTP.Gene6\SolidCP.Providers.FTP.Gene6.csproj", "{443743E1-D5EC-47A3-BDEE-B5B8632B7EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.Gene6", "FuseCP\Sources\FuseCP.Providers.FTP.Gene6\FuseCP.Providers.FTP.Gene6.csproj", "{443743E1-D5EC-47A3-BDEE-B5B8632B7EE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.IIs100", "SolidCP\Sources\SolidCP.Providers.FTP.IIs100\SolidCP.Providers.FTP.IIs100.csproj", "{920E6962-9710-4627-979C-EAB258CA0DAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.IIs100", "FuseCP\Sources\FuseCP.Providers.FTP.IIs100\FuseCP.Providers.FTP.IIs100.csproj", "{920E6962-9710-4627-979C-EAB258CA0DAC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.IIs60", "SolidCP\Sources\SolidCP.Providers.FTP.IIs60\SolidCP.Providers.FTP.IIs60.csproj", "{E3FE8FDE-4A83-4D00-B83A-442F3E2A84BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.IIs60", "FuseCP\Sources\FuseCP.Providers.FTP.IIs60\FuseCP.Providers.FTP.IIs60.csproj", "{E3FE8FDE-4A83-4D00-B83A-442F3E2A84BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.IIs70", "SolidCP\Sources\SolidCP.Providers.FTP.IIs70\SolidCP.Providers.FTP.IIs70.csproj", "{538913C8-5878-49ED-A793-0C7F755F4681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.IIs70", "FuseCP\Sources\FuseCP.Providers.FTP.IIs70\FuseCP.Providers.FTP.IIs70.csproj", "{538913C8-5878-49ED-A793-0C7F755F4681}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.IIs80", "SolidCP\Sources\SolidCP.Providers.FTP.IIs80\SolidCP.Providers.FTP.IIs80.csproj", "{CC0E6CAC-39D2-46B4-BEC7-8CC7DC647711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.IIs80", "FuseCP\Sources\FuseCP.Providers.FTP.IIs80\FuseCP.Providers.FTP.IIs80.csproj", "{CC0E6CAC-39D2-46B4-BEC7-8CC7DC647711}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.ServU", "SolidCP\Sources\SolidCP.Providers.FTP.ServU\SolidCP.Providers.FTP.ServU.csproj", "{C062868C-11B8-4FCF-9E88-FE56750B6828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.ServU", "FuseCP\Sources\FuseCP.Providers.FTP.ServU\FuseCP.Providers.FTP.ServU.csproj", "{C062868C-11B8-4FCF-9E88-FE56750B6828}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.FTP.VsFtp", "SolidCP\Sources\SolidCP.Providers.FTP.VsFtp\SolidCP.Providers.FTP.VsFtp.csproj", "{B19DCBD8-E130-4A2F-A7D3-01AF55AF031C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.FTP.VsFtp", "FuseCP\Sources\FuseCP.Providers.FTP.VsFtp\FuseCP.Providers.FTP.VsFtp.csproj", "{B19DCBD8-E130-4A2F-A7D3-01AF55AF031C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution", "SolidCP\Sources\SolidCP.Providers.HostedSolution\SolidCP.Providers.HostedSolution.csproj", "{373639BC-E127-430A-ACF7-7F1366C2EE70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution", "FuseCP\Sources\FuseCP.Providers.HostedSolution\FuseCP.Providers.HostedSolution.csproj", "{373639BC-E127-430A-ACF7-7F1366C2EE70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Crm2011", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Crm2011\SolidCP.Providers.HostedSolution.Crm2011.csproj", "{54CEC259-F79A-421E-95A5-CD2F0F736FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Crm2011", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Crm2011\FuseCP.Providers.HostedSolution.Crm2011.csproj", "{54CEC259-F79A-421E-95A5-CD2F0F736FD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Crm2013", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Crm2013\SolidCP.Providers.HostedSolution.Crm2013.csproj", "{330C6AF3-FDA1-4B4F-991D-E768EA3D72AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Crm2013", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Crm2013\FuseCP.Providers.HostedSolution.Crm2013.csproj", "{330C6AF3-FDA1-4B4F-991D-E768EA3D72AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Crm2015", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Crm2015\SolidCP.Providers.HostedSolution.Crm2015.csproj", "{008BBC8C-B3BD-43D6-A586-5F6D7AEC899D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Crm2015", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Crm2015\FuseCP.Providers.HostedSolution.Crm2015.csproj", "{008BBC8C-B3BD-43D6-A586-5F6D7AEC899D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Crm2016", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Crm2016\SolidCP.Providers.HostedSolution.Crm2016.csproj", "{BE0C4BAF-0827-4039-B72B-7DA43B05117D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Crm2016", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Crm2016\FuseCP.Providers.HostedSolution.Crm2016.csproj", "{BE0C4BAF-0827-4039-B72B-7DA43B05117D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Exchange2013", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Exchange2013\SolidCP.Providers.HostedSolution.Exchange2013.csproj", "{D7116C25-96D6-4534-B15C-FA8B51C2DAC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Exchange2013", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Exchange2013\FuseCP.Providers.HostedSolution.Exchange2013.csproj", "{D7116C25-96D6-4534-B15C-FA8B51C2DAC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Exchange2016", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Exchange2016\SolidCP.Providers.HostedSolution.Exchange2016.csproj", "{C6D369FB-8482-4C0D-AD66-35412AEAF13E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Exchange2016", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Exchange2016\FuseCP.Providers.HostedSolution.Exchange2016.csproj", "{C6D369FB-8482-4C0D-AD66-35412AEAF13E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Exchange2019", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Exchange2019\SolidCP.Providers.HostedSolution.Exchange2019.csproj", "{D5AED628-295A-407F-9F0B-69BBB0720773}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Exchange2019", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Exchange2019\FuseCP.Providers.HostedSolution.Exchange2019.csproj", "{D5AED628-295A-407F-9F0B-69BBB0720773}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Lync2013", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Lync2013\SolidCP.Providers.HostedSolution.Lync2013.csproj", "{17A899D4-4623-4210-8A96-C5AC121C215A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Lync2013", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Lync2013\FuseCP.Providers.HostedSolution.Lync2013.csproj", "{17A899D4-4623-4210-8A96-C5AC121C215A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.Lync2013HP", "SolidCP\Sources\SolidCP.Providers.HostedSolution.Lync2013HP\SolidCP.Providers.HostedSolution.Lync2013HP.csproj", "{F11132F5-3D90-45DB-9D03-91FADE6A1D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.Lync2013HP", "FuseCP\Sources\FuseCP.Providers.HostedSolution.Lync2013HP\FuseCP.Providers.HostedSolution.Lync2013HP.csproj", "{F11132F5-3D90-45DB-9D03-91FADE6A1D6D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SfB2015", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SfB2015\SolidCP.Providers.HostedSolution.SfB2015.csproj", "{08DBB033-1E30-4368-B163-6155FB44A0D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SfB2015", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SfB2015\FuseCP.Providers.HostedSolution.SfB2015.csproj", "{08DBB033-1E30-4368-B163-6155FB44A0D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SfB2019", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SfB2019\SolidCP.Providers.HostedSolution.SfB2019.csproj", "{C59A1719-5E36-4A68-9132-737F3297CD47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SfB2019", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SfB2019\FuseCP.Providers.HostedSolution.SfB2019.csproj", "{C59A1719-5E36-4A68-9132-737F3297CD47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SharePoint2013", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SharePoint2013\SolidCP.Providers.HostedSolution.SharePoint2013.csproj", "{ED16F8C1-A6D7-4F61-8659-74ED5337E31D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SharePoint2013", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SharePoint2013\FuseCP.Providers.HostedSolution.SharePoint2013.csproj", "{ED16F8C1-A6D7-4F61-8659-74ED5337E31D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SharePoint2013Ent", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SharePoint2013Ent\SolidCP.Providers.HostedSolution.SharePoint2013Ent.csproj", "{2F4080D4-A8B1-4DE7-BF89-023CAADA457B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SharePoint2013Ent", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SharePoint2013Ent\FuseCP.Providers.HostedSolution.SharePoint2013Ent.csproj", "{2F4080D4-A8B1-4DE7-BF89-023CAADA457B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SharePoint2016", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SharePoint2016\SolidCP.Providers.HostedSolution.SharePoint2016.csproj", "{83858690-F197-4332-B33F-A9EFA5E5FBCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SharePoint2016", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SharePoint2016\FuseCP.Providers.HostedSolution.SharePoint2016.csproj", "{83858690-F197-4332-B33F-A9EFA5E5FBCD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SharePoint2016Ent", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SharePoint2016Ent\SolidCP.Providers.HostedSolution.SharePoint2016Ent.csproj", "{E79CCDC1-F401-4FC1-A535-014C2251FECB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SharePoint2016Ent", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SharePoint2016Ent\FuseCP.Providers.HostedSolution.SharePoint2016Ent.csproj", "{E79CCDC1-F401-4FC1-A535-014C2251FECB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.HostedSolution.SharePoint2019", "SolidCP\Sources\SolidCP.Providers.HostedSolution.SharePoint2019\SolidCP.Providers.HostedSolution.SharePoint2019.csproj", "{6FA3D1F9-E474-4793-9372-2B6F9AA99F34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.HostedSolution.SharePoint2019", "FuseCP\Sources\FuseCP.Providers.HostedSolution.SharePoint2019\FuseCP.Providers.HostedSolution.SharePoint2019.csproj", "{6FA3D1F9-E474-4793-9372-2B6F9AA99F34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.AbilityMailServer", "SolidCP\Sources\SolidCP.Providers.Mail.AbilityMailServer\SolidCP.Providers.Mail.AbilityMailServer.csproj", "{F132E6D7-977C-4D66-AFA8-E98735539C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.AbilityMailServer", "FuseCP\Sources\FuseCP.Providers.Mail.AbilityMailServer\FuseCP.Providers.Mail.AbilityMailServer.csproj", "{F132E6D7-977C-4D66-AFA8-E98735539C07}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.IceWarp", "SolidCP\Sources\SolidCP.Providers.Mail.IceWarp\SolidCP.Providers.Mail.IceWarp.csproj", "{8F8EA740-C178-4E0A-99B5-1FAA262927CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.IceWarp", "FuseCP\Sources\FuseCP.Providers.Mail.IceWarp\FuseCP.Providers.Mail.IceWarp.csproj", "{8F8EA740-C178-4E0A-99B5-1FAA262927CD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail10", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail10\SolidCP.Providers.Mail.SmarterMail10.csproj", "{96FE1EE8-09A8-4305-925D-3FABD33F6E74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail10", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail10\FuseCP.Providers.Mail.SmarterMail10.csproj", "{96FE1EE8-09A8-4305-925D-3FABD33F6E74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail100", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail100\SolidCP.Providers.Mail.SmarterMail100.csproj", "{E77CE45B-A814-4B93-A2B2-ACA98C9FCF0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail100", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail100\FuseCP.Providers.Mail.SmarterMail100.csproj", "{E77CE45B-A814-4B93-A2B2-ACA98C9FCF0E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail2", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail2\SolidCP.Providers.Mail.SmarterMail2.csproj", "{A671036B-59B6-4BC9-8E92-E4E1CAA0222D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail2", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail2\FuseCP.Providers.Mail.SmarterMail2.csproj", "{A671036B-59B6-4BC9-8E92-E4E1CAA0222D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail3", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail3\SolidCP.Providers.Mail.SmarterMail3.csproj", "{9B988A73-7E27-43D2-AE3C-554FEFD98BE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail3", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail3\FuseCP.Providers.Mail.SmarterMail3.csproj", "{9B988A73-7E27-43D2-AE3C-554FEFD98BE9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail5", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail5\SolidCP.Providers.Mail.SmarterMail5.csproj", "{672917A9-1360-432E-BEF7-FDFF1445E4C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail5", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail5\FuseCP.Providers.Mail.SmarterMail5.csproj", "{672917A9-1360-432E-BEF7-FDFF1445E4C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail6", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail6\SolidCP.Providers.Mail.SmarterMail6.csproj", "{9B2E103F-F8F5-4692-B6A1-0D05AFA22C63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail6", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail6\FuseCP.Providers.Mail.SmarterMail6.csproj", "{9B2E103F-F8F5-4692-B6A1-0D05AFA22C63}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail7", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail7\SolidCP.Providers.Mail.SmarterMail7.csproj", "{72CB146C-85DD-4354-A15D-15B482A2D8D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail7", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail7\FuseCP.Providers.Mail.SmarterMail7.csproj", "{72CB146C-85DD-4354-A15D-15B482A2D8D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Mail.SmarterMail9", "SolidCP\Sources\SolidCP.Providers.Mail.SmarterMail9\SolidCP.Providers.Mail.SmarterMail9.csproj", "{D89AFF02-63D7-41F9-BF64-0491694E9EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Mail.SmarterMail9", "FuseCP\Sources\FuseCP.Providers.Mail.SmarterMail9\FuseCP.Providers.Mail.SmarterMail9.csproj", "{D89AFF02-63D7-41F9-BF64-0491694E9EBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Unix", "SolidCP\Sources\SolidCP.Providers.OS.Unix\SolidCP.Providers.OS.Unix.csproj", "{2C016557-6F74-403C-92C9-D80F6BB0C9AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Unix", "FuseCP\Sources\FuseCP.Providers.OS.Unix\FuseCP.Providers.OS.Unix.csproj", "{2C016557-6F74-403C-92C9-D80F6BB0C9AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Windows2003", "SolidCP\Sources\SolidCP.Providers.OS.Windows2003\SolidCP.Providers.OS.Windows2003.csproj", "{2832B42A-47AD-4B32-AC13-4E1F5228A36E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Windows2003", "FuseCP\Sources\FuseCP.Providers.OS.Windows2003\FuseCP.Providers.OS.Windows2003.csproj", "{2832B42A-47AD-4B32-AC13-4E1F5228A36E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Windows2008", "SolidCP\Sources\SolidCP.Providers.OS.Windows2008\SolidCP.Providers.OS.Windows2008.csproj", "{3613EFE4-CBD9-4BE4-8321-06D39ACD0AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Windows2008", "FuseCP\Sources\FuseCP.Providers.OS.Windows2008\FuseCP.Providers.OS.Windows2008.csproj", "{3613EFE4-CBD9-4BE4-8321-06D39ACD0AD1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Windows2012", "SolidCP\Sources\SolidCP.Providers.OS.Windows2012\SolidCP.Providers.OS.Windows2012.csproj", "{2008155A-8C15-4727-B0A7-F78F80CFD236}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Windows2012", "FuseCP\Sources\FuseCP.Providers.OS.Windows2012\FuseCP.Providers.OS.Windows2012.csproj", "{2008155A-8C15-4727-B0A7-F78F80CFD236}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Windows2016", "SolidCP\Sources\SolidCP.Providers.OS.Windows2016\SolidCP.Providers.OS.Windows2016.csproj", "{C7CD72DD-1155-4D75-A0F5-CAED45A4217C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Windows2016", "FuseCP\Sources\FuseCP.Providers.OS.Windows2016\FuseCP.Providers.OS.Windows2016.csproj", "{C7CD72DD-1155-4D75-A0F5-CAED45A4217C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Windows2019", "SolidCP\Sources\SolidCP.Providers.OS.Windows2019\SolidCP.Providers.OS.Windows2019.csproj", "{919C3F07-A3D1-4A00-B7E5-56327A422967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Windows2019", "FuseCP\Sources\FuseCP.Providers.OS.Windows2019\FuseCP.Providers.OS.Windows2019.csproj", "{919C3F07-A3D1-4A00-B7E5-56327A422967}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Windows2022", "SolidCP\Sources\SolidCP.Providers.OS.Windows2022\SolidCP.Providers.OS.Windows2022.csproj", "{4B87227B-B670-48B2-8582-9F0784DBBD93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Windows2022", "FuseCP\Sources\FuseCP.Providers.OS.Windows2022\FuseCP.Providers.OS.Windows2022.csproj", "{4B87227B-B670-48B2-8582-9F0784DBBD93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.SharePoint.Sps20", "SolidCP\Sources\SolidCP.Providers.SharePoint.Sps20\SolidCP.Providers.SharePoint.Sps20.csproj", "{C8863425-0363-4ACF-A14D-C82DF14162D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.SharePoint.Sps20", "FuseCP\Sources\FuseCP.Providers.SharePoint.Sps20\FuseCP.Providers.SharePoint.Sps20.csproj", "{C8863425-0363-4ACF-A14D-C82DF14162D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.SharePoint.Sps30", "SolidCP\Sources\SolidCP.Providers.SharePoint.Sps30\SolidCP.Providers.SharePoint.Sps30.csproj", "{F5342DE8-1386-4699-AC0A-4436402E8504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.SharePoint.Sps30", "FuseCP\Sources\FuseCP.Providers.SharePoint.Sps30\FuseCP.Providers.SharePoint.Sps30.csproj", "{F5342DE8-1386-4699-AC0A-4436402E8504}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Statistics.AWStats", "SolidCP\Sources\SolidCP.Providers.Statistics.AWStats\SolidCP.Providers.Statistics.AWStats.csproj", "{BB6AD527-260B-455C-A21B-A1DC36AFD9BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Statistics.AWStats", "FuseCP\Sources\FuseCP.Providers.Statistics.AWStats\FuseCP.Providers.Statistics.AWStats.csproj", "{BB6AD527-260B-455C-A21B-A1DC36AFD9BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Statistics.SmarterStats", "SolidCP\Sources\SolidCP.Providers.Statistics.SmarterStats\SolidCP.Providers.Statistics.SmarterStats.csproj", "{3D8DC430-8F00-49F6-B1E9-165C29B8B860}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Statistics.SmarterStats", "FuseCP\Sources\FuseCP.Providers.Statistics.SmarterStats\FuseCP.Providers.Statistics.SmarterStats.csproj", "{3D8DC430-8F00-49F6-B1E9-165C29B8B860}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.StorageSpaces.Windows2012", "SolidCP\Sources\SolidCP.Providers.StorageSpaces.Windows2012\SolidCP.Providers.StorageSpaces.Windows2012.csproj", "{BBFE38BD-33D6-483F-BAF1-E2A21BEB4037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.StorageSpaces.Windows2012", "FuseCP\Sources\FuseCP.Providers.StorageSpaces.Windows2012\FuseCP.Providers.StorageSpaces.Windows2012.csproj", "{BBFE38BD-33D6-483F-BAF1-E2A21BEB4037}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.RemoteDesktopServices.Windows2012", "SolidCP\Sources\SolidCP.Providers.TerminalServices.Windows2012\SolidCP.Providers.RemoteDesktopServices.Windows2012.csproj", "{0BA22935-28EB-4D19-808F-BAF9E6CB0810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.RemoteDesktopServices.Windows2012", "FuseCP\Sources\FuseCP.Providers.TerminalServices.Windows2012\FuseCP.Providers.RemoteDesktopServices.Windows2012.csproj", "{0BA22935-28EB-4D19-808F-BAF9E6CB0810}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.RemoteDesktopServices.Windows2016", "SolidCP\Sources\SolidCP.Providers.TerminalServices.Windows2016\SolidCP.Providers.RemoteDesktopServices.Windows2016.csproj", "{29BEBB3C-CEC6-4EFD-9F1D-BA9B4EFAF966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.RemoteDesktopServices.Windows2016", "FuseCP\Sources\FuseCP.Providers.TerminalServices.Windows2016\FuseCP.Providers.RemoteDesktopServices.Windows2016.csproj", "{29BEBB3C-CEC6-4EFD-9F1D-BA9B4EFAF966}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.RemoteDesktopServices.Windows2019", "SolidCP\Sources\SolidCP.Providers.TerminalServices.Windows2019\SolidCP.Providers.RemoteDesktopServices.Windows2019.csproj", "{200E4684-9661-4BC5-9B7A-B975F655DBB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.RemoteDesktopServices.Windows2019", "FuseCP\Sources\FuseCP.Providers.TerminalServices.Windows2019\FuseCP.Providers.RemoteDesktopServices.Windows2019.csproj", "{200E4684-9661-4BC5-9B7A-B975F655DBB3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.RemoteDesktopServices.Windows2022", "SolidCP\Sources\SolidCP.Providers.TerminalServices.Windows2022\SolidCP.Providers.RemoteDesktopServices.Windows2022.csproj", "{B2627942-0AA5-408C-9254-E44B2229E1F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.RemoteDesktopServices.Windows2022", "FuseCP\Sources\FuseCP.Providers.TerminalServices.Windows2022\FuseCP.Providers.RemoteDesktopServices.Windows2022.csproj", "{B2627942-0AA5-408C-9254-E44B2229E1F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.HyperV", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperV\SolidCP.Providers.Virtualization.HyperV.csproj", "{D13F1026-B4AD-469D-BD85-DA54278DB74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.HyperV", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperV\FuseCP.Providers.Virtualization.HyperV.csproj", "{D13F1026-B4AD-469D-BD85-DA54278DB74A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.HyperV2012R2", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperV-2012R2\SolidCP.Providers.Virtualization.HyperV2012R2.csproj", "{3004A796-C4D7-4819-B43A-5E626F582C2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.HyperV2012R2", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperV-2012R2\FuseCP.Providers.Virtualization.HyperV2012R2.csproj", "{3004A796-C4D7-4819-B43A-5E626F582C2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.HyperV2016", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperV-2016\SolidCP.Providers.Virtualization.HyperV2016.csproj", "{B773C0F2-0728-42AA-8CA7-2A1964B3F842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.HyperV2016", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperV-2016\FuseCP.Providers.Virtualization.HyperV2016.csproj", "{B773C0F2-0728-42AA-8CA7-2A1964B3F842}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.HyperV2019", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperV-2019\SolidCP.Providers.Virtualization.HyperV2019.csproj", "{10D149BD-32B3-4A00-91AC-791ECBAD81BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.HyperV2019", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperV-2019\FuseCP.Providers.Virtualization.HyperV2019.csproj", "{10D149BD-32B3-4A00-91AC-791ECBAD81BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.HyperV2022", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperV-2022\SolidCP.Providers.Virtualization.HyperV2022.csproj", "{D1547F4B-B12C-473E-B80D-CB55FEABD5C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.HyperV2022", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperV-2022\FuseCP.Providers.Virtualization.HyperV2022.csproj", "{D1547F4B-B12C-473E-B80D-CB55FEABD5C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.HyperVvmm", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperV-vmm\SolidCP.Providers.Virtualization.HyperVvmm.csproj", "{5F31BEAD-5C8D-4C0C-9F78-4BA390A00F44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.HyperVvmm", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperV-vmm\FuseCP.Providers.Virtualization.HyperVvmm.csproj", "{5F31BEAD-5C8D-4C0C-9F78-4BA390A00F44}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.VirtualizationForPC.HyperVForPC", "SolidCP\Sources\SolidCP.Providers.Virtualization.HyperVForPC\SolidCP.Providers.VirtualizationForPC.HyperVForPC.csproj", "{750AC503-394B-4F75-99B7-BD37A5EC9541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.VirtualizationForPC.HyperVForPC", "FuseCP\Sources\FuseCP.Providers.Virtualization.HyperVForPC\FuseCP.Providers.VirtualizationForPC.HyperVForPC.csproj", "{750AC503-394B-4F75-99B7-BD37A5EC9541}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Virtualization.Proxmox", "SolidCP\Sources\SolidCP.Providers.Virtualization.Proxmox\SolidCP.Providers.Virtualization.Proxmox.csproj", "{FE608AF9-164F-496D-BFC6-804EA5ECAF9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Virtualization.Proxmox", "FuseCP\Sources\FuseCP.Providers.Virtualization.Proxmox\FuseCP.Providers.Virtualization.Proxmox.csproj", "{FE608AF9-164F-496D-BFC6-804EA5ECAF9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.Apache", "SolidCP\Sources\SolidCP.Providers.Web.Apache\SolidCP.Providers.Web.Apache.csproj", "{BF458917-A86E-4A04-8694-35CA89CE4206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.Apache", "FuseCP\Sources\FuseCP.Providers.Web.Apache\FuseCP.Providers.Web.Apache.csproj", "{BF458917-A86E-4A04-8694-35CA89CE4206}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.HeliconZoo", "SolidCP\Sources\SolidCP.Providers.Web.HeliconZoo\SolidCP.Providers.Web.HeliconZoo.csproj", "{0633F058-B999-4520-8705-9669F0C861E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.HeliconZoo", "FuseCP\Sources\FuseCP.Providers.Web.HeliconZoo\FuseCP.Providers.Web.HeliconZoo.csproj", "{0633F058-B999-4520-8705-9669F0C861E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs100", "SolidCP\Sources\SolidCP.Providers.Web.IIs100\SolidCP.Providers.Web.IIs100.csproj", "{F0ABACC3-8473-4D75-90FA-A35BB297660F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs100", "FuseCP\Sources\FuseCP.Providers.Web.IIs100\FuseCP.Providers.Web.IIs100.csproj", "{F0ABACC3-8473-4D75-90FA-A35BB297660F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs100 (1)", "SolidCP\Sources\SolidCP.Providers.Web.IIs100aspv2\SolidCP.Providers.Web.IIs100.csproj", "{774A9384-33B4-4164-A5A1-DF66E3A2C491}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs100 (1)", "FuseCP\Sources\FuseCP.Providers.Web.IIs100aspv2\FuseCP.Providers.Web.IIs100.csproj", "{774A9384-33B4-4164-A5A1-DF66E3A2C491}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs60", "SolidCP\Sources\SolidCP.Providers.Web.IIs60\SolidCP.Providers.Web.IIs60.csproj", "{254F3E24-C566-4945-9925-3C454D94C4DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs60", "FuseCP\Sources\FuseCP.Providers.Web.IIs60\FuseCP.Providers.Web.IIs60.csproj", "{254F3E24-C566-4945-9925-3C454D94C4DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs70", "SolidCP\Sources\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIs70.csproj", "{D30A4C06-7108-47C6-B037-DEE14BF1E0E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs70", "FuseCP\Sources\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIs70.csproj", "{D30A4C06-7108-47C6-B037-DEE14BF1E0E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs70 (1)", "SolidCP\Sources\SolidCP.Providers.Web.IIS70aspv2\SolidCP.Providers.Web.IIs70.csproj", "{B0CE3496-4CCF-49C5-8E8F-6C3170EDAF25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs70 (1)", "FuseCP\Sources\FuseCP.Providers.Web.IIS70aspv2\FuseCP.Providers.Web.IIs70.csproj", "{B0CE3496-4CCF-49C5-8E8F-6C3170EDAF25}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs80", "SolidCP\Sources\SolidCP.Providers.Web.IIs80\SolidCP.Providers.Web.IIs80.csproj", "{710F508C-E74B-483E-8DE2-F766B6ABC30F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs80", "FuseCP\Sources\FuseCP.Providers.Web.IIs80\FuseCP.Providers.Web.IIs80.csproj", "{710F508C-E74B-483E-8DE2-F766B6ABC30F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs80 (1)", "SolidCP\Sources\SolidCP.Providers.Web.IIs80aspv2\SolidCP.Providers.Web.IIs80.csproj", "{482E95CD-A620-4201-A8ED-109FC7A38B4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs80 (1)", "FuseCP\Sources\FuseCP.Providers.Web.IIs80aspv2\FuseCP.Providers.Web.IIs80.csproj", "{482E95CD-A620-4201-A8ED-109FC7A38B4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.LetsEncrypt", "SolidCP\Sources\SolidCP.Providers.Web.LetsEncrypt\SolidCP.Providers.Web.LetsEncrypt.csproj", "{108DE255-BC37-4D21-9318-5EC0C6F1422B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.LetsEncrypt", "FuseCP\Sources\FuseCP.Providers.Web.LetsEncrypt\FuseCP.Providers.Web.LetsEncrypt.csproj", "{108DE255-BC37-4D21-9318-5EC0C6F1422B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.WebDav", "SolidCP\Sources\SolidCP.Providers.Web.WebDav\SolidCP.Providers.Web.WebDav.csproj", "{4F84C71C-358A-4453-B035-E81F3C250ADD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.WebDav", "FuseCP\Sources\FuseCP.Providers.Web.WebDav\FuseCP.Providers.Web.WebDav.csproj", "{4F84C71C-358A-4453-B035-E81F3C250ADD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.Directi", "SolidCP\Sources\SolidCP.Registrars.Directi\SolidCP.Plugins.Directi.csproj", "{EDBF7730-5DA1-49C1-9003-6F6C52492D43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.Directi", "FuseCP\Sources\FuseCP.Registrars.Directi\FuseCP.Plugins.Directi.csproj", "{EDBF7730-5DA1-49C1-9003-6F6C52492D43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.Enom", "SolidCP\Sources\SolidCP.Registrars.Enom\SolidCP.Plugins.Enom.csproj", "{8090366F-C3D5-4414-8942-2F1CBD407727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.Enom", "FuseCP\Sources\FuseCP.Registrars.Enom\FuseCP.Plugins.Enom.csproj", "{8090366F-C3D5-4414-8942-2F1CBD407727}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Plugins.OfflineRegistrar", "SolidCP\Sources\SolidCP.Registrars.OfflineRegistrar\SolidCP.Plugins.OfflineRegistrar.csproj", "{E7818F48-4B22-46B4-9EA5-8DDAFC0843E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Plugins.OfflineRegistrar", "FuseCP\Sources\FuseCP.Registrars.OfflineRegistrar\FuseCP.Plugins.OfflineRegistrar.csproj", "{E7818F48-4B22-46B4-9EA5-8DDAFC0843E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.SchedulerService", "SolidCP\Sources\SolidCP.SchedulerService\SolidCP.SchedulerService.csproj", "{ADFD61E7-BC29-4285-87FF-7916C99554EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.SchedulerService", "FuseCP\Sources\FuseCP.SchedulerService\FuseCP.SchedulerService.csproj", "{ADFD61E7-BC29-4285-87FF-7916C99554EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.SE", "SolidCP\Sources\SolidCP.SE\SolidCP.SE.csproj", "{3265D201-80C5-4289-8BAB-1AD1B01B3F12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.SE", "FuseCP\Sources\FuseCP.SE\FuseCP.SE.csproj", "{3265D201-80C5-4289-8BAB-1AD1B01B3F12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.SE.Test", "SolidCP\Sources\SolidCP.SE.Test\SolidCP.SE.Test.csproj", "{3F21455D-DCC2-4A7E-9C6C-D6842FF50E6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.SE.Test", "FuseCP\Sources\FuseCP.SE.Test\FuseCP.SE.Test.csproj", "{3F21455D-DCC2-4A7E-9C6C-D6842FF50E6A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server", "SolidCP\Sources\SolidCP.Server\SolidCP.Server.csproj", "{44272704-BE4C-461A-925A-A51B1FB06461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server", "FuseCP\Sources\FuseCP.Server\FuseCP.Server.csproj", "{44272704-BE4C-461A-925A-A51B1FB06461}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.Client", "SolidCP\Sources\SolidCP.Server.Client\SolidCP.Server.Client.csproj", "{A36C59A7-FB0B-4352-A507-D9F1A6D6BF76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.Client", "FuseCP\Sources\FuseCP.Server.Client\FuseCP.Server.Client.csproj", "{A36C59A7-FB0B-4352-A507-D9F1A6D6BF76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.Tests", "SolidCP\Sources\SolidCP.Server.Tests\SolidCP.Server.Tests.csproj", "{57215E05-F097-41D4-BCAF-E7919401B1A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.Tests", "FuseCP\Sources\FuseCP.Server.Tests\FuseCP.Server.Tests.csproj", "{57215E05-F097-41D4-BCAF-E7919401B1A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.Utils", "SolidCP\Sources\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj", "{3A0BCB02-EBC3-44A8-AFE9-018FDBD1E1F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.Utils", "FuseCP\Sources\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj", "{3A0BCB02-EBC3-44A8-AFE9-018FDBD1E1F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.WPIService", "SolidCP\Sources\SolidCP.Server.WPIService\SolidCP.Server.WPIService.csproj", "{FF29670C-6969-48A4-9A45-F2CF896FF4D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.WPIService", "FuseCP\Sources\FuseCP.Server.WPIService\FuseCP.Server.WPIService.csproj", "{FF29670C-6969-48A4-9A45-F2CF896FF4D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.WPIServiceContract", "SolidCP\Sources\SolidCP.Server.WPIServiceContract\SolidCP.Server.WPIServiceContract.csproj", "{0BC2F809-3900-47A5-BA01-B482F6AEEB53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.WPIServiceContract", "FuseCP\Sources\FuseCP.Server.WPIServiceContract\FuseCP.Server.WPIServiceContract.csproj", "{0BC2F809-3900-47A5-BA01-B482F6AEEB53}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Templates", "SolidCP\Sources\SolidCP.Templates\SolidCP.Templates.csproj", "{21DC6880-F17E-4940-AC8C-C2263F82172D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Templates", "FuseCP\Sources\FuseCP.Templates\FuseCP.Templates.csproj", "{21DC6880-F17E-4940-AC8C-C2263F82172D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Web.Clients", "SolidCP\Sources\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj", "{176C671D-8BA0-4778-B34F-382D60780041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Web.Clients", "FuseCP\Sources\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj", "{176C671D-8BA0-4778-B34F-382D60780041}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Web.Services", "SolidCP\Sources\SolidCP.Web.Services\SolidCP.Web.Services.csproj", "{B58617E6-5737-4DC2-9B26-BE220EDC1950}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Web.Services", "FuseCP\Sources\FuseCP.Web.Services\FuseCP.Web.Services.csproj", "{B58617E6-5737-4DC2-9B26-BE220EDC1950}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebDav.Core", "SolidCP\Sources\SolidCP.WebDav.Core\SolidCP.WebDav.Core.csproj", "{7921AA51-D20D-48BE-A214-2D731274F9E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebDav.Core", "FuseCP\Sources\FuseCP.WebDav.Core\FuseCP.WebDav.Core.csproj", "{7921AA51-D20D-48BE-A214-2D731274F9E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebDavPortal", "SolidCP\Sources\SolidCP.WebDavPortal\SolidCP.WebDavPortal.csproj", "{3B99DD3F-8654-4952-B6FA-E4860C8A860E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebDavPortal", "FuseCP\Sources\FuseCP.WebDavPortal\FuseCP.WebDavPortal.csproj", "{3B99DD3F-8654-4952-B6FA-E4860C8A860E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebPortal.Core", "SolidCP\Sources\SolidCP.WebPortal\SolidCP.WebPortal.Core.csproj", "{EFAEBAE6-643A-4957-B289-FEC5EECEAB06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebPortal.Core", "FuseCP\Sources\FuseCP.WebPortal\FuseCP.WebPortal.Core.csproj", "{EFAEBAE6-643A-4957-B289-FEC5EECEAB06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebPortal", "SolidCP\Sources\SolidCP.WebPortal\SolidCP.WebPortal.csproj", "{04A7B9FD-AADC-4952-982C-BCE74C51FE9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebPortal", "FuseCP\Sources\FuseCP.WebPortal\FuseCP.WebPortal.csproj", "{04A7B9FD-AADC-4952-982C-BCE74C51FE9F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Whois", "SolidCP\Sources\SolidCP.Whois\SolidCP.Whois.csproj", "{66CED106-7A14-4647-81C4-12CF6FBF3056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Whois", "FuseCP\Sources\FuseCP.Whois\FuseCP.Whois.csproj", "{66CED106-7A14-4647-81C4-12CF6FBF3056}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.HyperV.Utils", "SolidCP.HyperV.Utils", "{E6BE9C5B-0C18-4018-B32E-FEAA0A3F8061}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.HyperV.Utils", "FuseCP.HyperV.Utils", "{E6BE9C5B-0C18-4018-B32E-FEAA0A3F8061}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{99E2C07D-3993-43CC-AC06-5AB99AC8A605}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.HyperV.Utils", "SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils\SolidCP.HyperV.Utils.csproj", "{CE67CC33-5136-49A4-9DDB-6AD59D6F4BF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.HyperV.Utils", "FuseCP.HyperV.Utils\Sources\FuseCP.HyperV.Utils\FuseCP.HyperV.Utils.csproj", "{CE67CC33-5136-49A4-9DDB-6AD59D6F4BF4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.Installer", "SolidCP.Installer", "{A9F38792-2C5B-436E-BCDF-AAE98EF57811}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.Installer", "FuseCP.Installer", "{A9F38792-2C5B-436E-BCDF-AAE98EF57811}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{7AA225C0-A95A-40EF-BC07-C302194754C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Setup.WIXBootstrapper", "SolidCP.Installer\Sources\Setup.WIXBootstrapper\Setup.WIXBootstrapper.csproj", "{E720EC53-E942-4329-9274-2367D907E4F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Setup.WIXBootstrapper", "FuseCP.Installer\Sources\Setup.WIXBootstrapper\Setup.WIXBootstrapper.csproj", "{E720EC53-E942-4329-9274-2367D907E4F5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Installer", "SolidCP.Installer\Sources\SolidCP.Installer\SolidCP.Installer.csproj", "{07BB5ED2-C7EE-47BC-8E2E-04D7A9CEEF55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Installer", "FuseCP.Installer\Sources\FuseCP.Installer\FuseCP.Installer.csproj", "{07BB5ED2-C7EE-47BC-8E2E-04D7A9CEEF55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Installer.Core", "SolidCP.Installer\Sources\SolidCP.Installer.Core\SolidCP.Installer.Core.csproj", "{DFA7EB3B-5AAD-462A-BE19-B1C26A038152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Installer.Core", "FuseCP.Installer\Sources\FuseCP.Installer.Core\FuseCP.Installer.Core.csproj", "{DFA7EB3B-5AAD-462A-BE19-B1C26A038152}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.SchedulerServiceInstaller", "SolidCP.Installer\Sources\SolidCP.SchedulerServiceInstaller\SolidCP.SchedulerServiceInstaller.csproj", "{F346F046-CB70-45A3-A674-B934CBCF4FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.SchedulerServiceInstaller", "FuseCP.Installer\Sources\FuseCP.SchedulerServiceInstaller\FuseCP.SchedulerServiceInstaller.csproj", "{F346F046-CB70-45A3-A674-B934CBCF4FD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Setup", "SolidCP.Installer\Sources\SolidCP.Setup\SolidCP.Setup.csproj", "{EE004B83-5219-4938-AAA9-BE9772F4E116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Setup", "FuseCP.Installer\Sources\FuseCP.Setup\FuseCP.Setup.csproj", "{EE004B83-5219-4938-AAA9-BE9772F4E116}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.SilentInstaller", "SolidCP.Installer\Sources\SolidCP.SilentInstaller\SolidCP.SilentInstaller.csproj", "{C0396436-A68A-4028-96CD-DD9233B96259}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.SilentInstaller", "FuseCP.Installer\Sources\FuseCP.SilentInstaller\FuseCP.SilentInstaller.csproj", "{C0396436-A68A-4028-96CD-DD9233B96259}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.UniversalInstaller", "SolidCP.Installer\Sources\SolidCP.UniversalInstaller\SolidCP.UniversalInstaller.csproj", "{CD464E21-E19E-4F35-B623-A2C31C0BCFA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.UniversalInstaller", "FuseCP.Installer\Sources\FuseCP.UniversalInstaller\FuseCP.UniversalInstaller.csproj", "{CD464E21-E19E-4F35-B623-A2C31C0BCFA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.UniversalInstaller.Core", "SolidCP.Installer\Sources\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj", "{45F26B94-6288-46A8-A698-1FA46331F3F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.UniversalInstaller.Core", "FuseCP.Installer\Sources\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj", "{45F26B94-6288-46A8-A698-1FA46331F3F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.UniversalInstaller.DotnetHost", "SolidCP.Installer\Sources\SolidCP.UniversalInstaller.DotnetHost\SolidCP.UniversalInstaller.DotnetHost.csproj", "{8364A7A9-A6BB-4DAB-8051-CBD41D6DB287}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.UniversalInstaller.DotnetHost", "FuseCP.Installer\Sources\FuseCP.UniversalInstaller.DotnetHost\FuseCP.UniversalInstaller.DotnetHost.csproj", "{8364A7A9-A6BB-4DAB-8051-CBD41D6DB287}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Updater", "SolidCP.Installer\Sources\SolidCP.Updater\SolidCP.Updater.csproj", "{C034F7A5-04FD-4ADD-8439-E367ABE54E8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Updater", "FuseCP.Installer\Sources\FuseCP.Updater\FuseCP.Updater.csproj", "{C034F7A5-04FD-4ADD-8439-E367ABE54E8C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WIXInstaller", "SolidCP.Installer\Sources\SolidCP.WIXInstaller\SolidCP.WIXInstaller.csproj", "{AAECABA8-71F7-48DC-B614-57FDC35997C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WIXInstaller", "FuseCP.Installer\Sources\FuseCP.WIXInstaller\FuseCP.WIXInstaller.csproj", "{AAECABA8-71F7-48DC-B614-57FDC35997C4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.VmConfig", "SolidCP.VmConfig", "{D395AE39-37D2-4E00-9720-443E9926F366}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.VmConfig", "FuseCP.VmConfig", "{D395AE39-37D2-4E00-9720-443E9926F366}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{7A178F2E-8EC9-425C-8CF2-BC08DC123DA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.VmConfig", "SolidCP.VmConfig\Sources\SolidCP.VmConfig\SolidCP.VmConfig.csproj", "{91459525-0FEC-4017-BC19-9752A26A84D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.VmConfig", "FuseCP.VmConfig\Sources\FuseCP.VmConfig\FuseCP.VmConfig.csproj", "{91459525-0FEC-4017-BC19-9752A26A84D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.VmConfig.Common", "SolidCP.VmConfig\Sources\SolidCP.VmConfig.Common\SolidCP.VmConfig.Common.csproj", "{DFCCCCCC-CFEA-465C-9801-05CAD46C24C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.VmConfig.Common", "FuseCP.VmConfig\Sources\FuseCP.VmConfig.Common\FuseCP.VmConfig.Common.csproj", "{DFCCCCCC-CFEA-465C-9801-05CAD46C24C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.WebSite", "SolidCP.WebSite", "{CE468CEA-86F5-4718-B55A-DCBD4AB8E3FF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.WebSite", "FuseCP.WebSite", "{CE468CEA-86F5-4718-B55A-DCBD4AB8E3FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{2E6671AC-BC49-4C55-95EE-7A8DCA0D8E58}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebSite", "SolidCP.WebSite\Sources\SolidCP.WebSite\SolidCP.WebSite.csproj", "{04268C12-158E-427C-A6B4-A55FC099045A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebSite", "FuseCP.WebSite\Sources\FuseCP.WebSite\FuseCP.WebSite.csproj", "{04268C12-158E-427C-A6B4-A55FC099045A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{944D34BA-D671-45F8-BB33-E9B65F814F7C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{471ED7ED-F160-4F03-8B88-B0DD3FC84D0F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebPortal", "SolidCP\Build\Debug\Portal\SolidCP.WebPortal.csproj", "{5AB10D6A-DB31-4E44-B0AE-DAAB5F0B41F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebPortal", "FuseCP\Build\Debug\Portal\FuseCP.WebPortal.csproj", "{5AB10D6A-DB31-4E44-B0AE-DAAB5F0B41F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{85C5D09D-4839-41B9-B1D4-7221B3284492}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebPortal", "SolidCP\Build\Release\Portal\SolidCP.WebPortal.csproj", "{50F8FE59-32BD-4CD0-8444-3F6E183FDAB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebPortal", "FuseCP\Build\Release\Portal\FuseCP.WebPortal.csproj", "{50F8FE59-32BD-4CD0-8444-3F6E183FDAB5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.Providers.Web.IIS70", "SolidCP.Providers.Web.IIS70", "{B6D6DF1C-E4C9-481E-8FCB-7A5D7C184ED3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.Providers.Web.IIS70", "FuseCP.Providers.Web.IIS70", "{B6D6DF1C-E4C9-481E-8FCB-7A5D7C184ED3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Web.IIs70", "SolidCP\Sources\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIS70\SolidCP.Providers.Web.IIs70.csproj", "{C9E24E56-A439-4F09-B29E-71D9F61861B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Web.IIs70", "FuseCP\Sources\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIS70\FuseCP.Providers.Web.IIs70.csproj", "{C9E24E56-A439-4F09-B29E-71D9F61861B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C1F24BBA-EA9C-4933-BC73-230837E778EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeCopyrightInfo", "SolidCP\Sources\Tools\ChangeCopyrightInfo\ChangeCopyrightInfo.csproj", "{51F2D762-CB17-4F0D-9F57-B168666ADB34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeCopyrightInfo", "FuseCP\Sources\Tools\ChangeCopyrightInfo\ChangeCopyrightInfo.csproj", "{51F2D762-CB17-4F0D-9F57-B168666ADB34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCPTransportAgent", "SolidCP\Sources\Tools\SCPTransportAgent\SCPTransportAgent.csproj", "{CC650EC7-0584-4FBC-B35D-9171028475DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCPTransportAgent", "FuseCP\Sources\Tools\SCPTransportAgent\SCPTransportAgent.csproj", "{CC650EC7-0584-4FBC-B35D-9171028475DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.AWStats.Viewer", "SolidCP\Sources\Tools\SolidCP.AWStats.Viewer\SolidCP.AWStats.Viewer.csproj", "{2EAD5E79-489E-4280-9470-85F5BD1F1F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.AWStats.Viewer", "FuseCP\Sources\Tools\FuseCP.AWStats.Viewer\FuseCP.AWStats.Viewer.csproj", "{2EAD5E79-489E-4280-9470-85F5BD1F1F76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.FilesComparer", "SolidCP\Sources\Tools\SolidCP.FilesComparer\SolidCP.FilesComparer.csproj", "{5409E3C9-E1E1-48B8-B5E5-04981F941DC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.FilesComparer", "FuseCP\Sources\Tools\FuseCP.FilesComparer\FuseCP.FilesComparer.csproj", "{5409E3C9-E1E1-48B8-B5E5-04981F941DC6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.FixDefaultPublicFolderMailbox", "SolidCP\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox\SolidCP.FixDefaultPublicFolderMailbox.csproj", "{54F27F6C-F665-4D66-B6BA-39717B4E52B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.FixDefaultPublicFolderMailbox", "FuseCP\Sources\Tools\FuseCP.FixDefaultPublicFolderMailbox\FuseCP.FixDefaultPublicFolderMailbox.csproj", "{54F27F6C-F665-4D66-B6BA-39717B4E52B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Import.CsvBulk", "SolidCP\Sources\Tools\SolidCP.Import.CsvBulk\SolidCP.Import.CsvBulk.csproj", "{CC90E2F5-9516-4489-B250-C717143736AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Import.CsvBulk", "FuseCP\Sources\Tools\FuseCP.Import.CsvBulk\FuseCP.Import.CsvBulk.csproj", "{CC90E2F5-9516-4489-B250-C717143736AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Import.Enterprise", "SolidCP\Sources\Tools\SolidCP.Import.Enterprise\SolidCP.Import.Enterprise.csproj", "{B8A1C795-14F4-40C3-A7D8-2447B728FBB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Import.Enterprise", "FuseCP\Sources\Tools\FuseCP.Import.Enterprise\FuseCP.Import.Enterprise.csproj", "{B8A1C795-14F4-40C3-A7D8-2447B728FBB4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.LocalizationToolkit", "SolidCP\Sources\Tools\SolidCP.LocalizationToolkit\SolidCP.LocalizationToolkit.csproj", "{B6A578FF-58E7-4C62-ABDA-D22FD6F951CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.LocalizationToolkit", "FuseCP\Sources\Tools\FuseCP.LocalizationToolkit\FuseCP.LocalizationToolkit.csproj", "{B6A578FF-58E7-4C62-ABDA-D22FD6F951CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.PasswordEncoder", "SolidCP\Sources\Tools\SolidCP.PasswordEncoder\SolidCP.PasswordEncoder.csproj", "{DD4B4F4C-654B-4B85-9C19-94CB34002D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.PasswordEncoder", "FuseCP\Sources\Tools\FuseCP.PasswordEncoder\FuseCP.PasswordEncoder.csproj", "{DD4B4F4C-654B-4B85-9C19-94CB34002D85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WseClean", "SolidCP\Sources\Tools\SolidCP.WseClean\WseClean.csproj", "{A9A14622-29A7-497F-AA72-4322C3359510}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WseClean", "FuseCP\Sources\Tools\FuseCP.WseClean\WseClean.csproj", "{A9A14622-29A7-497F-AA72-4322C3359510}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeScriptClientGenerator", "SolidCP\Sources\Tools\TypeScriptClientGenerator\TypeScriptClientGenerator.csproj", "{7159D82C-1EF3-4873-BB7B-4BBFEFD83FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeScriptClientGenerator", "FuseCP\Sources\Tools\TypeScriptClientGenerator\TypeScriptClientGenerator.csproj", "{7159D82C-1EF3-4873-BB7B-4BBFEFD83FF5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{8CDBDC76-1D76-45E2-AD94-FFCA02D0B572}"
 EndProject
@@ -359,119 +359,119 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{8E98E14F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Install", "Install", "{7FB2D582-0A33-442A-A76D-2465EBB768ED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebPortal", "SolidCP\Deploy\Debug\Install\Portal\SolidCP.WebPortal.csproj", "{A9942A6B-9CFF-4B5F-A525-C92D81451BA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebPortal", "FuseCP\Deploy\Debug\Install\Portal\FuseCP.WebPortal.csproj", "{A9942A6B-9CFF-4B5F-A525-C92D81451BA0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "swaggerwcf", "swaggerwcf", "{EE05BF6A-ADBF-43CB-BA0B-934C8DA1A4DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E2DF59FD-627E-4ED5-B756-5606C743872D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerWcf", "SolidCP\Lib\swaggerwcf\src\SwaggerWcf\SwaggerWcf.csproj", "{F9BD7323-7291-4A0C-B060-EDB172C14EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerWcf", "FuseCP\Lib\swaggerwcf\src\SwaggerWcf\SwaggerWcf.csproj", "{F9BD7323-7291-4A0C-B060-EDB172C14EE0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerWcf.Test.Service", "SolidCP\Lib\swaggerwcf\src\SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{CDD2E802-D3C9-4FE5-BF8D-7545304CEF0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwaggerWcf.Test.Service", "FuseCP\Lib\swaggerwcf\src\SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{CDD2E802-D3C9-4FE5-BF8D-7545304CEF0A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebFormsForCore", "WebFormsForCore", "{70EF0F4B-9476-4F66-9FA3-E4DB09004543}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F3BD7D4A-AC0B-4AD1-99A7-F3764AF0CB89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Build", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Build\WebFormsForCore.Build.csproj", "{0330254F-5522-4ED3-A75D-8CDDAAD4A3CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Build", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Build\WebFormsForCore.Build.csproj", "{0330254F-5522-4ED3-A75D-8CDDAAD4A3CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Compilers", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Compilers\WebFormsForCore.Compilers.csproj", "{6942C0E3-9426-44FA-A1B2-4A5163E16F31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Compilers", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Compilers\WebFormsForCore.Compilers.csproj", "{6942C0E3-9426-44FA-A1B2-4A5163E16F31}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Configuration", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Configuration\WebFormsForCore.Configuration.csproj", "{BE520CD4-0E02-431D-ABA1-6E9D939E2A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Configuration", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Configuration\WebFormsForCore.Configuration.csproj", "{BE520CD4-0E02-431D-ABA1-6E9D939E2A0E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Drawing", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Drawing\WebFormsForCore.Drawing.csproj", "{F12CAAFF-F3D0-406B-A647-32AFF3F1722F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Drawing", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Drawing\WebFormsForCore.Drawing.csproj", "{F12CAAFF-F3D0-406B-A647-32AFF3F1722F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Serialization.Formatters", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Serialization.Formatters\WebFormsForCore.Serialization.Formatters.csproj", "{86327D42-E37C-447E-A176-7ADFAE84F21F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Serialization.Formatters", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Serialization.Formatters\WebFormsForCore.Serialization.Formatters.csproj", "{86327D42-E37C-447E-A176-7ADFAE84F21F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.TestApp", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.TestApp\WebFormsForCore.TestApp.csproj", "{43130F23-38E2-479B-B8A8-AB1F7244C714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.TestApp", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.TestApp\WebFormsForCore.TestApp.csproj", "{43130F23-38E2-479B-B8A8-AB1F7244C714}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.TestApp.NetFX", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.TestApp\WebFormsForCore.TestApp.NetFX.csproj", "{58FBC6CE-6176-4FFF-A8BA-0FD0424FEF6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.TestApp.NetFX", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.TestApp\WebFormsForCore.TestApp.NetFX.csproj", "{58FBC6CE-6176-4FFF-A8BA-0FD0424FEF6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web\WebFormsForCore.Web.csproj", "{279A517B-55EC-4519-9315-1C6410905890}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web\WebFormsForCore.Web.csproj", "{279A517B-55EC-4519-9315-1C6410905890}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.ApplicationServices", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.ApplicationServices\WebFormsForCore.Web.ApplicationServices.csproj", "{B872ACC6-BE43-49F2-855D-CA3711F80CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.ApplicationServices", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.ApplicationServices\WebFormsForCore.Web.ApplicationServices.csproj", "{B872ACC6-BE43-49F2-855D-CA3711F80CCA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Extensions", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Extensions\WebFormsForCore.Web.Extensions.csproj", "{AB55D8B2-4ED3-45C5-BEE5-E150A48CD821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Extensions", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Extensions\WebFormsForCore.Web.Extensions.csproj", "{AB55D8B2-4ED3-45C5-BEE5-E150A48CD821}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Infrastructure", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Infrastructure\WebFormsForCore.Web.Infrastructure.csproj", "{DDFAB084-51C3-4FFD-9FA7-596E04C2E9E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Infrastructure", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Infrastructure\WebFormsForCore.Web.Infrastructure.csproj", "{DDFAB084-51C3-4FFD-9FA7-596E04C2E9E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Mobile", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Mobile\WebFormsForCore.Web.Mobile.csproj", "{8C02776E-A82F-4D9B-84AA-81BC1439BD07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Mobile", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Mobile\WebFormsForCore.Web.Mobile.csproj", "{8C02776E-A82F-4D9B-84AA-81BC1439BD07}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Web.Optimization", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Optimization\System.Web.Optimization.csproj", "{19E7A5F3-9727-4B2B-9C41-576AA70889C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Web.Optimization", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Optimization\System.Web.Optimization.csproj", "{19E7A5F3-9727-4B2B-9C41-576AA70889C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Optimization", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Optimization\WebFormsForCore.Web.Optimization.csproj", "{8DB47325-27B0-4483-9BCB-EDC3B7CC797E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Optimization", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Optimization\WebFormsForCore.Web.Optimization.csproj", "{8DB47325-27B0-4483-9BCB-EDC3B7CC797E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Optimization.WebForms", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Optimization.WebForms\WebFormsForCore.Web.Optimization.WebForms.csproj", "{410E4279-2E83-4627-BE2C-5642A4227D56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Optimization.WebForms", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Optimization.WebForms\WebFormsForCore.Web.Optimization.WebForms.csproj", "{410E4279-2E83-4627-BE2C-5642A4227D56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.RegularExpressions", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.RegularExpressions\WebFormsForCore.Web.RegularExpressions.csproj", "{95059B57-B32D-4737-B28C-FC488C192F14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.RegularExpressions", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.RegularExpressions\WebFormsForCore.Web.RegularExpressions.csproj", "{95059B57-B32D-4737-B28C-FC488C192F14}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Reporting", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Reporting\WebFormsForCore.Web.Reporting.csproj", "{CE288276-E9BD-4628-9079-C24780C28C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Reporting", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Reporting\WebFormsForCore.Web.Reporting.csproj", "{CE288276-E9BD-4628-9079-C24780C28C4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Services", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Services\WebFormsForCore.Web.Services.csproj", "{0AD77B95-3FA2-4F87-B451-5E1F59A8115B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.Web.Services", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.Web.Services\WebFormsForCore.Web.Services.csproj", "{0AD77B95-3FA2-4F87-B451-5E1F59A8115B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.WebGrease", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.WebGrease\WebFormsForCore.WebGrease.csproj", "{71DF3C2D-491C-42BB-A5D9-5F8C3B6355DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsForCore.WebGrease", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.WebGrease\WebFormsForCore.WebGrease.csproj", "{71DF3C2D-491C-42BB-A5D9-5F8C3B6355DF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebGrease", "SolidCP\Lib\WebFormsForCore\src\WebFormsForCore.WebGrease\WebGrease.csproj", "{6602C01C-51A7-418E-83AE-2070925AD74A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebGrease", "FuseCP\Lib\WebFormsForCore\src\WebFormsForCore.WebGrease\WebGrease.csproj", "{6602C01C-51A7-418E-83AE-2070925AD74A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.EnterpriseServer (1)", "SolidCP.EnterpriseServer", "{795D9E5E-7AA6-444D-AF5E-57ABF5D803C0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.EnterpriseServer (1)", "FuseCP.EnterpriseServer", "{795D9E5E-7AA6-444D-AF5E-57ABF5D803C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServices", "WebServices", "{F8DCA9B4-4F73-4E4A-AC12-9E4753A1E208}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Client", "SolidCP\Sources\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj", "{158C0E77-DB07-46E8-8A74-693336224BA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Client", "FuseCP\Sources\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj", "{158C0E77-DB07-46E8-8A74-693336224BA8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.Server (1)", "SolidCP.Server", "{CEC9FAF6-DD80-4D14-8A41-2F1BB9827856}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.Server (1)", "FuseCP.Server", "{CEC9FAF6-DD80-4D14-8A41-2F1BB9827856}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServices", "WebServices", "{8C55024E-6EF5-4F08-92FB-E4DC548EB3EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.Client", "SolidCP\Sources\SolidCP.Server\WebServices\SolidCP.Build\SolidCP.Server.Client.csproj", "{46723587-B294-4CF5-AB7B-A3A09CB80F23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.Client", "FuseCP\Sources\FuseCP.Server\WebServices\FuseCP.Build\FuseCP.Server.Client.csproj", "{46723587-B294-4CF5-AB7B-A3A09CB80F23}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.WebPortal (1)", "SolidCP.WebPortal", "{5D914C03-CF32-4099-82C8-A8B0141529D6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.WebPortal (1)", "FuseCP.WebPortal", "{5D914C03-CF32-4099-82C8-A8B0141529D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopModules", "DesktopModules", "{876D61A3-DED5-45A1-9DC4-3EC183C2453A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Portal.Modules.Core", "SolidCP\Sources\SolidCP.WebPortal\DesktopModules\SolidCP\SolidCP.Portal.Modules.Core.csproj", "{56FCE528-4155-4A0F-96F8-D0DD386787BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Portal.Modules.Core", "FuseCP\Sources\FuseCP.WebPortal\DesktopModules\FuseCP\FuseCP.Portal.Modules.Core.csproj", "{56FCE528-4155-4A0F-96F8-D0DD386787BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Portal.Modules", "SolidCP\Sources\SolidCP.WebPortal\DesktopModules\SolidCP\SolidCP.Portal.Modules.csproj", "{F174AFF9-C9ED-4E87-A3A4-BB8382092DC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Portal.Modules", "FuseCP\Sources\FuseCP.WebPortal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj", "{F174AFF9-C9ED-4E87-A3A4-BB8382092DC3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{FE05D808-3F17-4E02-BD91-3010D9707BD0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopModules", "DesktopModules", "{342C9253-CB1F-4B96-BC88-F367DB3A6595}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Portal.Modules", "SolidCP\Build\Debug\Portal\DesktopModules\SolidCP\SolidCP.Portal.Modules.csproj", "{3D43479F-800B-41CA-8FB2-E31CE2C6F8C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Portal.Modules", "FuseCP\Build\Debug\Portal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj", "{3D43479F-800B-41CA-8FB2-E31CE2C6F8C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{1AC2BBDF-1339-48FE-9147-A89F48249F53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopModules", "DesktopModules", "{2B989370-61CA-4E9F-802C-21A25A958061}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Portal.Modules", "SolidCP\Build\Release\Portal\DesktopModules\SolidCP\SolidCP.Portal.Modules.csproj", "{448C4788-DE44-467D-BA4F-9F2349AACD8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Portal.Modules", "FuseCP\Build\Release\Portal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj", "{448C4788-DE44-467D-BA4F-9F2349AACD8D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StandaloneServerSetup", "StandaloneServerSetup", "{21BA81D2-2A43-4BD1-8D83-A8B2C6D63A03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.WebPortal", "SolidCP\Deploy\Debug\Install\StandaloneServerSetup\Portal\SolidCP.WebPortal.csproj", "{5769FA3B-A04C-4134-B4D0-BF0F792915E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.WebPortal", "FuseCP\Deploy\Debug\Install\StandaloneServerSetup\Portal\FuseCP.WebPortal.csproj", "{5769FA3B-A04C-4134-B4D0-BF0F792915E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{BA0AA7B7-6910-4B47-86FB-6561CCD3BD49}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopModules", "DesktopModules", "{027CB26E-9F6D-47A9-A263-6BADB8C6A703}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Portal.Modules", "SolidCP\Deploy\Debug\Install\Portal\DesktopModules\SolidCP\SolidCP.Portal.Modules.csproj", "{BCED6A06-7D8A-41D8-8F9F-A1A0B8010BA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Portal.Modules", "FuseCP\Deploy\Debug\Install\Portal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj", "{BCED6A06-7D8A-41D8-8F9F-A1A0B8010BA3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{6D4F36E2-EF7C-4182-905B-D7E3DDEAFEC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopModules", "DesktopModules", "{A3911E59-95AD-4396-BBCB-166F291A1730}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Portal.Modules", "SolidCP\Deploy\Debug\Install\StandaloneServerSetup\Portal\DesktopModules\SolidCP\SolidCP.Portal.Modules.csproj", "{D69B0D6E-854B-4B32-823F-26649C2A473B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Portal.Modules", "FuseCP\Deploy\Debug\Install\StandaloneServerSetup\Portal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj", "{D69B0D6E-854B-4B32-823F-26649C2A473B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.VmConfig", "SolidCP.VmConfig", "{3B880A7C-4FC0-41F2-8F4D-E9E33119ABE4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.VmConfig", "FuseCP.VmConfig", "{3B880A7C-4FC0-41F2-8F4D-E9E33119ABE4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linux", "Linux", "{0AD0D555-26B0-4286-8B9A-FB89B1ED642A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCoreVersion", "NetCoreVersion", "{5610179D-A61D-4996-B1DB-45FDC999F9A8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolidCP.LinuxVmConfig", "SolidCP.LinuxVmConfig", "{CE3F1D50-E2DF-4627-8FF8-730A2DBB55E4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FuseCP.LinuxVmConfig", "FuseCP.LinuxVmConfig", "{CE3F1D50-E2DF-4627-8FF8-730A2DBB55E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.LinuxVmConfig", "SolidCP\Sources\Tools\SolidCP.VmConfig\Linux\NetCoreVersion\SolidCP.LinuxVmConfig\SolidCP.LinuxVmConfig\SolidCP.LinuxVmConfig.csproj", "{42683E6C-7DC0-406E-AEAC-479E53E138E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.LinuxVmConfig", "FuseCP\Sources\Tools\FuseCP.VmConfig\Linux\NetCoreVersion\FuseCP.LinuxVmConfig\FuseCP.LinuxVmConfig\FuseCP.LinuxVmConfig.csproj", "{42683E6C-7DC0-406E-AEAC-479E53E138E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.LinuxVmConfig.Common", "SolidCP\Sources\Tools\SolidCP.VmConfig\Linux\NetCoreVersion\SolidCP.LinuxVmConfig\SolidCP.LinuxVmConfig.Common\SolidCP.LinuxVmConfig.Common.csproj", "{D9BE9661-E522-45C3-9CCB-61D7E9B3D394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.LinuxVmConfig.Common", "FuseCP\Sources\Tools\FuseCP.VmConfig\Linux\NetCoreVersion\FuseCP.LinuxVmConfig\FuseCP.LinuxVmConfig.Common\FuseCP.LinuxVmConfig.Common.csproj", "{D9BE9661-E522-45C3-9CCB-61D7E9B3D394}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

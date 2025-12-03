@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net48;net10.0</TargetFrameworks>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -49,7 +49,7 @@
 		<Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
+	  <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
 	</ItemGroup>
 
     <Target Name="CopyServiceProcessRuntime" AfterTargets="Build"  Condition="'$(TargetFramework)' == 'net10.0'">

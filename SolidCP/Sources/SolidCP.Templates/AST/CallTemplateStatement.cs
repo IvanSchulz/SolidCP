@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace SolidCP.Templates.AST
+namespace FuseCP.Templates.AST
 {
     internal class CallTemplateStatement : Statement
     {

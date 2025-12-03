@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSFTP70_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MSFTP70_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSFTP70_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MSFTP70_Settings" %>
 <%@ Register Src="Common_ActiveDirectoryIntegration.ascx" TagName="ActiveDirectoryIntegration" TagPrefix="uc1" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 <table width="100%">

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>net48;net10.0</TargetFrameworks>
 		<Nullable>enable</Nullable>
@@ -9,7 +9,7 @@
 		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
         <SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>SolidCP.snk</AssemblyOriginatorKeyFile>
+		<AssemblyOriginatorKeyFile>FuseCP.snk</AssemblyOriginatorKeyFile>
 		<IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(TargetFramework.ToLowerInvariant())\</IntermediateOutputPath>
 	</PropertyGroup>
 
@@ -18,15 +18,15 @@
         <Compile Include="..\..\..\VersionInfo.cs" Link="VersionInfo.cs" />
         <EmbeddedResource Remove="Microsoft.NET.Sdk.Razor.SourceGenerators\**" />
 		<None Remove="Microsoft.NET.Sdk.Razor.SourceGenerators\**" />
-        <Services Include="SolidCP.Build.WebServices\**\*.g.cs" />
-        <Folder Include="SolidCP.Build.WebServices" />
+        <Services Include="FuseCP.Build.WebServices\**\*.g.cs" />
+        <Folder Include="FuseCP.Build.WebServices" />
     </ItemGroup>
     <PropertyGroup>
         <AnyServices>@(Services)</AnyServices>
     </PropertyGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\SolidCP.Web.Clients\SolidCP.Web.Clients.csproj" />
-        <ProjectReference Include="..\..\..\SolidCP.Server\SolidCP.Server.csproj" Condition="'$(AnyServices)' == ''"
+		<ProjectReference Include="..\..\..\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj" />
+        <ProjectReference Include="..\..\..\FuseCP.Server\FuseCP.Server.csproj" Condition="'$(AnyServices)' == ''"
 			ReferenceOutputAssembly="false" PrivateAssets="All" />
     </ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net48'">

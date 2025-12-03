@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public class PropertyDescription
 	{

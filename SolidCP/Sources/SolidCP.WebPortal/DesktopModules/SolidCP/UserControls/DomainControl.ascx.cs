@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -36,9 +36,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Globalization;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class DomainControl : SolidCPControlBase
+    public partial class DomainControl : FuseCPControlBase
     {
         public class DomainNameEventArgs : EventArgs
         {

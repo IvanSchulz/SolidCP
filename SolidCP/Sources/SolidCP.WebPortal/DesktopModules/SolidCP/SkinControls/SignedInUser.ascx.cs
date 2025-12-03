@@ -41,10 +41,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     public partial class SignedInUser : System.Web.UI.UserControl
     {

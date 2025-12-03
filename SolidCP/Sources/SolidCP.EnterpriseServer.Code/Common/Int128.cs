@@ -49,7 +49,7 @@ using System.Text;
 using Microsoft.SqlServer.Server;
 #endif
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Represents a 128-bit signed integer.

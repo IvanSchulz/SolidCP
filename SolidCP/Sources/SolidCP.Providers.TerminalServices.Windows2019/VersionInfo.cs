@@ -1,4 +1,4 @@
-// Copyright (c) 2018, SolidCP
+// Copyright (c) 2018, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -45,8 +45,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCompany("SolidCP")]
-[assembly: AssemblyCopyright("Copyright © 2018 SolidCP.")]
+[assembly: AssemblyCompany("FuseCP")]
+[assembly: AssemblyCopyright("Copyright © 2018 FuseCP.")]
 [assembly: AssemblyVersion("1.0.2")]
 [assembly: AssemblyFileVersion("1.0.2")]
 [assembly: AssemblyInformationalVersion("1.0.2")]

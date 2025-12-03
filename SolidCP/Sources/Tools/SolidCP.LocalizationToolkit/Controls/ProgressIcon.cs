@@ -35,7 +35,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	/// <summary>
 	/// Animated Icon.

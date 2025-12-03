@@ -2,11 +2,11 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <?include Config.wxi?>
     <?define VERSION="1.0.1"?>
-    <Product Id="*" Name="SolidCP Scheduler Service Installer" Language="1033" Version="$(var.VERSION)" Manufacturer="SolidCP" UpgradeCode="629ccd5c-1f6d-4168-bbe6-01c69e232f44">
+    <Product Id="*" Name="FuseCP Scheduler Service Installer" Language="1033" Version="$(var.VERSION)" Manufacturer="FuseCP" UpgradeCode="629ccd5c-1f6d-4168-bbe6-01c69e232f44">
 
       <Package InstallerVersion="200" Compressed="yes" />
         <Media Id="1" EmbedCab="yes" Cabinet="schedulerservice.cab" />
-        <Feature Id="ProductFeature" Title="SolidCP Scheduler Service Installer" Level="1" ConfigurableDirectory="PI_SCHEDULER_INSTALL_DIR" AllowAdvertise="no">
+        <Feature Id="ProductFeature" Title="FuseCP Scheduler Service Installer" Level="1" ConfigurableDirectory="PI_SCHEDULER_INSTALL_DIR" AllowAdvertise="no">
             <ComponentGroupRef Id="SchedulerServiceFiles" />
         </Feature>
         <Property Id="BannerBitmap">bannrbmp</Property>
@@ -22,13 +22,13 @@
       <WixVariable Id="WixUIBannerBmp" Value="bannrbmp.bmp" />
         <WixVariable Id="WixUIDialogBmp" Value="dlgbmp.bmp" />
         <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
-        <Icon Id="SolidCP.ico" SourceFile="SolidCP.ico" />
-        <Property Id="ARPPRODUCTICON" Value="SolidCP.ico" />
+        <Icon Id="FuseCP.ico" SourceFile="FuseCP.ico" />
+        <Property Id="ARPPRODUCTICON" Value="FuseCP.ico" />
         <Property Id="SERVERNAME" Value="localhost\SQLExpress" />
         <Property Id="WIXUI_INSTALLDIR" Value="PI_SCHEDULER_INSTALL_DIR" />
-        <Property Id="PI_SCHEDULER_INSTALL_DIR" Value="c:\SolidCP\SchedulerService" />
+        <Property Id="PI_SCHEDULER_INSTALL_DIR" Value="c:\FuseCP\SchedulerService" />
         <Property Id="CONNECTIONSTRING" Value="1" />
-        <Property Id="DATABASENAME" Value="SolidCP" />
+        <Property Id="DATABASENAME" Value="FuseCP" />
         <Property Id="AUTHENTICATIONTYPE" Value="Windows Authentication" />
         <Binary Id="bannrbmp" SourceFile="bannrbmp.bmp" />
         <WixVariable Id="BUILDSRVPATH" Value = "$(var.PROJECTPATH)\Build\$(var.BUILD)\SchedulerService" />
@@ -49,7 +49,7 @@
                 <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="[BannerBitmap]" />
                 <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
                 <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
-                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Configure SolidCP database connection string" />
+                <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Configure FuseCP database connection string" />
                 <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Database connection string" />
                 <Control Type="Text" Id="ServerLabel" Width="50" Height="17" X="75" Y="68" Text="SQL Server:" />
                 <Control Type="Edit" Id="ServerEdit" Width="163" Height="15" X="142" Y="68" Property="SERVERNAME" />
@@ -117,7 +117,7 @@
     </Product>
     <Fragment>
         <CustomAction Id="CheckConnection" BinaryKey="CheckConnection.CA" DllEntry="CheckConnection" />
-        <Binary Id="CheckConnection.CA" SourceFile="bin\SolidCP.SchedulerServiceInstaller.CA.dll" />
+        <Binary Id="CheckConnection.CA" SourceFile="bin\FuseCP.SchedulerServiceInstaller.CA.dll" />
     </Fragment>
     <Fragment>
         <!-- immediate CA -->
@@ -136,7 +136,7 @@
   </Fragment>
     <Fragment>
         <Directory Id="TARGETDIR" Name="SourceDir">
-            <Directory Id="SolidCPFOLDER" Name="SolidCP">
+            <Directory Id="FuseCPFOLDER" Name="FuseCP">
                 <Directory Id="PI_SCHEDULER_INSTALL_DIR" Name="SchedulerService" />
             </Directory>
         </Directory>

@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" Codebehind="NetticaDNS_Settings.ascx.cs"
-    Inherits="SolidCP.Portal.ProviderControls.NetticaDNS_Settings" %>
+    Inherits="FuseCP.Portal.ProviderControls.NetticaDNS_Settings" %>
 <%@ Register Src="Common_IPAddressesList.ascx" TagName="IPAddressesList" TagPrefix="uc2" %>
 <%@ Register Src="Common_SecondaryDNSServers.ascx" TagName="SecondaryDNSServers"
     TagPrefix="uc1" %>

@@ -43,9 +43,9 @@ using System.Timers;
 using System.Diagnostics;
 using System.Threading;
 using System.Linq;
-using SolidCP.Web.Clients;
+using FuseCP.Web.Clients;
 
-namespace SolidCP.EnterpriseServer;
+namespace FuseCP.EnterpriseServer;
 
 public class Global : System.Web.HttpApplication
 {

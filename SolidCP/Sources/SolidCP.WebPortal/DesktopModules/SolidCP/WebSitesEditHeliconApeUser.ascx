@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeUser.ascx.cs" Inherits="SolidCP.Portal.WebSitesEditHeliconApeUser" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeUser.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditHeliconApeUser" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc2" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

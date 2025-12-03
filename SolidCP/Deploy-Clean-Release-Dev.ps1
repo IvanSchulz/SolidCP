@@ -1,5 +1,5 @@
-﻿$scriptPath = ((Get-Item -Path ".\").FullName)
-$SolidCP_Path = "C:\SolidCP"
+$scriptPath = ((Get-Item -Path ".\").FullName)
+$FuseCP_Path = "C:\FuseCP"
 Write-Host "Current script directory is `'$scriptPath`'" -ForegroundColor Yellow
 
 #########################################################################################################################################################
@@ -40,8 +40,8 @@ CleanBuildFolder -Folder "$scriptPath\Deploy\Release\Update"
 if (Test-Path "$scriptPath\Deploy\Release") {
 	Get-ChildItem "$scriptPath\Deploy\Release" -File -Filter "*.zip" | Remove-Item -Force
 }
-Remove-Item -Path "$scriptPath\Deploy\Release\SolidCP.msi" -Force -ErrorAction SilentlyContinue
-Remove-Item -Path "$scriptPath\Deploy\Release\SolidCPSetup.exe" -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$scriptPath\Deploy\Release\FuseCP.msi" -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$scriptPath\Deploy\Release\FuseCPSetup.exe" -Force -ErrorAction SilentlyContinue
 
 # Remove the msbuild.log file before building
 
@@ -62,29 +62,29 @@ if ([bool]((Get-Content "$scriptPath\msbuild.log") -match ' error ')) {
 }else{
 	Write-Host "Current directory: `'$((Get-Location).Path)`'"
 	Write-Host "`n`n`n Copying the config files over" -ForegroundColor Cyan
-	# Copy the "Enterprise Server" web.config over as long as it has been installed by the SolidCP Installer
-	if (Test-Path "$SolidCP_Path\Enterprise Server\web.config") {
-		Copy-Item -Path "$SolidCP_Path\Enterprise Server\web.config" -Destination "$scriptPath\Build\Release\EnterpriseServer" -Recurse -force
+	# Copy the "Enterprise Server" web.config over as long as it has been installed by the FuseCP Installer
+	if (Test-Path "$FuseCP_Path\Enterprise Server\web.config") {
+		Copy-Item -Path "$FuseCP_Path\Enterprise Server\web.config" -Destination "$scriptPath\Build\Release\EnterpriseServer" -Recurse -force
 		write-host " Enterprise Server - web.config" -ForegroundColor Green
 	}
-	# Copy the "Portal" web.config over as long as it has been installed by the SolidCP Installer
-	if (Test-Path "$SolidCP_Path\Portal\web.config") {
-		Copy-Item -Path "$SolidCP_Path\Portal\web.config" -Destination "$scriptPath\Build\Release\Portal" -Recurse -force
+	# Copy the "Portal" web.config over as long as it has been installed by the FuseCP Installer
+	if (Test-Path "$FuseCP_Path\Portal\web.config") {
+		Copy-Item -Path "$FuseCP_Path\Portal\web.config" -Destination "$scriptPath\Build\Release\Portal" -Recurse -force
 		write-host " Portal - web.config" -ForegroundColor Green
 	}
-	# Copy the "Portal" SiteSettings.config over as long as it has been installed by the SolidCP Installer
-	if (Test-Path "$SolidCP_Path\Portal\App_Data\SiteSettings.config") {
-		Copy-Item -Path "$SolidCP_Path\Portal\App_Data\SiteSettings.config" -Destination "$scriptPath\Build\Release\Portal\App_Data" -Recurse -force
+	# Copy the "Portal" SiteSettings.config over as long as it has been installed by the FuseCP Installer
+	if (Test-Path "$FuseCP_Path\Portal\App_Data\SiteSettings.config") {
+		Copy-Item -Path "$FuseCP_Path\Portal\App_Data\SiteSettings.config" -Destination "$scriptPath\Build\Release\Portal\App_Data" -Recurse -force
 		write-host " Portal - SiteSettings.config" -ForegroundColor Green
 	}
-	# Copy the "Server" web.config over as long as it has been installed by the SolidCP Installer
-	if (Test-Path "$SolidCP_Path\Server\web.config") {
-		Copy-Item -Path "$SolidCP_Path\Server\web.config" -Destination "$scriptPath\Build\Release\Server" -Recurse -force
+	# Copy the "Server" web.config over as long as it has been installed by the FuseCP Installer
+	if (Test-Path "$FuseCP_Path\Server\web.config") {
+		Copy-Item -Path "$FuseCP_Path\Server\web.config" -Destination "$scriptPath\Build\Release\Server" -Recurse -force
 		write-host " Server - web.config" -ForegroundColor Green
 	}
-	# Copy the "Cloud Storage Portal" web.config over as long as it has been installed by the SolidCP Installer
-	if (Test-Path "$SolidCP_Path\Cloud Storage Portal\web.config") {
-		Copy-Item -Path "$SolidCP_Path\Cloud Storage Portal\web.config" -Destination "$scriptPath\Build\Release\WebDavPortal" -Recurse -force
+	# Copy the "Cloud Storage Portal" web.config over as long as it has been installed by the FuseCP Installer
+	if (Test-Path "$FuseCP_Path\Cloud Storage Portal\web.config") {
+		Copy-Item -Path "$FuseCP_Path\Cloud Storage Portal\web.config" -Destination "$scriptPath\Build\Release\WebDavPortal" -Recurse -force
 		write-host " Cloud Storage Portal (WebDav) - web.config" -ForegroundColor Green
 	}
 }

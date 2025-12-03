@@ -41,12 +41,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.WebPortal;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.WebPortal;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     public partial class UserSpaceBreadcrumb : System.Web.UI.UserControl
     {

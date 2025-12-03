@@ -1,8 +1,8 @@
-﻿using System;
-using SolidCP.Providers;
-using SolidCP.Web.Services;
+using System;
+using FuseCP.Providers;
+using FuseCP.Web.Services;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     public class Settings
     {

@@ -45,9 +45,9 @@ using System.Windows.Forms.VisualStyles;
 using System.Xml;
 //using Microsoft.Deployment.WindowsInstaller;
 using WixToolset.Dtf.WindowsInstaller;
-using SolidCP.Setup;
+using FuseCP.Setup;
 
-namespace SolidCP.SchedulerServiceInstaller
+namespace FuseCP.SchedulerServiceInstaller
 {
     public class CustomActions
     {
@@ -91,7 +91,7 @@ namespace SolidCP.SchedulerServiceInstaller
                 : previousConnectionString;
 
             ChangeConfigString("/configuration/connectionStrings/add[@name='EnterpriseServer']", "connectionString", connectionString, serviceFolder);
-            ChangeConfigString("/configuration/appSettings/add[@key='SolidCP.CryptoKey']", "value", previousCryptoKey, serviceFolder);
+            ChangeConfigString("/configuration/appSettings/add[@key='FuseCP.CryptoKey']", "value", previousCryptoKey, serviceFolder);
             InstallService(serviceFolder);
 
             return ActionResult.Success;
@@ -112,7 +112,7 @@ namespace SolidCP.SchedulerServiceInstaller
 
             session["SERVICEFOLDER"] = session["PI_SCHEDULER_INSTALL_DIR"];
 
-            var servicePath = SecurityUtils.GetServicePath("SolidCP Scheduler");
+            var servicePath = SecurityUtils.GetServicePath("FuseCP Scheduler");
 
             if (!string.IsNullOrEmpty(servicePath))
             {
@@ -123,7 +123,7 @@ namespace SolidCP.SchedulerServiceInstaller
                     using (var reader = new StreamReader(path))
                     {
                         string content = reader.ReadToEnd();
-                        var pattern = new Regex(@"(?<=<add key=""SolidCP.CryptoKey"" .*?value\s*=\s*"")[^""]+(?="".*?>)");
+                        var pattern = new Regex(@"(?<=<add key=""FuseCP.CryptoKey"" .*?value\s*=\s*"")[^""]+(?="".*?>)");
                         Match match = pattern.Match(content);
                         session["PREVIOUSCRYPTOKEY"] = match.Value;
 
@@ -151,7 +151,7 @@ namespace SolidCP.SchedulerServiceInstaller
             {
                 var schedulerService =
                     ServiceController.GetServices().FirstOrDefault(
-                        s => s.DisplayName.Equals("SolidCP Scheduler", StringComparison.CurrentCultureIgnoreCase));
+                        s => s.DisplayName.Equals("FuseCP Scheduler", StringComparison.CurrentCultureIgnoreCase));
 
                 if (schedulerService != null)
                 {
@@ -160,9 +160,9 @@ namespace SolidCP.SchedulerServiceInstaller
                     SecurityUtils.DeleteService(schedulerService.ServiceName);
                 }
 
-                ManagedInstallerClass.InstallHelper(new[] { "/i", Path.Combine(installFolder, "SolidCP.SchedulerService.exe") });
+                ManagedInstallerClass.InstallHelper(new[] { "/i", Path.Combine(installFolder, "FuseCP.SchedulerService.exe") });
 
-                StartService("SolidCP Scheduler");
+                StartService("FuseCP Scheduler");
             }
             catch (Exception)
             {
@@ -175,7 +175,7 @@ namespace SolidCP.SchedulerServiceInstaller
             {
                 var schedulerService =
                     ServiceController.GetServices().FirstOrDefault(
-                        s => s.DisplayName.Equals("SolidCP Scheduler", StringComparison.CurrentCultureIgnoreCase));
+                        s => s.DisplayName.Equals("FuseCP Scheduler", StringComparison.CurrentCultureIgnoreCase));
 
                 if (schedulerService != null)
                 {

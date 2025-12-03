@@ -32,9 +32,9 @@
 
 using System.Collections.Generic;
 using System.Web.UI;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public enum VirtualMachineSettingsMode
     {

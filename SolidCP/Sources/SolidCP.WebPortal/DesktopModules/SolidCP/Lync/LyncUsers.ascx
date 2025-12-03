@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncUsers.ascx.cs" Inherits="SolidCP.Portal.Lync.LyncUsers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncUsers.ascx.cs" Inherits="FuseCP.Portal.Lync.LyncUsers" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -76,7 +76,7 @@
                         </Columns>
                     </asp:GridView>
                     <asp:ObjectDataSource ID="odsAccountsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetLyncUsersPagedCount"
-                        SelectMethod="GetLyncUsersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.LyncHelper">
+                        SelectMethod="GetLyncUsersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.LyncHelper">
                         <SelectParameters>
                             <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
                             <asp:ControlParameter Name="filterColumn" ControlID="ddlSearchColumn" PropertyName="SelectedValue" />

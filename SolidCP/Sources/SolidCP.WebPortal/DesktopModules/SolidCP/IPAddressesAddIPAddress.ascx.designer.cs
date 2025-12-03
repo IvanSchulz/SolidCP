@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class IPAddressesAddIPAddress {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// validatorsSummary-Steuerelement
@@ -91,7 +91,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl startIP;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl startIP;
         
         /// <summary>
         /// locTo-Steuerelement
@@ -109,7 +109,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl endIP;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl endIP;
         
         /// <summary>
         /// InternalAddressRow-Steuerelement
@@ -136,7 +136,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl internalIP;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl internalIP;
         
         /// <summary>
         /// SubnetRow-Steuerelement
@@ -163,7 +163,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl subnetMask;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl subnetMask;
         
         /// <summary>
         /// GatewayRow-Steuerelement
@@ -190,7 +190,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl defaultGateway;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl defaultGateway;
         
         /// <summary>
         /// VLANRow-Steuerelement
@@ -217,7 +217,7 @@ namespace SolidCP.Portal {
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.EditIPAddressControl VLAN;
+        protected global::FuseCP.Portal.UserControls.EditIPAddressControl VLAN;
         
         /// <summary>
         /// lblComments-Steuerelement

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail60_EditDomain_Throttling.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail60_EditDomain_Throttling" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail60_EditDomain_Throttling.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail60_EditDomain_Throttling" %>
 <table>
     <tr>
         <td align="right" width = "200"><asp:Label ID="lbMessagesPerHour" runat="server" meta:resourcekey="lbMessagesPerHour" /></td>

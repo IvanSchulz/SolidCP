@@ -41,12 +41,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-	public partial class ExchangePublicFolders : SolidCPModuleBase
+	public partial class ExchangePublicFolders : FuseCPModuleBase
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

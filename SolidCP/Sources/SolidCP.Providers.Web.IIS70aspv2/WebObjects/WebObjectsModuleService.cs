@@ -34,7 +34,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 
-namespace SolidCP.Providers.Web.Iis.WebObjects
+namespace FuseCP.Providers.Web.Iis.WebObjects
 {
     using System;
     using System.IO;
@@ -45,12 +45,12 @@ namespace SolidCP.Providers.Web.Iis.WebObjects
 
     using Common;
     using Utility;
-    using SolidCP.Providers.Utils;
+    using FuseCP.Providers.Utils;
 
     using Microsoft.Web.Management;
     using Microsoft.Web.Administration;
     using Microsoft.Web.Management.Server;
-	using SolidCP.Providers.Web.Iis.Authentication;
+	using FuseCP.Providers.Web.Iis.Authentication;
 
     internal sealed class WebObjectsModuleService : ConfigurationModuleService
     {

@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperVForPrivateCloud_Settings.ascx.cs"
-    Inherits="SolidCP.Portal.ProviderControls.HyperVForPrivateCloud_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperVForPrivateCloud_Settings.ascx.cs"
+    Inherits="FuseCP.Portal.ProviderControls.HyperVForPrivateCloud_Settings" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <asp:ValidationSummary ID="ValidationSummary" runat="server" ShowMessageBox="true"
     ShowSummary="false" />

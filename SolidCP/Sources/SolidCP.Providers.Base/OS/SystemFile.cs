@@ -31,8 +31,8 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Web;
-namespace SolidCP.Providers.OS
+using FuseCP.Providers.Web;
+namespace FuseCP.Providers.OS
 {
     /// <summary>
     /// Summary description for FileSystemItem.

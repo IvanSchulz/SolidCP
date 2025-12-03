@@ -1,4 +1,4 @@
-// Copyright (c) 2016, SolidCPbinary
+// Copyright (c) 2016, FuseCPbinary
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -30,15 +30,15 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.EnterpriseServer.Extensions;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.DNS;
-using SolidCP.Providers.DomainLookup;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Web;
+using FuseCP.EnterpriseServer.Extensions;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.DNS;
+using FuseCP.Providers.DomainLookup;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Web;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -52,11 +52,11 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using Whois.NET;
-using OS = SolidCP.Server.Client;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using OS = FuseCP.Server.Client;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	/// <summary>
 	/// Summary description for ServersController.
@@ -663,7 +663,7 @@ namespace SolidCP.EnterpriseServer
 			Dictionary<int, string> res = new Dictionary<int, string>();
 			string downloadPath = Path.Combine(
 				Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-				"SolidCP", "Downloads");
+				"FuseCP", "Downloads");
 			string unpackedZipDirectory = downloadPath + zipFileName.Replace(".zip", "");
 			string ipAddress = os.Url.Split('/')[2].Split(':')[0];
 

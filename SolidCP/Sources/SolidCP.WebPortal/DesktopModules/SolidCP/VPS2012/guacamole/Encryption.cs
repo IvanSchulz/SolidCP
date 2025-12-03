@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +7,7 @@ using System.IO;
 using System.Text;
 
 
-namespace SolidCP.Portal.VPS2012.guacamole
+namespace FuseCP.Portal.VPS2012.guacamole
 {
     public class Encryption
     {

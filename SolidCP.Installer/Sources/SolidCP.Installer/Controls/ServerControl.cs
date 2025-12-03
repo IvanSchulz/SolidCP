@@ -38,7 +38,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SolidCP.Installer.Controls
+namespace FuseCP.Installer.Controls
 {
 	internal partial class ServerControl : ResultViewControl
 	{

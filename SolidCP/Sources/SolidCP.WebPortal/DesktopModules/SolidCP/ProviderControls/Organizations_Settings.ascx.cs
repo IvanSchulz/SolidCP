@@ -32,9 +32,9 @@
 
 using System;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class Organizations_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class Organizations_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         public const string RootOU = "RootOU";
         public const string PrimaryDomainController = "PrimaryDomainController";

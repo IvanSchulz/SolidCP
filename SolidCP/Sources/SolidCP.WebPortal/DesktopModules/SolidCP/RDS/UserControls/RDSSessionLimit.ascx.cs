@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.RDS.UserControls
+namespace FuseCP.Portal.RDS.UserControls
 {
     public partial class RDSSessionLimit : System.Web.UI.UserControl
     {

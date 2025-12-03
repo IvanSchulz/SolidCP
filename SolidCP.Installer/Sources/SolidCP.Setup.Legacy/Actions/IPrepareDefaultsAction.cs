@@ -34,10 +34,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public interface IPrepareDefaultsAction
 	{
-		void Run(SolidCP.Setup.SetupVariables vars);
+		void Run(FuseCP.Setup.SetupVariables vars);
 	}
 }

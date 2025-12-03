@@ -32,9 +32,9 @@
 
 using System;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class ItemButtonPanel : SolidCPControlBase
+    public partial class ItemButtonPanel : FuseCPControlBase
     {
         public bool ButtonSaveVisible
         {

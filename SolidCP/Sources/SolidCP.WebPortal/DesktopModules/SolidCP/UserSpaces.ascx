@@ -1,9 +1,9 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserSpaces.ascx.cs" Inherits="SolidCP.Portal.UserSpaces" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserSpaces.ascx.cs" Inherits="FuseCP.Portal.UserSpaces" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 <%@ Register Src="UserOrganization.ascx" TagName="UserOrganization" TagPrefix="scp" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <script src="/JavaScript/chosen.min.js" type="text/javascript"></script>
 
@@ -104,6 +104,6 @@
     </Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsPackages" runat="server" SelectMethod="GetMyPackages"
-    TypeName="SolidCP.Portal.PackagesHelper" OnSelected="odsPackages_Selected"></asp:ObjectDataSource>
+    TypeName="FuseCP.Portal.PackagesHelper" OnSelected="odsPackages_Selected"></asp:ObjectDataSource>
     </ContentTemplate>
 </asp:UpdatePanel>

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Merak_EditList.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Merak_EditList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Merak_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Merak_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>
 

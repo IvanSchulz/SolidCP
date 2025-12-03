@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SecurityGroupTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.SecurityGroupTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SecurityGroupTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.SecurityGroupTabs" %>
             <asp:DataList ID="dlTabs" runat="server" RepeatDirection="Horizontal"
                 RepeatLayout="Flow" EnableViewState="false">
                 <ItemStyle Wrap="False" />

@@ -1,7 +1,7 @@
-﻿using System;
-using SolidCP.WebDavPortal.Models.Common;
+using System;
+using FuseCP.WebDavPortal.Models.Common;
 
-namespace SolidCP.WebDavPortal.Models
+namespace FuseCP.WebDavPortal.Models
 {
     public class ErrorModel
     {

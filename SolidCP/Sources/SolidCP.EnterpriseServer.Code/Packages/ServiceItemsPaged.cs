@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class ServiceItemsPaged
 	{
@@ -49,7 +49,7 @@ namespace SolidCP.EnterpriseServer
 			set { this.recordsCount = value; }
 		}
 
-		public SolidCP.Providers.ServiceProviderItem[] PageItems
+		public FuseCP.Providers.ServiceProviderItem[] PageItems
 		{
 			get { return this.pageItems; }
 			set { this.pageItems = value; }

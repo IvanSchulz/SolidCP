@@ -36,11 +36,11 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VdcHome : SolidCPModuleBase
+    public partial class VdcHome : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace SolidCP.Portal.VPS
             searchBox.AjaxData = this.GetSearchBoxAjaxData();
 
             // toggle columns
-            bool isUserSelected = PanelSecurity.SelectedUser.Role == SolidCP.EnterpriseServer.UserRole.User;
+            bool isUserSelected = PanelSecurity.SelectedUser.Role == FuseCP.EnterpriseServer.UserRole.User;
             gvServers.Columns[3].Visible = !isUserSelected;
             gvServers.Columns[4].Visible = !isUserSelected;
 

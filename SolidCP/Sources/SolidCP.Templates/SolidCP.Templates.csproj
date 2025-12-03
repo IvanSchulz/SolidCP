@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>13</LangVersion>
         <Nullable>disable</Nullable>
-        <AssemblyTitle>SolidCP.Templates</AssemblyTitle>
-        <Product>SolidCP.Templates</Product>
+        <AssemblyTitle>FuseCP.Templates</AssemblyTitle>
+        <Product>FuseCP.Templates</Product>
         <DebugType>portable</DebugType>
         <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-        <OutputPath>..\SolidCP.EnterpriseServer\bin\netstandard</OutputPath>
+        <OutputPath>..\FuseCP.EnterpriseServer\bin\netstandard</OutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     </PropertyGroup>

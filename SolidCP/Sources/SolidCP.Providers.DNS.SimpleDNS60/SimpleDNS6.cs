@@ -37,11 +37,11 @@ using System.Text;
 using System.IO;
 
 using JHSoftware.SimpleDNSPlus;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Win32;
 using System.Reflection;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	public delegate void BuildDnsRecordDataEventHandler(string zoneName, ref string type,
 		DnsRecord record, List<string> data);
@@ -245,7 +245,7 @@ namespace SolidCP.Providers.DNS
 			// CREATE PRIMARY DNS ZONE
 			string primaryNameServer = System.Net.Dns.GetHostEntry("LocalHost").HostName;
 			DNSZone zoneObj = cn.CreateZone(zoneName, primaryNameServer, "hostmaster");
-			zoneObj.Comments = String.Concat("Created with SolidCP DNS API at ", DateTime.Now);
+			zoneObj.Comments = String.Concat("Created with FuseCP DNS API at ", DateTime.Now);
 
 			// Setup zone data transfer
 			if (secondaryServers != null && secondaryServers.Length != 0)
@@ -429,7 +429,7 @@ namespace SolidCP.Providers.DNS
 				Connection cn = SetupProviderConnection();
 
 				DNSZone dnsZone = cn.GetZone(zoneName);
-				dnsZone.Comments = "Updated by SolidCP DNS API at " + DateTime.Now.ToString();
+				dnsZone.Comments = "Updated by FuseCP DNS API at " + DateTime.Now.ToString();
 
 				DNSRecord soaRecord = (dnsZone.Records.Count == 0) ? dnsZone.Records.Add("@", "SOA") : dnsZone.Records[0];
 				// Fill record fields with the data

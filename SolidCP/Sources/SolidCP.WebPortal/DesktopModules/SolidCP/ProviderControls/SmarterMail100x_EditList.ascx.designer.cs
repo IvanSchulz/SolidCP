@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
 
 
@@ -66,7 +66,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.WebPortal.Code.Controls.DesktopContextValidator ctxValDomain;
+        protected global::FuseCP.WebPortal.Code.Controls.DesktopContextValidator ctxValDomain;
 
         /// <summary>
         /// lblPostingPassword control.
@@ -210,7 +210,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailEditItems mailEditItems;
+        protected global::FuseCP.Portal.MailEditItems mailEditItems;
 
         /// <summary>
         /// AdditionalOptions control.
@@ -219,7 +219,7 @@ namespace SolidCP.Portal.ProviderControls
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel AdditionalOptions;
+        protected global::FuseCP.Portal.CollapsiblePanel AdditionalOptions;
 
         /// <summary>
         /// pAdditionalOptions control.

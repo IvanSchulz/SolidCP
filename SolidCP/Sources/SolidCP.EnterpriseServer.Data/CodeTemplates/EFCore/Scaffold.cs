@@ -1,4 +1,4 @@
-﻿#if !NETFRAMEWORK && !NETSTANDARD
+#if !NETFRAMEWORK && !NETSTANDARD
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Scaffolding;
@@ -13,9 +13,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.EnterpriseServer.Data.Scaffolding
+namespace FuseCP.EnterpriseServer.Data.Scaffolding
 {
 	public class Scaffold
 	{
@@ -266,7 +266,7 @@ namespace SolidCP.EnterpriseServer.Data.Scaffolding
 					Console.WriteLine($"EntityData for {typeName} found.");
 				return entityData;
 			}
-			var dataFile = Path.Combine(Path.GetTempPath(), "SolidCP.EntityData.txt");
+			var dataFile = Path.Combine(Path.GetTempPath(), "FuseCP.EntityData.txt");
 			var dataInfo = new FileInfo(dataFile);
 			//Console.WriteLine($"TemplateFile: {templateFile}");
 			//Console.WriteLine($"ProjectDir: {options.ProjectDir}");

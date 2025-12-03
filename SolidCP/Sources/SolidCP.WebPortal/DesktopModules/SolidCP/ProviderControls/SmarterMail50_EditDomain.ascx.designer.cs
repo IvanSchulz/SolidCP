@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class SmarterMail50_EditDomain {
@@ -79,7 +79,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secFeatures;
+        protected global::FuseCP.Portal.CollapsiblePanel secFeatures;
         
         /// <summary>
         /// FeaturesPanel control.
@@ -97,7 +97,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.SmarterMail50_EditDomain_Features featuresSection;
+        protected global::FuseCP.Portal.ProviderControls.SmarterMail50_EditDomain_Features featuresSection;
         
         /// <summary>
         /// secSharing control.
@@ -106,7 +106,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSharing;
+        protected global::FuseCP.Portal.CollapsiblePanel secSharing;
         
         /// <summary>
         /// SharingPanel control.
@@ -124,7 +124,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.SmarterMail50_EditDomain_Sharing sharingSection;
+        protected global::FuseCP.Portal.ProviderControls.SmarterMail50_EditDomain_Sharing sharingSection;
         
         /// <summary>
         /// secThrottling control.
@@ -133,7 +133,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secThrottling;
+        protected global::FuseCP.Portal.CollapsiblePanel secThrottling;
         
         /// <summary>
         /// ThrottlingPanel control.
@@ -151,7 +151,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.SmarterMail50_EditDomain_Throttling throttlingSection;
+        protected global::FuseCP.Portal.ProviderControls.SmarterMail50_EditDomain_Throttling throttlingSection;
         
         /// <summary>
         /// secLimits control.
@@ -160,7 +160,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secLimits;
+        protected global::FuseCP.Portal.CollapsiblePanel secLimits;
         
         /// <summary>
         /// LimitsPanel control.

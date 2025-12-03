@@ -1,4 +1,4 @@
-Ôªø<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1312,7 +1312,7 @@
     <value>This error means that for some reason the hosting space meta-information is not synchronized with service resources. You should immediately send the report about this error to your host.</value>
   </data>
   <data name="WarningDescription.106" xml:space="preserve">
-    <value>When user account is in demo mode the majority of operations are disabled, especially those ones that modify or delete records. You are welcome to ask your questions or place comments about this demo on  &lt;a href="https://solidcp.com/forum" target="_blank"&gt;SolidCP Support Forum&lt;/a&gt;</value>
+    <value>When user account is in demo mode the majority of operations are disabled, especially those ones that modify or delete records. You are welcome to ask your questions or place comments about this demo on  &lt;a href="https://fusecp.com/forum" target="_blank"&gt;FuseCP Support Forum&lt;/a&gt;</value>
   </data>
   <data name="ErrorDescription.501" xml:space="preserve">
     <value>This message means you are trying to add a domain that is a sub-domain of the domain belonging to other user. For example, some user have registered "domain.com" domain and you are trying to create  "sub.domain.com". If that "parent" domain is yours you should set "Allow Sub-domains" checkbox for it.</value>
@@ -3133,28 +3133,28 @@
     <value>Unathorized</value>
   </data>
   <data name="Error.407" xml:space="preserve">
-    <value>SolidCP Server Internal Application Error</value>
+    <value>FuseCP Server Internal Application Error</value>
   </data>
   <data name="ErrorDescription.400" xml:space="preserve">
     <value>Remote web server returned "Not Found" error. This means you have specified wrong Server URL or ASP.NET 2.0 Web Extension is not installed/allowed in IIS.</value>
   </data>
   <data name="ErrorDescription.401" xml:space="preserve">
-    <value>Remote web server hosting SolidCP Server application returned "Bad Request" error. Check host headers of the web site hosting SolidCP Server application.</value>
+    <value>Remote web server hosting FuseCP Server application returned "Bad Request" error. Check host headers of the web site hosting FuseCP Server application.</value>
   </data>
   <data name="ErrorDescription.403" xml:space="preserve">
-    <value>Remote web server hosting SolidCP Server application returned "Internal Server Error". Check if IIS is working properly.</value>
+    <value>Remote web server hosting FuseCP Server application returned "Internal Server Error". Check if IIS is working properly.</value>
   </data>
   <data name="ErrorDescription.404" xml:space="preserve">
-    <value>Remote web server hosting SolidCP Server application returned "Service Unavailable" error. Make sure there no other applications working in SolidCP Server application pool.</value>
+    <value>Remote web server hosting FuseCP Server application returned "Service Unavailable" error. Make sure there no other applications working in FuseCP Server application pool.</value>
   </data>
   <data name="ErrorDescription.405" xml:space="preserve">
-    <value>Remote web server hosting SolidCP Server application returned "Unauthorized" error. Make sure SolidCP Server web site or virtual directory has anonymous access allowed.</value>
+    <value>Remote web server hosting FuseCP Server application returned "Unauthorized" error. Make sure FuseCP Server web site or virtual directory has anonymous access allowed.</value>
   </data>
   <data name="ErrorDescription.406" xml:space="preserve">
-    <value>Server application is accessible, but you have provided wrong Server access password. If you forgotten the password you can change in SolidCP Installer.</value>
+    <value>Server application is accessible, but you have provided wrong Server access password. If you forgotten the password you can change in FuseCP Installer.</value>
   </data>
   <data name="ErrorDescription.407" xml:space="preserve">
-    <value>SolidCP Server application is accessible, but returned an error. Try opening SolidCP Server URL in the browser and see the actual error.</value>
+    <value>FuseCP Server application is accessible, but returned an error. Try opening FuseCP Server URL in the browser and see the actual error.</value>
   </data>
   <data name="Error.BACKUP_WIZARD" xml:space="preserve">
     <value>Error occurred during backup operation</value>
@@ -3475,7 +3475,7 @@
     <value>Disclaimers Allowed</value>
   </data>
   <data name="Quota.Exchange2013.AutoReply" xml:space="preserve">
-    <value>Automatic Replies via SolidCP Allowed</value>
+    <value>Automatic Replies via FuseCP Allowed</value>
   </data>
   <data name="ResourceGroup.Exchange" xml:space="preserve">
     <value>Hosted Exchange</value>
@@ -3535,7 +3535,7 @@
     <value>Error updating organization storage settings. See audit log for more details.</value>
   </data>
   <data name="Error.EXCHANGE_SET_ORG_LIMITS_VALIDATION" xml:space="preserve">
-    <value>"Issue warning at" should be less or equal to  "Prohibit send at" and "Prohibit Send at‚Äù should be less or equal than ‚ÄúProhibit Send and Receive at‚Äù.
+    <value>"Issue warning at" should be less or equal to  "Prohibit send at" and "Prohibit Send atî should be less or equal than ìProhibit Send and Receive atî.
 </value>
   </data>
   <data name="Error.EXCHANGE_ADD_DOMAIN" xml:space="preserve">
@@ -3779,7 +3779,7 @@
     <value>Exchange organizations quota has been reached</value>
   </data>
   <data name="Warning.2606" xml:space="preserve">
-    <value>Exchange organization has been deleted but there were some issues during this operation. Please check SolidCP Server logs for more details.</value>
+    <value>Exchange organization has been deleted but there were some issues during this operation. Please check FuseCP Server logs for more details.</value>
   </data>
   <data name="Warning.2607" xml:space="preserve">
     <value>Exchange mailboxes quota has been reached</value>
@@ -3827,7 +3827,7 @@
     <value>Organization domain is in use.</value>
   </data>
   <data name="Warning.2706" xml:space="preserve">
-    <value>Organization has been deleted but there were some issues during this operation. Please check SolidCP Server logs for more details.</value>
+    <value>Organization has been deleted but there were some issues during this operation. Please check FuseCP Server logs for more details.</value>
   </data>
   <data name="Warning.2708" xml:space="preserve">
     <value>Cannot delete user account as it is used in CRM organization. Instead of deleting user account you can disable it in the system.</value>
@@ -4160,7 +4160,7 @@
     <value>Unable to connect to the CRM Web Services. Please check your connection settings.</value>
   </data>
   <data name="HostedCRM.CRM_PERMISSIONS_ERROR" xml:space="preserve">
-    <value>SolidCP Server Account does not have necessary permissions to create CRM organization. Please contact your administrator.</value>
+    <value>FuseCP Server Account does not have necessary permissions to create CRM organization. Please contact your administrator.</value>
   </data>
   <data name="HostedCRM.CANNOT_CREATE_CRM_ORGANIZATION" xml:space="preserve">
     <value>Unable to create CRM organization.</value>
@@ -4826,40 +4826,40 @@
     <value>Error allocating external IP addresses. Check Audit Log for more details.</value>
   </data>
   <data name="VPS.VPS_APPLY_SNAPSHOT_ERROR" xml:space="preserve">
-    <value>Error applying snapshot. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error applying snapshot. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_CANNOT_ADD_IP_ADDRESSES_TO_DATABASE" xml:space="preserve">
     <value>Error saving IP addresses information to the database.</value>
   </data>
   <data name="VPS.VPS_CANNOT_CHANGE_VIRTUAL_SERVER_STATE" xml:space="preserve">
-    <value>Error changing VPS state. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error changing VPS state. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_CANNOT_DELLOCATE_EXTERNAL_ADDRESSES" xml:space="preserve">
     <value>Error deallocating external IP addresses. Check Audit Log for more details.</value>
   </data>
   <data name="VPS.VPS_CHANGE_ADMIN_PASSWORD_ERROR" xml:space="preserve">
-    <value>Error changing "Administrator" account password. Check Audit Log and "SolidCP" Windows event log for more details. Check the log of SolidCP.VmConfig service.</value>
+    <value>Error changing "Administrator" account password. Check Audit Log and "FuseCP" Windows event log for more details. Check the log of FuseCP.VmConfig service.</value>
   </data>
   <data name="VPS.VPS_CHANGE_VIRTUAL_MACHINE_STATE_GENERAL_ERROR" xml:space="preserve">
-    <value>Error changing VPS state. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error changing VPS state. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_CHANGE_VM_CONFIGURATION" xml:space="preserve">
-    <value>Error changing VPS configuration. Check Audit Log and "SolidCP" Windows event log for more details. Check the log of SolidCP.VmConfig service.</value>
+    <value>Error changing VPS configuration. Check Audit Log and "FuseCP" Windows event log for more details. Check the log of FuseCP.VmConfig service.</value>
   </data>
   <data name="VPS.VPS_CONFIG_NETWORK_ADAPTER_KVP" xml:space="preserve">
-    <value>Error setting up VPS network adapter configuration. Check Audit Log and "SolidCP" Windows event log for more details. Check the log of SolidCP.VmConfig service.</value>
+    <value>Error setting up VPS network adapter configuration. Check Audit Log and "FuseCP" Windows event log for more details. Check the log of FuseCP.VmConfig service.</value>
   </data>
   <data name="VPS.VPS_CREATE_ERROR" xml:space="preserve">
-    <value>Error creating VPS. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error creating VPS. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_DELETE_ERROR" xml:space="preserve">
-    <value>Error deleting VPS. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error deleting VPS. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_DELETE_SNAPSHOT_ERROR" xml:space="preserve">
-    <value>Error deleting snapshot. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error deleting snapshot. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_DELETE_SNAPSHOT_SUBTREE_ERROR" xml:space="preserve">
-    <value>Error deleting snapshot subtree. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error deleting snapshot subtree. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_DELETE_VIRTUAL_MACHINE_EXTERNAL_IP_ADDRESS_ERROR" xml:space="preserve">
     <value>Error deleting external IP address. Check Audit Log for more details.</value>
@@ -4868,19 +4868,19 @@
     <value>Error deleting private IP address. Check Audit Log for more details.</value>
   </data>
   <data name="VPS.VPS_DELETE_VM_FILES_ERROR" xml:space="preserve">
-    <value>Error creating VPS files. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error creating VPS files. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_EJECT_DVD_DISK_ERROR" xml:space="preserve">
-    <value>Error ejecting DVD disk from the drive. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error ejecting DVD disk from the drive. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_INSERT_DVD_DISK_ERROR" xml:space="preserve">
-    <value>Error inserting DVD disk into the drive. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error inserting DVD disk into the drive. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.HOST_NAMER_IS_ALREADY_USED" xml:space="preserve">
     <value>Host name is already used. Please specify new host name. </value>
   </data>
   <data name="VPS.CANNOT_CHECK_HOST_EXISTS" xml:space="preserve">
-    <value>Error checking if host name exists. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error checking if host name exists. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_NOT_ENOUGH_PACKAGE_IP_ADDRESSES" xml:space="preserve">
     <value>Insufficient number of free external IP addresses under the space.</value>
@@ -4958,7 +4958,7 @@
     <value>Snapshots must be a positive number and greater than zero</value>
   </data>
   <data name="VPS.VPS_RENAME_SNAPSHOT_ERROR" xml:space="preserve">
-    <value>Error renaming snapshot. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error renaming snapshot. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="VPS.VPS_SEND_SUMMARY_LETTER" xml:space="preserve">
     <value>Error sending e-mail message with VPS setup instructions</value>
@@ -4976,7 +4976,7 @@
     <value>VPS sumamry message template is not setup on the host level</value>
   </data>
   <data name="VPS.VPS_TAKE_SNAPSHOT_ERROR" xml:space="preserve">
-    <value>Error taking snapshot. Check Audit Log and "SolidCP" Windows event log for more details.</value>
+    <value>Error taking snapshot. Check Audit Log and "FuseCP" Windows event log for more details.</value>
   </data>
   <data name="Error.VPS_CREATE_META_ITEM_ERROR" xml:space="preserve">
     <value>Error creating VPS meta-item: {1}. VPS create opearion aborted.</value>
@@ -4991,10 +4991,10 @@
     <value>Virtual server provision was not properly finished.</value>
   </data>
   <data name="ErrorDescription.VPS_LOAD_VM_ITEM" xml:space="preserve">
-    <value>Possible reasons of this error are:&lt;br/&gt;1. Virtual machine associated with the VPS meta-item was deleted from virtualization server.&lt;br/&gt;2. Hyper-V management service is stopped.&lt;br/&gt;3. No connectivity with SolidCP Server installed on virtualization server.&lt;br/&gt;&lt;br/&gt;Solutions:&lt;br/&gt;1. Make sure associated virtual machine exists on Hyper-V server; otherwise re-create VPS from SolidCP.&lt;br/&gt;2. Check that Hyper-V management service is started.&lt;br/&gt;3. Check SolidCP Server connectivity.</value>
+    <value>Possible reasons of this error are:&lt;br/&gt;1. Virtual machine associated with the VPS meta-item was deleted from virtualization server.&lt;br/&gt;2. Hyper-V management service is stopped.&lt;br/&gt;3. No connectivity with FuseCP Server installed on virtualization server.&lt;br/&gt;&lt;br/&gt;Solutions:&lt;br/&gt;1. Make sure associated virtual machine exists on Hyper-V server; otherwise re-create VPS from FuseCP.&lt;br/&gt;2. Check that Hyper-V management service is started.&lt;br/&gt;3. Check FuseCP Server connectivity.</value>
   </data>
   <data name="ErrorDescription.VPS_LOAD_PVEVM_ITEM" xml:space="preserve">
-    <value>Possible reasons of this error are:&lt;br/&gt;1. Virtual machine associated with the VPS meta-item was deleted from virtualization server.&lt;br/&gt;2. Proxmox management service is stopped.&lt;br/&gt;3. No connectivity with SolidCP Server installed on virtualization server.&lt;br/&gt;&lt;br/&gt;Solutions:&lt;br/&gt;1. Make sure associated virtual machine exists on Proxmox server; otherwise re-create VPS from SolidCP.&lt;br/&gt;2. Check that Proxmox management service is started.&lt;br/&gt;3. Check SolidCP Server connectivity.</value>
+    <value>Possible reasons of this error are:&lt;br/&gt;1. Virtual machine associated with the VPS meta-item was deleted from virtualization server.&lt;br/&gt;2. Proxmox management service is stopped.&lt;br/&gt;3. No connectivity with FuseCP Server installed on virtualization server.&lt;br/&gt;&lt;br/&gt;Solutions:&lt;br/&gt;1. Make sure associated virtual machine exists on Proxmox server; otherwise re-create VPS from FuseCP.&lt;br/&gt;2. Check that Proxmox management service is started.&lt;br/&gt;3. Check FuseCP Server connectivity.</value>
   </data>
   <data name="ErrorDescription.VPS_PROVISION_ERROR" xml:space="preserve">
     <value>There was fatal error during provisioning and the entire process was aborted. Click "Audit Log" tab above and check what's gone wrong during VPS creation.&lt;br/&gt;&lt;br/&gt;Eliminate the cause of this issue and re-create VPS.</value>
@@ -5261,10 +5261,10 @@
     <value>Organization Domain</value>
   </data>
   <data name="Error.409" xml:space="preserve">
-    <value>SolidCP Server is not available </value>
+    <value>FuseCP Server is not available </value>
   </data>
   <data name="ErrorDescription.409" xml:space="preserve">
-    <value>Please check your server URL and ensure if your SolidCP server is installed.</value>
+    <value>Please check your server URL and ensure if your FuseCP server is installed.</value>
   </data>
   <data name="TaskActivity.VPS_CREATE_SETUP_MANAGEMENT_NETWORK" xml:space="preserve">
     <value>Setup management network</value>
@@ -5504,7 +5504,7 @@
     <value>We apologize for the inconvenience but the application download has been failed. Please contact your service provider to correct the issue.</value>
   </data>
   <data name="Error.GALLERY_APP_UNAUTHORIZEDACCESSEXCEPTION" xml:space="preserve">
-    <value>We apologize for the inconvenience but the application download has been failed. Access is denied. Check SolidCP event log.</value>
+    <value>We apologize for the inconvenience but the application download has been failed. Access is denied. Check FuseCP event log.</value>
   </data>
   <data name="Error.WAG_NOT_AVAILABLE" xml:space="preserve">
     <value>Web Application Gallery module is unavailable:</value>

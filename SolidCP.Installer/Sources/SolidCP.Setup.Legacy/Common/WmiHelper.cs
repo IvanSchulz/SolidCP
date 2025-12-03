@@ -32,7 +32,7 @@
 
 using System.Management;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Wmi helper class.

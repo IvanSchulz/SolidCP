@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -31,15 +31,15 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Microsoft.Win32;
-using SolidCP.Providers.FTP.CerberusFTP6Proxy;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.FTP.CerberusFTP6Proxy;
+using FuseCP.Server.Utils;
 using System;
 using System.Collections;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
     public class CerberusFTP6 : HostingServiceProviderBase, IFtpServer
     {

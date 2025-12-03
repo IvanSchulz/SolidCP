@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	[TestClass]
 	public class Initialization
@@ -21,8 +21,8 @@ namespace SolidCP.Tests
 #if NETFRAMEWORK
 			DbConfiguration.InitAllDatabaseProviders();
 #else
-			SolidCP.Web.Services.Configuration.CryptoKey = "1234567890";
-			SolidCP.Web.Services.Configuration.EncryptionEnabled = true;
+			FuseCP.Web.Services.Configuration.CryptoKey = "1234567890";
+			FuseCP.Web.Services.Configuration.EncryptionEnabled = true;
 #endif
 			// install the certificate
 			Certificate.Install();

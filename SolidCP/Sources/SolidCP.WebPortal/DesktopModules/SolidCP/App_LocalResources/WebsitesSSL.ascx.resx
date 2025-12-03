@@ -1,4 +1,4 @@
-Ôªø<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -223,7 +223,7 @@
     <value>Enter a password for the PFX</value>
   </data>
   <data name="InstallCSRCertificate.Text" xml:space="preserve">
-    <value>Paste your certificate from your CA into to the text area below and click on ‚ÄúInstall Certificate‚Äù button.</value>
+    <value>Paste your certificate from your CA into to the text area below and click on ìInstall Certificateî button.</value>
   </data>
   <data name="InstallCSRDescription.Text" xml:space="preserve">
     <value>A CSR for your Website was generated successfully and is shown below. Copy the text below and paste it to a CA to request the certificate.</value>
@@ -268,7 +268,7 @@
     <value>Generate Renewal Request</value>
   </data>
   <data name="SSLImportDescription.Text" xml:space="preserve">
-    <value>A SSL certificate has been detected on the website that is not managed by SolidCP. Click the button below
+    <value>A SSL certificate has been detected on the website that is not managed by FuseCP. Click the button below
         to import the certificate settings</value>
   </data>
   <data name="SSLImportHeading.Text" xml:space="preserve">

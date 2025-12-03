@@ -39,16 +39,16 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
-using SolidCP.Server;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.Database;
-using SolidCP.Providers.SharePoint;
-using OS = SolidCP.Providers.OS;
-using SolidCP.Server.Client;
+using FuseCP.Server;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.Database;
+using FuseCP.Providers.SharePoint;
+using OS = FuseCP.Providers.OS;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class SharePointServerController : ControllerBase, IImportController, IBackupController
     {
@@ -697,7 +697,7 @@ namespace SolidCP.EnterpriseServer
 
                 // create service item
                 item.FullName = item.Name;
-                item.Description = "SolidCP System Account";
+                item.Description = "FuseCP System Account";
                 item.AccountDisabled = false;
                 item.PasswordCantChange = true;
                 item.PasswordNeverExpires = true;
@@ -749,7 +749,7 @@ namespace SolidCP.EnterpriseServer
 
                 item.Name = origItem.Name;
                 item.FullName = origItem.Name;
-                item.Description = "SolidCP System Account";
+                item.Description = "FuseCP System Account";
                 item.AccountDisabled = false;
                 item.PasswordCantChange = true;
                 item.PasswordNeverExpires = true;
@@ -888,7 +888,7 @@ namespace SolidCP.EnterpriseServer
                 if (sps.GroupExists(item.Name))
                     return BusinessErrorCodes.ERROR_SHAREPOINT_GROUPS_SERVICE_ITEM_EXISTS;
 
-                item.Description = "SolidCP System Group";
+                item.Description = "FuseCP System Group";
 
                 // add service item
                 sps.CreateGroup(item);
@@ -934,7 +934,7 @@ namespace SolidCP.EnterpriseServer
                 // get service
                 SharePointServer sps = GetSharePoint(origItem.ServiceId);
 
-                item.Description = "SolidCP System Group";
+                item.Description = "FuseCP System Group";
 
                 // update service item
                 sps.UpdateGroup(item);

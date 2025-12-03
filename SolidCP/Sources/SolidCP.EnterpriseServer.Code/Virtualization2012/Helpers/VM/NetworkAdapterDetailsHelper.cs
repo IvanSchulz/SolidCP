@@ -1,13 +1,13 @@
-﻿using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM
 {
     public class NetworkAdapterDetailsHelper: ControllerBase
     {

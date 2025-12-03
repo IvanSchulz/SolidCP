@@ -39,9 +39,9 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class LicenseAgreementPage : BannerWizardPage
 	{
@@ -58,7 +58,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			this.Text = "License Agreement";
 			this.Description = "Please review the license terms before installing the product";
 
-			string resource = OSInfo.IsWindows ? "SolidCP.UniversalInstaller.Resources.EULA.rtf" : "SolidCP.UniversalInstaller.Resources.EULA.Unix.rtf";
+			string resource = OSInfo.IsWindows ? "FuseCP.UniversalInstaller.Resources.EULA.rtf" : "FuseCP.UniversalInstaller.Resources.EULA.Unix.rtf";
 
 			try
 			{

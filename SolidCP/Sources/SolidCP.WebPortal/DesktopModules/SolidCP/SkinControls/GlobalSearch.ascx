@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GlobalSearch.ascx.cs" Inherits="SolidCP.Portal.SkinControls.GlobalSearch" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GlobalSearch.ascx.cs" Inherits="FuseCP.Portal.SkinControls.GlobalSearch" %>
 
 <style>
     .ui-menu-item a {white-space: nowrap; }

@@ -1,17 +1,17 @@
-namespace SolidCP.Server.Tests;
+namespace FuseCP.Server.Tests;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SolidCP.Providers;
-using SolidCP.Server.Client;
-using SolidCP.Web.Clients;
-using SolidCP.Tests;
-using SolidCP.Providers.OS;
+using FuseCP.Providers;
+using FuseCP.Server.Client;
+using FuseCP.Web.Clients;
+using FuseCP.Tests;
+using FuseCP.Providers.OS;
 using System.ServiceModel;
 
 [TestClass]
 public class Tests
 {
-	public const string DevServerPassword = SolidCP.Tests.Server.Password;
+	public const string DevServerPassword = FuseCP.Tests.Server.Password;
 	public const Component Server = Component.Server;
 	public TestContext? TestContext { get; set; }
 
@@ -88,7 +88,7 @@ public class Tests
 			{
 				client.SoapHeader = new ServiceProviderSettingsSoapHeader()
 				{
-					Settings = new string[] { "Provider:ProviderType=SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022", "Provider:ProviderName=Windows2022" }
+					Settings = new string[] { "Provider:ProviderType=FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022", "Provider:ProviderName=Windows2022" }
 				};
 				client.Credentials.Password = DevServerPassword;
 				client.Protocol = protocol;
@@ -274,7 +274,7 @@ public class Tests
 				// test method with soap header
 				var header = new ServiceProviderSettingsSoapHeader()
 				{
-					Settings = new string[] { "Provider:ProviderType=SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022", "Provider:ProviderName=Windows2022" }
+					Settings = new string[] { "Provider:ProviderType=FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022", "Provider:ProviderName=Windows2022" }
 				};
 				client.SoapHeader = header;
 				var settings = client.EchoSettings();
@@ -318,7 +318,7 @@ public class Tests
 			{
 				client.SoapHeader = new ServiceProviderSettingsSoapHeader()
 				{
-					Settings = new string[] { "Provider:ProviderType=SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022", "Provider:ProviderName=Windows2022" }
+					Settings = new string[] { "Provider:ProviderType=FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022", "Provider:ProviderName=Windows2022" }
 				};
 				client.Credentials.Password = "1234";
 				client.Protocol = protocol;

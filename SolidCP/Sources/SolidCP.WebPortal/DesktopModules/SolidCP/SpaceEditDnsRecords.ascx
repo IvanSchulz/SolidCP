@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceEditDnsRecords.ascx.cs" Inherits="SolidCP.Portal.SpaceEditDnsRecords" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceEditDnsRecords.ascx.cs" Inherits="FuseCP.Portal.SpaceEditDnsRecords" %>
 <%@ Register Src="GlobalDnsRecordsControl.ascx" TagName="GlobalDnsRecordsControl" TagPrefix="uc1" %>
 
 <div class="panel-body form-horizontal">

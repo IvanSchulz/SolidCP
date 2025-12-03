@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 
 
@@ -57,7 +57,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.CollapsiblePanel secTechnicalDetails;
+		protected global::FuseCP.Portal.CollapsiblePanel secTechnicalDetails;
 
 		/// <summary>
 		/// TechnicalDetailsPanel control.
@@ -174,7 +174,7 @@ namespace SolidCP.Portal
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::SolidCP.Portal.CollapsiblePanel secSendReport;
+		protected global::FuseCP.Portal.CollapsiblePanel secSendReport;
 
 		/// <summary>
 		/// SendReportPanel control.

@@ -36,14 +36,14 @@ using System.Web;
 using System.Web.UI;
 using System.Threading;
 using System.Threading.Tasks;
-using SolidCP.EnterpriseServer;
-using SCP = SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
+using SCP = FuseCP.EnterpriseServer;
 
 
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class Login : SolidCPModuleBase
+	public partial class Login : FuseCPModuleBase
 	{
 		string ipAddress;
 		//private IMessageBoxControl messageBox;     --- compile warning - never used
@@ -156,7 +156,7 @@ namespace SolidCP.Portal
 			Utils.SelectListItem(ddlTheme, PortalUtils.CurrentTheme);
 
 			// try to get the last login name from cookie
-			HttpCookie cookie = Request.Cookies["SolidCPLogin"];
+			HttpCookie cookie = Request.Cookies["FuseCPLogin"];
 			if (cookie != null)
 			{
 				txtUsername.Text = cookie.Value;

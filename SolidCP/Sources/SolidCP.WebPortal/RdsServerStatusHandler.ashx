@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" Class="SolidCP.Portal.RdsServerStatusHandler,SolidCP.Portal.Modules" %>
+<%@ WebHandler Language="C#" Class="FuseCP.Portal.RdsServerStatusHandler,FuseCP.Portal.Modules" %>

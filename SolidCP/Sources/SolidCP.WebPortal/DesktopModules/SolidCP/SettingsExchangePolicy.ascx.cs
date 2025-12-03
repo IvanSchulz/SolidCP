@@ -32,12 +32,12 @@
 
 using System.Linq;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsExchangePolicy : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsExchangePolicy : FuseCPControlBase, IUserSettingsEditorControl
     {
         internal static AdditionalGroup[] additionalGroups;
 

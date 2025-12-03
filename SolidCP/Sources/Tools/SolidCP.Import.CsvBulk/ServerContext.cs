@@ -30,7 +30,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Import.CsvBulk
+namespace FuseCP.Import.CsvBulk
 {
 	public class ServerContext
 	{

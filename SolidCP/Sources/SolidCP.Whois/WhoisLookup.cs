@@ -33,7 +33,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.Collections.Generic;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	public class WhoisLookup
 	{

@@ -1,12 +1,12 @@
-﻿<####################################################################################################
+<####################################################################################################
 SolidSCP - Clean IIS Logs
 
-v1.0    8th August 2016:    First release of the SolidCP Clean IIS Logs Script
+v1.0    8th August 2016:    First release of the FuseCP Clean IIS Logs Script
 
-Written By Marc Banyard for the SolidCP Project (c) 2016 SolidCP
+Written By Marc Banyard for the FuseCP Project (c) 2016 FuseCP
 
-Copyright (c) 2016, SolidCP
-SolidCP is distributed under the Creative Commons Share-alike license
+Copyright (c) 2016, FuseCP
+FuseCP is distributed under the Creative Commons Share-alike license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -18,7 +18,7 @@ are permitted provided that the following conditions are met:
   this list of conditions  and  the  following  disclaimer in  the documentation
   and/or other materials provided with the distribution.
 
-- Neither the name of  SolidCP  nor the names of its contributors may be used to
+- Neither the name of  FuseCP  nor the names of its contributors may be used to
   endorse or  promote  products  derived  from  this  software  without specific
   prior written permission.
 
@@ -74,7 +74,7 @@ $dDaysToKeep  = "7" # Number of days to keep log files for
 ####################################################################################################
 $host.UI.RawUI.BufferSize  = New-Object -TypeName System.Management.Automation.Host.Size -ArgumentList (120, 50)
 $host.UI.RawUI.WindowSize  = New-Object -TypeName System.Management.Automation.Host.Size -ArgumentList (120, 50)
-$Host.UI.RawUI.WindowTitle = "$([Environment]::UserName): --  SolidCP - Clean IIS Logs  --"
+$Host.UI.RawUI.WindowTitle = "$([Environment]::UserName): --  FuseCP - Clean IIS Logs  --"
 
 ####################################################################################################################################################################################
 # find the IIS Logs directory for each hosting space in C:\HostingSpaces, Then delete all of the IIS log files older than the days specified above

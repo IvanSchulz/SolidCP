@@ -1,4 +1,4 @@
-﻿// wcf service contract
+// wcf service contract
 @using Microsoft.CodeAnalysis
 @using Microsoft.CodeAnalysis.CSharp
 @using Microsoft.CodeAnalysis.CSharp.Syntax
@@ -9,12 +9,12 @@
 
 @using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory
 
-@namespace SolidCP.Build
+@namespace FuseCP.Build
 @inherits RazorBlade.PlainTextTemplate
 
 @Class.AttributeLists
-[System.CodeDom.Compiler.GeneratedCodeAttribute("SolidCP.Build", "1.0")]
-[ServiceKnownType("GetKnownTypes", typeof(SolidCP.Providers.GlobalKnownTypes))]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("FuseCP.Build", "1.0")]
+[ServiceKnownType("GetKnownTypes", typeof(FuseCP.Providers.GlobalKnownTypes))]
 [ServiceContract(Namespace="@(WebServiceNamespace)")]
 #if NETFRAMEWORK
     [SwaggerWcf("/api/@(Class.Identifier)")]

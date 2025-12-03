@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer.Base.Scheduling
+namespace FuseCP.EnterpriseServer.Base.Scheduling
 {
 	/// <summary>
 	/// Represents view configuration for a certain hosting environment.

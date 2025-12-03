@@ -34,13 +34,13 @@ using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.EnterpriseServer.Code.SharePoint;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.SharePoint;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CalculatePackagesDiskspaceTask : SchedulerTask
     {

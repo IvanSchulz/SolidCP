@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class IceWarp_EditList {
@@ -150,7 +150,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.MailEditItems mailEditItems;
+        protected global::FuseCP.Portal.MailEditItems mailEditItems;
         
         /// <summary>
         /// Message control.
@@ -159,7 +159,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel Message;
+        protected global::FuseCP.Portal.CollapsiblePanel Message;
         
         /// <summary>
         /// MessagePanel control.
@@ -348,7 +348,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel Security;
+        protected global::FuseCP.Portal.CollapsiblePanel Security;
         
         /// <summary>
         /// SecurityPanel control.
@@ -564,7 +564,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel Options;
+        protected global::FuseCP.Portal.CollapsiblePanel Options;
         
         /// <summary>
         /// OptionsPanel control.

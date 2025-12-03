@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace SolidCP.Server.WPIService
+namespace FuseCP.Server.WPIService
 {
     public class WPIServiceContract : MarshalByRefObject
     {

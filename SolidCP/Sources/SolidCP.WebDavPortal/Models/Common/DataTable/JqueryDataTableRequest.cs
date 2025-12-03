@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
-namespace SolidCP.WebDavPortal.Models.Common.DataTable
+namespace FuseCP.WebDavPortal.Models.Common.DataTable
 {
     public class JqueryDataTableRequest
     {

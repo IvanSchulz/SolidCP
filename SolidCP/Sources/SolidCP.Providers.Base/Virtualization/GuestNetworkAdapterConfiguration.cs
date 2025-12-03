@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     //https://docs.microsoft.com/en-us/windows/desktop/hyperv_v2/msvm-guestnetworkadapterconfiguration
     public class GuestNetworkAdapterConfiguration

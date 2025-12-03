@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Collections;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
     public class EntityDataTable<TEntity>: DataTable, IEntityDataSet where TEntity: class
     {

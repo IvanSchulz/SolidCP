@@ -1,10 +1,10 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationUsers.ascx.cs" Inherits="SolidCP.Portal.HostedSolution.OrganizationUsers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationUsers.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.OrganizationUsers" %>
 
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/UserActions.ascx" TagName="UserActions" TagPrefix="scp" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <script type="text/javascript">
                 function checkAll(selectAllCheckbox) {
@@ -136,7 +136,7 @@
                 SelectCountMethod="GetOrganizationUsersPagedCount"
                 SelectMethod="GetOrganizationUsersPaged"
                 SortParameterName="sortColumn"
-                TypeName="SolidCP.Portal.OrganizationsHelper"
+                TypeName="FuseCP.Portal.OrganizationsHelper"
                 OnSelected="odsAccountsPaged_Selected">
                 <SelectParameters>
                     <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />

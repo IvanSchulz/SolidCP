@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2017, centron GmbH
+// Copyright (c) 2017, centron GmbH
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -37,15 +37,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.Code.Helpers;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.Code.Helpers;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-	public partial class VdcCreate : SolidCPModuleBase
+	public partial class VdcCreate : FuseCPModuleBase
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

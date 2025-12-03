@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackageIPAddresses.ascx.cs" Inherits="SolidCP.Portal.UserControls.AllocatePackageIPAddresses" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackageIPAddresses.ascx.cs" Inherits="FuseCP.Portal.UserControls.AllocatePackageIPAddresses" %>
 <%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 
 

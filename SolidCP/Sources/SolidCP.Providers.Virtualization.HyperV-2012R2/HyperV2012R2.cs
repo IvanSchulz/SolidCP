@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -47,22 +47,22 @@ using System.Reflection;
 using System.Globalization;
 
 using System.Xml;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using Vds = Microsoft.Storage.Vds;
 using System.Configuration;
 using System.Linq;
-using SolidCP.Providers.Virtualization.Extensions;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.Virtualization.Extensions;
+using FuseCP.Providers.OS;
 using Microsoft.Management.Infrastructure;
 using Microsoft.Management.Infrastructure.Generic;
 using System.Linq.Expressions;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class HyperV2012R2 : HostingServiceProviderBase, IVirtualizationServer2012
     {
@@ -2281,7 +2281,7 @@ namespace SolidCP.Providers.Virtualization
                     if (vps.State == VirtualMachineState.Running)
                     {
                         // try to shutdown the system
-                        ReturnCode code = ShutDownVirtualMachine(vm.VirtualMachineId, true, "Virtual Machine has been suspended from SolidCP");
+                        ReturnCode code = ShutDownVirtualMachine(vm.VirtualMachineId, true, "Virtual Machine has been suspended from FuseCP");
                         if (code == ReturnCode.OK)
                             return;
                     }
@@ -2497,7 +2497,7 @@ namespace SolidCP.Providers.Virtualization
 
         private void SetUsagesFromKVP(ref VirtualMachineData vmData) //TODO: make check version and get only RAM??
         {
-            // Use the SolidCP VMConfig Windows service to get the RAM usage as well as the HDD usage / sizes
+            // Use the FuseCP VMConfig Windows service to get the RAM usage as well as the HDD usage / sizes
             List<KvpExchangeDataItem> vmKvps = GetKVPItems(vmData.VM.VirtualMachineId);
             bool isGetHddData = false;
             foreach (KvpExchangeDataItem vmKvp in vmKvps)

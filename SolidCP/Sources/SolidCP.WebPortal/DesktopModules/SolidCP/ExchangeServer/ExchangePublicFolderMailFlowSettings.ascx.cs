@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-	public partial class ExchangePublicFolderMailFlowSettings : SolidCPModuleBase
+	public partial class ExchangePublicFolderMailFlowSettings : FuseCPModuleBase
 	{
         protected void Page_Load(object sender, EventArgs e)
         {

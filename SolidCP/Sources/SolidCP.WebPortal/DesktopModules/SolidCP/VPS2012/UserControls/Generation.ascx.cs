@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012.UserControls
+namespace FuseCP.Portal.VPS2012.UserControls
 {
-    public partial class Generation : SolidCPControlBase, IVirtualMachineSettingsControl
+    public partial class Generation : FuseCPControlBase, IVirtualMachineSettingsControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

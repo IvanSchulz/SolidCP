@@ -36,11 +36,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsDomainLookupLetter : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsDomainLookupLetter : FuseCPControlBase, IUserSettingsEditorControl
     {
         public void BindSettings(UserSettings settings)
         {

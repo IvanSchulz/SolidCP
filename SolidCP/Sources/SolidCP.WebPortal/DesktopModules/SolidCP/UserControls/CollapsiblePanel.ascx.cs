@@ -41,9 +41,9 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class CollapsiblePanel : SolidCPControlBase
+    public partial class CollapsiblePanel : FuseCPControlBase
     {
         public const string DEFAULT_EXPAND_IMAGE = "shevron_expand.gif";
         public const string DEFAULT_COLLAPSE_IMAGE = "shevron_collapse.gif";
@@ -116,7 +116,7 @@ namespace SolidCP.Portal
             // get localized title
             if (!String.IsNullOrEmpty(ResourceKey))
             {
-                SolidCPControlBase parentControl = this.Parent as SolidCPControlBase;
+                FuseCPControlBase parentControl = this.Parent as FuseCPControlBase;
                 if(parentControl != null)
                     lblTitle.Text = parentControl.GetLocalizedString(ResourceKey + ".Text");
             }

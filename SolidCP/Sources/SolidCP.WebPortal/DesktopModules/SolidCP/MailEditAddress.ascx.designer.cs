@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class MailEditAddress {
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernameControl txtName;
+        protected global::FuseCP.Portal.UsernameControl txtName;
         
         /// <summary>
         /// litAt control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.DomainsSelectDomainControl domainsSelectDomainControl;
+        protected global::FuseCP.Portal.DomainsSelectDomainControl domainsSelectDomainControl;
         
         /// <summary>
         /// DisplayEmailPanel control.

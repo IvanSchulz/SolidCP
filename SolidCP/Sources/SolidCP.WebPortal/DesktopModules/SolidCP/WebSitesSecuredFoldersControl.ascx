@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesSecuredFoldersControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesSecuredFoldersControl" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesSecuredFoldersControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesSecuredFoldersControl" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <div class="FormRow">
     <asp:Button id="btnToggleSecuredFolders" runat="server" meta:resourcekey="btnToggleSecuredFolders"

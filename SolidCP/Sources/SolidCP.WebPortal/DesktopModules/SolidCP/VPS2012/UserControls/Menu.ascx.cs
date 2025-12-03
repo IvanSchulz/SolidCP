@@ -34,10 +34,10 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-namespace SolidCP.Portal.VPS2012.UserControls
+using FuseCP.EnterpriseServer;
+namespace FuseCP.Portal.VPS2012.UserControls
 {
-    public partial class Menu : SolidCPControlBase
+    public partial class Menu : FuseCPControlBase
     {
         public class MenuItem
         {

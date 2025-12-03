@@ -33,11 +33,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Web.Iis.Common;
-using SolidCP.Providers.Web.Iis.Utility;
+using FuseCP.Providers.Web.Iis.Common;
+using FuseCP.Providers.Web.Iis.Utility;
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.WebObjects
+namespace FuseCP.Providers.Web.WebObjects
 {
 	public class CustomHttpHeadersModuleService : ConfigurationModuleService
 	{

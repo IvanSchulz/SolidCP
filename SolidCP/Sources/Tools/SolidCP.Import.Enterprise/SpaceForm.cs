@@ -33,10 +33,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public partial class SpaceForm : BaseForm
 	{

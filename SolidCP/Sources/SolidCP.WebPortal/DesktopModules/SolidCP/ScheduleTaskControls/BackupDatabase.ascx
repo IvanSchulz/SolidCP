@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BackupDatabase.ascx.cs" Inherits="SolidCP.Portal.UserControls.ScheduleTaskView.BackupDatabase" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BackupDatabase.ascx.cs" Inherits="FuseCP.Portal.UserControls.ScheduleTaskView.BackupDatabase" %>
 
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>

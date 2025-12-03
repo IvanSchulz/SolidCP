@@ -42,7 +42,7 @@ using System.Web.UI.HtmlControls;
 using System.Reflection;
 using System.IO;
 
-namespace SolidCP.Portal.ReportingServices
+namespace FuseCP.Portal.ReportingServices
 {
 	/// <summary>
 	/// Class that is used to localize reports embedded to the assembly.

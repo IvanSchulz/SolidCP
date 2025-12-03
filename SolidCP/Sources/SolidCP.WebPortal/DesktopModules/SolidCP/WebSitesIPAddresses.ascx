@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesIPAddresses.ascx.cs" Inherits="SolidCP.Portal.WebSitesIPAddresses" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesIPAddresses.ascx.cs" Inherits="FuseCP.Portal.WebSitesIPAddresses" %>
 <%@ Register Src="UserControls/PackageIPAddresses.ascx" TagName="PackageIPAddresses" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>

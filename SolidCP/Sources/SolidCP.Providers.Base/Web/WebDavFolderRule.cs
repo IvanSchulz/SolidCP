@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
     public enum WebDavAccess
     {

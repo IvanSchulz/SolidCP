@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterStats_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterStats_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterStats_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterStats_Settings" %>
 <%@ Register Src="../UserControls/TimeZones.ascx" TagName="TimeZones" TagPrefix="uc1" %>
 <table cellpadding="4" cellspacing="0" width="100%">
 	<tr>

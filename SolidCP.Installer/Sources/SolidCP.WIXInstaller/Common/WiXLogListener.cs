@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 //using Microsoft.Deployment.WindowsInstaller;
 using WixToolset.Dtf.WindowsInstaller;
 
-namespace SolidCP.WIXInstaller.Common
+namespace FuseCP.WIXInstaller.Common
 {
     public class WiXLogListener : TraceListener
     {

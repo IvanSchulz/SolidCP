@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Providers.FTP.IIs100.Config
+namespace FuseCP.Providers.FTP.IIs100.Config
 {
     using Microsoft.Web.Administration;
     using System;

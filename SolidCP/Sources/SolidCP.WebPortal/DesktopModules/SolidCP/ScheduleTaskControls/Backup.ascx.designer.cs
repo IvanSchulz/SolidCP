@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ScheduleTaskControls {
+namespace FuseCP.Portal.ScheduleTaskControls {
     
     
     /// <summary>
@@ -139,7 +139,7 @@ namespace SolidCP.Portal.ScheduleTaskControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.FileLookup spaceFolder;
+        protected global::FuseCP.Portal.FileLookup spaceFolder;
         
         /// <summary>
         /// ServerFolderPanel control.

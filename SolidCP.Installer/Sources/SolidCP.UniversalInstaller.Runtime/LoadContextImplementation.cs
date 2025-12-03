@@ -40,9 +40,9 @@ using System.IO;
 #if NETCOREAPP
 using System.Runtime.Loader;
 #endif
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 [Serializable]
 public class LoadContextImplementation : MarshalByRefObject, ILoadContext
@@ -120,7 +120,7 @@ public class LoadContextImplementation : MarshalByRefObject, ILoadContext
 				});*/
 				loader = createInstanceAndUnwrapMethod.Invoke(domain, new object[] {
 					"Setup2",
-					"SolidCP.UniversalInstaller.RemoteRunner"
+					"FuseCP.UniversalInstaller.RemoteRunner"
 				});
 
 				/*foreach (TraceListener listener in Trace.Listeners)
@@ -130,7 +130,7 @@ public class LoadContextImplementation : MarshalByRefObject, ILoadContext
 			}
 			else  // don't call in separate AppDomain when debugging
 			{
-				loader = Activator.CreateInstance(Type.GetType("SolidCP.UniversalInstaller.RemoteRunner, Setup2"));
+				loader = Activator.CreateInstance(Type.GetType("FuseCP.UniversalInstaller.RemoteRunner, Setup2"));
 			}
 			var remoteRun = loader.GetType().GetMethod("RemoteRun", new Type[] { typeof(string), typeof(string), typeof(string), typeof(object[]) });
 			object ret = remoteRun.Invoke(loader, new object[] { fileName, typeName, methodName, parameters });

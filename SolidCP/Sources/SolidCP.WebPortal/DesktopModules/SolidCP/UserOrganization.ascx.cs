@@ -43,12 +43,12 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Xml;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.WebPortal;
-using SolidCP.Portal.UserControls;
+using FuseCP.EnterpriseServer;
+using FuseCP.WebPortal;
+using FuseCP.Portal.UserControls;
 
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public partial class UserOrganization : OrganizationMenuControl
     {

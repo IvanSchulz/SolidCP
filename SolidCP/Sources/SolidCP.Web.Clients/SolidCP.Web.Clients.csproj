@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net48;net10.0</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
@@ -9,7 +9,7 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <SignAssembly>true</SignAssembly>
     <DefineConstants Condition="'$(gRPC)' == 'true'">$(DefineConstants);gRPC</DefineConstants>
-    <AssemblyOriginatorKeyFile>SolidCP.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>FuseCP.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
     <!--<PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
@@ -35,6 +35,6 @@
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
+    <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
   </ItemGroup>
 </Project>

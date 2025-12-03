@@ -43,11 +43,11 @@ using System.Web.UI.HtmlControls;
 using AjaxControlToolkit;
 
 //using DNNTV = DotNetNuke.UI.WebControls;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class FileLookup : SolidCPControlBase
+    public partial class FileLookup : FuseCPControlBase
     {
 
         public bool Enabled

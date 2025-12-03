@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSecurityGroups.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.OrganizationSecurityGroups" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSecurityGroups.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationSecurityGroups" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
@@ -79,7 +79,7 @@
         SelectCountMethod="GetOrganizationSecurityGroupsPagedCount"
         SelectMethod="GetOrganizationSecurityGroupsPaged"
         SortParameterName="sortColumn"
-        TypeName="SolidCP.Portal.OrganizationsHelper"
+        TypeName="FuseCP.Portal.OrganizationsHelper"
         OnSelected="odsSecurityGroupsPaged_Selected">
         <SelectParameters>
             <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />

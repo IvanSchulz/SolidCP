@@ -37,9 +37,9 @@ using System.Collections;
 using System.Xml;
 using System.Collections.Generic;
 using System.Linq;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class BaseSetup
 	{
@@ -163,7 +163,7 @@ namespace SolidCP.Setup
 			if (version < new Version(minimalInstallerVersion))
 			{
 				MessageBox.Show(
-					string.Format("SolidCP Installer {0} or higher required.", minimalInstallerVersion),
+					string.Format("FuseCP Installer {0} or higher required.", minimalInstallerVersion),
 					"Setup Wizard", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				return DialogResult.Cancel;
 			}

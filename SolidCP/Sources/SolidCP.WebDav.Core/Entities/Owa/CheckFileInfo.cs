@@ -1,6 +1,6 @@
-﻿using System.Runtime.Serialization;
+using System.Runtime.Serialization;
 
-namespace SolidCP.WebDav.Core.Entities.Owa
+namespace FuseCP.WebDav.Core.Entities.Owa
 {
     [DataContract]
     public class CheckFileInfo

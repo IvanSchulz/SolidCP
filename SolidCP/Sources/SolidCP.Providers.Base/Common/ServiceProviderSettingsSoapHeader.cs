@@ -36,7 +36,7 @@ using System.Collections.Specialized;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     /// <summary>
     /// Summary description for ServiceProviderSettings.
@@ -50,7 +50,7 @@ namespace SolidCP.Providers
         /// <summary>
         /// This property is just a flag telling us that this SOAP header should be encrypted.
         /// </summary>
-        [XmlAttribute("SecureHeader", Namespace = "http://smbsaas/solidcp/server/")]
+        [XmlAttribute("SecureHeader", Namespace = "http://smbsaas/fusecp/server/")]
         [DataMember]
         public bool SecureHeader;
 	}

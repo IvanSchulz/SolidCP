@@ -32,7 +32,7 @@
 
 using System.Net;
 
-namespace SolidCP.Providers.RemoteDesktopServices
+namespace FuseCP.Providers.RemoteDesktopServices
 {
     public class SessionHostServer
     {

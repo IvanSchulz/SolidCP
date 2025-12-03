@@ -36,11 +36,11 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml;
 using Microsoft.Win32;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     /// <summary>
     /// Provides hosted SharePoint server functionality implementation.

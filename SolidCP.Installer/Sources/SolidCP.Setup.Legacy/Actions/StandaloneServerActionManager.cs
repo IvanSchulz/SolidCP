@@ -37,14 +37,14 @@ using System.Text;
 using System.Reflection;
 using System.IO;
 using System.Data;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Common;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Core;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public class SwapSetupVariablesBackAction : Action, IInstallAction, IUninstallAction, IPrepareDefaultsAction
 	{
@@ -501,10 +501,10 @@ namespace SolidCP.Setup.Actions
 			{
 				Log.WriteStart("Adding Sql service");
 
-				SolidCP.EnterpriseServer.Data.DbType dbtype;
+				FuseCP.EnterpriseServer.Data.DbType dbtype;
 				string nativeConnectionString;
 				DatabaseUtils.ParseConnectionString(EnterpriseServerSetup.DbInstallConnectionString, out dbtype, out nativeConnectionString);
-				if (dbtype == SolidCP.EnterpriseServer.Data.DbType.SqlServer)
+				if (dbtype == FuseCP.EnterpriseServer.Data.DbType.SqlServer)
 				{
 					SqlServerItem item = ParseConnectionString(nativeConnectionString);
 					string serverName = item.Server.ToLower();

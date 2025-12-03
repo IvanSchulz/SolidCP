@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	/// <summary>
 	/// Provides configuration system support for the <studioSettings> configuration section. 

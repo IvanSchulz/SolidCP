@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsRdsPolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsRdsPolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsRdsPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsRdsPolicy" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="secTimeout" runat="server" TargetControlID="timeoutPanel" meta:resourcekey="secTimeout" Text="Lock Screen Timeout"/>

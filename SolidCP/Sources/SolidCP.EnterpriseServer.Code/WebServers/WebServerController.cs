@@ -41,23 +41,23 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Serialization;
 
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
-using SolidCP.Providers.DNS;
-using OS = SolidCP.Server.Client;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.DNS;
+using OS = FuseCP.Server.Client;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 using System.Resources;
 using System.Threading;
 using System.Reflection;
-using SolidCP.Templates;
-using SolidCP.Providers.Database;
-using SolidCP.Providers.FTP;
+using FuseCP.Templates;
+using FuseCP.Providers.Database;
+using FuseCP.Providers.FTP;
 using System.Collections;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class WebServerController : ControllerBase, IImportController, IBackupController
     {

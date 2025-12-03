@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Server.Client;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class RunSystemCommandTask : SchedulerTask
     {

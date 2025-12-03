@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Web.Mvc;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDavPortal.Models;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDavPortal.Models;
 
-namespace SolidCP.WebDavPortal.Controllers
+namespace FuseCP.WebDavPortal.Controllers
 {
     public class ErrorController : Controller
     {

@@ -40,13 +40,13 @@ using System.Text;
 using System.Threading;
 using System.Security.Cryptography;
 using System.Security.Policy;
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Actions;
-using Data = SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Actions;
+using Data = FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Core;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class StandaloneServerSetup : BaseSetup
 	{
@@ -89,7 +89,7 @@ namespace SolidCP.Setup
 				//
 				InstallerFolder = Path.Combine(Utils.GetStringSetupParameter(args, Global.Parameters.InstallerFolder), Global.Server.ComponentName),
 				InstallerType = Utils.GetStringSetupParameter(args, Global.Parameters.InstallerType).Replace(Global.StandaloneServer.SetupController, Global.Server.SetupController),
-				InstallationFolder = Path.Combine(Path.Combine(Utils.GetSystemDrive(), "SolidCP"), Global.Server.ComponentName),
+				InstallationFolder = Path.Combine(Path.Combine(Utils.GetSystemDrive(), "FuseCP"), Global.Server.ComponentName),
 				ConfigurationFile = "web.config",
 			};
 			// Load config file
@@ -118,7 +118,7 @@ namespace SolidCP.Setup
 				Installer = Utils.GetStringSetupParameter(args, Global.Parameters.Installer),
 				InstallerFolder = Path.Combine(Utils.GetStringSetupParameter(args, Global.Parameters.InstallerFolder), Global.EntServer.ComponentName),
 				InstallerType = Utils.GetStringSetupParameter(args, Global.Parameters.InstallerType).Replace(Global.StandaloneServer.SetupController, Global.EntServer.SetupController),
-				InstallationFolder = Path.Combine(Path.Combine(Utils.GetSystemDrive(), "SolidCP"), Global.EntServer.ComponentName),
+				InstallationFolder = Path.Combine(Path.Combine(Utils.GetSystemDrive(), "FuseCP"), Global.EntServer.ComponentName),
 				InstallerPath = Utils.GetStringSetupParameter(args, Global.Parameters.InstallerPath),
 				SetupXml = Utils.GetStringSetupParameter(args, Global.Parameters.SetupXml),
 				//
@@ -157,7 +157,7 @@ namespace SolidCP.Setup
 					Installer = Utils.GetStringSetupParameter(args, Global.Parameters.Installer),
 					InstallerFolder = Path.Combine(Utils.GetStringSetupParameter(args, Global.Parameters.InstallerFolder), Global.WebPortal.ComponentName),
 					InstallerType = Utils.GetStringSetupParameter(args, Global.Parameters.InstallerType).Replace(Global.StandaloneServer.SetupController, Global.WebPortal.SetupController),
-					InstallationFolder = Path.Combine(Path.Combine(Utils.GetSystemDrive(), "SolidCP"), Global.WebPortal.ComponentName),
+					InstallationFolder = Path.Combine(Path.Combine(Utils.GetSystemDrive(), "FuseCP"), Global.WebPortal.ComponentName),
 					InstallerPath = Utils.GetStringSetupParameter(args, Global.Parameters.InstallerPath),
 					SetupXml = Utils.GetStringSetupParameter(args, Global.Parameters.SetupXml),
 					//
@@ -192,7 +192,7 @@ namespace SolidCP.Setup
 				{
 					var success = true;
 					
-					// Retrieve SolidCP Enterprise Server component's settings from the command-line
+					// Retrieve FuseCP Enterprise Server component's settings from the command-line
 					var adminPassword = Utils.GetStringSetupParameter(args, Global.Parameters.ServerAdminPassword);
 					// This has been designed to make an installation process via Web PI more secure
 					if (String.IsNullOrEmpty(adminPassword))
@@ -291,11 +291,11 @@ namespace SolidCP.Setup
 					new ConfigurationCheck(CheckTypes.IISVersion, "IIS Requirement"){ SetupVariables = serverSetup }, 
 					new ConfigurationCheck(CheckTypes.ASPNET, "ASP.NET Requirement"){ SetupVariables = serverSetup }, 
 					// Validate Server installation prerequisites
-					new ConfigurationCheck(CheckTypes.SCPServer, "SolidCP Server Requirement") { SetupVariables = serverSetup }, 
+					new ConfigurationCheck(CheckTypes.SCPServer, "FuseCP Server Requirement") { SetupVariables = serverSetup }, 
 					// Validate EnterpriseServer installation prerequisites
-					new ConfigurationCheck(CheckTypes.SCPEnterpriseServer, "SolidCP Enterprise Server Requirement") { SetupVariables = esServerSetup }, 
+					new ConfigurationCheck(CheckTypes.SCPEnterpriseServer, "FuseCP Enterprise Server Requirement") { SetupVariables = esServerSetup }, 
 					// Validate WebPortal installation prerequisites
-					new ConfigurationCheck(CheckTypes.SCPPortal, "SolidCP Portal Requirement") { SetupVariables = portalSetup }
+					new ConfigurationCheck(CheckTypes.SCPPortal, "FuseCP Portal Requirement") { SetupVariables = portalSetup }
 				});
 				// Assign WebPortal setup variables set to acquire corresponding settings
 				var page3 = new WebPage { SetupVariables = portalSetup };

@@ -36,11 +36,11 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Win32;
 
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.OS;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	public class MsDNS2012: HostingServiceProviderBase, IDnsServer
     {

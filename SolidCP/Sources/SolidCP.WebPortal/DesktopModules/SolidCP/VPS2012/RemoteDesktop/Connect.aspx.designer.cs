@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012.RemoteDesktop {
+namespace FuseCP.Portal.VPS2012.RemoteDesktop {
     
     
     public partial class Connect {

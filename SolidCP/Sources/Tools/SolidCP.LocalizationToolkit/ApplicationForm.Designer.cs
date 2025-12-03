@@ -26,7 +26,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	partial class ApplicationForm
 	{
@@ -73,7 +73,7 @@ namespace SolidCP.LocalizationToolkit
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cbSupportedLocales = new System.Windows.Forms.ComboBox();
-            this.topLogoControl = new SolidCP.LocalizationToolkit.TopLogoControl();
+            this.topLogoControl = new FuseCP.LocalizationToolkit.TopLogoControl();
             this.FileColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KeyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DefaultValueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();

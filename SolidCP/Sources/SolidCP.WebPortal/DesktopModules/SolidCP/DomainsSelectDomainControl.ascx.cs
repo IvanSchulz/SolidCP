@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Web;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class DomainsSelectDomainControl : SolidCPControlBase
+    public partial class DomainsSelectDomainControl : FuseCPControlBase
     {
         public bool HideIdnDomains
         {

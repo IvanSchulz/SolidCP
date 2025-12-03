@@ -1,9 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using SolidCP.WebDav.Core.Config.WebConfigSections;
+using FuseCP.WebDav.Core.Config.WebConfigSections;
 
-namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public class OwaSupportedBrowsersCollection : AbstractConfigCollection, IReadOnlyDictionary<string, int>
     {

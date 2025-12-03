@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2022, SolidCP
+// Copyright (c) 2022, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -48,18 +48,18 @@ using System.Reflection;
 using System.Globalization;
 
 using System.Xml;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using Vds = Microsoft.Storage.Vds;
 using System.Configuration;
 using System.Linq;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.Virtualization.Extensions;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization.Extensions;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class HyperV2025 : HyperV2022
     {

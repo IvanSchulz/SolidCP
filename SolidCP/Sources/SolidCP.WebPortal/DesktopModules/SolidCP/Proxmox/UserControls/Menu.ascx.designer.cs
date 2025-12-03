@@ -7,7 +7,7 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Proxmox.UserControls {
+namespace FuseCP.Portal.Proxmox.UserControls {
     
     
     public partial class Menu {

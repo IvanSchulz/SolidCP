@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using System.Net;
 using RestSharp;
 using System.Threading;
-using SolidCP.Providers.Virtualization.Proxmox;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.Virtualization.Proxmox;
+using FuseCP.Providers.HostedSolution;
 using System.Security.Authentication;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Corsinvest.ProxmoxVE.Api;
 using Corsinvest.ProxmoxVE.Api.Shared;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
 	public class ApiClient: PveClient, IDisposable
 	{

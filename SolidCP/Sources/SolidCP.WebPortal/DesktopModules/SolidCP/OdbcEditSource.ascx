@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OdbcEditSource.ascx.cs" Inherits="SolidCP.Portal.OdbcEditSource" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OdbcEditSource.ascx.cs" Inherits="FuseCP.Portal.OdbcEditSource" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc2" %>

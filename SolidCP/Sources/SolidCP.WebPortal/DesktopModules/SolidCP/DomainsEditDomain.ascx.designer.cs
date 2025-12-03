@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class DomainsEditDomain {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// DomainName control.
@@ -31,13 +31,13 @@ namespace SolidCP.Portal {
         protected global::System.Web.UI.WebControls.Literal DomainName;
         
         /// <summary>
-        /// SolidCP control.
+        /// FuseCP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SolidCP;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FuseCP;
         
         /// <summary>
         /// WebSiteSection control.
@@ -460,6 +460,6 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
     }
 }

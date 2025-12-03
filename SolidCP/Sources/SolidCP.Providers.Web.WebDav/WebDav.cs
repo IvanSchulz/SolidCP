@@ -34,12 +34,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
 using Microsoft.Web.Administration;
-using SolidCP.Providers.Web.Extensions;
+using FuseCP.Providers.Web.Extensions;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
     public class WebDav : IWebDav
     {

@@ -5,7 +5,7 @@
 			"launchUrl": "https://localhost:9004/",
 			"environmentVariables": {
 				"ASPNETCORE_ENVIRONMENT": "Development",
-				"APPSETTING_EnterpriseServer_ConnectionString": "Server=172.26.0.1;Database=SolidCP;uid=sa;pwd=Password12;TrustServerCertificate=true",
+				"APPSETTING_EnterpriseServer_ConnectionString": "Server=172.26.0.1;Database=FuseCP;uid=sa;pwd=Password12;TrustServerCertificate=true",
 				"APPSETTING_appliationUrls": "http://localhost:9004"
 			},
 			"distributionName": ""

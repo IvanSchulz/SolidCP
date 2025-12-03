@@ -35,7 +35,7 @@ using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
     public class SiteStructure
     {

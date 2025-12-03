@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Interfaces.Services
+namespace FuseCP.WebDav.Core.Interfaces.Services
 {
     public interface ISmsDistributionService
     {

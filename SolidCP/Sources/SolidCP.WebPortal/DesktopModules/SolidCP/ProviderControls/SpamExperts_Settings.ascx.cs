@@ -33,9 +33,9 @@
 using System;
 using System.Collections.Specialized;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class SpamExperts_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+    public partial class SpamExperts_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
         protected void Page_Load(object sender, EventArgs e)
         {

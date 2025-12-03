@@ -31,16 +31,16 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ﻿using System.ComponentModel;
-using SolidCP.Web.Services;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/server/")]
+    [WebService(Namespace = "http://smbsaas/fusecp/server/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [Policy("ServerPolicy")]
     [ToolboxItem(false)]

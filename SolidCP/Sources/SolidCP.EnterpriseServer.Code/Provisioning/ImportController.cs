@@ -35,11 +35,11 @@ using System.Data;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers;
-using SolidCP.Providers.Web;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class ImportController: ControllerBase
     {

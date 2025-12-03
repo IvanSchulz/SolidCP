@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDavPortal.Models.Common.DataTable
+namespace FuseCP.WebDavPortal.Models.Common.DataTable
 {
     public class JqueryDataTableOrder
     {

@@ -41,15 +41,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.Portal.ProviderControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.OS;
+using FuseCP.Portal.ProviderControls;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class EnterpriseStorageFolderGeneralSettings : SolidCPModuleBase
+    public partial class EnterpriseStorageFolderGeneralSettings : FuseCPModuleBase
     {
         #region Constants
 

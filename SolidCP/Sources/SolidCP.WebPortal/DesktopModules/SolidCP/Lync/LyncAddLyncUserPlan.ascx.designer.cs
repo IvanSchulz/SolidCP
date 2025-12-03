@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.Lync {
+namespace FuseCP.Portal.Lync {
     
     
     public partial class LyncAddLyncUserPlan {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// secPlan control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPlan;
+        protected global::FuseCP.Portal.CollapsiblePanel secPlan;
         
         /// <summary>
         /// Plan control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPlanFeatures;
+        protected global::FuseCP.Portal.CollapsiblePanel secPlanFeatures;
         
         /// <summary>
         /// PlanFeatures control.
@@ -145,7 +145,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPlanFeaturesFederation;
+        protected global::FuseCP.Portal.CollapsiblePanel secPlanFeaturesFederation;
         
         /// <summary>
         /// PlanFeaturesFederation control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPlanFeaturesArchiving;
+        protected global::FuseCP.Portal.CollapsiblePanel secPlanFeaturesArchiving;
         
         /// <summary>
         /// PlanFeaturesArchiving control.
@@ -217,7 +217,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPlanFeaturesMeeting;
+        protected global::FuseCP.Portal.CollapsiblePanel secPlanFeaturesMeeting;
         
         /// <summary>
         /// PlanFeaturesMeeting control.
@@ -244,7 +244,7 @@ namespace SolidCP.Portal.Lync {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPlanFeaturesTelephony;
+        protected global::FuseCP.Portal.CollapsiblePanel secPlanFeaturesTelephony;
         
         /// <summary>
         /// PlanFeaturesTelephony control.

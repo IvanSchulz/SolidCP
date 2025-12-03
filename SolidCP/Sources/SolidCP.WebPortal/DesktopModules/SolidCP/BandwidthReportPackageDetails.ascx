@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BandwidthReportPackageDetails.ascx.cs" Inherits="SolidCP.Portal.BandwidthReportPackageDetails" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BandwidthReportPackageDetails.ascx.cs" Inherits="FuseCP.Portal.BandwidthReportPackageDetails" %>
 <%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

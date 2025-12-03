@@ -41,13 +41,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class HostedSharePointSiteCollections :  SolidCPModuleBase
+	public partial class HostedSharePointSiteCollections :  FuseCPModuleBase
 	{
  
 		protected void Page_Load(object sender, EventArgs e)

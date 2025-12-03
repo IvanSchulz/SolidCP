@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAllocatePhoneNumbers.ascx.cs" Inherits="SolidCP.Portal.SfB.SfBAllocatePhoneNumbers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAllocatePhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.SfB.SfBAllocatePhoneNumbers" %>
 <%@ Register Src="UserControls/SfBAllocatePackagePhoneNumbers.ascx" TagName="SfBAllocatePackagePhoneNumbers" TagPrefix="scp" %>
 
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>

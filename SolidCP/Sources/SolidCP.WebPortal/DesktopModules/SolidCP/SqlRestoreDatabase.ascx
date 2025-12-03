@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlRestoreDatabase.ascx.cs" Inherits="SolidCP.Portal.SqlRestoreDatabase" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlRestoreDatabase.ascx.cs" Inherits="FuseCP.Portal.SqlRestoreDatabase" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <div class="panel-body form-horizontal">
     <div class="Huge">

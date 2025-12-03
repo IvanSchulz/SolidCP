@@ -34,9 +34,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Templates.AST;
+using FuseCP.Templates.AST;
 
-namespace SolidCP.Templates
+namespace FuseCP.Templates
 {
     internal class TemplateContext
     {

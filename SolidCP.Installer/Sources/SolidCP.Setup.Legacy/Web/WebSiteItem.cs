@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Setup.Web
+namespace FuseCP.Setup.Web
 {
 	/// <summary>
 	/// Web site item.

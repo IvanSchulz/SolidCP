@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncFederationDomains.ascx.cs" Inherits="SolidCP.Portal.Lync.LyncFederationDomains" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncFederationDomains.ascx.cs" Inherits="FuseCP.Portal.Lync.LyncFederationDomains" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>

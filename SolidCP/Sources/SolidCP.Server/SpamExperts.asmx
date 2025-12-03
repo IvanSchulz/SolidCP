@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="SpamExperts.asmx.cs" Class="SolidCP.Server.SpamExperts" %>
+<%@ WebService Language="C#" CodeBehind="SpamExperts.asmx.cs" Class="FuseCP.Server.SpamExperts" %>

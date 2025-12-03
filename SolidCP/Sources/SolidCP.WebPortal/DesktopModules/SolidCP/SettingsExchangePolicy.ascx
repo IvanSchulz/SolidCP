@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangePolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsExchangePolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangePolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsExchangePolicy" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="scp" %>
 <%@ Register Src="UserControls/OrgIdPolicyEditor.ascx" TagName="OrgIdPolicyEditor" TagPrefix="scp" %>
 <%@ Register Src="UserControls/OrgPolicyEditor.ascx" TagName="OrgPolicyEditor" TagPrefix="scp" %>

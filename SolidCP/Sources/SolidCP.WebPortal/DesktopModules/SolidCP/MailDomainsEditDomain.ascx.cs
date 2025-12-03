@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Mail;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class MailDomainsEditDomain : SolidCPModuleBase
+    public partial class MailDomainsEditDomain : FuseCPModuleBase
     {
         MailDomain item = null;
 

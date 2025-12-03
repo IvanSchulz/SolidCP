@@ -36,7 +36,7 @@ using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
     //[DefaultEvent("BeforeDisplay"), ToolboxItem(false), Designer(typeof(WizardPageBaseDesigner))]
     public class WizardPageBase : UserControl
@@ -281,9 +281,9 @@ namespace SolidCP.UniversalInstaller.WinForms
 		protected virtual void ShowError()
 		{
 			ShowError("An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.");
+				"FuseCP Installer home directory.");
 		}
 
 		/// <summary>

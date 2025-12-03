@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DeletedUserTabs.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.DeletedUserTabs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DeletedUserTabs.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.DeletedUserTabs" %>
             <asp:DataList ID="dlTabs" runat="server" RepeatDirection="Horizontal"
                 RepeatLayout="Flow" EnableViewState="false"  RepeatColumns="6"   SeparatorStyle-CssClass="Separator" SeparatorStyle-Height="22px" >
                 <ItemStyle Wrap="False" />

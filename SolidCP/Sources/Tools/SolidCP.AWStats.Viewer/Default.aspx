@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SolidCP.AWStats.Viewer.Default" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FuseCP.AWStats.Viewer.Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -71,7 +71,7 @@
 		</table>
 		<p>
 		    * You should specify username and password that you use to login to
-		    <a href="http://demo.SolidCP.net" target="_blank">http://demo.SolidCP.net</a>.
+		    <a href="http://demo.FuseCP.net" target="_blank">http://demo.FuseCP.net</a>.
 		</p>
     </form>
 </body>

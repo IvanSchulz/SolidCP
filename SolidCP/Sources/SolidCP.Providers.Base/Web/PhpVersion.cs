@@ -35,7 +35,7 @@ using System.Net;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
     public class PhpVersion
     {

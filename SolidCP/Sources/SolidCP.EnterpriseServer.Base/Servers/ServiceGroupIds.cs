@@ -1,4 +1,4 @@
-﻿namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class ServiceGroupIds
     {

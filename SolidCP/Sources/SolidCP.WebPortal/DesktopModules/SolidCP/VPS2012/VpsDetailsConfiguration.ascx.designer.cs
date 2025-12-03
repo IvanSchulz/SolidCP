@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
 
 
@@ -21,7 +21,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
 
         /// <summary>
         /// tabs control.
@@ -30,7 +30,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS2012.UserControls.ServerTabs tabs;
+        protected global::FuseCP.Portal.VPS2012.UserControls.ServerTabs tabs;
 
         /// <summary>
         /// messageBox control.
@@ -39,7 +39,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
 
         /// <summary>
         /// secSoftware control.
@@ -48,7 +48,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSoftware;
+        protected global::FuseCP.Portal.CollapsiblePanel secSoftware;
 
         /// <summary>
         /// SoftwarePanel control.
@@ -102,7 +102,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS2012.UserControls.Generation GenerationSetting;
+        protected global::FuseCP.Portal.VPS2012.UserControls.Generation GenerationSetting;
 
         /// <summary>
         /// secResources control.
@@ -111,7 +111,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secResources;
+        protected global::FuseCP.Portal.CollapsiblePanel secResources;
 
         /// <summary>
         /// ResourcesPanel control.
@@ -192,7 +192,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secHddQOS;
+        protected global::FuseCP.Portal.CollapsiblePanel secHddQOS;
 
         /// <summary>
         /// QOSManag control.
@@ -255,7 +255,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS2012.UserControls.DynamicMemoryControl DynamicMemorySetting;
+        protected global::FuseCP.Portal.VPS2012.UserControls.DynamicMemoryControl DynamicMemorySetting;
 
         /// <summary>
         /// secSnapshots control.
@@ -264,7 +264,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSnapshots;
+        protected global::FuseCP.Portal.CollapsiblePanel secSnapshots;
 
         /// <summary>
         /// SnapshotsPanel control.
@@ -300,7 +300,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDvd;
+        protected global::FuseCP.Portal.CollapsiblePanel secDvd;
 
         /// <summary>
         /// DvdPanel control.
@@ -318,7 +318,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDvdInstalled;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDvdInstalled;
 
         /// <summary>
         /// secBios control.
@@ -327,7 +327,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secBios;
+        protected global::FuseCP.Portal.CollapsiblePanel secBios;
 
         /// <summary>
         /// BiosPanel control.
@@ -345,7 +345,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionBootFromCD;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionBootFromCD;
 
         /// <summary>
         /// optionNumLock control.
@@ -354,7 +354,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionNumLock;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionNumLock;
 
         /// <summary>
         /// optionSecureBoot control.
@@ -363,7 +363,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionSecureBoot;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionSecureBoot;
 
         /// <summary>
         /// secActions control.
@@ -372,7 +372,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secActions;
+        protected global::FuseCP.Portal.CollapsiblePanel secActions;
 
         /// <summary>
         /// ActionsPanel control.
@@ -390,7 +390,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionStartShutdown;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionStartShutdown;
 
         /// <summary>
         /// optionReset control.
@@ -399,7 +399,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionReset;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionReset;
 
         /// <summary>
         /// optionPauseResume control.
@@ -408,7 +408,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionPauseResume;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionPauseResume;
 
         /// <summary>
         /// optionReinstall control.
@@ -417,7 +417,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionReinstall;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionReinstall;
 
         /// <summary>
         /// optionReboot control.
@@ -426,7 +426,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionReboot;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionReboot;
 
         /// <summary>
         /// secNetwork control.
@@ -435,7 +435,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secNetwork;
+        protected global::FuseCP.Portal.CollapsiblePanel secNetwork;
 
         /// <summary>
         /// NetworkPanel control.
@@ -453,7 +453,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionExternalNetwork;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionExternalNetwork;
 
         /// <summary>
         /// optionPrivateNetwork control.
@@ -462,7 +462,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionPrivateNetwork;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionPrivateNetwork;
 
         /// <summary>
         /// optionDmzNetwork control.
@@ -471,7 +471,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.CheckBoxOption optionDmzNetwork;
+        protected global::FuseCP.Portal.UserControls.CheckBoxOption optionDmzNetwork;
 
         /// <summary>
         /// btnEdit control.
@@ -516,7 +516,7 @@ namespace SolidCP.Portal.VPS2012
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl password;
+        protected global::FuseCP.Portal.PasswordControl password;
 
         /// <summary>
         /// btnCancelChangePassword control.

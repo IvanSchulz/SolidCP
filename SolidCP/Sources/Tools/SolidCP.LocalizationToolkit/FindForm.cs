@@ -34,7 +34,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	public partial class FindForm : Form
 	{

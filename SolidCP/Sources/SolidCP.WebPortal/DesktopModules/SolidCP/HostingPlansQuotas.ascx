@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingPlansQuotas.ascx.cs" Inherits="SolidCP.Portal.HostingPlansQuotas" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingPlansQuotas.ascx.cs" Inherits="FuseCP.Portal.HostingPlansQuotas" %>
 <%@ Register Src="UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
 
 <asp:Repeater ID="dlGroups" runat="server">

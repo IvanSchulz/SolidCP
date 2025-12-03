@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.HostedSolution {
+namespace FuseCP.Portal.HostedSolution {
     
     
     public partial class DeletedUserGeneralSettings {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.DeletedUserTabs UserTabsId;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.DeletedUserTabs UserTabsId;
         
         /// <summary>
         /// MailboxTabsId control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxTabs MailboxTabsId;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxTabs MailboxTabsId;
         
         /// <summary>
         /// messageBox control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// locUserPrincipalName control.
@@ -271,7 +271,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secServiceLevels;
+        protected global::FuseCP.Portal.CollapsiblePanel secServiceLevels;
         
         /// <summary>
         /// ServiceLevels control.
@@ -325,7 +325,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secCompanyInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secCompanyInfo;
         
         /// <summary>
         /// CompanyInfo control.
@@ -433,7 +433,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secContactInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secContactInfo;
         
         /// <summary>
         /// ContactInfo control.
@@ -559,7 +559,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAddressInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secAddressInfo;
         
         /// <summary>
         /// AddressInfo control.
@@ -667,7 +667,7 @@ namespace SolidCP.Portal.HostedSolution {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAdvanced;
+        protected global::FuseCP.Portal.CollapsiblePanel secAdvanced;
         
         /// <summary>
         /// AdvancedInfo control.

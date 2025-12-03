@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PasswordControl.ascx.cs" Inherits="SolidCP.Portal.PasswordControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PasswordControl.ascx.cs" Inherits="FuseCP.Portal.PasswordControl" %>
 <script src="<%= GetRandomPasswordUrl() %>" language="javascript" type="text/javascript"></script>
 
 <div class="form-group">

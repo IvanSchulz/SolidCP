@@ -32,9 +32,9 @@
 
 using System;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class QuotaEditor : SolidCPControlBase
+    public partial class QuotaEditor : FuseCPControlBase
     {
         public int QuotaId
         {

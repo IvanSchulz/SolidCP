@@ -34,14 +34,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 using System.Web.UI;
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
-    public partial class OrganizationUsers : SolidCPModuleBase
+    public partial class OrganizationUsers : FuseCPModuleBase
     {
         private ServiceLevel[] ServiceLevels;
         private PackageContext cntx;

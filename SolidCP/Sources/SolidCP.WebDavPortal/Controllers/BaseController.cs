@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SolidCP.Server.Utils;
-using SolidCP.WebDavPortal.Models.Common;
-using SolidCP.WebDavPortal.Models.Common.Enums;
+using FuseCP.Server.Utils;
+using FuseCP.WebDavPortal.Models.Common;
+using FuseCP.WebDavPortal.Models.Common.Enums;
 
-namespace SolidCP.WebDavPortal.Controllers
+namespace FuseCP.WebDavPortal.Controllers
 {
     public class BaseController : Controller
     {

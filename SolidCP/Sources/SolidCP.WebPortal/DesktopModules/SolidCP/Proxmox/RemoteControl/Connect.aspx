@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Connect.aspx.cs" Inherits="SolidCP.Portal.Proxmox.RemoteDesktop.Connect" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Connect.aspx.cs" Inherits="FuseCP.Portal.Proxmox.RemoteDesktop.Connect" %>
 
 <!DOCTYPE html>
 <html>

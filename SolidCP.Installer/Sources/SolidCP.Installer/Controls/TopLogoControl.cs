@@ -33,7 +33,7 @@
 using System.Windows.Forms;
 using System.Reflection;
 
-namespace SolidCP.Installer
+namespace FuseCP.Installer
 {
 	/// <summary>
 	/// Top logo

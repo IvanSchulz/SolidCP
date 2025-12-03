@@ -1,9 +1,9 @@
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.Web;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.Web;
 using System;
 using System.Data;
 using System.Diagnostics.Contracts;
@@ -14,12 +14,12 @@ using System.Security.Policy;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public abstract partial class Installer
 {
-	public virtual string EnterpriseServerSiteId => $"{SolidCP}EnterpriseServer";
-	public virtual string UnixEnterpriseServerServiceId => "solidcp-enterpriseserver";
+	public virtual string EnterpriseServerSiteId => $"{FuseCP}EnterpriseServer";
+	public virtual string UnixEnterpriseServerServiceId => "fusecp-enterpriseserver";
 	public virtual void InstallEnterpriseServerPrerequisites() { }
 	public virtual void RemoveEnterpriseServerPrerequisites() { }
 	public virtual void CreateEnterpriseServerUser() => CreateUser(Settings.EnterpriseServer);
@@ -48,7 +48,7 @@ public abstract partial class Installer
 	{
 		var user = string.IsNullOrEmpty(Settings.EnterpriseServer.Username) && Settings.WebPortal.EmbedEnterpriseServer ?
 			Settings.WebPortal.Username : Settings.EnterpriseServer.Username;
-		SetFileOwner(Settings.EnterpriseServer.InstallPath, user, SolidCPGroup);
+		SetFileOwner(Settings.EnterpriseServer.InstallPath, user, FuseCPGroup);
 	}
 	public virtual void InstallEnterpriseServer()
 	{
@@ -107,14 +107,14 @@ public abstract partial class Installer
 			new XAttribute("type", "SwaggerWcf.Configuration.SwaggerWcfSection, SwaggerWcf")));
 		var swaggerwcf = XElement.Parse(@"<swaggerwcf>
 		<settings>
-			<setting name=""InfoDescription"" value=""SolidCP EnterpriseServer Service"" />
+			<setting name=""InfoDescription"" value=""FuseCP EnterpriseServer Service"" />
 			<setting name=""InfoVersion"" value=""2.0.0"" />
 			<setting name=""InfoTermsOfService"" value=""Terms of Service"" />
-			<setting name=""InfoTitle"" value=""SolidCP EnterpriseServer Service"" />
-			<setting name=""InfoContactName"" value=""SolidCP"" />
-			<setting name=""InfoContactUrl"" value=""http://solidcp.com/forum"" />
-			<setting name=""InfoContactEmail"" value=""support@solidcp.com"" />
-			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/SolidCP/blob/master/LICENSE.txt"" />
+			<setting name=""InfoTitle"" value=""FuseCP EnterpriseServer Service"" />
+			<setting name=""InfoContactName"" value=""FuseCP"" />
+			<setting name=""InfoContactUrl"" value=""http://fusecp.com/forum"" />
+			<setting name=""InfoContactEmail"" value=""support@fusecp.com"" />
+			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/master/LICENSE.txt"" />
 			<setting name=""InfoLicenseName"" value=""Creative Commons Share-alike"" />
 		</settings>
 	</swaggerwcf>");
@@ -386,19 +386,19 @@ public abstract partial class Installer
 	public virtual void InstallEnterpriseServerWebsite()
 	{
 		var web = Settings.EnterpriseServer.InstallPath;
-		var dll = Path.Combine(web, "bin_dotnet", "SolidCP.EnterpriseServer.dll");
+		var dll = Path.Combine(web, "bin_dotnet", "FuseCP.EnterpriseServer.dll");
 		InstallWebsite(EnterpriseServerSiteId,
 			web,
 			Settings.EnterpriseServer,
-			SolidCPUnixGroup,
+			FuseCPUnixGroup,
 			dll,
-			"SolidCP.EnterpriseServer service, the EnterpriseServer for the SolidCP control panel.",
+			"FuseCP.EnterpriseServer service, the EnterpriseServer for the FuseCP control panel.",
 			UnixEnterpriseServerServiceId);
 	}
 
 	public virtual void EnableEnterpriseServerWebsite() { }
 	public virtual void DisableEnterpriseServerWebsite() { }
-    public virtual string SchedulerServiceId => "SolidCP.SchedulerService";
+    public virtual string SchedulerServiceId => "FuseCP.SchedulerService";
     public virtual void InstallSchedulerService() { }
     public virtual void RemoveSchedulerService()
     {
@@ -415,7 +415,7 @@ public abstract partial class Installer
         var binFolder = (Settings.EnterpriseServer.RunOnNetCore ||
             Settings.WebPortal.RunOnNetCore && Settings.WebPortal.EmbedEnterpriseServer) ?
                 "bin_dotnet" : Path.Combine("bin", "Code");
-        var config = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, $"SolidCP.SchedulerService.{(Settings.EnterpriseServer.RunOnNetCore ? "dll" : "exe")}.config");
+        var config = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, $"FuseCP.SchedulerService.{(Settings.EnterpriseServer.RunOnNetCore ? "dll" : "exe")}.config");
 
         var xml = XElement.Load(config);
 
@@ -539,7 +539,7 @@ public abstract partial class Installer
 				var esAppSettings = esConf.Element("appSettings");
 
 
-				var esCryptoKey = esAppSettings?.Elements("add").FirstOrDefault(e => e.Attribute("key")?.Value == "SolidCP.CryptoKey");
+				var esCryptoKey = esAppSettings?.Elements("add").FirstOrDefault(e => e.Attribute("key")?.Value == "FuseCP.CryptoKey");
 				if (esCryptoKey != null)
 				{
 					settings.CryptoKey = esCryptoKey.Attribute("value")?.Value;
@@ -594,10 +594,10 @@ public abstract partial class Installer
 			settings.CryptoKey = CryptoUtils.GetRandomString(20);
 		}
 
-		var cryptoKey = appSettings.Elements("add").FirstOrDefault(e => e.Attribute("key")?.Value == "SolidCP.CryptoKey");
+		var cryptoKey = appSettings.Elements("add").FirstOrDefault(e => e.Attribute("key")?.Value == "FuseCP.CryptoKey");
 		if (cryptoKey == null)
 		{
-			cryptoKey = new XElement("add", new XAttribute("key", "SolidCP.CryptoKey"), new XAttribute("value", settings.CryptoKey));
+			cryptoKey = new XElement("add", new XAttribute("key", "FuseCP.CryptoKey"), new XAttribute("value", settings.CryptoKey));
 			appSettings.Add(cryptoKey);
 		}
 		else

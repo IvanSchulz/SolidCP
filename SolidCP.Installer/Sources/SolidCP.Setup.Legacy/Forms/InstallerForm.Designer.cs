@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	partial class InstallerForm
 	{
@@ -62,15 +62,15 @@ namespace SolidCP.Setup
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.wizard = new SolidCP.Setup.Wizard();
+			this.wizard = new FuseCP.Setup.Wizard();
 			this.SuspendLayout();
 			// 
 			// wizard
 			// 
-			this.wizard.BannerImage = global::SolidCP.Setup.Legacy.Properties.Resources.BannerImage;
+			this.wizard.BannerImage = global::FuseCP.Setup.Legacy.Properties.Resources.BannerImage;
 			this.wizard.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.wizard.Location = new System.Drawing.Point(0, 0);
-			this.wizard.MarginImage = global::SolidCP.Setup.Legacy.Properties.Resources.MarginImage;
+			this.wizard.MarginImage = global::FuseCP.Setup.Legacy.Properties.Resources.MarginImage;
 			this.wizard.Name = "wizard";
 			this.wizard.SelectedPage = null;
 			this.wizard.Size = new System.Drawing.Size(495, 358);

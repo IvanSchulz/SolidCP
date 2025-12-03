@@ -31,15 +31,15 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-	public partial class ExchangePublicFolderGeneralSettings : SolidCPModuleBase
+	public partial class ExchangePublicFolderGeneralSettings : FuseCPModuleBase
 	{
         protected void Page_Load(object sender, EventArgs e)
         {

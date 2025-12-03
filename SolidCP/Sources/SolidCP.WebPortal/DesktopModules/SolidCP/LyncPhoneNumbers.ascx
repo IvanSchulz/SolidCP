@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncPhoneNumbers.ascx.cs" Inherits="SolidCP.Portal.LyncPhoneNumbers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncPhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.LyncPhoneNumbers" %>
 <%@ Register Src="UserControls/PackagePhoneNumbers.ascx" TagName="PackagePhoneNumbers" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>

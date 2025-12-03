@@ -41,12 +41,12 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
-using SolidCP.Providers.Common;
-using SolidCP.UniversalInstaller;
-using SolidCP.UniversalInstaller.Core;
-using Data = SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.Common;
+using FuseCP.UniversalInstaller;
+using FuseCP.UniversalInstaller.Core;
+using Data = FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public class InstallSchedulerServiceUnixAction : Action, IInstallAction, IUninstallAction
 	{
@@ -341,7 +341,7 @@ namespace SolidCP.Setup.Actions
 			var doc = new XmlDocument();
 			doc.Load(path);
 			//encryption enabled
-			string xPath = "configuration/appSettings/add[@key=\"SolidCP.EncryptionEnabled\"]";
+			string xPath = "configuration/appSettings/add[@key=\"FuseCP.EncryptionEnabled\"]";
 			XmlElement encryptionNode = doc.SelectSingleNode(xPath) as XmlElement;
 			bool encryptionEnabled = false;
 			//
@@ -376,7 +376,7 @@ namespace SolidCP.Setup.Actions
 			Xml.Save(file);
 			Log.WriteEnd(String.Format("Updated {0} file", vars.ConfigurationFile));
 			// Schedular
-			var file1 = Path.Combine(vars.InstallationFolder, "Bin", "SolidCP.SchedulerService.exe.config");
+			var file1 = Path.Combine(vars.InstallationFolder, "Bin", "FuseCP.SchedulerService.exe.config");
 			var Xml1 = XDocument.Load(file1);
 			var connectionStrings1 = Xml1
 				.Element("configuration")
@@ -446,7 +446,7 @@ namespace SolidCP.Setup.Actions
 				using (var reader = new StreamReader(path))
 				{
 					string content = reader.ReadToEnd();
-					var pattern = new Regex(@"(?<=<add key=""SolidCP.CryptoKey"" .*?value\s*=\s*"")[^""]+(?="".*?>)");
+					var pattern = new Regex(@"(?<=<add key=""FuseCP.CryptoKey"" .*?value\s*=\s*"")[^""]+(?="".*?>)");
 					Match match = pattern.Match(content);
 					cryptoKey = match.Value;
 				}

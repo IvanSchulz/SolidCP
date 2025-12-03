@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersAddServices.ascx.cs" Inherits="SolidCP.Portal.VirtualServersAddServices" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersAddServices.ascx.cs" Inherits="FuseCP.Portal.VirtualServersAddServices" %>
 <div class="FormButtonsBar">
     <CPCC:StyleButton id="btnCancel" CssClass="btn btn-warning" runat="server" CausesValidation="False" OnClick="btnCancel_Click"> <i class="fa fa-times">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnCancel"/> </CPCC:StyleButton>&nbsp;
     <CPCC:StyleButton id="btnAdd" CssClass="btn btn-success" runat="server" OnClick="btnAdd_Click"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAdd"/> </CPCC:StyleButton>

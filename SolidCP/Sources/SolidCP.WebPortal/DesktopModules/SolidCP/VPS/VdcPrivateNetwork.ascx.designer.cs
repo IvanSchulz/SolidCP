@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS {
+namespace FuseCP.Portal.VPS {
     
     
     public partial class VdcPrivateNetwork {
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPS.UserControls.Menu menu;
         
         /// <summary>
         /// messageBox control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// searchBox control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SearchBox searchBox;
+        protected global::FuseCP.Portal.SearchBox searchBox;
         
         /// <summary>
         /// gvAddresses control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel control.
@@ -109,6 +109,6 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.Quota addressesPerVps;
+        protected global::FuseCP.Portal.Quota addressesPerVps;
     }
 }

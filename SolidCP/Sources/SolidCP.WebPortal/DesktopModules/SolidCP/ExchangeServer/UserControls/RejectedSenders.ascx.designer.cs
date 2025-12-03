@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer.UserControls {
+namespace FuseCP.Portal.ExchangeServer.UserControls {
     
     
     public partial class RejectedSenders {
@@ -70,6 +70,6 @@ namespace SolidCP.Portal.ExchangeServer.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsList rejectAccounts;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsList rejectAccounts;
     }
 }

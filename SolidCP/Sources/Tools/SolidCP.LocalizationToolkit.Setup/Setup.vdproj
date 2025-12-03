@@ -1,9 +1,9 @@
-﻿"DeployProject"
+"DeployProject"
 {
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:SolidCP.LocalizationToolkit.Setup"
+"ProjectName" = "8:FuseCP.LocalizationToolkit.Setup"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -63,7 +63,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\SolidCPLocalizationToolkit12.msi"
+        "OutputFilename" = "8:Debug\\FuseCPLocalizationToolkit12.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -90,7 +90,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SolidCPLocalizationToolkit12.msi"
+        "OutputFilename" = "8:Release\\FuseCPLocalizationToolkit12.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -298,7 +298,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_DA8C6876A5B640DCB369FC3D9F3E7C06"
                     {
-                    "Name" = "8:SolidCP"
+                    "Name" = "8:FuseCP"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -324,7 +324,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:SolidCP Localization Toolkit 1.2.0"
+        "ProductName" = "8:FuseCP Localization Toolkit 1.2.0"
         "ProductCode" = "8:{C409DC88-3751-4DF9-9EF1-56AD06C92319}"
         "PackageCode" = "8:{137E8F55-5B1A-48B5-9C50-D2497F3E1357}"
         "UpgradeCode" = "8:{5E387E28-5748-4BF2-BEEF-2A3AE3F43FC5}"
@@ -337,12 +337,12 @@
         "Manufacturer" = "8:Outercurve Foundation"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:SolidCP Localization Toolkit 1.2.0"
+        "Title" = "8:FuseCP Localization Toolkit 1.2.0"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Outercurve Foundation"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:http://www.SolidCP.net"
+        "ARPURLINFOABOUT" = "8:http://www.FuseCP.net"
         "ARPPRODUCTICON" = "8:_CF213991E0A04EF3AB1EC885E4DE4DD0"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -448,7 +448,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9084A369771D425F90C8D69AA9B95B2E"
             {
-            "Name" = "8:SolidCP Localization Toolkit 1.1.0"
+            "Name" = "8:FuseCP Localization Toolkit 1.1.0"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -866,7 +866,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3B6BCC3083984F7B823C46F727669165"
             {
-            "SourcePath" = "8:..\\SolidCP.LocalizationToolkit\\obj\\Release\\LocalizationToolkit.exe"
+            "SourcePath" = "8:..\\FuseCP.LocalizationToolkit\\obj\\Release\\LocalizationToolkit.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_A68C37AB7D6A4154AFCA98D0B81B8175"

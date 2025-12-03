@@ -1,14 +1,14 @@
-﻿#if ScaffoldedEntities
+#if ScaffoldedEntities
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Entities;
+namespace FuseCP.EnterpriseServer.Data.Entities;
 
 #if NetCore
 [Index("LyncUserPlanId", Name = "IX_LyncUserPlans", IsUnique = true)]

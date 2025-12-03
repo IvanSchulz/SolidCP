@@ -37,10 +37,10 @@ using System.Configuration;
 using System.Windows.Forms;
 using System.Collections;
 using System.Text;
-using SolidCP.Setup.Actions;
-using SolidCP.UniversalInstaller;
+using FuseCP.Setup.Actions;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     public class WebDavPortal : BaseSetup
     {
@@ -191,7 +191,7 @@ namespace SolidCP.Setup
             InstallAction action = new InstallAction(ActionTypes.DeleteShortcuts);
             action.Description = "Deleting shortcuts...";
             action.Log = "- Delete shortcuts";
-            action.Name = "Login to SolidCP.url";
+            action.Name = "Login to FuseCP.url";
             page3.Actions.Add(action);
             page2.UninstallPage = page3;
 

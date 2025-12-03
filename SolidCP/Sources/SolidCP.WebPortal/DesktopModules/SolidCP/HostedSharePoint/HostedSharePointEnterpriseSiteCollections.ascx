@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" Codebehind="HostedSharePointEnterpriseSiteCollections.ascx.cs"
-	Inherits="SolidCP.Portal.HostedSharePointEnterpriseSiteCollections" %>
+	Inherits="FuseCP.Portal.HostedSharePointEnterpriseSiteCollections" %>
 <%@ Register Src="../UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems"
 	TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
@@ -74,7 +74,7 @@ function confirmation()
 						</Columns>
 					</asp:GridView>
 					<asp:ObjectDataSource ID="odsSiteCollectionsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetSharePointEnterpriseSiteCollectionPagedCount"
-						SelectMethod="GetSharePointEnterpriseSiteCollectionPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.HostedSharePointEnterpriseSiteCollectionsHelper"
+						SelectMethod="GetSharePointEnterpriseSiteCollectionPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.HostedSharePointEnterpriseSiteCollectionsHelper"
 						OnSelected="odsSharePointEnterpriseSiteCollectionPaged_Selected">
 						<SelectParameters>
 					        <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="-1" />

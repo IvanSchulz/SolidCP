@@ -41,7 +41,7 @@ using System.Text;
 using System.IO;
 using System.Net;
 
-namespace SolidCP.AWStats.Viewer
+namespace FuseCP.AWStats.Viewer
 {
     public partial class Default : System.Web.UI.Page
     {

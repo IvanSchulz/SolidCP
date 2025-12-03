@@ -35,7 +35,7 @@ using System.DirectoryServices;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     public class RemoteServerSettings
     {

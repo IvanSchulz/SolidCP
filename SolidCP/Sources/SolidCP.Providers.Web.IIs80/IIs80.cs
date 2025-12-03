@@ -34,11 +34,11 @@ using Microsoft.Web.Administration;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Web.Iis;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Web.Iis;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	public class IIs80 : IIs70
 	{

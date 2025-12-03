@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.Scheduling;
-using SolidCP.Portal.Code.Framework;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.Scheduling;
+using FuseCP.Portal.Code.Framework;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SchedulesEditSchedule : SolidCPModuleBase
+    public partial class SchedulesEditSchedule : FuseCPModuleBase
     {
         private static readonly string ScheduleViewEnvironment = "ASP.NET";
 

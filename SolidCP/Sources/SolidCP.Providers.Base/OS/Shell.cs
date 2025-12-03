@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using static System.Net.Mime.MediaTypeNames;
 using System.Collections.Generic;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 
 	public abstract class Shell : INotifyCompletion

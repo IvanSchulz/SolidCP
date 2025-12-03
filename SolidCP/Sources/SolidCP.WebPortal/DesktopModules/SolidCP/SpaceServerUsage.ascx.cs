@@ -1,13 +1,13 @@
-﻿using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 using System;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Web.UI;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SpaceServerUsage : SolidCPModuleBase
+    public partial class SpaceServerUsage : FuseCPModuleBase
     {
         private const int SERVER_TIMEOUT = 10000; //10 sec
         protected void Page_Init(object sender, EventArgs e)

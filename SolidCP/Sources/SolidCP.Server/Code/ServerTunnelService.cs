@@ -1,13 +1,13 @@
-﻿using System.Net;
+using System.Net;
 using System.Threading.Tasks;
-using SolidCP.Web.Services;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Virtualization;
 
-[assembly:TunnelService(typeof(SolidCP.Server.ServerTunnelService))]
+[assembly:TunnelService(typeof(FuseCP.Server.ServerTunnelService))]
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     public class ServerTunnelService: ServerTunnelServiceBase
     {

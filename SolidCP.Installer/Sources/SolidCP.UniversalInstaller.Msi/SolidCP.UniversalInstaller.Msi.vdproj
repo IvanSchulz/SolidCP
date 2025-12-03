@@ -1,9 +1,9 @@
-﻿"DeployProject"
+"DeployProject"
 {
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:SolidCP.UniversalInstaller.Msi"
+"ProjectName" = "8:FuseCP.UniversalInstaller.Msi"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -63,7 +63,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\SolidCP.Installer.msi"
+        "OutputFilename" = "8:Debug\\FuseCP.Installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -95,7 +95,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\SolidCP.Installer.msi"
+        "OutputFilename" = "8:Release\\FuseCP.Installer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -192,8 +192,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9A344539BE1C49A7845330D874394596"
             {
-            "SourcePath" = "8:SolidCP.Installer.runtimeconfig.json"
-            "TargetName" = "8:SolidCP.Installer.runtimeconfig.json"
+            "SourcePath" = "8:FuseCP.Installer.runtimeconfig.json"
+            "TargetName" = "8:FuseCP.Installer.runtimeconfig.json"
             "Tag" = "8:"
             "Folder" = "8:_69534927F8764F848A73EDCFB8B13EC6"
             "Condition" = "8:"
@@ -212,8 +212,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CB6C4A2B6CFB4E21B5740F9CFE359A18"
             {
-            "SourcePath" = "8:..\\SolidCP.UniversalInstaller\\Resources\\SolidCP.ico"
-            "TargetName" = "8:SolidCP.ico"
+            "SourcePath" = "8:..\\FuseCP.UniversalInstaller\\Resources\\FuseCP.ico"
+            "TargetName" = "8:FuseCP.ico"
             "Tag" = "8:"
             "Folder" = "8:_69534927F8764F848A73EDCFB8B13EC6"
             "Condition" = "8:"
@@ -232,8 +232,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2AFEEB9995A4D14BA48585CB8CA72D4"
             {
-            "SourcePath" = "8:SolidCP.Installer.exe"
-            "TargetName" = "8:SolidCP.Installer.exe"
+            "SourcePath" = "8:FuseCP.Installer.exe"
+            "TargetName" = "8:FuseCP.Installer.exe"
             "Tag" = "8:"
             "Folder" = "8:_69534927F8764F848A73EDCFB8B13EC6"
             "Condition" = "8:"
@@ -252,8 +252,8 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D31DFB96B7DB41E8A589CCB792F17B04"
             {
-            "SourcePath" = "8:SolidCP.Installer.deps.json"
-            "TargetName" = "8:SolidCP.Installer.deps.json"
+            "SourcePath" = "8:FuseCP.Installer.deps.json"
+            "TargetName" = "8:FuseCP.Installer.deps.json"
             "Tag" = "8:"
             "Folder" = "8:_69534927F8764F848A73EDCFB8B13EC6"
             "Condition" = "8:"
@@ -274,16 +274,16 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SolidCP.Installer, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FuseCP.Installer, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_FF2BD004F3A340F9B309E6A193D2C3FF"
                     {
-                    "Name" = "8:SolidCP.Installer.dll"
+                    "Name" = "8:FuseCP.Installer.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:SolidCP.Installer.dll"
+            "SourcePath" = "8:FuseCP.Installer.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_69534927F8764F848A73EDCFB8B13EC6"
@@ -309,7 +309,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_69534927F8764F848A73EDCFB8B13EC6"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder]SolidCP\\Installer"
+            "DefaultLocation" = "8:[ProgramFilesFolder]FuseCP\\Installer"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -330,7 +330,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_2368989E4B03471DA8EBE75CBA32AE89"
                     {
-                    "Name" = "8:SolidCP"
+                    "Name" = "8:FuseCP"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -367,7 +367,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:SolidCP Installer"
+        "ProductName" = "8:FuseCP Installer"
         "ProductCode" = "8:{A6327109-0DEE-42A4-A825-AA7D99A83D7F}"
         "PackageCode" = "8:{2747B8AC-E9A7-4319-AEF5-DB99E5C06121}"
         "UpgradeCode" = "8:{629CCD5C-1F6D-4168-BBE6-01C69E232F43}"
@@ -377,14 +377,14 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:2.0.0"
-        "Manufacturer" = "8:SolidCP"
+        "Manufacturer" = "8:FuseCP"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:SolidCP Installer Setup"
+        "Title" = "8:FuseCP Installer Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:SolidCP"
-        "Keywords" = "8:SolidCP"
-        "ARPCOMMENTS" = "8:SolidCP Installer"
+        "ARPCONTACT" = "8:FuseCP"
+        "Keywords" = "8:FuseCP"
+        "ARPCOMMENTS" = "8:FuseCP Installer"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_CB6C4A2B6CFB4E21B5740F9CFE359A18"
         "ARPIconIndex" = "3:0"
@@ -491,7 +491,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8D00A265C4214054AA585C72CCFDABB0"
             {
-            "Name" = "8:SolidCP Installer"
+            "Name" = "8:FuseCP Installer"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

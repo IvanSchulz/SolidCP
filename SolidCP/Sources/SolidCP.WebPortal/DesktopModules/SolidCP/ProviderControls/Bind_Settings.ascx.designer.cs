@@ -40,11 +40,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     public partial class Bind_Settings {
         protected System.Web.UI.WebControls.Label lblIPAddresses;
-        protected SolidCP.Portal.ProviderControls.Common_IPAddressesList iPAddressesList;
+        protected FuseCP.Portal.ProviderControls.Common_IPAddressesList iPAddressesList;
         protected System.Web.UI.WebControls.Label lblAllowZoneTransfers;
         protected System.Web.UI.WebControls.TextBox txtAllowZoneTransfers;
         protected System.Web.UI.WebControls.Label lblResponsiblePerson;
@@ -58,16 +58,16 @@ namespace SolidCP.Portal.ProviderControls {
         protected System.Web.UI.WebControls.Label lblBindReloadBatch;
         protected System.Web.UI.WebControls.TextBox txtBindReloadBatch;
         protected System.Web.UI.WebControls.Label lblRefreshInterval;
-        protected SolidCP.Portal.ScheduleInterval intRefresh;
+        protected FuseCP.Portal.ScheduleInterval intRefresh;
         protected System.Web.UI.WebControls.Label lblRetryInterval;
-        protected SolidCP.Portal.ScheduleInterval intRetry;
+        protected FuseCP.Portal.ScheduleInterval intRetry;
         protected System.Web.UI.WebControls.Label lblExpireLimit;
-        protected SolidCP.Portal.ScheduleInterval intExpire;
+        protected FuseCP.Portal.ScheduleInterval intExpire;
         protected System.Web.UI.WebControls.Label lblMinimumTtl;
-        protected SolidCP.Portal.ScheduleInterval intTtl;
+        protected FuseCP.Portal.ScheduleInterval intTtl;
         protected System.Web.UI.WebControls.Label lblSecondaryDNS;
-        protected SolidCP.Portal.ProviderControls.Common_SecondaryDNSServers secondaryDNSServers;
+        protected FuseCP.Portal.ProviderControls.Common_SecondaryDNSServers secondaryDNSServers;
         protected System.Web.UI.WebControls.Label lblNameServers;
-        protected SolidCP.Portal.UserControls.EditDomainsList nameServers;
+        protected FuseCP.Portal.UserControls.EditDomainsList nameServers;
     }
 }

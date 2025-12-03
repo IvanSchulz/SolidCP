@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserOrganization.ascx.cs" Inherits="SolidCP.Portal.UserOrganization" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserOrganization.ascx.cs" Inherits="FuseCP.Portal.UserOrganization" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 
 <asp:Panel ID="UserOrgPanel" runat="server" Visible="false">

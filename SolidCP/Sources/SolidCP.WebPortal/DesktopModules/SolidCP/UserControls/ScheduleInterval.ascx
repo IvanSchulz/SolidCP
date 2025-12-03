@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ScheduleInterval.ascx.cs" Inherits="SolidCP.Portal.ScheduleInterval" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ScheduleInterval.ascx.cs" Inherits="FuseCP.Portal.ScheduleInterval" %>
 <div class="form-inline">
     <asp:TextBox ID="txtInterval" runat="server" CssClass="form-control" Width="80px"></asp:TextBox>
     <asp:DropDownList ID="ddlUnits" runat="server" resourcekey="ddlUnits"  CssClass="form-control">

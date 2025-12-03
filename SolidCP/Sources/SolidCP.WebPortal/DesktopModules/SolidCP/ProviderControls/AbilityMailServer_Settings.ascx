@@ -1,6 +1,6 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AbilityMailServer_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.AbilityMailServer_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AbilityMailServer_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.AbilityMailServer_Settings" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <table cellpadding="7" cellspacing="0" width="100%">
 	<tr>
 		<td class="SubHead" width="200" nowrap>

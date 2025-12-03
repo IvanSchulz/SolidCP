@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
 
 
@@ -21,7 +21,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
 
         /// <summary>
         /// Image1 control.
@@ -75,7 +75,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.UserTabs UserTabsId;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.UserTabs UserTabsId;
 
         /// <summary>
         /// MailboxTabsId control.
@@ -84,7 +84,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxTabs MailboxTabsId;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxTabs MailboxTabsId;
 
         /// <summary>
         /// messageBox control.
@@ -93,7 +93,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
 
         /// <summary>
         /// Generalinfo control.
@@ -120,7 +120,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.EmailAddress upn;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.EmailAddress upn;
 
         /// <summary>
         /// ddlEmailAddresses control.
@@ -183,7 +183,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SendToControl sendToControl;
+        protected global::FuseCP.Portal.UserControls.SendToControl sendToControl;
 
         /// <summary>
         /// PasswordBlock control.
@@ -201,7 +201,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl password;
+        protected global::FuseCP.Portal.PasswordControl password;
 
         /// <summary>
         /// btnSetUserPassword control.
@@ -525,7 +525,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.UserSelector manager;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.UserSelector manager;
 
         /// <summary>
         /// locBusinessPhone control.
@@ -723,7 +723,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.CountrySelector country;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.CountrySelector country;
 
         /// <summary>
         /// locUserDomainName control.
@@ -750,7 +750,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
 
         /// <summary>
         /// ValidationSummary1 control.

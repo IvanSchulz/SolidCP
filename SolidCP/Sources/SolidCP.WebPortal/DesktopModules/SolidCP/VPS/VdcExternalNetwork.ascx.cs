@@ -33,13 +33,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.EnterpriseServer;
-using SolidCP.WebPortal;
+using FuseCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VdcExternalNetwork : SolidCPModuleBase
+    public partial class VdcExternalNetwork : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

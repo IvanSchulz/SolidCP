@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsAlertsLog.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VpsAlertsLog" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsAlertsLog.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VpsAlertsLog" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
 <%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
@@ -32,7 +32,7 @@
                     </asp:GridView>
                     <asp:ObjectDataSource ID="odsLogEntries" runat="server"
                             SelectMethod="GetMonitoringAlerts"
-                            TypeName="SolidCP.Portal.VirtualMachinesForPCHelper">
+                            TypeName="FuseCP.Portal.VirtualMachinesForPCHelper">
                     </asp:ObjectDataSource>
 			    </div>
             </div>

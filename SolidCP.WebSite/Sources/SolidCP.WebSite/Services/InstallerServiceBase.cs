@@ -42,7 +42,7 @@ using System.Diagnostics;
 using System.Runtime.Remoting.Lifetime;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.WebSite.Services
+namespace FuseCP.WebSite.Services
 {
     public class InstallerServiceBase
     {
@@ -145,7 +145,7 @@ namespace SolidCP.WebSite.Services
                            where release.Parent.Parent.Attribute("code").Value == componentCode
                            && release.Element("upgradeFilePath") != null
                            && release.Element("upgradeFilePath").Value != ""
-						   // This line has been commented because the function is used only by SolidCP Installer
+						   // This line has been commented because the function is used only by FuseCP Installer
 						   // itself. However, it may cause an incovenience if used inappropriately.
 						   // The Installer's releases are hidden (not available) and should not be displayed in the list of available components.	
                            //&& Boolean.Parse(release.Attribute("available").Value)

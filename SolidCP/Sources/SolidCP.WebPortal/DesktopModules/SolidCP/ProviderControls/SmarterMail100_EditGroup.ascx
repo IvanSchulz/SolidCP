@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail100_EditGroup.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SmarterMail100_EditGroup" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail100_EditGroup.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail100_EditGroup" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <div class="form-group">
 		    <asp:Label ID="lblGroupMembers" CssClass="control-label col-sm-2" runat="server" meta:resourcekey="lblGroupMembers" Text="Group e-mails:"></asp:Label>

@@ -35,12 +35,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VpsDetailsSnapshots : SolidCPModuleBase
+    public partial class VpsDetailsSnapshots : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -100,7 +100,7 @@ namespace SolidCP.Portal.VPS2012
 
                 // set image
                 imgThumbnail.ImageUrl =
-                    string.Format("~/DesktopModules/SolidCP/VPS2012/VirtualMachineSnapshotImage.ashx?ItemID={0}&SnapshotID={1}&rnd={2}",
+                    string.Format("~/DesktopModules/FuseCP/VPS2012/VirtualMachineSnapshotImage.ashx?ItemID={0}&SnapshotID={1}&rnd={2}",
                     PanelRequest.ItemID, HttpUtility.UrlEncode(node.Value), DateTime.Now.Ticks);
 
                 if (snapshot != null && !String.IsNullOrEmpty(snapshot.SnapshotType) && snapshot.SnapshotType.Equals("Recovery"))

@@ -36,7 +36,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Extensions
+namespace FuseCP.Providers.Web.Extensions
 {
     public static class WebDavExtensions
     {

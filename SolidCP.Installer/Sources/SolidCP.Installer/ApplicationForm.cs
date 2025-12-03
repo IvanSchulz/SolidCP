@@ -44,15 +44,15 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-using SolidCP.Installer.Common;
-using SolidCP.Installer.Controls;
-using SolidCP.Installer.Services;
-using SolidCP.Installer.Configuration;
+using FuseCP.Installer.Common;
+using FuseCP.Installer.Controls;
+using FuseCP.Installer.Services;
+using FuseCP.Installer.Configuration;
 using System.Xml;
 using System.Runtime.Remoting.Lifetime;
-using SolidCP.Installer.Core;
+using FuseCP.Installer.Core;
 
-namespace SolidCP.Installer
+namespace FuseCP.Installer
 {
 	/// <summary>
 	/// Main application form
@@ -343,9 +343,9 @@ namespace SolidCP.Installer
 		internal void ShowError()
 		{
 			ShowError("An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.");
+				"FuseCP Installer home directory.");
 		}
 
 		/// <summary>
@@ -472,7 +472,7 @@ namespace SolidCP.Installer
 			string tmpFile = Path.ChangeExtension(Path.GetTempFileName(), ".exe");
 			using (Stream writeStream = File.Create(tmpFile))
 			{
-				using (Stream readStream = typeof(Program).Assembly.GetManifestResourceStream("SolidCP.Installer.Resources.SolidCP.Updater.exe"))
+				using (Stream readStream = typeof(Program).Assembly.GetManifestResourceStream("FuseCP.Installer.Resources.FuseCP.Updater.exe"))
 				{
 					byte[] buffer = new byte[(int)readStream.Length];
 					readStream.Read(buffer, 0, buffer.Length);

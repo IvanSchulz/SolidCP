@@ -33,12 +33,12 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.DNS;
-using SolidCP.ServiceProviders.DNS.Nettica;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.DNS;
+using FuseCP.ServiceProviders.DNS.Nettica;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
     public class Nettica : HostingServiceProviderBase, IDnsServer 
     {

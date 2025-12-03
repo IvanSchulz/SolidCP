@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsUserPasswordExpirationLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsUserPasswordExpirationLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsUserPasswordExpirationLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsUserPasswordExpirationLetter" %>
 
 <table>
     <tr>

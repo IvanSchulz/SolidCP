@@ -34,15 +34,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
-    public partial class UserGeneralSettings : SolidCPModuleBase
+    public partial class UserGeneralSettings : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -77,7 +77,7 @@ namespace SolidCP.Portal.HostedSolution
                     PanelRequest.AccountID);
 
                     imgThumbnailphoto.Visible = true;
-                    imgThumbnailphoto.ImageUrl = "~/DesktopModules/SolidCP/ThumbnailPhoto.ashx" + "?" + "ItemID=" + PanelRequest.ItemID +
+                    imgThumbnailphoto.ImageUrl = "~/DesktopModules/FuseCP/ThumbnailPhoto.ashx" + "?" + "ItemID=" + PanelRequest.ItemID +
                         "&AccountID=" + PanelRequest.AccountID;
 
             }
@@ -199,9 +199,9 @@ namespace SolidCP.Portal.HostedSolution
                         if (user.AccountType == ExchangeAccountType.Mailbox)
                         {
                             ddlEmailAddresses.Visible = true;
-                            SolidCP.EnterpriseServer.ExchangeEmailAddress[] emails = ES.Services.ExchangeServer.GetMailboxEmailAddresses(PanelRequest.ItemID, PanelRequest.AccountID);
+                            FuseCP.EnterpriseServer.ExchangeEmailAddress[] emails = ES.Services.ExchangeServer.GetMailboxEmailAddresses(PanelRequest.ItemID, PanelRequest.AccountID);
 
-                            foreach (SolidCP.EnterpriseServer.ExchangeEmailAddress mail in emails)
+                            foreach (FuseCP.EnterpriseServer.ExchangeEmailAddress mail in emails)
                             {
                                 ListItem li = new ListItem();
                                 li.Text = mail.EmailAddress;

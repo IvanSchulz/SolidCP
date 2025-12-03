@@ -30,13 +30,13 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
 using System.Web;
 using System;
-using SolidCP.EnterpriseServer.Client;
+using FuseCP.EnterpriseServer.Client;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     // TODO: Move this extension to a separate file later.
     public static class VirtualMachinesExtensions

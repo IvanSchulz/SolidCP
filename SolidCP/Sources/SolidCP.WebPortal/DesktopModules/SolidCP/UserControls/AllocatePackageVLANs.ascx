@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackageVLANs.ascx.cs" Inherits="SolidCP.Portal.UserControls.AllocatePackageVLANs" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackageVLANs.ascx.cs" Inherits="FuseCP.Portal.UserControls.AllocatePackageVLANs" %>
 <%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 
 

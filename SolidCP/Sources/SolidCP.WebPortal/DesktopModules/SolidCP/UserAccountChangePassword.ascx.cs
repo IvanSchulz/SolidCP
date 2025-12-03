@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserAccountChangePassword : SolidCPModuleBase
+    public partial class UserAccountChangePassword : FuseCPModuleBase
     {
         const string changePasswordWarningKey = "LoggedUserEditDetails.ChangePasswordWarning";
 
@@ -68,7 +68,7 @@ namespace SolidCP.Portal
                     lblUsername.Text = user.Username;
 
                     // password policy
-                    userPassword.SetUserPolicy(PanelSecurity.SelectedUserId, UserSettings.SolidCP_POLICY, "PasswordPolicy");
+                    userPassword.SetUserPolicy(PanelSecurity.SelectedUserId, UserSettings.FuseCP_POLICY, "PasswordPolicy");
                     userPassword.ValidationGroup = "NewPassword";
                 }
                 else

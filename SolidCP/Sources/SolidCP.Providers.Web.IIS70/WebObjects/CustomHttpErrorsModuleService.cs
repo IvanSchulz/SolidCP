@@ -32,7 +32,7 @@
 
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Iis.WebObjects
+namespace FuseCP.Providers.Web.Iis.WebObjects
 {
     using Common;
     using Microsoft.Web.Administration;
@@ -41,9 +41,9 @@ namespace SolidCP.Providers.Web.Iis.WebObjects
     using System.Text;
 	using System.Collections.Generic;
 	using System.Collections;
-	using SolidCP.Providers.Web.Iis.Utility;
+	using FuseCP.Providers.Web.Iis.Utility;
 	using System.IO;
-	using SolidCP.Providers.Utils;
+	using FuseCP.Providers.Utils;
 
     internal sealed class CustomHttpErrorsModuleService : ConfigurationModuleService
     {

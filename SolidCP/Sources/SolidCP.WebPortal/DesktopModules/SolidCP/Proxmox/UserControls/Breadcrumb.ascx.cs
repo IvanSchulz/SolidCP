@@ -35,10 +35,10 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.Proxmox;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.Proxmox;
 
-namespace SolidCP.Portal.Proxmox.UserControls
+namespace FuseCP.Portal.Proxmox.UserControls
 {
     public partial class Breadcrumb : System.Web.UI.UserControl
     {

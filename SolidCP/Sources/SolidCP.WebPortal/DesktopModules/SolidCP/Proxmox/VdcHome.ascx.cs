@@ -36,12 +36,12 @@ using System.Linq;
 using System.IO;
 using System.Text;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-    public partial class VdcHome : SolidCPModuleBase
+    public partial class VdcHome : FuseCPModuleBase
     {
 
         protected void Page_Load(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace SolidCP.Portal.Proxmox
             searchBox.AjaxData = this.GetSearchBoxAjaxData();
 
             // toggle columns
-            bool isUserSelected = PanelSecurity.SelectedUser.Role == SolidCP.EnterpriseServer.UserRole.User;
+            bool isUserSelected = PanelSecurity.SelectedUser.Role == FuseCP.EnterpriseServer.UserRole.User;
             gvServers.Columns[3].Visible = !isUserSelected;
             gvServers.Columns[4].Visible = !isUserSelected;
 

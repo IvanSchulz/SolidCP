@@ -41,12 +41,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Web;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.Web;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebSitesHeliconApeControl : SolidCPControlBase
+    public partial class WebSitesHeliconApeControl : FuseCPControlBase
     {
 
         private bool IsSecuredFoldersInstalled

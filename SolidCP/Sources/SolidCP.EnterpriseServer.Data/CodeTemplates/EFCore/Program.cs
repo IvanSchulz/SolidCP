@@ -1,4 +1,4 @@
-﻿#if NETCOREAPP
+#if NETCOREAPP
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Reflection;
 
 
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	internal class Program
 	{
@@ -25,7 +25,7 @@ namespace SolidCP.EnterpriseServer.Data
 		public static void Main(string[] args)
 		{
 			//Console.ReadKey();
-			//Console.WriteLine("SolidCP.EnterpriseServer.Data");
+			//Console.WriteLine("FuseCP.EnterpriseServer.Data");
 
 			if (args.Length < 2) return;
 
@@ -81,7 +81,7 @@ namespace SolidCP.EnterpriseServer.Data
 	}
 }
 #else
-namespace SolidCP.EnterpriseServer.Data
+namespace FuseCP.EnterpriseServer.Data
 {
 	public class Program {
 		public static void Main(string[] args) {

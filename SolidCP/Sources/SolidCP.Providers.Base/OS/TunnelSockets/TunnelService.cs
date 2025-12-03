@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +6,9 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using System.Xml;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
@@ -25,29 +25,29 @@ namespace SolidCP.Providers.OS
     public class TunnelService
     {
         public bool IsServerLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.Server");
+            .Any(a => a.GetName().Name == "FuseCP.Server");
         public bool IsEnterpriseServerLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.EnterpriseServer");
+            .Any(a => a.GetName().Name == "FuseCP.EnterpriseServer");
         public bool IsPortalLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.WebPortal");
+            .Any(a => a.GetName().Name == "FuseCP.WebPortal");
 
         public ServerTunnelServiceBase ServerService => AppDomain.CurrentDomain.GetAssemblies()
-            .Where(a => a.GetName().Name == "SolidCP.Server")
+            .Where(a => a.GetName().Name == "FuseCP.Server")
             .SelectMany(a => a.GetCustomAttributes(typeof(TunnelServiceAttribute), false))
             .OfType<TunnelServiceAttribute>()
             .Select(a => (ServerTunnelServiceBase)a.Instance)
             .FirstOrDefault();
 
         public EnterpriseServerTunnelServiceBase EnterpriseServerService => AppDomain.CurrentDomain.GetAssemblies()
-            .Where(a => a.GetName().Name == "SolidCP.EnterpriseServer")
+            .Where(a => a.GetName().Name == "FuseCP.EnterpriseServer")
             .SelectMany(a => a.GetCustomAttributes(typeof(TunnelServiceAttribute), false))
             .OfType<TunnelServiceAttribute>()
             .Select(a => (EnterpriseServerTunnelServiceBase)a.Instance)
             .FirstOrDefault();
 
         public string CallerType { get; set; } = null;
-        public virtual TunnelService Service => CallerType.StartsWith("SolidCP.EnterpriseServer.Client") ?
-            EnterpriseServerService : (CallerType.StartsWith("SolidCP.Server.Client") ?
+        public virtual TunnelService Service => CallerType.StartsWith("FuseCP.EnterpriseServer.Client") ?
+            EnterpriseServerService : (CallerType.StartsWith("FuseCP.Server.Client") ?
             ServerService : throw new Exception("Invalid caller type"));
 
         public virtual string CryptoKey => "";

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SfB {
+namespace FuseCP.Portal.SfB {
     
     
     public partial class SfBAllocatePhoneNumbers {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,6 +46,6 @@ namespace SolidCP.Portal.SfB {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SfBAllocatePackagePhoneNumbers allocatePhoneNumbers;
+        protected global::FuseCP.Portal.UserControls.SfBAllocatePackagePhoneNumbers allocatePhoneNumbers;
     }
 }

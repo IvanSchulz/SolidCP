@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.BlackBerry {
+namespace FuseCP.Portal.BlackBerry {
     
     
     public partial class CreateNewBlackBerryUser {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.BlackBerry {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.BlackBerry {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// ExistingUserTable control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.BlackBerry {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxSelector mailboxSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxSelector mailboxSelector;
         
         /// <summary>
         /// btnCreate control.

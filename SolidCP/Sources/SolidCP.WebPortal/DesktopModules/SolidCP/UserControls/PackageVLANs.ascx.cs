@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -34,12 +34,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class PackageVLANs : SolidCPControlBase
+    public partial class PackageVLANs : FuseCPControlBase
     {
         private bool spaceOwner;
 
@@ -73,8 +73,8 @@ namespace SolidCP.Portal.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            bool isUserSelected = PanelSecurity.SelectedUser.Role == SolidCP.EnterpriseServer.UserRole.User;
-            bool isUserLogged = PanelSecurity.EffectiveUser.Role == SolidCP.EnterpriseServer.UserRole.User;
+            bool isUserSelected = PanelSecurity.SelectedUser.Role == FuseCP.EnterpriseServer.UserRole.User;
+            bool isUserLogged = PanelSecurity.EffectiveUser.Role == FuseCP.EnterpriseServer.UserRole.User;
             spaceOwner = PanelSecurity.EffectiveUserId == PanelSecurity.SelectedUserId;
 
             cbIsDmz.Checked = IsDmz;

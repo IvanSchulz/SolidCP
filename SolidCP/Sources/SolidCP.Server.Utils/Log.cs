@@ -35,7 +35,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Text;
 
-namespace SolidCP.Server.Utils
+namespace FuseCP.Server.Utils
 {
     /// <summary>
     /// Application log.

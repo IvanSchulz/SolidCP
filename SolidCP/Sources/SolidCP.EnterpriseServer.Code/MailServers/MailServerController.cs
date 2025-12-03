@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using MySqlX.XDevAPI.Common;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base;
-using SolidCP.EnterpriseServer.Code.MailServers;
-using SolidCP.Providers;
-using SolidCP.Providers.Mail;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base;
+using FuseCP.EnterpriseServer.Code.MailServers;
+using FuseCP.Providers;
+using FuseCP.Providers.Mail;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -48,7 +48,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Linq;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class MailServerController : ControllerBase, IImportController, IBackupController
 	{

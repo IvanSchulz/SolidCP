@@ -1,5 +1,5 @@
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal;
 using System;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
@@ -7,9 +7,9 @@ using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public class TinyMCEControl : SolidCPControlBase
+	public class TinyMCEControl : FuseCPControlBase
     {
 		protected TextBox txtHtml;
 

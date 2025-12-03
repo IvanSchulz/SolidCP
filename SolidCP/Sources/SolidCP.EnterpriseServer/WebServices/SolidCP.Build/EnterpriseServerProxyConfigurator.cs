@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class EnterpriseServerProxyConfigurator
 	{
@@ -82,7 +82,7 @@ namespace SolidCP.EnterpriseServer
 			set { this.password = value; }
 		}
 
-		public void Configure(SolidCP.Web.Clients.ClientBase proxy)
+		public void Configure(FuseCP.Web.Clients.ClientBase proxy)
 		{
 			// set proxy URL
 			string serverUrl = enterpriseServerUrl.Trim();

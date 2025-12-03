@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DnsZoneRecords.ascx.cs" Inherits="SolidCP.Portal.DnsZoneRecords" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DnsZoneRecords.ascx.cs" Inherits="FuseCP.Portal.DnsZoneRecords" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 
 <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
@@ -62,7 +62,7 @@
         <CPCC:StyleButton id="btnBack" CssClass="btn btn-warning" runat="server" OnClick="btnBack_Click"> <i class="fa fa-arrow-left">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnBack"/> </CPCC:StyleButton>
     </div>
 </asp:Panel>
-<asp:ObjectDataSource ID="odsDnsRecords" runat="server" SelectMethod="GetRawDnsZoneRecords" TypeName="SolidCP.Portal.ServersHelper" OnSelected="odsDnsRecords_Selected">
+<asp:ObjectDataSource ID="odsDnsRecords" runat="server" SelectMethod="GetRawDnsZoneRecords" TypeName="FuseCP.Portal.ServersHelper" OnSelected="odsDnsRecords_Selected">
     <SelectParameters>
         <asp:QueryStringParameter DefaultValue="0" Name="domainId" QueryStringField="DomainID" />
     </SelectParameters>

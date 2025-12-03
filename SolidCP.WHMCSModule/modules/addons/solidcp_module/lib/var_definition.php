@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,18 +32,18 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP constant variables definition
+ * FuseCP constant variables definition
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
 
 define('SOLIDCP_ENTERPRISE_SERVER_PORT', '9002');
-define('SOLIDCP_SETTINGS_TABLE', 'solidcp_settings');
-define('SOLIDCP_ADDONS_TABLE', 'solidcp_addons');
-define('SOLIDCP_CONFIGURABLE_OPTIONS_TABLE', 'solidcp_configurable');
+define('SOLIDCP_SETTINGS_TABLE', 'fusecp_settings');
+define('SOLIDCP_ADDONS_TABLE', 'fusecp_addons');
+define('SOLIDCP_CONFIGURABLE_OPTIONS_TABLE', 'fusecp_configurable');

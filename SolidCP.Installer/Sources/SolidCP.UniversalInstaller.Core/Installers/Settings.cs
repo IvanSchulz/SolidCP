@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 using Newtonsoft.Json;
-using SolidCP.Providers.OS;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.OS;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public class InstallerSettings
 	{
@@ -31,17 +31,17 @@ namespace SolidCP.UniversalInstaller
 					{
 						if (string.IsNullOrEmpty(InstallFolder))
 						{
-							installPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), Installer.Current.SolidCP);
+							installPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), Installer.Current.FuseCP);
 						}
-						else installPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), Installer.Current.SolidCP, InstallFolder);
+						else installPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), Installer.Current.FuseCP, InstallFolder);
 					}
 					else
 					{
 						if (string.IsNullOrEmpty(InstallFolder))
 						{
-							installPath = Path.Combine(Installer.Current.UnixAppRootPath, Installer.Current.SolidCP.ToLower());
+							installPath = Path.Combine(Installer.Current.UnixAppRootPath, Installer.Current.FuseCP.ToLower());
 						}
-						else installPath = Path.Combine(Installer.Current.UnixAppRootPath, Installer.Current.SolidCP.ToLower(), InstallFolder);
+						else installPath = Path.Combine(Installer.Current.UnixAppRootPath, Installer.Current.FuseCP.ToLower(), InstallFolder);
 					}
 				}
 				return installPath;
@@ -121,7 +121,7 @@ namespace SolidCP.UniversalInstaller
 			Urls = "http://localhost:9001";
 			WebSitePort = 9001;
 		}
-		public string EnterpriseServerUrl { get; set; } = "assembly://SolidCP.EnterpriseServer";
+		public string EnterpriseServerUrl { get; set; } = "assembly://FuseCP.EnterpriseServer";
 		public string EnterpriseServerPath { get; set; } = Path.Combine("..", "EnterpriseServer");
 		public bool EmbedEnterpriseServer { get; set; } = true;
 		public bool ExposeEnterpriseServerWebServices { get; set; } = true;

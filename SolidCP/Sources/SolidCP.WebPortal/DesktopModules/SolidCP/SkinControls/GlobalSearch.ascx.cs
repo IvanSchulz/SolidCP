@@ -42,11 +42,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
-    public partial class GlobalSearch : SolidCPControlBase
+    public partial class GlobalSearch : FuseCPControlBase
     {
         const string TYPE_WEBSITE = "WebSite";
         const string TYPE_DOMAIN = "Domain";

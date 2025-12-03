@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,27 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnAdd.Text" xml:space="preserve">
-    <value>أضف</value>
+    <value>???</value>
   </data>
   <data name="gvSfBServers.EmptyDataText" xml:space="preserve">
-    <value>تقع على نفس الخادم</value>
+    <value>??? ??? ??? ??????</value>
   </data>
   <data name="gvSfBServers.Text" xml:space="preserve">
-    <value>سكايب لخوادم الأعمال</value>
+    <value>????? ?????? ???????</value>
   </data>
   <data name="lblRootOU.Text" xml:space="preserve">
-    <value>الجذر OU:</value>
+    <value>????? OU:</value>
   </data>
   <data name="locServerName.Text" xml:space="preserve">
-    <value>تجمع المؤسسة أو &lt;br/&gt;اسم خادم الإصدار القياسي:</value>
+    <value>???? ??????? ?? &lt;br/&gt;??? ???? ??????? ???????:</value>
   </data>
   <data name="locSimpleUrlBase.Text" xml:space="preserve">
-    <value>قاعدة رابط عنوان بسيط (مثال https://skypeweb.solidcp.com/):</value>
+    <value>????? ???? ????? ???? (???? https://skypeweb.fusecp.com/):</value>
   </data>
   <data name="UseDefault.Text" xml:space="preserve">
-    <value>&lt;موجود على نفس الخادم&gt;</value>
+    <value>&lt;????? ??? ??? ??????&gt;</value>
   </data>
   <data name="btnAddText.Text" xml:space="preserve">
-    <value>أضف</value>
+    <value>???</value>
   </data>
 </root>

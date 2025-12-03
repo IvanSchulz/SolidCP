@@ -43,7 +43,7 @@ using System.Text;
 using Microsoft.Win32;
 
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	public partial class VmConfigService : ServiceBase
 	{
@@ -125,7 +125,7 @@ namespace SolidCP.VmConfig
             {
                 if (!string.IsNullOrEmpty(strTask) && strTask.StartsWith(TaskPrefix) && strTask != CurrentTaskName)
                 {
-                    //save only SolidCP tasks
+                    //save only FuseCP tasks
                     tasks.Add(strTask);
                 }
             }
@@ -288,7 +288,7 @@ namespace SolidCP.VmConfig
                 {
                     if (!string.IsNullOrEmpty(strResult) && strResult.StartsWith(TaskPrefix) && strResult != CurrentTaskName)
                     {
-						//save only SolidCP tasks
+						//save only FuseCP tasks
                         results.Add(strResult);
                     }
                 }
@@ -321,7 +321,7 @@ namespace SolidCP.VmConfig
                             continue; // wrong task format
                         }
 
-						//save only SolidCP tasks
+						//save only FuseCP tasks
                         if(!tasks.ContainsKey(taskId))
 						    tasks.Add(taskId, strTask);
 					}

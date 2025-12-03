@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hMailServer5_EditAccount.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.hMailServer5_EditAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hMailServer5_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.hMailServer5_EditAccount" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel id="secStatusInfo" runat="server" IsCollapsed="True" 

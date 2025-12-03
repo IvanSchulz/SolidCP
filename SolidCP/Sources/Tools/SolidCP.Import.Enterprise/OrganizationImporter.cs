@@ -34,13 +34,13 @@ using System.Collections.Specialized;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers;
 using System.Threading;
 using System.DirectoryServices;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public class OrganizationImporter: ControllerBase
 	{

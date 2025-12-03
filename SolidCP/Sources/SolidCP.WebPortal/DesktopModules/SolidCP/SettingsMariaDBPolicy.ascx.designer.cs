@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SettingsMariaDBPolicy {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDatabase;
+        protected global::FuseCP.Portal.CollapsiblePanel secDatabase;
         
         /// <summary>
         /// DatabasePanel control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor databaseNamePolicy;
+        protected global::FuseCP.Portal.UsernamePolicyEditor databaseNamePolicy;
         
         /// <summary>
         /// secUsername control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secUsername;
+        protected global::FuseCP.Portal.CollapsiblePanel secUsername;
         
         /// <summary>
         /// UsernamePanel control.
@@ -82,7 +82,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernamePolicyEditor userNamePolicy;
+        protected global::FuseCP.Portal.UsernamePolicyEditor userNamePolicy;
         
         /// <summary>
         /// lblPassword control.
@@ -100,6 +100,6 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordPolicyEditor userPasswordPolicy;
+        protected global::FuseCP.Portal.PasswordPolicyEditor userPasswordPolicy;
     }
 }

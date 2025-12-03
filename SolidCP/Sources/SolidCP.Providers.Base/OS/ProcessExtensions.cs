@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Reflection;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	public static class ProcessExtensions
 	{

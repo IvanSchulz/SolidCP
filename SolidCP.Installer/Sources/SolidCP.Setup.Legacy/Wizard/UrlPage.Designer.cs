@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	partial class UrlPage
 	{
@@ -127,7 +127,7 @@ namespace SolidCP.Setup
 			// 
 			// chooseFolderButton
 			// 
-			this.chooseFolderButton.Image = global::SolidCP.Setup.Legacy.Properties.Resources.Icons_MenuFileOpenIcon;
+			this.chooseFolderButton.Image = global::FuseCP.Setup.Legacy.Properties.Resources.Icons_MenuFileOpenIcon;
 			this.chooseFolderButton.Location = new System.Drawing.Point(424, 138);
 			this.chooseFolderButton.Name = "chooseFolderButton";
 			this.chooseFolderButton.Size = new System.Drawing.Size(30, 23);

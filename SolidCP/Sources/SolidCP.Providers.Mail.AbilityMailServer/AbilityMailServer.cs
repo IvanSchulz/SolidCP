@@ -34,10 +34,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
 	public class AbilityMailServer : HostingServiceProviderBase, IMailServer
 	{

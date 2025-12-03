@@ -34,14 +34,14 @@ using System;
 using System.Globalization;
 using System.IO;
 using CertEnrollInterop;
-using SolidCP.Providers.Common;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Server.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Web.Administration;
 
-namespace SolidCP.Providers.Web.Iis
+namespace FuseCP.Providers.Web.Iis
 {
     public class SSLModuleService80 : SSLModuleService
     {

@@ -33,11 +33,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public class WebPortalPageTitleProvider : SolidCP.WebPortal.PageTitleProvider
+	public class WebPortalPageTitleProvider : FuseCP.WebPortal.PageTitleProvider
 	{
 		public override string ProcessPageTitle(string title)
 		{

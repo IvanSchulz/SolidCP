@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Installer.Controls
+namespace FuseCP.Installer.Controls
 {
 	partial class Loader
 	{
@@ -126,7 +126,7 @@ namespace SolidCP.Installer.Controls
 			this.Name = "Loader";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "SolidCP Installer";
+			this.Text = "FuseCP Installer";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnLoaderFormClosing);
 			this.grpFiles.ResumeLayout(false);
 			this.ResumeLayout(false);

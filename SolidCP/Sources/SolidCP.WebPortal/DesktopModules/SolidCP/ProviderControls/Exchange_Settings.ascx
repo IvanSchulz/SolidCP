@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Exchange_Settings.ascx.cs"
-    Inherits="SolidCP.Portal.ProviderControls.Exchange2010_Settings" %>
+    Inherits="FuseCP.Portal.ProviderControls.Exchange2010_Settings" %>
 <%@ Register Src="../SkinControls/BootstrapDropDownList.ascx" TagName="BootstrapDropDownList" TagPrefix="scp" %>
 
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <table cellpadding="3" cellspacing="0" width="100%">
     <tr runat="server" id="Ex2016CU6orhigher" width="200" nowrap>

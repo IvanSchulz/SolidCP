@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountEditDetails.ascx.cs" Inherits="SolidCP.Portal.UserAccountEditDetails" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountEditDetails.ascx.cs" Inherits="FuseCP.Portal.UserAccountEditDetails" %>
 <%@ Register TagPrefix="dnc" TagName="UserContact" Src="UserControls/ContactDetails.ascx" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>

@@ -42,11 +42,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Web;
+using FuseCP.Providers.Web;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebSitesEditWebFolder : SolidCPModuleBase
+    public partial class WebSitesEditWebFolder : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

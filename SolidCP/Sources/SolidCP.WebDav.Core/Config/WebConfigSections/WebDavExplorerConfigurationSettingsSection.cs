@@ -1,7 +1,7 @@
-﻿using System.Configuration;
-using SolidCP.WebDav.Core.Config.WebConfigSections;
+using System.Configuration;
+using FuseCP.WebDav.Core.Config.WebConfigSections;
 
-namespace SolidCP.WebDavPortal.WebConfigSections
+namespace FuseCP.WebDavPortal.WebConfigSections
 {
     public class WebDavExplorerConfigurationSettingsSection : ConfigurationSection
     {
@@ -10,7 +10,7 @@ namespace SolidCP.WebDavPortal.WebConfigSections
         private const string AuthTimeoutCookieNameKey = "authTimeoutCookieName";
         private const string AppName = "applicationName";
         private const string EnterpriseServerUrlNameKey = "enterpriseServer";
-        private const string SolidCPConstantUserKey = "SolidCPConstantUser";
+        private const string FuseCPConstantUserKey = "FuseCPConstantUser";
         private const string ElementsRenderingKey = "elementsRendering";
         private const string Rfc2898CryptographyKey = "rfc2898Cryptography";
         private const string ConnectionStringsKey = "appConnectionStrings";
@@ -59,11 +59,11 @@ namespace SolidCP.WebDavPortal.WebConfigSections
             set { this[AppName] = value; }
         }
 
-        [ConfigurationProperty(SolidCPConstantUserKey, IsRequired = true)]
-        public SolidCPConstantUserElement SolidCPConstantUser
+        [ConfigurationProperty(FuseCPConstantUserKey, IsRequired = true)]
+        public FuseCPConstantUserElement FuseCPConstantUser
         {
-            get { return (SolidCPConstantUserElement)this[SolidCPConstantUserKey]; }
-            set { this[SolidCPConstantUserKey] = value; }
+            get { return (FuseCPConstantUserElement)this[FuseCPConstantUserKey]; }
+            set { this[FuseCPConstantUserKey] = value; }
         }
 
         [ConfigurationProperty(TwilioKey, IsRequired = true)]

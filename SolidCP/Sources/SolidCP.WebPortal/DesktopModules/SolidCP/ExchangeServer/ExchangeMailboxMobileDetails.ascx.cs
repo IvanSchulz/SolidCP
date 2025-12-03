@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 using System.Drawing;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxMobileDetails : SolidCPModuleBase
+    public partial class ExchangeMailboxMobileDetails : FuseCPModuleBase
     {
         public const string Unknown = "Unknown";
 

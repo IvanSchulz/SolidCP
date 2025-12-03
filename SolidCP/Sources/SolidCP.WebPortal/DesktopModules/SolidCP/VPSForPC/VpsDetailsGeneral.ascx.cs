@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ﻿using System;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
 	public static class MyVMInfoExtensions
 	{
@@ -85,7 +85,7 @@ namespace SolidCP.Portal.VPSForPC
 		}
 	}
 
-    public partial class VpsDetailsGeneral : SolidCPModuleBase
+    public partial class VpsDetailsGeneral : FuseCPModuleBase
     {
         private class ActionButton
         {
@@ -146,7 +146,7 @@ namespace SolidCP.Portal.VPSForPC
                     UpdatePanel1.Attributes.Add("style", "Width:160px; Height:120px;");
                 }
 
-                litRdpPageUrl.Text = Page.ResolveUrl("~/DesktopModules/SolidCP/VPSForPC/RemoteDesktop/Connect.aspx?ItemID=" + PanelRequest.ItemID + "&Resolution=");
+                litRdpPageUrl.Text = Page.ResolveUrl("~/DesktopModules/FuseCP/VPSForPC/RemoteDesktop/Connect.aspx?ItemID=" + PanelRequest.ItemID + "&Resolution=");
 
                 litStatus.Text = GetLocalizedString("State." + vm.State.ToString());
                 litCreated.Text = vm.CreatedDate.ToString();
@@ -202,7 +202,7 @@ namespace SolidCP.Portal.VPSForPC
 
                     // update image
                     imgThumbnail.ImageUrl =
-                        String.Format("~/DesktopModules/SolidCP/VPSForPC/VirtualMachineImage.ashx?ItemID={0}&rnd={1}",
+                        String.Format("~/DesktopModules/FuseCP/VPSForPC/VirtualMachineImage.ashx?ItemID={0}&rnd={1}",
                         PanelRequest.ItemID, DateTime.Now.Ticks);
                 }
                 // load virtual machine meta item

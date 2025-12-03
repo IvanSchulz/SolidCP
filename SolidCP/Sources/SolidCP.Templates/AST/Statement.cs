@@ -35,7 +35,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Templates.AST
+namespace FuseCP.Templates.AST
 {
     internal abstract class Statement
     {

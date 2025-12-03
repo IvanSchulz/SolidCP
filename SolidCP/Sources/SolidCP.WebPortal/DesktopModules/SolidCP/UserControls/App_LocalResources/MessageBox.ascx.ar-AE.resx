@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,48 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnSend.Text" xml:space="preserve">
-    <value>إرسال تقرير</value>
+    <value>????? ?????</value>
   </data>
   <data name="lblCC.Text" xml:space="preserve">
     <value>CC:</value>
   </data>
   <data name="lblComments.Text" xml:space="preserve">
-    <value>التعليقات الشخصية:</value>
+    <value>????????? ???????:</value>
   </data>
   <data name="lblFrom.Text" xml:space="preserve">
-    <value>من:</value>
+    <value>??:</value>
   </data>
   <data name="lblLoggedUser.Text" xml:space="preserve">
-    <value>تسجيل دخول المستخدم:</value>
+    <value>????? ???? ????????:</value>
   </data>
   <data name="lblPageUrl.Text" xml:space="preserve">
-    <value>رابط الصفحة:</value>
+    <value>???? ??????:</value>
   </data>
   <data name="lblSpace.Text" xml:space="preserve">
-    <value>مساحة الاستضافة:</value>
+    <value>????? ?????????:</value>
   </data>
   <data name="lblSubject.Text" xml:space="preserve">
-    <value>موضوع:</value>
+    <value>?????:</value>
   </data>
   <data name="lblTo.Text" xml:space="preserve">
-    <value>الي:</value>
+    <value>???:</value>
   </data>
   <data name="lblWorkOnBehalf.Text" xml:space="preserve">
-    <value>العمل نيابة:</value>
+    <value>????? ?????:</value>
   </data>
   <data name="secSendReport.Text" xml:space="preserve">
-    <value>إرسال تقرير إلى المضيف</value>
+    <value>????? ????? ??? ??????</value>
   </data>
   <data name="secTechnicalDetails.Text" xml:space="preserve">
-    <value>تفاصيل تقنية</value>
+    <value>?????? ?????</value>
   </data>
   <data name="Text.MessageSent" xml:space="preserve">
-    <value>تم إرسال الرسالة بنجاح</value>
+    <value>?? ????? ??????? ?????</value>
   </data>
   <data name="Text.MessageSentError" xml:space="preserve">
-    <value>خطأ أثناء إرسال الرسالة</value>
+    <value>??? ????? ????? ???????</value>
   </data>
   <data name="Text.Subject" xml:space="preserve">
-    <value>تقرير خطأ SolidCP</value>
+    <value>????? ??? FuseCP</value>
   </data>
 </root>

@@ -34,12 +34,12 @@
 using System;
 using System.Collections.Generic;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.Proxmox
+namespace FuseCP.Portal.Proxmox
 {
-    public partial class VdcAddExternalAddress : SolidCPModuleBase
+    public partial class VdcAddExternalAddress : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

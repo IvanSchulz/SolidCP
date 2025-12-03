@@ -40,24 +40,24 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal.ReportingServices
+namespace FuseCP.Portal.ReportingServices
 {
 	/// <summary>
 	/// This class is used to load resource string related to current module.
 	/// </summary>
-	public class SolidCPModuleResourceStorage : IResourceStorage
+	public class FuseCPModuleResourceStorage : IResourceStorage
 	{
 		/// <summary>
 		/// The module (control) currently being displayed.
 		/// </summary>
-		private SolidCPModuleBase module;
+		private FuseCPModuleBase module;
 
 		/// <summary>
 		/// Cunstructs the instance.
 		/// </summary>
 		/// <param name="module">Module containing report viewer component.</param>
 		/// <exception cref="ArgumentNullException">Whem <paramref name="module"/> is null.</exception>
-		public SolidCPModuleResourceStorage(SolidCPModuleBase module)
+		public FuseCPModuleResourceStorage(FuseCPModuleBase module)
 		{
 			if (module == null)
 			{

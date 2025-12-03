@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -124,7 +124,7 @@
     <value>Authentication mode:</value>
   </data>
   <data name="lblMapDotNetNukeAccounts.Text" xml:space="preserve">
-    <value>Map DotNetNuke accounts to appropriate SolidCP ones</value>
+    <value>Map DotNetNuke accounts to appropriate FuseCP ones</value>
   </data>
   <data name="lblUseSpecifiedAccount.Text" xml:space="preserve">
     <value>Use the specified account for all DotNetNuke users</value>
@@ -139,10 +139,10 @@
     <value>Confirm password:</value>
   </data>
   <data name="secRoles.Text" xml:space="preserve">
-    <value>SolidCP Roles Mapping</value>
+    <value>FuseCP Roles Mapping</value>
   </data>
-  <data name="lblSolidCPRole.Text" xml:space="preserve">
-    <value>SolidCP Role</value>
+  <data name="lblFuseCPRole.Text" xml:space="preserve">
+    <value>FuseCP Role</value>
   </data>
   <data name="lblDotNetNukeRole.Text" xml:space="preserve">
     <value>DotNetNuke Role</value>
@@ -166,6 +166,6 @@
     <value>Use the specified account for all DotNetNuke users</value>
   </data>
   <data name="rblAuthModeItem.Map" xml:space="preserve">
-    <value>Map DotNetNuke accounts to appropriate SolidCP ones</value>
+    <value>Map DotNetNuke accounts to appropriate FuseCP ones</value>
   </data>
 </root>

@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Collections.Specialized;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Xml;
 using System.Configuration;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-	public partial class Exchange2010_Settings : SolidCPControlBase, IHostingServiceProviderSettings
+	public partial class Exchange2010_Settings : FuseCPControlBase, IHostingServiceProviderSettings
     {
 	    public const string HubTransportsData = "HubTransportsData";
         public const string ClientAccessData = "ClientAccessData";

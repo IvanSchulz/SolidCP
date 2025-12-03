@@ -40,17 +40,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SpaceDetailsHeaderControl {
         protected System.Web.UI.WebControls.Literal litPackageName;
         protected System.Web.UI.WebControls.Label lblUser;
-        protected SolidCP.Portal.UserDetails spaceUser;
+        protected FuseCP.Portal.UserDetails spaceUser;
         protected System.Web.UI.WebControls.Label lblHostingPlan;
         protected System.Web.UI.WebControls.Literal litHostingPlan;
         protected System.Web.UI.HtmlControls.HtmlTableRow rowSpaceServer;
         protected System.Web.UI.WebControls.Label lblTargetServer;
-        protected SolidCP.Portal.ServerDetails serverDetails;
+        protected FuseCP.Portal.ServerDetails serverDetails;
         protected System.Web.UI.WebControls.Label lblCreationDate;
         protected System.Web.UI.WebControls.Literal litPurchaseDate;
         protected System.Web.UI.HtmlControls.HtmlTableRow rowStatus;

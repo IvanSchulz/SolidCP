@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfB_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.SfB_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfB_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SfB_Settings" %>
 <table>
     <tr>
         <td class="Normal" width="200" >

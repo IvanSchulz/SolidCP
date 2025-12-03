@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GlobalDnsRecordsControl.ascx.cs" Inherits="SolidCP.Portal.GlobalDnsRecordsControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GlobalDnsRecordsControl.ascx.cs" Inherits="FuseCP.Portal.GlobalDnsRecordsControl" %>
 <%@ Register Src="UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 
 <asp:Panel ID="pnlRecords" runat="server">

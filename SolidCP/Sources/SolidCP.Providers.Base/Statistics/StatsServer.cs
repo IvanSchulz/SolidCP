@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.Statistics
+namespace FuseCP.Providers.Statistics
 {
     public class StatsServer
     {

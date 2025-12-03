@@ -46,5 +46,5 @@ using System.Web.UI;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
 // embedded resources
-[assembly: WebResource("SolidCP.Portal.Scripts.AjaxUtils.js", "application/x-javascript")]
-[assembly: WebResource("SolidCP.Portal.Scripts.RandomPassword.js", "application/x-javascript")]
+[assembly: WebResource("FuseCP.Portal.Scripts.AjaxUtils.js", "application/x-javascript")]
+[assembly: WebResource("FuseCP.Portal.Scripts.RandomPassword.js", "application/x-javascript")]

@@ -31,7 +31,7 @@ using System.Configuration;
 using System.IO;
 using System.Web;
 
-namespace SolidCP.AWStats.Viewer
+namespace FuseCP.AWStats.Viewer
 {
 	/// <summary>
 	/// Summary description for ConfigFileAuthenticationProvider.

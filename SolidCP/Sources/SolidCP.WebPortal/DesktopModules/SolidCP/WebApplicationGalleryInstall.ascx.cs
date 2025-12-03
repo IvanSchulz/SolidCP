@@ -32,12 +32,12 @@
 
 ﻿using System;
 ﻿using System.Web;
-﻿using SolidCP.Providers.WebAppGallery;
-using SolidCP.Providers.ResultObjects;
+﻿using FuseCP.Providers.WebAppGallery;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebApplicationGalleryInstall : SolidCPModuleBase
+    public partial class WebApplicationGalleryInstall : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

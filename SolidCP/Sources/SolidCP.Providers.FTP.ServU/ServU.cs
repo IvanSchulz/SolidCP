@@ -37,12 +37,12 @@ using System.Text;
 using System.Xml;
 using Microsoft.Win32;
 
-using SolidCP.Providers;
-using SolidCP.Providers.FTP;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.FTP;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
     public class ServU : HostingServiceProviderBase, IFtpServer
     {

@@ -35,18 +35,18 @@ using System.IO;
 using System.Collections.Generic;
 using System.Management;
 using Microsoft.Win32;
-using SolidCP.Setup.Web;
+using FuseCP.Setup.Web;
 using Microsoft.Web.Management;
 using Microsoft.Web.Administration;
 using System.DirectoryServices;
 using System.Text.RegularExpressions;
 using System.Linq;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Diagnostics;
 using System.Reflection;
 using System.Reflection.Emit;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Web utils class.
@@ -62,8 +62,8 @@ namespace SolidCP.Setup
         public const string AspNet20 = "v2.0.50727";
 		public const string AspNet40 = "v4.0.30319";
 
-        public const string SolidCP_POOL = "SolidCP Pool";
-		public const string SolidCP_ADMIN_POOL = "SolidCP Admin Pool";
+        public const string FuseCP_POOL = "FuseCP Pool";
+		public const string FuseCP_ADMIN_POOL = "FuseCP Admin Pool";
 
         internal static string[] aspNet11Maps = new string[] { ".asax", ".ascx", ".ashx",
         ".asmx", ".aspx", ".axd", ".config", ".cs", ".csproj", ".licx", ".rem", ".resources", ".resx",
@@ -1231,7 +1231,7 @@ namespace SolidCP.Setup
 				Log.Write($"Found Website ID: SiteName {site}  ID: {siteId}\n");
 
 				// extract wacs.exe and wcfcert.exe from embedded resource and save it in the website's bin folder
-				var installerPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "SolidCP Installer");
+				var installerPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "FuseCP Installer");
 				var version = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyVersionAttribute>().Version;
 				var leFolder = Path.Combine(installerPath, "bin", "LetsEncrypt", version);
 				var command = Path.Combine(leFolder, "wacs.exe");

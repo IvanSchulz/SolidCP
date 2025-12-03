@@ -1,6 +1,6 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditEventViewer.ascx.cs" Inherits="SolidCP.Portal.ServersEditEventViewer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditEventViewer.ascx.cs" Inherits="FuseCP.Portal.ServersEditEventViewer" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 
@@ -61,7 +61,7 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:ObjectDataSource ID="odsLogEntries" runat="server" SelectMethod="GetEventLogEntriesPaged" SelectCountMethod="GetEventLogEntriesPagedCount" TypeName="SolidCP.Portal.ServersHelper" OnSelected="odsLogEntries_Selected" EnablePaging="true">
+        <asp:ObjectDataSource ID="odsLogEntries" runat="server" SelectMethod="GetEventLogEntriesPaged" SelectCountMethod="GetEventLogEntriesPagedCount" TypeName="FuseCP.Portal.ServersHelper" OnSelected="odsLogEntries_Selected" EnablePaging="true">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddlLogNames" Name="logName" PropertyName="SelectedValue" />
             </SelectParameters>

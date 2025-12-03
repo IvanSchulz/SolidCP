@@ -43,17 +43,17 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.SkinControls;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.SkinControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for Utils.
     /// </summary
     public static class Utils
     {
-        public const string ModuleName = "SolidCP";
+        public const string ModuleName = "FuseCP";
         public const int Size1G = 0x40000000;
         public const int Size1M = 0x100000;
         public const int Size1K = 1024;

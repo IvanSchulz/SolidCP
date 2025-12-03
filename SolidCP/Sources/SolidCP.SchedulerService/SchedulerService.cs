@@ -33,9 +33,9 @@
 using System;
 using System.ServiceProcess;
 using System.Threading;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.SchedulerService;
+namespace FuseCP.SchedulerService;
 
 
 #if NETCOREAPP

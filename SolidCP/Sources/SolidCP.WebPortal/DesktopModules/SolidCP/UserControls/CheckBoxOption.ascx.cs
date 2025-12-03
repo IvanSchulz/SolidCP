@@ -36,7 +36,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
     public partial class CheckBoxOption : System.Web.UI.UserControl
     {

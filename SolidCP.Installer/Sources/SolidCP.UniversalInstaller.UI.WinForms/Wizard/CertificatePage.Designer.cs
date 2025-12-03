@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	partial class CertificatePage
 	{
@@ -232,7 +232,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			// 
 			// btnOpenCertFile
 			// 
-			this.btnOpenCertFile.Image = global::SolidCP.UniversalInstaller.Properties.Resources.Icons_MenuFileOpenIcon;
+			this.btnOpenCertFile.Image = global::FuseCP.UniversalInstaller.Properties.Resources.Icons_MenuFileOpenIcon;
 			this.btnOpenCertFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnOpenCertFile.Location = new System.Drawing.Point(234, 91);
 			this.btnOpenCertFile.Name = "btnOpenCertFile";

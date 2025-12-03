@@ -36,7 +36,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	[DataContract]
 	public class WebAppVirtualDirectory : ServiceProviderItem

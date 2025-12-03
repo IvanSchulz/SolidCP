@@ -50,18 +50,18 @@ import org.slf4j.LoggerFactory;
 
 import org.json.*;
 
-public class SolidCPAuthenticationProvider extends SimpleAuthenticationProvider {
+public class FuseCPAuthenticationProvider extends SimpleAuthenticationProvider {
 	
-	private static final Logger logger = LoggerFactory.getLogger(SolidCPAuthenticationProvider.class);
+	private static final Logger logger = LoggerFactory.getLogger(FuseCPAuthenticationProvider.class);
 
 	final StringGuacamoleProperty solidKey = new StringGuacamoleProperty() {
 		@Override
-		public String getName() { return "solidcp-key"; }
+		public String getName() { return "fusecp-key"; }
 	};
 
 	final StringGuacamoleProperty linkTime = new StringGuacamoleProperty() {
 		@Override
-		public String getName() { return "solidcp-link-exp-time"; }
+		public String getName() { return "fusecp-link-exp-time"; }
 	};
 
 	final StringGuacamoleProperty serverLayout = new StringGuacamoleProperty() {
@@ -71,7 +71,7 @@ public class SolidCPAuthenticationProvider extends SimpleAuthenticationProvider 
 
 	@Override
 	public String getIdentifier() {
-		return "solidcp-auth";
+		return "fusecp-auth";
 	}
 
 	@Override
@@ -88,7 +88,7 @@ public class SolidCPAuthenticationProvider extends SimpleAuthenticationProvider 
 
 		}catch (Exception e) {
 
-			log("debug", "solidcp parameter map does not exist and will not be read");
+			log("debug", "fusecp parameter map does not exist and will not be read");
 			return null;
 
 		}

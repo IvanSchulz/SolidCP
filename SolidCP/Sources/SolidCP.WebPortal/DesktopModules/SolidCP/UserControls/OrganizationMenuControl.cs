@@ -40,14 +40,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Xml;
 using System.Collections.Generic;
-using SolidCP.WebPortal;
+using FuseCP.WebPortal;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public class OrganizationMenuControl : SolidCPModuleBase
+    public class OrganizationMenuControl : FuseCPModuleBase
     {
 
         virtual public int PackageId

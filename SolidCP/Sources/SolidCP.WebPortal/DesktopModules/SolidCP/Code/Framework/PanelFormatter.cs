@@ -36,9 +36,9 @@ using System.Text;
 using System.Globalization;
 using System.Web;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for PanelFormatter.

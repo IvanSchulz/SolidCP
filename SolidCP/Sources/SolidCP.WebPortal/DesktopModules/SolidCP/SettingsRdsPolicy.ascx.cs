@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.RDS;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.RDS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsRdsPolicy : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsRdsPolicy : FuseCPControlBase, IUserSettingsEditorControl
     {        
         public void BindSettings(UserSettings settings)
         {

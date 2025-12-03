@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Linq;
 using System.IO;
 
-namespace SolidCP.Providers.OS;
+namespace FuseCP.Providers.OS;
 
 public class OpenRCServiceController: ServiceController
 {

@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
 using System.Security.Permissions;
 using System.Security;
 using System.Text;
 using System.Threading;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using static System.Net.Mime.MediaTypeNames;
 using System.Diagnostics;
 using System.IO;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public partial class Installer
 	{
@@ -19,7 +19,7 @@ namespace SolidCP.UniversalInstaller
 		{
 			//check only one instance
 			bool createdNew = true;
-			Mutex = new Mutex(true, "SolidCP Installer", out createdNew);
+			Mutex = new Mutex(true, "FuseCP Installer", out createdNew);
 			return createdNew;
 		}
 		public virtual void SaveMutex()

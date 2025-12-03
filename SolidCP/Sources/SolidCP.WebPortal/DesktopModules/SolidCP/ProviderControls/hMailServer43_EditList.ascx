@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hMailServer43_EditList.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.hMailServer43_EditList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hMailServer43_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.hMailServer43_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>

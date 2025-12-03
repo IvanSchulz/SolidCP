@@ -32,13 +32,13 @@
 
 using System;
 using System.Web;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeStorageUsage : SolidCPModuleBase
+    public partial class ExchangeStorageUsage : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

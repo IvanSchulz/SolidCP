@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackagePhoneNumbers.ascx.cs" Inherits="SolidCP.Portal.UserControls.AllocatePackagePhoneNumbers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackagePhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.UserControls.AllocatePackagePhoneNumbers" %>
 <%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 
 

@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ZipFiles.ascx.cs" Inherits="SolidCP.Portal.ScheduleTaskControls.ZipFiles" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ZipFiles.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.ZipFiles" %>
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>
             <td class="SubHead" nowrap valign="top">

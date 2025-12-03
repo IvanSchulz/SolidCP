@@ -39,7 +39,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class SetupCompletePage : BannerWizardPage
 	{
@@ -52,8 +52,8 @@ namespace SolidCP.UniversalInstaller.WinForms
 		protected internal override void OnBeforeDisplay(EventArgs e)
 		{
 			base.OnBeforeDisplay(e);
-			this.Text = "Completing SolidCP Setup";
-			this.Description = "Setup has finished configuration of SolidCP";
+			this.Text = "Completing FuseCP Setup";
+			this.Description = "Setup has finished configuration of FuseCP";
 			this.AllowMoveBack = false;
 			this.AllowCancel = false;
 		}

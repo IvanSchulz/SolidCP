@@ -1,6 +1,6 @@
-﻿using SolidCP.WebDavPortal.Models.Common;
+using FuseCP.WebDavPortal.Models.Common;
 
-namespace SolidCP.WebDavPortal.Models
+namespace FuseCP.WebDavPortal.Models
 {
     public class OfficeOnlineModel 
     {

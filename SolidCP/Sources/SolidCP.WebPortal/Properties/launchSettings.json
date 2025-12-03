@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "SolidCP.WebPortal": {
+    "FuseCP.WebPortal": {
       "commandName": "Project"
     },
     "WSL": {

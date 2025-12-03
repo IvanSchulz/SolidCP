@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerIPAddressesControl.ascx.cs" Inherits="SolidCP.Portal.ServerIPAddressesControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerIPAddressesControl.ascx.cs" Inherits="FuseCP.Portal.ServerIPAddressesControl" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
 <div class="FormButtonsBar">
     <asp:Button ID="btnAdd" runat="server" Text="Add" meta:resourcekey="btnAdd" CssClass="btn btn-primary" OnClick="btnAdd_Click" />
@@ -25,7 +25,7 @@
 	    SelectCountMethod="GetIPAddressesPagedCount"
 	    SelectMethod="GetIPAddressesPaged"
 	    SortParameterName="sortColumn"
-	    TypeName="SolidCP.Portal.IPAddressesHelper">
+	    TypeName="FuseCP.Portal.IPAddressesHelper">
     <SelectParameters>
     	<asp:Parameter Name="pool" DefaultValue="None" />
 	    <asp:QueryStringParameter Name="serverId" QueryStringField="ServerID" DefaultValue="0" />

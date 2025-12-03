@@ -6,20 +6,20 @@ $(document).ready(function(){
     function reloadTabContent(arg) {
         // Hide the modal that was activated.
         $("[id^=modal]").modal("hide");
-        var reqstr   = 'module=solidcp_module&action=load&area='+arg+'&ajax=1';
+        var reqstr   = 'module=fusecp_module&action=load&area='+arg+'&ajax=1';
         $.post('addonmodules.php', reqstr ,function(data) {
             $(arg).html(data);
         });    
     }
 </script>
-<ul class="nav nav-tabs admin-tabs" role="tablist" id="solidcp_tabs">
+<ul class="nav nav-tabs admin-tabs" role="tablist" id="fusecp_tabs">
     {if $settings.NeedMigration eq 1}
-        <li class="active"><a data-toggle="tab" href="#migration" onclick="reloadTabContent('#migration')">{$LANG.SolidCP_migration}</a></li>
+        <li class="active"><a data-toggle="tab" href="#migration" onclick="reloadTabContent('#migration')">{$LANG.FuseCP_migration}</a></li>
     {else}
-    <li class="active"><a data-toggle="tab" href="#settings" onclick="reloadTabContent('#settings')">{$LANG.SolidCP_settings}</a></li>
-    <li><a data-toggle="tab" href="#addon" onclick="reloadTabContent('#addon')">{$LANG.SolidCP_addon_automation}</a></li>
-    <li><a data-toggle="tab" href="#configurable" onclick="reloadTabContent('#configurable')">{$LANG.SolidCP_configurable_options}</a></li>
-    <li><a data-toggle="tab" href="#sync" onclick="reloadTabContent('#sync')">{$LANG.SolidCP_sync_automation}</a></li>
+    <li class="active"><a data-toggle="tab" href="#settings" onclick="reloadTabContent('#settings')">{$LANG.FuseCP_settings}</a></li>
+    <li><a data-toggle="tab" href="#addon" onclick="reloadTabContent('#addon')">{$LANG.FuseCP_addon_automation}</a></li>
+    <li><a data-toggle="tab" href="#configurable" onclick="reloadTabContent('#configurable')">{$LANG.FuseCP_configurable_options}</a></li>
+    <li><a data-toggle="tab" href="#sync" onclick="reloadTabContent('#sync')">{$LANG.FuseCP_sync_automation}</a></li>
     {/if}
 </ul>
 <div class="tab-content admin-tabs">
@@ -33,7 +33,7 @@ $(document).ready(function(){
     {/if}
 </div>
 <script type="text/javascript">
-$('#solidcp_tabs a').click(function(e) {
+$('#fusecp_tabs a').click(function(e) {
   e.preventDefault();
   $(this).tab('show');
 });
@@ -46,5 +46,5 @@ $("ul.nav-tabs > li > a").on("shown.bs.tab", function(e) {
 
 // on load of the page: switch to the currently selected tab
 var hash = window.location.hash;
-$('#solidcp_tabs a[href="' + hash.replace('tab_','') + '"]').tab('show');
+$('#fusecp_tabs a[href="' + hash.replace('tab_','') + '"]').tab('show');
 </script>

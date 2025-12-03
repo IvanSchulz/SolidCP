@@ -41,7 +41,7 @@ using System.Threading.Tasks;
 using System.Security.Authentication;
 using System.IO;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class MailHelper
     {

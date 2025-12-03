@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncAddFederationDomain.ascx.cs" Inherits="SolidCP.Portal.LyncAddFederationDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncAddFederationDomain.ascx.cs" Inherits="FuseCP.Portal.LyncAddFederationDomain" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 

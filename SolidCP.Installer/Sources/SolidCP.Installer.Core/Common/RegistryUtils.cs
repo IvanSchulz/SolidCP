@@ -33,7 +33,7 @@
 using System;
 using Microsoft.Win32;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	/// <summary>
 	/// Registry helper class.

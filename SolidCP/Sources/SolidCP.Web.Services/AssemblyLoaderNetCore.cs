@@ -1,4 +1,4 @@
-﻿#if !NETFRAMEWORK
+#if !NETFRAMEWORK
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.Web.Services;
+namespace FuseCP.Web.Services;
 
 public class AssemblyLoaderNetCore
 {

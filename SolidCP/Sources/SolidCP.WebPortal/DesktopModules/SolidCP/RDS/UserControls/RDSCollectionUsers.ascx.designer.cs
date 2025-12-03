@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.RDS.UserControls {
+namespace FuseCP.Portal.RDS.UserControls {
     
     
     public partial class RDSCollectionUsers {

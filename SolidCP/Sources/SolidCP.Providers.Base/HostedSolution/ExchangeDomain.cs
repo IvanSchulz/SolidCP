@@ -34,9 +34,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Providers;
+using FuseCP.Providers;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class ExchangeDomain : ServiceProviderItem
 	{

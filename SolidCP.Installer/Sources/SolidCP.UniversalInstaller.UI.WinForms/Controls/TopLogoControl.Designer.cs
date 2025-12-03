@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	partial class TopLogoControl
     {
@@ -64,10 +64,10 @@ namespace SolidCP.UniversalInstaller
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TopLogoControl));
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.progressIcon = new SolidCP.UniversalInstaller.Controls.ProgressIcon();
+            this.progressIcon = new FuseCP.UniversalInstaller.Controls.ProgressIcon();
             this.lblVersion = new System.Windows.Forms.Label();
             this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.line = new SolidCP.UniversalInstaller.LineBox();
+            this.line = new FuseCP.UniversalInstaller.LineBox();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
@@ -139,7 +139,7 @@ namespace SolidCP.UniversalInstaller
 		}
 		#endregion
 
-		private SolidCP.UniversalInstaller.Controls.ProgressIcon progressIcon;
+		private FuseCP.UniversalInstaller.Controls.ProgressIcon progressIcon;
 
 
 	}

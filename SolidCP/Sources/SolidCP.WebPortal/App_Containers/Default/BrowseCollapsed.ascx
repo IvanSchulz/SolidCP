@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <script runat="server">
 	void Page_Load()
 	{

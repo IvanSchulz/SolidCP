@@ -43,12 +43,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Database;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Database;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SqlEditDatabase : SolidCPModuleBase
+    public partial class SqlEditDatabase : FuseCPModuleBase
     {
         SqlDatabase item = null;
 

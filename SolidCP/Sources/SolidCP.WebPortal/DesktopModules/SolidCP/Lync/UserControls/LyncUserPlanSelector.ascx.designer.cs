@@ -38,7 +38,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-namespace SolidCP.Portal.Lync.UserControls {
+namespace FuseCP.Portal.Lync.UserControls {
     
     
     public partial class LyncUserPlanSelector {

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeRetentionPolicyTag.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeRetentionPolicyTag" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeRetentionPolicyTag.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeRetentionPolicyTag" %>
 <%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %><%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
@@ -6,7 +6,7 @@
 <%@ Register Src="../UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
 
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <div class="panel-heading">
     <h3 class="panel-title">

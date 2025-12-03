@@ -32,12 +32,12 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxGeneralSettings : SolidCPModuleBase
+    public partial class ExchangeMailboxGeneralSettings : FuseCPModuleBase
     {
         private const string bookingRequestCustom = "Custom";
         private const string bookingRequestAuto = "Auto";
@@ -227,7 +227,7 @@ namespace SolidCP.Portal.ExchangeServer
 
                 if (account.LevelId > 0 && Cntx.Groups.ContainsKey(ResourceGroups.ServiceLevels))
                 {
-                    SolidCP.EnterpriseServer.Base.HostedSolution.ServiceLevel serviceLevel = ES.Services.Organizations.GetSupportServiceLevel(account.LevelId);
+                    FuseCP.EnterpriseServer.Base.HostedSolution.ServiceLevel serviceLevel = ES.Services.Organizations.GetSupportServiceLevel(account.LevelId);
 
                     litServiceLevel.Visible = true;
                     litServiceLevel.Text = serviceLevel.LevelName;

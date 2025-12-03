@@ -201,7 +201,7 @@ void ProcessTasks()
 		{
 			if (strResults[i].length() > 0 && strResults[i].find(TaskPrefix) == 0 && strResults[i] != CurrentTaskName)
 			{
-				//save only SolidCP tasks
+				//save only FuseCP tasks
 				results.push_back(strResults[i]);
 			}
 		}
@@ -378,7 +378,7 @@ void DeleteOldResults()
 	{
 		if (strTasks[i].length() > 0 && strTasks[i].find(TaskPrefix) == 0 && strTasks[i] != CurrentTaskName)
 		{
-			//save only SolidCP tasks
+			//save only FuseCP tasks
 			tasks.push_back(strTasks[i]);
 		}
 	}
@@ -419,7 +419,7 @@ void InstallService()
 
 void InstallService_Linux()
 {
-	const string serviceName = "solidcp.service";
+	const string serviceName = "fusecp.service";
 	const string servicesPath = "/etc/systemd/system/";
 	string userName = AppInfo::userName;
 	string appPath = AppInfo::appPath;
@@ -430,7 +430,7 @@ void InstallService_Linux()
 
 	vector<string> config;
 	config.push_back("[Unit]");
-	config.push_back("Description=SolidCP LinuxVmConfig Service");
+	config.push_back("Description=FuseCP LinuxVmConfig Service");
 	config.push_back("[Service]");
 	config.push_back("User=" + userName);
 	config.push_back("WorkingDirectory=" + appPath);
@@ -471,7 +471,7 @@ void InstallService_Linux()
 void InstallService_FreeBSD()
 {
 	const string rcConf = "/etc/rc.conf";
-	const string serviceName = "solidcp";
+	const string serviceName = "fusecp";
 	const string servicesPath = "/etc/rc.d/";
 	string userName = AppInfo::userName;
 	string appPath = AppInfo::appPath;
@@ -483,7 +483,7 @@ void InstallService_FreeBSD()
 
 	config.push_back("#!/bin/sh");
 	config.push_back("");
-	config.push_back("# SolidCP LinuxVmConfig Service");
+	config.push_back("# FuseCP LinuxVmConfig Service");
 	config.push_back("# PROVIDE: " + serviceName);
 	config.push_back("# REQUIRE: DAEMON networking");
 	config.push_back("# BEFORE:  LOGIN");
@@ -508,15 +508,15 @@ void InstallService_FreeBSD()
 	config.push_back("   if [ -e \"${pidfile}\" ]; then");
 	config.push_back("      kill -s TERM `cat ${pidfile}`");
 	config.push_back("   else");
-	config.push_back("      echo \"SolidCP.VmConfig is not running\"");
+	config.push_back("      echo \"FuseCP.VmConfig is not running\"");
 	config.push_back("   fi");
 	config.push_back("}");
 	config.push_back("");
 	config.push_back(serviceName + "_status() {");
 	config.push_back("   if [ -e \"${pidfile}\" ]; then");
-	config.push_back("      echo \"SolidCP.VmConfig is running as pid `cat ${pidfile}`\"");
+	config.push_back("      echo \"FuseCP.VmConfig is running as pid `cat ${pidfile}`\"");
 	config.push_back("   else");
-	config.push_back("      echo \"SolidCP.VmConfig is not running\"");
+	config.push_back("      echo \"FuseCP.VmConfig is not running\"");
 	config.push_back("   fi");
 	config.push_back("}");
 	config.push_back("");
@@ -543,7 +543,7 @@ void InstallService_FreeBSD()
 
 void InstallService_PfSense()
 {
-	const string serviceName = "solidcp";
+	const string serviceName = "fusecp";
 	const string servicesPath = "/usr/local/etc/rc.d/";
 	const string configXmlPath = "/cf/conf/config.xml";
 	string userName = AppInfo::userName;
@@ -556,7 +556,7 @@ void InstallService_PfSense()
 
 	config.push_back("#!/bin/sh");
 	config.push_back("");
-	config.push_back("# SolidCP LinuxVmConfig Service");
+	config.push_back("# FuseCP LinuxVmConfig Service");
 	config.push_back("# PROVIDE: " + serviceName);
 	config.push_back("# REQUIRE: DAEMON networking");
 	config.push_back("# BEFORE:  LOGIN");
@@ -581,15 +581,15 @@ void InstallService_PfSense()
 	config.push_back("   if [ -e \"${pidfile}\" ]; then");
 	config.push_back("      kill -s TERM `cat ${pidfile}`");
 	config.push_back("   else");
-	config.push_back("      echo \"SolidCP.VmConfig is not running\"");
+	config.push_back("      echo \"FuseCP.VmConfig is not running\"");
 	config.push_back("   fi");
 	config.push_back("}");
 	config.push_back("");
 	config.push_back(serviceName + "_status() {");
 	config.push_back("   if [ -e \"${pidfile}\" ]; then");
-	config.push_back("      echo \"SolidCP.VmConfig is running as pid `cat ${pidfile}`\"");
+	config.push_back("      echo \"FuseCP.VmConfig is running as pid `cat ${pidfile}`\"");
 	config.push_back("   else");
-	config.push_back("      echo \"SolidCP.VmConfig is not running\"");
+	config.push_back("      echo \"FuseCP.VmConfig is not running\"");
 	config.push_back("   fi");
 	config.push_back("}");
 	config.push_back("");

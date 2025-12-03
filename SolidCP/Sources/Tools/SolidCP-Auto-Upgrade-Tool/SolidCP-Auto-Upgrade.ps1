@@ -1,15 +1,15 @@
-Ôªø<####################################################################################################
+<####################################################################################################
 SolidSCP - Upgrade Menu
 
-v1.0    14th July 2016:      First release of the SolidCP Upgrade Script
+v1.0    14th July 2016:      First release of the FuseCP Upgrade Script
 v1.1    2nd  August 2016:    Added dynamic Database & Folder detection to enable upgrade on older WSP or DNP installations
 v1.2    30th August 2016:    Added dynamic Database Server detection to work with external Database Servers
 v1.3    2nd  September 2016: Added web.config file updates to the script so the new features are added
 v1.4    4th  September 2016: Added SQLPS detection for users who have the Database on a different machine to the Enterprise Server
-v1.5    5th  September 2016: Added version update to the "SolidCP.Installer.exe.config" file so the manual installer shows the corect version if the application is opened
+v1.5    5th  September 2016: Added version update to the "FuseCP.Installer.exe.config" file so the manual installer shows the corect version if the application is opened
 v1.6    6th  September 2016: Additional improvements to the backup of the database and the update of the web.config file for the Portal to ensure they are done in the correct order
 v1.7    28th September 2016: Resolved various issues with the SQL Backup, also improved the component backups to save space and added in additional options to the menu for finer granularity when it comes to upgrading the components.
-v1.8    16th January   2017: Improved the component backups to save time and to remove old files that are no longer in use by SolidCP. Added timer to show run time of this script
+v1.8    16th January   2017: Improved the component backups to save time and to remove old files that are no longer in use by FuseCP. Added timer to show run time of this script
 v1.9	27th May 2017:		 Removal of LE Files from the project when the update is ran
 V2.0	17th May 2018		 Added support for CRM2016 and the asp.net server folders
 v2.1	10th August 2020	 Fix for the Security settings needed for newer ASP update
@@ -20,15 +20,15 @@ v2.2.2  29th January 2022	 Changes for v1.4.9 web.config changes
 v2.2.3  02th December 2024	 Changes for v1.5.0 web.config changes
 v2.2.4  17th December 2024	 Changes for v1.5.1 web.config changes
 
-Written By Marc Banyard for the SolidCP Project (c) 2016 SolidCP
+Written By Marc Banyard for the FuseCP Project (c) 2016 FuseCP
 Updated By Trevor Robinson.
 
 The script needs to be run from the server that holds your Enterprise Server
 as the script will query the database to get the servers that form part of your
-SolidCP setup and upgrade each one in turn.
+FuseCP setup and upgrade each one in turn.
 
-Copyright (c) 2023, SolidCP
-SolidCP is distributed under the Creative Commons Share-alike license
+Copyright (c) 2023, FuseCP
+FuseCP is distributed under the Creative Commons Share-alike license
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -40,7 +40,7 @@ are permitted provided that the following conditions are met:
   this list of conditions  and  the  following  disclaimer in  the documentation
   and/or other materials provided with the distribution.
 
-- Neither the name of  SolidCP  nor the names of its contributors may be used to
+- Neither the name of  FuseCP  nor the names of its contributors may be used to
   endorse or  promote  products  derived  from  this  software  without specific
   prior written permission.
 
@@ -62,11 +62,11 @@ $scriptversion = "v2.2.2"
 # Set the window size as Server 2016 comes up small
 #$host.UI.RawUI.BufferSize  = New-Object -TypeName System.Management.Automation.Host.Size -ArgumentList (120, 50)
 $host.UI.RawUI.WindowSize  = New-Object -TypeName System.Management.Automation.Host.Size -ArgumentList (120, 50)
-$Host.UI.RawUI.WindowTitle = "$([Environment]::UserName): --  SolidCP - Auto Upgrade Script $scriptversion --"
+$Host.UI.RawUI.WindowTitle = "$([Environment]::UserName): --  FuseCP - Auto Upgrade Script $scriptversion --"
 Write-Host "
         ****************************************
         *                                      *
-        *        Welcome to the SolidCP        *
+        *        Welcome to the FuseCP        *
         *       Automated Upgrader $scriptversion        *
         *                                      *
         *       Please be patient whilst       *
@@ -116,19 +116,19 @@ $SCP_Portal_Svr_IP = "" # IP Address of the Portal component if not running on t
 ####################################################################################################
 ####################################################################################################
 # General settings - do not modify them or anyting else below this line                            #
-$SCP_Installer_Site = "https://installer.solidcp.com" # SolidCP Installer Site
+$SCP_Installer_Site = "https://installer.fusecp.com" # FuseCP Installer Site
 Add-Type -assembly "system.io.compression.filesystem"
 Import-Module WebAdministration
-if ([bool](Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {(($_.Name -match "SolidCP|WebsitePanel|DotNetPanel") -and ($_.Name -match "Portal|Enterprise Server| Server"))})) {
-	$SCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "SolidCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).physicalPath) # SolidCP Enterprise Server Files Location
-	$SCP_EntSvr_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "SolidCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).name)         # SolidCP Enterprise Server IIS Website Name
-	$SCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "SolidCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).physicalPath)                                  # SolidCP Portal Files Location
-	$SCP_Portal_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "SolidCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).name)                                          # SolidCP Portal IIS Website Name
+if ([bool](Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {(($_.Name -match "FuseCP|WebsitePanel|DotNetPanel") -and ($_.Name -match "Portal|Enterprise Server| Server"))})) {
+	$SCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).physicalPath) # FuseCP Enterprise Server Files Location
+	$SCP_EntSvr_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).name)         # FuseCP Enterprise Server IIS Website Name
+	$SCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).physicalPath)                                  # FuseCP Portal Files Location
+	$SCP_Portal_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).name)                                          # FuseCP Portal IIS Website Name
 	$SCP_EntSvr_WebCfg  = ([xml](Get-Content "$SCP_EntSvr_Dir\Web.config"))
 	$SCP_EntSvr_ConStr  = ($SCP_EntSvr_WebCfg.configuration.connectionStrings.add.connectionString)
-	$SCP_EntSvr_CryptoK = ($SCP_EntSvr_WebCfg.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.CryptoKey']").value)
-	$SCP_Database_Name  = ( $SCP_EntSvr_ConStr | Select-String 'Database=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the SolidCP Database Name from the Enterprise Server Connection String in the web.config file
-	$SCP_Database_Servr = ( $SCP_EntSvr_ConStr | Select-String 'server=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the SolidCP Database Server from the Enterprise Server Connection String in the web.config file
+	$SCP_EntSvr_CryptoK = ($SCP_EntSvr_WebCfg.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.CryptoKey']").value)
+	$SCP_Database_Name  = ( $SCP_EntSvr_ConStr | Select-String 'Database=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Name from the Enterprise Server Connection String in the web.config file
+	$SCP_Database_Servr = ( $SCP_EntSvr_ConStr | Select-String 'server=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Server from the Enterprise Server Connection String in the web.config file
 }
 $SCP_Backup_Time    = [System.DateTime]::Now.ToString("yyyy-MM-dd - (HH.mm tt)")
 $dIPV4              = ((Test-Connection $env:computername -count 1).IPv4address.IPAddressToString)
@@ -151,8 +151,8 @@ if ($dDomainMember) { # Only do the following if the server is a member of a dom
 	$dLangDomainAdministratorName = (([wmi]"Win32_SID.SID='$dDomainAdministratorSID'").AccountName); # Administrator
 	$dLangDomainEnterpriseAdmins  = (([wmi]"Win32_SID.SID='$dDomainSID-519'").AccountName);          # Enterprise Admins
 }
-$dExcludedIPaddressesFile  = "SolidCP-Auto-Upgrade-Exclude-Servers.txt" # File name to contain a list of IP Addresses to exclude from the SolidCP Upgrade
-$dIncludedIPaddressesFile  = "SolidCP-Auto-Upgrade-Include-Servers.txt" # File name to contain a list of additional IP Addresses to include the SolidCP Upgrade
+$dExcludedIPaddressesFile  = "FuseCP-Auto-Upgrade-Exclude-Servers.txt" # File name to contain a list of IP Addresses to exclude from the FuseCP Upgrade
+$dIncludedIPaddressesFile  = "FuseCP-Auto-Upgrade-Include-Servers.txt" # File name to contain a list of additional IP Addresses to include the FuseCP Upgrade
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################################################################################################
@@ -165,38 +165,38 @@ Function SCPupgradeMenu() # Ask the user if they want to use the Stable Release 
 
 	$choice = ""
 	while ($choice -notmatch "[1|2|3|9|x]") {
-		$SCP_Stable_Version      = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum               # SolidCP Current Stable Version
-		$SCP_BETA_Version        = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.Beta.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum          # SolidCP Current BETA Version
-		$SCP_Prev_Stable_Version = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | select -Unique | sort -Descending)["1"] # SolidCP Previous Stable Version
+		$SCP_Stable_Version      = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum               # FuseCP Current Stable Version
+		$SCP_BETA_Version        = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.Beta.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum          # FuseCP Current BETA Version
+		$SCP_Prev_Stable_Version = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | select -Unique | sort -Descending)["1"] # FuseCP Previous Stable Version
 
 		cls
-		Write-Host "`n`tSolidCP Upgrade Menu $scriptversion`n" -ForegroundColor Magenta
-		Write-Host "`t`tPlease select version of SolidCP you would like to upgrade your deployment to`n" -ForegroundColor Cyan
-		Write-Host "`t`t 1. SolidCP v$SCP_Stable_Version - `"Stable`"" -ForegroundColor Cyan
-		Write-Host "`t`t 2. SolidCP v$SCP_BETA_Version -  `"BETA`"" -ForegroundColor Cyan
-		Write-Host "`t`t 3. SolidCP Test Remote Servers UNC Path (Firewall Test)" -ForegroundColor Cyan
-		Write-Host "`n`t`t 9. SolidCP v$SCP_Prev_Stable_Version - `"Previous Stable Version`"" -ForegroundColor Cyan
+		Write-Host "`n`tFuseCP Upgrade Menu $scriptversion`n" -ForegroundColor Magenta
+		Write-Host "`t`tPlease select version of FuseCP you would like to upgrade your deployment to`n" -ForegroundColor Cyan
+		Write-Host "`t`t 1. FuseCP v$SCP_Stable_Version - `"Stable`"" -ForegroundColor Cyan
+		Write-Host "`t`t 2. FuseCP v$SCP_BETA_Version -  `"BETA`"" -ForegroundColor Cyan
+		Write-Host "`t`t 3. FuseCP Test Remote Servers UNC Path (Firewall Test)" -ForegroundColor Cyan
+		Write-Host "`n`t`t 9. FuseCP v$SCP_Prev_Stable_Version - `"Previous Stable Version`"" -ForegroundColor Cyan
 		Write-Host "`n`t`t X. Exit this menu" -ForegroundColor Cyan
 		$choice = Read-Host "`n`tEnter Option From Above Menu"
 	}
 	if ($choice -eq "1") {
-		Write-Host "`n`tPreparing to Upgrade your SolidCP servers to the latest Stable release (v$SCP_Stable_Version)" -ForegroundColor Green
+		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the latest Stable release (v$SCP_Stable_Version)" -ForegroundColor Green
 		$script:SCP_Version = "$SCP_Stable_Version"
 		UpgradeSCPChoseComponent
 	}
 	elseif ($choice -eq "2") {
-		Write-Host "`n`tPreparing to Upgrade your SolidCP servers to the latest BETA release (v$SCP_BETA_Version)" -ForegroundColor Green
+		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the latest BETA release (v$SCP_BETA_Version)" -ForegroundColor Green
 		$script:SCP_Version = "$SCP_BETA_Version"
 		UpgradeSCPChoseComponent
 	}
 	elseif ($choice -eq "3") {
-		Write-Host "`n`tTest SolidCP Remote servers UNC Path" -ForegroundColor Cyan
+		Write-Host "`n`tTest FuseCP Remote servers UNC Path" -ForegroundColor Cyan
 		UpgradeSCPcheckUNCpath -IPs $SCP_ServerIPs
 		dPressAnyKeyToContinue
 		SCPupgradeMenu
 	}
 	elseif ($choice -eq "9") {
-		Write-Host "`n`tPreparing to Upgrade your SolidCP servers to the previous Stable release (v$SCP_Prev_Stable_Version)" -ForegroundColor Green
+		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the previous Stable release (v$SCP_Prev_Stable_Version)" -ForegroundColor Green
 		$script:SCP_Version = "$SCP_Prev_Stable_Version"
 		UpgradeSCPChoseComponent
 	}
@@ -208,22 +208,22 @@ Function SCPupgradeMenu() # Ask the user if they want to use the Stable Release 
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPChoseComponent() # Function to download the files from the SolidCP Installer site for the SolidCP upgrade
+function UpgradeSCPChoseComponent() # Function to download the files from the FuseCP Installer site for the FuseCP upgrade
 {
 	GetSCPserverIPaddresses
 	do {
 		do {
 		cls
-		Write-Host "`n`tSolidCP Upgrade Menu`n" -ForegroundColor Magenta
-		Write-Host "`t`tPlease select SolidCP Components you would like to upgrade`n" -ForegroundColor Cyan
+		Write-Host "`n`tFuseCP Upgrade Menu`n" -ForegroundColor Magenta
+		Write-Host "`t`tPlease select FuseCP Components you would like to upgrade`n" -ForegroundColor Cyan
 	$menu = @"
-	    A. All components on All SolidCP Servers
-	    B. SolidCP Enterprise Server Component
-	    C. SolidCP Portal Component
-	    D. SolidCP Server Component (This Server ONLY)
-	    E. SolidCP Server Component (ALL Servers)
-	    F. SolidCP Cloud Storage Portal Component (This Server ONLY)
-	    G. SolidCP Cloud Storage Portal Component (ALL Servers)
+	    A. All components on All FuseCP Servers
+	    B. FuseCP Enterprise Server Component
+	    C. FuseCP Portal Component
+	    D. FuseCP Server Component (This Server ONLY)
+	    E. FuseCP Server Component (ALL Servers)
+	    F. FuseCP Cloud Storage Portal Component (This Server ONLY)
+	    G. FuseCP Cloud Storage Portal Component (ALL Servers)
 
 	    X. Exit back to Main Menu
 "@
@@ -289,7 +289,7 @@ function UpgradeSCPChoseComponent() # Function to download the files from the So
 
 
 ####################################################################################################################################################################################
-function GetSCPserverIPaddresses()  # Function to get a list of the SolidCP Server IP Addresses to be upgraded
+function GetSCPserverIPaddresses()  # Function to get a list of the FuseCP Server IP Addresses to be upgraded
 {
 	if (Test-Path ".\$dExcludedIPaddressesFile") {
 		$dSCPexcludeServerList = Get-Content ".\$dExcludedIPaddressesFile"  # Array with IP Addresses to Exclude from the upgrade
@@ -297,7 +297,7 @@ function GetSCPserverIPaddresses()  # Function to get a list of the SolidCP Serv
 	if (Test-Path ".\$dIncludedIPaddressesFile") {
 		$dSCPincludeServerList = Get-Content ".\$dIncludedIPaddressesFile"  # Array with IP Addresses to Include with the upgrade
 	}
-	# Get the list of IP Addresses from the SolidCP Database and store tham as an array, also add the additional IP Addresses and remove the ones to be excluded
+	# Get the list of IP Addresses from the FuseCP Database and store tham as an array, also add the additional IP Addresses and remove the ones to be excluded
 	push-location ; ($script:SCP_ServerIPs = ((Invoke-SQLCmd -query "SELECT [ServerUrl] FROM [$SCP_Database_Name].[dbo].[Servers] WHERE [VirtualServer]='0'" -Server $SCP_Database_Servr).ServerUrl -replace "^[^_]*\/\/|:.*|\/.*", "" ) + $dSCPincludeServerList | WHERE {$_} | Select -Unique | WHERE {$dSCPexcludeServerList -notcontains $_}) | Out-Null ; Pop-Location
 }
 
@@ -322,14 +322,14 @@ function UpgradeSCPcheckUNCpath()   # Function to test the UNC Path to each serv
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPDownloadFiles() # Function to download the files from the SolidCP Installer site for the SolidCP upgrade
+function UpgradeSCPDownloadFiles() # Function to download the files from the FuseCP Installer site for the FuseCP upgrade
 {
 	if ($SCP_Version) {
-		$script:SCP_UpdateDir      = "C:\Program Files (x86)\SolidCP Installer\Manual Updates\$SCP_Backup_Time - (Before v$SCP_Version)"
-		# SolidCP - Download files and prepare the upgrade
+		$script:SCP_UpdateDir      = "C:\Program Files (x86)\FuseCP Installer\Manual Updates\$SCP_Backup_Time - (Before v$SCP_Version)"
+		# FuseCP - Download files and prepare the upgrade
 		if (!(Test-Path "$SCP_UpdateDir\Updates")) {
 			################################################################################
-			# SolidCP - Get the Values to update the "SolidCP.Installer.exe.config" later
+			# FuseCP - Get the Values to update the "FuseCP.Installer.exe.config" later
 			$script:SCP_XML_EntSvr = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Enterprise Server']/releases/release[@available='true'][@version='$SCP_Version']")
 			$script:SCP_XML_Portal = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Portal']/releases/release[@available='true'][@version='$SCP_Version']")
 			$script:SCP_XML_Server = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Server']/releases/release[@available='true'][@version='$SCP_Version']")
@@ -338,11 +338,11 @@ function UpgradeSCPDownloadFiles() # Function to download the files from the Sol
 			(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Updates" -Force) | Out-Null
 			# Check if user wants to download the files from the installer site - Mainly for Developers what want to build the source on thier machine and update the servers from that
 			$choiceDownload = ""
-			while ($choiceDownload -notmatch "[y|n]") { $choiceDownload = read-host "`n`tWould you like to download the update files from the SolidCP website`? (Y/N)" }
+			while ($choiceDownload -notmatch "[y|n]") { $choiceDownload = read-host "`n`tWould you like to download the update files from the FuseCP website`? (Y/N)" }
 			if ($choiceDownload -eq "y") {
 				# Start a timer to see how long the script takes to upgrade all of the servers
 				$script:StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
-				# Download the Manual-Update.zip file from the SolidCP Installer website
+				# Download the Manual-Update.zip file from the FuseCP Installer website
 				Write-Host "`t Downloading the Files ready for updating" -ForegroundColor Green
 				Invoke-WebRequest -Uri ("$SCP_Installer_Site/Files/$SCP_Version/Manual-Update.zip") -OutFile "$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip" -PassThru -UseBasicParsing  | out-null
 			}else{
@@ -358,7 +358,7 @@ function UpgradeSCPDownloadFiles() # Function to download the files from the Sol
 			# Unzip the files
 			Write-Host "`t Extracting the Files ready for updating" -ForegroundColor Green
 			[io.compression.zipfile]::ExtractToDirectory("$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip", "$SCP_UpdateDir\Updates") | Out-Null
-			# Update the SQL Update File with the SolidCP Database Name
+			# Update the SQL Update File with the FuseCP Database Name
 			(Get-Content "$SCP_UpdateDir\Updates\update_db.sql").replace('${install.database}', "$SCP_Database_Name") | Set-Content "$SCP_UpdateDir\Updates\update_db.sql"
 			# Remove the downloaded ZIP File to save space
 			(Remove-Item "$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip" -Force) | Out-Null
@@ -368,13 +368,13 @@ function UpgradeSCPDownloadFiles() # Function to download the files from the Sol
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPentSvr() # Function to upgrade the SolidCP Enterprise Server Component
+function UpgradeSCPentSvr() # Function to upgrade the FuseCP Enterprise Server Component
 {
 	if (Test-Path "$SCP_EntSvr_Dir") { # Upgrade the Enterprise Server
 		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\EnterpriseServer\")) { # Check if the Enterprise Server Update Folder has any files in it before upgrading
 			if (([bool](Get-WebSite -Name "$SCP_EntSvr_WebName" -ErrorAction SilentlyContinue)) -and ($SCP_EntSvr_WebName -ne $null)) { # Check if the Enterprise Server website exists
 				# Start the Enterprise Server upgrade
-				Write-Host "`n`tStarting the `"SolidCP Enterprise Server`" upgrade" -ForegroundColor Cyan
+				Write-Host "`n`tStarting the `"FuseCP Enterprise Server`" upgrade" -ForegroundColor Cyan
 
 				# Stop the Enterprise Server Website
 				Write-Host "`t Stopping the `"$SCP_EntSvr_WebName`" website" -ForegroundColor Green
@@ -386,7 +386,7 @@ function UpgradeSCPentSvr() # Function to upgrade the SolidCP Enterprise Server 
 
 				# Stop the Enterprise Server Scheduler service
 				Write-Host "`t Stopping the `"$SCP_EntSvr_WebName`" Scheduler service" -ForegroundColor Green
-				if ( ((Get-Service -Name "SolidCP Scheduler"      -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "SolidCP";      (Stop-Service "SolidCP Scheduler"      -Force -WarningAction SilentlyContinue)}
+				if ( ((Get-Service -Name "FuseCP Scheduler"      -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "FuseCP";      (Stop-Service "FuseCP Scheduler"      -Force -WarningAction SilentlyContinue)}
 				if ( ((Get-Service -Name "WebsitePanel Scheduler" -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "WebsitePanel"; (Stop-Service "WebsitePanel Scheduler" -Force -WarningAction SilentlyContinue)}
 				if ( ((Get-Service -Name "DotNetPanel Scheduler"  -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "DotNetPanel";  (Stop-Service "DotNetPanel Scheduler"  -Force -WarningAction SilentlyContinue)}
 
@@ -472,15 +472,15 @@ function UpgradeSCPentSvr() # Function to upgrade the SolidCP Enterprise Server 
 					push-location ; Invoke-Sqlcmd -InputFile "$SCP_UpdateDir\Updates\update_db.sql" -ServerInstance "$SCP_Database_Servr" -Database "$SCP_Database_Name" | Out-Null ; Pop-Location
 				}
 
-				# Update the web.config file from Website Panel to SolidCP
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.CryptoKey']/@key" "SolidCP.CryptoKey"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EncryptionEnabled']/@key" "SolidCP.EncryptionEnabled"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.WebApplicationsPath']/@key" "SolidCP.EnterpriseServer.WebApplicationsPath"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.ServerRequestTimeout']/@key" "SolidCP.EnterpriseServer.ServerRequestTimeout"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","SolidCP.AltConnectionString"), ("value","ConnectionString") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","SolidCP.AltCryptoKey"), ("value","CryptoKey") )
+				# Update the web.config file from Website Panel to FuseCP
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.CryptoKey']/@key" "FuseCP.CryptoKey"
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EncryptionEnabled']/@key" "FuseCP.EncryptionEnabled"
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.WebApplicationsPath']/@key" "FuseCP.EnterpriseServer.WebApplicationsPath"
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.ServerRequestTimeout']/@key" "FuseCP.EnterpriseServer.ServerRequestTimeout"
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","FuseCP.AltConnectionString"), ("value","ConnectionString") )
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","FuseCP.AltCryptoKey"), ("value","CryptoKey") )
 				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/system.web/compilation/@targetFramework" "4.8"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/microsoft.web.services3/security/securityTokenManager/add[@type='WebsitePanel.EnterpriseServer.ServiceUsernameTokenManager, WebsitePanel.EnterpriseServer']/@type" "SolidCP.EnterpriseServer.ServiceUsernameTokenManager, SolidCP.EnterpriseServer.Code"
+				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/microsoft.web.services3/security/securityTokenManager/add[@type='WebsitePanel.EnterpriseServer.ServiceUsernameTokenManager, WebsitePanel.EnterpriseServer']/@type" "FuseCP.EnterpriseServer.ServiceUsernameTokenManager, FuseCP.EnterpriseServer.Code"
 				# v1.5.0
 				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration" "runtime"
 				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
@@ -496,11 +496,11 @@ function UpgradeSCPentSvr() # Function to upgrade the SolidCP Enterprise Server 
 				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
 				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
 				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-13.0.0.0"), ("newVersion","13.0.0.0") )
-				#ModifyXML "$SCP_EntSvr_Dir\bin\SolidCP.EnterpriseServer.dll.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$SCP_EntSvr_ConStr"
-				#ModifyXML "$SCP_EntSvr_Dir\bin\SolidCP.EnterpriseServer.dll.config" "Update" "//configuration/appSettings/add[@key='SolidCP.CryptoKey']/@value" "$SCP_EntSvr_CryptoK"
-				ModifyXML "$SCP_EntSvr_Dir\bin\SolidCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$SCP_EntSvr_ConStr"
-				ModifyXML "$SCP_EntSvr_Dir\bin\SolidCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='SolidCP.CryptoKey']/@value" "$SCP_EntSvr_CryptoK"
-				Write-Host "`t The `"SolidCP Enterprise Server`" web.config file has been updated" -ForegroundColor Green
+				#ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.EnterpriseServer.dll.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$SCP_EntSvr_ConStr"
+				#ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.EnterpriseServer.dll.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value" "$SCP_EntSvr_CryptoK"
+				ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$SCP_EntSvr_ConStr"
+				ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value" "$SCP_EntSvr_CryptoK"
+				Write-Host "`t The `"FuseCP Enterprise Server`" web.config file has been updated" -ForegroundColor Green
 
 				# Start the Enterprise Server Scheduler service
 				if ($SchedularServiceName) {
@@ -517,27 +517,27 @@ function UpgradeSCPentSvr() # Function to upgrade the SolidCP Enterprise Server 
 				try {(Invoke-WebRequest "http://127.0.0.1:9002" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 
 				# Upgrade complete
-				Write-Host "`t  The `"SolidCP Enterprise Server`" has been upgraded" -ForegroundColor Green
+				Write-Host "`t  The `"FuseCP Enterprise Server`" has been upgraded" -ForegroundColor Green
 			}else{
-				Write-Host "`tThe `"SolidCP Enterprise Server`" website was not found on this server" -ForegroundColor Yellow
+				Write-Host "`tThe `"FuseCP Enterprise Server`" website was not found on this server" -ForegroundColor Yellow
 			}
 		}else{
-			Write-Host "`t There are no `"SolidCP Enterprise Server`" updates required on this server" -ForegroundColor Yellow
+			Write-Host "`t There are no `"FuseCP Enterprise Server`" updates required on this server" -ForegroundColor Yellow
 		}
 	}else{
-		Write-Host "`tThe `"SolidCP Enterprise Server`" was not found on this server" -ForegroundColor Yellow
+		Write-Host "`tThe `"FuseCP Enterprise Server`" was not found on this server" -ForegroundColor Yellow
 	}
 }
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPPortal() # Function to upgrade the SolidCP Portal Component
+function UpgradeSCPPortal() # Function to upgrade the FuseCP Portal Component
 {
 	if (Test-Path "$SCP_Portal_Dir") { # Upgrade the Portal if the path exists
 		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\Portal\")) { # Check if the Portal Update Folder has any files in it before upgrading
-			if (([bool](Get-WebSite -Name "$SCP_Portal_WebName" -ErrorAction SilentlyContinue)) -and ($SCP_Portal_WebName -ne $null)) { # Check if the SolidCP Portal website exists
+			if (([bool](Get-WebSite -Name "$SCP_Portal_WebName" -ErrorAction SilentlyContinue)) -and ($SCP_Portal_WebName -ne $null)) { # Check if the FuseCP Portal website exists
 				# Start the Portal upgrade
-				Write-Host "`n`tStarting the `"SolidCP Portal`" upgrade" -ForegroundColor Cyan
+				Write-Host "`n`tStarting the `"FuseCP Portal`" upgrade" -ForegroundColor Cyan
 
 				# Stop the Portal Website
 				Write-Host "`t Stopping the `"$SCP_Portal_WebName`" website" -ForegroundColor Green
@@ -569,18 +569,18 @@ function UpgradeSCPPortal() # Function to upgrade the SolidCP Portal Component
 
 				# Update the web.config to change the "xmlns" to "xmlns-temp" otherwise we have issues when parsing the XML file
 				(Get-Content "$SCP_Portal_Dir\web.config") -replace " xmlns=`"", " xmlns-temp=`"" | Set-Content "$SCP_Portal_Dir\web.config"
-				# Update the web.config file from Website Panel to SolidCP
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.ThemeProvider'][@value='WebsitePanel.Portal.WebPortalThemeProvider, WebsitePanel.Portal.Modules']/@value" "SolidCP.Portal.WebPortalThemeProvider, SolidCP.Portal.Modules"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.PageTitleProvider'][@value='WebsitePanel.Portal.WebPortalPageTitleProvider, WebsitePanel.Portal.Modules']/@value" "SolidCP.Portal.WebPortalPageTitleProvider, SolidCP.Portal.Modules"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap[@defaultProvider='WebsitePanelSiteMapProvider'][@enabled='true']/@defaultProvider" "SolidCPSiteMapProvider"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='WebsitePanelSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@name" "SolidCPSiteMapProvider"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='SolidCPSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@type" "SolidCP.WebPortal.SolidCPSiteMapProvider, SolidCP.WebPortal"
+				# Update the web.config file from Website Panel to FuseCP
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.ThemeProvider'][@value='WebsitePanel.Portal.WebPortalThemeProvider, WebsitePanel.Portal.Modules']/@value" "FuseCP.Portal.WebPortalThemeProvider, FuseCP.Portal.Modules"
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.PageTitleProvider'][@value='WebsitePanel.Portal.WebPortalPageTitleProvider, WebsitePanel.Portal.Modules']/@value" "FuseCP.Portal.WebPortalPageTitleProvider, FuseCP.Portal.Modules"
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap[@defaultProvider='WebsitePanelSiteMapProvider'][@enabled='true']/@defaultProvider" "FuseCPSiteMapProvider"
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='WebsitePanelSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@name" "FuseCPSiteMapProvider"
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='FuseCPSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@type" "FuseCP.WebPortal.FuseCPSiteMapProvider, FuseCP.WebPortal"
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//system.web/siteMap/providers" "remove" @("name","MySqlSiteMapProvider")
-				if ( !(CheckXMLnode "$SCP_Portal_Dir\web.config" "//configuration/system.web/httpHandlers/add[@verb='*'][@path='AjaxHandler.ashx'][@type='SolidCP.WebPortal.SolidCPAjaxHandler, SolidCP.WebPortal']" "type") ) {
-					ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.web/httpHandlers" "add" @( ("verb", ".*"), ("path", "AjaxHandler.ashx"), ("type", "SolidCP.WebPortal.SolidCPAjaxHandler, SolidCP.WebPortal") )
-					ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/httpHandlers/add[@path='AjaxHandler.ashx'][@type='SolidCP.WebPortal.SolidCPAjaxHandler, SolidCP.WebPortal']/@verb" "*"
+				if ( !(CheckXMLnode "$SCP_Portal_Dir\web.config" "//configuration/system.web/httpHandlers/add[@verb='*'][@path='AjaxHandler.ashx'][@type='FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal']" "type") ) {
+					ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.web/httpHandlers" "add" @( ("verb", ".*"), ("path", "AjaxHandler.ashx"), ("type", "FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal") )
+					ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/httpHandlers/add[@path='AjaxHandler.ashx'][@type='FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal']/@verb" "*"
 				}
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/authentication[@mode='Forms']/forms[@name='.WEBSITEPANELPORTALAUTHASPX'][@protection='All'][@timeout='30'][@path='/'][@requireSSL='false'][@slidingExpiration='true'][@cookieless='UseDeviceProfile'][@domain=''][@enableCrossAppRedirects='false']/@name" ".SolidCPPORTALAUTHASPX"
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/authentication[@mode='Forms']/forms[@name='.WEBSITEPANELPORTALAUTHASPX'][@protection='All'][@timeout='30'][@path='/'][@requireSSL='false'][@slidingExpiration='true'][@cookieless='UseDeviceProfile'][@domain=''][@enableCrossAppRedirects='false']/@name" ".FuseCPPORTALAUTHASPX"
 				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/compilation[@debug='true'][@targetFramework='4.8']/@debug" "false"
 				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/compilation[@targetFramework='4.0']/@targetFramework" "4.8"
 				ModifyXML "$SCP_Portal_Dir\web.config" "Delete" "//configuration/system.webServer/modules"
@@ -593,7 +593,7 @@ function UpgradeSCPPortal() # Function to upgrade the SolidCP Portal Component
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" 'system.net'
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net" "settings"
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net/settings" "servicePointManager" @( ("checkCertificateName","false"), ("checkCertificateRevocationList","false") )
-				# Update the web.config file to make sure it is up to date with the new Settings for v1.1.0 of SolidCP
+				# Update the web.config file to make sure it is up to date with the new Settings for v1.1.0 of FuseCP
 				if (!(CheckXMLnode "$SCP_Portal_Dir\Web.config" "//configuration" "configSections")) {
 					(Get-Content "$SCP_Portal_Dir\web.config") -replace "<configuration>", "<configuration>`n  <configSections>`n  </configSections>" | Set-Content "$SCP_Portal_Dir\web.config"
 				}
@@ -659,61 +659,61 @@ function UpgradeSCPPortal() # Function to upgrade the SolidCP Portal Component
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='system.data.dataset.serialization']" "section" @( ("name","allowedTypes"), ("type","System.Data.AllowedTypesSectionHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089") )
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "system.data.dataset.serialization"
 				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization" "allowedTypes"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","SolidCP.Providers.ResultObjects.HeliconApeStatus, SolidCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","SolidCP.Providers.ResultObjects.HeliconApeStatus, SolidCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
+				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","FuseCP.Providers.ResultObjects.HeliconApeStatus, FuseCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
+				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","FuseCP.Providers.ResultObjects.HeliconApeStatus, FuseCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
 				
 				# Add the edditional "<dependentAssembly>" tags in the Runtime section and remove any additional charichter returns from the end of the file
 				((Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <bindingRedirect oldVersion="0\.0\.0\.0-13\.0\.0\.0" newVersion="13\.0\.0\.0" \/>[\r\n]+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" \/>', "        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />`r`n      </dependentAssembly>`r`n      <dependentAssembly>`r`n        <assemblyIdentity name=`"WebGrease`" publicKeyToken=`"31bf3856ad364e35`" culture=`"neutral`" />" -replace '</configuration>[\r\n]+', "</configuration>") | Set-Content "$SCP_Portal_Dir\web.config"
 				(Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <bindingRedirect oldVersion="0\.0\.0\.0-3\.5\.0\.2" newVersion="3\.5\.0\.2" \/>[\r\n]+        <assemblyIdentity name="Microsoft.Web.Infrastructure" publicKeyToken="31bf3856ad364e35" culture="neutral" \/>', "        <bindingRedirect oldVersion=`"0.0.0.0-3.5.0.2`" newVersion=`"3.5.0.2`" />`r`n      </dependentAssembly>`r`n      <dependentAssembly>`r`n        <assemblyIdentity name=`"Microsoft.Web.Infrastructure`" publicKeyToken=`"31bf3856ad364e35`" culture=`"neutral`" />" | Set-Content "$SCP_Portal_Dir\web.config"
 				# Update the web.config to change the "xmlns-temp" back to "xmlns" now we have finished parsing the XML file
 				(Get-Content "$SCP_Portal_Dir\web.config") -replace " xmlns-temp=`"", " xmlns=`"" | Set-Content "$SCP_Portal_Dir\web.config"
-				Write-Host "`t The `"SolidCP Portal`" web.config file has been updated" -ForegroundColor Green
+				Write-Host "`t The `"FuseCP Portal`" web.config file has been updated" -ForegroundColor Green
 
 				# Delete the old css files from the themes styles directory
 				if (Test-Path "$SCP_Portal_Dir\App_Themes\Default\Styles\bootstrap.min.css") {Remove-Item -Path "$SCP_Portal_Dir\App_Themes\Default\Styles\bootstrap.min.css" -Force}
 				if (Test-Path "$SCP_Portal_Dir\App_Themes\Default\Styles\menus.css")         {Remove-Item -Path "$SCP_Portal_Dir\App_Themes\Default\Styles\menus.css" -Force}
 				# Delete files which should not be in the project
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ExchangeServer\UserControls\MSO365\MSO365Address.ascx") {Remove-Item -Recurse -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ExchangeServer\UserControls\MSO365" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ExchangeServer\UserControls\Locations\LocationAddress.ascx") {Remove-Item -Recurse -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ExchangeServer\UserControls\Locations\" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ProviderControls\SpamExperts_Settings.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ProviderControls\SpamExperts_Settings.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\SettingsLetsEncryptRenewalNotificationLetter.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\SettingsLetsEncryptRenewalNotificationLetter.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\SolidCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\SolidCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\MSO365\MSO365Address.ascx") {Remove-Item -Recurse -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\MSO365" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\Locations\LocationAddress.ascx") {Remove-Item -Recurse -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\Locations\" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\SpamExperts_Settings.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\SpamExperts_Settings.ascx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalNotificationLetter.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalNotificationLetter.ascx" -Force}
+				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx" -Force}
 				
 				# Upgrade complete
-				Write-Host "`t  The `"SolidCP Portal`" has been upgraded" -ForegroundColor Green
+				Write-Host "`t  The `"FuseCP Portal`" has been upgraded" -ForegroundColor Green
 			}else{
-				Write-Host "`tThe `"SolidCP Portal`" website was not found on this server" -ForegroundColor Yellow
+				Write-Host "`tThe `"FuseCP Portal`" website was not found on this server" -ForegroundColor Yellow
 			}
 		}else{
-			Write-Host "`t There are no `"SolidCP Server`" updates required on this server" -ForegroundColor Yellow
+			Write-Host "`t There are no `"FuseCP Server`" updates required on this server" -ForegroundColor Yellow
 		}
 	}else{
-		Write-Host "`tThe `"SolidCP Portal`" was not found on this server" -ForegroundColor Yellow
+		Write-Host "`tThe `"FuseCP Portal`" was not found on this server" -ForegroundColor Yellow
 	}
 }
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPPortalPost() # Function to Start the SolidCP Portal website after the upgrade has been completed
+function UpgradeSCPPortalPost() # Function to Start the FuseCP Portal website after the upgrade has been completed
 {
 	if (Test-Path "$SCP_Portal_Dir") { # Upgrade the Portal if the path exists
 		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\Portal\")) { # Check if the Portal Update Folder has any files in it before upgrading
-			if ([bool](Get-WebSite "$SCP_Portal_WebName")) { # Check if the SolidCP Portal website exists
+			if ([bool](Get-WebSite "$SCP_Portal_WebName")) { # Check if the FuseCP Portal website exists
 				# Start the Portal Website
 				Write-Host "`n`t Starting the `"$SCP_Portal_WebName`" website" -ForegroundColor Green
 				(Start-WebSite "$SCP_Portal_WebName") | Out-Null
 
-				# Wake the SolidCP Portal so it is more responsive after the upgrade
+				# Wake the FuseCP Portal so it is more responsive after the upgrade
 				try {(Invoke-WebRequest "http://$([System.Net.Dns]::gethostentry("$dIPV4").HostName):80" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 				try {(Invoke-WebRequest "http://$([System.Net.Dns]::gethostentry("$dIPV4").HostName):9001" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 				try {(Invoke-WebRequest "https://$([System.Net.Dns]::gethostentry("$dIPV4").HostName):443" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 
 				# Upgrade complete
-				Write-Host "`t  The `"SolidCP Portal`" has been started" -ForegroundColor Green
+				Write-Host "`t  The `"FuseCP Portal`" has been started" -ForegroundColor Green
 			}
 		}
 	}
@@ -721,7 +721,7 @@ function UpgradeSCPPortalPost() # Function to Start the SolidCP Portal website a
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPserver() # Function to upgrade the SolidCP Server Component
+function UpgradeSCPserver() # Function to upgrade the FuseCP Server Component
 {
 	Param(
 		[String[]]$IPs        # Specify the Server IPs that are to be upgraded
@@ -731,14 +731,14 @@ function UpgradeSCPserver() # Function to upgrade the SolidCP Server Component
 			if (!(Test-Path "$SCP_UpdateDir\Server - Backups")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Server - Backups" -Force) | Out-Null}
 			foreach ($SCP_RemoteServer in $IPs) { # Loop through each server in the $IPs Array
 				if (Test-Path "\\$SCP_RemoteServer\c$") { # Check to make sure the servers UNC Default Share is accessable
-					foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_RemoteServer\c$\" -Include ("WebsitePanel", "SolidCP", "DotNetPanel")).FullName -Directory)) {
+					foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_RemoteServer\c$\" -Include ("WebsitePanel", "FuseCP", "DotNetPanel")).FullName -Directory)) {
 						If ($RemoteServer.name -eq "Server" -Or $RemoteServer.name -eq "Server asp.net v4.5" -Or $RemoteServer.name -eq "Server asp.net v2.0") {
 							$SCP_Server_Dir  = $RemoteServer.FullName
 							$SCP_Server_FQDN = $([System.Net.Dns]::gethostentry("$SCP_RemoteServer").HostName)
 							$SCP_Server_Name = $SCP_Server_FQDN.split('.')[0]
 
 							# Start the Server upgrade
-							Write-Host "`n`tStarting the `"SolidCP Server`" upgrade on `"$SCP_Server_FQDN`"" -ForegroundColor Cyan
+							Write-Host "`n`tStarting the `"FuseCP Server`" upgrade on `"$SCP_Server_FQDN`"" -ForegroundColor Cyan
 							# Backup the Server files
 							Write-Host "`t Creating a backup of the `"Server`" files" -ForegroundColor Green
 							[System.IO.Compression.ZipFile]::CreateFromDirectory($SCP_Server_Dir, "$SCP_UpdateDir\Server - Backups\$SCP_Server_Name.zip")
@@ -762,17 +762,17 @@ function UpgradeSCPserver() # Function to upgrade the SolidCP Server Component
 							# Remove some files which should have not been included
 							if (Test-Path "$SCP_Server_Dir\EmailSecurity.asmx") {Remove-Item -Path "$SCP_Server_Dir\EmailSecurity.asmx" -Force}
 							if (Test-Path "$SCP_Server_Dir\srvLetsEncrypt.asmx") {Remove-Item -Path "$SCP_Server_Dir\srvLetsEncrypt.asmx" -Force}
-							if (Test-Path "$SCP_Server_Dir\bin\Filters\SolidCP.Providers.EmailSecurity.SpamExperts.dll") {Remove-Item -Path "$SCP_Server_Dir\bin\Filters\SolidCP.Providers.EmailSecurity.SpamExperts.dll" -Force}
+							if (Test-Path "$SCP_Server_Dir\bin\Filters\FuseCP.Providers.EmailSecurity.SpamExperts.dll") {Remove-Item -Path "$SCP_Server_Dir\bin\Filters\FuseCP.Providers.EmailSecurity.SpamExperts.dll" -Force}
 
 							# Upgrade the Server files
 							Write-Host "`t Upgrading the `"Server`" files" -ForegroundColor Green
 							Copy-Item -Path "$SCP_UpdateDir\Updates\Server\*" -Exclude "delete.txt" -Destination "$SCP_Server_Dir\" -Recurse -Force | Out-Null
 
-							# Update the web.config file from Website Panel to SolidCP
-							((Get-Content "$SCP_Server_Dir\web.config").replace('WebsitePanel', 'SolidCP') | Set-Content "$SCP_Server_Dir\web.config")
-							((Get-Content "$SCP_Server_Dir\web.config").replace('websitepanel', 'SolidCP') | Set-Content "$SCP_Server_Dir\web.config")
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SolidCP.Exchange.ClearQueryBaseDN"), ("value", "false") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SolidCP.Exchange.enableSP2abp"), ("value", "false") )
+							# Update the web.config file from Website Panel to FuseCP
+							((Get-Content "$SCP_Server_Dir\web.config").replace('WebsitePanel', 'FuseCP') | Set-Content "$SCP_Server_Dir\web.config")
+							((Get-Content "$SCP_Server_Dir\web.config").replace('websitepanel', 'FuseCP') | Set-Content "$SCP_Server_Dir\web.config")
+							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "FuseCP.Exchange.ClearQueryBaseDN"), ("value", "false") )
+							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "FuseCP.Exchange.enableSP2abp"), ("value", "false") )
 							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SCVMMServerName"), ("value", "") )
 							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SCVMMServerPort"), ("value", "") )
 							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/system.web" "compilation" @( ("debug", "true"), ("targetFramework", "4.8") )
@@ -787,13 +787,13 @@ function UpgradeSCPserver() # Function to upgrade the SolidCP Server Component
 							[xml]$SCP_Server_XML = Get-Content -Path "$SCP_Server_Dir\web.config"
 							$SCP_Server_XML.configuration.runtime.assemblyBinding.probing.privatePath = "bin/Crm2011;bin/Crm2013;bin/Exchange2013;bin/Exchange2016;bin/Exchange2019;bin/Sharepoint2013;bin/Sharepoint2016;bin/Sharepoint2019;bin/Lync2013;bin/SfB2015;bin/SfB2019;bin/Lync2013HP;bin/Dns2012;bin/IceWarp;bin/IIs80;bin/IIs100;bin/HyperV2012R2;bin/HyperVvmm;bin/Crm2015;bin/Crm2016;bin/Filters"
 							$SCP_Server_XML.Save("$SCP_Server_Dir\web.config") | Out-Null
-							Write-Host "`t The `"SolidCP Server`" web.config file has been updated" -ForegroundColor Green
+							Write-Host "`t The `"FuseCP Server`" web.config file has been updated" -ForegroundColor Green
 
-							# Wake the SolidCP Server so it is more responsive after the upgrade
+							# Wake the FuseCP Server so it is more responsive after the upgrade
 							try {(Invoke-WebRequest "http://$($SCP_Server_FQDN):9003" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 
 							# Upgrade complete
-							Write-Host "`t  The `"SolidCP Server`" has been upgraded on `"$SCP_Server_FQDN`"" -ForegroundColor Green
+							Write-Host "`t  The `"FuseCP Server`" has been upgraded on `"$SCP_Server_FQDN`"" -ForegroundColor Green
 						}
 					}
 				}else{
@@ -804,16 +804,16 @@ function UpgradeSCPserver() # Function to upgrade the SolidCP Server Component
 				}
 			}
 		}else{
-			Write-Host "`t There are no `"SolidCP Server`" updates required on your servers" -ForegroundColor Yellow
+			Write-Host "`t There are no `"FuseCP Server`" updates required on your servers" -ForegroundColor Yellow
 		}
 	}else{
-		Write-Host "`t No `"SolidCP Servers`" are configured on your Portal" -ForegroundColor Yellow
+		Write-Host "`t No `"FuseCP Servers`" are configured on your Portal" -ForegroundColor Yellow
 	}
 }
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPwebDav() # Function to upgrade the SolidCP Cloud Storage Portal (WebDAV) Component
+function UpgradeSCPwebDav() # Function to upgrade the FuseCP Cloud Storage Portal (WebDAV) Component
 {
 	Param(
 		[String[]]$IPs        # Specify the Cloud Storage Portal IPs that are to be upgraded
@@ -823,14 +823,14 @@ function UpgradeSCPwebDav() # Function to upgrade the SolidCP Cloud Storage Port
 			if (!(Test-Path "$SCP_UpdateDir\WebDAV - Backups")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\WebDAV - Backups" -Force) | Out-Null}
 			foreach ($SCP_RemoteWebDAV in $IPs) { # Loop through each IP Address in the $IPs Array
 				if (Test-Path "\\$SCP_RemoteWebDAV\c$") { # Check to make sure the WebDAVs UNC Default Share is accessable
-					foreach ($RemoteWebDAV in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_RemoteWebDAV\c$\" -Include ("WebsitePanel", "SolidCP")).FullName -Directory)) {
+					foreach ($RemoteWebDAV in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_RemoteWebDAV\c$\" -Include ("WebsitePanel", "FuseCP")).FullName -Directory)) {
 						If ($RemoteWebDAV.name -eq "Cloud Storage Portal") {
 							$SCP_WebDAV_Dir  = $RemoteWebDAV.FullName
 							$SCP_WebDAV_FQDN = $([System.Net.Dns]::gethostentry("$SCP_RemoteWebDAV").HostName)
 							$SCP_WebDAV_Name = $SCP_WebDAV_FQDN.split('.')[0]
 
 							# Start the Cloud Storage Portal upgrade
-							Write-Host "`n`tStarting the `"SolidCP Cloud Storage Portal`" upgrade on `"$SCP_WebDAV_FQDN`"" -ForegroundColor Cyan
+							Write-Host "`n`tStarting the `"FuseCP Cloud Storage Portal`" upgrade on `"$SCP_WebDAV_FQDN`"" -ForegroundColor Cyan
 							# Backup the Cloud Storage Portal files
 							Write-Host "`t Creating a backup of the `"Cloud Storage Portal`" files" -ForegroundColor Green
 							[System.IO.Compression.ZipFile]::CreateFromDirectory($SCP_WebDAV_Dir, "$SCP_UpdateDir\WebDAV - Backups\$SCP_WebDAV_Name.zip")
@@ -850,14 +850,14 @@ function UpgradeSCPwebDav() # Function to upgrade the SolidCP Cloud Storage Port
 							}
 
 							# Upgrade the Cloud Storage Portal files
-							Write-Host "`t Upgrading the `"SolidCP Cloud Storage Portal`" files" -ForegroundColor Green
+							Write-Host "`t Upgrading the `"FuseCP Cloud Storage Portal`" files" -ForegroundColor Green
 							Copy-Item -Path "$SCP_UpdateDir\Updates\WebDavPortal\*" -Exclude "delete.txt" -Destination "$SCP_WebDAV_Dir\" -Recurse -Force | Out-Null
 
-							# Wake the SolidCP Cloud Storage Portal so it is more responsive after the upgrade
+							# Wake the FuseCP Cloud Storage Portal so it is more responsive after the upgrade
 							try {(Invoke-WebRequest "http://$($SCP_WebDAV_FQDN):9004" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 
 							# Upgrade complete
-							Write-Host "`t  The `"SolidCP Cloud Storage Portal`" has been upgraded on `"$SCP_WebDAV_FQDN`"" -ForegroundColor Green
+							Write-Host "`t  The `"FuseCP Cloud Storage Portal`" has been upgraded on `"$SCP_WebDAV_FQDN`"" -ForegroundColor Green
 						}
 					}
 				}else{
@@ -868,10 +868,10 @@ function UpgradeSCPwebDav() # Function to upgrade the SolidCP Cloud Storage Port
 				}
 			}
 		}else{
-			Write-Host "`n`tThere are no `"SolidCP Cloud Storage Portal`" updates required on your servers" -ForegroundColor Yellow
+			Write-Host "`n`tThere are no `"FuseCP Cloud Storage Portal`" updates required on your servers" -ForegroundColor Yellow
 		}
 	}else{
-		Write-Host "`t No `"SolidCP Cloud Storage Portals`" are configured on your Portal" -ForegroundColor Yellow
+		Write-Host "`t No `"FuseCP Cloud Storage Portals`" are configured on your Portal" -ForegroundColor Yellow
 	}
 }
 
@@ -880,8 +880,8 @@ function UpgradeSCPwebDav() # Function to upgrade the SolidCP Cloud Storage Port
 function DNPversionCheck() # Check if DNP is installed, if so advise a manual update first before using the upgrade script
 {
 	if ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -like "* Enterprise Server*"}).name -like "DotNetPanel*") {
-		# Check the Database to make sure it has been upgraded to SolidCP if DotNetPanel is detected
-		push-location ; ($SCP_Database_Check = (Invoke-SQLCmd -query "SELECT SolidCPdatabase = ( COUNT([DatabaseVersion])) FROM [$SCP_Database_Name].[dbo].[Versions] WHERE BuildDate >= '2016' AND DatabaseVersion >= '1.0.1'" -Server $SCP_Database_Servr).SolidCPdatabase) | Out-Null ; Pop-Location
+		# Check the Database to make sure it has been upgraded to FuseCP if DotNetPanel is detected
+		push-location ; ($SCP_Database_Check = (Invoke-SQLCmd -query "SELECT FuseCPdatabase = ( COUNT([DatabaseVersion])) FROM [$SCP_Database_Name].[dbo].[Versions] WHERE BuildDate >= '2016' AND DatabaseVersion >= '1.0.1'" -Server $SCP_Database_Servr).FuseCPdatabase) | Out-Null ; Pop-Location
 		if ($SCP_Database_Check -eq '0') { # Show a warning message to the user if DNP is detected and has not been upgraded to SCP
 			Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -890,7 +890,7 @@ function DNPversionCheck() # Check if DNP is installed, if so advise a manual up
 			Write-Host "`t *     We reccomend manually upgrading before    *" -ForegroundColor Yellow
 			Write-Host "`t *         attempting to run this script!        *" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
-			Write-Host "`t *           Please see www.solidcp.com          *" -ForegroundColor Yellow
+			Write-Host "`t *           Please see www.fusecp.com          *" -ForegroundColor Yellow
 			Write-Host "`t *              for more information             *" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *************************************************" -ForegroundColor Yellow
@@ -903,7 +903,7 @@ function DNPversionCheck() # Check if DNP is installed, if so advise a manual up
 ####################################################################################################################################################################################
 function SCPcheckIfEnterpriseServer() # Check if the script is being run on the Enterprise Server, if not then advise end user
 {
-	if (! ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -like "* Enterprise Server*"}).name -match "SolidCP|WebsitePanel|DotNetPanel") ) {
+	if (! ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -like "* Enterprise Server*"}).name -match "FuseCP|WebsitePanel|DotNetPanel") ) {
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *     The Enterprise Server component is not    *" -ForegroundColor Yellow
@@ -1049,7 +1049,7 @@ Function dPressAnyKeyToExit()                               # Function to press 
 	if ($psISE) { # Check if running Powershell ISE
 		if ($StopWatch.IsRunning) {
 			$script:StopWatch.Stop()
-			Write-Host "`n`t It took $(($StopWatch.Elapsed.TotalSeconds).ToString("#.##")) Seconds to upgrade your SolidCP server" -ForegroundColor Green
+			Write-Host "`n`t It took $(($StopWatch.Elapsed.TotalSeconds).ToString("#.##")) Seconds to upgrade your FuseCP server" -ForegroundColor Green
 		}
 		Add-Type -AssemblyName System.Windows.Forms
 		[System.Windows.Forms.MessageBox]::Show("Press any key to exit")
@@ -1057,7 +1057,7 @@ Function dPressAnyKeyToExit()                               # Function to press 
 	}else{
 		if ($StopWatch.IsRunning) {
 			$script:StopWatch.Stop()
-			Write-Host "`n`t It took $(($StopWatch.Elapsed.TotalSeconds).ToString("#.##")) Seconds to upgrade your SolidCP server" -ForegroundColor Green
+			Write-Host "`n`t It took $(($StopWatch.Elapsed.TotalSeconds).ToString("#.##")) Seconds to upgrade your FuseCP server" -ForegroundColor Green
 		}
 		Write-Host "`n`tPress any key to exit..." -ForegroundColor Yellow
 		$x = $host.ui.RawUI.ReadKey("NoEcho,IncludeKeyDown")
@@ -1127,13 +1127,13 @@ Function dSQLPScheckInstalled()                             # Function to check 
 				(New-Object System.Net.WebClient).DownloadFile("https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe", "C:\_Install Files\SQLPS\vcredist_x64.exe") | Out-Null
 				(Start-Process -FilePath 'C:\_Install Files\SQLPS\vcredist_x64.exe' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
 			}
-			# Microsoft¬Æ System CLR Types for Microsoft¬Æ SQL Server¬Æ 2012
+			# MicrosoftÆ System CLR Types for MicrosoftÆ SQL ServerÆ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/SQLSysClrTypes.msi", "C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi") | Out-Null
-			# Microsoft¬Æ SQL Server¬Æ 2012 Shared Management Objects
+			# MicrosoftÆ SQL ServerÆ 2012 Shared Management Objects
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/SharedManagementObjects.msi", "C:\_Install Files\SQLPS\2 - SharedManagementObjects.msi") | Out-Null
-			# Microsoft¬Æ Windows PowerShell Extensions for Microsoft¬Æ SQL Server¬Æ 2012
+			# MicrosoftÆ Windows PowerShell Extensions for MicrosoftÆ SQL ServerÆ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/PowerShellTools.MSI", "C:\_Install Files\SQLPS\3 - PowerShellTools.msi") | Out-Null
-			# Microsoft¬Æ OLEDB Provider for DB2 v4.0 for Microsoft¬Æ SQL Server¬Æ 2012
+			# MicrosoftÆ OLEDB Provider for DB2 v4.0 for MicrosoftÆ SQL ServerÆ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/DB2OLEDBV4.msi", "C:\_Install Files\SQLPS\4 - DB2OLEDBV4.msi") | Out-Null
 			Write-Host "`t Installing the 64bit version of SQL Server PowerShell Tools" -ForegroundColor Green
 			(Start-Process -FilePath 'C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
@@ -1147,13 +1147,13 @@ Function dSQLPScheckInstalled()                             # Function to check 
 				(New-Object System.Net.WebClient).DownloadFile("https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe", "C:\_Install Files\SQLPS\vcredist_x86.exe") | Out-Null
 				(Start-Process -FilePath 'C:\_Install Files\SQLPS\vcredist_x86.exe' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
 			}
-			# Microsoft¬Æ System CLR Types for Microsoft¬Æ SQL Server¬Æ 2012
+			# MicrosoftÆ System CLR Types for MicrosoftÆ SQL ServerÆ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/SQLSysClrTypes.msi", "C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi") | Out-Null
-			# Microsoft¬Æ SQL Server¬Æ 2012 Shared Management Objects
+			# MicrosoftÆ SQL ServerÆ 2012 Shared Management Objects
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/SharedManagementObjects.msi", "C:\_Install Files\SQLPS\2 - SharedManagementObjects.msi") | Out-Null
-			# Microsoft¬Æ Windows PowerShell Extensions for Microsoft¬Æ SQL Server¬Æ 2012
+			# MicrosoftÆ Windows PowerShell Extensions for MicrosoftÆ SQL ServerÆ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/PowerShellTools.msi", "C:\_Install Files\SQLPS\3 - PowerShellTools.msi") | Out-Null
-			# Microsoft¬Æ OLEDB Provider for DB2 v4.0 for Microsoft¬Æ SQL Server¬Æ 2012
+			# MicrosoftÆ OLEDB Provider for DB2 v4.0 for MicrosoftÆ SQL ServerÆ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/DB2OLEDBV4.msi", "C:\_Install Files\SQLPS\4 - DB2OLEDBV4.msi") | Out-Null
 			Write-Host "`t Installing the 32bit version of SQL Server PowerShell Tools" -ForegroundColor Green
 			(Start-Process -FilePath 'C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
@@ -1162,8 +1162,8 @@ Function dSQLPScheckInstalled()                             # Function to check 
 			(Start-Process -FilePath 'C:\_Install Files\SQLPS\4 - DB2OLEDBV4.msi' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
 		}
 		#(set-alias installutil $env:windir\microsoft.net\framework\v2.0.50727\installutil) | Out-Null
-		#(installutil -i ‚ÄúC:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSProvider.dll‚Äù) | Out-Null
-		#(installutil -i ‚ÄúC:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSSnapins.dll‚Äù) | Out-Null
+		#(installutil -i ìC:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSProvider.dllî) | Out-Null
+		#(installutil -i ìC:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSSnapins.dllî) | Out-Null
 		# Test to make sure the SQLPS module is now loaded, if not then load it
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -1171,7 +1171,7 @@ Function dSQLPScheckInstalled()                             # Function to check 
 		Write-Host "`t *          this script will now exit            *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *   Please re-run the script again to upgrade   *" -ForegroundColor Yellow
-		Write-Host "`t *            your SolidCP deployment            *" -ForegroundColor Yellow
+		Write-Host "`t *            your FuseCP deployment            *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *      You may need to reboot this server       *" -ForegroundColor Yellow
 		Write-Host "`t *       before running this script again        *" -ForegroundColor Yellow
@@ -1199,7 +1199,7 @@ function PowerShellVerCheck() # Check if PowerShell v3 or above is installed, if
 		Write-Host "`t *    Please note you cannot use Powershell 3    *" -ForegroundColor Yellow
 		Write-Host "`t *               with Exchange 2010              *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
-		Write-Host "`t *           Please see www.solidcp.com          *" -ForegroundColor Yellow
+		Write-Host "`t *           Please see www.fusecp.com          *" -ForegroundColor Yellow
 		Write-Host "`t *              for more information             *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *************************************************" -ForegroundColor Yellow
@@ -1222,18 +1222,18 @@ if (($Host.Version).Major -le 2) {
 	Write-Host "`t *    Please note you cannot use Powershell 3    *" -ForegroundColor Yellow
 	Write-Host "`t *               with Exchange 2010              *" -ForegroundColor Yellow
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
-	Write-Host "`t *           Please see www.solidcp.com          *" -ForegroundColor Yellow
+	Write-Host "`t *           Please see www.fusecp.com          *" -ForegroundColor Yellow
 	Write-Host "`t *              for more information             *" -ForegroundColor Yellow
 	Write-Host "`t *                                               *" -ForegroundColor Yellow
 	Write-Host "`t *************************************************" -ForegroundColor Yellow
 	dPressAnyKeyToExit
 }else{
-	# Run the SolidCP Installation Menu as long as the logged in user is member of the Local "Administrators" group of the "Domain Admins" group
+	# Run the FuseCP Installation Menu as long as the logged in user is member of the Local "Administrators" group of the "Domain Admins" group
 	if (Test-Path "$SCP_EntSvr_Dir") { # Check to make sure the script is being run on the Enterprise Server
 		if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 			if (CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local") { # Run the SOlidCP Menu if the logged in user is a Local Administrator
 				Write-Host "`n`t This machine is NOT Joined to domain and you are logged in as Local Administrator Account" -ForegroundColor Green
-				Write-Host "`t The SolidCP Upgrade menu is being loaded" -ForegroundColor Green
+				Write-Host "`t The FuseCP Upgrade menu is being loaded" -ForegroundColor Green
 				SCPupgradeMenu
 			}elseif (!(CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local")) { # The logged in user is NOT a Local Administrator
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
@@ -1265,7 +1265,7 @@ if (($Host.Version).Major -le 2) {
 		}elseif ( ($dDomainMember) -and (!($dLoggedInLocally)) ) {
 			if (CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain") { # Run the SOlidCP Menu if the logged in user is a Domain Administrator
 				Write-Host "`n`t This machine is Joined to domain and you are logged in as Domain Administrator Account" -ForegroundColor Green
-				Write-Host "`t The SolidCP Upgrade menu is being loaded" -ForegroundColor Green
+				Write-Host "`t The FuseCP Upgrade menu is being loaded" -ForegroundColor Green
 				SCPupgradeMenu
 			}elseif (!(CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain")) { # The logged in user is NOT a Domain Administrator
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
@@ -1288,11 +1288,11 @@ if (($Host.Version).Major -le 2) {
 			Write-Host "`t *     Oops, An unexpected error has occurred    *" -ForegroundColor Yellow
 			Write-Host "`t *      We apologize for this inconvenience.     *" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
-			Write-Host "`t *    Please contact SolidCP Technical Support   *" -ForegroundColor Yellow
-			Write-Host "`t *            on support@solidcp.com             *" -ForegroundColor Yellow
+			Write-Host "`t *    Please contact FuseCP Technical Support   *" -ForegroundColor Yellow
+			Write-Host "`t *            on support@fusecp.com             *" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *      Please let them know the error was       *" -ForegroundColor Yellow
-			Write-Host "`t *      with the SolidCP PowerShell Script       *" -ForegroundColor Yellow
+			Write-Host "`t *      with the FuseCP PowerShell Script       *" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *************************************************" -ForegroundColor Yellow
 			Write-Host "`n`n`t ==============  DEBUG INFORMATION  ==============" -ForegroundColor Green
@@ -1308,7 +1308,7 @@ if (($Host.Version).Major -le 2) {
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *      You MUST run this script from your       *" -ForegroundColor Yellow
-		Write-Host "`t *           SolidCP Enterprise Server           *" -ForegroundColor Yellow
+		Write-Host "`t *           FuseCP Enterprise Server           *" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
 		Write-Host "`t *    Please log on to your Enterpeise Server    *" -ForegroundColor Yellow
 		Write-Host "`t *        and run this script from there         *" -ForegroundColor Yellow

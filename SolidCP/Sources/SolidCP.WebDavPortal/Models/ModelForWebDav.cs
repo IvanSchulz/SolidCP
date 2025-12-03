@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Entities.Account;
-using SolidCP.WebDav.Core.Security.Authorization.Enums;
-using SolidCP.WebDavPortal.Models.Common;
+using System.Collections.Generic;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Entities.Account;
+using FuseCP.WebDav.Core.Security.Authorization.Enums;
+using FuseCP.WebDavPortal.Models.Common;
 
-namespace SolidCP.WebDavPortal.Models
+namespace FuseCP.WebDavPortal.Models
 {
     public class ModelForWebDav 
     {

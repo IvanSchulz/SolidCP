@@ -36,9 +36,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.Lync
+namespace FuseCP.Portal.Lync
 {
-    public partial class LyncAllocatePhoneNumbers : SolidCPModuleBase
+    public partial class LyncAllocatePhoneNumbers : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

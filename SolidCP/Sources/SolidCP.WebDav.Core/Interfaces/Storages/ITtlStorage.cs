@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Interfaces.Storages
+namespace FuseCP.WebDav.Core.Interfaces.Storages
 {
     public interface ITtlStorage : IKeyValueStorage
     {

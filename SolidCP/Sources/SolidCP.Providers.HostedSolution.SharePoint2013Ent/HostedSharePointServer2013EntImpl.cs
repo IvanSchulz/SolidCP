@@ -40,10 +40,10 @@ using System.Management.Automation.Runspaces;
 using System.Security.Principal;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.Utils;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class HostedSharePointServer2013EntImpl : MarshalByRefObject
     {

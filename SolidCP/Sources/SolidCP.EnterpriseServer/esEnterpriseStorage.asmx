@@ -1,1 +1,1 @@
-<%@ WebService Language="C#" CodeBehind="esEnterpriseStorage.asmx.cs" Class="SolidCP.EnterpriseServer.esEnterpriseStorage" %>
+<%@ WebService Language="C#" CodeBehind="esEnterpriseStorage.asmx.cs" Class="FuseCP.EnterpriseServer.esEnterpriseStorage" %>

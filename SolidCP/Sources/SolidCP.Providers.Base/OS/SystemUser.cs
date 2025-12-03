@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 	/// <summary>
 	/// Summary description for SystemUserItem.
@@ -42,7 +42,7 @@ namespace SolidCP.Providers.OS
 	{
 		private bool system;
 		private string fullName;
-		private string description = "SolidCP system account";
+		private string description = "FuseCP system account";
 		private string password;
         private string msIIS_FTPDir = "";
         private string msIIS_FTPRoot = "";

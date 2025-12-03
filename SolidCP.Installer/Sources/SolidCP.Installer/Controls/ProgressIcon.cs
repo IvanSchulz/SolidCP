@@ -39,7 +39,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace SolidCP.Installer.Controls
+namespace FuseCP.Installer.Controls
 {
 	/// <summary>
 	/// Animated Icon.

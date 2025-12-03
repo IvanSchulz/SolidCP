@@ -1,4 +1,4 @@
-// Copyright (c) 2022, SolidCP
+// Copyright (c) 2022, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -37,10 +37,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Providers.RemoteDesktopServices.Windows2025")]
+[assembly: AssemblyTitle("FuseCP.Providers.RemoteDesktopServices.Windows2025")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Providers.RemoteDesktopServices.Windows2025")]
+[assembly: AssemblyProduct("FuseCP.Providers.RemoteDesktopServices.Windows2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

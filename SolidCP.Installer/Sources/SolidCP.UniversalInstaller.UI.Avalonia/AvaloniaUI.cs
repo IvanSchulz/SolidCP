@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public partial class AvaloniaUI : UI
 	{

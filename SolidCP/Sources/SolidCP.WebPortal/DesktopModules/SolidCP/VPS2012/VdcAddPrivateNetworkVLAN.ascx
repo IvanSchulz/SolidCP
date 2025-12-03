@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcAddPrivateNetworkVLAN.ascx.cs" Inherits="SolidCP.Portal.VPS2012.VdcAddPrivateNetworkVLAN" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcAddPrivateNetworkVLAN.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VdcAddPrivateNetworkVLAN" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/AllocatePackageVLANs.ascx" TagName="AllocatePackageVLANs" TagPrefix="scp" %>

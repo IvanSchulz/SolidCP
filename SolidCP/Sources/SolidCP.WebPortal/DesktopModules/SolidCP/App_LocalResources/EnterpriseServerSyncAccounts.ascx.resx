@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -130,10 +130,10 @@
     <value>Confirm Reseller password:</value>
   </data>
   <data name="secRoles.Text" xml:space="preserve">
-    <value>SolidCP Roles Mapping</value>
+    <value>FuseCP Roles Mapping</value>
   </data>
-  <data name="lblSolidCPRole.Text" xml:space="preserve">
-    <value>SolidCP Role</value>
+  <data name="lblFuseCPRole.Text" xml:space="preserve">
+    <value>FuseCP Role</value>
   </data>
   <data name="lblDotNetNukeRole.Text" xml:space="preserve">
     <value>DotNetNuke Role</value>

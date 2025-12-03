@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,13 +6,13 @@ using System.Net;
 using System.Net.Mime;
 using System.Web;
 using System.Web.Mvc;
-using SolidCP.WebDav.Core;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDavPortal.Extensions;
-using SolidCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDav.Core;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDavPortal.Extensions;
+using FuseCP.WebDavPortal.UI.Routes;
 
-namespace SolidCP.WebDavPortal.FileOperations
+namespace FuseCP.WebDavPortal.FileOperations
 {
     public class FileOpenerManager
     {

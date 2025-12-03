@@ -36,12 +36,12 @@ using System.IO;
 using System.Collections.Generic;
 using System.Web.Services.Protocols;
 using System.Xml.XPath;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
     public class SmarterMail2 : HostingServiceProviderBase, IMailServer
     {
@@ -348,7 +348,7 @@ namespace SolidCP.Providers.Mail
 
             	string[] requestedDomainDefaults = defaultRequestedSettings.settingValues;
 
-				//domain Path is taken from SolidCP Service settings
+				//domain Path is taken from FuseCP Service settings
 
                 GenericResult1 result = null;
 
@@ -1202,7 +1202,7 @@ namespace SolidCP.Providers.Mail
         {
             try
             {
-                SolidCPMailListAdmin svcLists = new SolidCPMailListAdmin();
+                FuseCPMailListAdmin svcLists = new FuseCPMailListAdmin();
                 PrepareProxy(svcLists);
 
                 GenericResult result = svcLists.MailingListExists(AdminUsername, AdminPassword, listName);
@@ -1219,7 +1219,7 @@ namespace SolidCP.Providers.Mail
         {
             try
             {
-                SolidCPMailListAdmin svcLists = new SolidCPMailListAdmin();
+                FuseCPMailListAdmin svcLists = new FuseCPMailListAdmin();
                 PrepareProxy(svcLists);
 
                 MailingListsResult result = svcLists.GetMailingLists(AdminUsername, AdminPassword, domainName);
@@ -1247,7 +1247,7 @@ namespace SolidCP.Providers.Mail
         {
             try
             {
-                SolidCPMailListAdmin svcLists = new SolidCPMailListAdmin();
+                FuseCPMailListAdmin svcLists = new FuseCPMailListAdmin();
                 PrepareProxy(svcLists);
 
                 MailingListResult result = svcLists.GetMailingList(AdminUsername, AdminPassword, listName);
@@ -1290,7 +1290,7 @@ namespace SolidCP.Providers.Mail
         {
             try
             {
-                SolidCPMailListAdmin svcLists = new SolidCPMailListAdmin();
+                FuseCPMailListAdmin svcLists = new FuseCPMailListAdmin();
                 PrepareProxy(svcLists);
 
                 MailListPostOptions postMode = MailListPostOptions.Anyone;
@@ -1327,7 +1327,7 @@ namespace SolidCP.Providers.Mail
         {
             try
             {
-                SolidCPMailListAdmin svcLists = new SolidCPMailListAdmin();
+                FuseCPMailListAdmin svcLists = new FuseCPMailListAdmin();
                 PrepareProxy(svcLists);
 
                 MailListPostOptions postMode = MailListPostOptions.Anyone;
@@ -1368,7 +1368,7 @@ namespace SolidCP.Providers.Mail
         {
             try
             {
-                SolidCPMailListAdmin svcLists = new SolidCPMailListAdmin();
+                FuseCPMailListAdmin svcLists = new FuseCPMailListAdmin();
                 PrepareProxy(svcLists);
 
                 GenericResult result = svcLists.DeleteMailingList(AdminUsername, AdminPassword, listName);

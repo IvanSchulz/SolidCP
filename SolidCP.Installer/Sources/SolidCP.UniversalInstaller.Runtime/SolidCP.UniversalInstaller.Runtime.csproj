@@ -1,19 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>net10.0;net48</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
         <LangVersion>13</LangVersion>
-        <PackageId>SolidCP.UniversalInstaller.Runtime</PackageId>
+        <PackageId>FuseCP.UniversalInstaller.Runtime</PackageId>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     </PropertyGroup>
 
     <PropertyGroup Condition="$(TargetFramework) == 'net48'">
-        <AssemblyName>SolidCP.UniversalInstaller.Runtime.NetFX</AssemblyName>
+        <AssemblyName>FuseCP.UniversalInstaller.Runtime.NetFX</AssemblyName>
     </PropertyGroup>
     <PropertyGroup Condition="$(TargetFramework) == 'net10.0'">
-        <AssemblyName>SolidCP.UniversalInstaller.Runtime.NetCore</AssemblyName>
+        <AssemblyName>FuseCP.UniversalInstaller.Runtime.NetCore</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup Condition="$(TargetFramework) == 'net48'">
@@ -34,12 +34,12 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj" />
-      <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" />
+      <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj" />
+      <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Include="..\SolidCP.UniversalInstaller\AssemblyLoader.cs" />
+        <Compile Include="..\FuseCP.UniversalInstaller\AssemblyLoader.cs" />
     </ItemGroup>
 
     <Target Name="CopySystemManagement" AfterTargets="CopyFilesToOutputDirectory" Condition="'$(TargetFramework)' == 'net10.0'">

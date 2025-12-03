@@ -1,7 +1,7 @@
-﻿#if NETCOREAPP
+#if NETCOREAPP
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SolidCP.EnterpriseServer.Code
+namespace FuseCP.EnterpriseServer.Code
 {
 	public static class Initializer
 	{

@@ -33,9 +33,9 @@
 using System;
 using Microsoft.Web.Administration;
 using Microsoft.Web.Management.Server;
-using SolidCP.Providers.Web.Iis.Common;
+using FuseCP.Providers.Web.Iis.Common;
 
-namespace SolidCP.Providers.Web.Compression
+namespace FuseCP.Providers.Web.Compression
 {
 
     internal static class CompressionGlobals

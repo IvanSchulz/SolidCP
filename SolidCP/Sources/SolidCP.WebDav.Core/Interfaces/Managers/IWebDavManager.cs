@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using System.Web;
-using SolidCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Client;
 
-namespace SolidCP.WebDav.Core.Interfaces.Managers
+namespace FuseCP.WebDav.Core.Interfaces.Managers
 {
     public interface IWebDavManager
     {

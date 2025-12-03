@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
-using SCP = SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using SCP = FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class OrganizationUserResetPassword : SolidCPModuleBase
+    public partial class OrganizationUserResetPassword : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

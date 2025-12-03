@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Text;
 using System.Reflection;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
     public class GlobalKnownTypes
     {

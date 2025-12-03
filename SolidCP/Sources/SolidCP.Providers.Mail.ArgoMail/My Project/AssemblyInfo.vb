@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -8,9 +8,9 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("SolidCP.Providers.Mail.ArgoMail")> 
+<Assembly: AssemblyTitle("FuseCP.Providers.Mail.ArgoMail")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyProduct("SolidCP.Providers.Mail.ArgoMail")>  
+<Assembly: AssemblyProduct("FuseCP.Providers.Mail.ArgoMail")>  
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

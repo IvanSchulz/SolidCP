@@ -36,13 +36,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VdcImportServer : SolidCPModuleBase
+    public partial class VdcImportServer : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

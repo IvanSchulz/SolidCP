@@ -39,11 +39,11 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
-using SolidCP.Setup.Actions;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
+using FuseCP.Setup.Actions;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class RollBackPage : BannerWizardPage
 	{

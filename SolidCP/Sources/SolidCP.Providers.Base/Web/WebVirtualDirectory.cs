@@ -36,7 +36,7 @@ using System.Text;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	public enum WebServerType { Iis, Apache, Nginx };
 

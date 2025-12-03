@@ -36,10 +36,10 @@ using System.Xml;
 using System.Configuration;
 using System.Collections;
 using System.Text;
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 using System.Linq;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     public class WebDavPortal : BaseSetup
     {

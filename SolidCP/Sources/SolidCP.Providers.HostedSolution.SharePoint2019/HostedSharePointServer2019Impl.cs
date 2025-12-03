@@ -1,4 +1,4 @@
-// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -36,10 +36,10 @@ using System.Management.Automation.Runspaces;
 using System.Security.Principal;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
-using SolidCP.Providers.SharePoint;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.SharePoint;
+using FuseCP.Providers.Utils;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class HostedSharePointServer2019Impl : MarshalByRefObject
     {

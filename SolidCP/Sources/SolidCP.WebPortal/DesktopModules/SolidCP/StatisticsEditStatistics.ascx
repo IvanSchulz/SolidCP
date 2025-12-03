@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StatisticsEditStatistics.ascx.cs" Inherits="SolidCP.Portal.StatisticsEditStatistics" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StatisticsEditStatistics.ascx.cs" Inherits="FuseCP.Portal.StatisticsEditStatistics" %>
 <div class="panel-body form-horizontal">
     <div class="row" id="newRow" runat="server">
         <div class="form-group col-sm-8">

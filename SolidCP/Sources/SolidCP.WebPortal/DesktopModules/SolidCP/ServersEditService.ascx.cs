@@ -31,7 +31,7 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Nito.AsyncEx;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -48,9 +48,9 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class ServersEditService : SolidCPModuleBase
+	public partial class ServersEditService : FuseCPModuleBase
 	{
 		int ServiceId;
 		Task<ServiceInfo> service = null;

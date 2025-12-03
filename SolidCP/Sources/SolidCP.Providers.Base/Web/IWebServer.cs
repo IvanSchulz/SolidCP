@@ -32,11 +32,11 @@
 
 using System;
 using System.Collections.Generic;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	/// <summary>
 	/// Summary description for IWebServer.

@@ -1,4 +1,4 @@
-﻿CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
     "MigrationId" character varying(150) NOT NULL,
     "ProductVersion" character varying(32) NOT NULL,
     CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
@@ -2289,37 +2289,37 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (1, 'SolidCP.EnterpriseServer.OperatingSystemController', 'OS', 1, TRUE);
+    VALUES (1, 'FuseCP.EnterpriseServer.OperatingSystemController', 'OS', 1, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (2, 'SolidCP.EnterpriseServer.WebServerController', 'Web', 2, TRUE);
+    VALUES (2, 'FuseCP.EnterpriseServer.WebServerController', 'Web', 2, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (3, 'SolidCP.EnterpriseServer.FtpServerController', 'FTP', 3, TRUE);
+    VALUES (3, 'FuseCP.EnterpriseServer.FtpServerController', 'FTP', 3, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (4, 'SolidCP.EnterpriseServer.MailServerController', 'Mail', 4, TRUE);
+    VALUES (4, 'FuseCP.EnterpriseServer.MailServerController', 'Mail', 4, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (5, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2000', 7, TRUE);
+    VALUES (5, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2000', 7, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (6, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL4', 11, TRUE);
+    VALUES (6, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL4', 11, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (7, 'SolidCP.EnterpriseServer.DnsServerController', 'DNS', 17, TRUE);
+    VALUES (7, 'FuseCP.EnterpriseServer.DnsServerController', 'DNS', 17, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (8, 'SolidCP.EnterpriseServer.StatisticsServerController', 'Statistics', 18, TRUE);
+    VALUES (8, 'FuseCP.EnterpriseServer.StatisticsServerController', 'Statistics', 18, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (10, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2005', 8, TRUE);
+    VALUES (10, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2005', 8, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (11, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL5', 12, TRUE);
+    VALUES (11, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL5', 12, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (12, NULL, 'Exchange', 5, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (13, NULL, 'Hosted Organizations', 6, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (20, 'SolidCP.EnterpriseServer.HostedSharePointServerController', 'Sharepoint Foundation Server', 14, TRUE);
+    VALUES (20, 'FuseCP.EnterpriseServer.HostedSharePointServerController', 'Sharepoint Foundation Server', 14, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (21, NULL, 'Hosted CRM', 16, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (22, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2008', 9, TRUE);
+    VALUES (22, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2008', 9, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (23, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2012', 10, TRUE);
+    VALUES (23, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2012', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (24, NULL, 'Hosted CRM2013', 16, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2335,37 +2335,37 @@ BEGIN
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (41, NULL, 'Lync', 24, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (44, 'SolidCP.EnterpriseServer.EnterpriseStorageController', 'EnterpriseStorage', 26, TRUE);
+    VALUES (44, 'FuseCP.EnterpriseServer.EnterpriseStorageController', 'EnterpriseStorage', 26, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (45, NULL, 'RDS', 27, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (46, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2014', 10, TRUE);
+    VALUES (46, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2014', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (47, NULL, 'Service Levels', 2, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (49, 'SolidCP.EnterpriseServer.StorageSpacesController', 'StorageSpaceServices', 26, TRUE);
+    VALUES (49, 'FuseCP.EnterpriseServer.StorageSpacesController', 'StorageSpaceServices', 26, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (50, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MariaDB', 11, TRUE);
+    VALUES (50, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MariaDB', 11, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (52, NULL, 'SfB', 26, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (61, NULL, 'MailFilters', 5, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (71, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2016', 10, TRUE);
+    VALUES (71, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2016', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (72, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2017', 10, TRUE);
+    VALUES (72, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2017', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (73, 'SolidCP.EnterpriseServer.HostedSharePointServerEntController', 'Sharepoint Enterprise Server', 15, TRUE);
+    VALUES (73, 'FuseCP.EnterpriseServer.HostedSharePointServerEntController', 'Sharepoint Enterprise Server', 15, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (74, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2019', 10, TRUE);
+    VALUES (74, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2019', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (75, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2022', 10, TRUE);
+    VALUES (75, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2022', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (76, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2025', 10, TRUE);
+    VALUES (76, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2025', 10, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (90, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL8', 12, TRUE);
+    VALUES (90, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL8', 12, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-    VALUES (91, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL9', 12, TRUE);
+    VALUES (91, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL9', 12, TRUE);
     INSERT INTO public."ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
     VALUES (167, NULL, 'Proxmox', 20, TRUE);
     END IF;
@@ -2375,53 +2375,53 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_AUDIT_LOG_REPORT', 3, 'SolidCP.EnterpriseServer.AuditLogReportTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_AUDIT_LOG_REPORT', 3, 'FuseCP.EnterpriseServer.AuditLogReportTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_BACKUP', 1, 'SolidCP.EnterpriseServer.BackupTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_BACKUP', 1, 'FuseCP.EnterpriseServer.BackupTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_BACKUP_DATABASE', 3, 'SolidCP.EnterpriseServer.BackupDatabaseTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_BACKUP_DATABASE', 3, 'FuseCP.EnterpriseServer.BackupDatabaseTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', 2, 'SolidCP.EnterpriseServer.CalculateExchangeDiskspaceTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', 2, 'FuseCP.EnterpriseServer.CalculateExchangeDiskspaceTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', 1, 'SolidCP.EnterpriseServer.CalculatePackagesBandwidthTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', 1, 'FuseCP.EnterpriseServer.CalculatePackagesBandwidthTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', 1, 'SolidCP.EnterpriseServer.CalculatePackagesDiskspaceTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', 1, 'FuseCP.EnterpriseServer.CalculatePackagesDiskspaceTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_CHECK_WEBSITE', 3, 'SolidCP.EnterpriseServer.CheckWebSiteTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_CHECK_WEBSITE', 3, 'FuseCP.EnterpriseServer.CheckWebSiteTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_CHECK_WEBSITES_SSL', 3, 'SolidCP.EnterpriseServer.CheckWebsitesSslTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_CHECK_WEBSITES_SSL', 3, 'FuseCP.EnterpriseServer.CheckWebsitesSslTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS', 3, 'SolidCP.EnterpriseServer.DeleteExchangeAccountsTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS', 3, 'FuseCP.EnterpriseServer.DeleteExchangeAccountsTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_DOMAIN_EXPIRATION', 3, 'SolidCP.EnterpriseServer.DomainExpirationTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_DOMAIN_EXPIRATION', 3, 'FuseCP.EnterpriseServer.DomainExpirationTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_DOMAIN_LOOKUP', 1, 'SolidCP.EnterpriseServer.DomainLookupViewTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_DOMAIN_LOOKUP', 1, 'FuseCP.EnterpriseServer.DomainLookupViewTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_FTP_FILES', 3, 'SolidCP.EnterpriseServer.FTPFilesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_FTP_FILES', 3, 'FuseCP.EnterpriseServer.FTPFilesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_GENERATE_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_GENERATE_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', 2, 'SolidCP.EnterpriseServer.HostedSolutionReportTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', 2, 'FuseCP.EnterpriseServer.HostedSolutionReportTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', 2, 'SolidCP.EnterpriseServer.NotifyOverusedDatabasesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', 2, 'FuseCP.EnterpriseServer.NotifyOverusedDatabasesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_RUN_PAYMENT_QUEUE', 0, 'SolidCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_RUN_PAYMENT_QUEUE', 0, 'FuseCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_RUN_SYSTEM_COMMAND', 1, 'SolidCP.EnterpriseServer.RunSystemCommandTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_RUN_SYSTEM_COMMAND', 1, 'FuseCP.EnterpriseServer.RunSystemCommandTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_SEND_MAIL', 3, 'SolidCP.EnterpriseServer.SendMailNotificationTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_SEND_MAIL', 3, 'FuseCP.EnterpriseServer.SendMailNotificationTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_SUSPEND_PACKAGES', 2, 'SolidCP.EnterpriseServer.SuspendOverusedPackagesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_SUSPEND_PACKAGES', 2, 'FuseCP.EnterpriseServer.SuspendOverusedPackagesTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', 1, 'SolidCP.EnterpriseServer.UserPasswordExpirationNotificationTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', 1, 'FuseCP.EnterpriseServer.UserPasswordExpirationNotificationTask, FuseCP.EnterpriseServer.Code');
     INSERT INTO public."ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-    VALUES ('SCHEDULE_TASK_ZIP_FILES', 3, 'SolidCP.EnterpriseServer.ZipFilesTask, SolidCP.EnterpriseServer.Code');
+    VALUES ('SCHEDULE_TASK_ZIP_FILES', 3, 'FuseCP.EnterpriseServer.ZipFilesTask, FuseCP.EnterpriseServer.Code');
     END IF;
 END $EF$;
 
@@ -2433,7 +2433,7 @@ BEGIN
     INSERT INTO public."SystemSettings" ("PropertyName", "SettingsName", "PropertyValue")
     VALUES ('CanPeerChangeMfa', 'AuthenticationSettings', 'True');
     INSERT INTO public."SystemSettings" ("PropertyName", "SettingsName", "PropertyValue")
-    VALUES ('MfaTokenAppDisplayName', 'AuthenticationSettings', 'SolidCP');
+    VALUES ('MfaTokenAppDisplayName', 'AuthenticationSettings', 'FuseCP');
     INSERT INTO public."SystemSettings" ("PropertyName", "SettingsName", "PropertyValue")
     VALUES ('BackupsPath', 'BackupSettings', 'c:\HostingBackups');
     INSERT INTO public."SystemSettings" ("PropertyName", "SettingsName", "PropertyValue")
@@ -2497,7 +2497,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."Themes" ("ThemeID", "DisplayName", "DisplayOrder", "Enabled", "LTRName", "RTLName")
-    VALUES (1, 'SolidCP v1', 1, 1, 'Default', 'Default');
+    VALUES (1, 'FuseCP v1', 1, 1, 'Default', 'Default');
     END IF;
 END $EF$;
 
@@ -2547,291 +2547,291 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1, NULL, 'Windows Server 2003', 'Windows2003', 1, 'Windows2003', 'SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003');
+    VALUES (1, NULL, 'Windows Server 2003', 'Windows2003', 1, 'Windows2003', 'FuseCP.Providers.OS.Windows2003, FuseCP.Providers.OS.Windows2003');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (2, NULL, 'Internet Information Services 6.0', 'IIS60', 2, 'IIS60', 'SolidCP.Providers.Web.IIs60, SolidCP.Providers.Web.IIs60');
+    VALUES (2, NULL, 'Internet Information Services 6.0', 'IIS60', 2, 'IIS60', 'FuseCP.Providers.Web.IIs60, FuseCP.Providers.Web.IIs60');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (3, NULL, 'Microsoft FTP Server 6.0', 'MSFTP60', 3, 'MSFTP60', 'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs60');
+    VALUES (3, NULL, 'Microsoft FTP Server 6.0', 'MSFTP60', 3, 'MSFTP60', 'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs60');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (4, NULL, 'MailEnable Server 1.x - 7.x', 'MailEnable', 4, 'MailEnable', 'SolidCP.Providers.Mail.MailEnable, SolidCP.Providers.Mail.MailEnable');
+    VALUES (4, NULL, 'MailEnable Server 1.x - 7.x', 'MailEnable', 4, 'MailEnable', 'FuseCP.Providers.Mail.MailEnable, FuseCP.Providers.Mail.MailEnable');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (5, NULL, 'Microsoft SQL Server 2000', 'MSSQL', 5, 'MSSQL', 'SolidCP.Providers.Database.MsSqlServer, SolidCP.Providers.Database.SqlServer');
+    VALUES (5, NULL, 'Microsoft SQL Server 2000', 'MSSQL', 5, 'MSSQL', 'FuseCP.Providers.Database.MsSqlServer, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (6, NULL, 'MySQL Server 4.x', 'MySQL', 6, 'MySQL', 'SolidCP.Providers.Database.MySqlServer, SolidCP.Providers.Database.MySQL');
+    VALUES (6, NULL, 'MySQL Server 4.x', 'MySQL', 6, 'MySQL', 'FuseCP.Providers.Database.MySqlServer, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (7, NULL, 'Microsoft DNS Server', 'MSDNS', 7, 'MSDNS', 'SolidCP.Providers.DNS.MsDNS, SolidCP.Providers.DNS.MsDNS');
+    VALUES (7, NULL, 'Microsoft DNS Server', 'MSDNS', 7, 'MSDNS', 'FuseCP.Providers.DNS.MsDNS, FuseCP.Providers.DNS.MsDNS');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (8, NULL, 'AWStats Statistics Service', 'AWStats', 8, 'AWStats', 'SolidCP.Providers.Statistics.AWStats, SolidCP.Providers.Statistics.AWStats');
+    VALUES (8, NULL, 'AWStats Statistics Service', 'AWStats', 8, 'AWStats', 'FuseCP.Providers.Statistics.AWStats, FuseCP.Providers.Statistics.AWStats');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (9, NULL, 'SimpleDNS Plus 4.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS, SolidCP.Providers.DNS.SimpleDNS');
+    VALUES (9, NULL, 'SimpleDNS Plus 4.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS, FuseCP.Providers.DNS.SimpleDNS');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (10, NULL, 'SmarterStats 3.x', 'SmarterStats', 8, 'SmarterStats', 'SolidCP.Providers.Statistics.SmarterStats, SolidCP.Providers.Statistics.SmarterStats');
+    VALUES (10, NULL, 'SmarterStats 3.x', 'SmarterStats', 8, 'SmarterStats', 'FuseCP.Providers.Statistics.SmarterStats, FuseCP.Providers.Statistics.SmarterStats');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (11, NULL, 'SmarterMail 2.x', 'SmarterMail', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail2, SolidCP.Providers.Mail.SmarterMail2');
+    VALUES (11, NULL, 'SmarterMail 2.x', 'SmarterMail', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail2, FuseCP.Providers.Mail.SmarterMail2');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (12, NULL, 'Gene6 FTP Server 3.x', 'Gene6FTP', 3, 'Gene6FTP', 'SolidCP.Providers.FTP.Gene6, SolidCP.Providers.FTP.Gene6');
+    VALUES (12, NULL, 'Gene6 FTP Server 3.x', 'Gene6FTP', 3, 'Gene6FTP', 'FuseCP.Providers.FTP.Gene6, FuseCP.Providers.FTP.Gene6');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (13, NULL, 'Merak Mail Server 8.0.3 - 9.2.x', 'Merak', 4, 'Merak', 'SolidCP.Providers.Mail.Merak, SolidCP.Providers.Mail.Merak');
+    VALUES (13, NULL, 'Merak Mail Server 8.0.3 - 9.2.x', 'Merak', 4, 'Merak', 'FuseCP.Providers.Mail.Merak, FuseCP.Providers.Mail.Merak');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (14, NULL, 'SmarterMail 3.x - 4.x', 'SmarterMail', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail3, SolidCP.Providers.Mail.SmarterMail3');
+    VALUES (14, NULL, 'SmarterMail 3.x - 4.x', 'SmarterMail', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail3, FuseCP.Providers.Mail.SmarterMail3');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (16, NULL, 'Microsoft SQL Server 2005', 'MSSQL', 10, 'MSSQL', 'SolidCP.Providers.Database.MsSqlServer2005, SolidCP.Providers.Database.SqlServer');
+    VALUES (16, NULL, 'Microsoft SQL Server 2005', 'MSSQL', 10, 'MSSQL', 'FuseCP.Providers.Database.MsSqlServer2005, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (17, NULL, 'MySQL Server 5.0', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer50, SolidCP.Providers.Database.MySQL');
+    VALUES (17, NULL, 'MySQL Server 5.0', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer50, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (18, NULL, 'MDaemon 9.x - 11.x', 'MDaemon', 4, 'MDaemon', 'SolidCP.Providers.Mail.MDaemon, SolidCP.Providers.Mail.MDaemon');
+    VALUES (18, NULL, 'MDaemon 9.x - 11.x', 'MDaemon', 4, 'MDaemon', 'FuseCP.Providers.Mail.MDaemon, FuseCP.Providers.Mail.MDaemon');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (19, TRUE, 'ArGoSoft Mail Server 1.x', 'ArgoMail', 4, 'ArgoMail', 'SolidCP.Providers.Mail.ArgoMail, SolidCP.Providers.Mail.ArgoMail');
+    VALUES (19, TRUE, 'ArGoSoft Mail Server 1.x', 'ArgoMail', 4, 'ArgoMail', 'FuseCP.Providers.Mail.ArgoMail, FuseCP.Providers.Mail.ArgoMail');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (20, NULL, 'hMailServer 4.2', 'hMailServer', 4, 'hMailServer', 'SolidCP.Providers.Mail.hMailServer, SolidCP.Providers.Mail.hMailServer');
+    VALUES (20, NULL, 'hMailServer 4.2', 'hMailServer', 4, 'hMailServer', 'FuseCP.Providers.Mail.hMailServer, FuseCP.Providers.Mail.hMailServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (21, NULL, 'Ability Mail Server 2.x', 'AbilityMailServer', 4, 'AbilityMailServer', 'SolidCP.Providers.Mail.AbilityMailServer, SolidCP.Providers.Mail.AbilityMailServer');
+    VALUES (21, NULL, 'Ability Mail Server 2.x', 'AbilityMailServer', 4, 'AbilityMailServer', 'FuseCP.Providers.Mail.AbilityMailServer, FuseCP.Providers.Mail.AbilityMailServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (22, NULL, 'hMailServer 4.3', 'hMailServer43', 4, 'hMailServer43', 'SolidCP.Providers.Mail.hMailServer43, SolidCP.Providers.Mail.hMailServer43');
+    VALUES (22, NULL, 'hMailServer 4.3', 'hMailServer43', 4, 'hMailServer43', 'FuseCP.Providers.Mail.hMailServer43, FuseCP.Providers.Mail.hMailServer43');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (24, NULL, 'ISC BIND 8.x - 9.x', 'Bind', 7, 'Bind', 'SolidCP.Providers.DNS.IscBind, SolidCP.Providers.DNS.Bind');
+    VALUES (24, NULL, 'ISC BIND 8.x - 9.x', 'Bind', 7, 'Bind', 'FuseCP.Providers.DNS.IscBind, FuseCP.Providers.DNS.Bind');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (25, NULL, 'Serv-U FTP 6.x', 'ServU', 3, 'ServU', 'SolidCP.Providers.FTP.ServU, SolidCP.Providers.FTP.ServU');
+    VALUES (25, NULL, 'Serv-U FTP 6.x', 'ServU', 3, 'ServU', 'FuseCP.Providers.FTP.ServU, FuseCP.Providers.FTP.ServU');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (26, NULL, 'FileZilla FTP Server 0.9', 'FileZilla', 3, 'FileZilla', 'SolidCP.Providers.FTP.FileZilla, SolidCP.Providers.FTP.FileZilla');
+    VALUES (26, NULL, 'FileZilla FTP Server 0.9', 'FileZilla', 3, 'FileZilla', 'FuseCP.Providers.FTP.FileZilla, FuseCP.Providers.FTP.FileZilla');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (27, NULL, 'Hosted Microsoft Exchange Server 2007', 'Exchange', 12, 'Exchange2007', 'SolidCP.Providers.HostedSolution.Exchange2007, SolidCP.Providers.HostedSolution');
+    VALUES (27, NULL, 'Hosted Microsoft Exchange Server 2007', 'Exchange', 12, 'Exchange2007', 'FuseCP.Providers.HostedSolution.Exchange2007, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (28, NULL, 'SimpleDNS Plus 5.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS5, SolidCP.Providers.DNS.SimpleDNS50');
+    VALUES (28, NULL, 'SimpleDNS Plus 5.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS5, FuseCP.Providers.DNS.SimpleDNS50');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (29, NULL, 'SmarterMail 5.x', 'SmarterMail50', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail5, SolidCP.Providers.Mail.SmarterMail5');
+    VALUES (29, NULL, 'SmarterMail 5.x', 'SmarterMail50', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail5, FuseCP.Providers.Mail.SmarterMail5');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (30, NULL, 'MySQL Server 5.1', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer51, SolidCP.Providers.Database.MySQL');
+    VALUES (30, NULL, 'MySQL Server 5.1', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer51, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (31, NULL, 'SmarterStats 4.x', 'SmarterStats', 8, 'SmarterStats', 'SolidCP.Providers.Statistics.SmarterStats4, SolidCP.Providers.Statistics.SmarterStats');
+    VALUES (31, NULL, 'SmarterStats 4.x', 'SmarterStats', 8, 'SmarterStats', 'FuseCP.Providers.Statistics.SmarterStats4, FuseCP.Providers.Statistics.SmarterStats');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (32, NULL, 'Hosted Microsoft Exchange Server 2010', 'Exchange', 12, 'Exchange2010', 'SolidCP.Providers.HostedSolution.Exchange2010, SolidCP.Providers.HostedSolution');
+    VALUES (32, NULL, 'Hosted Microsoft Exchange Server 2010', 'Exchange', 12, 'Exchange2010', 'FuseCP.Providers.HostedSolution.Exchange2010, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (55, TRUE, 'Nettica DNS', 'NetticaDNS', 7, 'NetticaDNS', 'SolidCP.Providers.DNS.Nettica, SolidCP.Providers.DNS.Nettica');
+    VALUES (55, TRUE, 'Nettica DNS', 'NetticaDNS', 7, 'NetticaDNS', 'FuseCP.Providers.DNS.Nettica, FuseCP.Providers.DNS.Nettica');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (56, TRUE, 'PowerDNS', 'PowerDNS', 7, 'PowerDNS', 'SolidCP.Providers.DNS.PowerDNS, SolidCP.Providers.DNS.PowerDNS');
+    VALUES (56, TRUE, 'PowerDNS', 'PowerDNS', 7, 'PowerDNS', 'FuseCP.Providers.DNS.PowerDNS, FuseCP.Providers.DNS.PowerDNS');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (60, NULL, 'SmarterMail 6.x', 'SmarterMail60', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail6, SolidCP.Providers.Mail.SmarterMail6');
+    VALUES (60, NULL, 'SmarterMail 6.x', 'SmarterMail60', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail6, FuseCP.Providers.Mail.SmarterMail6');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (61, NULL, 'Merak Mail Server 10.x', 'Merak', 4, 'Merak', 'SolidCP.Providers.Mail.Merak10, SolidCP.Providers.Mail.Merak10');
+    VALUES (61, NULL, 'Merak Mail Server 10.x', 'Merak', 4, 'Merak', 'FuseCP.Providers.Mail.Merak10, FuseCP.Providers.Mail.Merak10');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (62, NULL, 'SmarterStats 5.x +', 'SmarterStats', 8, 'SmarterStats', 'SolidCP.Providers.Statistics.SmarterStats5, SolidCP.Providers.Statistics.SmarterStats');
+    VALUES (62, NULL, 'SmarterStats 5.x +', 'SmarterStats', 8, 'SmarterStats', 'FuseCP.Providers.Statistics.SmarterStats5, FuseCP.Providers.Statistics.SmarterStats');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (63, NULL, 'hMailServer 5.x', 'hMailServer5', 4, 'hMailServer5', 'SolidCP.Providers.Mail.hMailServer5, SolidCP.Providers.Mail.hMailServer5');
+    VALUES (63, NULL, 'hMailServer 5.x', 'hMailServer5', 4, 'hMailServer5', 'FuseCP.Providers.Mail.hMailServer5, FuseCP.Providers.Mail.hMailServer5');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (64, NULL, 'SmarterMail 7.x - 8.x', 'SmarterMail60', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail7, SolidCP.Providers.Mail.SmarterMail7');
+    VALUES (64, NULL, 'SmarterMail 7.x - 8.x', 'SmarterMail60', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail7, FuseCP.Providers.Mail.SmarterMail7');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (65, NULL, 'SmarterMail 9.x', 'SmarterMail60', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail9, SolidCP.Providers.Mail.SmarterMail9');
+    VALUES (65, NULL, 'SmarterMail 9.x', 'SmarterMail60', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail9, FuseCP.Providers.Mail.SmarterMail9');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (66, NULL, 'SmarterMail 10.x +', 'SmarterMail100', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail10, SolidCP.Providers.Mail.SmarterMail10');
+    VALUES (66, NULL, 'SmarterMail 10.x +', 'SmarterMail100', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail10, FuseCP.Providers.Mail.SmarterMail10');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (67, NULL, 'SmarterMail 100.x +', 'SmarterMail100x', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail100, SolidCP.Providers.Mail.SmarterMail100');
+    VALUES (67, NULL, 'SmarterMail 100.x +', 'SmarterMail100x', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail100, FuseCP.Providers.Mail.SmarterMail100');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (90, NULL, 'Hosted Microsoft Exchange Server 2010 SP2', 'Exchange', 12, 'Exchange2010SP2', 'SolidCP.Providers.HostedSolution.Exchange2010SP2, SolidCP.Providers.HostedSolution');
+    VALUES (90, NULL, 'Hosted Microsoft Exchange Server 2010 SP2', 'Exchange', 12, 'Exchange2010SP2', 'FuseCP.Providers.HostedSolution.Exchange2010SP2, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (91, NULL, 'Hosted Microsoft Exchange Server 2013', 'Exchange', 12, 'Exchange2013', 'SolidCP.Providers.HostedSolution.Exchange2013, SolidCP.Providers.HostedSolution.Exchange2013');
+    VALUES (91, NULL, 'Hosted Microsoft Exchange Server 2013', 'Exchange', 12, 'Exchange2013', 'FuseCP.Providers.HostedSolution.Exchange2013, FuseCP.Providers.HostedSolution.Exchange2013');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (92, NULL, 'Hosted Microsoft Exchange Server 2016', 'Exchange', 12, 'Exchange2016', 'SolidCP.Providers.HostedSolution.Exchange2016, SolidCP.Providers.HostedSolution.Exchange2016');
+    VALUES (92, NULL, 'Hosted Microsoft Exchange Server 2016', 'Exchange', 12, 'Exchange2016', 'FuseCP.Providers.HostedSolution.Exchange2016, FuseCP.Providers.HostedSolution.Exchange2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (93, NULL, 'Hosted Microsoft Exchange Server 2019', 'Exchange', 12, 'Exchange2016', 'SolidCP.Providers.HostedSolution.Exchange2019, SolidCP.Providers.HostedSolution.Exchange2019');
+    VALUES (93, NULL, 'Hosted Microsoft Exchange Server 2019', 'Exchange', 12, 'Exchange2016', 'FuseCP.Providers.HostedSolution.Exchange2019, FuseCP.Providers.HostedSolution.Exchange2019');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (100, NULL, 'Windows Server 2008', 'Windows2008', 1, 'Windows2008', 'SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008');
+    VALUES (100, NULL, 'Windows Server 2008', 'Windows2008', 1, 'Windows2008', 'FuseCP.Providers.OS.Windows2008, FuseCP.Providers.OS.Windows2008');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (101, NULL, 'Internet Information Services 7.0', 'IIS70', 2, 'IIS70', 'SolidCP.Providers.Web.IIs70, SolidCP.Providers.Web.IIs70');
+    VALUES (101, NULL, 'Internet Information Services 7.0', 'IIS70', 2, 'IIS70', 'FuseCP.Providers.Web.IIs70, FuseCP.Providers.Web.IIs70');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (102, NULL, 'Microsoft FTP Server 7.0', 'MSFTP70', 3, 'MSFTP70', 'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs70');
+    VALUES (102, NULL, 'Microsoft FTP Server 7.0', 'MSFTP70', 3, 'MSFTP70', 'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs70');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (103, NULL, 'Hosted Organizations', 'Organizations', 13, 'Organizations', 'SolidCP.Providers.HostedSolution.OrganizationProvider, SolidCP.Providers.HostedSolution');
+    VALUES (103, NULL, 'Hosted Organizations', 'Organizations', 13, 'Organizations', 'FuseCP.Providers.HostedSolution.OrganizationProvider, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (104, NULL, 'Windows Server 2012', 'Windows2012', 1, 'Windows2012', 'SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012');
+    VALUES (104, NULL, 'Windows Server 2012', 'Windows2012', 1, 'Windows2012', 'FuseCP.Providers.OS.Windows2012, FuseCP.Providers.OS.Windows2012');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (105, NULL, 'Internet Information Services 8.0', 'IIS70', 2, 'IIS80', 'SolidCP.Providers.Web.IIs80, SolidCP.Providers.Web.IIs80');
+    VALUES (105, NULL, 'Internet Information Services 8.0', 'IIS70', 2, 'IIS80', 'FuseCP.Providers.Web.IIs80, FuseCP.Providers.Web.IIs80');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (106, NULL, 'Microsoft FTP Server 8.0', 'MSFTP70', 3, 'MSFTP80', 'SolidCP.Providers.FTP.MsFTP80, SolidCP.Providers.FTP.IIs80');
+    VALUES (106, NULL, 'Microsoft FTP Server 8.0', 'MSFTP70', 3, 'MSFTP80', 'FuseCP.Providers.FTP.MsFTP80, FuseCP.Providers.FTP.IIs80');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (110, NULL, 'Cerberus FTP Server 6.x', 'CerberusFTP6', 3, 'CerberusFTP6', 'SolidCP.Providers.FTP.CerberusFTP6, SolidCP.Providers.FTP.CerberusFTP6');
+    VALUES (110, NULL, 'Cerberus FTP Server 6.x', 'CerberusFTP6', 3, 'CerberusFTP6', 'FuseCP.Providers.FTP.CerberusFTP6, FuseCP.Providers.FTP.CerberusFTP6');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (111, NULL, 'Windows Server 2016', 'Windows2008', 1, 'Windows2016', 'SolidCP.Providers.OS.Windows2016, SolidCP.Providers.OS.Windows2016');
+    VALUES (111, NULL, 'Windows Server 2016', 'Windows2008', 1, 'Windows2016', 'FuseCP.Providers.OS.Windows2016, FuseCP.Providers.OS.Windows2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (112, NULL, 'Internet Information Services 10.0', 'IIS70', 2, 'IIS100', 'SolidCP.Providers.Web.IIs100, SolidCP.Providers.Web.IIs100');
+    VALUES (112, NULL, 'Internet Information Services 10.0', 'IIS70', 2, 'IIS100', 'FuseCP.Providers.Web.IIs100, FuseCP.Providers.Web.IIs100');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (113, NULL, 'Microsoft FTP Server 10.0', 'MSFTP70', 3, 'MSFTP100', 'SolidCP.Providers.FTP.MsFTP100, SolidCP.Providers.FTP.IIs100');
+    VALUES (113, NULL, 'Microsoft FTP Server 10.0', 'MSFTP70', 3, 'MSFTP100', 'FuseCP.Providers.FTP.MsFTP100, FuseCP.Providers.FTP.IIs100');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (160, NULL, 'IceWarp Mail Server', 'IceWarp', 4, 'IceWarp', 'SolidCP.Providers.Mail.IceWarp, SolidCP.Providers.Mail.IceWarp');
+    VALUES (160, NULL, 'IceWarp Mail Server', 'IceWarp', 4, 'IceWarp', 'FuseCP.Providers.Mail.IceWarp, FuseCP.Providers.Mail.IceWarp');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (200, NULL, 'Hosted Windows SharePoint Services 3.0', 'HostedSharePoint30', 20, 'HostedSharePoint30', 'SolidCP.Providers.HostedSolution.HostedSharePointServer, SolidCP.Providers.HostedSolution');
+    VALUES (200, NULL, 'Hosted Windows SharePoint Services 3.0', 'HostedSharePoint30', 20, 'HostedSharePoint30', 'FuseCP.Providers.HostedSolution.HostedSharePointServer, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (201, NULL, 'Hosted MS CRM 4.0', 'CRM', 21, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider, SolidCP.Providers.HostedSolution');
+    VALUES (201, NULL, 'Hosted MS CRM 4.0', 'CRM', 21, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (202, NULL, 'Microsoft SQL Server 2008', 'MSSQL', 22, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2008, SolidCP.Providers.Database.SqlServer');
+    VALUES (202, NULL, 'Microsoft SQL Server 2008', 'MSSQL', 22, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2008, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (203, TRUE, 'BlackBerry 4.1', 'BlackBerry', 31, 'BlackBerry 4.1', 'SolidCP.Providers.HostedSolution.BlackBerryProvider, SolidCP.Providers.HostedSolution');
+    VALUES (203, TRUE, 'BlackBerry 4.1', 'BlackBerry', 31, 'BlackBerry 4.1', 'FuseCP.Providers.HostedSolution.BlackBerryProvider, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (204, TRUE, 'BlackBerry 5.0', 'BlackBerry5', 31, 'BlackBerry 5.0', 'SolidCP.Providers.HostedSolution.BlackBerry5Provider, SolidCP.Providers.HostedSolution');
+    VALUES (204, TRUE, 'BlackBerry 5.0', 'BlackBerry5', 31, 'BlackBerry 5.0', 'FuseCP.Providers.HostedSolution.BlackBerry5Provider, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (205, TRUE, 'Office Communications Server 2007 R2', 'OCS', 32, 'OCS', 'SolidCP.Providers.HostedSolution.OCS2007R2, SolidCP.Providers.HostedSolution');
+    VALUES (205, TRUE, 'Office Communications Server 2007 R2', 'OCS', 32, 'OCS', 'FuseCP.Providers.HostedSolution.OCS2007R2, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (206, TRUE, 'OCS Edge server', 'OCS_Edge', 32, 'OCSEdge', 'SolidCP.Providers.HostedSolution.OCSEdge2007R2, SolidCP.Providers.HostedSolution');
+    VALUES (206, TRUE, 'OCS Edge server', 'OCS_Edge', 32, 'OCSEdge', 'FuseCP.Providers.HostedSolution.OCSEdge2007R2, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (208, NULL, 'Hosted SharePoint Foundation 2010', 'HostedSharePoint30', 20, 'HostedSharePoint2010', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2010, SolidCP.Providers.HostedSolution');
+    VALUES (208, NULL, 'Hosted SharePoint Foundation 2010', 'HostedSharePoint30', 20, 'HostedSharePoint2010', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2010, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (209, NULL, 'Microsoft SQL Server 2012', 'MSSQL', 23, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2012, SolidCP.Providers.Database.SqlServer');
+    VALUES (209, NULL, 'Microsoft SQL Server 2012', 'MSSQL', 23, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2012, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (250, NULL, 'Microsoft Lync Server 2010 Multitenant Hosting Pack', 'Lync', 41, 'Lync2010', 'SolidCP.Providers.HostedSolution.Lync2010, SolidCP.Providers.HostedSolution');
+    VALUES (250, NULL, 'Microsoft Lync Server 2010 Multitenant Hosting Pack', 'Lync', 41, 'Lync2010', 'FuseCP.Providers.HostedSolution.Lync2010, FuseCP.Providers.HostedSolution');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (300, TRUE, 'Microsoft Hyper-V', 'HyperV', 30, 'HyperV', 'SolidCP.Providers.Virtualization.HyperV, SolidCP.Providers.Virtualization.HyperV');
+    VALUES (300, TRUE, 'Microsoft Hyper-V', 'HyperV', 30, 'HyperV', 'FuseCP.Providers.Virtualization.HyperV, FuseCP.Providers.Virtualization.HyperV');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (301, NULL, 'MySQL Server 5.5', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer55, SolidCP.Providers.Database.MySQL');
+    VALUES (301, NULL, 'MySQL Server 5.5', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer55, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (302, NULL, 'MySQL Server 5.6', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer56, SolidCP.Providers.Database.MySQL');
+    VALUES (302, NULL, 'MySQL Server 5.6', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer56, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (303, NULL, 'MySQL Server 5.7', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer57, SolidCP.Providers.Database.MySQL');
+    VALUES (303, NULL, 'MySQL Server 5.7', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer57, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (304, NULL, 'MySQL Server 8.0', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer80, SolidCP.Providers.Database.MySQL');
+    VALUES (304, NULL, 'MySQL Server 8.0', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer80, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (305, NULL, 'MySQL Server 8.1', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer81, SolidCP.Providers.Database.MySQL');
+    VALUES (305, NULL, 'MySQL Server 8.1', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer81, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (306, NULL, 'MySQL Server 8.2', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer82, SolidCP.Providers.Database.MySQL');
+    VALUES (306, NULL, 'MySQL Server 8.2', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer82, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (307, NULL, 'MySQL Server 8.3', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer83, SolidCP.Providers.Database.MySQL');
+    VALUES (307, NULL, 'MySQL Server 8.3', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer83, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (308, NULL, 'MySQL Server 8.4', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer84, SolidCP.Providers.Database.MySQL');
+    VALUES (308, NULL, 'MySQL Server 8.4', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer84, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (320, NULL, 'MySQL Server 9.0', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer90, SolidCP.Providers.Database.MySQL');
+    VALUES (320, NULL, 'MySQL Server 9.0', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer90, FuseCP.Providers.Database.MySQL');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (350, TRUE, 'Microsoft Hyper-V 2012 R2', 'HyperV2012R2', 33, 'HyperV2012R2', 'SolidCP.Providers.Virtualization.HyperV2012R2, SolidCP.Providers.Virtualization.HyperV2012R2');
+    VALUES (350, TRUE, 'Microsoft Hyper-V 2012 R2', 'HyperV2012R2', 33, 'HyperV2012R2', 'FuseCP.Providers.Virtualization.HyperV2012R2, FuseCP.Providers.Virtualization.HyperV2012R2');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (351, TRUE, 'Microsoft Hyper-V Virtual Machine Management', 'HyperVvmm', 33, 'HyperVvmm', 'SolidCP.Providers.Virtualization.HyperVvmm, SolidCP.Providers.Virtualization.HyperVvmm');
+    VALUES (351, TRUE, 'Microsoft Hyper-V Virtual Machine Management', 'HyperVvmm', 33, 'HyperVvmm', 'FuseCP.Providers.Virtualization.HyperVvmm, FuseCP.Providers.Virtualization.HyperVvmm');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (352, TRUE, 'Microsoft Hyper-V 2016', 'HyperV2012R2', 33, 'HyperV2016', 'SolidCP.Providers.Virtualization.HyperV2016, SolidCP.Providers.Virtualization.HyperV2016');
+    VALUES (352, TRUE, 'Microsoft Hyper-V 2016', 'HyperV2012R2', 33, 'HyperV2016', 'FuseCP.Providers.Virtualization.HyperV2016, FuseCP.Providers.Virtualization.HyperV2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (370, TRUE, 'Proxmox Virtualization (remote)', 'Proxmox', 167, 'Proxmox (remote)', 'SolidCP.Providers.Virtualization.Proxmoxvps, SolidCP.Providers.Virtualization.Proxmoxvps');
+    VALUES (370, TRUE, 'Proxmox Virtualization (remote)', 'Proxmox', 167, 'Proxmox (remote)', 'FuseCP.Providers.Virtualization.Proxmoxvps, FuseCP.Providers.Virtualization.Proxmoxvps');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (371, FALSE, 'Proxmox Virtualization', 'Proxmox', 167, 'Proxmox', 'SolidCP.Providers.Virtualization.ProxmoxvpsLocal, SolidCP.Providers.Virtualization.Proxmoxvps');
+    VALUES (371, FALSE, 'Proxmox Virtualization', 'Proxmox', 167, 'Proxmox', 'FuseCP.Providers.Virtualization.ProxmoxvpsLocal, FuseCP.Providers.Virtualization.Proxmoxvps');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (400, TRUE, 'Microsoft Hyper-V For Private Cloud', 'HyperVForPrivateCloud', 40, 'HyperVForPC', 'SolidCP.Providers.VirtualizationForPC.HyperVForPC, SolidCP.Providers.VirtualizationForPC.HyperVForPC');
+    VALUES (400, TRUE, 'Microsoft Hyper-V For Private Cloud', 'HyperVForPrivateCloud', 40, 'HyperVForPC', 'FuseCP.Providers.VirtualizationForPC.HyperVForPC, FuseCP.Providers.VirtualizationForPC.HyperVForPC');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (410, NULL, 'Microsoft DNS Server 2012+', 'MSDNS', 7, 'MSDNS.2012', 'SolidCP.Providers.DNS.MsDNS2012, SolidCP.Providers.DNS.MsDNS2012');
+    VALUES (410, NULL, 'Microsoft DNS Server 2012+', 'MSDNS', 7, 'MSDNS.2012', 'FuseCP.Providers.DNS.MsDNS2012, FuseCP.Providers.DNS.MsDNS2012');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (500, NULL, 'Unix System', 'Unix', 1, 'UnixSystem', 'SolidCP.Providers.OS.Unix, SolidCP.Providers.OS.Unix');
+    VALUES (500, NULL, 'Unix System', 'Unix', 1, 'UnixSystem', 'FuseCP.Providers.OS.Unix, FuseCP.Providers.OS.Unix');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (600, NULL, 'Enterprise Storage Windows 2012', 'EnterpriseStorage', 44, 'EnterpriseStorage2012', 'SolidCP.Providers.EnterpriseStorage.Windows2012, SolidCP.Providers.EnterpriseStorage.Windows2012');
+    VALUES (600, NULL, 'Enterprise Storage Windows 2012', 'EnterpriseStorage', 44, 'EnterpriseStorage2012', 'FuseCP.Providers.EnterpriseStorage.Windows2012, FuseCP.Providers.EnterpriseStorage.Windows2012');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (700, NULL, 'Storage Spaces Windows 2012', 'StorageSpaceServices', 49, 'StorageSpace2012', 'SolidCP.Providers.StorageSpaces.Windows2012, SolidCP.Providers.StorageSpaces.Windows2012');
+    VALUES (700, NULL, 'Storage Spaces Windows 2012', 'StorageSpaceServices', 49, 'StorageSpace2012', 'FuseCP.Providers.StorageSpaces.Windows2012, FuseCP.Providers.StorageSpaces.Windows2012');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1201, NULL, 'Hosted MS CRM 2011', 'CRM2011', 21, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2011, SolidCP.Providers.HostedSolution.CRM2011');
+    VALUES (1201, NULL, 'Hosted MS CRM 2011', 'CRM2011', 21, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2011, FuseCP.Providers.HostedSolution.CRM2011');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1202, NULL, 'Hosted MS CRM 2013', 'CRM2011', 24, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2013, SolidCP.Providers.HostedSolution.Crm2013');
+    VALUES (1202, NULL, 'Hosted MS CRM 2013', 'CRM2011', 24, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2013, FuseCP.Providers.HostedSolution.Crm2013');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1203, NULL, 'Microsoft SQL Server 2014', 'MSSQL', 46, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2014, SolidCP.Providers.Database.SqlServer');
+    VALUES (1203, NULL, 'Microsoft SQL Server 2014', 'MSSQL', 46, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2014, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1205, NULL, 'Hosted MS CRM 2015', 'CRM2011', 24, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2015, SolidCP.Providers.HostedSolution.Crm2015');
+    VALUES (1205, NULL, 'Hosted MS CRM 2015', 'CRM2011', 24, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2015, FuseCP.Providers.HostedSolution.Crm2015');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1206, NULL, 'Hosted MS CRM 2016', 'CRM2011', 24, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2016, SolidCP.Providers.HostedSolution.Crm2016');
+    VALUES (1206, NULL, 'Hosted MS CRM 2016', 'CRM2011', 24, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2016, FuseCP.Providers.HostedSolution.Crm2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1301, NULL, 'Hosted SharePoint Foundation 2013', 'HostedSharePoint30', 20, 'HostedSharePoint2013', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2013, SolidCP.Providers.HostedSolution.SharePoint2013');
+    VALUES (1301, NULL, 'Hosted SharePoint Foundation 2013', 'HostedSharePoint30', 20, 'HostedSharePoint2013', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2013, FuseCP.Providers.HostedSolution.SharePoint2013');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1306, NULL, 'Hosted SharePoint Foundation 2016', 'HostedSharePoint30', 20, 'HostedSharePoint2016', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2016, SolidCP.Providers.HostedSolution.SharePoint2016');
+    VALUES (1306, NULL, 'Hosted SharePoint Foundation 2016', 'HostedSharePoint30', 20, 'HostedSharePoint2016', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2016, FuseCP.Providers.HostedSolution.SharePoint2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1401, NULL, 'Microsoft Lync Server 2013 Enterprise Edition', 'Lync', 41, 'Lync2013', 'SolidCP.Providers.HostedSolution.Lync2013, SolidCP.Providers.HostedSolution.Lync2013');
+    VALUES (1401, NULL, 'Microsoft Lync Server 2013 Enterprise Edition', 'Lync', 41, 'Lync2013', 'FuseCP.Providers.HostedSolution.Lync2013, FuseCP.Providers.HostedSolution.Lync2013');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1402, NULL, 'Microsoft Lync Server 2013 Multitenant Hosting Pack', 'Lync', 41, 'Lync2013HP', 'SolidCP.Providers.HostedSolution.Lync2013HP, SolidCP.Providers.HostedSolution.Lync2013HP');
+    VALUES (1402, NULL, 'Microsoft Lync Server 2013 Multitenant Hosting Pack', 'Lync', 41, 'Lync2013HP', 'FuseCP.Providers.HostedSolution.Lync2013HP, FuseCP.Providers.HostedSolution.Lync2013HP');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1403, NULL, 'Microsoft Skype for Business Server 2015', 'SfB', 52, 'SfB2015', 'SolidCP.Providers.HostedSolution.SfB2015, SolidCP.Providers.HostedSolution.SfB2015');
+    VALUES (1403, NULL, 'Microsoft Skype for Business Server 2015', 'SfB', 52, 'SfB2015', 'FuseCP.Providers.HostedSolution.SfB2015, FuseCP.Providers.HostedSolution.SfB2015');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1404, NULL, 'Microsoft Skype for Business Server 2019', 'SfB', 52, 'SfB2019', 'SolidCP.Providers.HostedSolution.SfB2019, SolidCP.Providers.HostedSolution.SfB2019');
+    VALUES (1404, NULL, 'Microsoft Skype for Business Server 2019', 'SfB', 52, 'SfB2019', 'FuseCP.Providers.HostedSolution.SfB2019, FuseCP.Providers.HostedSolution.SfB2019');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1501, TRUE, 'Remote Desktop Services Windows 2012', 'RDS', 45, 'RemoteDesktopServices2012', 'SolidCP.Providers.RemoteDesktopServices.Windows2012,SolidCP.Providers.RemoteDesktopServices.Windows2012');
+    VALUES (1501, TRUE, 'Remote Desktop Services Windows 2012', 'RDS', 45, 'RemoteDesktopServices2012', 'FuseCP.Providers.RemoteDesktopServices.Windows2012,FuseCP.Providers.RemoteDesktopServices.Windows2012');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1502, TRUE, 'Remote Desktop Services Windows 2016', 'RDS', 45, 'RemoteDesktopServices2012', 'SolidCP.Providers.RemoteDesktopServices.Windows2016,SolidCP.Providers.RemoteDesktopServices.Windows2016');
+    VALUES (1502, TRUE, 'Remote Desktop Services Windows 2016', 'RDS', 45, 'RemoteDesktopServices2012', 'FuseCP.Providers.RemoteDesktopServices.Windows2016,FuseCP.Providers.RemoteDesktopServices.Windows2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1503, TRUE, 'Remote Desktop Services Windows 2019', 'RDS', 45, 'RemoteDesktopServices2019', 'SolidCP.Providers.RemoteDesktopServices.Windows2019,SolidCP.Providers.RemoteDesktopServices.Windows2019');
+    VALUES (1503, TRUE, 'Remote Desktop Services Windows 2019', 'RDS', 45, 'RemoteDesktopServices2019', 'FuseCP.Providers.RemoteDesktopServices.Windows2019,FuseCP.Providers.RemoteDesktopServices.Windows2019');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1504, TRUE, 'Remote Desktop Services Windows 2022', 'RDS', 45, 'RemoteDesktopServices2022', 'SolidCP.Providers.RemoteDesktopServices.Windows2022,SolidCP.Providers.RemoteDesktopServices.Windows2022');
+    VALUES (1504, TRUE, 'Remote Desktop Services Windows 2022', 'RDS', 45, 'RemoteDesktopServices2022', 'FuseCP.Providers.RemoteDesktopServices.Windows2022,FuseCP.Providers.RemoteDesktopServices.Windows2022');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1505, TRUE, 'Remote Desktop Services Windows 2025', 'RDS', 45, 'RemoteDesktopServices2025', 'SolidCP.Providers.RemoteDesktopServices.Windows2025,SolidCP.Providers.RemoteDesktopServices.Windows2025');
+    VALUES (1505, TRUE, 'Remote Desktop Services Windows 2025', 'RDS', 45, 'RemoteDesktopServices2025', 'FuseCP.Providers.RemoteDesktopServices.Windows2025,FuseCP.Providers.RemoteDesktopServices.Windows2025');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1550, NULL, 'MariaDB 10.1', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB101, SolidCP.Providers.Database.MariaDB');
+    VALUES (1550, NULL, 'MariaDB 10.1', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB101, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1552, NULL, 'Hosted SharePoint Enterprise 2013', 'HostedSharePoint30', 73, 'HostedSharePoint2013Ent', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2013Ent, SolidCP.Providers.HostedSolution.SharePoint2013Ent');
+    VALUES (1552, NULL, 'Hosted SharePoint Enterprise 2013', 'HostedSharePoint30', 73, 'HostedSharePoint2013Ent', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2013Ent, FuseCP.Providers.HostedSolution.SharePoint2013Ent');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1560, NULL, 'MariaDB 10.2', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB102, SolidCP.Providers.Database.MariaDB');
+    VALUES (1560, NULL, 'MariaDB 10.2', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB102, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1570, NULL, 'MariaDB 10.3', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB103, SolidCP.Providers.Database.MariaDB');
+    VALUES (1570, NULL, 'MariaDB 10.3', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB103, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1571, NULL, 'MariaDB 10.4', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB104, SolidCP.Providers.Database.MariaDB');
+    VALUES (1571, NULL, 'MariaDB 10.4', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB104, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1572, NULL, 'MariaDB 10.5', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB105, SolidCP.Providers.Database.MariaDB');
+    VALUES (1572, NULL, 'MariaDB 10.5', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB105, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1573, NULL, 'MariaDB 10.6', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB106, SolidCP.Providers.Database.MariaDB');
+    VALUES (1573, NULL, 'MariaDB 10.6', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB106, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1574, NULL, 'MariaDB 10.7', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB107, SolidCP.Providers.Database.MariaDB');
+    VALUES (1574, NULL, 'MariaDB 10.7', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB107, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1575, NULL, 'MariaDB 10.8', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB108, SolidCP.Providers.Database.MariaDB');
+    VALUES (1575, NULL, 'MariaDB 10.8', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB108, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1576, NULL, 'MariaDB 10.9', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB109, SolidCP.Providers.Database.MariaDB');
+    VALUES (1576, NULL, 'MariaDB 10.9', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB109, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1577, NULL, 'MariaDB 10.10', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB1010, SolidCP.Providers.Database.MariaDB');
+    VALUES (1577, NULL, 'MariaDB 10.10', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB1010, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1578, NULL, 'MariaDB 10.11', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB1011, SolidCP.Providers.Database.MariaDB');
+    VALUES (1578, NULL, 'MariaDB 10.11', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB1011, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1579, NULL, 'MariaDB 11.0', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB110, SolidCP.Providers.Database.MariaDB');
+    VALUES (1579, NULL, 'MariaDB 11.0', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB110, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1580, NULL, 'MariaDB 11.1', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB111, SolidCP.Providers.Database.MariaDB');
+    VALUES (1580, NULL, 'MariaDB 11.1', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB111, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1581, NULL, 'MariaDB 11.2', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB112, SolidCP.Providers.Database.MariaDB');
+    VALUES (1581, NULL, 'MariaDB 11.2', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB112, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1582, NULL, 'MariaDB 11.3', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB113, SolidCP.Providers.Database.MariaDB');
+    VALUES (1582, NULL, 'MariaDB 11.3', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB113, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1583, NULL, 'MariaDB 11.4', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB114, SolidCP.Providers.Database.MariaDB');
+    VALUES (1583, NULL, 'MariaDB 11.4', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB114, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1584, NULL, 'MariaDB 11.5', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB115, SolidCP.Providers.Database.MariaDB');
+    VALUES (1584, NULL, 'MariaDB 11.5', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB115, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1585, NULL, 'MariaDB 11.6', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB116, SolidCP.Providers.Database.MariaDB');
+    VALUES (1585, NULL, 'MariaDB 11.6', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB116, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1586, NULL, 'MariaDB 11.7', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB117, SolidCP.Providers.Database.MariaDB');
+    VALUES (1586, NULL, 'MariaDB 11.7', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB117, FuseCP.Providers.Database.MariaDB');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1601, TRUE, 'Mail Cleaner', 'MailCleaner', 61, 'MailCleaner', 'SolidCP.Providers.Filters.MailCleaner, SolidCP.Providers.Filters.MailCleaner');
+    VALUES (1601, TRUE, 'Mail Cleaner', 'MailCleaner', 61, 'MailCleaner', 'FuseCP.Providers.Filters.MailCleaner, FuseCP.Providers.Filters.MailCleaner');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1602, TRUE, 'SpamExperts Mail Filter', 'SpamExperts', 61, 'SpamExperts', 'SolidCP.Providers.Filters.SpamExperts, SolidCP.Providers.Filters.SpamExperts');
+    VALUES (1602, TRUE, 'SpamExperts Mail Filter', 'SpamExperts', 61, 'SpamExperts', 'FuseCP.Providers.Filters.SpamExperts, FuseCP.Providers.Filters.SpamExperts');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1701, NULL, 'Microsoft SQL Server 2016', 'MSSQL', 71, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2016, SolidCP.Providers.Database.SqlServer');
+    VALUES (1701, NULL, 'Microsoft SQL Server 2016', 'MSSQL', 71, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2016, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1702, NULL, 'Hosted SharePoint Enterprise 2016', 'HostedSharePoint30', 73, 'HostedSharePoint2016Ent', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2016Ent, SolidCP.Providers.HostedSolution.SharePoint2016Ent');
+    VALUES (1702, NULL, 'Hosted SharePoint Enterprise 2016', 'HostedSharePoint30', 73, 'HostedSharePoint2016Ent', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2016Ent, FuseCP.Providers.HostedSolution.SharePoint2016Ent');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1703, NULL, 'SimpleDNS Plus 6.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS6, SolidCP.Providers.DNS.SimpleDNS60');
+    VALUES (1703, NULL, 'SimpleDNS Plus 6.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS6, FuseCP.Providers.DNS.SimpleDNS60');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1704, NULL, 'Microsoft SQL Server 2017', 'MSSQL', 72, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2017, SolidCP.Providers.Database.SqlServer');
+    VALUES (1704, NULL, 'Microsoft SQL Server 2017', 'MSSQL', 72, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2017, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1705, NULL, 'Microsoft SQL Server 2019', 'MSSQL', 74, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2019, SolidCP.Providers.Database.SqlServer');
+    VALUES (1705, NULL, 'Microsoft SQL Server 2019', 'MSSQL', 74, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2019, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1706, NULL, 'Microsoft SQL Server 2022', 'MSSQL', 75, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2022, SolidCP.Providers.Database.SqlServer');
+    VALUES (1706, NULL, 'Microsoft SQL Server 2022', 'MSSQL', 75, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2022, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1707, NULL, 'Microsoft SQL Server 2025', 'MSSQL', 76, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2025, SolidCP.Providers.Database.SqlServer');
+    VALUES (1707, NULL, 'Microsoft SQL Server 2025', 'MSSQL', 76, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2025, FuseCP.Providers.Database.SqlServer');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1711, NULL, 'Hosted SharePoint 2019', 'HostedSharePoint30', 73, 'HostedSharePoint2019', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2019, SolidCP.Providers.HostedSolution.SharePoint2019');
+    VALUES (1711, NULL, 'Hosted SharePoint 2019', 'HostedSharePoint30', 73, 'HostedSharePoint2019', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2019, FuseCP.Providers.HostedSolution.SharePoint2019');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1800, NULL, 'Windows Server 2019', 'Windows2012', 1, 'Windows2019', 'SolidCP.Providers.OS.Windows2019, SolidCP.Providers.OS.Windows2019');
+    VALUES (1800, NULL, 'Windows Server 2019', 'Windows2012', 1, 'Windows2019', 'FuseCP.Providers.OS.Windows2019, FuseCP.Providers.OS.Windows2019');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1801, TRUE, 'Microsoft Hyper-V 2019', 'HyperV2012R2', 33, 'HyperV2019', 'SolidCP.Providers.Virtualization.HyperV2019, SolidCP.Providers.Virtualization.HyperV2019');
+    VALUES (1801, TRUE, 'Microsoft Hyper-V 2019', 'HyperV2012R2', 33, 'HyperV2019', 'FuseCP.Providers.Virtualization.HyperV2019, FuseCP.Providers.Virtualization.HyperV2019');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1802, NULL, 'Windows Server 2022', 'Windows2012', 1, 'Windows2022', 'SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022');
+    VALUES (1802, NULL, 'Windows Server 2022', 'Windows2012', 1, 'Windows2022', 'FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1803, TRUE, 'Microsoft Hyper-V 2022', 'HyperV2012R2', 33, 'HyperV2022', 'SolidCP.Providers.Virtualization.HyperV2022, SolidCP.Providers.Virtualization.HyperV2022');
+    VALUES (1803, TRUE, 'Microsoft Hyper-V 2022', 'HyperV2012R2', 33, 'HyperV2022', 'FuseCP.Providers.Virtualization.HyperV2022, FuseCP.Providers.Virtualization.HyperV2022');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1804, NULL, 'Windows Server 2025', 'Windows2012', 1, 'Windows2025', 'SolidCP.Providers.OS.Windows2025, SolidCP.Providers.OS.Windows2025');
+    VALUES (1804, NULL, 'Windows Server 2025', 'Windows2012', 1, 'Windows2025', 'FuseCP.Providers.OS.Windows2025, FuseCP.Providers.OS.Windows2025');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1805, TRUE, 'Microsoft Hyper-V 2025', 'HyperV2012R2', 33, 'HyperV2025', 'SolidCP.Providers.Virtualization.HyperV2025, SolidCP.Providers.Virtualization.HyperV2025');
+    VALUES (1805, TRUE, 'Microsoft Hyper-V 2025', 'HyperV2012R2', 33, 'HyperV2025', 'FuseCP.Providers.Virtualization.HyperV2025, FuseCP.Providers.Virtualization.HyperV2025');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1901, NULL, 'SimpleDNS Plus 8.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS8, SolidCP.Providers.DNS.SimpleDNS80');
+    VALUES (1901, NULL, 'SimpleDNS Plus 8.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS8, FuseCP.Providers.DNS.SimpleDNS80');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1902, NULL, 'Microsoft DNS Server 2016', 'MSDNS', 7, 'MSDNS.2016', 'SolidCP.Providers.DNS.MsDNS2016, SolidCP.Providers.DNS.MsDNS2016');
+    VALUES (1902, NULL, 'Microsoft DNS Server 2016', 'MSDNS', 7, 'MSDNS.2016', 'FuseCP.Providers.DNS.MsDNS2016, FuseCP.Providers.DNS.MsDNS2016');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1903, NULL, 'SimpleDNS Plus 9.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS9, SolidCP.Providers.DNS.SimpleDNS90');
+    VALUES (1903, NULL, 'SimpleDNS Plus 9.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS9, FuseCP.Providers.DNS.SimpleDNS90');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1910, NULL, 'vsftpd FTP Server 3', 'vsftpd', 3, 'vsftpd', 'SolidCP.Providers.FTP.VsFtp3, SolidCP.Providers.FTP.VsFtp');
+    VALUES (1910, NULL, 'vsftpd FTP Server 3', 'vsftpd', 3, 'vsftpd', 'FuseCP.Providers.FTP.VsFtp3, FuseCP.Providers.FTP.VsFtp');
     INSERT INTO public."Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-    VALUES (1911, NULL, 'Apache Web Server 2.4', 'Apache', 2, 'Apache', 'SolidCP.Providers.Web.Apache24, SolidCP.Providers.Web.Apache');
+    VALUES (1911, NULL, 'Apache Web Server 2.4', 'Apache', 2, 'Apache', 'FuseCP.Providers.Web.Apache24, FuseCP.Providers.Web.Apache');
     END IF;
 END $EF$;
 
@@ -3385,7 +3385,7 @@ BEGIN
     INSERT INTO public."Quotas" ("QuotaID", "GroupID", "HideQuota", "ItemTypeID", "PerOrganization", "QuotaDescription", "QuotaName", "QuotaOrder", "QuotaTypeID", "ServiceQuota")
     VALUES (728, 33, NULL, NULL, NULL, 'Number of Private Network VLANs', 'VPS2012.PrivateVLANsNumber', 14.0, 2, FALSE);
     INSERT INTO public."Quotas" ("QuotaID", "GroupID", "HideQuota", "ItemTypeID", "PerOrganization", "QuotaDescription", "QuotaName", "QuotaOrder", "QuotaTypeID", "ServiceQuota")
-    VALUES (729, 12, NULL, NULL, NULL, 'Automatic Replies via SolidCP Allowed', 'Exchange2013.AutoReply', 32.0, 1, FALSE);
+    VALUES (729, 12, NULL, NULL, NULL, 'Automatic Replies via FuseCP Allowed', 'Exchange2013.AutoReply', 32.0, 1, FALSE);
     INSERT INTO public."Quotas" ("QuotaID", "GroupID", "HideQuota", "ItemTypeID", "PerOrganization", "QuotaDescription", "QuotaName", "QuotaOrder", "QuotaTypeID", "ServiceQuota")
     VALUES (730, 33, NULL, NULL, NULL, 'Additional Hard Drives per VPS', 'VPS2012.AdditionalVhdCount', 6.0, 3, FALSE);
     INSERT INTO public."Quotas" ("QuotaID", "GroupID", "HideQuota", "ItemTypeID", "PerOrganization", "QuotaDescription", "QuotaName", "QuotaOrder", "QuotaTypeID", "ServiceQuota")
@@ -3673,51 +3673,51 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_AUDIT_LOG_REPORT', '~/DesktopModules/SolidCP/ScheduleTaskControls/AuditLogReportView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_AUDIT_LOG_REPORT', '~/DesktopModules/FuseCP/ScheduleTaskControls/AuditLogReportView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP', '~/DesktopModules/SolidCP/ScheduleTaskControls/Backup.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP', '~/DesktopModules/FuseCP/ScheduleTaskControls/Backup.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP_DATABASE', '~/DesktopModules/SolidCP/ScheduleTaskControls/BackupDatabase.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP_DATABASE', '~/DesktopModules/FuseCP/ScheduleTaskControls/BackupDatabase.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITE', '~/DesktopModules/SolidCP/ScheduleTaskControls/CheckWebsite.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITE', '~/DesktopModules/FuseCP/ScheduleTaskControls/CheckWebsite.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITES_SSL', '~/DesktopModules/SolidCP/ScheduleTaskControls/CheckWebsitesSslView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITES_SSL', '~/DesktopModules/FuseCP/ScheduleTaskControls/CheckWebsitesSslView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_EXPIRATION', '~/DesktopModules/SolidCP/ScheduleTaskControls/DomainExpirationView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_EXPIRATION', '~/DesktopModules/FuseCP/ScheduleTaskControls/DomainExpirationView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_LOOKUP', '~/DesktopModules/SolidCP/ScheduleTaskControls/DomainLookupView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_LOOKUP', '~/DesktopModules/FuseCP/ScheduleTaskControls/DomainLookupView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_FTP_FILES', '~/DesktopModules/SolidCP/ScheduleTaskControls/SendFilesViaFtp.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_FTP_FILES', '~/DesktopModules/FuseCP/ScheduleTaskControls/SendFilesViaFtp.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_GENERATE_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_GENERATE_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', '~/DesktopModules/SolidCP/ScheduleTaskControls/HostedSolutionReport.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', '~/DesktopModules/FuseCP/ScheduleTaskControls/HostedSolutionReport.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', '~/DesktopModules/SolidCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', '~/DesktopModules/FuseCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', '~/DesktopModules/SolidCP/ScheduleTaskControls/ExecuteSystemCommand.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', '~/DesktopModules/FuseCP/ScheduleTaskControls/ExecuteSystemCommand.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_SEND_MAIL', '~/DesktopModules/SolidCP/ScheduleTaskControls/SendEmailNotification.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_SEND_MAIL', '~/DesktopModules/FuseCP/ScheduleTaskControls/SendEmailNotification.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_PACKAGES', '~/DesktopModules/SolidCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_PACKAGES', '~/DesktopModules/FuseCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', '~/DesktopModules/SolidCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', '~/DesktopModules/FuseCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx', 'ASP.NET');
     INSERT INTO public."ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-    VALUES ('ASP_NET', 'SCHEDULE_TASK_ZIP_FILES', '~/DesktopModules/SolidCP/ScheduleTaskControls/ZipFiles.ascx', 'ASP.NET');
+    VALUES ('ASP_NET', 'SCHEDULE_TASK_ZIP_FILES', '~/DesktopModules/FuseCP/ScheduleTaskControls/ZipFiles.ascx', 'ASP.NET');
     END IF;
 END $EF$;
 
@@ -3725,7 +3725,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (2, TRUE, FALSE, TRUE, 'HomeFolder', TRUE, 1, FALSE, FALSE, 'SolidCP.Providers.OS.HomeFolder, SolidCP.Providers.Base', 15);
+    VALUES (2, TRUE, FALSE, TRUE, 'HomeFolder', TRUE, 1, FALSE, FALSE, 'FuseCP.Providers.OS.HomeFolder, FuseCP.Providers.Base', 15);
     END IF;
 END $EF$;
 
@@ -3733,19 +3733,19 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (5, TRUE, FALSE, TRUE, 'MsSQL2000Database', TRUE, 5, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 9);
+    VALUES (5, TRUE, FALSE, TRUE, 'MsSQL2000Database', TRUE, 5, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 9);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (6, TRUE, FALSE, FALSE, 'MsSQL2000User', TRUE, 5, TRUE, TRUE, TRUE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 10);
+    VALUES (6, TRUE, FALSE, FALSE, 'MsSQL2000User', TRUE, 5, TRUE, TRUE, TRUE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 10);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (7, TRUE, FALSE, TRUE, 'MySQL4Database', TRUE, 6, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 13);
+    VALUES (7, TRUE, FALSE, TRUE, 'MySQL4Database', TRUE, 6, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 13);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (8, TRUE, FALSE, FALSE, 'MySQL4User', TRUE, 6, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 14);
+    VALUES (8, TRUE, FALSE, FALSE, 'MySQL4User', TRUE, 6, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 14);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (9, TRUE, TRUE, FALSE, 'FTPAccount', TRUE, 3, TRUE, TRUE, TRUE, 'SolidCP.Providers.FTP.FtpAccount, SolidCP.Providers.Base', 3);
+    VALUES (9, TRUE, TRUE, FALSE, 'FTPAccount', TRUE, 3, TRUE, TRUE, TRUE, 'FuseCP.Providers.FTP.FtpAccount, FuseCP.Providers.Base', 3);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (10, TRUE, TRUE, TRUE, 'WebSite', TRUE, 2, TRUE, TRUE, TRUE, 'SolidCP.Providers.Web.WebSite, SolidCP.Providers.Base', 2);
+    VALUES (10, TRUE, TRUE, TRUE, 'WebSite', TRUE, 2, TRUE, TRUE, TRUE, 'FuseCP.Providers.Web.WebSite, FuseCP.Providers.Base', 2);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (11, TRUE, TRUE, FALSE, 'MailDomain', TRUE, 4, TRUE, TRUE, TRUE, 'SolidCP.Providers.Mail.MailDomain, SolidCP.Providers.Base', 8);
+    VALUES (11, TRUE, TRUE, FALSE, 'MailDomain', TRUE, 4, TRUE, TRUE, TRUE, 'FuseCP.Providers.Mail.MailDomain, FuseCP.Providers.Base', 8);
     END IF;
 END $EF$;
 
@@ -3753,7 +3753,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName")
-    VALUES (12, TRUE, FALSE, FALSE, 'DNSZone', TRUE, 7, TRUE, FALSE, TRUE, 'SolidCP.Providers.DNS.DnsZone, SolidCP.Providers.Base');
+    VALUES (12, TRUE, FALSE, FALSE, 'DNSZone', TRUE, 7, TRUE, FALSE, TRUE, 'FuseCP.Providers.DNS.DnsZone, FuseCP.Providers.Base');
     END IF;
 END $EF$;
 
@@ -3761,7 +3761,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (13, FALSE, FALSE, 'Domain', FALSE, 1, TRUE, FALSE, 'SolidCP.Providers.OS.Domain, SolidCP.Providers.Base', 1);
+    VALUES (13, FALSE, FALSE, 'Domain', FALSE, 1, TRUE, FALSE, 'FuseCP.Providers.OS.Domain, FuseCP.Providers.Base', 1);
     END IF;
 END $EF$;
 
@@ -3769,7 +3769,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (14, TRUE, FALSE, FALSE, 'StatisticsSite', TRUE, 8, TRUE, TRUE, FALSE, 'SolidCP.Providers.Statistics.StatsSite, SolidCP.Providers.Base', 17);
+    VALUES (14, TRUE, FALSE, FALSE, 'StatisticsSite', TRUE, 8, TRUE, TRUE, FALSE, 'FuseCP.Providers.Statistics.StatsSite, FuseCP.Providers.Base', 17);
     END IF;
 END $EF$;
 
@@ -3777,13 +3777,13 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (15, FALSE, TRUE, 'MailAccount', FALSE, 4, TRUE, FALSE, 'SolidCP.Providers.Mail.MailAccount, SolidCP.Providers.Base', 4);
+    VALUES (15, FALSE, TRUE, 'MailAccount', FALSE, 4, TRUE, FALSE, 'FuseCP.Providers.Mail.MailAccount, FuseCP.Providers.Base', 4);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (16, FALSE, FALSE, 'MailAlias', FALSE, 4, TRUE, FALSE, 'SolidCP.Providers.Mail.MailAlias, SolidCP.Providers.Base', 5);
+    VALUES (16, FALSE, FALSE, 'MailAlias', FALSE, 4, TRUE, FALSE, 'FuseCP.Providers.Mail.MailAlias, FuseCP.Providers.Base', 5);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (17, FALSE, FALSE, 'MailList', FALSE, 4, TRUE, FALSE, 'SolidCP.Providers.Mail.MailList, SolidCP.Providers.Base', 7);
+    VALUES (17, FALSE, FALSE, 'MailList', FALSE, 4, TRUE, FALSE, 'FuseCP.Providers.Mail.MailList, FuseCP.Providers.Base', 7);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (18, FALSE, FALSE, 'MailGroup', FALSE, 4, TRUE, FALSE, 'SolidCP.Providers.Mail.MailGroup, SolidCP.Providers.Base', 6);
+    VALUES (18, FALSE, FALSE, 'MailGroup', FALSE, 4, TRUE, FALSE, 'FuseCP.Providers.Mail.MailGroup, FuseCP.Providers.Base', 6);
     END IF;
 END $EF$;
 
@@ -3791,15 +3791,15 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (20, TRUE, FALSE, FALSE, 'ODBCDSN', TRUE, 1, TRUE, TRUE, FALSE, 'SolidCP.Providers.OS.SystemDSN, SolidCP.Providers.Base', 22);
+    VALUES (20, TRUE, FALSE, FALSE, 'ODBCDSN', TRUE, 1, TRUE, TRUE, FALSE, 'FuseCP.Providers.OS.SystemDSN, FuseCP.Providers.Base', 22);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (21, TRUE, FALSE, TRUE, 'MsSQL2005Database', TRUE, 10, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 11);
+    VALUES (21, TRUE, FALSE, TRUE, 'MsSQL2005Database', TRUE, 10, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 11);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (22, TRUE, FALSE, FALSE, 'MsSQL2005User', TRUE, 10, TRUE, TRUE, TRUE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 12);
+    VALUES (22, TRUE, FALSE, FALSE, 'MsSQL2005User', TRUE, 10, TRUE, TRUE, TRUE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 12);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (23, TRUE, FALSE, TRUE, 'MySQL5Database', TRUE, 11, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 15);
+    VALUES (23, TRUE, FALSE, TRUE, 'MySQL5Database', TRUE, 11, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 15);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (24, TRUE, FALSE, FALSE, 'MySQL5User', TRUE, 11, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 16);
+    VALUES (24, TRUE, FALSE, FALSE, 'MySQL5User', TRUE, 11, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 16);
     END IF;
 END $EF$;
 
@@ -3807,7 +3807,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (25, TRUE, FALSE, FALSE, 'SharedSSLFolder', TRUE, 2, TRUE, FALSE, 'SolidCP.Providers.Web.SharedSSLFolder, SolidCP.Providers.Base', 21);
+    VALUES (25, TRUE, FALSE, FALSE, 'SharedSSLFolder', TRUE, 2, TRUE, FALSE, 'FuseCP.Providers.Web.SharedSSLFolder, FuseCP.Providers.Base', 21);
     END IF;
 END $EF$;
 
@@ -3815,7 +3815,7 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName")
-    VALUES (28, TRUE, FALSE, FALSE, 'SecondaryDNSZone', TRUE, 7, FALSE, TRUE, 'SolidCP.Providers.DNS.SecondaryDnsZone, SolidCP.Providers.Base');
+    VALUES (28, TRUE, FALSE, FALSE, 'SecondaryDNSZone', TRUE, 7, FALSE, TRUE, 'FuseCP.Providers.DNS.SecondaryDnsZone, FuseCP.Providers.Base');
     END IF;
 END $EF$;
 
@@ -3823,9 +3823,9 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (29, TRUE, FALSE, TRUE, 'Organization', TRUE, 13, TRUE, TRUE, 'SolidCP.Providers.HostedSolution.Organization, SolidCP.Providers.Base', 1);
+    VALUES (29, TRUE, FALSE, TRUE, 'Organization', TRUE, 13, TRUE, TRUE, 'FuseCP.Providers.HostedSolution.Organization, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (30, TRUE, NULL, NULL, 'OrganizationDomain', NULL, 13, NULL, NULL, 'SolidCP.Providers.HostedSolution.OrganizationDomain, SolidCP.Providers.Base', 1);
+    VALUES (30, TRUE, NULL, NULL, 'OrganizationDomain', NULL, 13, NULL, NULL, 'FuseCP.Providers.HostedSolution.OrganizationDomain, FuseCP.Providers.Base', 1);
     END IF;
 END $EF$;
 
@@ -3833,9 +3833,9 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (31, TRUE, FALSE, TRUE, 'MsSQL2008Database', TRUE, 22, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (31, TRUE, FALSE, TRUE, 'MsSQL2008Database', TRUE, 22, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (32, TRUE, FALSE, FALSE, 'MsSQL2008User', TRUE, 22, TRUE, TRUE, TRUE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (32, TRUE, FALSE, FALSE, 'MsSQL2008User', TRUE, 22, TRUE, TRUE, TRUE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     END IF;
 END $EF$;
 
@@ -3843,13 +3843,13 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (33, FALSE, FALSE, 'VirtualMachine', TRUE, 30, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1);
+    VALUES (33, FALSE, FALSE, 'VirtualMachine', TRUE, 30, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (34, FALSE, FALSE, 'VirtualSwitch', TRUE, 30, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+    VALUES (34, FALSE, FALSE, 'VirtualSwitch', TRUE, 30, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (35, FALSE, FALSE, 'VMInfo', TRUE, 40, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VMInfo, SolidCP.Providers.Base', 1);
+    VALUES (35, FALSE, FALSE, 'VMInfo', TRUE, 40, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VMInfo, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (36, FALSE, FALSE, 'VirtualSwitch', TRUE, 40, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+    VALUES (36, FALSE, FALSE, 'VirtualSwitch', TRUE, 40, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
     END IF;
 END $EF$;
 
@@ -3857,13 +3857,13 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (37, TRUE, FALSE, TRUE, 'MsSQL2012Database', TRUE, 23, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (37, TRUE, FALSE, TRUE, 'MsSQL2012Database', TRUE, 23, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (38, TRUE, FALSE, FALSE, 'MsSQL2012User', TRUE, 23, TRUE, TRUE, TRUE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (38, TRUE, FALSE, FALSE, 'MsSQL2012User', TRUE, 23, TRUE, TRUE, TRUE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (39, TRUE, FALSE, TRUE, 'MsSQL2014Database', TRUE, 46, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (39, TRUE, FALSE, TRUE, 'MsSQL2014Database', TRUE, 46, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (40, TRUE, FALSE, FALSE, 'MsSQL2014User', TRUE, 46, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (40, TRUE, FALSE, FALSE, 'MsSQL2014User', TRUE, 46, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     END IF;
 END $EF$;
 
@@ -3871,9 +3871,9 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (41, FALSE, FALSE, 'VirtualMachine', TRUE, 33, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1);
+    VALUES (41, FALSE, FALSE, 'VirtualMachine', TRUE, 33, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (42, FALSE, FALSE, 'VirtualSwitch', TRUE, 33, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+    VALUES (42, FALSE, FALSE, 'VirtualSwitch', TRUE, 33, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
     END IF;
 END $EF$;
 
@@ -3881,29 +3881,29 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (71, TRUE, FALSE, TRUE, 'MsSQL2016Database', TRUE, 71, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (71, TRUE, FALSE, TRUE, 'MsSQL2016Database', TRUE, 71, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (72, TRUE, FALSE, FALSE, 'MsSQL2016User', TRUE, 71, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (72, TRUE, FALSE, FALSE, 'MsSQL2016User', TRUE, 71, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (73, TRUE, FALSE, TRUE, 'MsSQL2017Database', TRUE, 72, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (73, TRUE, FALSE, TRUE, 'MsSQL2017Database', TRUE, 72, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (74, TRUE, FALSE, FALSE, 'MsSQL2017User', TRUE, 72, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (74, TRUE, FALSE, FALSE, 'MsSQL2017User', TRUE, 72, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (75, TRUE, FALSE, TRUE, 'MySQL8Database', TRUE, 90, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 18);
+    VALUES (75, TRUE, FALSE, TRUE, 'MySQL8Database', TRUE, 90, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 18);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (76, TRUE, FALSE, FALSE, 'MySQL8User', TRUE, 90, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 19);
+    VALUES (76, TRUE, FALSE, FALSE, 'MySQL8User', TRUE, 90, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 19);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (77, TRUE, FALSE, TRUE, 'MsSQL2019Database', TRUE, 74, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (77, TRUE, FALSE, TRUE, 'MsSQL2019Database', TRUE, 74, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (78, TRUE, FALSE, FALSE, 'MsSQL2019User', TRUE, 74, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (78, TRUE, FALSE, FALSE, 'MsSQL2019User', TRUE, 74, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (79, TRUE, FALSE, TRUE, 'MsSQL2022Database', TRUE, 75, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (79, TRUE, FALSE, TRUE, 'MsSQL2022Database', TRUE, 75, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (80, TRUE, FALSE, FALSE, 'MsSQL2022User', TRUE, 75, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (80, TRUE, FALSE, FALSE, 'MsSQL2022User', TRUE, 75, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (90, TRUE, FALSE, TRUE, 'MySQL9Database', TRUE, 91, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 20);
+    VALUES (90, TRUE, FALSE, TRUE, 'MySQL9Database', TRUE, 91, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 20);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (91, TRUE, FALSE, FALSE, 'MySQL9User', TRUE, 91, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 21);
+    VALUES (91, TRUE, FALSE, FALSE, 'MySQL9User', TRUE, 91, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 21);
     END IF;
 END $EF$;
 
@@ -3911,9 +3911,9 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (143, FALSE, FALSE, 'VirtualMachine', TRUE, 167, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1);
+    VALUES (143, FALSE, FALSE, 'VirtualMachine', TRUE, 167, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (144, FALSE, FALSE, 'VirtualSwitch', TRUE, 167, TRUE, TRUE, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+    VALUES (144, FALSE, FALSE, 'VirtualSwitch', TRUE, 167, TRUE, TRUE, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
     END IF;
 END $EF$;
 
@@ -3921,17 +3921,17 @@ DO $EF$
 BEGIN
     IF NOT EXISTS(SELECT 1 FROM "__EFMigrationsHistory" WHERE "MigrationId" = '20251105040715_v2.0.0') THEN
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (200, TRUE, FALSE, TRUE, 'SharePointFoundationSiteCollection', TRUE, 20, TRUE, TRUE, FALSE, 'SolidCP.Providers.SharePoint.SharePointSiteCollection, SolidCP.Providers.Base', 25);
+    VALUES (200, TRUE, FALSE, TRUE, 'SharePointFoundationSiteCollection', TRUE, 20, TRUE, TRUE, FALSE, 'FuseCP.Providers.SharePoint.SharePointSiteCollection, FuseCP.Providers.Base', 25);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (202, TRUE, FALSE, TRUE, 'MariaDBDatabase', TRUE, 50, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (202, TRUE, FALSE, TRUE, 'MariaDBDatabase', TRUE, 50, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (203, TRUE, FALSE, FALSE, 'MariaDBUser', TRUE, 50, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (203, TRUE, FALSE, FALSE, 'MariaDBUser', TRUE, 50, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (204, TRUE, FALSE, TRUE, 'SharePointEnterpriseSiteCollection', TRUE, 73, TRUE, TRUE, FALSE, 'SolidCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, SolidCP.Providers.Base', 100);
+    VALUES (204, TRUE, FALSE, TRUE, 'SharePointEnterpriseSiteCollection', TRUE, 73, TRUE, TRUE, FALSE, 'FuseCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, FuseCP.Providers.Base', 100);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (205, TRUE, FALSE, TRUE, 'MsSQL2025Database', TRUE, 76, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+    VALUES (205, TRUE, FALSE, TRUE, 'MsSQL2025Database', TRUE, 76, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
     INSERT INTO public."ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-    VALUES (206, TRUE, FALSE, FALSE, 'MsSQL2025User', TRUE, 76, TRUE, TRUE, FALSE, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+    VALUES (206, TRUE, FALSE, FALSE, 'MsSQL2025User', TRUE, 76, TRUE, TRUE, FALSE, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
     END IF;
 END $EF$;
 
@@ -4048,9 +4048,9 @@ BEGIN
 
     <p>
     Best regards,<br />
-    SolidCP.<br />
-    Web Site: <a href="https://solidcp.com">https://solidcp.com</a><br />
-    E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>
+    FuseCP.<br />
+    Web Site: <a href="https://fusecp.com">https://fusecp.com</a><br />
+    E-Mail: <a href="mailto:support@fusecp.com">support@fusecp.com</a>
     </p>
     </ad:if>
 
@@ -4068,7 +4068,7 @@ BEGIN
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('Priority', 'AccountSummaryLetter', 1, 'Normal');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-    VALUES ('Subject', 'AccountSummaryLetter', 1, '<ad:if test="#Signup#">SolidCP  account has been created for<ad:else>SolidCP  account summary for</ad:if> #user.FirstName# #user.LastName#');
+    VALUES ('Subject', 'AccountSummaryLetter', 1, '<ad:if test="#Signup#">FuseCP  account has been created for<ad:else>FuseCP  account summary for</ad:if> #user.FirstName# #user.LastName#');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('TextBody', 'AccountSummaryLetter', 1, '=================================
        Hosting Account Information
@@ -4077,7 +4077,7 @@ BEGIN
 
     New user account has been created and below you can find its summary information.
 
-    Control Panel URL: https://panel.solidcp.com
+    Control Panel URL: https://panel.fusecp.com
     Username: #user.Username#
     Password: #user.Password#
     </ad:if>
@@ -4100,9 +4100,9 @@ BEGIN
     <ad:if test="#Signup#">If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
     Best regards,
-    SolidCP.
-    Web Site: https://solidcp.com">
-    E-Mail: support@solidcp.com
+    FuseCP.
+    Web Site: https://fusecp.com">
+    E-Mail: support@fusecp.com
     </ad:if><ad:template name="NumericQuota"><ad:if test="#space.Quotas.ContainsKey(quota)#"><ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if><ad:else>0</ad:if></ad:template>');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('Transform', 'BandwidthXLST', 1, '<?xml version="1.0" encoding="UTF-8"?>
@@ -5007,9 +5007,9 @@ BEGIN
 
     <p>
     Best regards,<br />
-    SolidCP.<br />
-    Web Site: <a href="https://solidcp.com">https://solidcp.com</a><br />
-    E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>
+    FuseCP.<br />
+    Web Site: <a href="https://fusecp.com">https://fusecp.com</a><br />
+    E-Mail: <a href="mailto:support@fusecp.com">support@fusecp.com</a>
     </p>
 
     </div>
@@ -5028,16 +5028,16 @@ BEGIN
 
     Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login.
 
-    Control Panel URL: https://panel.solidcp.com
+    Control Panel URL: https://panel.fusecp.com
     Username: #user.Username#
     One Time Password: #user.Password#
 
     If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
     Best regards,
-    SolidCP.
-    Web Site: https://solidcp.com"
-    E-Mail: support@solidcp.com');
+    FuseCP.
+    Web Site: https://fusecp.com"
+    E-Mail: support@fusecp.com');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('CC', 'RDSSetupLetter', 1, 'support@HostingCompany.com');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5094,15 +5094,15 @@ BEGIN
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('UserPasswordPolicy', 'SharePointPolicy', 1, 'True;5;20;0;1;0;True;;0;;;False;False;0;');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-    VALUES ('DemoMessage', 'SolidCPPolicy', 1, 'When user account is in demo mode the majority of operations are
+    VALUES ('DemoMessage', 'FuseCPPolicy', 1, 'When user account is in demo mode the majority of operations are
     disabled, especially those ones that modify or delete records.
     You are welcome to ask your questions or place comments about
-    this demo on  <a href="http://forum.SolidCP.net"
-    target="_blank">SolidCP  Support Forum</a>');
+    this demo on  <a href="http://forum.FuseCP.net"
+    target="_blank">FuseCP  Support Forum</a>');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-    VALUES ('ForbiddenIP', 'SolidCPPolicy', 1, '');
+    VALUES ('ForbiddenIP', 'FuseCPPolicy', 1, '');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-    VALUES ('PasswordPolicy', 'SolidCPPolicy', 1, 'True;6;20;0;1;0;True;;0;;;False;False;0;');
+    VALUES ('PasswordPolicy', 'FuseCPPolicy', 1, 'True;6;20;0;1;0;True;;0;;;False;False;0;');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('From', 'UserPasswordExpirationLetter', 1, 'support@HostingCompany.com');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5450,8 +5450,8 @@ BEGIN
     </head>
     <body>
     <div id="PageOutline">
-    	<h1>This web site has just been created from <a href="https://www.SolidCP.com">SolidCP </a> and it is still under construction.</h1>
-    	<h2>The web site is hosted by <a href="https://solidcp.com">SolidCP</a>.</h2>
+    	<h1>This web site has just been created from <a href="https://www.FuseCP.com">FuseCP </a> and it is still under construction.</h1>
+    	<h2>The web site is hosted by <a href="https://fusecp.com">FuseCP</a>.</h2>
     </div>
     </body>
     </html>');
@@ -5476,8 +5476,8 @@ BEGIN
     		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>
     		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>
     		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>
-    		hostingProviderForumLink="https://solidcp.com/support"
-    		controlPanelLink="https://panel.solidcp.com/"
+    		hostingProviderForumLink="https://fusecp.com/support"
+    		controlPanelLink="https://panel.fusecp.com/"
     	/>
     </ad:if>
     <ad:if test="#IsDefined("FtpAccount")#">
@@ -5492,8 +5492,8 @@ BEGIN
     		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>
     		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>
     		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>
-    		hostingProviderForumLink="https://solidcp.com/support"
-    		controlPanelLink="https://panel.solidcp.com/"
+    		hostingProviderForumLink="https://fusecp.com/support"
+    		controlPanelLink="https://panel.fusecp.com/"
         />
     </ad:if>
     </publishData>
@@ -5504,7 +5504,7 @@ BEGIN
     Password: #User.Password#
 
     Technical Contact:
-    support@solidcp.com
+    support@fusecp.com
     -->');
     INSERT INTO public."UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
     VALUES ('PythonInstalled', 'WebPolicy', 1, 'False');
@@ -6108,7 +6108,7 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('ProtectedUsersFile', 101, '.htpasswd');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('SecureFoldersModuleAssembly', 101, 'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
+    VALUES ('SecureFoldersModuleAssembly', 101, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WebGroupName', 101, 'SCP_IUSRS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6158,7 +6158,7 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('ProtectedUsersFile', 105, '.htpasswd');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('SecureFoldersModuleAssembly', 105, 'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
+    VALUES ('SecureFoldersModuleAssembly', 105, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('sslusesni', 105, 'True');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6212,7 +6212,7 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('ProtectedUsersFile', 112, '.htpasswd');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('SecureFoldersModuleAssembly', 112, 'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
+    VALUES ('SecureFoldersModuleAssembly', 112, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('sslusesni', 112, 'True');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")

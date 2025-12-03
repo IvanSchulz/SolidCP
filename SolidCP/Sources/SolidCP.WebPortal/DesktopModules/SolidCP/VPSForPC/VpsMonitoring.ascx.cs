@@ -38,11 +38,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.DataVisualization.Charting;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPSForPC
+namespace FuseCP.Portal.VPSForPC
 {
-    public partial class VpsMonitoring : SolidCPModuleBase
+    public partial class VpsMonitoring : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

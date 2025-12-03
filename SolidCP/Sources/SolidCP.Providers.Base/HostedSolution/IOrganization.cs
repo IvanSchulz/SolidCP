@@ -31,10 +31,10 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System.Collections.Generic;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public interface IOrganization
     {

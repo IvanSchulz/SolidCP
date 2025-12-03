@@ -42,10 +42,10 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
-using SolidCP.UniversalInstaller;
-using SolidCP.Providers.OS;
+using FuseCP.UniversalInstaller;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	public partial class EnterpriseServerUrlPage : BannerWizardPage
 	{
@@ -59,8 +59,8 @@ namespace SolidCP.UniversalInstaller.WinForms
 			get
 			{
 				var installerPath = Settings.InstallPath;
-				var webClientsPath = Path.GetFullPath(Path.Combine(installerPath, "..", Installer.Current.EnterpriseServerFolder, "bin", "Code", "SolidCP.Web.Clients.dll"));
-				var webClientsAltPath = Path.GetFullPath(Path.Combine(installerPath, "..", Installer.Current.EnterpriseServerAltFolder, "bin", "Code", "SolidCP.Web.Clients.dll"));
+				var webClientsPath = Path.GetFullPath(Path.Combine(installerPath, "..", Installer.Current.EnterpriseServerFolder, "bin", "Code", "FuseCP.Web.Clients.dll"));
+				var webClientsAltPath = Path.GetFullPath(Path.Combine(installerPath, "..", Installer.Current.EnterpriseServerAltFolder, "bin", "Code", "FuseCP.Web.Clients.dll"));
 				return File.Exists(webClientsPath) || File.Exists(webClientsAltPath);
 			}
 		}
@@ -136,7 +136,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			Settings.EnterpriseServerPath = path;
 			if (Settings.EmbedEnterpriseServer)
 			{
-				Settings.EnterpriseServerUrl = "assembly://SolidCP.EnterpriseServer";
+				Settings.EnterpriseServerUrl = "assembly://FuseCP.EnterpriseServer";
 			}
 			else
 			{
@@ -206,7 +206,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 						return false;
 					}
 					else if (!File.Exists(Path.Combine(entservpath, "web.config")) ||
-						!File.Exists(Path.Combine(entservpath, "bin", "SolidCP.EnterpriseServer.dll")))
+						!File.Exists(Path.Combine(entservpath, "bin", "FuseCP.EnterpriseServer.dll")))
 					{
 						ShowWarning("There is no Enterprise Server installation in the specified path");
 						return false;
@@ -300,7 +300,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			if (chkBoxEmbed.Checked) {
 				oldUrl = txtURL.Text;
 				if (oldUrl.StartsWith("assembly://")) oldUrl = null;
-				txtURL.Text = "assembly://SolidCP.EnterpriseServer";
+				txtURL.Text = "assembly://FuseCP.EnterpriseServer";
 				if (string.IsNullOrEmpty(txtPath.Text) && DefaultEntServerPath != null)
 				{
 					txtPath.Text = DefaultEntServerPath;

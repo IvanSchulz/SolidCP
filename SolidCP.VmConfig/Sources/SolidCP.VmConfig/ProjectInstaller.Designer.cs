@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	partial class ProjectInstaller
 	{
@@ -72,7 +72,7 @@ namespace SolidCP.VmConfig
             // serviceInstaller
             // 
             this.serviceInstaller.Description = "Performs provisioning operations in the quest operating system.";
-            this.serviceInstaller.DisplayName = "SolidCP Virtual Machine Configuration Service";
+            this.serviceInstaller.DisplayName = "FuseCP Virtual Machine Configuration Service";
             this.serviceInstaller.ServiceName = "SCPVmConfig";
             this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS {
+namespace FuseCP.Portal.VPS {
     
     
     public partial class VdcAuditLog {
@@ -37,7 +37,7 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPS.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPS.UserControls.Menu menu;
         
         /// <summary>
         /// auditLog control.
@@ -46,6 +46,6 @@ namespace SolidCP.Portal.VPS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.AuditLogControl auditLog;
+        protected global::FuseCP.Portal.UserControls.AuditLogControl auditLog;
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WIXInstaller.Common
+namespace FuseCP.WIXInstaller.Common
 {
     internal struct YesNo
     {

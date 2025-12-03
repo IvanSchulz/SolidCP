@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	[Serializable]
 	public class ProviderInfo

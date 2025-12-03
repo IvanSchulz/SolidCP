@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+<Project Sdk="Microsoft.NET.Sdk.Worker">
     <PropertyGroup>
         <TargetFrameworks>net48;net10.0</TargetFrameworks>
         <LangVersion>13</LangVersion>
@@ -16,10 +16,10 @@
     </PropertyGroup>
 
     <PropertyGroup Condition="$(TargetFramework) == 'net48'">
-        <OutputPath>..\SolidCP.EnterpriseServer\bin\Code</OutputPath>
+        <OutputPath>..\FuseCP.EnterpriseServer\bin\Code</OutputPath>
     </PropertyGroup>
     <PropertyGroup Condition="$(TargetFramework) == 'net10.0'">
-        <OutputPath>..\SolidCP.EnterpriseServer\bin_dotnet</OutputPath>
+        <OutputPath>..\FuseCP.EnterpriseServer\bin_dotnet</OutputPath>
     </PropertyGroup>
 
 	<ItemGroup Condition="$(TargetFramework) == 'net48'">
@@ -37,7 +37,7 @@
         <Compile Update="SchedulerServiceInstaller.cs" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Code\SolidCP.EnterpriseServer.Code.csproj" />
-        <ProjectReference Include="..\SolidCP.Web.Services\SolidCP.Web.Services.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Code\FuseCP.EnterpriseServer.Code.csproj" />
+        <ProjectReference Include="..\FuseCP.Web.Services\FuseCP.Web.Services.csproj" />
     </ItemGroup>
 </Project>

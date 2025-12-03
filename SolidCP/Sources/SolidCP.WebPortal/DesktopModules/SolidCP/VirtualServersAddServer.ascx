@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersAddServer.ascx.cs" Inherits="SolidCP.Portal.VirtualServersAddServer" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersAddServer.ascx.cs" Inherits="FuseCP.Portal.VirtualServersAddServer" %>
 <div class="panel-body form-horizontal">
     <div class="form-group">
         <asp:Label ID="lblServerName" runat="server" CssClass="control-label col-sm-2" meta:resourcekey="lblServerName" style="font-weight:bold"></asp:Label>

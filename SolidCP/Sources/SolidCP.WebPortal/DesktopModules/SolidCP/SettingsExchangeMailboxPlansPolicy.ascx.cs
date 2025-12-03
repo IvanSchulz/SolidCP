@@ -48,14 +48,14 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsExchangeMailboxPlansPolicy : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsExchangeMailboxPlansPolicy : FuseCPControlBase, IUserSettingsEditorControl
     {
 
         private bool RetentionPolicy

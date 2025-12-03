@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class ExchangePublicFolderMailFlowSettings {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.PublicFolderTabs tabs;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.PublicFolderTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// secAcceptMessagesFrom control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAcceptMessagesFrom;
+        protected global::FuseCP.Portal.CollapsiblePanel secAcceptMessagesFrom;
         
         /// <summary>
         /// AcceptMessagesFrom control.
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AcceptedSenders acceptAccounts;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AcceptedSenders acceptAccounts;
         
         /// <summary>
         /// chkSendersAuthenticated control.
@@ -109,7 +109,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secRejectMessagesFrom;
+        protected global::FuseCP.Portal.CollapsiblePanel secRejectMessagesFrom;
         
         /// <summary>
         /// RejectMessagesFrom control.
@@ -127,7 +127,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.RejectedSenders rejectAccounts;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.RejectedSenders rejectAccounts;
         
         /// <summary>
         /// btnSave control.

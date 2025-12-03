@@ -36,11 +36,11 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.Proxmox.UserControls
+namespace FuseCP.Portal.Proxmox.UserControls
 {
-    public partial class Menu : SolidCPControlBase
+    public partial class Menu : FuseCPControlBase
     {
         public class MenuItem
         {

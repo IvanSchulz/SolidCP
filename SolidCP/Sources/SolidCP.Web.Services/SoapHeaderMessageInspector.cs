@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -11,7 +11,7 @@ using Newtonsoft.Json.Converters;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
-using SolidCP.Providers;
+using FuseCP.Providers;
 #if !NETFRAMEWORK
 using CoreWCF;
 using CoreWCF.Web;
@@ -27,12 +27,12 @@ using System.ServiceModel.Dispatcher;
 #endif
 
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 	public class SoapHeaderMessageInspector : IDispatchMessageInspector, IEndpointBehavior
 	{
 
-		public const string Namespace = "http://solidcp.com/headers/";
+		public const string Namespace = "http://fusecp.com/headers/";
 
 		public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters)
 		{

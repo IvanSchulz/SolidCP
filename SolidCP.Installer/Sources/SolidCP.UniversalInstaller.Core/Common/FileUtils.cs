@@ -34,11 +34,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 
     /// <summary>

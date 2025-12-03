@@ -1,6 +1,6 @@
-﻿using SolidCP.WebDavPortal.Models.Common.EditorTemplates;
+using FuseCP.WebDavPortal.Models.Common.EditorTemplates;
 
-namespace SolidCP.WebDavPortal.Models.Account
+namespace FuseCP.WebDavPortal.Models.Account
 {
     public class PasswordResetFinalStepModel
     {

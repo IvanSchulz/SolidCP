@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web.UI.WebControls;
 using System.Xml;
 
-namespace SolidCP.Portal {
-    public partial class AutoUpdateServers : SolidCPModuleBase {
+namespace FuseCP.Portal {
+    public partial class AutoUpdateServers : FuseCPModuleBase {
         DataSet dsServers = null;
         string downloadLink = "";
 
@@ -32,7 +32,7 @@ namespace SolidCP.Portal {
 
         private void BindVersions() {
             XmlDocument doc = new XmlDocument();
-            doc.Load("http://autoupdate.solidcp.com/version.xml");
+            doc.Load("http://autoupdate.fusecp.com/version.xml");
             downloadLink = doc.GetElementsByTagName("downloadURL")[0].InnerText;
             XmlNodeList versions = doc.SelectNodes("root/versions/version");
             ddlSelectVersion.Items.Clear();

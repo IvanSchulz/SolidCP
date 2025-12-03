@@ -41,7 +41,7 @@
 // 
 #pragma warning disable 1591
 
-namespace SolidCP.Ecommerce.EnterpriseServer {
+namespace FuseCP.Ecommerce.EnterpriseServer {
     using System.Diagnostics;
     using System.Web.Services;
     using System.ComponentModel;

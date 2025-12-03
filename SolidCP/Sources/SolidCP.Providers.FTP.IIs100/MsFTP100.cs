@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -27,7 +27,7 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Microsoft.Win32;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System;
 using System.Collections.Generic;
 using System.DirectoryServices.ActiveDirectory;
@@ -37,19 +37,19 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using SolidCP.Providers.FTP.IIs100;
-using SolidCP.Providers.FTP.IIs100.Authorization;
-using SolidCP.Providers.FTP.IIs100.Config;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Utils;
-using SolidCP.Providers.Utils.LogParser;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.FTP.IIs100;
+using FuseCP.Providers.FTP.IIs100.Authorization;
+using FuseCP.Providers.FTP.IIs100.Config;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Utils;
+using FuseCP.Providers.Utils.LogParser;
+using FuseCP.Server.Utils;
 using Microsoft.Web.Management.Server;
 using Microsoft.Win32;
-using IisFtpSite = SolidCP.Providers.FTP.IIs100.Config.FtpSite;
+using IisFtpSite = FuseCP.Providers.FTP.IIs100.Config.FtpSite;
 using IisSite = Microsoft.Web.Administration.Site;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
     public class MsFTP100 : HostingServiceProviderBase, IFtpServer
     {
@@ -440,7 +440,7 @@ namespace SolidCP.Providers.FTP
                     SystemUser user = new SystemUser();
                     user.Name = account.Name;
                     user.FullName = account.Name;
-                    user.Description = "SolidCP System Account";
+                    user.Description = "FuseCP System Account";
                     user.MemberOf = new string[] { FtpGroupName };
                     user.Password = account.Password;
                     user.PasswordCantChange = true;
@@ -486,7 +486,7 @@ namespace SolidCP.Providers.FTP
                     user.Password = account.Password;
                     user.PasswordCantChange = true;
                     user.PasswordNeverExpires = true;
-                    user.Description = "SolidCP FTP Account with AD User Isolation";
+                    user.Description = "FuseCP FTP Account with AD User Isolation";
                     user.MemberOf = new[] { FtpGroupName };
                     user.AccountDisabled = !account.Enabled;
                     user.MsIIS_FTPRoot = ftpRoot;
@@ -941,7 +941,7 @@ namespace SolidCP.Providers.FTP
                             SystemGroup group = new SystemGroup();
                             group.Name = FtpGroupName;
                             group.Members = new string[] { };
-                            group.Description = "SolidCP System Group";
+                            group.Description = "FuseCP System Group";
 
                             SecurityUtils.CreateGroup(group, ServerSettings, UsersOU, GroupsOU);
                         }

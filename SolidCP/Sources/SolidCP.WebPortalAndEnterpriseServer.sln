@@ -7,15 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\.gitignore = ..\..\.gitignore
 		..\..\LICENSE.txt = ..\..\LICENSE.txt
 		..\Database\Migrate_msSQL.sql = ..\Database\Migrate_msSQL.sql
-		SolidCP.Tests\SolidCP.Tests.csproj = SolidCP.Tests\SolidCP.Tests.csproj
-		SolidCP.EnterpriseServer.Data\LegacyScripts\update_db.sql = SolidCP.EnterpriseServer.Data\LegacyScripts\update_db.sql
+		FuseCP.Tests\FuseCP.Tests.csproj = FuseCP.Tests\FuseCP.Tests.csproj
+		FuseCP.EnterpriseServer.Data\LegacyScripts\update_db.sql = FuseCP.EnterpriseServer.Data\LegacyScripts\update_db.sql
 		VersionInfo.cs = VersionInfo.cs
 		VersionInfo.vb = VersionInfo.vb
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPCC", "CPCC\CPCC.csproj", "{68B50D26-3F14-4AC7-977A-2F6128088019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Portal.Modules", "SolidCP.WebPortal\DesktopModules\SolidCP\SolidCP.Portal.Modules.csproj", "{12232731-5C45-4ED6-98F8-D47ABE728280}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.Portal.Modules", "FuseCP.WebPortal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj", "{12232731-5C45-4ED6-98F8-D47ABE728280}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B2049447-AC4D-49CB-8A34-FB92B9D89988}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,41 +24,41 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B20494
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Web.Clients", "SolidCP.Web.Clients\SolidCP.Web.Clients.csproj", "{652639D5-59CE-4F42-8A5F-87CB1E812961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Web.Clients", "FuseCP.Web.Clients\FuseCP.Web.Clients.csproj", "{652639D5-59CE-4F42-8A5F-87CB1E812961}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Client", "SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj", "{DF3D477E-741C-4871-B838-C1635E72474B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Client", "FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj", "{DF3D477E-741C-4871-B838-C1635E72474B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Base", "SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj", "{C09CE910-F16B-48A1-B2CC-C99B8C1CF775}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Base", "FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj", "{C09CE910-F16B-48A1-B2CC-C99B8C1CF775}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.Base", "SolidCP.Providers.Base\SolidCP.Providers.Base.csproj", "{684C932A-6C75-46AC-A327-F3689D89EB42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.Base", "FuseCP.Providers.Base\FuseCP.Providers.Base.csproj", "{684C932A-6C75-46AC-A327-F3689D89EB42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.Utils", "SolidCP.Server.Utils\SolidCP.Server.Utils.csproj", "{E91E52F3-9555-4D00-B577-2B1DBDD87CA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.Utils", "FuseCP.Server.Utils\FuseCP.Server.Utils.csproj", "{E91E52F3-9555-4D00-B577-2B1DBDD87CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Providers.Virtualization.NoVNC", "..\Lib\novnc-solidcp\SolidCP.Providers.Virtualization.NoVNC.csproj", "{D99EFB18-FFE7-45BB-8CA8-29336F3E8C68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.Providers.Virtualization.NoVNC", "..\Lib\novnc-fusecp\FuseCP.Providers.Virtualization.NoVNC.csproj", "{D99EFB18-FFE7-45BB-8CA8-29336F3E8C68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer", "SolidCP.EnterpriseServer\SolidCP.EnterpriseServer.csproj", "{59C7623A-5181-48A5-880A-C9B82B48F589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer", "FuseCP.EnterpriseServer\FuseCP.EnterpriseServer.csproj", "{59C7623A-5181-48A5-880A-C9B82B48F589}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Code", "SolidCP.EnterpriseServer.Code\SolidCP.EnterpriseServer.Code.csproj", "{60E39314-659C-4FAD-AB91-D0D08E223578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Code", "FuseCP.EnterpriseServer.Code\FuseCP.EnterpriseServer.Code.csproj", "{60E39314-659C-4FAD-AB91-D0D08E223578}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Web.Services", "SolidCP.Web.Services\SolidCP.Web.Services.csproj", "{2882CB44-0941-4AB7-B8AA-920D367C41F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Web.Services", "FuseCP.Web.Services\FuseCP.Web.Services.csproj", "{2882CB44-0941-4AB7-B8AA-920D367C41F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Providers.OS.Unix", "SolidCP.Providers.OS.Unix\SolidCP.Providers.OS.Unix.csproj", "{A2DCB86C-F28C-4CEC-9275-E0FBCCDACD8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Providers.OS.Unix", "FuseCP.Providers.OS.Unix\FuseCP.Providers.OS.Unix.csproj", "{A2DCB86C-F28C-4CEC-9275-E0FBCCDACD8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Data", "SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj", "{164AA898-6535-4BC7-84D0-C6AD404F211D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Data", "FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj", "{164AA898-6535-4BC7-84D0-C6AD404F211D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Server.Client", "SolidCP.Server\WebServices\SolidCP.Build\SolidCP.Server.Client.csproj", "{29412784-8CBB-4C45-8C9A-3677214961AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Server.Client", "FuseCP.Server\WebServices\FuseCP.Build\FuseCP.Server.Client.csproj", "{29412784-8CBB-4C45-8C9A-3677214961AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.EnterpriseServer.Tests", "SolidCP.EnterpriseServer.Tests\SolidCP.EnterpriseServer.Tests.csproj", "{44A89AFD-895D-471F-B36C-0E155B2689A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.EnterpriseServer.Tests", "FuseCP.EnterpriseServer.Tests\FuseCP.EnterpriseServer.Tests.csproj", "{44A89AFD-895D-471F-B36C-0E155B2689A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidCP.Build", "SolidCP.Build\SolidCP.Build.csproj", "{C98E19A2-395F-4DD3-9696-1D36378BE1BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.Build", "FuseCP.Build\FuseCP.Build.csproj", "{C98E19A2-395F-4DD3-9696-1D36378BE1BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.SchedulerService", "SolidCP.SchedulerService\SolidCP.SchedulerService.csproj", "{5B823520-0450-44A9-AC86-9658B41DFA7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.SchedulerService", "FuseCP.SchedulerService\FuseCP.SchedulerService.csproj", "{5B823520-0450-44A9-AC86-9658B41DFA7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Templates", "SolidCP.Templates\SolidCP.Templates.csproj", "{387FA0EF-3927-45FF-8F8F-BCCD735540C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.Templates", "FuseCP.Templates\FuseCP.Templates.csproj", "{387FA0EF-3927-45FF-8F8F-BCCD735540C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.WebPortal", "SolidCP.WebPortal\SolidCP.WebPortal.csproj", "{C99EFB18-FFE7-45BB-8CA8-29336F3E8C68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.WebPortal", "FuseCP.WebPortal\FuseCP.WebPortal.csproj", "{C99EFB18-FFE7-45BB-8CA8-29336F3E8C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Tests", "SolidCP.Tests\SolidCP.Tests.csproj", "{B377B463-89EE-80E2-6174-A94548FADE04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.Tests", "FuseCP.Tests\FuseCP.Tests.csproj", "{B377B463-89EE-80E2-6174-A94548FADE04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

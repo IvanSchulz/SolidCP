@@ -1,12 +1,12 @@
-﻿using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
 {
     public static class LogHelper
     {

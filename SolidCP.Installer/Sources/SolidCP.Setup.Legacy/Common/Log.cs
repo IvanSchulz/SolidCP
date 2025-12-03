@@ -33,9 +33,9 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	/// <summary>
 	/// Installer Log.
@@ -192,7 +192,7 @@ namespace SolidCP.Setup
 				string path = AppConfig.GetSettingStringValue("Log.FileName");
 				if (string.IsNullOrEmpty(path))
 				{
-					path = "SolidCP.Installer.log";
+					path = "FuseCP.Installer.log";
 				}
 
 				if (OSInfo.IsWindows)

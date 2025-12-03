@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.Statistics;
+using FuseCP.Providers.Statistics;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class StatisticsEditStatistics : SolidCPModuleBase
+    public partial class StatisticsEditStatistics : FuseCPModuleBase
     {
         StatsSite item = null;
 

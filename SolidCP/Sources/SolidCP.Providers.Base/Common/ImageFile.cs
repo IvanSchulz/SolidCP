@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
 	public class ImageFile
 	{

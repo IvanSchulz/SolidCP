@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiskspaceReportPackageDetails.ascx.cs" Inherits="SolidCP.Portal.DiskspaceReportPackageDetails" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiskspaceReportPackageDetails.ascx.cs" Inherits="FuseCP.Portal.DiskspaceReportPackageDetails" %>
 <%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="uc1" %>

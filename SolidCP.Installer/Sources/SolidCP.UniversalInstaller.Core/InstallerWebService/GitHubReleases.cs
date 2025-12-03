@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Octokit;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	public class GitHubReleases: Octokit.GitHubClient
 	{
@@ -25,7 +25,7 @@ namespace SolidCP.UniversalInstaller
 			}
 		}
 
-		const string ApplicationId = "SolidCPInstaller";
+		const string ApplicationId = "FuseCPInstaller";
 		public string Url { get; set; } 
 		public string Owner => new Uri(Url).AbsolutePath.Split('/').Skip(1).FirstOrDefault();
 		public string Repo => new Uri(Url).AbsolutePath.Split('/').Skip(2).FirstOrDefault();

@@ -1,6 +1,6 @@
-﻿using SolidCP.Providers.StorageSpaces;
+using FuseCP.Providers.StorageSpaces;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class SsHelper
     {

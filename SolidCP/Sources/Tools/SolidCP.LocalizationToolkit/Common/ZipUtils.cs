@@ -32,7 +32,7 @@ using System.IO.Compression;
 using System.Collections;
 using System.Text;
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	internal class ZipUtils
 	{

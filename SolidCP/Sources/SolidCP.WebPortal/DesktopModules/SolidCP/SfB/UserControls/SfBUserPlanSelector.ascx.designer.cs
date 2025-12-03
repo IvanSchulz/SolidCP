@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SfB.UserControls {
+namespace FuseCP.Portal.SfB.UserControls {
     
     
     public partial class SfBUserPlanSelector {

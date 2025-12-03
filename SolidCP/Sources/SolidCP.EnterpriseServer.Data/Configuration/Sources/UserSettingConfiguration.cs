@@ -1,9 +1,9 @@
-﻿// This file is auto generated, do not edit.
+// This file is auto generated, do not edit.
 using System;
 using System.Collections.Generic;
-using SolidCP.EnterpriseServer.Data.Configuration;
-using SolidCP.EnterpriseServer.Data.Entities;
-using SolidCP.EnterpriseServer.Data.Extensions;
+using FuseCP.EnterpriseServer.Data.Configuration;
+using FuseCP.EnterpriseServer.Data.Entities;
+using FuseCP.EnterpriseServer.Data.Extensions;
 #if NetCore
 using Microsoft.EntityFrameworkCore;
 #endif
@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
 #endif
 
-namespace SolidCP.EnterpriseServer.Data.Configuration;
+namespace FuseCP.EnterpriseServer.Data.Configuration;
 
 public partial class UserSettingConfiguration: EntityTypeConfiguration<UserSetting>
 {
@@ -127,9 +127,9 @@ If you have any questions regarding your hosting account, feel free to contact o
 
 <p>
 Best regards,<br />
-SolidCP.<br />
-Web Site: <a href=""https://solidcp.com"">https://solidcp.com</a><br />
-E-Mail: <a href=""mailto:support@solidcp.com"">support@solidcp.com</a>
+FuseCP.<br />
+Web Site: <a href=""https://fusecp.com"">https://fusecp.com</a><br />
+E-Mail: <a href=""mailto:support@fusecp.com"">support@fusecp.com</a>
 </p>
 </ad:if>
 
@@ -146,7 +146,7 @@ E-Mail: <a href=""mailto:support@solidcp.com"">support@solidcp.com</a>
 </html>"
                  },
             new UserSetting() { UserId = 1, SettingsName = "AccountSummaryLetter", PropertyName = "Priority", PropertyValue = "Normal" },
-            new UserSetting() { UserId = 1, SettingsName = "AccountSummaryLetter", PropertyName = "Subject", PropertyValue = "<ad:if test=\"#Signup#\">SolidCP  account has been created for<ad:else>SolidCP  ac" +
+            new UserSetting() { UserId = 1, SettingsName = "AccountSummaryLetter", PropertyName = "Subject", PropertyValue = "<ad:if test=\"#Signup#\">FuseCP  account has been created for<ad:else>FuseCP  ac" +
                 "count summary for</ad:if> #user.FirstName# #user.LastName#" },
             new UserSetting() { UserId = 1, SettingsName = "AccountSummaryLetter", PropertyName = "TextBody", PropertyValue = 
 @"=================================
@@ -156,7 +156,7 @@ E-Mail: <a href=""mailto:support@solidcp.com"">support@solidcp.com</a>
 
 New user account has been created and below you can find its summary information.
 
-Control Panel URL: https://panel.solidcp.com
+Control Panel URL: https://panel.fusecp.com
 Username: #user.Username#
 Password: #user.Password#
 </ad:if>
@@ -179,9 +179,9 @@ Maximum Number of Sub-Domains: <ad:NumericQuota space=""#SpaceContexts[Space.Pac
 <ad:if test=""#Signup#"">If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
 Best regards,
-SolidCP.
-Web Site: https://solidcp.com"">
-E-Mail: support@solidcp.com
+FuseCP.
+Web Site: https://fusecp.com"">
+E-Mail: support@fusecp.com
 </ad:if><ad:template name=""NumericQuota""><ad:if test=""#space.Quotas.ContainsKey(quota)#""><ad:if test=""#space.Quotas[quota].QuotaAllocatedValue isnot -1#"">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if><ad:else>0</ad:if></ad:template>"
                  },
             new UserSetting() { UserId = 1, SettingsName = "BandwidthXLST", PropertyName = "Transform", PropertyValue = 
@@ -1059,9 +1059,9 @@ If you have any questions regarding your hosting account, feel free to contact o
 
 <p>
 Best regards,<br />
-SolidCP.<br />
-Web Site: <a href=""https://solidcp.com"">https://solidcp.com</a><br />
-E-Mail: <a href=""mailto:support@solidcp.com"">support@solidcp.com</a>
+FuseCP.<br />
+Web Site: <a href=""https://fusecp.com"">https://fusecp.com</a><br />
+E-Mail: <a href=""mailto:support@fusecp.com"">support@fusecp.com</a>
 </p>
 
 </div>
@@ -1079,16 +1079,16 @@ Hello #user.FirstName#,
 
 Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login.
 
-Control Panel URL: https://panel.solidcp.com
+Control Panel URL: https://panel.fusecp.com
 Username: #user.Username#
 One Time Password: #user.Password#
 
 If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
 Best regards,
-SolidCP.
-Web Site: https://solidcp.com""
-E-Mail: support@solidcp.com"
+FuseCP.
+Web Site: https://fusecp.com""
+E-Mail: support@fusecp.com"
                  },
             new UserSetting() { UserId = 1, SettingsName = "RDSSetupLetter", PropertyName = "CC", PropertyValue = "support@HostingCompany.com" },
             new UserSetting() { UserId = 1, SettingsName = "RDSSetupLetter", PropertyName = "From", PropertyValue = "support@HostingCompany.com" },
@@ -1140,15 +1140,15 @@ Best regards"
             new UserSetting() { UserId = 1, SettingsName = "SharePointPolicy", PropertyName = "GroupNamePolicy", PropertyValue = "True;-;1;20;;;" },
             new UserSetting() { UserId = 1, SettingsName = "SharePointPolicy", PropertyName = "UserNamePolicy", PropertyValue = "True;-;1;20;;;" },
             new UserSetting() { UserId = 1, SettingsName = "SharePointPolicy", PropertyName = "UserPasswordPolicy", PropertyValue = "True;5;20;0;1;0;True;;0;;;False;False;0;" },
-            new UserSetting() { UserId = 1, SettingsName = "SolidCPPolicy", PropertyName = "DemoMessage", PropertyValue = 
+            new UserSetting() { UserId = 1, SettingsName = "FuseCPPolicy", PropertyName = "DemoMessage", PropertyValue = 
 @"When user account is in demo mode the majority of operations are
 disabled, especially those ones that modify or delete records.
 You are welcome to ask your questions or place comments about
-this demo on  <a href=""http://forum.SolidCP.net""
-target=""_blank"">SolidCP  Support Forum</a>"
+this demo on  <a href=""http://forum.FuseCP.net""
+target=""_blank"">FuseCP  Support Forum</a>"
                  },
-            new UserSetting() { UserId = 1, SettingsName = "SolidCPPolicy", PropertyName = "ForbiddenIP", PropertyValue = "" },
-            new UserSetting() { UserId = 1, SettingsName = "SolidCPPolicy", PropertyName = "PasswordPolicy", PropertyValue = "True;6;20;0;1;0;True;;0;;;False;False;0;" },
+            new UserSetting() { UserId = 1, SettingsName = "FuseCPPolicy", PropertyName = "ForbiddenIP", PropertyValue = "" },
+            new UserSetting() { UserId = 1, SettingsName = "FuseCPPolicy", PropertyName = "PasswordPolicy", PropertyValue = "True;6;20;0;1;0;True;;0;;;False;False;0;" },
             new UserSetting() { UserId = 1, SettingsName = "UserPasswordExpirationLetter", PropertyName = "From", PropertyValue = "support@HostingCompany.com" },
             new UserSetting() { UserId = 1, SettingsName = "UserPasswordExpirationLetter", PropertyName = "HtmlBody", PropertyValue = 
 @"<html xmlns=""http://www.w3.org/1999/xhtml"">
@@ -1473,8 +1473,8 @@ Best regards,
 </head>
 <body>
 <div id=""PageOutline"">
-	<h1>This web site has just been created from <a href=""https://www.SolidCP.com"">SolidCP </a> and it is still under construction.</h1>
-	<h2>The web site is hosted by <a href=""https://solidcp.com"">SolidCP</a>.</h2>
+	<h1>This web site has just been created from <a href=""https://www.FuseCP.com"">FuseCP </a> and it is still under construction.</h1>
+	<h2>The web site is hosted by <a href=""https://fusecp.com"">FuseCP</a>.</h2>
 </div>
 </body>
 </html>"
@@ -1497,8 +1497,8 @@ Best regards,
 		<ad:if test=""#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#"">SQLServerDBConnectionString=""server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#""</ad:if>
 		<ad:if test=""#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#"">mySQLDBConnectionString=""server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#""</ad:if>
 		<ad:if test=""#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#"">MariaDBDBConnectionString=""server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#""</ad:if>
-		hostingProviderForumLink=""https://solidcp.com/support""
-		controlPanelLink=""https://panel.solidcp.com/""
+		hostingProviderForumLink=""https://fusecp.com/support""
+		controlPanelLink=""https://panel.fusecp.com/""
 	/>
 </ad:if>
 <ad:if test=""#IsDefined(""FtpAccount"")#"">
@@ -1513,8 +1513,8 @@ Best regards,
 		<ad:if test=""#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#"">SQLServerDBConnectionString=""server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#""</ad:if>
 		<ad:if test=""#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#"">mySQLDBConnectionString=""server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#""</ad:if>
 		<ad:if test=""#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#"">MariaDBDBConnectionString=""server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#""</ad:if>
-		hostingProviderForumLink=""https://solidcp.com/support""
-		controlPanelLink=""https://panel.solidcp.com/""
+		hostingProviderForumLink=""https://fusecp.com/support""
+		controlPanelLink=""https://panel.fusecp.com/""
     />
 </ad:if>
 </publishData>
@@ -1525,7 +1525,7 @@ Username: #User.Username#
 Password: #User.Password#
 
 Technical Contact:
-support@solidcp.com
+support@fusecp.com
 -->"
                  },
             new UserSetting() { UserId = 1, SettingsName = "WebPolicy", PropertyName = "PythonInstalled", PropertyValue = "False" },

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesColdFusionControl.ascx.cs" Inherits="SolidCP.Portal.WebSitesColdFusionControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesColdFusionControl.ascx.cs" Inherits="FuseCP.Portal.WebSitesColdFusionControl" %>
 <div style="padding: 20;">
 <asp:Literal ID="litCFUnavailable" runat="server"></asp:Literal>
 <table cellpadding="4">

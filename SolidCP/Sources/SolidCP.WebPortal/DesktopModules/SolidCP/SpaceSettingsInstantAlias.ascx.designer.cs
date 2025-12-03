@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SpaceSettingsPreviewDomain {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPreviewDomain;
+        protected global::FuseCP.Portal.CollapsiblePanel secPreviewDomain;
         
         /// <summary>
         /// PreviewDomainPanel control.

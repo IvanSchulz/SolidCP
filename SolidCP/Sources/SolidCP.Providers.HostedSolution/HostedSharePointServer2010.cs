@@ -39,13 +39,13 @@ using System.Text;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
-using SolidCP.Providers.SharePoint;
+using FuseCP.Providers.SharePoint;
 
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class HostedSharePointServer2010 : HostedSharePointServer
     {

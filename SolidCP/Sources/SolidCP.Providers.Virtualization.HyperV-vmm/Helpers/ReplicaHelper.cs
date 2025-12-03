@@ -1,6 +1,6 @@
-﻿using System.Management.Automation.Runspaces;
+using System.Management.Automation.Runspaces;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public static class ReplicaHelper
     {

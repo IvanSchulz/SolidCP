@@ -34,7 +34,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class OCSUser
     {

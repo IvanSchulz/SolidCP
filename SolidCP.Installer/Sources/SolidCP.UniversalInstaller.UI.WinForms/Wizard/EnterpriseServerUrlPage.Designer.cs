@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	partial class EnterpriseServerUrlPage
 	{
@@ -105,7 +105,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			this.chkBoxEmbed.Name = "chkBoxEmbed";
 			this.chkBoxEmbed.Size = new System.Drawing.Size(439, 30);
 			this.chkBoxEmbed.TabIndex = 15;
-			this.chkBoxEmbed.Text = "Embed Enterprise Server into Portal website (SolidCP runs faster when you em" +
+			this.chkBoxEmbed.Text = "Embed Enterprise Server into Portal website (FuseCP runs faster when you em" +
 	"bed\r\nEnterprise Server):";
 			this.chkBoxEmbed.UseVisualStyleBackColor = true;
 			this.chkBoxEmbed.CheckedChanged += new System.EventHandler(this.chkBoxEmbed_CheckedChanged);
@@ -128,7 +128,7 @@ namespace SolidCP.UniversalInstaller.WinForms
 			// 
 			// chooseFolderButton
 			// 
-			this.chooseFolderButton.Image = global::SolidCP.UniversalInstaller.Properties.Resources.Icons_MenuFileOpenIcon;
+			this.chooseFolderButton.Image = global::FuseCP.UniversalInstaller.Properties.Resources.Icons_MenuFileOpenIcon;
 			this.chooseFolderButton.Location = new System.Drawing.Point(424, 138);
 			this.chooseFolderButton.Name = "chooseFolderButton";
 			this.chooseFolderButton.Size = new System.Drawing.Size(30, 23);

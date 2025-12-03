@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>SolidCP.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>FuseCP.snk</AssemblyOriginatorKeyFile>
     <TargetFramework>netstandard2.0</TargetFramework>
     <OutputPath>..\..\Bin</OutputPath>
     <Nullable>disable</Nullable>
@@ -23,7 +23,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SolidCP.snk" />
+    <None Include="FuseCP.snk" />
     <None Include="Reports\OverusageReport.xsc">
       <DependentUpon>OverusageReport.xsd</DependentUpon>
     </None>
@@ -37,6 +37,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
+    <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
   </ItemGroup>
 </Project>

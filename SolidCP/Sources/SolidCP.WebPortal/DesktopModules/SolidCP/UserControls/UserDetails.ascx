@@ -1,2 +1,2 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserDetails.ascx.cs" Inherits="SolidCP.Portal.UserDetails" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserDetails.ascx.cs" Inherits="FuseCP.Portal.UserDetails" %>
 <asp:HyperLink ID="lnkUser" runat="server">None</asp:HyperLink>&nbsp;

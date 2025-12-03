@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsUserPasswordRequestLetter : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsUserPasswordRequestLetter : FuseCPControlBase, IUserSettingsEditorControl
     {
         public void BindSettings(UserSettings settings)
         {

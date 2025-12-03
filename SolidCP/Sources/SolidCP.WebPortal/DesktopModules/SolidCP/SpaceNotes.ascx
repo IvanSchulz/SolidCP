@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNotes.ascx.cs" Inherits="SolidCP.Portal.SpaceNotes" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNotes.ascx.cs" Inherits="FuseCP.Portal.SpaceNotes" %>
 <%@ Register Src="UserControls/EditItemComments.ascx" TagName="EditItemComments" TagPrefix="scp" %>
 
 

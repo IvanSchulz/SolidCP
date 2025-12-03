@@ -31,11 +31,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Client;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Client;
 
 
-namespace SolidCP.FixDefaultPublicFolderMailbox
+namespace FuseCP.FixDefaultPublicFolderMailbox
 {
     /// <summary>
     /// ES Proxy class

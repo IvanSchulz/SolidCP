@@ -1,7 +1,7 @@
-﻿using System.Configuration;
-using SolidCP.WebDavPortal.WebConfigSections;
+using System.Configuration;
+using FuseCP.WebDavPortal.WebConfigSections;
 
-namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
     public abstract class AbstractConfigCollection
     {

@@ -35,12 +35,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
-    public partial class AllocatePackagePhoneNumbers : SolidCPModuleBase
+    public partial class AllocatePackagePhoneNumbers : FuseCPModuleBase
     {
         private IPAddressPool pool;
         public IPAddressPool Pool

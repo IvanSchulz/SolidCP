@@ -1,6 +1,6 @@
-﻿using Cobalt;
+using Cobalt;
 
-namespace SolidCP.WebDav.Core.Interfaces.Owa
+namespace FuseCP.WebDav.Core.Interfaces.Owa
 {
     public interface IWopiFileManager
     {

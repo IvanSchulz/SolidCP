@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class WebSitesEditSite {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// WDeployBuildPublishingProfileWizardPanel control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// lnkSiteName control.
@@ -469,7 +469,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesHomeFolderControl webSitesHomeFolderControl;
+        protected global::FuseCP.Portal.WebSitesHomeFolderControl webSitesHomeFolderControl;
         
         /// <summary>
         /// tabVirtualDirs control.
@@ -586,7 +586,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesSecuredFoldersControl webSitesSecuredFoldersControl;
+        protected global::FuseCP.Portal.WebSitesSecuredFoldersControl webSitesSecuredFoldersControl;
         
         /// <summary>
         /// tabHeliconApe control.
@@ -604,7 +604,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesHeliconApeControl webSitesHeliconApeControl;
+        protected global::FuseCP.Portal.WebSitesHeliconApeControl webSitesHeliconApeControl;
         
         /// <summary>
         /// tabFrontPage control.
@@ -694,7 +694,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UsernameControl frontPageUsername;
+        protected global::FuseCP.Portal.UsernameControl frontPageUsername;
         
         /// <summary>
         /// lblFPPassword control.
@@ -712,7 +712,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordControl frontPagePassword;
+        protected global::FuseCP.Portal.PasswordControl frontPagePassword;
         
         /// <summary>
         /// btnUninstallFrontPage control.
@@ -793,7 +793,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesExtensionsControl webSitesExtensionsControl;
+        protected global::FuseCP.Portal.WebSitesExtensionsControl webSitesExtensionsControl;
         
         /// <summary>
         /// tabErrors control.
@@ -811,7 +811,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesCustomErrorsControl webSitesCustomErrorsControl;
+        protected global::FuseCP.Portal.WebSitesCustomErrorsControl webSitesCustomErrorsControl;
         
         /// <summary>
         /// tabHeaders control.
@@ -829,7 +829,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesCustomHeadersControl webSitesCustomHeadersControl;
+        protected global::FuseCP.Portal.WebSitesCustomHeadersControl webSitesCustomHeadersControl;
         
         /// <summary>
         /// tabWebDeployPublishing control.
@@ -1009,7 +1009,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebSitesMimeTypesControl webSitesMimeTypesControl;
+        protected global::FuseCP.Portal.WebSitesMimeTypesControl webSitesMimeTypesControl;
         
         /// <summary>
         /// tabCF control.
@@ -1261,7 +1261,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.WebsitesSSL WebsitesSSLControl;
+        protected global::FuseCP.Portal.WebsitesSSL WebsitesSSLControl;
         
         /// <summary>
         /// btnDelete control.
@@ -1288,6 +1288,6 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
     }
 }

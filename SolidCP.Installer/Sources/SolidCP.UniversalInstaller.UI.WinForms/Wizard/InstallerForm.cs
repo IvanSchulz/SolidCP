@@ -41,7 +41,7 @@ using System.Windows.Forms;
 using System.Runtime.Remoting.Lifetime;
 #endif
 
-namespace SolidCP.UniversalInstaller.WinForms;
+namespace FuseCP.UniversalInstaller.WinForms;
 
 public partial class InstallerForm : Form
 {

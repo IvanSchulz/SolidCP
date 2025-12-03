@@ -43,11 +43,11 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using CPCC;
 
-using SolidCP.Providers.Statistics;
+using FuseCP.Providers.Statistics;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class SmarterStats_EditSite : SolidCPControlBase, IStatsEditInstallationControl
+    public partial class SmarterStats_EditSite : FuseCPControlBase, IStatsEditInstallationControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class VdcAccountVLanAdd {
@@ -37,7 +37,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.VPSForPC.UserControls.Menu menu;
+        protected global::FuseCP.Portal.VPSForPC.UserControls.Menu menu;
         
         /// <summary>
         /// lblUsername2 control.

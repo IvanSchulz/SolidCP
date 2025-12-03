@@ -31,7 +31,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
     public class TCOProvider : SystemPluginBase, IInteractivePaymentGatewayProvider
 	{

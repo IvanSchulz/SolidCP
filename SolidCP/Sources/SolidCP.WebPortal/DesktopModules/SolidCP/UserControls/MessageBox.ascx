@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBox.ascx.cs" EnableViewState="false" Inherits="SolidCP.Portal.MessageBox" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBox.ascx.cs" EnableViewState="false" Inherits="FuseCP.Portal.MessageBox" %>
 <%@ Register Src="CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
 <div style="height:3px;"></div>
 <div id="tblMessageBox" runat="server" class="MessageBox">

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
-    public partial class SettingsSolidCPPolicy {
+    public partial class SettingsFuseCPPolicy {
         
         /// <summary>
         /// secPanelSettings control.
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secPanelSettings;
+        protected global::FuseCP.Portal.CollapsiblePanel secPanelSettings;
         
         /// <summary>
         /// PanelSettingsPanel control.
@@ -82,6 +82,6 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.PasswordPolicyEditor passwordPolicy;
+        protected global::FuseCP.Portal.PasswordPolicyEditor passwordPolicy;
     }
 }

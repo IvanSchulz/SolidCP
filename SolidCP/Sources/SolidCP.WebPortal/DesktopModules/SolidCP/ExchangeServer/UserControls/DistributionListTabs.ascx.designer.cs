@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer.UserControls {
+namespace FuseCP.Portal.ExchangeServer.UserControls {
     
     
     public partial class DistributionListTabs {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.IO;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
 
 	public enum OSPlatform { Unknown = 0, Windows, Mac, Linux, Unix, Other };
@@ -143,11 +143,11 @@ namespace SolidCP.Providers.OS
 			}
 		}
 
-		public static string SolidCPVersion
+		public static string FuseCPVersion
 		{
 			get
 			{
-				var entryAssemblies = new string[] { "SolidCP.Server", "SolidCP.EnterpriseServer", "SolidCP.WebPortal", "SolidCP.WebDavPortal" };
+				var entryAssemblies = new string[] { "FuseCP.Server", "FuseCP.EnterpriseServer", "FuseCP.WebPortal", "FuseCP.WebDavPortal" };
 				var entryAssembly = AppDomain.CurrentDomain.GetAssemblies()
 					.FirstOrDefault(a => entryAssemblies.Any(name => a.GetName().Name == name)) ?? Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly();
 				var fileVersion = entryAssembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
@@ -246,42 +246,42 @@ namespace SolidCP.Providers.OS
 						switch (version)
 						{
 							case WindowsVersion.WindowsServer2025:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2025, SolidCP.Providers.OS.Windows2025")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2025, FuseCP.Providers.OS.Windows2025")) as Providers.OS.IOperatingSystem;
 								break;
 							case WindowsVersion.WindowsServer2022:
 							case WindowsVersion.Windows11:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022")) as Providers.OS.IOperatingSystem;
 								break;
 							case WindowsVersion.Windows10:
 							case WindowsVersion.WindowsServer2019:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2019, SolidCP.Providers.OS.Windows2019")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2019, FuseCP.Providers.OS.Windows2019")) as Providers.OS.IOperatingSystem;
 								break;
 							case WindowsVersion.WindowsServer2016:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2016, SolidCP.Providers.OS.Windows2016")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2016, FuseCP.Providers.OS.Windows2016")) as Providers.OS.IOperatingSystem;
 								break;
 							case WindowsVersion.WindowsServer2012:
 							case WindowsVersion.Windows8:
 							case WindowsVersion.WindowsServer2012R2:
 							case WindowsVersion.Windows81:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2012, FuseCP.Providers.OS.Windows2012")) as Providers.OS.IOperatingSystem;
 								break;
 							case WindowsVersion.WindowsServer2008:
 							case WindowsVersion.WindowsServer2008R2:
 							case WindowsVersion.Vista:
 							case WindowsVersion.Windows7:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2008, FuseCP.Providers.OS.Windows2008")) as Providers.OS.IOperatingSystem;
 								break;
 
 							case WindowsVersion.WindowsServer2003:
 							case WindowsVersion.WindowsXP:
 							case WindowsVersion.WindowsNT4:
-								os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003")) as Providers.OS.IOperatingSystem;
+								os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Windows2003, FuseCP.Providers.OS.Windows2003")) as Providers.OS.IOperatingSystem;
 								break;
 						}
 					}
 					else if (IsUnix)
 					{
-						os = Activator.CreateInstance(Type.GetType("SolidCP.Providers.OS.Unix, SolidCP.Providers.OS.Unix")) as Providers.OS.IOperatingSystem;
+						os = Activator.CreateInstance(Type.GetType("FuseCP.Providers.OS.Unix, FuseCP.Providers.OS.Unix")) as Providers.OS.IOperatingSystem;
 					}
 				}
 				return os;

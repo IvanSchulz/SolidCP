@@ -38,10 +38,10 @@ using System.Web.UI;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Portal.Modules")]
+[assembly: AssemblyTitle("FuseCP.Portal.Modules")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Portal.Modules")]
+[assembly: AssemblyProduct("FuseCP.Portal.Modules")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -54,4 +54,4 @@ using System.Web.UI;
 [assembly: Guid("3d5900ae-111a-45be-96b3-d9e4606ca793")]
 
 // embedded resources
-[assembly: WebResource("SolidCP.WebPortal.Code.Adapters.empty.gif", "image/gif")]
+[assembly: WebResource("FuseCP.WebPortal.Code.Adapters.empty.gif", "image/gif")]

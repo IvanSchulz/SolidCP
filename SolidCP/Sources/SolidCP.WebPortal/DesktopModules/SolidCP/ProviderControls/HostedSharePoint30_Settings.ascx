@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePoint30_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.HostedSharePoint30_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePoint30_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.HostedSharePoint30_Settings" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="scp" %>
 
 <table cellpadding="4" cellspacing="0" width="100%">

@@ -30,8 +30,8 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 using System;
 using System.Collections;
 using System.Configuration;
@@ -48,13 +48,13 @@ using System.Web.UI.HtmlControls;
 using System.Threading;
 using System.Threading.Tasks;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.OS;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.OS;
 using System.Linq;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class ServersEditServer : SolidCPModuleBase
+	public partial class ServersEditServer : FuseCPModuleBase
 	{
 		int ServerId;
 		Task<ServerInfo> serverInfo = null;

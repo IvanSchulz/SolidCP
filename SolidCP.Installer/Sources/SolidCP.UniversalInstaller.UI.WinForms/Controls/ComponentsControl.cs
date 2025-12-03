@@ -43,9 +43,9 @@ using System.Text;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading.Tasks;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller.Controls
+namespace FuseCP.UniversalInstaller.Controls
 {
     /// <summary>
     /// Components control

@@ -36,12 +36,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeMailboxMobile : SolidCPModuleBase
+    public partial class ExchangeMailboxMobile : FuseCPModuleBase
     {
         public const string PendingWipe = "PendingWipe";
         public const string WipeSuccessful = "WipeSuccessful";

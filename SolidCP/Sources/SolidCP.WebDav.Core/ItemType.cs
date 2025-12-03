@@ -1,7 +1,7 @@
-using SolidCP.WebDav.Core.Attributes.Resources;
-using SolidCP.WebDav.Core.Resources;
+using FuseCP.WebDav.Core.Attributes.Resources;
+using FuseCP.WebDav.Core.Resources;
 
-namespace SolidCP.WebDav.Core
+namespace FuseCP.WebDav.Core
 {
     namespace Client
     {

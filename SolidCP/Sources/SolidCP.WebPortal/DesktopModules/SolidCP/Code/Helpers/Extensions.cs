@@ -36,7 +36,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.Code.Helpers
+namespace FuseCP.Portal.Code.Helpers
 {
 	public static class Extensions
 	{

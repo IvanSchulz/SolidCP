@@ -42,10 +42,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Common;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Common;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class SQLServersPage : BannerWizardPage
 	{

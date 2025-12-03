@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.DirectoryServices;
 using System.Reflection;
 using System.Security.Principal;
 
-namespace SolidCP.WebDavPortal.Models
+namespace FuseCP.WebDavPortal.Models
 {
     public class DirectoryIdentity : IIdentity
     {

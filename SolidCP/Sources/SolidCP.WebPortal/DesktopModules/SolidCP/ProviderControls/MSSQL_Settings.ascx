@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSSQL_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MSSQL_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MSSQL_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MSSQL_Settings" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 <table cellpadding="4" cellspacing="0" width="100%">
 	<tr>
@@ -104,10 +104,10 @@
 			<table id="tblBackup" runat="server" width="100%">
 				<tr>
                     <td class="SubHead">
-						<asp:Label ID="lblBackupPath" runat="server" meta:resourcekey="lblBackupPath" Text="SolidCP Server backup path:"></asp:Label>
+						<asp:Label ID="lblBackupPath" runat="server" meta:resourcekey="lblBackupPath" Text="FuseCP Server backup path:"></asp:Label>
 					</td>
 					<td>
-						<asp:TextBox Runat="server" ID="txtBackupPath" CssClass="form-control" Width="300px" Placeholder="C:\SolidCP\SQLBackupTmp"></asp:TextBox>
+						<asp:TextBox Runat="server" ID="txtBackupPath" CssClass="form-control" Width="300px" Placeholder="C:\FuseCP\SQLBackupTmp"></asp:TextBox>
 					</td>
 				</tr>
 				<tr>

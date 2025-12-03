@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" Class="SolidCP.Portal.AsyncLoadHandler,SolidCP.Portal.Modules" %>
+<%@ WebHandler Language="C#" Class="FuseCP.Portal.AsyncLoadHandler,FuseCP.Portal.Modules" %>

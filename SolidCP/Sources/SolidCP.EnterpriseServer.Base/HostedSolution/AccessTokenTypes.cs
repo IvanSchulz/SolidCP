@@ -1,4 +1,4 @@
-﻿namespace SolidCP.EnterpriseServer.Base.HostedSolution
+namespace FuseCP.EnterpriseServer.Base.HostedSolution
 {
     public enum AccessTokenTypes
     {

@@ -45,12 +45,12 @@ using System.Threading;
 using System.ServiceModel.Description;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Server.Utils;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers;
+using FuseCP.Providers.Utils;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Sdk.Discovery;
@@ -58,7 +58,7 @@ using Microsoft.Xrm.Sdk.Client;
 using Microsoft.Xrm.Sdk.Deployment;
 using Microsoft.Xrm.Sdk.Messages;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class CRMBase : HostingServiceProviderBase, ICRM
     {

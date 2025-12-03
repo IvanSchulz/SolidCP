@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Collections;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {	
 	[Flags]
 	public enum Packages { None = 0, Server = 1, EnterpriseServer = 2, WebPortal = 4, WebDavPortal = 8, All = 15 }
@@ -59,7 +59,7 @@ namespace SolidCP.UniversalInstaller
 			{
 				if (winFormsUI == null)
 				{
-					var type = Installer.Current.GetType($"SolidCP.UniversalInstaller.WinFormsUI, SolidCP.UniversalInstaller.UI.WinForms.{
+					var type = Installer.Current.GetType($"FuseCP.UniversalInstaller.WinFormsUI, FuseCP.UniversalInstaller.UI.WinForms.{
 						(OSInfo.IsNetFX ? "NetFX" : "NetCore")}");
 					if (type != null) winFormsUI = Activator.CreateInstance(type) as UI;
 					else winFormsUI = NotAvailableUI;
@@ -73,7 +73,7 @@ namespace SolidCP.UniversalInstaller
 			get {
 				if (consoleUI == null)
 				{
-					var type = Installer.Current.GetType("SolidCP.UniversalInstaller.ConsoleUI, SolidCP.UniversalInstaller.UI.Console");
+					var type = Installer.Current.GetType("FuseCP.UniversalInstaller.ConsoleUI, FuseCP.UniversalInstaller.UI.Console");
 					if (type != null) consoleUI = Activator.CreateInstance(type) as UI;
 					else consoleUI = NotAvailableUI;
 				}
@@ -90,7 +90,7 @@ namespace SolidCP.UniversalInstaller
 			{
 				if (avaloniaUI == null)
 				{
-					var type = Installer.Current.GetType("SolidCP.UniversalInstaller.AvaloniaUI, SolidCP.UniversalInstaller.UI.Avalonia");
+					var type = Installer.Current.GetType("FuseCP.UniversalInstaller.AvaloniaUI, FuseCP.UniversalInstaller.UI.Avalonia");
 					if (type != null) avaloniaUI = Activator.CreateInstance(type) as UI;
 					else avaloniaUI = NotAvailableUI;
 				}
@@ -164,8 +164,8 @@ namespace SolidCP.UniversalInstaller
 		public virtual void PrintInstallerVersion()
 		{
 			var version = Installer.Current.Version;
-			Console.WriteLine($"SolidCP Installer {version.ToString(3)}");
-			Log.WriteLine($"SolidCP Installer {version.ToString(3)}");
+			Console.WriteLine($"FuseCP Installer {version.ToString(3)}");
+			Log.WriteLine($"FuseCP Installer {version.ToString(3)}");
 		}
 
 		public abstract void ShowWarning(string msg);

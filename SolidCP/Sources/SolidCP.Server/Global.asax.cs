@@ -41,9 +41,9 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Net;
 using System.Timers;
-using SolidCP.Web.Services;
+using FuseCP.Web.Services;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
 	public class Global : System.Web.HttpApplication
 	{

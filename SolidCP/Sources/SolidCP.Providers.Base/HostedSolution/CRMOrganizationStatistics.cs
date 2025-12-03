@@ -32,7 +32,7 @@
 
 ﻿using System;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     public class CRMOrganizationStatistics : BaseStatistics
     {

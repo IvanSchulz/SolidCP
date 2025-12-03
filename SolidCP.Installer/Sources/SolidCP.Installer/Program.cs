@@ -41,17 +41,17 @@ using System.Windows.Forms;
 using System.Security;
 using System.Security.Permissions;
 
-using SolidCP.Installer.Common;
-using SolidCP.Installer.Services;
+using FuseCP.Installer.Common;
+using FuseCP.Installer.Services;
 using System.Xml;
 using System.Runtime.Remoting.Lifetime;
 using System.Security.Principal;
-using SolidCP.Installer.Core;
-using SolidCP.Installer.Configuration;
-using SolidCP.Providers.OS;
+using FuseCP.Installer.Core;
+using FuseCP.Installer.Configuration;
+using FuseCP.Providers.OS;
 using System.Reflection;
 
-namespace SolidCP.Installer
+namespace FuseCP.Installer
 {
 	/// <summary>
 	/// Entry point class 
@@ -169,10 +169,10 @@ namespace SolidCP.Installer
 		{
 			Log.WriteError("Fatal error occured.", e.Exception);
 			string message = "A fatal error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.";
-			MessageBox.Show(message, "SolidCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				"FuseCP Installer home directory.";
+			MessageBox.Show(message, "FuseCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			Application.Exit();
 		}
 
@@ -183,17 +183,17 @@ namespace SolidCP.Installer
 		{
 			Log.WriteError("Fatal error occured.", (Exception)e.ExceptionObject);
 			string message = "A fatal error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.";
-			MessageBox.Show(message, "SolidCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				"FuseCP Installer home directory.";
+			MessageBox.Show(message, "FuseCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			Process.GetCurrentProcess().Kill();
 		}
 
 		private static void ShowSecurityError()
 		{
 			string message = "You do not have the appropriate permissions to perform this operation. Make sure you are running the application from the local disk and you have local system administrator privileges.";
-			MessageBox.Show(message, "SolidCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			MessageBox.Show(message, "FuseCP Installer", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
 		/// <summary>

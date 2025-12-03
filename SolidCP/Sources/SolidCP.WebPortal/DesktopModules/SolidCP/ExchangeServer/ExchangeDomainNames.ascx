@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDomainNames.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.ExchangeDomainNames" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDomainNames.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDomainNames" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>

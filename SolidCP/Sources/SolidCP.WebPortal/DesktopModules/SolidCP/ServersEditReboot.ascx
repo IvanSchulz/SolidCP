@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditReboot.ascx.cs" Inherits="SolidCP.Portal.ServersEditReboot" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditReboot.ascx.cs" Inherits="FuseCP.Portal.ServersEditReboot" %>
 <%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="uc1" %>
 
 <uc1:ServerHeaderControl id="ServerHeaderControl1" runat="server"/>

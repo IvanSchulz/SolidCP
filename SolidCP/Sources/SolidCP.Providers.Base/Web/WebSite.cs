@@ -34,10 +34,10 @@ using System;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.Providers.ResultObjects;
 using System.Runtime.Serialization;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
 	/// <summary>
 	/// Summary description for WebSiteItem.

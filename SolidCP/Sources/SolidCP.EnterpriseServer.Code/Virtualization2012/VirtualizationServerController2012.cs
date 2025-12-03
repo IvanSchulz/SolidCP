@@ -1,4 +1,4 @@
-// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -39,21 +39,21 @@ using System.Diagnostics;
 using System.IO;
 using System.Net.Mail;
 using System.Threading;
-using SolidCP.Server.Client;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Data;
-using SolidCP.EnterpriseServer.Code.Virtualization2012;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Server.Client;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Data;
+using FuseCP.EnterpriseServer.Code.Virtualization2012;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.UseCase;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class VirtualizationServerController2012: ControllerBase
     {

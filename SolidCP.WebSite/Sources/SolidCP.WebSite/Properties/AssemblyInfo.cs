@@ -37,12 +37,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.WebSite")]
+[assembly: AssemblyTitle("FuseCP.WebSite")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SolidCP")]
-[assembly: AssemblyProduct("SolidCP Web Site")]
-[assembly: AssemblyCopyright("Copyright © 2016 SolidCP.")]
+[assembly: AssemblyCompany("FuseCP")]
+[assembly: AssemblyProduct("FuseCP Web Site")]
+[assembly: AssemblyCopyright("Copyright © 2016 FuseCP.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

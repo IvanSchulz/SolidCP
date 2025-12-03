@@ -1,22 +1,22 @@
-﻿using Ninject;
+using Ninject;
 using System.Web.SessionState;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Managers.Users;
-using SolidCP.WebDav.Core.Interfaces.Owa;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Interfaces.Services;
-using SolidCP.WebDav.Core.Interfaces.Storages;
-using SolidCP.WebDav.Core.Managers;
-using SolidCP.WebDav.Core.Managers.Users;
-using SolidCP.WebDav.Core.Owa;
-using SolidCP.WebDav.Core.Security.Authentication;
-using SolidCP.WebDav.Core.Security.Authorization;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Services;
-using SolidCP.WebDav.Core.Storages;
-using SolidCP.WebDavPortal.DependencyInjection.Providers;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Managers.Users;
+using FuseCP.WebDav.Core.Interfaces.Owa;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Interfaces.Services;
+using FuseCP.WebDav.Core.Interfaces.Storages;
+using FuseCP.WebDav.Core.Managers;
+using FuseCP.WebDav.Core.Managers.Users;
+using FuseCP.WebDav.Core.Owa;
+using FuseCP.WebDav.Core.Security.Authentication;
+using FuseCP.WebDav.Core.Security.Authorization;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Services;
+using FuseCP.WebDav.Core.Storages;
+using FuseCP.WebDavPortal.DependencyInjection.Providers;
 
-namespace SolidCP.WebDavPortal.DependencyInjection
+namespace FuseCP.WebDavPortal.DependencyInjection
 {
     public class PortalDependencies
     {

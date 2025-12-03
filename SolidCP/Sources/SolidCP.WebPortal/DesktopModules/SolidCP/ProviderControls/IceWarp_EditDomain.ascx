@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditDomain.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.IceWarp_EditDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditDomain.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IceWarp_EditDomain" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <table width="100%">

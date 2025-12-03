@@ -1,5 +1,5 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Tasks;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Tasks;
+using FuseCP.Providers.Virtualization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012
 {
     class VirtualizationAsyncWorker2012: ControllerAsyncBase
     {

@@ -40,9 +40,9 @@ using System.Web.Compilation;
 using System.Web.UI;
 using System.Text;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public class WebPortalControlBase : SolidCP.WebPortal.PortalControlBase
+	public class WebPortalControlBase : FuseCP.WebPortal.PortalControlBase
 	{
 		protected Hashtable Settings
 		{

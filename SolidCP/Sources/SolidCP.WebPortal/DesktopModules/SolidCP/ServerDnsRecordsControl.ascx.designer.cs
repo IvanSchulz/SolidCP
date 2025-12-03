@@ -40,9 +40,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class ServerDnsRecordsControl {
-        protected SolidCP.Portal.GlobalDnsRecordsControl GlobalDnsRecordsControl;
+        protected FuseCP.Portal.GlobalDnsRecordsControl GlobalDnsRecordsControl;
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Configuration;
 
-namespace SolidCP.WebDav.Core.Config.WebConfigSections
+namespace FuseCP.WebDav.Core.Config.WebConfigSections
 {
     [ConfigurationCollection(typeof(OpenerElement))]
     public class OpenerElementCollection : ConfigurationElementCollection

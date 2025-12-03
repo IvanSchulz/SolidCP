@@ -32,10 +32,10 @@
 
 using System;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
 	public interface IInstallAction
 	{
-		void Run(SolidCP.Setup.SetupVariables vars);
+		void Run(FuseCP.Setup.SetupVariables vars);
 	}
 }

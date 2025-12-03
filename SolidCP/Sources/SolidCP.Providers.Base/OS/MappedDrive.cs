@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     /// <summary>
     /// Summary description for MappedDrive.

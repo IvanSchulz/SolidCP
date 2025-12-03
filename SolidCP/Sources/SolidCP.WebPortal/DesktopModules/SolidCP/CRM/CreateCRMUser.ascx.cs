@@ -31,13 +31,13 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.CRM
+namespace FuseCP.Portal.CRM
 {
-    public partial class CreateCRMUser : SolidCPModuleBase
+    public partial class CreateCRMUser : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

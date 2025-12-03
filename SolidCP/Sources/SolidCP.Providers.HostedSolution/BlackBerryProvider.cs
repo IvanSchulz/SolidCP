@@ -36,14 +36,14 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading;
-using SolidCP.Providers;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Server.Utils;
+using FuseCP.Providers;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Server.Utils;
 
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class BlackBerryProvider : HostingServiceProviderBase, IBlackBerry
 	{
@@ -412,7 +412,7 @@ namespace SolidCP.Providers.HostedSolution
 
 		public override bool IsInstalled()
 		{
-			if (!SolidCP.Providers.OS.OSInfo.IsWindows) return false;
+			if (!FuseCP.Providers.OS.OSInfo.IsWindows) return false;
 			return true;
 		}
 

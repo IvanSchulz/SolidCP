@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Providers.Web
+namespace FuseCP.Providers.Web
 {
     [Serializable]
     public class SSLCertificate

@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StorageSpacesList.ascx.cs" Inherits="SolidCP.Portal.StorageSpaces.StorageSpacesList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StorageSpacesList.ascx.cs" Inherits="FuseCP.Portal.StorageSpaces.StorageSpacesList" %>
 
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="../UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 <%@ Register Src="../UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 <%@ Register Src="../UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
@@ -51,7 +51,7 @@
 </div>
 
 <asp:ObjectDataSource ID="odsStorageSpacesPaged" runat="server" EnablePaging="True" SelectCountMethod="GetStorageSpacePagedCount"
-    SelectMethod="GetStorageSpacePaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.SsHelper" OnSelected="odsStorageSpacesPaged_Selected">
+    SelectMethod="GetStorageSpacePaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.SsHelper" OnSelected="odsStorageSpacesPaged_Selected">
     <SelectParameters>
         <asp:ControlParameter Name="filterValue" ControlID="txtSearchValue" PropertyName="Text" />
     </SelectParameters>

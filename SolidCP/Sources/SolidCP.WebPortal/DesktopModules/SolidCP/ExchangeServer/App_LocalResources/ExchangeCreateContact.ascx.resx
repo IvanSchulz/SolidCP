@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -142,7 +142,7 @@
     <value>Contacts</value>
   </data>
   <data name="valCorrectEmail.ErrorMessage" xml:space="preserve">
-    <value>Please enter correct e-mail address, e.g. someone@solidcp.com</value>
+    <value>Please enter correct e-mail address, e.g. someone@fusecp.com</value>
   </data>
   <data name="valCorrectEmail.Text" xml:space="preserve">
     <value>*</value>

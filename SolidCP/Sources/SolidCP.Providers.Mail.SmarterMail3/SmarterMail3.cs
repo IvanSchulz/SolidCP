@@ -33,11 +33,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Mail.SM3;
+using FuseCP.Providers.Mail.SM3;
 using Microsoft.Win32;
-using SM3 = SolidCP.Providers.Mail.SM3;
+using SM3 = FuseCP.Providers.Mail.SM3;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 {
     public class SmarterMail3 : SmarterMail2
     {

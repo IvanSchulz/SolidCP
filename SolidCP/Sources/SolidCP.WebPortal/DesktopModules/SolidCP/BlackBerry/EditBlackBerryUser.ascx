@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditBlackBerryUser.ascx.cs" Inherits="SolidCP.Portal.BlackBerry.EditBlackBerryUser" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditBlackBerryUser.ascx.cs" Inherits="FuseCP.Portal.BlackBerry.EditBlackBerryUser" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
     TagPrefix="scp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"

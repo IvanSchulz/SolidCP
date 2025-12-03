@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AbilityMailServer_EditGroup.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.AbilityMailServer_EditGroup" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AbilityMailServer_EditGroup.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.AbilityMailServer_EditGroup" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <table cellSpacing="0" cellPadding="3" width="100%">
 	<tr>

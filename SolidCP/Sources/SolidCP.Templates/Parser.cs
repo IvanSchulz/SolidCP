@@ -36,9 +36,9 @@ using System.Text;
 using System.Globalization;
 using System.Diagnostics;
 
-using SolidCP.Templates.AST;
+using FuseCP.Templates.AST;
 
-namespace SolidCP.Templates
+namespace FuseCP.Templates
 {
     internal class Parser
     {

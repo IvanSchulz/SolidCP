@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Create VM</value>
   </data>
   <data name="FormComments.Text" xml:space="preserve">
-    <value>&lt;p&gt;The form displays the list of Virtual Private Servers created in the hosting space.&lt;/p&gt;&lt;p&gt;In terms of SolidCP VPS module hosting space could be compared to the Virtual Dedicated Center (VDC). You can see VPS bindings to external and private IP addresses as well as search VPS by these fields.&lt;/p&gt;&lt;p&gt;Quotas in the bottom of the forms show the total amount of computer resources available for VPS.&lt;/p&gt;</value>
+    <value>&lt;p&gt;The form displays the list of Virtual Private Servers created in the hosting space.&lt;/p&gt;&lt;p&gt;In terms of FuseCP VPS module hosting space could be compared to the Virtual Dedicated Center (VDC). You can see VPS bindings to external and private IP addresses as well as search VPS by these fields.&lt;/p&gt;&lt;p&gt;Quotas in the bottom of the forms show the total amount of computer resources available for VPS.&lt;/p&gt;</value>
   </data>
   <data name="gvServers.Empty" xml:space="preserve">
     <value>No VPS have been created. To create a new VPS click "Create VPS" button.</value>

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2017, Centron GmbH
+// Copyright (c) 2017, Centron GmbH
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,9 +35,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Text;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public interface IVirtualizationServerProxmox
     {

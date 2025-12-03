@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhoneNumbersAddPhoneNumber.ascx.cs" Inherits="SolidCP.Portal.PhoneNumbersAddPhoneNumber" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhoneNumbersAddPhoneNumber.ascx.cs" Inherits="FuseCP.Portal.PhoneNumbersAddPhoneNumber" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <div class="panel-body form-horizontal">
 

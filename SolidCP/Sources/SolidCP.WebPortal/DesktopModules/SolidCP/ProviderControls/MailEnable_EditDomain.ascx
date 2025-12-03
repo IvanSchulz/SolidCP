@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEnable_EditDomain.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MailEnable_EditDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEnable_EditDomain.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MailEnable_EditDomain" %>
 <table width="100%">
     <tr>
         <td class="SubHead" style="width:200px;"><asp:Label ID="lblCatchAll" runat="server" meta:resourcekey="lblCatchAll" Text="Catch-All Account:"></asp:Label></td>

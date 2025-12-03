@@ -2,11 +2,11 @@
 
     "guacamoleVersion" : "1.4.0",
 
-    "name"      : "SolidCP Authentication Extension",
-    "namespace" : "guac-auth-solidcp",
+    "name"      : "FuseCP Authentication Extension",
+    "namespace" : "guac-auth-fusecp",
 
     "authProviders" : [
-        "org.apache.guacamole.auth.SolidCPAuthenticationProvider"
+        "org.apache.guacamole.auth.FuseCPAuthenticationProvider"
     ]
 
 }

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageOwaUsersList.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.EnterpriseStorageOwaUsersList" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageOwaUsersList.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.EnterpriseStorageOwaUsersList" %>
 
 <asp:UpdatePanel ID="UsersUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate>

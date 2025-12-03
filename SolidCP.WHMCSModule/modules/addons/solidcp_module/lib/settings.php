@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,22 +32,22 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP module settings model
+ * FuseCP module settings model
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
 
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/var_definition.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/var_definition.php');
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
-Class solidcp_settings{
+Class fusecp_settings{
     
     public $admins = NULL;
     public $settings = NULL;

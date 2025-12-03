@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.Providers.Mail.SmarterMail9", "SolidCP.Providers.Mail.SmarterMail9.csproj", "{FB97E984-2463-44EB-B8BE-14AA41D0365E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.Providers.Mail.SmarterMail9", "FuseCP.Providers.Mail.SmarterMail9.csproj", "{FB97E984-2463-44EB-B8BE-14AA41D0365E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

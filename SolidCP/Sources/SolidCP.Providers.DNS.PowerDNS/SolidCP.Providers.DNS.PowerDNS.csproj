@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <RootNamespace>SolidCP.Providers.DNS</RootNamespace>
+        <RootNamespace>FuseCP.Providers.DNS</RootNamespace>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PublishUrl>publish\</PublishUrl>
         <WarningsAsErrors>618</WarningsAsErrors>
-        <OutputPath>..\SolidCP.Server\bin\netstandard\</OutputPath>
+        <OutputPath>..\FuseCP.Server\bin\netstandard\</OutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -24,8 +24,8 @@
         <PackageReference Include="System.Security.Permissions" Version="10.0.0" GeneratePathProperty="true" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
     </ItemGroup>
 
     <!-- System.Security.Permissions does no show up in output folder, so copy it manually -->

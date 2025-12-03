@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Text;
@@ -6,10 +6,10 @@ using System.Reflection;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Runtime.InteropServices;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public class ResourceAssemblyLoader
 	{
@@ -67,7 +67,7 @@ namespace SolidCP.Setup
 			var resourceName = executingAssembly.GetManifestResourceNames()
 				.FirstOrDefault(r => r.EndsWith(file));
 
-			var tmpPath = Path.Combine(Path.GetTempPath(), "SolidCP.Installer", arch.ToString());
+			var tmpPath = Path.Combine(Path.GetTempPath(), "FuseCP.Installer", arch.ToString());
 			var tmpFile = Path.Combine(tmpPath, dllName);
 			if (!Directory.Exists(tmpPath)) Directory.CreateDirectory(tmpPath);
 

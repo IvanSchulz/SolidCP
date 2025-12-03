@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Generation.ascx.cs" Inherits="SolidCP.Portal.VPS.UserControls.Generation" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Generation.ascx.cs" Inherits="FuseCP.Portal.VPS.UserControls.Generation" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
 
 <scp:CollapsiblePanel ID="secGeneration" runat="server" TargetControlID="GenerationPanel" meta:ResourceKey="secGeneration" Text="Generation"></scp:CollapsiblePanel>

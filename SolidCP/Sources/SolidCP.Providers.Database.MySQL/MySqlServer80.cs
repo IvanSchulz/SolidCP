@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -39,11 +39,11 @@ using Microsoft.Win32;
 //using MySql.Data.MySqlClient;
 using System.IO;
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Reflection;
 using MySql.Data.MySqlClient;
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
     public class MySqlServer80 : MySqlServer57
 	{

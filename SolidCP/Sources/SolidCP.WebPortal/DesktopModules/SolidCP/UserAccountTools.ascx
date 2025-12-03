@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountTools.ascx.cs" Inherits="SolidCP.Portal.UserAccountTools" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountTools.ascx.cs" Inherits="FuseCP.Portal.UserAccountTools" %>
 <div class="widget">
 							<div class="widget-header clearfix">
 								<h3><i class="fa fa-user"></i> <span><asp:Localize id="ToolsHeader" runat="server" meta:resourcekey="ToolsHeader" Text="Account Tools"></asp:Localize></span></h3>

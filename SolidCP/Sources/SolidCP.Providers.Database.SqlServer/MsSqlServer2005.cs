@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-﻿namespace SolidCP.Providers.Database
+﻿namespace FuseCP.Providers.Database
 {
     public class MsSqlServer2005 : MsSqlServer
     {

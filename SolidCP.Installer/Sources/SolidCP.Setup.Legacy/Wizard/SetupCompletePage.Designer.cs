@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	partial class SetupCompletePage
 	{
@@ -102,7 +102,7 @@ namespace SolidCP.Setup
 			this.lblAccounts.Name = "lblAccounts";
 			this.lblAccounts.Size = new System.Drawing.Size(457, 22);
 			this.lblAccounts.TabIndex = 3;
-			this.lblAccounts.Text = "Use one of the following administrator accounts to log on to SolidCP:\r\n";
+			this.lblAccounts.Text = "Use one of the following administrator accounts to log on to FuseCP:\r\n";
 			// 
 			// linkLabel1
 			// 
@@ -112,7 +112,7 @@ namespace SolidCP.Setup
 			this.linkLabel1.Size = new System.Drawing.Size(116, 13);
 			this.linkLabel1.TabIndex = 4;
 			this.linkLabel1.TabStop = true;
-			this.linkLabel1.Text = "Log on to SolidCP";
+			this.linkLabel1.Text = "Log on to FuseCP";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OnLoginClicked);
 			// 
 			// lblServeradmin

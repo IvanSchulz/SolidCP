@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SolidCP.Providers.Common
+namespace FuseCP.Providers.Common
 {
 	sealed class ByteVector
 	{

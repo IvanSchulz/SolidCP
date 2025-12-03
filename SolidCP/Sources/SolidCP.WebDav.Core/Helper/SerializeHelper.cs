@@ -1,8 +1,8 @@
-﻿using System.IO;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace SolidCP.WebDav.Core.Helper
+namespace FuseCP.WebDav.Core.Helper
 {
     public class SerializeHelper
     {

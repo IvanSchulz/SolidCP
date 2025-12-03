@@ -32,14 +32,14 @@
 
 using System;
 using System.Web.Security;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.HostedSolution;
 
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
-    public partial class OrganizationCreateUser : SolidCPModuleBase
+    public partial class OrganizationCreateUser : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

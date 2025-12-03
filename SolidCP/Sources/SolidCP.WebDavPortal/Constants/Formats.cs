@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDavPortal.Constants
+namespace FuseCP.WebDavPortal.Constants
 {
     public class Formats
     {

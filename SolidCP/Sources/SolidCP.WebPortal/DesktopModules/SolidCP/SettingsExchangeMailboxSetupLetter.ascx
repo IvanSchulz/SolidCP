@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangeMailboxSetupLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsExchangeMailboxSetupLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangeMailboxSetupLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsExchangeMailboxSetupLetter" %>
 <table>
     <tr>
         <td class="SubHead" width="150" nowrap><asp:Label ID="lblFrom" runat="server" meta:resourcekey="lblFrom" Text="From:"></asp:Label></td>

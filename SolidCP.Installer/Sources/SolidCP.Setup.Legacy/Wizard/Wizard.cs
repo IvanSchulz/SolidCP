@@ -38,9 +38,9 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
-using SolidCP.Setup.Actions;
+using FuseCP.Setup.Actions;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
     //[Designer(typeof(WizardDesigner)), ToolboxBitmap(typeof(Wizard)), DefaultEvent("Cancel")]
     public class Wizard : ContainerControl

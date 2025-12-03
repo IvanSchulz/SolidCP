@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDavPortal.CustomAttributes;
+using System.ComponentModel.DataAnnotations;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDavPortal.CustomAttributes;
 
-namespace SolidCP.WebDavPortal.Models.Common.EditorTemplates
+namespace FuseCP.WebDavPortal.Models.Common.EditorTemplates
 {
     public class PasswordEditor 
     {

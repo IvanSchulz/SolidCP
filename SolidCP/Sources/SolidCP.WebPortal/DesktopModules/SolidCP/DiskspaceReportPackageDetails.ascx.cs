@@ -42,11 +42,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class DiskspaceReportPackageDetails : SolidCPModuleBase
+    public partial class DiskspaceReportPackageDetails : FuseCPModuleBase
     {
         private long diskspaceTotal;
         public long DiskspaceTotal

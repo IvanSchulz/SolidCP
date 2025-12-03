@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.FTP;
+using FuseCP.Providers.FTP;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class vsftpd_EditAccount : SolidCPControlBase, IFtpAccountEditControl
+    public partial class vsftpd_EditAccount : FuseCPControlBase, IFtpAccountEditControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

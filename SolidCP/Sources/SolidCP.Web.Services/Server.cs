@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
 #if !NETFRAMEWORK
 using CoreWCF;
@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Web;
 #endif
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 	public static class Server
 	{

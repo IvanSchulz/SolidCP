@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceDeleteSpace.ascx.cs" Inherits="SolidCP.Portal.SpaceDeleteSpace" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceDeleteSpace.ascx.cs" Inherits="FuseCP.Portal.SpaceDeleteSpace" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 
 <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>

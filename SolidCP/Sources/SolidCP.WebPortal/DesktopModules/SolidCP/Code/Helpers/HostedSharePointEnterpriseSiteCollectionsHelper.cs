@@ -39,10 +39,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.Providers.SharePoint;
+using FuseCP.Providers.SharePoint;
 using System.Collections.Generic;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
 	public class HostedSharePointEnterpriseSiteCollectionsHelper
 	{

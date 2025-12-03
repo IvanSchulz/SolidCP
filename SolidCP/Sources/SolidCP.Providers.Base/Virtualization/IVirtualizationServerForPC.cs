@@ -33,9 +33,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Providers.VirtualizationForPC
+namespace FuseCP.Providers.VirtualizationForPC
 {
     public interface IVirtualizationServerForPC
     {

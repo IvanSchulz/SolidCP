@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Web;
 using System.Web.Script.Serialization;
-using SolidCP.Portal.ExchangeServer;
-using SolidCP.Providers.OS;
+using FuseCP.Portal.ExchangeServer;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class EnterpriseFolderDataHandler : IHttpHandler
     {

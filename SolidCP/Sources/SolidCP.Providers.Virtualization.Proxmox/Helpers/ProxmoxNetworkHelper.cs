@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using RestSharp;
 
-namespace SolidCP.Providers.Virtualization.Proxmox
+namespace FuseCP.Providers.Virtualization.Proxmox
 {
 	public class ProxmoxNetworkHelper
 	{

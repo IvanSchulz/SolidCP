@@ -6,7 +6,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace SolidCP.UniversalInstaller;  
+namespace FuseCP.UniversalInstaller;  
 
 public class Updater
 {

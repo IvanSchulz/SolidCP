@@ -1,6 +1,6 @@
-﻿using SolidCP.Providers.Virtualization;
-//using SolidCP.Providers.Virtualization2012;
-using SolidCP.Server.Client;
+using FuseCP.Providers.Virtualization;
+//using FuseCP.Providers.Virtualization2012;
+using FuseCP.Server.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
 {
     public class JobHelper: ControllerBase
     {
@@ -25,7 +25,7 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
                 {
                     jobCompleted = JobCompleted(vs, job, resetProgressBarIndicatorAfterFinish, isPowerShellJob);
                 }
-                catch (ThreadAbortException) //https://github.com/FuseCP/SolidCP/issues/103
+                catch (ThreadAbortException) //https://github.com/FuseCP/FuseCP/issues/103
                 {
                     //maybe there need to use Thread.ResetAbort(); ???
 

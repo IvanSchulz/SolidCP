@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Common_SecondaryDNSServers.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.Common_SecondaryDNSServers" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Common_SecondaryDNSServers.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.Common_SecondaryDNSServers" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 <table>
     <tr>

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
-namespace SolidCP.Web.Services;
+namespace FuseCP.Web.Services;
 
 internal static class NativeMethods
 {

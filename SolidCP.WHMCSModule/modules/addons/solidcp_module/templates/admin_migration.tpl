@@ -4,7 +4,7 @@
         $("[id^=modal]").modal("hide");
         $("#migrationworking").modal('show');
 
-        var reqstr = "module=solidcp_module&action=migration&command="+cmd+"&value1="+value1+"&value2="+value2+"&option="+option+"&ajax=1";
+        var reqstr = "module=fusecp_module&action=migration&command="+cmd+"&value1="+value1+"&value2="+value2+"&option="+option+"&ajax=1";
 
         $.post("addonmodules.php", reqstr,
         function(data){
@@ -27,7 +27,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">{$LANG.SolidCP_migrationrunning}</h4>
+                <h4 class="modal-title">{$LANG.FuseCP_migrationrunning}</h4>
             </div>
             <div class="modal-body">
                 <div class="progress">
@@ -38,7 +38,7 @@
         </div>
     </div>
 </div>
-<h3>{$LANG.SolidCP_migration_needed}</h3>
+<h3>{$LANG.FuseCP_migration_needed}</h3>
 <div id="servicecontent_migration"></div>
 {foreach from=$migrationsteps item=migrationstep}
     {if $migrationstep.command eq 'migrateDbValues'}
@@ -48,19 +48,19 @@
                     <div id="modal{$migrationstep.command}_{$migrationstep.value1}_migrateHeading" class="modal-header panel-heading">
                         <button type="button" class="close" data-dismiss="modal">
                             <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">{$LANG.SolidCP_close}</span>
+                            <span class="sr-only">{$LANG.FuseCP_close}</span>
                         </button>
-                        <h4 class="modal-title" id="{$migrationstep.command}_{$migrationstep.value1}_migrateLabel">{$LANG.SolidCP_confirmmigrate}</h4>
+                        <h4 class="modal-title" id="{$migrationstep.command}_{$migrationstep.value1}_migrateLabel">{$LANG.FuseCP_confirmmigrate}</h4>
                     </div>
                     <div id="modal{$migrationstep.command}_{$migrationstep.value1}_migrateBody" class="modal-body panel-body">
-                        {$LANG.SolidCP_confirmmigrate_long}
+                        {$LANG.FuseCP_confirmmigrate_long}
                     </div>
                     <div id="modal{$migrationstep.command}_{$migrationstep.value1}_migrateFooter" class="modal-footer panel-footer">
-                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_migrate-{$LANG.SolidCP_yes}' class='btn btn-primary' onclick='runMigrationCommand("{$migrationstep.command}","{$migrationstep.value1}","{$migrationstep.value2}", "migrate");'>
-                            {$LANG.SolidCP_yes}
+                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_migrate-{$LANG.FuseCP_yes}' class='btn btn-primary' onclick='runMigrationCommand("{$migrationstep.command}","{$migrationstep.value1}","{$migrationstep.value2}", "migrate");'>
+                            {$LANG.FuseCP_yes}
                         </button>
-                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_migrate-{$LANG.SolidCP_no}' class='btn btn-default' data-dismiss="modal">
-                            {$LANG.SolidCP_no}
+                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_migrate-{$LANG.FuseCP_no}' class='btn btn-default' data-dismiss="modal">
+                            {$LANG.FuseCP_no}
                         </button>
                     </div>
                 </div>
@@ -72,15 +72,15 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <span class="fa fa-warning" id="icon_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}"></span>
-                        {$LANG.SolidCP_migrateDbValues_text|sprintf:$migrationstep.value2:$migrationstep.value1}
+                        {$LANG.FuseCP_migrateDbValues_text|sprintf:$migrationstep.value2:$migrationstep.value1}
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <div class="btn-group pull-right">
                             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}">
-                                {$LANG.SolidCP_action} <span class="caret"></span>
+                                {$LANG.FuseCP_action} <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" onclick="jQuery('#modal{$migrationstep.command}_{$migrationstep.value1}_migrate').modal('show');return false;">{$LANG.SolidCP_migratedbvalues|sprintf:$migrationstep.value1}</a></li>
+                                <li><a href="#" onclick="jQuery('#modal{$migrationstep.command}_{$migrationstep.value1}_migrate').modal('show');return false;">{$LANG.FuseCP_migratedbvalues|sprintf:$migrationstep.value1}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -94,19 +94,19 @@
                     <div id="modal{$migrationstep.command}_{$migrationstep.value1}_deleteHeading" class="modal-header panel-heading">
                         <button type="button" class="close" data-dismiss="modal">
                             <span aria-hidden="true">&times;</span>
-                            <span class="sr-only">{$LANG.SolidCP_close}</span>
+                            <span class="sr-only">{$LANG.FuseCP_close}</span>
                         </button>
-                        <h4 class="modal-title" id="{$migrationstep.command}_{$migrationstep.value1}_deleteLabel">{$LANG.SolidCP_confirmdelete}</h4>
+                        <h4 class="modal-title" id="{$migrationstep.command}_{$migrationstep.value1}_deleteLabel">{$LANG.FuseCP_confirmdelete}</h4>
                     </div>
                     <div id="modal{$migrationstep.command}_{$migrationstep.value1}_deleteBody" class="modal-body panel-body">
-                        {$LANG.SolidCP_confirmdelete_long}
+                        {$LANG.FuseCP_confirmdelete_long}
                     </div>
                     <div id="modal{$migrationstep.command}_{$migrationstep.value1}_deleteFooter" class="modal-footer panel-footer">
-                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_delete-{$LANG.SolidCP_yes}' class='btn btn-primary' onclick='runMigrationCommand("{$migrationstep.command}","{$migrationstep.value1}","{$migrationstep.value2}", "delete");'>
-                            {$LANG.SolidCP_yes}
+                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_delete-{$LANG.FuseCP_yes}' class='btn btn-primary' onclick='runMigrationCommand("{$migrationstep.command}","{$migrationstep.value1}","{$migrationstep.value2}", "delete");'>
+                            {$LANG.FuseCP_yes}
                         </button>
-                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_delete-{$LANG.SolidCP_no}' class='btn btn-default' data-dismiss="modal">
-                            {$LANG.SolidCP_no}
+                        <button type='button' id='{$migrationstep.command}_{$migrationstep.value1}_delete-{$LANG.FuseCP_no}' class='btn btn-default' data-dismiss="modal">
+                            {$LANG.FuseCP_no}
                         </button>
                     </div>
                 </div>
@@ -118,17 +118,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <span class="fa fa-warning" id="icon_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}"></span>
-                        {$LANG.SolidCP_migrateTable_text|sprintf:$migrationstep.value1:$migrationstep.value2}
+                        {$LANG.FuseCP_migrateTable_text|sprintf:$migrationstep.value1:$migrationstep.value2}
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <div class="btn-group pull-right">
                             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}">
-                                {$LANG.SolidCP_action} <span class="caret"></span>
+                                {$LANG.FuseCP_action} <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#" onclick="runMigrationCommand('{$migrationstep.command}','{$migrationstep.value1}','{$migrationstep.value2}', 'copy');return false;">{$LANG.SolidCP_copytable|sprintf:$migrationstep.value1:$migrationstep.value2}</a></li>
+                                <li><a href="#" onclick="runMigrationCommand('{$migrationstep.command}','{$migrationstep.value1}','{$migrationstep.value2}', 'copy');return false;">{$LANG.FuseCP_copytable|sprintf:$migrationstep.value1:$migrationstep.value2}</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#" onclick="jQuery('#modal{$migrationstep.command}_{$migrationstep.value1}_delete').modal('show');return false;">{$LANG.SolidCP_deletetable|sprintf:$migrationstep.value1}</a></li>
+                                <li><a href="#" onclick="jQuery('#modal{$migrationstep.command}_{$migrationstep.value1}_delete').modal('show');return false;">{$LANG.FuseCP_deletetable|sprintf:$migrationstep.value1}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -141,17 +141,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <span class="fa fa-warning" id="icon_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}"></span>
-                        {$LANG.SolidCP_deactivateModules_text|sprintf:$migrationstep.value1}
+                        {$LANG.FuseCP_deactivateModules_text|sprintf:$migrationstep.value1}
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <div class="btn-group pull-right">
                             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}">
-                                {$LANG.SolidCP_action} <span class="caret"></span>
+                                {$LANG.FuseCP_action} <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="configaddonmods.php#{$migrationstep.value1}" target="_blank">{$LANG.SolidCP_deactivatemodule|sprintf:$migrationstep.value1}</a></li>
+                                <li><a href="configaddonmods.php#{$migrationstep.value1}" target="_blank">{$LANG.FuseCP_deactivatemodule|sprintf:$migrationstep.value1}</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#" onclick="runMigrationCommand('{$migrationstep.command}','{$migrationstep.value1}','{$migrationstep.value2}', 'deactivate');return false;">{$LANG.SolidCP_checkagain}</a></li>
+                                <li><a href="#" onclick="runMigrationCommand('{$migrationstep.command}','{$migrationstep.value1}','{$migrationstep.value2}', 'deactivate');return false;">{$LANG.FuseCP_checkagain}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12">
                         <span class="fa fa-minus-circle" id="icon_{$migrationstep.command}_{$migrationstep.value1}_{$migrationstep.value2}"></span>
-                        {$LANG.SolidCP_deleteFiles_text|sprintf:$migrationstep.value1}
+                        {$LANG.FuseCP_deleteFiles_text|sprintf:$migrationstep.value1}
                     </div>
                 </div>
             </div>
@@ -172,5 +172,5 @@
     {/if}
 {/foreach}
 <div class="btn-container">
-    <button class='btn btn-primary' onclick="location.href='{$SCRIPT_NAME}?module=solidcp_module';">{$LANG.SolidCP_checkagain}</button>
+    <button class='btn btn-primary' onclick="location.href='{$SCRIPT_NAME}?module=fusecp_module';">{$LANG.FuseCP_checkagain}</button>
 </div>

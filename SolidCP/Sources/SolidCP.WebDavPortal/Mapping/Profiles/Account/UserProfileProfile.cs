@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.IO;
 using AutoMapper;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Extensions;
-using SolidCP.WebDavPortal.Constants;
-using SolidCP.WebDavPortal.FileOperations;
-using SolidCP.WebDavPortal.Models.Account;
-using SolidCP.WebDavPortal.Models.FileSystem;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Extensions;
+using FuseCP.WebDavPortal.Constants;
+using FuseCP.WebDavPortal.FileOperations;
+using FuseCP.WebDavPortal.Models.Account;
+using FuseCP.WebDavPortal.Models.FileSystem;
 
-namespace SolidCP.WebDavPortal.Mapping.Profiles.Account
+namespace FuseCP.WebDavPortal.Mapping.Profiles.Account
 {
     public class UserProfileProfile : Profile
     {

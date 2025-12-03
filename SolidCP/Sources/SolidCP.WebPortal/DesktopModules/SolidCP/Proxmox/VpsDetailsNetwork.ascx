@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsNetwork.ascx.cs" Inherits="SolidCP.Portal.Proxmox.VpsDetailsNetwork" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsNetwork.ascx.cs" Inherits="FuseCP.Portal.Proxmox.VpsDetailsNetwork" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="wsp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="wsp" %>

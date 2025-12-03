@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <AssemblyName>diff</AssemblyName>
     <TargetFramework>net48</TargetFramework>
-    <AssemblyTitle>SolidCP.FilesComparer</AssemblyTitle>
-    <Product>SolidCP.FilesComparer</Product>
+    <AssemblyTitle>FuseCP.FilesComparer</AssemblyTitle>
+    <Product>FuseCP.FilesComparer</Product>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputPath>..\..\..\Tools\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -16,7 +16,7 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SolidCP.FilesComparer.Program</StartupObject>
+    <StartupObject>FuseCP.FilesComparer.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="..\..\VersionInfo.cs" Link="VersionInfo.cs" />

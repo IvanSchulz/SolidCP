@@ -40,9 +40,9 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using System.Diagnostics;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class InstallFolderPage : BannerWizardPage
 	{

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -9,34 +9,34 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using AutoMapper;
-using SolidCP.WebDav.Core;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Entities.Account.Enums;
-using SolidCP.WebDav.Core.Exceptions;
-using SolidCP.WebDav.Core.Extensions;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Managers.Users;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Security.Authorization.Enums;
-using SolidCP.WebDav.Core.Security.Cryptography;
-using SolidCP.WebDav.Core.Scp.Framework;
-using SolidCP.WebDavPortal.CustomAttributes;
-using SolidCP.WebDavPortal.Extensions;
-using SolidCP.WebDavPortal.FileOperations;
-using SolidCP.WebDavPortal.Helpers;
-using SolidCP.WebDavPortal.ModelBinders.DataTables;
-using SolidCP.WebDavPortal.Models;
+using FuseCP.WebDav.Core;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Entities.Account.Enums;
+using FuseCP.WebDav.Core.Exceptions;
+using FuseCP.WebDav.Core.Extensions;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Managers.Users;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Security.Authorization.Enums;
+using FuseCP.WebDav.Core.Security.Cryptography;
+using FuseCP.WebDav.Core.Scp.Framework;
+using FuseCP.WebDavPortal.CustomAttributes;
+using FuseCP.WebDavPortal.Extensions;
+using FuseCP.WebDavPortal.FileOperations;
+using FuseCP.WebDavPortal.Helpers;
+using FuseCP.WebDavPortal.ModelBinders.DataTables;
+using FuseCP.WebDavPortal.Models;
 using System.Net;
-using SolidCP.WebDavPortal.Models.Common;
-using SolidCP.WebDavPortal.Models.Common.DataTable;
-using SolidCP.WebDavPortal.Models.Common.Enums;
-using SolidCP.WebDavPortal.Models.FileSystem;
-using SolidCP.WebDavPortal.UI;
-using SolidCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDavPortal.Models.Common;
+using FuseCP.WebDavPortal.Models.Common.DataTable;
+using FuseCP.WebDavPortal.Models.Common.Enums;
+using FuseCP.WebDavPortal.Models.FileSystem;
+using FuseCP.WebDavPortal.UI;
+using FuseCP.WebDavPortal.UI.Routes;
 
 
-namespace SolidCP.WebDavPortal.Controllers
+namespace FuseCP.WebDavPortal.Controllers
 
 {
     [ValidateInput(false)]

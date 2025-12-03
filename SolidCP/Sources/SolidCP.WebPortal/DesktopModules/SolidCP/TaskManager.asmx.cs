@@ -39,14 +39,14 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     /// <summary>
     /// Summary description for PresentationServices
     /// </summary>
-    [WebService(Namespace = "http://smbsaas/solidcp/webportal")]
+    [WebService(Namespace = "http://smbsaas/fusecp/webportal")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 	[System.Web.Script.Services.ScriptService]
     public class TaskManager : System.Web.Services.WebService

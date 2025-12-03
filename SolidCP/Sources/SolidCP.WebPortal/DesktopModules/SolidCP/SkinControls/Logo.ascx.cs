@@ -40,9 +40,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     public partial class Logo : System.Web.UI.UserControl
     {
@@ -59,7 +59,7 @@ namespace SolidCP.Portal.SkinControls
             if (Page.User.Identity.IsAuthenticated)
             {
                 UserSettings settings = UsersHelper.GetCachedUserSettings(PanelSecurity.EffectiveUserId,
-                                                                          UserSettings.SolidCP_POLICY);
+                                                                          UserSettings.FuseCP_POLICY);
                 if (settings != null)
                 {
                     string logoImageURL = settings["LogoImageURL"];

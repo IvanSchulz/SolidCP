@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -123,8 +123,8 @@
   <data name="btnCancelText.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="lnkSolidCPPolicy.Text" xml:space="preserve">
-    <value>SolidCP Policy</value>
+  <data name="lnkFuseCPPolicy.Text" xml:space="preserve">
+    <value>FuseCP Policy</value>
   </data>
   <data name="lnkExchangePolicy.Text" xml:space="preserve">
     <value>Hosted Organization Policy</value>

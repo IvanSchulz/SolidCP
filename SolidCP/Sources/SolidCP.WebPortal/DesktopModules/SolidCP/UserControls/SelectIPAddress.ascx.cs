@@ -41,11 +41,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SelectIPAddress : SolidCPControlBase
+    public partial class SelectIPAddress : FuseCPControlBase
     {
         private bool allowEmptySelection = true;
         public bool AllowEmptySelection

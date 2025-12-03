@@ -32,13 +32,13 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 using System.Reflection;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeCheckDomainName : SolidCPModuleBase
+    public partial class ExchangeCheckDomainName : FuseCPModuleBase
     {
         private static string EXCHANGEACCOUNTEMAILADDRESSES = "ExchangeAccountEmailAddresses";
         private static string EXCHANGEACCOUNTS = "ExchangeAccounts";

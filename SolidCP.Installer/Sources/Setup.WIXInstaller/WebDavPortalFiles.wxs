@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Fragment>
         <DirectoryRef Id="INSTALLWEBDAVPORTALFOLDER">
@@ -158,25 +158,25 @@
                 <File Id="fil4389BF4C66AEA945283F8D38E40E0DA9" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\RestSharp.dll" />
             </Component>
             <Component Id="cmpD0A99F2A01E50604E2FFB6DC15EAF099" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{7F87370A-4B9F-49A6-8273-1D274FEF33A3}">
-                <File Id="fil0617D52A974D56FE9AE1A7A8D986C7D3" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.EnterpriseServer.Base.dll" />
+                <File Id="fil0617D52A974D56FE9AE1A7A8D986C7D3" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.EnterpriseServer.Base.dll" />
             </Component>
             <Component Id="cmpD14B9FF284CDAB53AB94043663D1FDE5" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{84675C85-F37A-45B9-8618-147A22297781}">
-                <File Id="filC227386260D0C1DC500A3352FA578045" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.EnterpriseServer.Client.dll" />
+                <File Id="filC227386260D0C1DC500A3352FA578045" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.EnterpriseServer.Client.dll" />
             </Component>
             <Component Id="cmpD2C94AE7FDAAD568C9C2FB949C4D8D71" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{AE4EBF18-55E8-4814-883D-6A9EDB50BA12}">
-                <File Id="fil39ECEFABE6F0549652C010C29DD9362F" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.Providers.Base.dll" />
+                <File Id="fil39ECEFABE6F0549652C010C29DD9362F" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.Providers.Base.dll" />
             </Component>
             <Component Id="cmpFADE1D1E7EC9111DA2A8BD12460FB28A" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{237A2C2D-5629-4EC8-A1E6-DE22CB1ABE95}">
-                <File Id="fil2889E64CDE5AB43746538C5FBFAA1CAD" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.Server.Utils.dll" />
+                <File Id="fil2889E64CDE5AB43746538C5FBFAA1CAD" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.Server.Utils.dll" />
             </Component>
             <Component Id="cmpADAE24FA66243FD6E18CA324ECA06FFA" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{B719372D-2871-4215-89DE-040BB9B43826}">
-                <File Id="fil76C5BA136F66C287DDD8ECDF6E2130CB" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.WebDav.Core.dll" />
+                <File Id="fil76C5BA136F66C287DDD8ECDF6E2130CB" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.WebDav.Core.dll" />
             </Component>
             <Component Id="cmp435F99BFE5EE392B4BE0D973A262C2A1" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{F5F45142-70FF-41FF-94BC-64863970D5B8}">
-                <File Id="fil7C52A1271A3BA4B71CF9434114701D0D" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.WebDavPortal.dll" />
+                <File Id="fil7C52A1271A3BA4B71CF9434114701D0D" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.WebDavPortal.dll" />
             </Component>
             <Component Id="cmp64B0F6A26B111F8743BD92C591356F5F" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{E26E4210-0C44-4ECE-A726-A2216A97FF38}">
-                <File Id="fil66784B0051CDA167F7BB568047AB3D9D" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\SolidCP.WebDavPortal.dll.config" />
+                <File Id="fil66784B0051CDA167F7BB568047AB3D9D" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\FuseCP.WebDavPortal.dll.config" />
             </Component>
             <Component Id="cmpF75279CAEF85ED6DCC0951027A4D829D" Directory="dirA488D7C8E79ACCB655B160355DEE4802" Guid="{5F412F00-539C-42F4-9FFB-41B9F4D04D8D}">
                 <File Id="filB60B1F3DC07A601A21CAB93E64B80BF8" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\bin\System.Net.Http.Formatting.dll" />

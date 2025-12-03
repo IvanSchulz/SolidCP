@@ -1,6 +1,6 @@
-﻿using SolidCP.WebDavPortal.Models.Common.Enums;
+using FuseCP.WebDavPortal.Models.Common.Enums;
 
-namespace SolidCP.WebDavPortal.Models.Common
+namespace FuseCP.WebDavPortal.Models.Common
 {
     public class Message
     {

@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SkinControls {
+namespace FuseCP.Portal.SkinControls {
     
     
     public partial class TopMenu {

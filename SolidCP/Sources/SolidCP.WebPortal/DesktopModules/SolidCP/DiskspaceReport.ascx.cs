@@ -41,16 +41,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 using System.Xml.Serialization;
 using System.IO;
 using System.Xml;
 using System.Xml.Xsl;
 using System.Reflection;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class DiskspaceReport : SolidCPModuleBase
+    public partial class DiskspaceReport : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {            

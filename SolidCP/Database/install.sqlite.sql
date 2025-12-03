@@ -1,4 +1,4 @@
-﻿CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
     "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
     "ProductVersion" TEXT NOT NULL
 );
@@ -2428,43 +2428,43 @@ SELECT changes();
 
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (1, 'SolidCP.EnterpriseServer.OperatingSystemController', 'OS', 1, 1);
+VALUES (1, 'FuseCP.EnterpriseServer.OperatingSystemController', 'OS', 1, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (2, 'SolidCP.EnterpriseServer.WebServerController', 'Web', 2, 1);
+VALUES (2, 'FuseCP.EnterpriseServer.WebServerController', 'Web', 2, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (3, 'SolidCP.EnterpriseServer.FtpServerController', 'FTP', 3, 1);
+VALUES (3, 'FuseCP.EnterpriseServer.FtpServerController', 'FTP', 3, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (4, 'SolidCP.EnterpriseServer.MailServerController', 'Mail', 4, 1);
+VALUES (4, 'FuseCP.EnterpriseServer.MailServerController', 'Mail', 4, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (5, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2000', 7, 1);
+VALUES (5, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2000', 7, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (6, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL4', 11, 1);
+VALUES (6, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL4', 11, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (7, 'SolidCP.EnterpriseServer.DnsServerController', 'DNS', 17, 1);
+VALUES (7, 'FuseCP.EnterpriseServer.DnsServerController', 'DNS', 17, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (8, 'SolidCP.EnterpriseServer.StatisticsServerController', 'Statistics', 18, 1);
+VALUES (8, 'FuseCP.EnterpriseServer.StatisticsServerController', 'Statistics', 18, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (10, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2005', 8, 1);
+VALUES (10, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2005', 8, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (11, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL5', 12, 1);
+VALUES (11, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL5', 12, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2476,7 +2476,7 @@ VALUES (13, NULL, 'Hosted Organizations', 6, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (20, 'SolidCP.EnterpriseServer.HostedSharePointServerController', 'Sharepoint Foundation Server', 14, 1);
+VALUES (20, 'FuseCP.EnterpriseServer.HostedSharePointServerController', 'Sharepoint Foundation Server', 14, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2484,11 +2484,11 @@ VALUES (21, NULL, 'Hosted CRM', 16, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (22, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2008', 9, 1);
+VALUES (22, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2008', 9, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (23, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2012', 10, 1);
+VALUES (23, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2012', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2520,7 +2520,7 @@ VALUES (41, NULL, 'Lync', 24, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (44, 'SolidCP.EnterpriseServer.EnterpriseStorageController', 'EnterpriseStorage', 26, 1);
+VALUES (44, 'FuseCP.EnterpriseServer.EnterpriseStorageController', 'EnterpriseStorage', 26, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2528,7 +2528,7 @@ VALUES (45, NULL, 'RDS', 27, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (46, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2014', 10, 1);
+VALUES (46, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2014', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2536,11 +2536,11 @@ VALUES (47, NULL, 'Service Levels', 2, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (49, 'SolidCP.EnterpriseServer.StorageSpacesController', 'StorageSpaceServices', 26, 1);
+VALUES (49, 'FuseCP.EnterpriseServer.StorageSpacesController', 'StorageSpaceServices', 26, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (50, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MariaDB', 11, 1);
+VALUES (50, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MariaDB', 11, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2552,35 +2552,35 @@ VALUES (61, NULL, 'MailFilters', 5, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (71, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2016', 10, 1);
+VALUES (71, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2016', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (72, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2017', 10, 1);
+VALUES (72, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2017', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (73, 'SolidCP.EnterpriseServer.HostedSharePointServerEntController', 'Sharepoint Enterprise Server', 15, 1);
+VALUES (73, 'FuseCP.EnterpriseServer.HostedSharePointServerEntController', 'Sharepoint Enterprise Server', 15, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (74, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2019', 10, 1);
+VALUES (74, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2019', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (75, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2022', 10, 1);
+VALUES (75, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2022', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (76, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MsSQL2025', 10, 1);
+VALUES (76, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MsSQL2025', 10, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (90, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL8', 12, 1);
+VALUES (90, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL8', 12, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
-VALUES (91, 'SolidCP.EnterpriseServer.DatabaseServerController', 'MySQL9', 12, 1);
+VALUES (91, 'FuseCP.EnterpriseServer.DatabaseServerController', 'MySQL9', 12, 1);
 SELECT changes();
 
 INSERT INTO "ResourceGroups" ("GroupID", "GroupController", "GroupName", "GroupOrder", "ShowGroup")
@@ -2589,99 +2589,99 @@ SELECT changes();
 
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.ActivatePaidInvoicesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_AUDIT_LOG_REPORT', 3, 'SolidCP.EnterpriseServer.AuditLogReportTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_AUDIT_LOG_REPORT', 3, 'FuseCP.EnterpriseServer.AuditLogReportTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_BACKUP', 1, 'SolidCP.EnterpriseServer.BackupTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_BACKUP', 1, 'FuseCP.EnterpriseServer.BackupTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_BACKUP_DATABASE', 3, 'SolidCP.EnterpriseServer.BackupDatabaseTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_BACKUP_DATABASE', 3, 'FuseCP.EnterpriseServer.BackupDatabaseTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', 2, 'SolidCP.EnterpriseServer.CalculateExchangeDiskspaceTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', 2, 'FuseCP.EnterpriseServer.CalculateExchangeDiskspaceTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', 1, 'SolidCP.EnterpriseServer.CalculatePackagesBandwidthTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', 1, 'FuseCP.EnterpriseServer.CalculatePackagesBandwidthTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', 1, 'SolidCP.EnterpriseServer.CalculatePackagesDiskspaceTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', 1, 'FuseCP.EnterpriseServer.CalculatePackagesDiskspaceTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.CancelOverdueInvoicesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_CHECK_WEBSITE', 3, 'SolidCP.EnterpriseServer.CheckWebSiteTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_CHECK_WEBSITE', 3, 'FuseCP.EnterpriseServer.CheckWebSiteTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_CHECK_WEBSITES_SSL', 3, 'SolidCP.EnterpriseServer.CheckWebsitesSslTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_CHECK_WEBSITES_SSL', 3, 'FuseCP.EnterpriseServer.CheckWebsitesSslTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS', 3, 'SolidCP.EnterpriseServer.DeleteExchangeAccountsTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_DELETE_EXCHANGE_ACCOUNTS', 3, 'FuseCP.EnterpriseServer.DeleteExchangeAccountsTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_DOMAIN_EXPIRATION', 3, 'SolidCP.EnterpriseServer.DomainExpirationTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_DOMAIN_EXPIRATION', 3, 'FuseCP.EnterpriseServer.DomainExpirationTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_DOMAIN_LOOKUP', 1, 'SolidCP.EnterpriseServer.DomainLookupViewTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_DOMAIN_LOOKUP', 1, 'FuseCP.EnterpriseServer.DomainLookupViewTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_FTP_FILES', 3, 'SolidCP.EnterpriseServer.FTPFilesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_FTP_FILES', 3, 'FuseCP.EnterpriseServer.FTPFilesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_GENERATE_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_GENERATE_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.GenerateInvoicesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', 2, 'SolidCP.EnterpriseServer.HostedSolutionReportTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', 2, 'FuseCP.EnterpriseServer.HostedSolutionReportTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', 2, 'SolidCP.EnterpriseServer.NotifyOverusedDatabasesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', 2, 'FuseCP.EnterpriseServer.NotifyOverusedDatabasesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_RUN_PAYMENT_QUEUE', 0, 'SolidCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_RUN_PAYMENT_QUEUE', 0, 'FuseCP.Ecommerce.EnterpriseServer.RunPaymentQueueTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_RUN_SYSTEM_COMMAND', 1, 'SolidCP.EnterpriseServer.RunSystemCommandTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_RUN_SYSTEM_COMMAND', 1, 'FuseCP.EnterpriseServer.RunSystemCommandTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_SEND_MAIL', 3, 'SolidCP.EnterpriseServer.SendMailNotificationTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_SEND_MAIL', 3, 'FuseCP.EnterpriseServer.SendMailNotificationTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', 0, 'SolidCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', 0, 'FuseCP.Ecommerce.EnterpriseServer.SuspendOverdueInvoicesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_SUSPEND_PACKAGES', 2, 'SolidCP.EnterpriseServer.SuspendOverusedPackagesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_SUSPEND_PACKAGES', 2, 'FuseCP.EnterpriseServer.SuspendOverusedPackagesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', 1, 'SolidCP.EnterpriseServer.UserPasswordExpirationNotificationTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', 1, 'FuseCP.EnterpriseServer.UserPasswordExpirationNotificationTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 INSERT INTO "ScheduleTasks" ("TaskID", "RoleID", "TaskType")
-VALUES ('SCHEDULE_TASK_ZIP_FILES', 3, 'SolidCP.EnterpriseServer.ZipFilesTask, SolidCP.EnterpriseServer.Code');
+VALUES ('SCHEDULE_TASK_ZIP_FILES', 3, 'FuseCP.EnterpriseServer.ZipFilesTask, FuseCP.EnterpriseServer.Code');
 SELECT changes();
 
 
@@ -2694,7 +2694,7 @@ VALUES ('CanPeerChangeMfa', 'AuthenticationSettings', 'True');
 SELECT changes();
 
 INSERT INTO "SystemSettings" ("PropertyName", "SettingsName", "PropertyValue")
-VALUES ('MfaTokenAppDisplayName', 'AuthenticationSettings', 'SolidCP');
+VALUES ('MfaTokenAppDisplayName', 'AuthenticationSettings', 'FuseCP');
 SELECT changes();
 
 INSERT INTO "SystemSettings" ("PropertyName", "SettingsName", "PropertyValue")
@@ -2800,7 +2800,7 @@ SELECT changes();
 
 
 INSERT INTO "Themes" ("ThemeID", "DisplayName", "DisplayOrder", "Enabled", "LTRName", "RTLName")
-VALUES (1, 'SolidCP v1', 1, 1, 'Default', 'Default');
+VALUES (1, 'FuseCP v1', 1, 1, 'Default', 'Default');
 SELECT changes();
 
 
@@ -2856,575 +2856,575 @@ SELECT changes();
 
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1, NULL, 'Windows Server 2003', 'Windows2003', 1, 'Windows2003', 'SolidCP.Providers.OS.Windows2003, SolidCP.Providers.OS.Windows2003');
+VALUES (1, NULL, 'Windows Server 2003', 'Windows2003', 1, 'Windows2003', 'FuseCP.Providers.OS.Windows2003, FuseCP.Providers.OS.Windows2003');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (2, NULL, 'Internet Information Services 6.0', 'IIS60', 2, 'IIS60', 'SolidCP.Providers.Web.IIs60, SolidCP.Providers.Web.IIs60');
+VALUES (2, NULL, 'Internet Information Services 6.0', 'IIS60', 2, 'IIS60', 'FuseCP.Providers.Web.IIs60, FuseCP.Providers.Web.IIs60');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (3, NULL, 'Microsoft FTP Server 6.0', 'MSFTP60', 3, 'MSFTP60', 'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs60');
+VALUES (3, NULL, 'Microsoft FTP Server 6.0', 'MSFTP60', 3, 'MSFTP60', 'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs60');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (4, NULL, 'MailEnable Server 1.x - 7.x', 'MailEnable', 4, 'MailEnable', 'SolidCP.Providers.Mail.MailEnable, SolidCP.Providers.Mail.MailEnable');
+VALUES (4, NULL, 'MailEnable Server 1.x - 7.x', 'MailEnable', 4, 'MailEnable', 'FuseCP.Providers.Mail.MailEnable, FuseCP.Providers.Mail.MailEnable');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (5, NULL, 'Microsoft SQL Server 2000', 'MSSQL', 5, 'MSSQL', 'SolidCP.Providers.Database.MsSqlServer, SolidCP.Providers.Database.SqlServer');
+VALUES (5, NULL, 'Microsoft SQL Server 2000', 'MSSQL', 5, 'MSSQL', 'FuseCP.Providers.Database.MsSqlServer, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (6, NULL, 'MySQL Server 4.x', 'MySQL', 6, 'MySQL', 'SolidCP.Providers.Database.MySqlServer, SolidCP.Providers.Database.MySQL');
+VALUES (6, NULL, 'MySQL Server 4.x', 'MySQL', 6, 'MySQL', 'FuseCP.Providers.Database.MySqlServer, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (7, NULL, 'Microsoft DNS Server', 'MSDNS', 7, 'MSDNS', 'SolidCP.Providers.DNS.MsDNS, SolidCP.Providers.DNS.MsDNS');
+VALUES (7, NULL, 'Microsoft DNS Server', 'MSDNS', 7, 'MSDNS', 'FuseCP.Providers.DNS.MsDNS, FuseCP.Providers.DNS.MsDNS');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (8, NULL, 'AWStats Statistics Service', 'AWStats', 8, 'AWStats', 'SolidCP.Providers.Statistics.AWStats, SolidCP.Providers.Statistics.AWStats');
+VALUES (8, NULL, 'AWStats Statistics Service', 'AWStats', 8, 'AWStats', 'FuseCP.Providers.Statistics.AWStats, FuseCP.Providers.Statistics.AWStats');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (9, NULL, 'SimpleDNS Plus 4.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS, SolidCP.Providers.DNS.SimpleDNS');
+VALUES (9, NULL, 'SimpleDNS Plus 4.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS, FuseCP.Providers.DNS.SimpleDNS');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (10, NULL, 'SmarterStats 3.x', 'SmarterStats', 8, 'SmarterStats', 'SolidCP.Providers.Statistics.SmarterStats, SolidCP.Providers.Statistics.SmarterStats');
+VALUES (10, NULL, 'SmarterStats 3.x', 'SmarterStats', 8, 'SmarterStats', 'FuseCP.Providers.Statistics.SmarterStats, FuseCP.Providers.Statistics.SmarterStats');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (11, NULL, 'SmarterMail 2.x', 'SmarterMail', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail2, SolidCP.Providers.Mail.SmarterMail2');
+VALUES (11, NULL, 'SmarterMail 2.x', 'SmarterMail', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail2, FuseCP.Providers.Mail.SmarterMail2');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (12, NULL, 'Gene6 FTP Server 3.x', 'Gene6FTP', 3, 'Gene6FTP', 'SolidCP.Providers.FTP.Gene6, SolidCP.Providers.FTP.Gene6');
+VALUES (12, NULL, 'Gene6 FTP Server 3.x', 'Gene6FTP', 3, 'Gene6FTP', 'FuseCP.Providers.FTP.Gene6, FuseCP.Providers.FTP.Gene6');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (13, NULL, 'Merak Mail Server 8.0.3 - 9.2.x', 'Merak', 4, 'Merak', 'SolidCP.Providers.Mail.Merak, SolidCP.Providers.Mail.Merak');
+VALUES (13, NULL, 'Merak Mail Server 8.0.3 - 9.2.x', 'Merak', 4, 'Merak', 'FuseCP.Providers.Mail.Merak, FuseCP.Providers.Mail.Merak');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (14, NULL, 'SmarterMail 3.x - 4.x', 'SmarterMail', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail3, SolidCP.Providers.Mail.SmarterMail3');
+VALUES (14, NULL, 'SmarterMail 3.x - 4.x', 'SmarterMail', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail3, FuseCP.Providers.Mail.SmarterMail3');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (16, NULL, 'Microsoft SQL Server 2005', 'MSSQL', 10, 'MSSQL', 'SolidCP.Providers.Database.MsSqlServer2005, SolidCP.Providers.Database.SqlServer');
+VALUES (16, NULL, 'Microsoft SQL Server 2005', 'MSSQL', 10, 'MSSQL', 'FuseCP.Providers.Database.MsSqlServer2005, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (17, NULL, 'MySQL Server 5.0', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer50, SolidCP.Providers.Database.MySQL');
+VALUES (17, NULL, 'MySQL Server 5.0', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer50, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (18, NULL, 'MDaemon 9.x - 11.x', 'MDaemon', 4, 'MDaemon', 'SolidCP.Providers.Mail.MDaemon, SolidCP.Providers.Mail.MDaemon');
+VALUES (18, NULL, 'MDaemon 9.x - 11.x', 'MDaemon', 4, 'MDaemon', 'FuseCP.Providers.Mail.MDaemon, FuseCP.Providers.Mail.MDaemon');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (19, 1, 'ArGoSoft Mail Server 1.x', 'ArgoMail', 4, 'ArgoMail', 'SolidCP.Providers.Mail.ArgoMail, SolidCP.Providers.Mail.ArgoMail');
+VALUES (19, 1, 'ArGoSoft Mail Server 1.x', 'ArgoMail', 4, 'ArgoMail', 'FuseCP.Providers.Mail.ArgoMail, FuseCP.Providers.Mail.ArgoMail');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (20, NULL, 'hMailServer 4.2', 'hMailServer', 4, 'hMailServer', 'SolidCP.Providers.Mail.hMailServer, SolidCP.Providers.Mail.hMailServer');
+VALUES (20, NULL, 'hMailServer 4.2', 'hMailServer', 4, 'hMailServer', 'FuseCP.Providers.Mail.hMailServer, FuseCP.Providers.Mail.hMailServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (21, NULL, 'Ability Mail Server 2.x', 'AbilityMailServer', 4, 'AbilityMailServer', 'SolidCP.Providers.Mail.AbilityMailServer, SolidCP.Providers.Mail.AbilityMailServer');
+VALUES (21, NULL, 'Ability Mail Server 2.x', 'AbilityMailServer', 4, 'AbilityMailServer', 'FuseCP.Providers.Mail.AbilityMailServer, FuseCP.Providers.Mail.AbilityMailServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (22, NULL, 'hMailServer 4.3', 'hMailServer43', 4, 'hMailServer43', 'SolidCP.Providers.Mail.hMailServer43, SolidCP.Providers.Mail.hMailServer43');
+VALUES (22, NULL, 'hMailServer 4.3', 'hMailServer43', 4, 'hMailServer43', 'FuseCP.Providers.Mail.hMailServer43, FuseCP.Providers.Mail.hMailServer43');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (24, NULL, 'ISC BIND 8.x - 9.x', 'Bind', 7, 'Bind', 'SolidCP.Providers.DNS.IscBind, SolidCP.Providers.DNS.Bind');
+VALUES (24, NULL, 'ISC BIND 8.x - 9.x', 'Bind', 7, 'Bind', 'FuseCP.Providers.DNS.IscBind, FuseCP.Providers.DNS.Bind');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (25, NULL, 'Serv-U FTP 6.x', 'ServU', 3, 'ServU', 'SolidCP.Providers.FTP.ServU, SolidCP.Providers.FTP.ServU');
+VALUES (25, NULL, 'Serv-U FTP 6.x', 'ServU', 3, 'ServU', 'FuseCP.Providers.FTP.ServU, FuseCP.Providers.FTP.ServU');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (26, NULL, 'FileZilla FTP Server 0.9', 'FileZilla', 3, 'FileZilla', 'SolidCP.Providers.FTP.FileZilla, SolidCP.Providers.FTP.FileZilla');
+VALUES (26, NULL, 'FileZilla FTP Server 0.9', 'FileZilla', 3, 'FileZilla', 'FuseCP.Providers.FTP.FileZilla, FuseCP.Providers.FTP.FileZilla');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (27, NULL, 'Hosted Microsoft Exchange Server 2007', 'Exchange', 12, 'Exchange2007', 'SolidCP.Providers.HostedSolution.Exchange2007, SolidCP.Providers.HostedSolution');
+VALUES (27, NULL, 'Hosted Microsoft Exchange Server 2007', 'Exchange', 12, 'Exchange2007', 'FuseCP.Providers.HostedSolution.Exchange2007, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (28, NULL, 'SimpleDNS Plus 5.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS5, SolidCP.Providers.DNS.SimpleDNS50');
+VALUES (28, NULL, 'SimpleDNS Plus 5.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS5, FuseCP.Providers.DNS.SimpleDNS50');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (29, NULL, 'SmarterMail 5.x', 'SmarterMail50', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail5, SolidCP.Providers.Mail.SmarterMail5');
+VALUES (29, NULL, 'SmarterMail 5.x', 'SmarterMail50', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail5, FuseCP.Providers.Mail.SmarterMail5');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (30, NULL, 'MySQL Server 5.1', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer51, SolidCP.Providers.Database.MySQL');
+VALUES (30, NULL, 'MySQL Server 5.1', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer51, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (31, NULL, 'SmarterStats 4.x', 'SmarterStats', 8, 'SmarterStats', 'SolidCP.Providers.Statistics.SmarterStats4, SolidCP.Providers.Statistics.SmarterStats');
+VALUES (31, NULL, 'SmarterStats 4.x', 'SmarterStats', 8, 'SmarterStats', 'FuseCP.Providers.Statistics.SmarterStats4, FuseCP.Providers.Statistics.SmarterStats');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (32, NULL, 'Hosted Microsoft Exchange Server 2010', 'Exchange', 12, 'Exchange2010', 'SolidCP.Providers.HostedSolution.Exchange2010, SolidCP.Providers.HostedSolution');
+VALUES (32, NULL, 'Hosted Microsoft Exchange Server 2010', 'Exchange', 12, 'Exchange2010', 'FuseCP.Providers.HostedSolution.Exchange2010, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (55, 1, 'Nettica DNS', 'NetticaDNS', 7, 'NetticaDNS', 'SolidCP.Providers.DNS.Nettica, SolidCP.Providers.DNS.Nettica');
+VALUES (55, 1, 'Nettica DNS', 'NetticaDNS', 7, 'NetticaDNS', 'FuseCP.Providers.DNS.Nettica, FuseCP.Providers.DNS.Nettica');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (56, 1, 'PowerDNS', 'PowerDNS', 7, 'PowerDNS', 'SolidCP.Providers.DNS.PowerDNS, SolidCP.Providers.DNS.PowerDNS');
+VALUES (56, 1, 'PowerDNS', 'PowerDNS', 7, 'PowerDNS', 'FuseCP.Providers.DNS.PowerDNS, FuseCP.Providers.DNS.PowerDNS');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (60, NULL, 'SmarterMail 6.x', 'SmarterMail60', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail6, SolidCP.Providers.Mail.SmarterMail6');
+VALUES (60, NULL, 'SmarterMail 6.x', 'SmarterMail60', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail6, FuseCP.Providers.Mail.SmarterMail6');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (61, NULL, 'Merak Mail Server 10.x', 'Merak', 4, 'Merak', 'SolidCP.Providers.Mail.Merak10, SolidCP.Providers.Mail.Merak10');
+VALUES (61, NULL, 'Merak Mail Server 10.x', 'Merak', 4, 'Merak', 'FuseCP.Providers.Mail.Merak10, FuseCP.Providers.Mail.Merak10');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (62, NULL, 'SmarterStats 5.x +', 'SmarterStats', 8, 'SmarterStats', 'SolidCP.Providers.Statistics.SmarterStats5, SolidCP.Providers.Statistics.SmarterStats');
+VALUES (62, NULL, 'SmarterStats 5.x +', 'SmarterStats', 8, 'SmarterStats', 'FuseCP.Providers.Statistics.SmarterStats5, FuseCP.Providers.Statistics.SmarterStats');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (63, NULL, 'hMailServer 5.x', 'hMailServer5', 4, 'hMailServer5', 'SolidCP.Providers.Mail.hMailServer5, SolidCP.Providers.Mail.hMailServer5');
+VALUES (63, NULL, 'hMailServer 5.x', 'hMailServer5', 4, 'hMailServer5', 'FuseCP.Providers.Mail.hMailServer5, FuseCP.Providers.Mail.hMailServer5');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (64, NULL, 'SmarterMail 7.x - 8.x', 'SmarterMail60', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail7, SolidCP.Providers.Mail.SmarterMail7');
+VALUES (64, NULL, 'SmarterMail 7.x - 8.x', 'SmarterMail60', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail7, FuseCP.Providers.Mail.SmarterMail7');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (65, NULL, 'SmarterMail 9.x', 'SmarterMail60', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail9, SolidCP.Providers.Mail.SmarterMail9');
+VALUES (65, NULL, 'SmarterMail 9.x', 'SmarterMail60', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail9, FuseCP.Providers.Mail.SmarterMail9');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (66, NULL, 'SmarterMail 10.x +', 'SmarterMail100', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail10, SolidCP.Providers.Mail.SmarterMail10');
+VALUES (66, NULL, 'SmarterMail 10.x +', 'SmarterMail100', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail10, FuseCP.Providers.Mail.SmarterMail10');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (67, NULL, 'SmarterMail 100.x +', 'SmarterMail100x', 4, 'SmarterMail', 'SolidCP.Providers.Mail.SmarterMail100, SolidCP.Providers.Mail.SmarterMail100');
+VALUES (67, NULL, 'SmarterMail 100.x +', 'SmarterMail100x', 4, 'SmarterMail', 'FuseCP.Providers.Mail.SmarterMail100, FuseCP.Providers.Mail.SmarterMail100');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (90, NULL, 'Hosted Microsoft Exchange Server 2010 SP2', 'Exchange', 12, 'Exchange2010SP2', 'SolidCP.Providers.HostedSolution.Exchange2010SP2, SolidCP.Providers.HostedSolution');
+VALUES (90, NULL, 'Hosted Microsoft Exchange Server 2010 SP2', 'Exchange', 12, 'Exchange2010SP2', 'FuseCP.Providers.HostedSolution.Exchange2010SP2, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (91, NULL, 'Hosted Microsoft Exchange Server 2013', 'Exchange', 12, 'Exchange2013', 'SolidCP.Providers.HostedSolution.Exchange2013, SolidCP.Providers.HostedSolution.Exchange2013');
+VALUES (91, NULL, 'Hosted Microsoft Exchange Server 2013', 'Exchange', 12, 'Exchange2013', 'FuseCP.Providers.HostedSolution.Exchange2013, FuseCP.Providers.HostedSolution.Exchange2013');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (92, NULL, 'Hosted Microsoft Exchange Server 2016', 'Exchange', 12, 'Exchange2016', 'SolidCP.Providers.HostedSolution.Exchange2016, SolidCP.Providers.HostedSolution.Exchange2016');
+VALUES (92, NULL, 'Hosted Microsoft Exchange Server 2016', 'Exchange', 12, 'Exchange2016', 'FuseCP.Providers.HostedSolution.Exchange2016, FuseCP.Providers.HostedSolution.Exchange2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (93, NULL, 'Hosted Microsoft Exchange Server 2019', 'Exchange', 12, 'Exchange2016', 'SolidCP.Providers.HostedSolution.Exchange2019, SolidCP.Providers.HostedSolution.Exchange2019');
+VALUES (93, NULL, 'Hosted Microsoft Exchange Server 2019', 'Exchange', 12, 'Exchange2016', 'FuseCP.Providers.HostedSolution.Exchange2019, FuseCP.Providers.HostedSolution.Exchange2019');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (100, NULL, 'Windows Server 2008', 'Windows2008', 1, 'Windows2008', 'SolidCP.Providers.OS.Windows2008, SolidCP.Providers.OS.Windows2008');
+VALUES (100, NULL, 'Windows Server 2008', 'Windows2008', 1, 'Windows2008', 'FuseCP.Providers.OS.Windows2008, FuseCP.Providers.OS.Windows2008');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (101, NULL, 'Internet Information Services 7.0', 'IIS70', 2, 'IIS70', 'SolidCP.Providers.Web.IIs70, SolidCP.Providers.Web.IIs70');
+VALUES (101, NULL, 'Internet Information Services 7.0', 'IIS70', 2, 'IIS70', 'FuseCP.Providers.Web.IIs70, FuseCP.Providers.Web.IIs70');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (102, NULL, 'Microsoft FTP Server 7.0', 'MSFTP70', 3, 'MSFTP70', 'SolidCP.Providers.FTP.MsFTP, SolidCP.Providers.FTP.IIs70');
+VALUES (102, NULL, 'Microsoft FTP Server 7.0', 'MSFTP70', 3, 'MSFTP70', 'FuseCP.Providers.FTP.MsFTP, FuseCP.Providers.FTP.IIs70');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (103, NULL, 'Hosted Organizations', 'Organizations', 13, 'Organizations', 'SolidCP.Providers.HostedSolution.OrganizationProvider, SolidCP.Providers.HostedSolution');
+VALUES (103, NULL, 'Hosted Organizations', 'Organizations', 13, 'Organizations', 'FuseCP.Providers.HostedSolution.OrganizationProvider, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (104, NULL, 'Windows Server 2012', 'Windows2012', 1, 'Windows2012', 'SolidCP.Providers.OS.Windows2012, SolidCP.Providers.OS.Windows2012');
+VALUES (104, NULL, 'Windows Server 2012', 'Windows2012', 1, 'Windows2012', 'FuseCP.Providers.OS.Windows2012, FuseCP.Providers.OS.Windows2012');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (105, NULL, 'Internet Information Services 8.0', 'IIS70', 2, 'IIS80', 'SolidCP.Providers.Web.IIs80, SolidCP.Providers.Web.IIs80');
+VALUES (105, NULL, 'Internet Information Services 8.0', 'IIS70', 2, 'IIS80', 'FuseCP.Providers.Web.IIs80, FuseCP.Providers.Web.IIs80');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (106, NULL, 'Microsoft FTP Server 8.0', 'MSFTP70', 3, 'MSFTP80', 'SolidCP.Providers.FTP.MsFTP80, SolidCP.Providers.FTP.IIs80');
+VALUES (106, NULL, 'Microsoft FTP Server 8.0', 'MSFTP70', 3, 'MSFTP80', 'FuseCP.Providers.FTP.MsFTP80, FuseCP.Providers.FTP.IIs80');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (110, NULL, 'Cerberus FTP Server 6.x', 'CerberusFTP6', 3, 'CerberusFTP6', 'SolidCP.Providers.FTP.CerberusFTP6, SolidCP.Providers.FTP.CerberusFTP6');
+VALUES (110, NULL, 'Cerberus FTP Server 6.x', 'CerberusFTP6', 3, 'CerberusFTP6', 'FuseCP.Providers.FTP.CerberusFTP6, FuseCP.Providers.FTP.CerberusFTP6');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (111, NULL, 'Windows Server 2016', 'Windows2008', 1, 'Windows2016', 'SolidCP.Providers.OS.Windows2016, SolidCP.Providers.OS.Windows2016');
+VALUES (111, NULL, 'Windows Server 2016', 'Windows2008', 1, 'Windows2016', 'FuseCP.Providers.OS.Windows2016, FuseCP.Providers.OS.Windows2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (112, NULL, 'Internet Information Services 10.0', 'IIS70', 2, 'IIS100', 'SolidCP.Providers.Web.IIs100, SolidCP.Providers.Web.IIs100');
+VALUES (112, NULL, 'Internet Information Services 10.0', 'IIS70', 2, 'IIS100', 'FuseCP.Providers.Web.IIs100, FuseCP.Providers.Web.IIs100');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (113, NULL, 'Microsoft FTP Server 10.0', 'MSFTP70', 3, 'MSFTP100', 'SolidCP.Providers.FTP.MsFTP100, SolidCP.Providers.FTP.IIs100');
+VALUES (113, NULL, 'Microsoft FTP Server 10.0', 'MSFTP70', 3, 'MSFTP100', 'FuseCP.Providers.FTP.MsFTP100, FuseCP.Providers.FTP.IIs100');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (160, NULL, 'IceWarp Mail Server', 'IceWarp', 4, 'IceWarp', 'SolidCP.Providers.Mail.IceWarp, SolidCP.Providers.Mail.IceWarp');
+VALUES (160, NULL, 'IceWarp Mail Server', 'IceWarp', 4, 'IceWarp', 'FuseCP.Providers.Mail.IceWarp, FuseCP.Providers.Mail.IceWarp');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (200, NULL, 'Hosted Windows SharePoint Services 3.0', 'HostedSharePoint30', 20, 'HostedSharePoint30', 'SolidCP.Providers.HostedSolution.HostedSharePointServer, SolidCP.Providers.HostedSolution');
+VALUES (200, NULL, 'Hosted Windows SharePoint Services 3.0', 'HostedSharePoint30', 20, 'HostedSharePoint30', 'FuseCP.Providers.HostedSolution.HostedSharePointServer, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (201, NULL, 'Hosted MS CRM 4.0', 'CRM', 21, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider, SolidCP.Providers.HostedSolution');
+VALUES (201, NULL, 'Hosted MS CRM 4.0', 'CRM', 21, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (202, NULL, 'Microsoft SQL Server 2008', 'MSSQL', 22, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2008, SolidCP.Providers.Database.SqlServer');
+VALUES (202, NULL, 'Microsoft SQL Server 2008', 'MSSQL', 22, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2008, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (203, 1, 'BlackBerry 4.1', 'BlackBerry', 31, 'BlackBerry 4.1', 'SolidCP.Providers.HostedSolution.BlackBerryProvider, SolidCP.Providers.HostedSolution');
+VALUES (203, 1, 'BlackBerry 4.1', 'BlackBerry', 31, 'BlackBerry 4.1', 'FuseCP.Providers.HostedSolution.BlackBerryProvider, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (204, 1, 'BlackBerry 5.0', 'BlackBerry5', 31, 'BlackBerry 5.0', 'SolidCP.Providers.HostedSolution.BlackBerry5Provider, SolidCP.Providers.HostedSolution');
+VALUES (204, 1, 'BlackBerry 5.0', 'BlackBerry5', 31, 'BlackBerry 5.0', 'FuseCP.Providers.HostedSolution.BlackBerry5Provider, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (205, 1, 'Office Communications Server 2007 R2', 'OCS', 32, 'OCS', 'SolidCP.Providers.HostedSolution.OCS2007R2, SolidCP.Providers.HostedSolution');
+VALUES (205, 1, 'Office Communications Server 2007 R2', 'OCS', 32, 'OCS', 'FuseCP.Providers.HostedSolution.OCS2007R2, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (206, 1, 'OCS Edge server', 'OCS_Edge', 32, 'OCSEdge', 'SolidCP.Providers.HostedSolution.OCSEdge2007R2, SolidCP.Providers.HostedSolution');
+VALUES (206, 1, 'OCS Edge server', 'OCS_Edge', 32, 'OCSEdge', 'FuseCP.Providers.HostedSolution.OCSEdge2007R2, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (208, NULL, 'Hosted SharePoint Foundation 2010', 'HostedSharePoint30', 20, 'HostedSharePoint2010', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2010, SolidCP.Providers.HostedSolution');
+VALUES (208, NULL, 'Hosted SharePoint Foundation 2010', 'HostedSharePoint30', 20, 'HostedSharePoint2010', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2010, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (209, NULL, 'Microsoft SQL Server 2012', 'MSSQL', 23, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2012, SolidCP.Providers.Database.SqlServer');
+VALUES (209, NULL, 'Microsoft SQL Server 2012', 'MSSQL', 23, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2012, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (250, NULL, 'Microsoft Lync Server 2010 Multitenant Hosting Pack', 'Lync', 41, 'Lync2010', 'SolidCP.Providers.HostedSolution.Lync2010, SolidCP.Providers.HostedSolution');
+VALUES (250, NULL, 'Microsoft Lync Server 2010 Multitenant Hosting Pack', 'Lync', 41, 'Lync2010', 'FuseCP.Providers.HostedSolution.Lync2010, FuseCP.Providers.HostedSolution');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (300, 1, 'Microsoft Hyper-V', 'HyperV', 30, 'HyperV', 'SolidCP.Providers.Virtualization.HyperV, SolidCP.Providers.Virtualization.HyperV');
+VALUES (300, 1, 'Microsoft Hyper-V', 'HyperV', 30, 'HyperV', 'FuseCP.Providers.Virtualization.HyperV, FuseCP.Providers.Virtualization.HyperV');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (301, NULL, 'MySQL Server 5.5', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer55, SolidCP.Providers.Database.MySQL');
+VALUES (301, NULL, 'MySQL Server 5.5', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer55, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (302, NULL, 'MySQL Server 5.6', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer56, SolidCP.Providers.Database.MySQL');
+VALUES (302, NULL, 'MySQL Server 5.6', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer56, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (303, NULL, 'MySQL Server 5.7', 'MySQL', 11, 'MySQL', 'SolidCP.Providers.Database.MySqlServer57, SolidCP.Providers.Database.MySQL');
+VALUES (303, NULL, 'MySQL Server 5.7', 'MySQL', 11, 'MySQL', 'FuseCP.Providers.Database.MySqlServer57, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (304, NULL, 'MySQL Server 8.0', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer80, SolidCP.Providers.Database.MySQL');
+VALUES (304, NULL, 'MySQL Server 8.0', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer80, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (305, NULL, 'MySQL Server 8.1', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer81, SolidCP.Providers.Database.MySQL');
+VALUES (305, NULL, 'MySQL Server 8.1', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer81, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (306, NULL, 'MySQL Server 8.2', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer82, SolidCP.Providers.Database.MySQL');
+VALUES (306, NULL, 'MySQL Server 8.2', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer82, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (307, NULL, 'MySQL Server 8.3', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer83, SolidCP.Providers.Database.MySQL');
+VALUES (307, NULL, 'MySQL Server 8.3', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer83, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (308, NULL, 'MySQL Server 8.4', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer84, SolidCP.Providers.Database.MySQL');
+VALUES (308, NULL, 'MySQL Server 8.4', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer84, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (320, NULL, 'MySQL Server 9.0', 'MySQL', 90, 'MySQL', 'SolidCP.Providers.Database.MySqlServer90, SolidCP.Providers.Database.MySQL');
+VALUES (320, NULL, 'MySQL Server 9.0', 'MySQL', 90, 'MySQL', 'FuseCP.Providers.Database.MySqlServer90, FuseCP.Providers.Database.MySQL');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (350, 1, 'Microsoft Hyper-V 2012 R2', 'HyperV2012R2', 33, 'HyperV2012R2', 'SolidCP.Providers.Virtualization.HyperV2012R2, SolidCP.Providers.Virtualization.HyperV2012R2');
+VALUES (350, 1, 'Microsoft Hyper-V 2012 R2', 'HyperV2012R2', 33, 'HyperV2012R2', 'FuseCP.Providers.Virtualization.HyperV2012R2, FuseCP.Providers.Virtualization.HyperV2012R2');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (351, 1, 'Microsoft Hyper-V Virtual Machine Management', 'HyperVvmm', 33, 'HyperVvmm', 'SolidCP.Providers.Virtualization.HyperVvmm, SolidCP.Providers.Virtualization.HyperVvmm');
+VALUES (351, 1, 'Microsoft Hyper-V Virtual Machine Management', 'HyperVvmm', 33, 'HyperVvmm', 'FuseCP.Providers.Virtualization.HyperVvmm, FuseCP.Providers.Virtualization.HyperVvmm');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (352, 1, 'Microsoft Hyper-V 2016', 'HyperV2012R2', 33, 'HyperV2016', 'SolidCP.Providers.Virtualization.HyperV2016, SolidCP.Providers.Virtualization.HyperV2016');
+VALUES (352, 1, 'Microsoft Hyper-V 2016', 'HyperV2012R2', 33, 'HyperV2016', 'FuseCP.Providers.Virtualization.HyperV2016, FuseCP.Providers.Virtualization.HyperV2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (370, 1, 'Proxmox Virtualization (remote)', 'Proxmox', 167, 'Proxmox (remote)', 'SolidCP.Providers.Virtualization.Proxmoxvps, SolidCP.Providers.Virtualization.Proxmoxvps');
+VALUES (370, 1, 'Proxmox Virtualization (remote)', 'Proxmox', 167, 'Proxmox (remote)', 'FuseCP.Providers.Virtualization.Proxmoxvps, FuseCP.Providers.Virtualization.Proxmoxvps');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (371, 0, 'Proxmox Virtualization', 'Proxmox', 167, 'Proxmox', 'SolidCP.Providers.Virtualization.ProxmoxvpsLocal, SolidCP.Providers.Virtualization.Proxmoxvps');
+VALUES (371, 0, 'Proxmox Virtualization', 'Proxmox', 167, 'Proxmox', 'FuseCP.Providers.Virtualization.ProxmoxvpsLocal, FuseCP.Providers.Virtualization.Proxmoxvps');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (400, 1, 'Microsoft Hyper-V For Private Cloud', 'HyperVForPrivateCloud', 40, 'HyperVForPC', 'SolidCP.Providers.VirtualizationForPC.HyperVForPC, SolidCP.Providers.VirtualizationForPC.HyperVForPC');
+VALUES (400, 1, 'Microsoft Hyper-V For Private Cloud', 'HyperVForPrivateCloud', 40, 'HyperVForPC', 'FuseCP.Providers.VirtualizationForPC.HyperVForPC, FuseCP.Providers.VirtualizationForPC.HyperVForPC');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (410, NULL, 'Microsoft DNS Server 2012+', 'MSDNS', 7, 'MSDNS.2012', 'SolidCP.Providers.DNS.MsDNS2012, SolidCP.Providers.DNS.MsDNS2012');
+VALUES (410, NULL, 'Microsoft DNS Server 2012+', 'MSDNS', 7, 'MSDNS.2012', 'FuseCP.Providers.DNS.MsDNS2012, FuseCP.Providers.DNS.MsDNS2012');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (500, NULL, 'Unix System', 'Unix', 1, 'UnixSystem', 'SolidCP.Providers.OS.Unix, SolidCP.Providers.OS.Unix');
+VALUES (500, NULL, 'Unix System', 'Unix', 1, 'UnixSystem', 'FuseCP.Providers.OS.Unix, FuseCP.Providers.OS.Unix');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (600, NULL, 'Enterprise Storage Windows 2012', 'EnterpriseStorage', 44, 'EnterpriseStorage2012', 'SolidCP.Providers.EnterpriseStorage.Windows2012, SolidCP.Providers.EnterpriseStorage.Windows2012');
+VALUES (600, NULL, 'Enterprise Storage Windows 2012', 'EnterpriseStorage', 44, 'EnterpriseStorage2012', 'FuseCP.Providers.EnterpriseStorage.Windows2012, FuseCP.Providers.EnterpriseStorage.Windows2012');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (700, NULL, 'Storage Spaces Windows 2012', 'StorageSpaceServices', 49, 'StorageSpace2012', 'SolidCP.Providers.StorageSpaces.Windows2012, SolidCP.Providers.StorageSpaces.Windows2012');
+VALUES (700, NULL, 'Storage Spaces Windows 2012', 'StorageSpaceServices', 49, 'StorageSpace2012', 'FuseCP.Providers.StorageSpaces.Windows2012, FuseCP.Providers.StorageSpaces.Windows2012');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1201, NULL, 'Hosted MS CRM 2011', 'CRM2011', 21, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2011, SolidCP.Providers.HostedSolution.CRM2011');
+VALUES (1201, NULL, 'Hosted MS CRM 2011', 'CRM2011', 21, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2011, FuseCP.Providers.HostedSolution.CRM2011');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1202, NULL, 'Hosted MS CRM 2013', 'CRM2011', 24, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2013, SolidCP.Providers.HostedSolution.Crm2013');
+VALUES (1202, NULL, 'Hosted MS CRM 2013', 'CRM2011', 24, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2013, FuseCP.Providers.HostedSolution.Crm2013');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1203, NULL, 'Microsoft SQL Server 2014', 'MSSQL', 46, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2014, SolidCP.Providers.Database.SqlServer');
+VALUES (1203, NULL, 'Microsoft SQL Server 2014', 'MSSQL', 46, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2014, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1205, NULL, 'Hosted MS CRM 2015', 'CRM2011', 24, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2015, SolidCP.Providers.HostedSolution.Crm2015');
+VALUES (1205, NULL, 'Hosted MS CRM 2015', 'CRM2011', 24, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2015, FuseCP.Providers.HostedSolution.Crm2015');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1206, NULL, 'Hosted MS CRM 2016', 'CRM2011', 24, 'CRM', 'SolidCP.Providers.HostedSolution.CRMProvider2016, SolidCP.Providers.HostedSolution.Crm2016');
+VALUES (1206, NULL, 'Hosted MS CRM 2016', 'CRM2011', 24, 'CRM', 'FuseCP.Providers.HostedSolution.CRMProvider2016, FuseCP.Providers.HostedSolution.Crm2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1301, NULL, 'Hosted SharePoint Foundation 2013', 'HostedSharePoint30', 20, 'HostedSharePoint2013', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2013, SolidCP.Providers.HostedSolution.SharePoint2013');
+VALUES (1301, NULL, 'Hosted SharePoint Foundation 2013', 'HostedSharePoint30', 20, 'HostedSharePoint2013', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2013, FuseCP.Providers.HostedSolution.SharePoint2013');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1306, NULL, 'Hosted SharePoint Foundation 2016', 'HostedSharePoint30', 20, 'HostedSharePoint2016', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2016, SolidCP.Providers.HostedSolution.SharePoint2016');
+VALUES (1306, NULL, 'Hosted SharePoint Foundation 2016', 'HostedSharePoint30', 20, 'HostedSharePoint2016', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2016, FuseCP.Providers.HostedSolution.SharePoint2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1401, NULL, 'Microsoft Lync Server 2013 Enterprise Edition', 'Lync', 41, 'Lync2013', 'SolidCP.Providers.HostedSolution.Lync2013, SolidCP.Providers.HostedSolution.Lync2013');
+VALUES (1401, NULL, 'Microsoft Lync Server 2013 Enterprise Edition', 'Lync', 41, 'Lync2013', 'FuseCP.Providers.HostedSolution.Lync2013, FuseCP.Providers.HostedSolution.Lync2013');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1402, NULL, 'Microsoft Lync Server 2013 Multitenant Hosting Pack', 'Lync', 41, 'Lync2013HP', 'SolidCP.Providers.HostedSolution.Lync2013HP, SolidCP.Providers.HostedSolution.Lync2013HP');
+VALUES (1402, NULL, 'Microsoft Lync Server 2013 Multitenant Hosting Pack', 'Lync', 41, 'Lync2013HP', 'FuseCP.Providers.HostedSolution.Lync2013HP, FuseCP.Providers.HostedSolution.Lync2013HP');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1403, NULL, 'Microsoft Skype for Business Server 2015', 'SfB', 52, 'SfB2015', 'SolidCP.Providers.HostedSolution.SfB2015, SolidCP.Providers.HostedSolution.SfB2015');
+VALUES (1403, NULL, 'Microsoft Skype for Business Server 2015', 'SfB', 52, 'SfB2015', 'FuseCP.Providers.HostedSolution.SfB2015, FuseCP.Providers.HostedSolution.SfB2015');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1404, NULL, 'Microsoft Skype for Business Server 2019', 'SfB', 52, 'SfB2019', 'SolidCP.Providers.HostedSolution.SfB2019, SolidCP.Providers.HostedSolution.SfB2019');
+VALUES (1404, NULL, 'Microsoft Skype for Business Server 2019', 'SfB', 52, 'SfB2019', 'FuseCP.Providers.HostedSolution.SfB2019, FuseCP.Providers.HostedSolution.SfB2019');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1501, 1, 'Remote Desktop Services Windows 2012', 'RDS', 45, 'RemoteDesktopServices2012', 'SolidCP.Providers.RemoteDesktopServices.Windows2012,SolidCP.Providers.RemoteDesktopServices.Windows2012');
+VALUES (1501, 1, 'Remote Desktop Services Windows 2012', 'RDS', 45, 'RemoteDesktopServices2012', 'FuseCP.Providers.RemoteDesktopServices.Windows2012,FuseCP.Providers.RemoteDesktopServices.Windows2012');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1502, 1, 'Remote Desktop Services Windows 2016', 'RDS', 45, 'RemoteDesktopServices2012', 'SolidCP.Providers.RemoteDesktopServices.Windows2016,SolidCP.Providers.RemoteDesktopServices.Windows2016');
+VALUES (1502, 1, 'Remote Desktop Services Windows 2016', 'RDS', 45, 'RemoteDesktopServices2012', 'FuseCP.Providers.RemoteDesktopServices.Windows2016,FuseCP.Providers.RemoteDesktopServices.Windows2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1503, 1, 'Remote Desktop Services Windows 2019', 'RDS', 45, 'RemoteDesktopServices2019', 'SolidCP.Providers.RemoteDesktopServices.Windows2019,SolidCP.Providers.RemoteDesktopServices.Windows2019');
+VALUES (1503, 1, 'Remote Desktop Services Windows 2019', 'RDS', 45, 'RemoteDesktopServices2019', 'FuseCP.Providers.RemoteDesktopServices.Windows2019,FuseCP.Providers.RemoteDesktopServices.Windows2019');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1504, 1, 'Remote Desktop Services Windows 2022', 'RDS', 45, 'RemoteDesktopServices2022', 'SolidCP.Providers.RemoteDesktopServices.Windows2022,SolidCP.Providers.RemoteDesktopServices.Windows2022');
+VALUES (1504, 1, 'Remote Desktop Services Windows 2022', 'RDS', 45, 'RemoteDesktopServices2022', 'FuseCP.Providers.RemoteDesktopServices.Windows2022,FuseCP.Providers.RemoteDesktopServices.Windows2022');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1505, 1, 'Remote Desktop Services Windows 2025', 'RDS', 45, 'RemoteDesktopServices2025', 'SolidCP.Providers.RemoteDesktopServices.Windows2025,SolidCP.Providers.RemoteDesktopServices.Windows2025');
+VALUES (1505, 1, 'Remote Desktop Services Windows 2025', 'RDS', 45, 'RemoteDesktopServices2025', 'FuseCP.Providers.RemoteDesktopServices.Windows2025,FuseCP.Providers.RemoteDesktopServices.Windows2025');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1550, NULL, 'MariaDB 10.1', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB101, SolidCP.Providers.Database.MariaDB');
+VALUES (1550, NULL, 'MariaDB 10.1', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB101, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1552, NULL, 'Hosted SharePoint Enterprise 2013', 'HostedSharePoint30', 73, 'HostedSharePoint2013Ent', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2013Ent, SolidCP.Providers.HostedSolution.SharePoint2013Ent');
+VALUES (1552, NULL, 'Hosted SharePoint Enterprise 2013', 'HostedSharePoint30', 73, 'HostedSharePoint2013Ent', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2013Ent, FuseCP.Providers.HostedSolution.SharePoint2013Ent');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1560, NULL, 'MariaDB 10.2', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB102, SolidCP.Providers.Database.MariaDB');
+VALUES (1560, NULL, 'MariaDB 10.2', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB102, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1570, NULL, 'MariaDB 10.3', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB103, SolidCP.Providers.Database.MariaDB');
+VALUES (1570, NULL, 'MariaDB 10.3', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB103, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1571, NULL, 'MariaDB 10.4', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB104, SolidCP.Providers.Database.MariaDB');
+VALUES (1571, NULL, 'MariaDB 10.4', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB104, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1572, NULL, 'MariaDB 10.5', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB105, SolidCP.Providers.Database.MariaDB');
+VALUES (1572, NULL, 'MariaDB 10.5', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB105, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1573, NULL, 'MariaDB 10.6', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB106, SolidCP.Providers.Database.MariaDB');
+VALUES (1573, NULL, 'MariaDB 10.6', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB106, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1574, NULL, 'MariaDB 10.7', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB107, SolidCP.Providers.Database.MariaDB');
+VALUES (1574, NULL, 'MariaDB 10.7', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB107, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1575, NULL, 'MariaDB 10.8', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB108, SolidCP.Providers.Database.MariaDB');
+VALUES (1575, NULL, 'MariaDB 10.8', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB108, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1576, NULL, 'MariaDB 10.9', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB109, SolidCP.Providers.Database.MariaDB');
+VALUES (1576, NULL, 'MariaDB 10.9', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB109, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1577, NULL, 'MariaDB 10.10', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB1010, SolidCP.Providers.Database.MariaDB');
+VALUES (1577, NULL, 'MariaDB 10.10', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB1010, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1578, NULL, 'MariaDB 10.11', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB1011, SolidCP.Providers.Database.MariaDB');
+VALUES (1578, NULL, 'MariaDB 10.11', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB1011, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1579, NULL, 'MariaDB 11.0', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB110, SolidCP.Providers.Database.MariaDB');
+VALUES (1579, NULL, 'MariaDB 11.0', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB110, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1580, NULL, 'MariaDB 11.1', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB111, SolidCP.Providers.Database.MariaDB');
+VALUES (1580, NULL, 'MariaDB 11.1', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB111, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1581, NULL, 'MariaDB 11.2', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB112, SolidCP.Providers.Database.MariaDB');
+VALUES (1581, NULL, 'MariaDB 11.2', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB112, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1582, NULL, 'MariaDB 11.3', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB113, SolidCP.Providers.Database.MariaDB');
+VALUES (1582, NULL, 'MariaDB 11.3', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB113, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1583, NULL, 'MariaDB 11.4', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB114, SolidCP.Providers.Database.MariaDB');
+VALUES (1583, NULL, 'MariaDB 11.4', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB114, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1584, NULL, 'MariaDB 11.5', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB115, SolidCP.Providers.Database.MariaDB');
+VALUES (1584, NULL, 'MariaDB 11.5', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB115, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1585, NULL, 'MariaDB 11.6', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB116, SolidCP.Providers.Database.MariaDB');
+VALUES (1585, NULL, 'MariaDB 11.6', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB116, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1586, NULL, 'MariaDB 11.7', 'MariaDB', 50, 'MariaDB', 'SolidCP.Providers.Database.MariaDB117, SolidCP.Providers.Database.MariaDB');
+VALUES (1586, NULL, 'MariaDB 11.7', 'MariaDB', 50, 'MariaDB', 'FuseCP.Providers.Database.MariaDB117, FuseCP.Providers.Database.MariaDB');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1601, 1, 'Mail Cleaner', 'MailCleaner', 61, 'MailCleaner', 'SolidCP.Providers.Filters.MailCleaner, SolidCP.Providers.Filters.MailCleaner');
+VALUES (1601, 1, 'Mail Cleaner', 'MailCleaner', 61, 'MailCleaner', 'FuseCP.Providers.Filters.MailCleaner, FuseCP.Providers.Filters.MailCleaner');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1602, 1, 'SpamExperts Mail Filter', 'SpamExperts', 61, 'SpamExperts', 'SolidCP.Providers.Filters.SpamExperts, SolidCP.Providers.Filters.SpamExperts');
+VALUES (1602, 1, 'SpamExperts Mail Filter', 'SpamExperts', 61, 'SpamExperts', 'FuseCP.Providers.Filters.SpamExperts, FuseCP.Providers.Filters.SpamExperts');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1701, NULL, 'Microsoft SQL Server 2016', 'MSSQL', 71, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2016, SolidCP.Providers.Database.SqlServer');
+VALUES (1701, NULL, 'Microsoft SQL Server 2016', 'MSSQL', 71, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2016, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1702, NULL, 'Hosted SharePoint Enterprise 2016', 'HostedSharePoint30', 73, 'HostedSharePoint2016Ent', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2016Ent, SolidCP.Providers.HostedSolution.SharePoint2016Ent');
+VALUES (1702, NULL, 'Hosted SharePoint Enterprise 2016', 'HostedSharePoint30', 73, 'HostedSharePoint2016Ent', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2016Ent, FuseCP.Providers.HostedSolution.SharePoint2016Ent');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1703, NULL, 'SimpleDNS Plus 6.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS6, SolidCP.Providers.DNS.SimpleDNS60');
+VALUES (1703, NULL, 'SimpleDNS Plus 6.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS6, FuseCP.Providers.DNS.SimpleDNS60');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1704, NULL, 'Microsoft SQL Server 2017', 'MSSQL', 72, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2017, SolidCP.Providers.Database.SqlServer');
+VALUES (1704, NULL, 'Microsoft SQL Server 2017', 'MSSQL', 72, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2017, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1705, NULL, 'Microsoft SQL Server 2019', 'MSSQL', 74, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2019, SolidCP.Providers.Database.SqlServer');
+VALUES (1705, NULL, 'Microsoft SQL Server 2019', 'MSSQL', 74, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2019, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1706, NULL, 'Microsoft SQL Server 2022', 'MSSQL', 75, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2022, SolidCP.Providers.Database.SqlServer');
+VALUES (1706, NULL, 'Microsoft SQL Server 2022', 'MSSQL', 75, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2022, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1707, NULL, 'Microsoft SQL Server 2025', 'MSSQL', 76, 'MsSQL', 'SolidCP.Providers.Database.MsSqlServer2025, SolidCP.Providers.Database.SqlServer');
+VALUES (1707, NULL, 'Microsoft SQL Server 2025', 'MSSQL', 76, 'MsSQL', 'FuseCP.Providers.Database.MsSqlServer2025, FuseCP.Providers.Database.SqlServer');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1711, NULL, 'Hosted SharePoint 2019', 'HostedSharePoint30', 73, 'HostedSharePoint2019', 'SolidCP.Providers.HostedSolution.HostedSharePointServer2019, SolidCP.Providers.HostedSolution.SharePoint2019');
+VALUES (1711, NULL, 'Hosted SharePoint 2019', 'HostedSharePoint30', 73, 'HostedSharePoint2019', 'FuseCP.Providers.HostedSolution.HostedSharePointServer2019, FuseCP.Providers.HostedSolution.SharePoint2019');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1800, NULL, 'Windows Server 2019', 'Windows2012', 1, 'Windows2019', 'SolidCP.Providers.OS.Windows2019, SolidCP.Providers.OS.Windows2019');
+VALUES (1800, NULL, 'Windows Server 2019', 'Windows2012', 1, 'Windows2019', 'FuseCP.Providers.OS.Windows2019, FuseCP.Providers.OS.Windows2019');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1801, 1, 'Microsoft Hyper-V 2019', 'HyperV2012R2', 33, 'HyperV2019', 'SolidCP.Providers.Virtualization.HyperV2019, SolidCP.Providers.Virtualization.HyperV2019');
+VALUES (1801, 1, 'Microsoft Hyper-V 2019', 'HyperV2012R2', 33, 'HyperV2019', 'FuseCP.Providers.Virtualization.HyperV2019, FuseCP.Providers.Virtualization.HyperV2019');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1802, NULL, 'Windows Server 2022', 'Windows2012', 1, 'Windows2022', 'SolidCP.Providers.OS.Windows2022, SolidCP.Providers.OS.Windows2022');
+VALUES (1802, NULL, 'Windows Server 2022', 'Windows2012', 1, 'Windows2022', 'FuseCP.Providers.OS.Windows2022, FuseCP.Providers.OS.Windows2022');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1803, 1, 'Microsoft Hyper-V 2022', 'HyperV2012R2', 33, 'HyperV2022', 'SolidCP.Providers.Virtualization.HyperV2022, SolidCP.Providers.Virtualization.HyperV2022');
+VALUES (1803, 1, 'Microsoft Hyper-V 2022', 'HyperV2012R2', 33, 'HyperV2022', 'FuseCP.Providers.Virtualization.HyperV2022, FuseCP.Providers.Virtualization.HyperV2022');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1804, NULL, 'Windows Server 2025', 'Windows2012', 1, 'Windows2025', 'SolidCP.Providers.OS.Windows2025, SolidCP.Providers.OS.Windows2025');
+VALUES (1804, NULL, 'Windows Server 2025', 'Windows2012', 1, 'Windows2025', 'FuseCP.Providers.OS.Windows2025, FuseCP.Providers.OS.Windows2025');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1805, 1, 'Microsoft Hyper-V 2025', 'HyperV2012R2', 33, 'HyperV2025', 'SolidCP.Providers.Virtualization.HyperV2025, SolidCP.Providers.Virtualization.HyperV2025');
+VALUES (1805, 1, 'Microsoft Hyper-V 2025', 'HyperV2012R2', 33, 'HyperV2025', 'FuseCP.Providers.Virtualization.HyperV2025, FuseCP.Providers.Virtualization.HyperV2025');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1901, NULL, 'SimpleDNS Plus 8.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS8, SolidCP.Providers.DNS.SimpleDNS80');
+VALUES (1901, NULL, 'SimpleDNS Plus 8.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS8, FuseCP.Providers.DNS.SimpleDNS80');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1902, NULL, 'Microsoft DNS Server 2016', 'MSDNS', 7, 'MSDNS.2016', 'SolidCP.Providers.DNS.MsDNS2016, SolidCP.Providers.DNS.MsDNS2016');
+VALUES (1902, NULL, 'Microsoft DNS Server 2016', 'MSDNS', 7, 'MSDNS.2016', 'FuseCP.Providers.DNS.MsDNS2016, FuseCP.Providers.DNS.MsDNS2016');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1903, NULL, 'SimpleDNS Plus 9.x', 'SimpleDNS', 7, 'SimpleDNS', 'SolidCP.Providers.DNS.SimpleDNS9, SolidCP.Providers.DNS.SimpleDNS90');
+VALUES (1903, NULL, 'SimpleDNS Plus 9.x', 'SimpleDNS', 7, 'SimpleDNS', 'FuseCP.Providers.DNS.SimpleDNS9, FuseCP.Providers.DNS.SimpleDNS90');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1910, NULL, 'vsftpd FTP Server 3', 'vsftpd', 3, 'vsftpd', 'SolidCP.Providers.FTP.VsFtp3, SolidCP.Providers.FTP.VsFtp');
+VALUES (1910, NULL, 'vsftpd FTP Server 3', 'vsftpd', 3, 'vsftpd', 'FuseCP.Providers.FTP.VsFtp3, FuseCP.Providers.FTP.VsFtp');
 SELECT changes();
 
 INSERT INTO "Providers" ("ProviderID", "DisableAutoDiscovery", "DisplayName", "EditorControl", "GroupID", "ProviderName", "ProviderType")
-VALUES (1911, NULL, 'Apache Web Server 2.4', 'Apache', 2, 'Apache', 'SolidCP.Providers.Web.Apache24, SolidCP.Providers.Web.Apache');
+VALUES (1911, NULL, 'Apache Web Server 2.4', 'Apache', 2, 'Apache', 'FuseCP.Providers.Web.Apache24, FuseCP.Providers.Web.Apache');
 SELECT changes();
 
 
@@ -4521,7 +4521,7 @@ VALUES (728, 33, NULL, NULL, NULL, 'Number of Private Network VLANs', 'VPS2012.P
 SELECT changes();
 
 INSERT INTO "Quotas" ("QuotaID", "GroupID", "HideQuota", "ItemTypeID", "PerOrganization", "QuotaDescription", "QuotaName", "QuotaOrder", "QuotaTypeID", "ServiceQuota")
-VALUES (729, 12, NULL, NULL, NULL, 'Automatic Replies via SolidCP Allowed', 'Exchange2013.AutoReply', 32.0, 1, 0);
+VALUES (729, 12, NULL, NULL, NULL, 'Automatic Replies via FuseCP Allowed', 'Exchange2013.AutoReply', 32.0, 1, 0);
 SELECT changes();
 
 INSERT INTO "Quotas" ("QuotaID", "GroupID", "HideQuota", "ItemTypeID", "PerOrganization", "QuotaDescription", "QuotaName", "QuotaOrder", "QuotaTypeID", "ServiceQuota")
@@ -5064,336 +5064,336 @@ SELECT changes();
 
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_ACTIVATE_PAID_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_AUDIT_LOG_REPORT', '~/DesktopModules/SolidCP/ScheduleTaskControls/AuditLogReportView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_AUDIT_LOG_REPORT', '~/DesktopModules/FuseCP/ScheduleTaskControls/AuditLogReportView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP', '~/DesktopModules/SolidCP/ScheduleTaskControls/Backup.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP', '~/DesktopModules/FuseCP/ScheduleTaskControls/Backup.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP_DATABASE', '~/DesktopModules/SolidCP/ScheduleTaskControls/BackupDatabase.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_BACKUP_DATABASE', '~/DesktopModules/FuseCP/ScheduleTaskControls/BackupDatabase.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_EXCHANGE_DISKSPACE', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_BANDWIDTH', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_CALCULATE_PACKAGES_DISKSPACE', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_CANCEL_OVERDUE_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITE', '~/DesktopModules/SolidCP/ScheduleTaskControls/CheckWebsite.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITE', '~/DesktopModules/FuseCP/ScheduleTaskControls/CheckWebsite.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITES_SSL', '~/DesktopModules/SolidCP/ScheduleTaskControls/CheckWebsitesSslView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_CHECK_WEBSITES_SSL', '~/DesktopModules/FuseCP/ScheduleTaskControls/CheckWebsitesSslView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_EXPIRATION', '~/DesktopModules/SolidCP/ScheduleTaskControls/DomainExpirationView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_EXPIRATION', '~/DesktopModules/FuseCP/ScheduleTaskControls/DomainExpirationView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_LOOKUP', '~/DesktopModules/SolidCP/ScheduleTaskControls/DomainLookupView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_DOMAIN_LOOKUP', '~/DesktopModules/FuseCP/ScheduleTaskControls/DomainLookupView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_FTP_FILES', '~/DesktopModules/SolidCP/ScheduleTaskControls/SendFilesViaFtp.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_FTP_FILES', '~/DesktopModules/FuseCP/ScheduleTaskControls/SendFilesViaFtp.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_GENERATE_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_GENERATE_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', '~/DesktopModules/SolidCP/ScheduleTaskControls/HostedSolutionReport.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_HOSTED_SOLUTION_REPORT', '~/DesktopModules/FuseCP/ScheduleTaskControls/HostedSolutionReport.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', '~/DesktopModules/SolidCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_NOTIFY_OVERUSED_DATABASES', '~/DesktopModules/FuseCP/ScheduleTaskControls/NotifyOverusedDatabases.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_PAYMENT_QUEUE', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', '~/DesktopModules/SolidCP/ScheduleTaskControls/ExecuteSystemCommand.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_RUN_SYSTEM_COMMAND', '~/DesktopModules/FuseCP/ScheduleTaskControls/ExecuteSystemCommand.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_SEND_MAIL', '~/DesktopModules/SolidCP/ScheduleTaskControls/SendEmailNotification.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_SEND_MAIL', '~/DesktopModules/FuseCP/ScheduleTaskControls/SendEmailNotification.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', '~/DesktopModules/SolidCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_OVERDUE_INVOICES', '~/DesktopModules/FuseCP/ScheduleTaskControls/EmptyView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_PACKAGES', '~/DesktopModules/SolidCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_SUSPEND_PACKAGES', '~/DesktopModules/FuseCP/ScheduleTaskControls/SuspendOverusedSpaces.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', '~/DesktopModules/SolidCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_USER_PASSWORD_EXPIRATION_NOTIFICATION', '~/DesktopModules/FuseCP/ScheduleTaskControls/UserPasswordExpirationNotificationView.ascx', 'ASP.NET');
 SELECT changes();
 
 INSERT INTO "ScheduleTaskViewConfiguration" ("ConfigurationID", "TaskID", "Description", "Environment")
-VALUES ('ASP_NET', 'SCHEDULE_TASK_ZIP_FILES', '~/DesktopModules/SolidCP/ScheduleTaskControls/ZipFiles.ascx', 'ASP.NET');
+VALUES ('ASP_NET', 'SCHEDULE_TASK_ZIP_FILES', '~/DesktopModules/FuseCP/ScheduleTaskControls/ZipFiles.ascx', 'ASP.NET');
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (2, 1, 0, 1, 'HomeFolder', 1, 1, 0, 0, 'SolidCP.Providers.OS.HomeFolder, SolidCP.Providers.Base', 15);
+VALUES (2, 1, 0, 1, 'HomeFolder', 1, 1, 0, 0, 'FuseCP.Providers.OS.HomeFolder, FuseCP.Providers.Base', 15);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (5, 1, 0, 1, 'MsSQL2000Database', 1, 5, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 9);
+VALUES (5, 1, 0, 1, 'MsSQL2000Database', 1, 5, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 9);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (6, 1, 0, 0, 'MsSQL2000User', 1, 5, 1, 1, 1, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 10);
+VALUES (6, 1, 0, 0, 'MsSQL2000User', 1, 5, 1, 1, 1, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 10);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (7, 1, 0, 1, 'MySQL4Database', 1, 6, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 13);
+VALUES (7, 1, 0, 1, 'MySQL4Database', 1, 6, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 13);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (8, 1, 0, 0, 'MySQL4User', 1, 6, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 14);
+VALUES (8, 1, 0, 0, 'MySQL4User', 1, 6, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 14);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (9, 1, 1, 0, 'FTPAccount', 1, 3, 1, 1, 1, 'SolidCP.Providers.FTP.FtpAccount, SolidCP.Providers.Base', 3);
+VALUES (9, 1, 1, 0, 'FTPAccount', 1, 3, 1, 1, 1, 'FuseCP.Providers.FTP.FtpAccount, FuseCP.Providers.Base', 3);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (10, 1, 1, 1, 'WebSite', 1, 2, 1, 1, 1, 'SolidCP.Providers.Web.WebSite, SolidCP.Providers.Base', 2);
+VALUES (10, 1, 1, 1, 'WebSite', 1, 2, 1, 1, 1, 'FuseCP.Providers.Web.WebSite, FuseCP.Providers.Base', 2);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (11, 1, 1, 0, 'MailDomain', 1, 4, 1, 1, 1, 'SolidCP.Providers.Mail.MailDomain, SolidCP.Providers.Base', 8);
+VALUES (11, 1, 1, 0, 'MailDomain', 1, 4, 1, 1, 1, 'FuseCP.Providers.Mail.MailDomain, FuseCP.Providers.Base', 8);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName")
-VALUES (12, 1, 0, 0, 'DNSZone', 1, 7, 1, 0, 1, 'SolidCP.Providers.DNS.DnsZone, SolidCP.Providers.Base');
+VALUES (12, 1, 0, 0, 'DNSZone', 1, 7, 1, 0, 1, 'FuseCP.Providers.DNS.DnsZone, FuseCP.Providers.Base');
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (13, 0, 0, 'Domain', 0, 1, 1, 0, 'SolidCP.Providers.OS.Domain, SolidCP.Providers.Base', 1);
+VALUES (13, 0, 0, 'Domain', 0, 1, 1, 0, 'FuseCP.Providers.OS.Domain, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (14, 1, 0, 0, 'StatisticsSite', 1, 8, 1, 1, 0, 'SolidCP.Providers.Statistics.StatsSite, SolidCP.Providers.Base', 17);
+VALUES (14, 1, 0, 0, 'StatisticsSite', 1, 8, 1, 1, 0, 'FuseCP.Providers.Statistics.StatsSite, FuseCP.Providers.Base', 17);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (15, 0, 1, 'MailAccount', 0, 4, 1, 0, 'SolidCP.Providers.Mail.MailAccount, SolidCP.Providers.Base', 4);
+VALUES (15, 0, 1, 'MailAccount', 0, 4, 1, 0, 'FuseCP.Providers.Mail.MailAccount, FuseCP.Providers.Base', 4);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (16, 0, 0, 'MailAlias', 0, 4, 1, 0, 'SolidCP.Providers.Mail.MailAlias, SolidCP.Providers.Base', 5);
+VALUES (16, 0, 0, 'MailAlias', 0, 4, 1, 0, 'FuseCP.Providers.Mail.MailAlias, FuseCP.Providers.Base', 5);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (17, 0, 0, 'MailList', 0, 4, 1, 0, 'SolidCP.Providers.Mail.MailList, SolidCP.Providers.Base', 7);
+VALUES (17, 0, 0, 'MailList', 0, 4, 1, 0, 'FuseCP.Providers.Mail.MailList, FuseCP.Providers.Base', 7);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (18, 0, 0, 'MailGroup', 0, 4, 1, 0, 'SolidCP.Providers.Mail.MailGroup, SolidCP.Providers.Base', 6);
+VALUES (18, 0, 0, 'MailGroup', 0, 4, 1, 0, 'FuseCP.Providers.Mail.MailGroup, FuseCP.Providers.Base', 6);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (20, 1, 0, 0, 'ODBCDSN', 1, 1, 1, 1, 0, 'SolidCP.Providers.OS.SystemDSN, SolidCP.Providers.Base', 22);
+VALUES (20, 1, 0, 0, 'ODBCDSN', 1, 1, 1, 1, 0, 'FuseCP.Providers.OS.SystemDSN, FuseCP.Providers.Base', 22);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (21, 1, 0, 1, 'MsSQL2005Database', 1, 10, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 11);
+VALUES (21, 1, 0, 1, 'MsSQL2005Database', 1, 10, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 11);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (22, 1, 0, 0, 'MsSQL2005User', 1, 10, 1, 1, 1, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 12);
+VALUES (22, 1, 0, 0, 'MsSQL2005User', 1, 10, 1, 1, 1, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 12);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (23, 1, 0, 1, 'MySQL5Database', 1, 11, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 15);
+VALUES (23, 1, 0, 1, 'MySQL5Database', 1, 11, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 15);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (24, 1, 0, 0, 'MySQL5User', 1, 11, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 16);
+VALUES (24, 1, 0, 0, 'MySQL5User', 1, 11, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 16);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (25, 1, 0, 0, 'SharedSSLFolder', 1, 2, 1, 0, 'SolidCP.Providers.Web.SharedSSLFolder, SolidCP.Providers.Base', 21);
+VALUES (25, 1, 0, 0, 'SharedSSLFolder', 1, 2, 1, 0, 'FuseCP.Providers.Web.SharedSSLFolder, FuseCP.Providers.Base', 21);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName")
-VALUES (28, 1, 0, 0, 'SecondaryDNSZone', 1, 7, 0, 1, 'SolidCP.Providers.DNS.SecondaryDnsZone, SolidCP.Providers.Base');
+VALUES (28, 1, 0, 0, 'SecondaryDNSZone', 1, 7, 0, 1, 'FuseCP.Providers.DNS.SecondaryDnsZone, FuseCP.Providers.Base');
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (29, 1, 0, 1, 'Organization', 1, 13, 1, 1, 'SolidCP.Providers.HostedSolution.Organization, SolidCP.Providers.Base', 1);
+VALUES (29, 1, 0, 1, 'Organization', 1, 13, 1, 1, 'FuseCP.Providers.HostedSolution.Organization, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (30, 1, NULL, NULL, 'OrganizationDomain', NULL, 13, NULL, NULL, 'SolidCP.Providers.HostedSolution.OrganizationDomain, SolidCP.Providers.Base', 1);
+VALUES (30, 1, NULL, NULL, 'OrganizationDomain', NULL, 13, NULL, NULL, 'FuseCP.Providers.HostedSolution.OrganizationDomain, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (31, 1, 0, 1, 'MsSQL2008Database', 1, 22, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+VALUES (31, 1, 0, 1, 'MsSQL2008Database', 1, 22, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (32, 1, 0, 0, 'MsSQL2008User', 1, 22, 1, 1, 1, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+VALUES (32, 1, 0, 0, 'MsSQL2008User', 1, 22, 1, 1, 1, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (33, 0, 0, 'VirtualMachine', 1, 30, 1, 1, 'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1);
+VALUES (33, 0, 0, 'VirtualMachine', 1, 30, 1, 1, 'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (34, 0, 0, 'VirtualSwitch', 1, 30, 1, 1, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+VALUES (34, 0, 0, 'VirtualSwitch', 1, 30, 1, 1, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (35, 0, 0, 'VMInfo', 1, 40, 1, 1, 'SolidCP.Providers.Virtualization.VMInfo, SolidCP.Providers.Base', 1);
+VALUES (35, 0, 0, 'VMInfo', 1, 40, 1, 1, 'FuseCP.Providers.Virtualization.VMInfo, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (36, 0, 0, 'VirtualSwitch', 1, 40, 1, 1, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+VALUES (36, 0, 0, 'VirtualSwitch', 1, 40, 1, 1, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (37, 1, 0, 1, 'MsSQL2012Database', 1, 23, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+VALUES (37, 1, 0, 1, 'MsSQL2012Database', 1, 23, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (38, 1, 0, 0, 'MsSQL2012User', 1, 23, 1, 1, 1, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+VALUES (38, 1, 0, 0, 'MsSQL2012User', 1, 23, 1, 1, 1, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (39, 1, 0, 1, 'MsSQL2014Database', 1, 46, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+VALUES (39, 1, 0, 1, 'MsSQL2014Database', 1, 46, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (40, 1, 0, 0, 'MsSQL2014User', 1, 46, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (41, 0, 0, 'VirtualMachine', 1, 33, 1, 1, 'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (42, 0, 0, 'VirtualSwitch', 1, 33, 1, 1, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
-SELECT changes();
-
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (71, 1, 0, 1, 'MsSQL2016Database', 1, 71, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (72, 1, 0, 0, 'MsSQL2016User', 1, 71, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (73, 1, 0, 1, 'MsSQL2017Database', 1, 72, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (74, 1, 0, 0, 'MsSQL2017User', 1, 72, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (75, 1, 0, 1, 'MySQL8Database', 1, 90, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 18);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (76, 1, 0, 0, 'MySQL8User', 1, 90, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 19);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (77, 1, 0, 1, 'MsSQL2019Database', 1, 74, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (78, 1, 0, 0, 'MsSQL2019User', 1, 74, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (79, 1, 0, 1, 'MsSQL2022Database', 1, 75, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (80, 1, 0, 0, 'MsSQL2022User', 1, 75, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (90, 1, 0, 1, 'MySQL9Database', 1, 91, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 20);
-SELECT changes();
-
-INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (91, 1, 0, 0, 'MySQL9User', 1, 91, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 21);
+VALUES (40, 1, 0, 0, 'MsSQL2014User', 1, 46, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (143, 0, 0, 'VirtualMachine', 1, 167, 1, 1, 'SolidCP.Providers.Virtualization.VirtualMachine, SolidCP.Providers.Base', 1);
+VALUES (41, 0, 0, 'VirtualMachine', 1, 33, 1, 1, 'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (144, 0, 0, 'VirtualSwitch', 1, 167, 1, 1, 'SolidCP.Providers.Virtualization.VirtualSwitch, SolidCP.Providers.Base', 2);
+VALUES (42, 0, 0, 'VirtualSwitch', 1, 33, 1, 1, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
 SELECT changes();
 
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (200, 1, 0, 1, 'SharePointFoundationSiteCollection', 1, 20, 1, 1, 0, 'SolidCP.Providers.SharePoint.SharePointSiteCollection, SolidCP.Providers.Base', 25);
+VALUES (71, 1, 0, 1, 'MsSQL2016Database', 1, 71, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (202, 1, 0, 1, 'MariaDBDatabase', 1, 50, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+VALUES (72, 1, 0, 0, 'MsSQL2016User', 1, 71, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (203, 1, 0, 0, 'MariaDBUser', 1, 50, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+VALUES (73, 1, 0, 1, 'MsSQL2017Database', 1, 72, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (204, 1, 0, 1, 'SharePointEnterpriseSiteCollection', 1, 73, 1, 1, 0, 'SolidCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, SolidCP.Providers.Base', 100);
+VALUES (74, 1, 0, 0, 'MsSQL2017User', 1, 72, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (205, 1, 0, 1, 'MsSQL2025Database', 1, 76, 1, 1, 0, 'SolidCP.Providers.Database.SqlDatabase, SolidCP.Providers.Base', 1);
+VALUES (75, 1, 0, 1, 'MySQL8Database', 1, 90, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 18);
 SELECT changes();
 
 INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
-VALUES (206, 1, 0, 0, 'MsSQL2025User', 1, 76, 1, 1, 0, 'SolidCP.Providers.Database.SqlUser, SolidCP.Providers.Base', 1);
+VALUES (76, 1, 0, 0, 'MySQL8User', 1, 90, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 19);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (77, 1, 0, 1, 'MsSQL2019Database', 1, 74, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (78, 1, 0, 0, 'MsSQL2019User', 1, 74, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (79, 1, 0, 1, 'MsSQL2022Database', 1, 75, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (80, 1, 0, 0, 'MsSQL2022User', 1, 75, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (90, 1, 0, 1, 'MySQL9Database', 1, 91, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 20);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (91, 1, 0, 0, 'MySQL9User', 1, 91, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 21);
+SELECT changes();
+
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (143, 0, 0, 'VirtualMachine', 1, 167, 1, 1, 'FuseCP.Providers.Virtualization.VirtualMachine, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (144, 0, 0, 'VirtualSwitch', 1, 167, 1, 1, 'FuseCP.Providers.Virtualization.VirtualSwitch, FuseCP.Providers.Base', 2);
+SELECT changes();
+
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (200, 1, 0, 1, 'SharePointFoundationSiteCollection', 1, 20, 1, 1, 0, 'FuseCP.Providers.SharePoint.SharePointSiteCollection, FuseCP.Providers.Base', 25);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (202, 1, 0, 1, 'MariaDBDatabase', 1, 50, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (203, 1, 0, 0, 'MariaDBUser', 1, 50, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (204, 1, 0, 1, 'SharePointEnterpriseSiteCollection', 1, 73, 1, 1, 0, 'FuseCP.Providers.SharePoint.SharePointEnterpriseSiteCollection, FuseCP.Providers.Base', 100);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (205, 1, 0, 1, 'MsSQL2025Database', 1, 76, 1, 1, 0, 'FuseCP.Providers.Database.SqlDatabase, FuseCP.Providers.Base', 1);
+SELECT changes();
+
+INSERT INTO "ServiceItemTypes" ("ItemTypeID", "Backupable", "CalculateBandwidth", "CalculateDiskspace", "DisplayName", "Disposable", "GroupID", "Importable", "Searchable", "Suspendable", "TypeName", "TypeOrder")
+VALUES (206, 1, 0, 0, 'MsSQL2025User', 1, 76, 1, 1, 0, 'FuseCP.Providers.Database.SqlUser, FuseCP.Providers.Base', 1);
 SELECT changes();
 
 
@@ -5410,7 +5410,7 @@ VALUES ('From', 'AccountSummaryLetter', 1, 'support@HostingCompany.com');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('HtmlBody', 'AccountSummaryLetter', 1, (((((((('<html xmlns="http://www.w3.org/1999/xhtml">' || CHAR(13)) || (CHAR(10) || ('<head>' || CHAR(13)))) || ((CHAR(10) || '    <title>Account Summary Information</title>') || (CHAR(13) || (CHAR(10) || '    <style type="text/css">')))) || (((CHAR(13) || CHAR(10)) || ('		.Summary { background-color: ##ffffff; padding: 5px; }' || (CHAR(13) || CHAR(10)))) || (('		.Summary .Header { padding: 10px 0px 10px 10px; font-size: 16pt; background-color: ##E5F2FF; color: ##1F4978; border-bottom: solid 2px ##86B9F7; }' || (CHAR(13) || CHAR(10))) || ('        .Summary A { color: ##0153A4; }' || (CHAR(13) || CHAR(10)))))) || (((('        .Summary { font-family: Tahoma; font-size: 9pt; }' || CHAR(13)) || (CHAR(10) || ('        .Summary H1 { font-size: 1.7em; color: ##1F4978; border-bottom: dotted 3px ##efefef; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary H2 { font-size: 1.3em; color: ##1F4978; }' || CHAR(13))) || (CHAR(10) || ('        .Summary TABLE { border: solid 1px ##e5e5e5; }' || CHAR(13))))) || (((CHAR(10) || '        .Summary TH,') || (CHAR(13) || (CHAR(10) || '        .Summary TD.Label { padding: 5px; font-size: 8pt; font-weight: bold; background-color: ##f5f5f5; }'))) || ((CHAR(13) || (CHAR(10) || '        .Summary TD { padding: 8px; font-size: 9pt; }')) || (CHAR(13) || (CHAR(10) || '        .Summary UL LI { font-size: 1.1em; font-weight: bold; }')))))) || (((((CHAR(13) || CHAR(10)) || ('        .Summary UL UL LI { font-size: 0.9em; font-weight: normal; }' || (CHAR(13) || CHAR(10)))) || (('    </style>' || (CHAR(13) || CHAR(10))) || ('</head>' || (CHAR(13) || CHAR(10))))) || ((('<body>' || CHAR(13)) || (CHAR(10) || ('<div class="Summary">' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<a name="top"></a>' || (CHAR(13) || CHAR(10)))))) || (((('<div class="Header">' || CHAR(13)) || (CHAR(10) || ('	Hosting Account Information' || CHAR(13)))) || ((CHAR(10) || ('</div>' || CHAR(13))) || (CHAR(10) || (CHAR(13) || CHAR(10))))) || ((('<ad:if test="#Signup#">' || CHAR(13)) || (CHAR(10) || ('<p>' || CHAR(13)))) || ((CHAR(10) || ('Hello #user.FirstName#,' || CHAR(13))) || (CHAR(10) || ('</p>' || CHAR(13)))))))) || ((((((CHAR(10) || CHAR(13)) || (CHAR(10) || ('<p>' || CHAR(13)))) || ((CHAR(10) || 'New user account has been created and below you can find its summary information.') || (CHAR(13) || (CHAR(10) || '</p>')))) || (((CHAR(13) || CHAR(10)) || (CHAR(13) || (CHAR(10) || '<h1>Control Panel URL</h1>'))) || ((CHAR(13) || (CHAR(10) || '<table>')) || (CHAR(13) || (CHAR(10) || '    <thead>'))))) || ((((CHAR(13) || CHAR(10)) || ('        <tr>' || (CHAR(13) || CHAR(10)))) || (('            <th>Control Panel URL</th>' || (CHAR(13) || CHAR(10))) || ('            <th>Username</th>' || (CHAR(13) || CHAR(10))))) || ((('            <th>Password</th>' || CHAR(13)) || (CHAR(10) || ('        </tr>' || CHAR(13)))) || ((CHAR(10) || ('    </thead>' || CHAR(13))) || (CHAR(10) || ('    <tbody>' || CHAR(13))))))) || (((((CHAR(10) || '        <tr>') || (CHAR(13) || (CHAR(10) || '            <td><a href="http://panel.HostingCompany.com">http://panel.HostingCompany.com</a></td>'))) || ((CHAR(13) || (CHAR(10) || '            <td>#user.Username#</td>')) || (CHAR(13) || (CHAR(10) || '            <td>#user.Password#</td>')))) || (((CHAR(13) || CHAR(10)) || ('        </tr>' || (CHAR(13) || CHAR(10)))) || (('    </tbody>' || (CHAR(13) || CHAR(10))) || ('</table>' || (CHAR(13) || CHAR(10)))))) || (((('</ad:if>' || CHAR(13)) || (CHAR(10) || (CHAR(13) || CHAR(10)))) || (('<h1>Hosting Spaces</h1>' || (CHAR(13) || CHAR(10))) || ('<p>' || (CHAR(13) || CHAR(10))))) || ((('    The following hosting spaces have been created under your account:' || CHAR(13)) || (CHAR(10) || ('</p>' || CHAR(13)))) || ((CHAR(10) || ('<ad:foreach collection="#Spaces#" var="Space" index="i">' || CHAR(13))) || (CHAR(10) || ('<h2>#Space.PackageName#</h2>' || CHAR(13))))))))) || (((((((CHAR(10) || '<table>') || (CHAR(13) || (CHAR(10) || '	<tbody>'))) || ((CHAR(13) || CHAR(10)) || ('		<tr>' || (CHAR(13) || CHAR(10))))) || ((('			<td class="Label">Hosting Plan:</td>' || CHAR(13)) || (CHAR(10) || ('			<td>' || CHAR(13)))) || ((CHAR(10) || ('				<ad:if test="#not(isnull(Plans[Space.PlanId]))#">#Plans[Space.PlanId].PlanName#<ad:else>System</ad:if>' || CHAR(13))) || (CHAR(10) || ('			</td>' || CHAR(13)))))) || ((((CHAR(10) || '		</tr>') || (CHAR(13) || (CHAR(10) || '		<ad:if test="#not(isnull(Plans[Space.PlanId]))#">'))) || ((CHAR(13) || (CHAR(10) || '		<tr>')) || (CHAR(13) || (CHAR(10) || '			<td class="Label">Purchase Date:</td>')))) || (((CHAR(13) || CHAR(10)) || ('			<td>' || (CHAR(13) || CHAR(10)))) || (('# Space.PurchaseDate#' || (CHAR(13) || CHAR(10))) || ('			</td>' || (CHAR(13) || CHAR(10))))))) || ((((('		</tr>' || CHAR(13)) || (CHAR(10) || ('		<tr>' || CHAR(13)))) || ((CHAR(10) || ('			<td class="Label">Disk Space, MB:</td>' || CHAR(13))) || (CHAR(10) || ('			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Diskspace" /></td>' || CHAR(13))))) || (((CHAR(10) || '		</tr>') || (CHAR(13) || (CHAR(10) || '		<tr>'))) || ((CHAR(13) || (CHAR(10) || '			<td class="Label">Bandwidth, MB/Month:</td>')) || (CHAR(13) || (CHAR(10) || '			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Bandwidth" /></td>'))))) || ((((CHAR(13) || CHAR(10)) || ('		</tr>' || (CHAR(13) || CHAR(10)))) || (('		<tr>' || (CHAR(13) || CHAR(10))) || ('			<td class="Label">Maximum Number of Domains:</td>' || (CHAR(13) || CHAR(10))))) || ((('			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Domains" /></td>' || CHAR(13)) || (CHAR(10) || ('		</tr>' || CHAR(13)))) || ((CHAR(10) || ('		<tr>' || CHAR(13))) || (CHAR(10) || ('			<td class="Label">Maximum Number of Sub-Domains:</td>' || CHAR(13)))))))) || ((((((CHAR(10) || '			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.SubDomains" /></td>') || (CHAR(13) || (CHAR(10) || '		</tr>'))) || ((CHAR(13) || (CHAR(10) || '		</ad:if>')) || (CHAR(13) || (CHAR(10) || '	</tbody>')))) || (((CHAR(13) || CHAR(10)) || ('</table>' || (CHAR(13) || CHAR(10)))) || (('</ad:foreach>' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || '<ad:if test="#Signup#">'))))) || ((((CHAR(13) || CHAR(10)) || ('<p>' || (CHAR(13) || CHAR(10)))) || (('If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || (CHAR(13) || CHAR(10))) || ('</p>' || (CHAR(13) || CHAR(10))))) || (((CHAR(13) || CHAR(10)) || ('<p>' || (CHAR(13) || CHAR(10)))) || (('Best regards,<br />' || (CHAR(13) || CHAR(10))) || ('SolidCP.<br />' || (CHAR(13) || CHAR(10))))))) || ((((('Web Site: <a href="https://solidcp.com">https://solidcp.com</a><br />' || CHAR(13)) || (CHAR(10) || ('E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>' || CHAR(13)))) || ((CHAR(10) || ('</p>' || CHAR(13))) || (CHAR(10) || ('</ad:if>' || CHAR(13))))) || (((CHAR(10) || CHAR(13)) || (CHAR(10) || ('<ad:template name="NumericQuota">' || CHAR(13)))) || ((CHAR(10) || ('	<ad:if test="#space.Quotas.ContainsKey(quota)#">' || CHAR(13))) || (CHAR(10) || ('		<ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if>' || CHAR(13)))))) || ((((CHAR(10) || '	<ad:else>') || (CHAR(13) || (CHAR(10) || '		0'))) || ((CHAR(13) || (CHAR(10) || '	</ad:if>')) || (CHAR(13) || (CHAR(10) || '</ad:template>')))) || (((CHAR(13) || CHAR(10)) || (CHAR(13) || (CHAR(10) || '</div>'))) || ((CHAR(13) || (CHAR(10) || '</body>')) || (CHAR(13) || (CHAR(10) || '</html>'))))))))));
+VALUES ('HtmlBody', 'AccountSummaryLetter', 1, (((((((('<html xmlns="http://www.w3.org/1999/xhtml">' || CHAR(13)) || (CHAR(10) || ('<head>' || CHAR(13)))) || ((CHAR(10) || '    <title>Account Summary Information</title>') || (CHAR(13) || (CHAR(10) || '    <style type="text/css">')))) || (((CHAR(13) || CHAR(10)) || ('		.Summary { background-color: ##ffffff; padding: 5px; }' || (CHAR(13) || CHAR(10)))) || (('		.Summary .Header { padding: 10px 0px 10px 10px; font-size: 16pt; background-color: ##E5F2FF; color: ##1F4978; border-bottom: solid 2px ##86B9F7; }' || (CHAR(13) || CHAR(10))) || ('        .Summary A { color: ##0153A4; }' || (CHAR(13) || CHAR(10)))))) || (((('        .Summary { font-family: Tahoma; font-size: 9pt; }' || CHAR(13)) || (CHAR(10) || ('        .Summary H1 { font-size: 1.7em; color: ##1F4978; border-bottom: dotted 3px ##efefef; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary H2 { font-size: 1.3em; color: ##1F4978; }' || CHAR(13))) || (CHAR(10) || ('        .Summary TABLE { border: solid 1px ##e5e5e5; }' || CHAR(13))))) || (((CHAR(10) || '        .Summary TH,') || (CHAR(13) || (CHAR(10) || '        .Summary TD.Label { padding: 5px; font-size: 8pt; font-weight: bold; background-color: ##f5f5f5; }'))) || ((CHAR(13) || (CHAR(10) || '        .Summary TD { padding: 8px; font-size: 9pt; }')) || (CHAR(13) || (CHAR(10) || '        .Summary UL LI { font-size: 1.1em; font-weight: bold; }')))))) || (((((CHAR(13) || CHAR(10)) || ('        .Summary UL UL LI { font-size: 0.9em; font-weight: normal; }' || (CHAR(13) || CHAR(10)))) || (('    </style>' || (CHAR(13) || CHAR(10))) || ('</head>' || (CHAR(13) || CHAR(10))))) || ((('<body>' || CHAR(13)) || (CHAR(10) || ('<div class="Summary">' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<a name="top"></a>' || (CHAR(13) || CHAR(10)))))) || (((('<div class="Header">' || CHAR(13)) || (CHAR(10) || ('	Hosting Account Information' || CHAR(13)))) || ((CHAR(10) || ('</div>' || CHAR(13))) || (CHAR(10) || (CHAR(13) || CHAR(10))))) || ((('<ad:if test="#Signup#">' || CHAR(13)) || (CHAR(10) || ('<p>' || CHAR(13)))) || ((CHAR(10) || ('Hello #user.FirstName#,' || CHAR(13))) || (CHAR(10) || ('</p>' || CHAR(13)))))))) || ((((((CHAR(10) || CHAR(13)) || (CHAR(10) || ('<p>' || CHAR(13)))) || ((CHAR(10) || 'New user account has been created and below you can find its summary information.') || (CHAR(13) || (CHAR(10) || '</p>')))) || (((CHAR(13) || CHAR(10)) || (CHAR(13) || (CHAR(10) || '<h1>Control Panel URL</h1>'))) || ((CHAR(13) || (CHAR(10) || '<table>')) || (CHAR(13) || (CHAR(10) || '    <thead>'))))) || ((((CHAR(13) || CHAR(10)) || ('        <tr>' || (CHAR(13) || CHAR(10)))) || (('            <th>Control Panel URL</th>' || (CHAR(13) || CHAR(10))) || ('            <th>Username</th>' || (CHAR(13) || CHAR(10))))) || ((('            <th>Password</th>' || CHAR(13)) || (CHAR(10) || ('        </tr>' || CHAR(13)))) || ((CHAR(10) || ('    </thead>' || CHAR(13))) || (CHAR(10) || ('    <tbody>' || CHAR(13))))))) || (((((CHAR(10) || '        <tr>') || (CHAR(13) || (CHAR(10) || '            <td><a href="http://panel.HostingCompany.com">http://panel.HostingCompany.com</a></td>'))) || ((CHAR(13) || (CHAR(10) || '            <td>#user.Username#</td>')) || (CHAR(13) || (CHAR(10) || '            <td>#user.Password#</td>')))) || (((CHAR(13) || CHAR(10)) || ('        </tr>' || (CHAR(13) || CHAR(10)))) || (('    </tbody>' || (CHAR(13) || CHAR(10))) || ('</table>' || (CHAR(13) || CHAR(10)))))) || (((('</ad:if>' || CHAR(13)) || (CHAR(10) || (CHAR(13) || CHAR(10)))) || (('<h1>Hosting Spaces</h1>' || (CHAR(13) || CHAR(10))) || ('<p>' || (CHAR(13) || CHAR(10))))) || ((('    The following hosting spaces have been created under your account:' || CHAR(13)) || (CHAR(10) || ('</p>' || CHAR(13)))) || ((CHAR(10) || ('<ad:foreach collection="#Spaces#" var="Space" index="i">' || CHAR(13))) || (CHAR(10) || ('<h2>#Space.PackageName#</h2>' || CHAR(13))))))))) || (((((((CHAR(10) || '<table>') || (CHAR(13) || (CHAR(10) || '	<tbody>'))) || ((CHAR(13) || CHAR(10)) || ('		<tr>' || (CHAR(13) || CHAR(10))))) || ((('			<td class="Label">Hosting Plan:</td>' || CHAR(13)) || (CHAR(10) || ('			<td>' || CHAR(13)))) || ((CHAR(10) || ('				<ad:if test="#not(isnull(Plans[Space.PlanId]))#">#Plans[Space.PlanId].PlanName#<ad:else>System</ad:if>' || CHAR(13))) || (CHAR(10) || ('			</td>' || CHAR(13)))))) || ((((CHAR(10) || '		</tr>') || (CHAR(13) || (CHAR(10) || '		<ad:if test="#not(isnull(Plans[Space.PlanId]))#">'))) || ((CHAR(13) || (CHAR(10) || '		<tr>')) || (CHAR(13) || (CHAR(10) || '			<td class="Label">Purchase Date:</td>')))) || (((CHAR(13) || CHAR(10)) || ('			<td>' || (CHAR(13) || CHAR(10)))) || (('# Space.PurchaseDate#' || (CHAR(13) || CHAR(10))) || ('			</td>' || (CHAR(13) || CHAR(10))))))) || ((((('		</tr>' || CHAR(13)) || (CHAR(10) || ('		<tr>' || CHAR(13)))) || ((CHAR(10) || ('			<td class="Label">Disk Space, MB:</td>' || CHAR(13))) || (CHAR(10) || ('			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Diskspace" /></td>' || CHAR(13))))) || (((CHAR(10) || '		</tr>') || (CHAR(13) || (CHAR(10) || '		<tr>'))) || ((CHAR(13) || (CHAR(10) || '			<td class="Label">Bandwidth, MB/Month:</td>')) || (CHAR(13) || (CHAR(10) || '			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Bandwidth" /></td>'))))) || ((((CHAR(13) || CHAR(10)) || ('		</tr>' || (CHAR(13) || CHAR(10)))) || (('		<tr>' || (CHAR(13) || CHAR(10))) || ('			<td class="Label">Maximum Number of Domains:</td>' || (CHAR(13) || CHAR(10))))) || ((('			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Domains" /></td>' || CHAR(13)) || (CHAR(10) || ('		</tr>' || CHAR(13)))) || ((CHAR(10) || ('		<tr>' || CHAR(13))) || (CHAR(10) || ('			<td class="Label">Maximum Number of Sub-Domains:</td>' || CHAR(13)))))))) || ((((((CHAR(10) || '			<td><ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.SubDomains" /></td>') || (CHAR(13) || (CHAR(10) || '		</tr>'))) || ((CHAR(13) || (CHAR(10) || '		</ad:if>')) || (CHAR(13) || (CHAR(10) || '	</tbody>')))) || (((CHAR(13) || CHAR(10)) || ('</table>' || (CHAR(13) || CHAR(10)))) || (('</ad:foreach>' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || '<ad:if test="#Signup#">'))))) || ((((CHAR(13) || CHAR(10)) || ('<p>' || (CHAR(13) || CHAR(10)))) || (('If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || (CHAR(13) || CHAR(10))) || ('</p>' || (CHAR(13) || CHAR(10))))) || (((CHAR(13) || CHAR(10)) || ('<p>' || (CHAR(13) || CHAR(10)))) || (('Best regards,<br />' || (CHAR(13) || CHAR(10))) || ('FuseCP.<br />' || (CHAR(13) || CHAR(10))))))) || ((((('Web Site: <a href="https://fusecp.com">https://fusecp.com</a><br />' || CHAR(13)) || (CHAR(10) || ('E-Mail: <a href="mailto:support@fusecp.com">support@fusecp.com</a>' || CHAR(13)))) || ((CHAR(10) || ('</p>' || CHAR(13))) || (CHAR(10) || ('</ad:if>' || CHAR(13))))) || (((CHAR(10) || CHAR(13)) || (CHAR(10) || ('<ad:template name="NumericQuota">' || CHAR(13)))) || ((CHAR(10) || ('	<ad:if test="#space.Quotas.ContainsKey(quota)#">' || CHAR(13))) || (CHAR(10) || ('		<ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if>' || CHAR(13)))))) || ((((CHAR(10) || '	<ad:else>') || (CHAR(13) || (CHAR(10) || '		0'))) || ((CHAR(13) || (CHAR(10) || '	</ad:if>')) || (CHAR(13) || (CHAR(10) || '</ad:template>')))) || (((CHAR(13) || CHAR(10)) || (CHAR(13) || (CHAR(10) || '</div>'))) || ((CHAR(13) || (CHAR(10) || '</body>')) || (CHAR(13) || (CHAR(10) || '</html>'))))))))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5418,11 +5418,11 @@ VALUES ('Priority', 'AccountSummaryLetter', 1, 'Normal');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('Subject', 'AccountSummaryLetter', 1, '<ad:if test="#Signup#">SolidCP  account has been created for<ad:else>SolidCP  account summary for</ad:if> #user.FirstName# #user.LastName#');
+VALUES ('Subject', 'AccountSummaryLetter', 1, '<ad:if test="#Signup#">FuseCP  account has been created for<ad:else>FuseCP  account summary for</ad:if> #user.FirstName# #user.LastName#');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('TextBody', 'AccountSummaryLetter', 1, (((((('=================================' || CHAR(13)) || (CHAR(10) || ('   Hosting Account Information' || CHAR(13)))) || ((CHAR(10) || ('=================================' || CHAR(13))) || (CHAR(10) || ('<ad:if test="#Signup#">Hello #user.FirstName#,' || CHAR(13))))) || (((CHAR(10) || (CHAR(13) || CHAR(10))) || ('New user account has been created and below you can find its summary information.' || (CHAR(13) || CHAR(10)))) || ((CHAR(13) || (CHAR(10) || 'Control Panel URL: https://panel.solidcp.com')) || (CHAR(13) || (CHAR(10) || 'Username: #user.Username#'))))) || ((((CHAR(13) || (CHAR(10) || 'Password: #user.Password#')) || (CHAR(13) || (CHAR(10) || '</ad:if>'))) || ((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('Hosting Spaces' || CHAR(13))))) || (((CHAR(10) || ('==============' || CHAR(13))) || (CHAR(10) || ('The following hosting spaces have been created under your account:' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<ad:foreach collection="#Spaces#" var="Space" index="i">' || (CHAR(13) || CHAR(10))))))) || ((((('=== #Space.PackageName# ===' || CHAR(13)) || (CHAR(10) || ('Hosting Plan: <ad:if test="#not(isnull(Plans[Space.PlanId]))#">#Plans[Space.PlanId].PlanName#<ad:else>System</ad:if>' || CHAR(13)))) || ((CHAR(10) || ('<ad:if test="#not(isnull(Plans[Space.PlanId]))#">Purchase Date: #Space.PurchaseDate#' || CHAR(13))) || (CHAR(10) || ('Disk Space, MB: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Diskspace" />' || CHAR(13))))) || (((CHAR(10) || ('Bandwidth, MB/Month: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Bandwidth" />' || CHAR(13))) || (CHAR(10) || ('Maximum Number of Domains: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Domains" />' || CHAR(13)))) || ((CHAR(10) || ('Maximum Number of Sub-Domains: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.SubDomains" />' || CHAR(13))) || (CHAR(10) || ('</ad:if>' || CHAR(13)))))) || ((((CHAR(10) || ('</ad:foreach>' || CHAR(13))) || (CHAR(10) || (CHAR(13) || CHAR(10)))) || (('<ad:if test="#Signup#">If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || 'Best regards,')))) || (((CHAR(13) || (CHAR(10) || 'SolidCP.')) || (CHAR(13) || (CHAR(10) || 'Web Site: https://solidcp.com">'))) || ((CHAR(13) || (CHAR(10) || 'E-Mail: support@solidcp.com')) || (CHAR(13) || (CHAR(10) || '</ad:if><ad:template name="NumericQuota"><ad:if test="#space.Quotas.ContainsKey(quota)#"><ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if><ad:else>0</ad:if></ad:template>'))))))));
+VALUES ('TextBody', 'AccountSummaryLetter', 1, (((((('=================================' || CHAR(13)) || (CHAR(10) || ('   Hosting Account Information' || CHAR(13)))) || ((CHAR(10) || ('=================================' || CHAR(13))) || (CHAR(10) || ('<ad:if test="#Signup#">Hello #user.FirstName#,' || CHAR(13))))) || (((CHAR(10) || (CHAR(13) || CHAR(10))) || ('New user account has been created and below you can find its summary information.' || (CHAR(13) || CHAR(10)))) || ((CHAR(13) || (CHAR(10) || 'Control Panel URL: https://panel.fusecp.com')) || (CHAR(13) || (CHAR(10) || 'Username: #user.Username#'))))) || ((((CHAR(13) || (CHAR(10) || 'Password: #user.Password#')) || (CHAR(13) || (CHAR(10) || '</ad:if>'))) || ((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('Hosting Spaces' || CHAR(13))))) || (((CHAR(10) || ('==============' || CHAR(13))) || (CHAR(10) || ('The following hosting spaces have been created under your account:' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<ad:foreach collection="#Spaces#" var="Space" index="i">' || (CHAR(13) || CHAR(10))))))) || ((((('=== #Space.PackageName# ===' || CHAR(13)) || (CHAR(10) || ('Hosting Plan: <ad:if test="#not(isnull(Plans[Space.PlanId]))#">#Plans[Space.PlanId].PlanName#<ad:else>System</ad:if>' || CHAR(13)))) || ((CHAR(10) || ('<ad:if test="#not(isnull(Plans[Space.PlanId]))#">Purchase Date: #Space.PurchaseDate#' || CHAR(13))) || (CHAR(10) || ('Disk Space, MB: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Diskspace" />' || CHAR(13))))) || (((CHAR(10) || ('Bandwidth, MB/Month: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Bandwidth" />' || CHAR(13))) || (CHAR(10) || ('Maximum Number of Domains: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.Domains" />' || CHAR(13)))) || ((CHAR(10) || ('Maximum Number of Sub-Domains: <ad:NumericQuota space="#SpaceContexts[Space.PackageId]#" quota="OS.SubDomains" />' || CHAR(13))) || (CHAR(10) || ('</ad:if>' || CHAR(13)))))) || ((((CHAR(10) || ('</ad:foreach>' || CHAR(13))) || (CHAR(10) || (CHAR(13) || CHAR(10)))) || (('<ad:if test="#Signup#">If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || 'Best regards,')))) || (((CHAR(13) || (CHAR(10) || 'FuseCP.')) || (CHAR(13) || (CHAR(10) || 'Web Site: https://fusecp.com">'))) || ((CHAR(13) || (CHAR(10) || 'E-Mail: support@fusecp.com')) || (CHAR(13) || (CHAR(10) || '</ad:if><ad:template name="NumericQuota"><ad:if test="#space.Quotas.ContainsKey(quota)#"><ad:if test="#space.Quotas[quota].QuotaAllocatedValue isnot -1#">#space.Quotas[quota].QuotaAllocatedValue#<ad:else>Unlimited</ad:if><ad:else>0</ad:if></ad:template>'))))))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5650,7 +5650,7 @@ VALUES ('From', 'PasswordReminderLetter', 1, 'support@HostingCompany.com');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('HtmlBody', 'PasswordReminderLetter', 1, ((((((('<html xmlns="http://www.w3.org/1999/xhtml">' || CHAR(13)) || (CHAR(10) || ('<head>' || CHAR(13)))) || ((CHAR(10) || ('    <title>Account Summary Information</title>' || CHAR(13))) || (CHAR(10) || ('    <style type="text/css">' || CHAR(13))))) || (((CHAR(10) || ('		.Summary { background-color: ##ffffff; padding: 5px; }' || CHAR(13))) || (CHAR(10) || ('		.Summary .Header { padding: 10px 0px 10px 10px; font-size: 16pt; background-color: ##E5F2FF; color: ##1F4978; border-bottom: solid 2px ##86B9F7; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary A { color: ##0153A4; }' || CHAR(13))) || (CHAR(10) || ('        .Summary { font-family: Tahoma; font-size: 9pt; }' || CHAR(13)))))) || ((((CHAR(10) || ('        .Summary H1 { font-size: 1.7em; color: ##1F4978; border-bottom: dotted 3px ##efefef; }' || CHAR(13))) || (CHAR(10) || ('        .Summary H2 { font-size: 1.3em; color: ##1F4978; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary TABLE { border: solid 1px ##e5e5e5; }' || CHAR(13))) || (CHAR(10) || ('        .Summary TH,' || CHAR(13))))) || (((CHAR(10) || ('        .Summary TD.Label { padding: 5px; font-size: 8pt; font-weight: bold; background-color: ##f5f5f5; }' || CHAR(13))) || (CHAR(10) || ('        .Summary TD { padding: 8px; font-size: 9pt; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary UL LI { font-size: 1.1em; font-weight: bold; }' || CHAR(13))) || (CHAR(10) || ('        .Summary UL UL LI { font-size: 0.9em; font-weight: normal; }' || CHAR(13))))))) || (((((CHAR(10) || ('    </style>' || CHAR(13))) || (CHAR(10) || ('</head>' || CHAR(13)))) || ((CHAR(10) || ('<body>' || CHAR(13))) || (CHAR(10) || ('<div class="Summary">' || CHAR(13))))) || (((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<a name="top"></a>' || (CHAR(13) || CHAR(10)))) || (('<div class="Header">' || (CHAR(13) || CHAR(10))) || ('	Hosting Account Information' || (CHAR(13) || CHAR(10)))))) || (((('</div>' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || '<p>'))) || ((CHAR(13) || (CHAR(10) || 'Hello #user.FirstName#,')) || (CHAR(13) || (CHAR(10) || '</p>')))) || (((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('<p>' || CHAR(13)))) || ((CHAR(10) || ('Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login. ' || CHAR(13))) || (CHAR(10) || ('</p>' || CHAR(13)))))))) || ((((((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<h1>Control Panel URL</h1>' || (CHAR(13) || CHAR(10)))) || (('<table>' || (CHAR(13) || CHAR(10))) || ('    <thead>' || (CHAR(13) || CHAR(10))))) || ((('        <tr>' || (CHAR(13) || CHAR(10))) || ('            <th>Control Panel URL</th>' || (CHAR(13) || CHAR(10)))) || (('            <th>Username</th>' || (CHAR(13) || CHAR(10))) || ('            <th>One Time Password</th>' || (CHAR(13) || CHAR(10)))))) || (((('        </tr>' || (CHAR(13) || CHAR(10))) || ('    </thead>' || (CHAR(13) || CHAR(10)))) || (('    <tbody>' || (CHAR(13) || CHAR(10))) || ('        <tr>' || (CHAR(13) || CHAR(10))))) || ((('            <td><a href="http://panel.HostingCompany.com">http://panel.HostingCompany.com</a></td>' || (CHAR(13) || CHAR(10))) || ('            <td>#user.Username#</td>' || (CHAR(13) || CHAR(10)))) || (('            <td>#user.Password#</td>' || (CHAR(13) || CHAR(10))) || ('        </tr>' || (CHAR(13) || CHAR(10))))))) || ((((('    </tbody>' || (CHAR(13) || CHAR(10))) || ('</table>' || (CHAR(13) || CHAR(10)))) || ((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('<p>' || CHAR(13))))) || (((CHAR(10) || ('If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || CHAR(13))) || (CHAR(10) || ('</p>' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<p>' || (CHAR(13) || CHAR(10)))))) || (((('Best regards,<br />' || (CHAR(13) || CHAR(10))) || ('SolidCP.<br />' || (CHAR(13) || CHAR(10)))) || (('Web Site: <a href="https://solidcp.com">https://solidcp.com</a><br />' || (CHAR(13) || CHAR(10))) || ('E-Mail: <a href="mailto:support@solidcp.com">support@solidcp.com</a>' || (CHAR(13) || CHAR(10))))) || ((('</p>' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || '</div>'))) || ((CHAR(13) || (CHAR(10) || '</body>')) || (CHAR(13) || (CHAR(10) || '</html>')))))))));
+VALUES ('HtmlBody', 'PasswordReminderLetter', 1, ((((((('<html xmlns="http://www.w3.org/1999/xhtml">' || CHAR(13)) || (CHAR(10) || ('<head>' || CHAR(13)))) || ((CHAR(10) || ('    <title>Account Summary Information</title>' || CHAR(13))) || (CHAR(10) || ('    <style type="text/css">' || CHAR(13))))) || (((CHAR(10) || ('		.Summary { background-color: ##ffffff; padding: 5px; }' || CHAR(13))) || (CHAR(10) || ('		.Summary .Header { padding: 10px 0px 10px 10px; font-size: 16pt; background-color: ##E5F2FF; color: ##1F4978; border-bottom: solid 2px ##86B9F7; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary A { color: ##0153A4; }' || CHAR(13))) || (CHAR(10) || ('        .Summary { font-family: Tahoma; font-size: 9pt; }' || CHAR(13)))))) || ((((CHAR(10) || ('        .Summary H1 { font-size: 1.7em; color: ##1F4978; border-bottom: dotted 3px ##efefef; }' || CHAR(13))) || (CHAR(10) || ('        .Summary H2 { font-size: 1.3em; color: ##1F4978; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary TABLE { border: solid 1px ##e5e5e5; }' || CHAR(13))) || (CHAR(10) || ('        .Summary TH,' || CHAR(13))))) || (((CHAR(10) || ('        .Summary TD.Label { padding: 5px; font-size: 8pt; font-weight: bold; background-color: ##f5f5f5; }' || CHAR(13))) || (CHAR(10) || ('        .Summary TD { padding: 8px; font-size: 9pt; }' || CHAR(13)))) || ((CHAR(10) || ('        .Summary UL LI { font-size: 1.1em; font-weight: bold; }' || CHAR(13))) || (CHAR(10) || ('        .Summary UL UL LI { font-size: 0.9em; font-weight: normal; }' || CHAR(13))))))) || (((((CHAR(10) || ('    </style>' || CHAR(13))) || (CHAR(10) || ('</head>' || CHAR(13)))) || ((CHAR(10) || ('<body>' || CHAR(13))) || (CHAR(10) || ('<div class="Summary">' || CHAR(13))))) || (((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<a name="top"></a>' || (CHAR(13) || CHAR(10)))) || (('<div class="Header">' || (CHAR(13) || CHAR(10))) || ('	Hosting Account Information' || (CHAR(13) || CHAR(10)))))) || (((('</div>' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || '<p>'))) || ((CHAR(13) || (CHAR(10) || 'Hello #user.FirstName#,')) || (CHAR(13) || (CHAR(10) || '</p>')))) || (((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('<p>' || CHAR(13)))) || ((CHAR(10) || ('Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login. ' || CHAR(13))) || (CHAR(10) || ('</p>' || CHAR(13)))))))) || ((((((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<h1>Control Panel URL</h1>' || (CHAR(13) || CHAR(10)))) || (('<table>' || (CHAR(13) || CHAR(10))) || ('    <thead>' || (CHAR(13) || CHAR(10))))) || ((('        <tr>' || (CHAR(13) || CHAR(10))) || ('            <th>Control Panel URL</th>' || (CHAR(13) || CHAR(10)))) || (('            <th>Username</th>' || (CHAR(13) || CHAR(10))) || ('            <th>One Time Password</th>' || (CHAR(13) || CHAR(10)))))) || (((('        </tr>' || (CHAR(13) || CHAR(10))) || ('    </thead>' || (CHAR(13) || CHAR(10)))) || (('    <tbody>' || (CHAR(13) || CHAR(10))) || ('        <tr>' || (CHAR(13) || CHAR(10))))) || ((('            <td><a href="http://panel.HostingCompany.com">http://panel.HostingCompany.com</a></td>' || (CHAR(13) || CHAR(10))) || ('            <td>#user.Username#</td>' || (CHAR(13) || CHAR(10)))) || (('            <td>#user.Password#</td>' || (CHAR(13) || CHAR(10))) || ('        </tr>' || (CHAR(13) || CHAR(10))))))) || ((((('    </tbody>' || (CHAR(13) || CHAR(10))) || ('</table>' || (CHAR(13) || CHAR(10)))) || ((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('<p>' || CHAR(13))))) || (((CHAR(10) || ('If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || CHAR(13))) || (CHAR(10) || ('</p>' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('<p>' || (CHAR(13) || CHAR(10)))))) || (((('Best regards,<br />' || (CHAR(13) || CHAR(10))) || ('FuseCP.<br />' || (CHAR(13) || CHAR(10)))) || (('Web Site: <a href="https://fusecp.com">https://fusecp.com</a><br />' || (CHAR(13) || CHAR(10))) || ('E-Mail: <a href="mailto:support@fusecp.com">support@fusecp.com</a>' || (CHAR(13) || CHAR(10))))) || ((('</p>' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || '</div>'))) || ((CHAR(13) || (CHAR(10) || '</body>')) || (CHAR(13) || (CHAR(10) || '</html>')))))))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5662,7 +5662,7 @@ VALUES ('Subject', 'PasswordReminderLetter', 1, 'Password reminder for #user.Fir
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('TextBody', 'PasswordReminderLetter', 1, ((((('=================================' || CHAR(13)) || (CHAR(10) || ('   Hosting Account Information' || CHAR(13)))) || ((CHAR(10) || ('=================================' || CHAR(13))) || (CHAR(10) || (CHAR(13) || CHAR(10))))) || ((('Hello #user.FirstName#,' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || 'Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login.'))) || ((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('Control Panel URL: https://panel.solidcp.com' || CHAR(13)))))) || ((((CHAR(10) || ('Username: #user.Username#' || CHAR(13))) || (CHAR(10) || ('One Time Password: #user.Password#' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || (CHAR(13) || CHAR(10))))) || (((CHAR(13) || (CHAR(10) || 'Best regards,')) || (CHAR(13) || (CHAR(10) || 'SolidCP.'))) || ((CHAR(13) || (CHAR(10) || 'Web Site: https://solidcp.com"')) || (CHAR(13) || (CHAR(10) || 'E-Mail: support@solidcp.com')))))));
+VALUES ('TextBody', 'PasswordReminderLetter', 1, ((((('=================================' || CHAR(13)) || (CHAR(10) || ('   Hosting Account Information' || CHAR(13)))) || ((CHAR(10) || ('=================================' || CHAR(13))) || (CHAR(10) || (CHAR(13) || CHAR(10))))) || ((('Hello #user.FirstName#,' || (CHAR(13) || CHAR(10))) || (CHAR(13) || (CHAR(10) || 'Please, find below details of your control panel account. The one time password was generated for you. You should change the password after login.'))) || ((CHAR(13) || (CHAR(10) || CHAR(13))) || (CHAR(10) || ('Control Panel URL: https://panel.fusecp.com' || CHAR(13)))))) || ((((CHAR(10) || ('Username: #user.Username#' || CHAR(13))) || (CHAR(10) || ('One Time Password: #user.Password#' || CHAR(13)))) || ((CHAR(10) || (CHAR(13) || CHAR(10))) || ('If you have any questions regarding your hosting account, feel free to contact our support department at any time.' || (CHAR(13) || CHAR(10))))) || (((CHAR(13) || (CHAR(10) || 'Best regards,')) || (CHAR(13) || (CHAR(10) || 'FuseCP.'))) || ((CHAR(13) || (CHAR(10) || 'Web Site: https://fusecp.com"')) || (CHAR(13) || (CHAR(10) || 'E-Mail: support@fusecp.com')))))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5702,15 +5702,15 @@ VALUES ('UserPasswordPolicy', 'SharePointPolicy', 1, 'True;5;20;0;1;0;True;;0;;;
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('DemoMessage', 'SolidCPPolicy', 1, ((('When user account is in demo mode the majority of operations are' || (CHAR(13) || CHAR(10))) || ('disabled, especially those ones that modify or delete records.' || (CHAR(13) || CHAR(10)))) || (('You are welcome to ask your questions or place comments about' || (CHAR(13) || CHAR(10))) || (('this demo on  <a href="http://forum.SolidCP.net"' || CHAR(13)) || (CHAR(10) || 'target="_blank">SolidCP  Support Forum</a>')))));
+VALUES ('DemoMessage', 'FuseCPPolicy', 1, ((('When user account is in demo mode the majority of operations are' || (CHAR(13) || CHAR(10))) || ('disabled, especially those ones that modify or delete records.' || (CHAR(13) || CHAR(10)))) || (('You are welcome to ask your questions or place comments about' || (CHAR(13) || CHAR(10))) || (('this demo on  <a href="http://forum.FuseCP.net"' || CHAR(13)) || (CHAR(10) || 'target="_blank">FuseCP  Support Forum</a>')))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('ForbiddenIP', 'SolidCPPolicy', 1, '');
+VALUES ('ForbiddenIP', 'FuseCPPolicy', 1, '');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('PasswordPolicy', 'SolidCPPolicy', 1, 'True;6;20;0;1;0;True;;0;;;False;False;0;');
+VALUES ('PasswordPolicy', 'FuseCPPolicy', 1, 'True;6;20;0;1;0;True;;0;;;False;False;0;');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5886,7 +5886,7 @@ VALUES ('FrontPagePasswordPolicy', 'WebPolicy', 1, 'True;5;20;0;1;0;False;;0;0;0
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('ParkingPageContent', 'WebPolicy', 1, ((((('<html xmlns="http://www.w3.org/1999/xhtml">' || CHAR(13)) || (CHAR(10) || ('<head>' || CHAR(13)))) || ((CHAR(10) || '    <title>The web site is under construction</title>') || (CHAR(13) || (CHAR(10) || '<style type="text/css">')))) || (((CHAR(13) || CHAR(10)) || ('	H1 { font-size: 16pt; margin-bottom: 4px; }' || (CHAR(13) || CHAR(10)))) || (('	H2 { font-size: 14pt; margin-bottom: 4px; font-weight: normal; }' || (CHAR(13) || CHAR(10))) || ('</style>' || (CHAR(13) || CHAR(10)))))) || (((('</head>' || CHAR(13)) || (CHAR(10) || ('<body>' || CHAR(13)))) || ((CHAR(10) || ('<div id="PageOutline">' || CHAR(13))) || (CHAR(10) || ('	<h1>This web site has just been created from <a href="https://www.SolidCP.com">SolidCP </a> and it is still under construction.</h1>' || CHAR(13))))) || (((CHAR(10) || '	<h2>The web site is hosted by <a href="https://solidcp.com">SolidCP</a>.</h2>') || (CHAR(13) || (CHAR(10) || '</div>'))) || ((CHAR(13) || (CHAR(10) || '</body>')) || (CHAR(13) || (CHAR(10) || '</html>')))))));
+VALUES ('ParkingPageContent', 'WebPolicy', 1, ((((('<html xmlns="http://www.w3.org/1999/xhtml">' || CHAR(13)) || (CHAR(10) || ('<head>' || CHAR(13)))) || ((CHAR(10) || '    <title>The web site is under construction</title>') || (CHAR(13) || (CHAR(10) || '<style type="text/css">')))) || (((CHAR(13) || CHAR(10)) || ('	H1 { font-size: 16pt; margin-bottom: 4px; }' || (CHAR(13) || CHAR(10)))) || (('	H2 { font-size: 14pt; margin-bottom: 4px; font-weight: normal; }' || (CHAR(13) || CHAR(10))) || ('</style>' || (CHAR(13) || CHAR(10)))))) || (((('</head>' || CHAR(13)) || (CHAR(10) || ('<body>' || CHAR(13)))) || ((CHAR(10) || ('<div id="PageOutline">' || CHAR(13))) || (CHAR(10) || ('	<h1>This web site has just been created from <a href="https://www.FuseCP.com">FuseCP </a> and it is still under construction.</h1>' || CHAR(13))))) || (((CHAR(10) || '	<h2>The web site is hosted by <a href="https://fusecp.com">FuseCP</a>.</h2>') || (CHAR(13) || (CHAR(10) || '</div>'))) || ((CHAR(13) || (CHAR(10) || '</body>')) || (CHAR(13) || (CHAR(10) || '</html>')))))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -5902,7 +5902,7 @@ VALUES ('PhpInstalled', 'WebPolicy', 1, '');
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
-VALUES ('PublishingProfile', 'WebPolicy', 1, ((((((('<?xml version="1.0" encoding="utf-8"?>' || CHAR(13)) || (CHAR(10) || '<publishData>')) || ((CHAR(13) || CHAR(10)) || ('<ad:if test="#WebSite.WebDeploySitePublishingEnabled#">' || CHAR(13)))) || (((CHAR(10) || '	<publishProfile') || (CHAR(13) || CHAR(10))) || (('		profileName="#WebSite.Name# - Web Deploy"' || CHAR(13)) || (CHAR(10) || '		publishMethod="MSDeploy"')))) || ((((CHAR(13) || CHAR(10)) || ('		publishUrl="#WebSite["WmSvcServiceUrl"]#:#WebSite["WmSvcServicePort"]#"' || CHAR(13))) || ((CHAR(10) || '		msdeploySite="#WebSite.Name#"') || (CHAR(13) || CHAR(10)))) || ((('		userName="#WebSite.WebDeployPublishingAccount#"' || CHAR(13)) || (CHAR(10) || '		userPWD="#WebSite.WebDeployPublishingPassword#"')) || ((CHAR(13) || CHAR(10)) || ('		destinationAppUrl="http://#WebSite.Name#/"' || CHAR(13)))))) || (((((CHAR(10) || '		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>') || (CHAR(13) || CHAR(10))) || (('		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>' || CHAR(13)) || (CHAR(10) || '		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>'))) || (((CHAR(13) || CHAR(10)) || ('		hostingProviderForumLink="https://solidcp.com/support"' || CHAR(13))) || ((CHAR(10) || '		controlPanelLink="https://panel.solidcp.com/"') || (CHAR(13) || CHAR(10))))) || (((('	/>' || CHAR(13)) || (CHAR(10) || '</ad:if>')) || ((CHAR(13) || CHAR(10)) || ('<ad:if test="#IsDefined("FtpAccount")#">' || CHAR(13)))) || (((CHAR(10) || '	<publishProfile') || (CHAR(13) || CHAR(10))) || (('		profileName="#WebSite.Name# - FTP"' || CHAR(13)) || (CHAR(10) || '		publishMethod="FTP"')))))) || ((((((CHAR(13) || CHAR(10)) || ('		publishUrl="ftp://#FtpServiceAddress#"' || CHAR(13))) || ((CHAR(10) || '		ftpPassiveMode="True"') || (CHAR(13) || CHAR(10)))) || ((('		userName="#FtpAccount.Name#"' || CHAR(13)) || (CHAR(10) || '		userPWD="#FtpAccount.Password#"')) || ((CHAR(13) || CHAR(10)) || ('		destinationAppUrl="http://#WebSite.Name#/"' || CHAR(13))))) || ((((CHAR(10) || '		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>') || (CHAR(13) || CHAR(10))) || (('		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>' || CHAR(13)) || (CHAR(10) || '		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>'))) || (((CHAR(13) || CHAR(10)) || ('		hostingProviderForumLink="https://solidcp.com/support"' || CHAR(13))) || ((CHAR(10) || '		controlPanelLink="https://panel.solidcp.com/"') || (CHAR(13) || CHAR(10)))))) || ((((('    />' || CHAR(13)) || (CHAR(10) || '</ad:if>')) || ((CHAR(13) || CHAR(10)) || ('</publishData>' || CHAR(13)))) || (((CHAR(10) || CHAR(13)) || (CHAR(10) || '<!--')) || ((CHAR(13) || CHAR(10)) || ('Control Panel:' || CHAR(13))))) || ((((CHAR(10) || 'Username: #User.Username#') || (CHAR(13) || CHAR(10))) || (('Password: #User.Password#' || CHAR(13)) || (CHAR(10) || CHAR(13)))) || (((CHAR(10) || 'Technical Contact:') || (CHAR(13) || CHAR(10))) || (('support@solidcp.com' || CHAR(13)) || (CHAR(10) || '-->'))))))));
+VALUES ('PublishingProfile', 'WebPolicy', 1, ((((((('<?xml version="1.0" encoding="utf-8"?>' || CHAR(13)) || (CHAR(10) || '<publishData>')) || ((CHAR(13) || CHAR(10)) || ('<ad:if test="#WebSite.WebDeploySitePublishingEnabled#">' || CHAR(13)))) || (((CHAR(10) || '	<publishProfile') || (CHAR(13) || CHAR(10))) || (('		profileName="#WebSite.Name# - Web Deploy"' || CHAR(13)) || (CHAR(10) || '		publishMethod="MSDeploy"')))) || ((((CHAR(13) || CHAR(10)) || ('		publishUrl="#WebSite["WmSvcServiceUrl"]#:#WebSite["WmSvcServicePort"]#"' || CHAR(13))) || ((CHAR(10) || '		msdeploySite="#WebSite.Name#"') || (CHAR(13) || CHAR(10)))) || ((('		userName="#WebSite.WebDeployPublishingAccount#"' || CHAR(13)) || (CHAR(10) || '		userPWD="#WebSite.WebDeployPublishingPassword#"')) || ((CHAR(13) || CHAR(10)) || ('		destinationAppUrl="http://#WebSite.Name#/"' || CHAR(13)))))) || (((((CHAR(10) || '		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>') || (CHAR(13) || CHAR(10))) || (('		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>' || CHAR(13)) || (CHAR(10) || '		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>'))) || (((CHAR(13) || CHAR(10)) || ('		hostingProviderForumLink="https://fusecp.com/support"' || CHAR(13))) || ((CHAR(10) || '		controlPanelLink="https://panel.fusecp.com/"') || (CHAR(13) || CHAR(10))))) || (((('	/>' || CHAR(13)) || (CHAR(10) || '</ad:if>')) || ((CHAR(13) || CHAR(10)) || ('<ad:if test="#IsDefined("FtpAccount")#">' || CHAR(13)))) || (((CHAR(10) || '	<publishProfile') || (CHAR(13) || CHAR(10))) || (('		profileName="#WebSite.Name# - FTP"' || CHAR(13)) || (CHAR(10) || '		publishMethod="FTP"')))))) || ((((((CHAR(13) || CHAR(10)) || ('		publishUrl="ftp://#FtpServiceAddress#"' || CHAR(13))) || ((CHAR(10) || '		ftpPassiveMode="True"') || (CHAR(13) || CHAR(10)))) || ((('		userName="#FtpAccount.Name#"' || CHAR(13)) || (CHAR(10) || '		userPWD="#FtpAccount.Password#"')) || ((CHAR(13) || CHAR(10)) || ('		destinationAppUrl="http://#WebSite.Name#/"' || CHAR(13))))) || ((((CHAR(10) || '		<ad:if test="#Not(IsNull(MsSqlDatabase)) and Not(IsNull(MsSqlUser))#">SQLServerDBConnectionString="server=#MsSqlServerExternalAddress#;Initial Catalog=#MsSqlDatabase.Name#;uid=#MsSqlUser.Name#;pwd=#MsSqlUser.Password#"</ad:if>') || (CHAR(13) || CHAR(10))) || (('		<ad:if test="#Not(IsNull(MySqlDatabase)) and Not(IsNull(MySqlUser))#">mySQLDBConnectionString="server=#MySqlAddress#;database=#MySqlDatabase.Name#;uid=#MySqlUser.Name#;pwd=#MySqlUser.Password#"</ad:if>' || CHAR(13)) || (CHAR(10) || '		<ad:if test="#Not(IsNull(MariaDBDatabase)) and Not(IsNull(MariaDBUser))#">MariaDBDBConnectionString="server=#MariaDBAddress#;database=#MariaDBDatabase.Name#;uid=#MariaDBUser.Name#;pwd=#MariaDBUser.Password#"</ad:if>'))) || (((CHAR(13) || CHAR(10)) || ('		hostingProviderForumLink="https://fusecp.com/support"' || CHAR(13))) || ((CHAR(10) || '		controlPanelLink="https://panel.fusecp.com/"') || (CHAR(13) || CHAR(10)))))) || ((((('    />' || CHAR(13)) || (CHAR(10) || '</ad:if>')) || ((CHAR(13) || CHAR(10)) || ('</publishData>' || CHAR(13)))) || (((CHAR(10) || CHAR(13)) || (CHAR(10) || '<!--')) || ((CHAR(13) || CHAR(10)) || ('Control Panel:' || CHAR(13))))) || ((((CHAR(10) || 'Username: #User.Username#') || (CHAR(13) || CHAR(10))) || (('Password: #User.Password#' || CHAR(13)) || (CHAR(10) || CHAR(13)))) || (((CHAR(10) || 'Technical Contact:') || (CHAR(13) || CHAR(10))) || (('support@fusecp.com' || CHAR(13)) || (CHAR(10) || '-->'))))))));
 SELECT changes();
 
 INSERT INTO "UserSettings" ("PropertyName", "SettingsName", "UserID", "PropertyValue")
@@ -7034,7 +7034,7 @@ VALUES ('ProtectedUsersFile', 101, '.htpasswd');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('SecureFoldersModuleAssembly', 101, 'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
+VALUES ('SecureFoldersModuleAssembly', 101, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7134,7 +7134,7 @@ VALUES ('ProtectedUsersFile', 105, '.htpasswd');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('SecureFoldersModuleAssembly', 105, 'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
+VALUES ('SecureFoldersModuleAssembly', 105, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7242,7 +7242,7 @@ VALUES ('ProtectedUsersFile', 112, '.htpasswd');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('SecureFoldersModuleAssembly', 112, 'SolidCP.IIsModules.SecureFolders, SolidCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
+VALUES ('SecureFoldersModuleAssembly', 112, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")

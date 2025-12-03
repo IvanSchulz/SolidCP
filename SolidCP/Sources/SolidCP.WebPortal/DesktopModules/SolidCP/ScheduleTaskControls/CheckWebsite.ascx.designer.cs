@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ScheduleTaskControls {
+namespace FuseCP.Portal.ScheduleTaskControls {
     
     
     public partial class CheckWebsite {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ScheduleTaskControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel clpSendMessageIfHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel clpSendMessageIfHeader;
         
         /// <summary>
         /// pnlSendMessageIf control.
@@ -100,7 +100,7 @@ namespace SolidCP.Portal.ScheduleTaskControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel clpMessageHeader;
+        protected global::FuseCP.Portal.CollapsiblePanel clpMessageHeader;
         
         /// <summary>
         /// pnlMessage control.

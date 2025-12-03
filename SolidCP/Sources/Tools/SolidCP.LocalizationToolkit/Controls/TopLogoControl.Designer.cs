@@ -26,7 +26,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.LocalizationToolkit
+namespace FuseCP.LocalizationToolkit
 {
 	partial class TopLogoControl
     {
@@ -60,10 +60,10 @@ namespace SolidCP.LocalizationToolkit
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TopLogoControl));
 			this.pnlLogo = new System.Windows.Forms.Panel();
-			this.progressIcon = new SolidCP.LocalizationToolkit.ProgressIcon();
+			this.progressIcon = new FuseCP.LocalizationToolkit.ProgressIcon();
 			this.lblVersion = new System.Windows.Forms.Label();
 			this.imgLogo = new System.Windows.Forms.PictureBox();
-			this.line = new SolidCP.LocalizationToolkit.LineBox();
+			this.line = new FuseCP.LocalizationToolkit.LineBox();
 			this.pnlLogo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
 			this.SuspendLayout();

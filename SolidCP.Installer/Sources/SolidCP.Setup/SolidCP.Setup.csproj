@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -22,8 +22,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="..\..\..\SolidCP\Sources\VersionInfo.cs" Link="VersionInfo.cs" />
-        <Compile Include="..\SolidCP.UniversalInstaller\AssemblyLoader.cs" />
+        <Compile Include="..\..\..\FuseCP\Sources\VersionInfo.cs" Link="VersionInfo.cs" />
+        <Compile Include="..\FuseCP.UniversalInstaller\AssemblyLoader.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -54,37 +54,37 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Core\SolidCP.UniversalInstaller.Core.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Runtime\SolidCP.UniversalInstaller.Runtime.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.Avalonia\SolidCP.UniversalInstaller.UI.Avalonia.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.Console\SolidCP.UniversalInstaller.UI.Console.csproj" />
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.WinForms\SolidCP.UniversalInstaller.UI.WinForms.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Core\FuseCP.UniversalInstaller.Core.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Runtime\FuseCP.UniversalInstaller.Runtime.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.Avalonia\FuseCP.UniversalInstaller.UI.Avalonia.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.Console\FuseCP.UniversalInstaller.UI.Console.csproj" />
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.WinForms\FuseCP.UniversalInstaller.UI.WinForms.csproj">
             <SetTargetFramework>TargetFramework=net48</SetTargetFramework>
         </ProjectReference>
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.UI.WinForms\SolidCP.UniversalInstaller.UI.WinForms.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.UI.WinForms\FuseCP.UniversalInstaller.UI.WinForms.csproj">
             <SetTargetFramework>TargetFramework=net10.0-windows</SetTargetFramework>
         </ProjectReference>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj">
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj">
             <SetTargetFramework>TargetFramework=net10.0</SetTargetFramework>
         </ProjectReference>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj">
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj">
             <SetTargetFramework>TargetFramework=net48</SetTargetFramework>
         </ProjectReference>
-        <ProjectReference Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj">
+        <ProjectReference Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj">
             <SetTargetFramework>TargetFramework=netstandard2.0</SetTargetFramework>
         </ProjectReference>
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Runtime\SolidCP.UniversalInstaller.Runtime.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Runtime\FuseCP.UniversalInstaller.Runtime.csproj">
             <SetTargetFramework>TargetFramework=net10.0</SetTargetFramework>
         </ProjectReference>
-        <ProjectReference Include="..\SolidCP.UniversalInstaller.Runtime\SolidCP.UniversalInstaller.Runtime.csproj">
+        <ProjectReference Include="..\FuseCP.UniversalInstaller.Runtime\FuseCP.UniversalInstaller.Runtime.csproj">
             <SetTargetFramework>TargetFramework=net48</SetTargetFramework>
         </ProjectReference>
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="..\SolidCP.UniversalInstaller.Core\bin\$(Configuration)\netstandard2.0\SolidCP.UniversalInstaller.Core.deps.json">
-            <LogicalName>Dlls/SolidCP.UniversalInstaller.Core.deps.json</LogicalName>
-            <Link>Dlls\SolidCP.UniversalInstaller.Core.deps.json</Link>
+        <EmbeddedResource Include="..\FuseCP.UniversalInstaller.Core\bin\$(Configuration)\netstandard2.0\FuseCP.UniversalInstaller.Core.deps.json">
+            <LogicalName>Dlls/FuseCP.UniversalInstaller.Core.deps.json</LogicalName>
+            <Link>Dlls\FuseCP.UniversalInstaller.Core.deps.json</Link>
         </EmbeddedResource>
         <EmbeddedResource Include="$(PkgSystem_Management)\runtimes\win\lib\net10.0\System.Management.dll">
             <LogicalName>DllsNetCore/System.Management.dll</LogicalName>
@@ -144,15 +144,15 @@
         </EmbeddedResource>
 
 
-        <EmbeddedResource Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\bin\$(Configuration)\net10.0\runtimes\**\*.*">
+        <EmbeddedResource Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\bin\$(Configuration)\net10.0\runtimes\**\*.*">
             <LogicalName>DllsNetCore/runtimes/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
             <Link>DllsNetCore\runtimes\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </EmbeddedResource>
-        <EmbeddedResource Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x64\**\*.*">
+        <EmbeddedResource Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x64\**\*.*">
             <LogicalName>DllsNetFX/x64/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
             <Link>DllsNetFX\x64\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </EmbeddedResource>
-        <EmbeddedResource Include="..\..\..\SolidCP\Sources\SolidCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x86\**\*.*">
+        <EmbeddedResource Include="..\..\..\FuseCP\Sources\FuseCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x86\**\*.*">
             <LogicalName>DllsNetFX/x86/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
             <Link>DllsNetFX\x86\%(RecursiveDir)%(Filename)%(Extension)</Link>
         </EmbeddedResource>

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class OneTimePasswordHelper: ControllerBase
     {
@@ -14,7 +14,7 @@ namespace SolidCP.EnterpriseServer
             int passwordLength = 12; // default length
 
             // load password policy
-            UserSettings userSettings = UserController.GetUserSettings(userId, UserSettings.SolidCP_POLICY);
+            UserSettings userSettings = UserController.GetUserSettings(userId, UserSettings.FuseCP_POLICY);
             string passwordPolicy = userSettings["PasswordPolicy"];
 
             if (!String.IsNullOrEmpty(passwordPolicy))

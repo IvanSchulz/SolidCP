@@ -36,7 +36,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration.Install;
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	[RunInstaller(true)]
 	public partial class ProjectInstaller : Installer

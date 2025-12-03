@@ -35,9 +35,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Installer.Controls;
+using FuseCP.Installer.Controls;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	internal enum NodeType
 	{

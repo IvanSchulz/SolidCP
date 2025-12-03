@@ -1,9 +1,9 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using Newtonsoft.Json.Bson;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Web;
-using SolidCP.UniversalInstaller.Web;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Web;
+using FuseCP.UniversalInstaller.Web;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,7 +22,7 @@ using System.Xml.Linq;
 using Microsoft.Dism;
 using System.Collections.Immutable;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public class WindowsInstaller : Installer
 {
@@ -31,7 +31,7 @@ public class WindowsInstaller : Installer
 	public override string InstallExeRootPath
 	{
 		get => base.InstallExeRootPath ??
-			(base.InstallExeRootPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), SolidCP));
+			(base.InstallExeRootPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), FuseCP));
 		set => base.InstallExeRootPath = value;
 	}
 	public override string InstallWebRootPath { get => base.InstallWebRootPath ?? InstallExeRootPath; set => base.InstallWebRootPath = value; }
@@ -386,7 +386,7 @@ Add-AppxPackage ""{tmpFile}""");
 		}
 	}
 
-	public virtual string AppPoolName(CommonSettings setting) => $"SolidCP {setting.ComponentName} Pool";
+	public virtual string AppPoolName(CommonSettings setting) => $"FuseCP {setting.ComponentName} Pool";
 
 	public void CreateApplicationPool(CommonSettings setting)
 	{
@@ -801,7 +801,7 @@ Add-AppxPackage ""{tmpFile}""");
 		var binFolder = (Settings.EnterpriseServer.RunOnNetCore ||
 			Settings.WebPortal.RunOnNetCore && Settings.WebPortal.EmbedEnterpriseServer) ?
 				"bin_dotnet" : "bin\\Code";
-		var exe = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, "SolidCP.SchedulerService.exe");
+		var exe = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, "FuseCP.SchedulerService.exe");
 
 		var config = exe + ".config";
 		var xml = XElement.Load(config);
@@ -853,8 +853,8 @@ Add-AppxPackage ""{tmpFile}""");
 			var service = new WindowsServiceDescription()
 			{
 				ServiceId = SchedulerServiceId,
-				DisplayName = "SolidCP Scheduler Service",
-				Executable = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, "SolidCP.SchedulerService.exe"),
+				DisplayName = "FuseCP Scheduler Service",
+				Executable = Path.Combine(Settings.EnterpriseServer.InstallPath, binFolder, "FuseCP.SchedulerService.exe"),
 				Start = WindowsServiceStartMode.DelayedAuto,
 				Type = WindowsServiceType.Own,
 				Error = WindowsServiceErrorHandling.Normal
@@ -920,29 +920,29 @@ Add-AppxPackage ""{tmpFile}""");
 		{
 			case Global.Server.ComponentCode:
 				return
-@"- Remove SolidCP Server website
-- Delete SolidCP Server folder.
+@"- Remove FuseCP Server website
+- Delete FuseCP Server folder.
 - Remove firewall rule.";
 			case Global.EntServer.ComponentCode:
 				return
-@"- Remove SolidCP EnterpriseServer website.
-- Delete SolidCP EnterpriseServer folder.
-- Remove SolidCP Database.
+@"- Remove FuseCP EnterpriseServer website.
+- Delete FuseCP EnterpriseServer folder.
+- Remove FuseCP Database.
 - Remove firewall rule.";
 			case Global.WebPortal.ComponentCode:
 				return
-@"- Remove SolidCP WebPortal website.
-- Delete SolidCP WebPortal folder.
+@"- Remove FuseCP WebPortal website.
+- Delete FuseCP WebPortal folder.
 - Remove firewall rule.";
 			case Global.WebDavPortal.ComponentCode:
 				return
-@"- Remove SolidCP EnterpriseServer website.
-- Delete SolidCP EnterpriseServer folder.
+@"- Remove FuseCP EnterpriseServer website.
+- Delete FuseCP EnterpriseServer folder.
 - Remove firewall rule.";
 			case Global.StandaloneServer.ComponentCode:
 				return
-@"- Remove SolidCP WebPortal website.
-- Delete SolidCP WebPortal, EnterpriseServer & Server folder.
+@"- Remove FuseCP WebPortal website.
+- Delete FuseCP WebPortal, EnterpriseServer & Server folder.
 - Remove firewall rule.";
 			default: throw new NotSupportedException();
 		}

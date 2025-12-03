@@ -1,7 +1,7 @@
-' Copyright (c) 2016, SolidCP
-' SolidCP Is distributed under the Creative Commons Share-alike license
+' Copyright (c) 2016, FuseCP
+' FuseCP Is distributed under the Creative Commons Share-alike license
 ' 
-' SolidCP Is a fork of WebsitePanel:
+' FuseCP Is a fork of WebsitePanel:
 ' Copyright (c) 2014, Outercurve Foundation.
 ' All rights reserved.
 '
@@ -30,10 +30,10 @@
 ' (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 ' SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Imports SolidCP.Providers
-Imports SolidCP.Providers.Mail
-Imports SolidCP.Providers.Utils
-Imports SolidCP.Server.Utils
+Imports FuseCP.Providers
+Imports FuseCP.Providers.Mail
+Imports FuseCP.Providers.Utils
+Imports FuseCP.Server.Utils
 Imports System.IO
 Imports System.Text
 Imports System.Collections
@@ -293,7 +293,7 @@ Public Class ArgoMail
 
 
 #Region "IMailServer members"
-    Public Function AccountExists(ByVal mailboxName As String) As Boolean Implements SolidCP.Providers.Mail.IMailServer.AccountExists
+    Public Function AccountExists(ByVal mailboxName As String) As Boolean Implements FuseCP.Providers.Mail.IMailServer.AccountExists
         Dim service As Service = LoadUsersService()
         Dim exists As Boolean = False
 
@@ -304,7 +304,7 @@ Public Class ArgoMail
         Return exists
     End Function
 
-    Public Sub AddDomainAlias(ByVal domainName As String, ByVal aliasName As String) Implements SolidCP.Providers.Mail.IMailServer.AddDomainAlias
+    Public Sub AddDomainAlias(ByVal domainName As String, ByVal aliasName As String) Implements FuseCP.Providers.Mail.IMailServer.AddDomainAlias
         Dim service As Service = LoadLocalDomainsService()
 
         Try
@@ -326,7 +326,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub CreateAccount(ByVal mailbox As SolidCP.Providers.Mail.MailAccount) Implements SolidCP.Providers.Mail.IMailServer.CreateAccount
+    Public Sub CreateAccount(ByVal mailbox As FuseCP.Providers.Mail.MailAccount) Implements FuseCP.Providers.Mail.IMailServer.CreateAccount
         Dim service As Service = LoadUsersService()
 
         Try
@@ -371,7 +371,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub CreateDomain(ByVal domain As SolidCP.Providers.Mail.MailDomain) Implements SolidCP.Providers.Mail.IMailServer.CreateDomain
+    Public Sub CreateDomain(ByVal domain As FuseCP.Providers.Mail.MailDomain) Implements FuseCP.Providers.Mail.IMailServer.CreateDomain
         Dim service As Service = LoadLocalDomainsService()
 
         Try
@@ -399,7 +399,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub CreateGroup(ByVal group As SolidCP.Providers.Mail.MailGroup) Implements SolidCP.Providers.Mail.IMailServer.CreateGroup
+    Public Sub CreateGroup(ByVal group As FuseCP.Providers.Mail.MailGroup) Implements FuseCP.Providers.Mail.IMailServer.CreateGroup
         Dim service As Service = LoadDistribListsService()
 
         Try
@@ -422,7 +422,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub CreateList(ByVal maillist As SolidCP.Providers.Mail.MailList) Implements SolidCP.Providers.Mail.IMailServer.CreateList
+    Public Sub CreateList(ByVal maillist As FuseCP.Providers.Mail.MailList) Implements FuseCP.Providers.Mail.IMailServer.CreateList
         Try
             Dim listAccount As String = maillist.Name
 
@@ -481,7 +481,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub DeleteAccount(ByVal mailboxName As String) Implements SolidCP.Providers.Mail.IMailServer.DeleteAccount
+    Public Sub DeleteAccount(ByVal mailboxName As String) Implements FuseCP.Providers.Mail.IMailServer.DeleteAccount
         Dim service As Service = LoadUsersService()
 
         Try
@@ -519,7 +519,7 @@ Public Class ArgoMail
         Throw New System.NotImplementedException()
     End Sub
 
-    Public Sub DeleteDomain(ByVal domainName As String) Implements SolidCP.Providers.Mail.IMailServer.DeleteDomain
+    Public Sub DeleteDomain(ByVal domainName As String) Implements FuseCP.Providers.Mail.IMailServer.DeleteDomain
         Dim service As Service = LoadLocalDomainsService()
 
         Try
@@ -531,7 +531,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub DeleteDomainAlias(ByVal domainName As String, ByVal aliasName As String) Implements SolidCP.Providers.Mail.IMailServer.DeleteDomainAlias
+    Public Sub DeleteDomainAlias(ByVal domainName As String, ByVal aliasName As String) Implements FuseCP.Providers.Mail.IMailServer.DeleteDomainAlias
         Dim service As Service = LoadLocalDomainsService()
 
         Try
@@ -569,7 +569,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub DeleteGroup(ByVal groupName As String) Implements SolidCP.Providers.Mail.IMailServer.DeleteGroup
+    Public Sub DeleteGroup(ByVal groupName As String) Implements FuseCP.Providers.Mail.IMailServer.DeleteGroup
         Dim service As Service = LoadDistribListsService()
 
         Try
@@ -583,7 +583,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub DeleteList(ByVal maillistName As String) Implements SolidCP.Providers.Mail.IMailServer.DeleteList
+    Public Sub DeleteList(ByVal maillistName As String) Implements FuseCP.Providers.Mail.IMailServer.DeleteList
         Dim userService As Service = LoadUsersService()
 
         Try
@@ -605,7 +605,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Function DomainAliasExists(ByVal domainName As String, ByVal aliasName As String) As Boolean Implements SolidCP.Providers.Mail.IMailServer.DomainAliasExists
+    Public Function DomainAliasExists(ByVal domainName As String, ByVal aliasName As String) As Boolean Implements FuseCP.Providers.Mail.IMailServer.DomainAliasExists
         Dim service As Service = LoadLocalDomainsService()
         Dim exists As Boolean = False
 
@@ -634,7 +634,7 @@ Public Class ArgoMail
         Return exists
     End Function
 
-    Public Function DomainExists(ByVal domainName As String) As Boolean Implements SolidCP.Providers.Mail.IMailServer.DomainExists
+    Public Function DomainExists(ByVal domainName As String) As Boolean Implements FuseCP.Providers.Mail.IMailServer.DomainExists
         Dim service As Service = LoadLocalDomainsService()
         Dim exists As Boolean = False
 
@@ -652,7 +652,7 @@ Public Class ArgoMail
         Return exists
     End Function
 
-    Public Function GetAccount(ByVal mailboxName As String) As SolidCP.Providers.Mail.MailAccount Implements SolidCP.Providers.Mail.IMailServer.GetAccount
+    Public Function GetAccount(ByVal mailboxName As String) As FuseCP.Providers.Mail.MailAccount Implements FuseCP.Providers.Mail.IMailServer.GetAccount
         Dim service As Service = LoadUsersService()
         Dim objMailboxItem As MailAccount = Nothing
 
@@ -673,7 +673,7 @@ Public Class ArgoMail
         Return objMailboxItem
     End Function
 
-    Public Function GetAccounts(ByVal domainName As String) As SolidCP.Providers.Mail.MailAccount() Implements SolidCP.Providers.Mail.IMailServer.GetAccounts
+    Public Function GetAccounts(ByVal domainName As String) As FuseCP.Providers.Mail.MailAccount() Implements FuseCP.Providers.Mail.IMailServer.GetAccounts
         Dim domainService As Service = LoadLocalDomainsService()
         Dim userService As Service = LoadUsersService()
         Dim accounts As New List(Of MailAccount)
@@ -722,7 +722,7 @@ Public Class ArgoMail
 		Return Nothing
 	End Function
 
-    Public Function GetDomain(ByVal domainName As String) As SolidCP.Providers.Mail.MailDomain Implements SolidCP.Providers.Mail.IMailServer.GetDomain
+    Public Function GetDomain(ByVal domainName As String) As FuseCP.Providers.Mail.MailDomain Implements FuseCP.Providers.Mail.IMailServer.GetDomain
         Dim domainService As Service = LoadLocalDomainsService()
         Dim domain As MailDomain = Nothing
 
@@ -753,7 +753,7 @@ Public Class ArgoMail
         Return domain
     End Function
 
-    Public Function GetDomainAliases(ByVal domainName As String) As String() Implements SolidCP.Providers.Mail.IMailServer.GetDomainAliases
+    Public Function GetDomainAliases(ByVal domainName As String) As String() Implements FuseCP.Providers.Mail.IMailServer.GetDomainAliases
         Dim domainService As Service = LoadLocalDomainsService()
         Dim aliases As New List(Of String)
 
@@ -776,7 +776,7 @@ Public Class ArgoMail
         Return aliases.ToArray()
     End Function
 
-    Public Function GetGroup(ByVal groupName As String) As SolidCP.Providers.Mail.MailGroup Implements SolidCP.Providers.Mail.IMailServer.GetGroup
+    Public Function GetGroup(ByVal groupName As String) As FuseCP.Providers.Mail.MailGroup Implements FuseCP.Providers.Mail.IMailServer.GetGroup
         Dim groupService As Service = LoadDistribListsService()
         Dim group As MailGroup = Nothing
 
@@ -795,7 +795,7 @@ Public Class ArgoMail
         Return group
     End Function
 
-    Public Function GetGroups(ByVal domainName As String) As SolidCP.Providers.Mail.MailGroup() Implements SolidCP.Providers.Mail.IMailServer.GetGroups
+    Public Function GetGroups(ByVal domainName As String) As FuseCP.Providers.Mail.MailGroup() Implements FuseCP.Providers.Mail.IMailServer.GetGroups
         Dim domainService As Service = LoadLocalDomainsService()
         Dim groupService As Service = LoadDistribListsService()
         Dim groups As New List(Of MailGroup)
@@ -824,7 +824,7 @@ Public Class ArgoMail
         Return groups.ToArray()
     End Function
 
-    Public Function GetList(ByVal maillistName As String) As SolidCP.Providers.Mail.MailList Implements SolidCP.Providers.Mail.IMailServer.GetList
+    Public Function GetList(ByVal maillistName As String) As FuseCP.Providers.Mail.MailList Implements FuseCP.Providers.Mail.IMailServer.GetList
         Dim mailList As MailList = Nothing
 
         Try
@@ -841,7 +841,7 @@ Public Class ArgoMail
         Return mailList
     End Function
 
-    Public Function GetLists(ByVal domainName As String) As SolidCP.Providers.Mail.MailList() Implements SolidCP.Providers.Mail.IMailServer.GetLists
+    Public Function GetLists(ByVal domainName As String) As FuseCP.Providers.Mail.MailList() Implements FuseCP.Providers.Mail.IMailServer.GetLists
         Dim mailLists As List(Of MailList) = Nothing
 
         Try
@@ -864,7 +864,7 @@ Public Class ArgoMail
         Return mailLists.ToArray()
     End Function
 
-    Public Function GroupExists(ByVal groupName As String) As Boolean Implements SolidCP.Providers.Mail.IMailServer.GroupExists
+    Public Function GroupExists(ByVal groupName As String) As Boolean Implements FuseCP.Providers.Mail.IMailServer.GroupExists
         Dim groupService As Service = LoadDistribListsService()
         Dim exists As Boolean = False
 
@@ -880,7 +880,7 @@ Public Class ArgoMail
         Return exists
     End Function
 
-    Public Function ListExists(ByVal maillistName As String) As Boolean Implements SolidCP.Providers.Mail.IMailServer.ListExists
+    Public Function ListExists(ByVal maillistName As String) As Boolean Implements FuseCP.Providers.Mail.IMailServer.ListExists
         Dim exists As Boolean = False
 
         Try
@@ -895,7 +895,7 @@ Public Class ArgoMail
         Return exists
     End Function
 
-    Public Sub UpdateAccount(ByVal mailbox As SolidCP.Providers.Mail.MailAccount) Implements SolidCP.Providers.Mail.IMailServer.UpdateAccount
+    Public Sub UpdateAccount(ByVal mailbox As FuseCP.Providers.Mail.MailAccount) Implements FuseCP.Providers.Mail.IMailServer.UpdateAccount
         Dim userService As Service = LoadUsersService()
 
         Try
@@ -939,7 +939,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub UpdateDomain(ByVal domain As SolidCP.Providers.Mail.MailDomain) Implements SolidCP.Providers.Mail.IMailServer.UpdateDomain
+    Public Sub UpdateDomain(ByVal domain As FuseCP.Providers.Mail.MailDomain) Implements FuseCP.Providers.Mail.IMailServer.UpdateDomain
         Dim domainService As Service = LoadLocalDomainsService()
 
         Try
@@ -968,7 +968,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub UpdateGroup(ByVal group As SolidCP.Providers.Mail.MailGroup) Implements SolidCP.Providers.Mail.IMailServer.UpdateGroup
+    Public Sub UpdateGroup(ByVal group As FuseCP.Providers.Mail.MailGroup) Implements FuseCP.Providers.Mail.IMailServer.UpdateGroup
         Dim groupService As Service = LoadDistribListsService()
 
         Try
@@ -992,7 +992,7 @@ Public Class ArgoMail
         End Try
     End Sub
 
-    Public Sub UpdateList(ByVal maillist As SolidCP.Providers.Mail.MailList) Implements SolidCP.Providers.Mail.IMailServer.UpdateList
+    Public Sub UpdateList(ByVal maillist As FuseCP.Providers.Mail.MailList) Implements FuseCP.Providers.Mail.IMailServer.UpdateList
         Try
             Dim lists As ArgoMailLists = New ArgoMailLists()
             Dim updItem As ArgoMailListItem = lists.GetItem(maillist.Name)

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.HostedSolution
+namespace FuseCP.Portal.HostedSolution
 {
 
 
@@ -30,7 +30,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
 
         /// <summary>
         /// Image1 control.
@@ -66,7 +66,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.UserTabs UserTabsId;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.UserTabs UserTabsId;
 
         /// <summary>
         /// MailboxTabsId control.
@@ -75,7 +75,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxTabs MailboxTabsId;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxTabs MailboxTabsId;
 
         /// <summary>
         /// messageBox control.
@@ -84,7 +84,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
 
         /// <summary>
         /// secGroups control.
@@ -93,7 +93,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secGroups;
+        protected global::FuseCP.Portal.CollapsiblePanel secGroups;
 
         /// <summary>
         /// GroupsPanel control.
@@ -120,7 +120,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsList groups;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsList groups;
 
         /// <summary>
         /// buttonPanel control.
@@ -129,7 +129,7 @@ namespace SolidCP.Portal.HostedSolution
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
 
         /// <summary>
         /// ValidationSummary1 control.

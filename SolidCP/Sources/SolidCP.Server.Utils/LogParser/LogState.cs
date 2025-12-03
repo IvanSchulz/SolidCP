@@ -32,9 +32,9 @@
 
 using System;
 using System.IO;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.Utils.LogParser
+namespace FuseCP.Providers.Utils.LogParser
 {
 	/// <summary>
 	/// Summary description for WebSiteState.

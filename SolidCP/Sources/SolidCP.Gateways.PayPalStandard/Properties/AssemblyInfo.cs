@@ -33,10 +33,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SolidCP.Gateways.PayPalStandard")]
+[assembly: AssemblyTitle("FuseCP.Gateways.PayPalStandard")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyProduct("SolidCP.Gateways.PayPalStandard")]
+[assembly: AssemblyProduct("FuseCP.Gateways.PayPalStandard")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

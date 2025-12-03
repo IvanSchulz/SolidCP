@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -145,7 +145,7 @@
     <value>Disk Type:</value>
   </data>
   <data name="locSCPResellerAccount.Text" xml:space="preserve">
-    <value>SolidCP Reseller Account</value>
+    <value>FuseCP Reseller Account</value>
   </data>
   <data name="locDvdIsoPath.Text" xml:space="preserve">
     <value>DVD Library path:</value>
@@ -196,7 +196,7 @@ Example: &lt;b&gt;[NetBIOSName].domain.local&lt;/b&gt; (max-15-symbols.domain.zo
     <value>Private Network</value>
   </data>
   <data name="locResellerAccountText.Text" xml:space="preserve">
-    <value>For automatic provisioning of SolidCP control panel inside VPS please enter SolidCP reseller account details below:</value>
+    <value>For automatic provisioning of FuseCP control panel inside VPS please enter FuseCP reseller account details below:</value>
   </data>
   <data name="locResellerConfirmPassword.Text" xml:space="preserve">
     <value>Confirm password:</value>
@@ -328,7 +328,7 @@ Example: &lt;b&gt;[NetBIOSName].domain.local&lt;/b&gt; (max-15-symbols.domain.zo
     <value>&lt;Cannot read networks list&gt;</value>
   </data>
   <data name="locErrorReadingNetworksList.Text" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;b&gt;Unable to connect to Hyper-V server&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Possible reasons:&lt;ol&gt;&lt;li&gt;You are going to manage remote Hyper-V server (either Server Core or Hyper-V Server 2008 machine) where SolidCP Server is not installed. Type the correct server name at the top of this form and then click "Connect" button.&lt;/li&gt;&lt;li&gt;SolidCP Server has insufficient permissions to connect remote Hyper-V server. Please refer administrator guide for client and server setup instructions.&lt;/li&gt;&lt;li&gt;Lost connectivity with SolidCP Server installed on Hyper-V virtualization server. Check connectivity and open service properties page once again.&lt;/li&gt;&lt;/ol&gt;</value>
+    <value>&lt;br/&gt;&lt;b&gt;Unable to connect to Hyper-V server&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Possible reasons:&lt;ol&gt;&lt;li&gt;You are going to manage remote Hyper-V server (either Server Core or Hyper-V Server 2008 machine) where FuseCP Server is not installed. Type the correct server name at the top of this form and then click "Connect" button.&lt;/li&gt;&lt;li&gt;FuseCP Server has insufficient permissions to connect remote Hyper-V server. Please refer administrator guide for client and server setup instructions.&lt;/li&gt;&lt;li&gt;Lost connectivity with FuseCP Server installed on Hyper-V virtualization server. Check connectivity and open service properties page once again.&lt;/li&gt;&lt;/ol&gt;</value>
   </data>
   <data name="locHyperVServer.Text" xml:space="preserve">
     <value>Hyper-V Server</value>

@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
 	public class SqlDatabase : ServiceProviderItem
 	{

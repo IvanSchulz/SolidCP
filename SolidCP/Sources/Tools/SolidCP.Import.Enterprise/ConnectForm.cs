@@ -36,9 +36,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public partial class ConnectForm : Form
 	{
@@ -58,14 +58,14 @@ namespace SolidCP.Import.Enterprise
 		Controller EnterpriseServer => new Controller();
 		private void InitializeForm()
 		{
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage1);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage2);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage3);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage4);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage5);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage6);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage7);
-			animatedIcon.Images.Add(SolidCP.Import.Enterprise.Properties.Resources.ProgressImage8);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage1);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage2);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage3);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage4);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage5);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage6);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage7);
+			animatedIcon.Images.Add(FuseCP.Import.Enterprise.Properties.Resources.ProgressImage8);
 			animatedIcon.LastFrame = 8;
 		}
 

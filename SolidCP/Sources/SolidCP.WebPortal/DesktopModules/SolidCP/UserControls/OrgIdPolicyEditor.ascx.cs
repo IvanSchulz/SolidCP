@@ -34,7 +34,7 @@ using System;
 using System.Text;
 using System.Web.UI;
 
-namespace SolidCP.Portal.UserControls
+namespace FuseCP.Portal.UserControls
 {
     public partial class OrgIdPolicyEditor : UserControl
     {

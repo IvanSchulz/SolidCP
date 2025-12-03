@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 using System.Reflection;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.UniversalInstaller.Core
+namespace FuseCP.UniversalInstaller.Core
 {
 	public class CertificateStoreInfo
 	{
@@ -88,7 +88,7 @@ namespace SolidCP.UniversalInstaller.Core
 		{
 			if (hostDllFX == null)
 			{
-				const string DllNameFX = "SolidCP.UniversalInstaller.CertificateStoreInfo.NetFX.exe";
+				const string DllNameFX = "FuseCP.UniversalInstaller.CertificateStoreInfo.NetFX.exe";
 				assembly = assembly ?? Assembly.GetExecutingAssembly();
 				var resources = assembly.GetManifestResourceNames();
 				var res = resources

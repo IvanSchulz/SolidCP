@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using IO=System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Tests
+namespace FuseCP.Tests
 {
 	public class Paths
 	{
-		public const string App = "SolidCP";
+		public const string App = "FuseCP";
 
 		static string project = null;
 

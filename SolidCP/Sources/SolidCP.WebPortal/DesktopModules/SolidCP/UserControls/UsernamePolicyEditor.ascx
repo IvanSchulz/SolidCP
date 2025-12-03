@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UsernamePolicyEditor.ascx.cs" Inherits="SolidCP.Portal.UsernamePolicyEditor" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UsernamePolicyEditor.ascx.cs" Inherits="FuseCP.Portal.UsernamePolicyEditor" %>
 
 <asp:UpdatePanel runat="server" ID="UsernamePolicyPanel" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate> 

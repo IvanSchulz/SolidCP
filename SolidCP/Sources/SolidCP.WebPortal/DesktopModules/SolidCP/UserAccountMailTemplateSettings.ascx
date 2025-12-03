@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountMailTemplateSettings.ascx.cs" Inherits="SolidCP.Portal.UserAccountMailTemplateSettings" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountMailTemplateSettings.ascx.cs" Inherits="FuseCP.Portal.UserAccountMailTemplateSettings" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <div class="panel-body form-horizontal">
     <ul class="LinksList">
         <li>

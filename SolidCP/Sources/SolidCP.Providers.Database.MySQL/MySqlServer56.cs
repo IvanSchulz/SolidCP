@@ -39,10 +39,10 @@ using Microsoft.Win32;
 //using MySql.Data.MySqlClient;
 using System.IO;
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 using System.Reflection;
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
 	public class MySqlServer56 : MySqlServer55
 	{

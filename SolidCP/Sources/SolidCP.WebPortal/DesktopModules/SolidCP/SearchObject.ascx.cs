@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
-using SolidCP.WebPortal;
+using FuseCP.WebPortal;
 using System.Xml;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SearchObject : SolidCPModuleBase
+    public partial class SearchObject : FuseCPModuleBase
     {
         const string TYPE_WEBSITE = "WebSite";
         const string TYPE_DOMAIN = "Domain";

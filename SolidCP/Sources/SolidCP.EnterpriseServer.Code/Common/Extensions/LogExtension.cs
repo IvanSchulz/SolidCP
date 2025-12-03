@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading;
-using SolidCP.Providers;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer.Extensions
+namespace FuseCP.EnterpriseServer.Extensions
 {
     public static class LogExtension
     {

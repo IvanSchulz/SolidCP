@@ -1,5 +1,5 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchSpaces.ascx.cs" Inherits="SolidCP.Portal.SearchSpaces" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchSpaces.ascx.cs" Inherits="FuseCP.Portal.SearchSpaces" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 
@@ -89,7 +89,7 @@
     </Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsItemsPaged" runat="server" EnablePaging="True" SelectCountMethod="SearchServiceItemsPagedCount"
-    SelectMethod="SearchServiceItemsPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.PackagesHelper"
+    SelectMethod="SearchServiceItemsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.PackagesHelper"
     OnSelected="odsPackagesPaged_Selected">
     <SelectParameters>
         <asp:QueryStringParameter Name="itemTypeId" QueryStringField="ItemTypeID" Type="int32" />

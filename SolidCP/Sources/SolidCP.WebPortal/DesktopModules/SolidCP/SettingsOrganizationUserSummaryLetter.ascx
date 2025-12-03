@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsOrganizationUserSummaryLetter.ascx.cs" Inherits="SolidCP.Portal.SettingsOrganizationUserSummaryLetter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsOrganizationUserSummaryLetter.ascx.cs" Inherits="FuseCP.Portal.SettingsOrganizationUserSummaryLetter" %>
 <table>
     <tr>
         <td class="SubHead" width="150" nowrap><asp:Label ID="lblFrom" runat="server" meta:resourcekey="lblFrom" Text="From:"></asp:Label></td>

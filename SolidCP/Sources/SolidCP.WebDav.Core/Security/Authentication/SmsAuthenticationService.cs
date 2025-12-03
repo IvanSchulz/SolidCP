@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Globalization;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Interfaces.Security;
-using SolidCP.WebDav.Core.Interfaces.Services;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Interfaces.Security;
+using FuseCP.WebDav.Core.Interfaces.Services;
 
-namespace SolidCP.WebDav.Core.Security.Authentication
+namespace FuseCP.WebDav.Core.Security.Authentication
 {
     public class SmsAuthenticationService : ISmsAuthenticationService
     {

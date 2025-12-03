@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserSpaceBreadcrumb.ascx.cs" Inherits="SolidCP.Portal.SkinControls.UserSpaceBreadcrumb" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserSpaceBreadcrumb.ascx.cs" Inherits="FuseCP.Portal.SkinControls.UserSpaceBreadcrumb" %>
 <%@ Register TagPrefix="scp" TagName="SpaceOrgsSelector" Src="SpaceOrganizationsSelector.ascx" %>
 <div id="Breadcrumb">
     <div class="Path">

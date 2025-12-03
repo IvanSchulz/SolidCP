@@ -37,7 +37,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Xml;
 
-namespace SolidCP.Server
+namespace FuseCP.Server
 {
     /// <summary>
     /// Summary description for ServerConfiguration
@@ -67,7 +67,7 @@ namespace SolidCP.Server
 
         private static void LoadConfiguration()
         {
-            System.Configuration.ConfigurationManager.GetSection("SolidCP.server");
+            System.Configuration.ConfigurationManager.GetSection("FuseCP.server");
         }
 
         public object Create(object parent, object configContext, System.Xml.XmlNode section)
@@ -75,7 +75,7 @@ namespace SolidCP.Server
             // parse "security" section
             XmlNode nodeSecurity = section.SelectSingleNode("security");
             if (nodeSecurity == null)
-                throw new Exception("'SolidCP/security' section is missing");
+                throw new Exception("'FuseCP/security' section is missing");
 
             security = new SecuritySettings();
             security.ParseSection(nodeSecurity);
@@ -106,10 +106,10 @@ namespace SolidCP.Server
                 // enabled
                 XmlNode nodeEnabled = section.SelectSingleNode("enabled");
                 if (nodeEnabled == null)
-                    throw new Exception("'SolidCP/security/enabled' node is missing");
+                    throw new Exception("'FuseCP/security/enabled' node is missing");
 
                 if (nodeEnabled.Attributes["value"] == null)
-                    throw new Exception("'SolidCP/security/enabled/@value' attribute is missing");
+                    throw new Exception("'FuseCP/security/enabled/@value' attribute is missing");
 
                 securityEnabled = true;
                 Boolean.TryParse(nodeEnabled.Attributes["value"].Value, out securityEnabled);
@@ -117,10 +117,10 @@ namespace SolidCP.Server
                 // password
                 XmlNode nodePassword = section.SelectSingleNode("password");
                 if (nodePassword == null)
-                    throw new Exception("'SolidCP/security/password' node is missing");
+                    throw new Exception("'FuseCP/security/password' node is missing");
 
                 if (nodePassword.Attributes["value"] == null)
-                    throw new Exception("'SolidCP/security/password/@value' attribute is missing");
+                    throw new Exception("'FuseCP/security/password/@value' attribute is missing");
 
                 password = nodePassword.Attributes["value"].Value;
             }

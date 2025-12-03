@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.WebPortal;
-using SolidCP.Portal.UserControls;
+using FuseCP.WebPortal;
+using FuseCP.Portal.UserControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SearchSpaces : SolidCPModuleBase
+    public partial class SearchSpaces : FuseCPModuleBase
     {
 
         string ItemTypeName;

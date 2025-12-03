@@ -1,3 +1,3 @@
 #!/bin/bash
-chmod +x SolidCP.LinuxVmConfig
-./SolidCP.LinuxVmConfig install
+chmod +x FuseCP.LinuxVmConfig
+./FuseCP.LinuxVmConfig install

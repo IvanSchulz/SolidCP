@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace SolidCP.WebDav.Core.Exceptions
+namespace FuseCP.WebDav.Core.Exceptions
 {
     public class WebDavException : Exception
     {

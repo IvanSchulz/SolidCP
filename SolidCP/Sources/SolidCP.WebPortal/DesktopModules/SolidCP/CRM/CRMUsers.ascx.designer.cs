@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.CRM {
+namespace FuseCP.Portal.CRM {
     
     
     public partial class CRMUsers {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -46,7 +46,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// btnCreateUser control.
@@ -145,7 +145,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer usersQuota;
+        protected global::FuseCP.Portal.QuotaViewer usersQuota;
         
         /// <summary>
         /// locLimitedQuota control.
@@ -163,7 +163,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer limitedusersQuota;
+        protected global::FuseCP.Portal.QuotaViewer limitedusersQuota;
         
         /// <summary>
         /// locESSQuota control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer essusersQuota;
+        protected global::FuseCP.Portal.QuotaViewer essusersQuota;
         
         /// <summary>
         /// CRM2013Panel control.
@@ -208,7 +208,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer professionalusersQuota;
+        protected global::FuseCP.Portal.QuotaViewer professionalusersQuota;
         
         /// <summary>
         /// locBasicQuota control.
@@ -226,7 +226,7 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer basicusersQuota;
+        protected global::FuseCP.Portal.QuotaViewer basicusersQuota;
         
         /// <summary>
         /// locEssentialQuota control.
@@ -244,6 +244,6 @@ namespace SolidCP.Portal.CRM {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer essentialusersQuota;
+        protected global::FuseCP.Portal.QuotaViewer essentialusersQuota;
     }
 }

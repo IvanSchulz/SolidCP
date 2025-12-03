@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -124,7 +124,7 @@
     <value>CC:</value>
   </data>
   <data name="lblComments.Text" xml:space="preserve">
-    <value>Persönliche Kommentare:</value>
+    <value>Pers�nliche Kommentare:</value>
   </data>
   <data name="lblFrom.Text" xml:space="preserve">
     <value>Von:</value>
@@ -163,6 +163,6 @@
     <value>Fehler beim Senden der Nachricht</value>
   </data>
   <data name="Text.Subject" xml:space="preserve">
-    <value>SolidCP-Fehlerbericht</value>
+    <value>FuseCP-Fehlerbericht</value>
   </data>
 </root>

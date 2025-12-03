@@ -31,7 +31,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 
-namespace SolidCP.Import.CsvBulk 
+namespace FuseCP.Import.CsvBulk 
 {
 	/// <summary>
 	/// Simple log
@@ -45,7 +45,7 @@ namespace SolidCP.Import.CsvBulk
 		{
 		}
 
-		private static string logFile = "SolidCP.Import.CsvBulk.log";
+		private static string logFile = "FuseCP.Import.CsvBulk.log";
 
 		/// <summary>
 		/// Initializes trace listeners.

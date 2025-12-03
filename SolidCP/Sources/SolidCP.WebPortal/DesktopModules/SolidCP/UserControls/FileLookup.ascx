@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileLookup.ascx.cs" Inherits="SolidCP.Portal.FileLookup" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileLookup.ascx.cs" Inherits="FuseCP.Portal.FileLookup" %>
 <asp:TextBox ID="txtFile" runat="server" CssClass="form-control" Width="300px"></asp:TextBox>
 <asp:RequiredFieldValidator ID="valRequireFile" runat="server" meta:resourcekey="valRequireFile" ControlToValidate="txtFile"
     ErrorMessage="*"></asp:RequiredFieldValidator>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsAddDomainSelectType.ascx.cs" Inherits="SolidCP.Portal.DomainsAddDomainSelectType" EnableViewState="false" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsAddDomainSelectType.ascx.cs" Inherits="FuseCP.Portal.DomainsAddDomainSelectType" EnableViewState="false" %>
 
 <div class="panel-body form-horizontal">
 

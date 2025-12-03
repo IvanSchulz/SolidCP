@@ -32,9 +32,9 @@
 
 using System;
 using System.Data;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
     public class OrganizationsHelper
     {

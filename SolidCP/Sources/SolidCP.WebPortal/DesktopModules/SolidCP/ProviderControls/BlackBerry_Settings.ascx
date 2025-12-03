@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BlackBerry_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.BlackBerry_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BlackBerry_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.BlackBerry_Settings" %>
 <table>
     <tr>
         <td class="SubHead" width="200" nowrap><asp:Label runat="server" ID="lblPath" meta:resourcekey="lblPath" /></td>

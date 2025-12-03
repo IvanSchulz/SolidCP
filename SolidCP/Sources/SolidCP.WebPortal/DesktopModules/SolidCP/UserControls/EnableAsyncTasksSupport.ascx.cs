@@ -41,22 +41,22 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-	public partial class EnableAsyncTasksSupport : SolidCPControlBase
+	public partial class EnableAsyncTasksSupport : FuseCPControlBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.Form.Attributes["onsubmit"] += "return ShowProgressDialogInternal();";
 
             // get task ID from request and place it to context
-            Context.Items["SolidCPAtlasTaskID"] = taskID.Value;
+            Context.Items["FuseCPAtlasTaskID"] = taskID.Value;
         }
 
 		public string GetAjaxUtilsUrl()
 		{
 			return Page.ClientScript.GetWebResourceUrl(
-				typeof(EnableAsyncTasksSupport), "SolidCP.Portal.Scripts.AjaxUtils.js");
+				typeof(EnableAsyncTasksSupport), "FuseCP.Portal.Scripts.AjaxUtils.js");
 		}
 
         protected override void OnPreRender(EventArgs e)
@@ -66,10 +66,10 @@ namespace SolidCP.Portal
 
             // check if async task was runned
             string asyncScript = "";
-            string asyncTaskID = (string)Context.Items["SolidCPAtlasAsyncTaskID"];
+            string asyncTaskID = (string)Context.Items["FuseCPAtlasAsyncTaskID"];
             if (!String.IsNullOrEmpty(asyncTaskID))
             {
-				string taskTitle = (string)Context.Items["SolidCPAtlasAsyncTaskTitle"];
+				string taskTitle = (string)Context.Items["FuseCPAtlasAsyncTaskTitle"];
 				if (String.IsNullOrEmpty(taskTitle))
 					taskTitle = GetLocalizedString("Text.GenericTitle");
 

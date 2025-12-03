@@ -32,7 +32,7 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 
-namespace SolidCP.FixDefaultPublicFolderMailbox
+namespace FuseCP.FixDefaultPublicFolderMailbox
 {
     class Program
     {
@@ -60,7 +60,7 @@ namespace SolidCP.FixDefaultPublicFolderMailbox
                 string name = typeof(Log).Assembly.GetName().Name;
                 string version = typeof(Log).Assembly.GetName().Version.ToString(3);
 
-                Console.WriteLine("SolidCP Fix default public folder mailbox. " + version);
+                Console.WriteLine("FuseCP Fix default public folder mailbox. " + version);
                 Console.WriteLine("Usage :");
                 Console.WriteLine(name + " [/All]");
                 Console.WriteLine("or");

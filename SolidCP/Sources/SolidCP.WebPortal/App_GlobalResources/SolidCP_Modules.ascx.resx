@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -226,10 +226,10 @@
     <value>Disk Space Summary</value>
   </data>
   <data name="ModuleTitle.SCPSQLDatabasesSettings" xml:space="preserve">
-    <value>SolidCP SQL Databases Settings</value>
+    <value>FuseCP SQL Databases Settings</value>
   </data>
   <data name="ModuleTitle.SCPSQLUserSettings" xml:space="preserve">
-    <value>SolidCP SQL User Settings</value>
+    <value>FuseCP SQL User Settings</value>
   </data>
   <data name="ModuleTitle.DNSZoneRecords" xml:space="preserve">
     <value>DNS Zone Records</value>
@@ -237,8 +237,8 @@
   <data name="ModuleTitle.Domains" xml:space="preserve">
     <value>Domains</value>
   </data>
-  <data name="ModuleTitle.SolidCPEnterpriseServerSettings" xml:space="preserve">
-    <value>SolidCP Enterprise Server Settings</value>
+  <data name="ModuleTitle.FuseCPEnterpriseServerSettings" xml:space="preserve">
+    <value>FuseCP Enterprise Server Settings</value>
   </data>
   <data name="ModuleTitle.EditAccountSettings" xml:space="preserve">
     <value>Edit Account Settings</value>
@@ -588,8 +588,8 @@
   <data name="ModuleTitle.SQLUsers" xml:space="preserve">
     <value>SQL Users</value>
   </data>
-  <data name="ModuleTitle.SynchronizeDotNetNukeSolidCPUserAccounts" xml:space="preserve">
-    <value>Synchronize DotNetNuke - SolidCP User Accounts</value>
+  <data name="ModuleTitle.SynchronizeDotNetNukeFuseCPUserAccounts" xml:space="preserve">
+    <value>Synchronize DotNetNuke - FuseCP User Accounts</value>
   </data>
   <data name="ModuleTitle.UserAccountProperties" xml:space="preserve">
     <value>User Account Properties</value>
@@ -829,7 +829,7 @@
     <value>Add VLan to user</value>
   </data>
   <data name="ModuleTitle.SetupControlPanelAccounts" xml:space="preserve">
-    <value>Setup SolidCP Accounts</value>
+    <value>Setup FuseCP Accounts</value>
   </data>
   <data name="ModuleTitle.ApplyEnableHardQuotaFeature" xml:space="preserve">
     <value>System Hard Quota</value>

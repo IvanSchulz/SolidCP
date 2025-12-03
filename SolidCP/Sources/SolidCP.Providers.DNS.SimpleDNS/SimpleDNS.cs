@@ -37,11 +37,11 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	public class SimpleDNS : HostingServiceProviderBase, IDnsServer
     {
@@ -677,8 +677,8 @@ namespace SolidCP.Providers.DNS
 			// build zone file
 			StringBuilder sb = new StringBuilder();
 
-			// add SolidCP comment
-			sb.Append(";$; Updated with SolidCP DNS API ").Append(DateTime.Now).Append("\r");
+			// add FuseCP comment
+			sb.Append(";$; Updated with FuseCP DNS API ").Append(DateTime.Now).Append("\r");
 
 			// render comment/service records
 			foreach (DnsRecord rr in records)

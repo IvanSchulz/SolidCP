@@ -34,10 +34,10 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Threading;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Providers.VirtualizationForPC;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Providers.VirtualizationForPC;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class CreateVMAsyncWorker: ControllerAsyncBase
     {

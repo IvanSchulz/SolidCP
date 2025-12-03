@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +7,13 @@ using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Text;
 using System.Xml;
-using SolidCP.EnterpriseServer.Base.RDS;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.RemoteDesktopServices;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Base.RDS;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.RemoteDesktopServices;
+using FuseCP.Server.Client;
 using System.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class RemoteDesktopServicesHelpers: ControllerBase
     {

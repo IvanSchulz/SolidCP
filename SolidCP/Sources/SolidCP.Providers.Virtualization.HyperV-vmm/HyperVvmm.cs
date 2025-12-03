@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 //
 // Redistribution and use in source and binary forms, with or without modification,
@@ -11,7 +11,7 @@
 //   this list of conditions  and  the  following  disclaimer in  the documentation
 //   and/or other materials provided with the distribution.
 //
-// - Neither  the  name  of  SolidCP  nor   the   names  of  its
+// - Neither  the  name  of  FuseCP  nor   the   names  of  its
 //   contributors may be used to endorse or  promote  products  derived  from  this
 //   software without specific prior written permission.
 //
@@ -42,10 +42,10 @@ using System.Globalization;
 using System.Xml;
 using System.Linq;
 
-using SolidCP.Providers.OS;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Utils;
-using SolidCP.Server.Utils;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Utils;
+using FuseCP.Server.Utils;
 
 using Microsoft.SystemCenter.VirtualMachineManager;
 using Microsoft.SystemCenter.VirtualMachineManager.Remoting;
@@ -54,7 +54,7 @@ using Microsoft.VirtualManager.PowerShellAbstractionLayer;
 using Vds = Microsoft.Storage.Vds;
 
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public class HyperVvmm : HostingServiceProviderBase, IVirtualizationServer2012
     {
@@ -1557,7 +1557,7 @@ namespace SolidCP.Providers.Virtualization
                     if (vps.State == VirtualMachineState.Running)
                     {
                         // try to shutdown the system
-                        ReturnCode code = ShutDownVirtualMachine(vm.VirtualMachineId, true, "Virtual Machine has been suspended from SolidCP");
+                        ReturnCode code = ShutDownVirtualMachine(vm.VirtualMachineId, true, "Virtual Machine has been suspended from FuseCP");
                         if (code == ReturnCode.OK)
                             return;
                     }
@@ -1825,7 +1825,7 @@ namespace SolidCP.Providers.Virtualization
         }
         private void SetUsagesFromKVP(ref VirtualMachine vm)
         {
-            // Use the SolidCP VMConfig Windows service to get the RAM usage as well as the HDD usage / sizes
+            // Use the FuseCP VMConfig Windows service to get the RAM usage as well as the HDD usage / sizes
             List<KvpExchangeDataItem> vmKvps = GetKVPItems(vm.VirtualMachineId);
             foreach (KvpExchangeDataItem vmKvp in vmKvps)
             {

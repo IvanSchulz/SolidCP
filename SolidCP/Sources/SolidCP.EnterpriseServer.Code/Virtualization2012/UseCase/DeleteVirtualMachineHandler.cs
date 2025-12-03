@@ -1,9 +1,9 @@
-﻿using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Server.Client;
-//using SolidCP.Providers.Virtualization2012;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Server.Client;
+//using FuseCP.Providers.Virtualization2012;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
+namespace FuseCP.EnterpriseServer.Code.Virtualization2012.UseCase
 {
     public class DeleteVirtualMachineHandler: ControllerBase
     {

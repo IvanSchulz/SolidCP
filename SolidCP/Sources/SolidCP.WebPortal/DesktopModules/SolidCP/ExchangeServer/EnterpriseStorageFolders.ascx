@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageFolders.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.EnterpriseStorageFolders" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageFolders.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageFolders" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
@@ -109,7 +109,7 @@
     </Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsEnterpriseFoldersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetEnterpriseFoldersPagedCount"
-    SelectMethod="GetEnterpriseFoldersPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.EnterpriseStorageHelper">
+    SelectMethod="GetEnterpriseFoldersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.EnterpriseStorageHelper">
     <SelectParameters>
         <asp:QueryStringParameter Name="itemId" QueryStringField="ItemID" DefaultValue="0" />
         <asp:ControlParameter Name="filterValue" ControlID="txtSearchValue" PropertyName="Text" />

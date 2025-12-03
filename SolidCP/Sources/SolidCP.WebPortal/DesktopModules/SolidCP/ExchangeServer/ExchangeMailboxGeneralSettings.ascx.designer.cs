@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
 
 
@@ -21,7 +21,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
 
         /// <summary>
         /// Image1 control.
@@ -84,7 +84,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxTabs tabs;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxTabs tabs;
 
         /// <summary>
         /// messageBox control.
@@ -93,7 +93,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
 
         /// <summary>
         /// GeneralUpdatePanel control.
@@ -111,7 +111,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secGeneral;
+        protected global::FuseCP.Portal.CollapsiblePanel secGeneral;
 
         /// <summary>
         /// General control.
@@ -156,7 +156,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxPlanSelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxPlanSelector;
 
         /// <summary>
         /// locDisclaimer control.
@@ -228,7 +228,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer mailboxSize;
+        protected global::FuseCP.Portal.QuotaViewer mailboxSize;
 
         /// <summary>
         /// secRetentionPolicy control.
@@ -237,7 +237,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secRetentionPolicy;
+        protected global::FuseCP.Portal.CollapsiblePanel secRetentionPolicy;
 
         /// <summary>
         /// RetentionPolicy control.
@@ -264,7 +264,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxRetentionPolicySelector;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxPlanSelector mailboxRetentionPolicySelector;
 
         /// <summary>
         /// secLitigationHoldSettings control.
@@ -273,7 +273,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secLitigationHoldSettings;
+        protected global::FuseCP.Portal.CollapsiblePanel secLitigationHoldSettings;
 
         /// <summary>
         /// LitigationHoldSettings control.
@@ -309,7 +309,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer litigationHoldSpace;
+        protected global::FuseCP.Portal.QuotaViewer litigationHoldSpace;
 
         /// <summary>
         /// secArchiving control.
@@ -318,7 +318,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secArchiving;
+        protected global::FuseCP.Portal.CollapsiblePanel secArchiving;
 
         /// <summary>
         /// Archiving control.
@@ -363,7 +363,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.QuotaViewer archivingQuotaViewer;
+        protected global::FuseCP.Portal.QuotaViewer archivingQuotaViewer;
 
         /// <summary>
         /// secBookingDelegates control.
@@ -372,7 +372,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secBookingDelegates;
+        protected global::FuseCP.Portal.CollapsiblePanel secBookingDelegates;
 
         /// <summary>
         /// BookingDelegates control.
@@ -426,7 +426,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxSelector msDelegates;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxSelector msDelegates;
 
         /// <summary>
         /// valDelegates control.
@@ -444,7 +444,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secBookingOptions;
+        protected global::FuseCP.Portal.CollapsiblePanel secBookingOptions;
 
         /// <summary>
         /// BookingOptions control.
@@ -579,7 +579,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAdvancedInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secAdvancedInfo;
 
         /// <summary>
         /// AdvancedInfo control.
@@ -615,7 +615,7 @@ namespace SolidCP.Portal.ExchangeServer
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
 
         /// <summary>
         /// ValidationSummary1 control.

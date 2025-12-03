@@ -46,17 +46,17 @@ using System.Windows.Forms;
 using System.Linq;
 using Microsoft.Win32;
 using System.Xml;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller.Controls;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller.Controls;
 #if NETFRAMEWORK
 using System.Runtime.Remoting.Lifetime;
 #endif
-//using SolidCP.Installer.Common;
-//using SolidCP.Installer.Services;
-//using SolidCP.Installer.Configuration;
-//using SolidCP.Installer.Core;
+//using FuseCP.Installer.Common;
+//using FuseCP.Installer.Services;
+//using FuseCP.Installer.Configuration;
+//using FuseCP.Installer.Core;
 
-namespace SolidCP.UniversalInstaller
+namespace FuseCP.UniversalInstaller
 {
 	/// <summary>
 	/// Main application form
@@ -353,9 +353,9 @@ namespace SolidCP.UniversalInstaller
 		internal void ShowError()
 		{
 			ShowError("An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.");
+				"FuseCP Installer home directory.");
 		}
 
 		/// <summary>

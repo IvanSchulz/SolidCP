@@ -106,7 +106,7 @@ function nchar(num) {
 	    if ((_maxLength > 26) && (_Upper == 0) && (_Number == 0) && (_Special == 0)) _maxLength = 26;
 	    if (_maxLength == 0)
 	    {
-	         alert("Your password length is set to 0. Please check your SolidCP Policy");
+	         alert("Your password length is set to 0. Please check your FuseCP Policy");
 	         _Upper = 0;
 	         _Number = 0;
 	         _Special = 0;

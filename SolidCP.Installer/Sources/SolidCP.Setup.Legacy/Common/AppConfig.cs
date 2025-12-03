@@ -37,13 +37,13 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public sealed class AppConfig
 	{
-		public const string AppConfigFileNameWithoutExtension = "SolidCP.Installer.exe";
+		public const string AppConfigFileNameWithoutExtension = "FuseCP.Installer.exe";
         static AppConfig()
         {
             ConfigurationPath = DefaultConfigurationPath;

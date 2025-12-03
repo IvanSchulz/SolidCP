@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditItemComments.ascx.cs" Inherits="SolidCP.Portal.EditItemComments" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditItemComments.ascx.cs" Inherits="FuseCP.Portal.EditItemComments" %>
 <%@ Register TagPrefix="uc2" TagName="UserDetails" Src="UserDetails.ascx"  %>
 
 <asp:UpdatePanel runat="server" ID="commentsUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="true">

@@ -37,15 +37,15 @@ using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Server.Client;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
 	public class ServiceProviderProxy: ControllerBase
 	{
 		public ServiceProviderProxy(ControllerBase provider) : base(provider) { }
 
-		public SolidCP.Web.Clients.ClientBase Init(SolidCP.Web.Clients.ClientBase proxy, int serviceId, StringDictionary additionalSettings = null)
+		public FuseCP.Web.Clients.ClientBase Init(FuseCP.Web.Clients.ClientBase proxy, int serviceId, StringDictionary additionalSettings = null)
 		{
 			ServerProxyConfigurator cnfg = new ServerProxyConfigurator();
 
@@ -78,7 +78,7 @@ namespace SolidCP.EnterpriseServer
 			return ServerInit(proxy, cnfg, service.ServerId);
 		}
 
-		public SolidCP.Web.Clients.ClientBase ServerInit(SolidCP.Web.Clients.ClientBase proxy, ServerProxyConfigurator cnfg, int serverId)
+		public FuseCP.Web.Clients.ClientBase ServerInit(FuseCP.Web.Clients.ClientBase proxy, ServerProxyConfigurator cnfg, int serverId)
 		{
 			// get server info
 			ServerInfo server = ServerController.GetServerByIdInternal(serverId);
@@ -110,7 +110,7 @@ namespace SolidCP.EnterpriseServer
 			return ServerInit(proxy, cnfg, server.ServerUrl, server.Password);
 		}
 
-		private static SolidCP.Web.Clients.ClientBase ServerInit(SolidCP.Web.Clients.ClientBase proxy,
+		private static FuseCP.Web.Clients.ClientBase ServerInit(FuseCP.Web.Clients.ClientBase proxy,
 			 ServerProxyConfigurator cnfg, string serverUrl, string serverPassword)
 		{			
 			// set URL & password
@@ -126,13 +126,13 @@ namespace SolidCP.EnterpriseServer
 			return proxy;
 		}
 
-		public SolidCP.Web.Clients.ClientBase ServerInit(SolidCP.Web.Clients.ClientBase proxy,
+		public FuseCP.Web.Clients.ClientBase ServerInit(FuseCP.Web.Clients.ClientBase proxy,
 			 string serverUrl, string serverPassword, bool sha256Password)
 		{
 			return ServerInit(proxy, new ServerProxyConfigurator() { PasswordIsSHA256 = sha256Password }, serverUrl, serverPassword);
 		}
 
-		public SolidCP.Web.Clients.ClientBase ServerInit(SolidCP.Web.Clients.ClientBase proxy, int serverId)
+		public FuseCP.Web.Clients.ClientBase ServerInit(FuseCP.Web.Clients.ClientBase proxy, int serverId)
 		{
 			return ServerInit(proxy, new ServerProxyConfigurator(), serverId);
 		}

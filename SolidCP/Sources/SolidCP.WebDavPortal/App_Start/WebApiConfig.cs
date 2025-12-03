@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using SolidCP.WebDavPortal.DependencyInjection;
-using SolidCP.WebDavPortal.UI.Routes;
+using FuseCP.WebDavPortal.DependencyInjection;
+using FuseCP.WebDavPortal.UI.Routes;
 
-namespace SolidCP.WebDavPortal.App_Start
+namespace FuseCP.WebDavPortal.App_Start
 {
     public class WebApiConfig
     {

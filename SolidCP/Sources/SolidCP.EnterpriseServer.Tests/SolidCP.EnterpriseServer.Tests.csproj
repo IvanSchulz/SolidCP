@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>net48;net10.0</TargetFrameworks>
@@ -42,12 +42,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Base\SolidCP.EnterpriseServer.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Code\SolidCP.EnterpriseServer.Code.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer.Data\SolidCP.EnterpriseServer.Data.csproj" />
-        <ProjectReference Include="..\SolidCP.EnterpriseServer\WebServices\SolidCP.Build\SolidCP.EnterpriseServer.Client.csproj" />
-        <ProjectReference Include="..\SolidCP.Server.Utils\SolidCP.Server.Utils.csproj" />
-        <ProjectReference Include="..\SolidCP.Tests\SolidCP.Tests.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Code\FuseCP.EnterpriseServer.Code.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer.Data\FuseCP.EnterpriseServer.Data.csproj" />
+        <ProjectReference Include="..\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj" />
+        <ProjectReference Include="..\FuseCP.Server.Utils\FuseCP.Server.Utils.csproj" />
+        <ProjectReference Include="..\FuseCP.Tests\FuseCP.Tests.csproj" />
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework) == 'net48'">
@@ -61,8 +61,8 @@
 
     <Target Name="CopyNativeDlls" AfterTargets="Build" Condition="$(TargetFramework) == 'net48'">
         <ItemGroup>
-            <ESDataFiles64 Include="..\SolidCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x64\**\*.*" />
-            <ESDataFiles86 Include="..\SolidCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x86\**\*.*" />
+            <ESDataFiles64 Include="..\FuseCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x64\**\*.*" />
+            <ESDataFiles86 Include="..\FuseCP.EnterpriseServer.Data\bin\$(Configuration)\net48\x86\**\*.*" />
         </ItemGroup>
         <Copy SourceFiles="@(ESDataFiles64)" DestinationFolder="bin\$(Configuration)\net48\x64\%(RecursiveDir)" SkipUnchangedFiles="true" />
         <Copy SourceFiles="@(ESDataFiles86)" DestinationFolder="bin\$(Configuration)\net48\x86\%(RecursiveDir)" SkipUnchangedFiles="true" />

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
@@ -8,7 +8,7 @@ namespace Setup.WIXBootstrapper
 {
     static class Program
     {
-        const string MsiFile = "SolidCP.msi";
+        const string MsiFile = "FuseCP.msi";
 
         private static string ExtractFromAssembly(string path, string file)
         {

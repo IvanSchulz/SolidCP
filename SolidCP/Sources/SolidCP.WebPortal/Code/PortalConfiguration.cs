@@ -47,7 +47,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.Hosting;
 using System.Xml;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
 	/// <summary>
 	/// Summary description for ModuleDefinitions

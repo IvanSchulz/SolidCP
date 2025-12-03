@@ -33,12 +33,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.Web.Iis.Common;
+using FuseCP.Providers.Web.Iis.Common;
 using Microsoft.Web.Administration;
 using System.Collections;
-using SolidCP.Providers.Web.Iis.Utility;
+using FuseCP.Providers.Web.Iis.Utility;
 
-namespace SolidCP.Providers.Web.HttpRedirect
+namespace FuseCP.Providers.Web.HttpRedirect
 {
 	internal class HttpRedirectModuleService : ConfigurationModuleService
 	{

@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.EnterpriseServer.Base.Common
+namespace FuseCP.EnterpriseServer.Base.Common
 {
     public class WebPlatformInstaller
     {

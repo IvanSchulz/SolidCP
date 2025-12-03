@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\ReleaseNotes.htm = ..\..\..\ReleaseNotes.htm
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidCP.LocalizationToolkit", "SolidCP.LocalizationToolkit\SolidCP.LocalizationToolkit.csproj", "{BF0D3398-FBC6-4B0E-B3FC-F60C6581DB4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseCP.LocalizationToolkit", "FuseCP.LocalizationToolkit\FuseCP.LocalizationToolkit.csproj", "{BF0D3398-FBC6-4B0E-B3FC-F60C6581DB4B}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SolidCP.LocalizationToolkit.Setup", "SolidCP.LocalizationToolkit.Setup\Setup.vdproj", "{57EAE767-DEAD-4E34-8576-0A19C21C13BE}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FuseCP.LocalizationToolkit.Setup", "FuseCP.LocalizationToolkit.Setup\Setup.vdproj", "{57EAE767-DEAD-4E34-8576-0A19C21C13BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

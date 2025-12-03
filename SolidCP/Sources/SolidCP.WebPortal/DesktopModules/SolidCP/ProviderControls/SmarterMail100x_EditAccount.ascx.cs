@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Mail;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Mail;
 
-namespace SolidCP.Portal.ProviderControls
+namespace FuseCP.Portal.ProviderControls
 {
-    public partial class SmarterMail100x_EditAccount : SolidCPControlBase, IMailEditAccountControl
+    public partial class SmarterMail100x_EditAccount : FuseCPControlBase, IMailEditAccountControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

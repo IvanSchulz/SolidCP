@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SolidCP.Providers.Mail.SM7.Extensions
+namespace FuseCP.Providers.Mail.SM7.Extensions
 {
 	public static class MailAccountExtensions
 	{

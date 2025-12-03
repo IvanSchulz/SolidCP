@@ -36,10 +36,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Portal.UserControls.ScheduleTaskView;
+using FuseCP.EnterpriseServer;
+using FuseCP.Portal.UserControls.ScheduleTaskView;
 
-namespace SolidCP.Portal.ScheduleTaskControls
+namespace FuseCP.Portal.ScheduleTaskControls
 {
     public partial class DomainExpirationView : EmptyView
     {

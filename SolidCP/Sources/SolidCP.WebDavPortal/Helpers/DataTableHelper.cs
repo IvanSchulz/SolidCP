@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using SolidCP.WebDavPortal.Models.Common.DataTable;
+using FuseCP.WebDavPortal.Models.Common.DataTable;
 
-namespace SolidCP.WebDavPortal.Helpers
+namespace FuseCP.WebDavPortal.Helpers
 {
     public class DataTableHelper
     {

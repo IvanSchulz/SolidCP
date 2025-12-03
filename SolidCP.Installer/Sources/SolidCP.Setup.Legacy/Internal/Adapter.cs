@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -18,20 +18,20 @@ using System.ServiceProcess;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Setup.Actions;
-using SolidCP.Setup.Common;
-using SolidCP.Setup.Web;
-using SolidCP.Setup.Windows;
-using SolidCP.Providers.OS;
-using SolidCP.UniversalInstaller;
-using Data = SolidCP.EnterpriseServer.Data;
-using SolidCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Setup.Actions;
+using FuseCP.Setup.Common;
+using FuseCP.Setup.Web;
+using FuseCP.Setup.Windows;
+using FuseCP.Providers.OS;
+using FuseCP.UniversalInstaller;
+using Data = FuseCP.EnterpriseServer.Data;
+using FuseCP.UniversalInstaller.Core;
 using System.Windows.Forms;
 
-namespace SolidCP.Setup.Internal
+namespace FuseCP.Setup.Internal
 {
     public enum ModeExtension: byte { Normal, Backup, Restore }
 	public class WiXSetupException : ApplicationException
@@ -65,7 +65,7 @@ namespace SolidCP.Setup.Internal
 	}
 	public sealed class Adapter
 	{
-		public static string DefaultConfigFile { get { return "SolidCP.config"; } }
+		public static string DefaultConfigFile { get { return "FuseCP.config"; } }
 		private Adapter() { }
 		public static CheckStatuses CheckASPNET(SetupVariables setupVariables, out string Msg)
 		{
@@ -642,7 +642,7 @@ namespace SolidCP.Setup.Internal
 			{
 				Log.WriteStart("Deleting menu shortcut");
 				string programs = Environment.GetFolderPath(Environment.SpecialFolder.Programs);
-				string path = Path.Combine(programs, "SolidCP Software");
+				string path = Path.Combine(programs, "FuseCP Software");
 				path = Path.Combine(path, fileName);
 				if (File.Exists(path))
 				{
@@ -1046,7 +1046,7 @@ namespace SolidCP.Setup.Internal
 				// add node:
 				//<system.webServer>
 				//  <modules>
-				//    <add name="SecureSession" type="SolidCP.WebPortal.SecureSessionModule" />
+				//    <add name="SecureSession" type="FuseCP.WebPortal.SecureSessionModule" />
 				//  </modules>
 				//</system.webServer>
 				//
@@ -1054,7 +1054,7 @@ namespace SolidCP.Setup.Internal
 				//
 				//<system.web>
 				//  <httpModules>
-				//    <add name="SecureSession" type="SolidCP.WebPortal.SecureSessionModule" />
+				//    <add name="SecureSession" type="FuseCP.WebPortal.SecureSessionModule" />
 				//  </httpModules>
 				//</system.web>
 				bool iis6 = false;
@@ -1075,7 +1075,7 @@ namespace SolidCP.Setup.Internal
 						webServer.AppendChild(modules);
 						var sessionModule = doc.CreateElement("add");
 						sessionModule.SetAttribute("name", "SecureSession");
-						sessionModule.SetAttribute("type", "SolidCP.WebPortal.SecureSessionModule");
+						sessionModule.SetAttribute("type", "FuseCP.WebPortal.SecureSessionModule");
 						modules.AppendChild(sessionModule);
 					}
 				}
@@ -1119,7 +1119,7 @@ namespace SolidCP.Setup.Internal
 			sam.AddAction(new EnableAspNetWebExtensionAction());
 			sam.AddAction(new MigrateWebPortalWebConfigAction());
 			sam.AddAction(new SwitchAppPoolAspNetVersion());
-			sam.AddAction(new CleanupSolidCPModulesListAction());
+			sam.AddAction(new CleanupFuseCPModulesListAction());
 			//
 			sam.ActionError += new EventHandler<ActionErrorEventArgs>((object sender, ActionErrorEventArgs e) =>
 			{
@@ -1444,7 +1444,7 @@ namespace SolidCP.Setup.Internal
 			var doc = new XmlDocument();
 			doc.Load(webConfigPath);
 			//crypto key
-			string xPath = "configuration/appSettings/add[@key=\"SolidCP.CryptoKey\"]";
+			string xPath = "configuration/appSettings/add[@key=\"FuseCP.CryptoKey\"]";
 			XmlElement keyNode = doc.SelectSingleNode(xPath) as XmlElement;
 			if (keyNode != null)
 			{
@@ -1458,7 +1458,7 @@ namespace SolidCP.Setup.Internal
 			var doc = new XmlDocument();
 			doc.Load(webConfigPath);
 			//encryption enabled
-			string xPath = "configuration/appSettings/add[@key=\"SolidCP.EncryptionEnabled\"]";
+			string xPath = "configuration/appSettings/add[@key=\"FuseCP.EncryptionEnabled\"]";
 			XmlElement encryptionNode = doc.SelectSingleNode(xPath) as XmlElement;
 			bool encryptionEnabled = false;
 			if (encryptionNode != null)
@@ -1467,15 +1467,15 @@ namespace SolidCP.Setup.Internal
 			}
 			return encryptionEnabled;
 		}
-		#region SolidCP providioning
+		#region FuseCP providioning
 		private void ConfigureStandaloneServer(string enterpriseServerUrl)
 		{
 			try
 			{
-				Log.WriteStart("Configuring SolidCP");
+				Log.WriteStart("Configuring FuseCP");
 				AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(ResolvePortalAssembly);
 
-				SetProgressText("Configuring SolidCP...");
+				SetProgressText("Configuring FuseCP...");
 				if (!ConnectToEnterpriseServer(enterpriseServerUrl, "serveradmin", Context.ServerAdminPassword))
 				{
 					Log.WriteError("Enterprise Server connection error");
@@ -2247,7 +2247,7 @@ namespace SolidCP.Setup.Internal
 							ret.Port = port;
 							break;
 						case "dbtype":
-							SolidCP.EnterpriseServer.Data.DbType dbtype;
+							FuseCP.EnterpriseServer.Data.DbType dbtype;
 							if (!Enum.TryParse(value, out dbtype)) dbtype = Data.DbType.Unknown;
 							ret.DatabaseType = dbtype;
 							break;
@@ -2278,7 +2278,7 @@ namespace SolidCP.Setup.Internal
 		{
 			try
 			{
-				Log.WriteStart("Creating SolidCP login");
+				Log.WriteStart("Creating FuseCP login");
 				string query = string.Empty;
 
 				string connectionString = AppConfig.GetComponentSettingStringValue(
@@ -2314,7 +2314,7 @@ namespace SolidCP.Setup.Internal
 
 					AppConfig.SetComponentSettingStringValue(Context.EnterpriseServerComponentId, "DatabaseLogin", loginName);
 
-					Log.WriteEnd("Created SolidCP login");
+					Log.WriteEnd("Created FuseCP login");
 				}
 				else
 				{
@@ -2623,8 +2623,8 @@ namespace SolidCP.Setup.Internal
 
 				Log.WriteStart("Creating menu shortcut");
 				string programs = Environment.GetFolderPath(Environment.SpecialFolder.Programs);
-				string fileName = "Login to SolidCP.url";
-				string path = Path.Combine(programs, "SolidCP Software");
+				string fileName = "Login to FuseCP.url";
+				string path = Path.Combine(programs, "FuseCP Software");
 				if (!Directory.Exists(path))
 				{
 					Directory.CreateDirectory(path);
@@ -3546,7 +3546,7 @@ namespace SolidCP.Setup.Internal
 				var doc = new XmlDocument();
 				doc.Load(path);
 
-				XmlElement passwordNode = doc.SelectSingleNode("//SolidCP.server/security/password") as XmlElement;
+				XmlElement passwordNode = doc.SelectSingleNode("//FuseCP.server/security/password") as XmlElement;
 				if (passwordNode == null)
 				{
 					Log.WriteInfo("server password setting not found");
@@ -3610,14 +3610,14 @@ namespace SolidCP.Setup.Internal
 				var doc = new XmlDocument();
 				doc.Load(path);
 
-				XmlElement ipNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.HostIP']") as XmlElement;
+				XmlElement ipNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.HostIP']") as XmlElement;
 				if (ipNode == null)
 				{
 					Log.WriteInfo("Service host IP setting not found");
 					return;
 				}
 				ipNode.SetAttribute("value", ip);
-				XmlElement portNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='SolidCP.HostPort']") as XmlElement;
+				XmlElement portNode = doc.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.HostPort']") as XmlElement;
 				if (portNode == null)
 				{
 					Log.WriteInfo("Service host port setting not found");
@@ -4332,12 +4332,12 @@ namespace SolidCP.Setup.Internal
 						{
 							Backup.XmlFiles.Add("Web.config");
 							Backup.XmlFiles.Add(@"App_Data\SiteSettings.config");
-							Backup.XmlFiles.Add(@"App_Data\SolidCP_Pages.config");
+							Backup.XmlFiles.Add(@"App_Data\FuseCP_Pages.config");
 						}
 						break;
 						//case Global.Scheduler.ComponentCode:
 						//{
-						//   Backup.XmlFiles.Add("SolidCP.SchedulerService.exe.config");
+						//   Backup.XmlFiles.Add("FuseCP.SchedulerService.exe.config");
 						//}
 						//break;
 				}
@@ -4535,7 +4535,7 @@ namespace SolidCP.Setup.Internal
 			{
 				string appPoolName = AppConfig.GetComponentSettingStringValue(componentId, "ApplicationPool");
 				if (string.IsNullOrEmpty(appPoolName))
-					appPoolName = WebUtils.SolidCP_ADMIN_POOL;
+					appPoolName = WebUtils.FuseCP_ADMIN_POOL;
 				action = new InstallAction(ActionTypes.DeleteApplicationPool);
 				action.Name = appPoolName;
 				action.Description = "Deleting application pool...";
@@ -4602,9 +4602,9 @@ namespace SolidCP.Setup.Internal
 		protected override void ProcessError(Exception ex)
 		{
 			var Msg = "An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at support@solidcp.com.\n\n" +
+				"Please contact Technical Support at support@fusecp.com.\n\n" +
 				"Make sure you include a copy of the Installer.log file from the\n" +
-				"SolidCP Installer home directory.";
+				"FuseCP Installer home directory.";
 			Log.WriteError(Msg, ex);
 		}
 	}
@@ -4899,7 +4899,7 @@ namespace SolidCP.Setup.Internal
 						var Act = new InstallAction(ActionTypes.DeleteShortcuts);
 						Act.Description = "Deleting shortcuts...";
 						Act.Log = "- Delete shortcuts";
-						Act.Name = "Login to SolidCP.url";
+						Act.Name = "Login to FuseCP.url";
 						Script.Actions.Add(Act);
 					}
 					break;
@@ -4982,7 +4982,7 @@ namespace SolidCP.Setup.Internal
 					}
 					var XmlUp = new Dictionary<string, string[]>();
 					XmlUp.Add("configuration/connectionStrings/add[@name='EnterpriseServer']", new string[] { "connectionString", Context.ConnectionString });
-					XmlUp.Add("configuration/appSettings/add[@key='SolidCP.CryptoKey']", new string[] { "value", Context.CryptoKey });
+					XmlUp.Add("configuration/appSettings/add[@key='FuseCP.CryptoKey']", new string[] { "value", Context.CryptoKey });
 					Context.XmlData = XmlUp;
 					var Script = new ExpressScript(Context);
 					Script.Actions.Add(new InstallAction(ActionTypes.UpdateXml) { SetupVariables = Context, Path = string.Format("{0}.config", Context.ServiceFile) });
@@ -5094,7 +5094,7 @@ namespace SolidCP.Setup.Internal
 	#region WiXActionManagers
 	public class WiXServerActionManager : BaseActionManager
 	{
-		public static readonly List<SolidCP.Setup.Actions.Action> InstallScenario = new List<SolidCP.Setup.Actions.Action>
+		public static readonly List<FuseCP.Setup.Actions.Action> InstallScenario = new List<FuseCP.Setup.Actions.Action>
 		{
 			new SetCommonDistributiveParamsAction(),
 			new SetServerDefaultInstallationSettingsAction(),
@@ -5136,7 +5136,7 @@ namespace SolidCP.Setup.Internal
 
 	public class WiXPortalActionManager : BaseActionManager
 	{
-		public static readonly List<SolidCP.Setup.Actions.Action> InstallScenario = new List<SolidCP.Setup.Actions.Action>
+		public static readonly List<FuseCP.Setup.Actions.Action> InstallScenario = new List<FuseCP.Setup.Actions.Action>
 		{
 			new SetCommonDistributiveParamsAction(),
 			new SetWebPortalWebSettingsAction(),
@@ -5178,7 +5178,7 @@ namespace SolidCP.Setup.Internal
 	}
 	public class WiXEnterpriseServerActionManager : BaseActionManager
 	{
-		public static readonly List<SolidCP.Setup.Actions.Action> InstallScenario = new List<SolidCP.Setup.Actions.Action>
+		public static readonly List<FuseCP.Setup.Actions.Action> InstallScenario = new List<FuseCP.Setup.Actions.Action>
 		{
 			new SetCommonDistributiveParamsAction(),
 			new SetEntServerWebSettingsAction(),

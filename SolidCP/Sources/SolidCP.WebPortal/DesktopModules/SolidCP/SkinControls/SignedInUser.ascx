@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SignedInUser.ascx.cs" Inherits="SolidCP.Portal.SkinControls.SignedInUser" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SignedInUser.ascx.cs" Inherits="FuseCP.Portal.SkinControls.SignedInUser" %>
 
 <asp:Panel ID="AnonymousPanel" runat="server">
 	<asp:HyperLink ID="lnkSignIn" runat="server" meta:resourcekey="lnkSignIn">Sign In</asp:HyperLink>

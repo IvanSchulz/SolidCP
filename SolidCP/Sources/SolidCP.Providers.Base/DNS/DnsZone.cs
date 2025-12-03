@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.DNS
+namespace FuseCP.Providers.DNS
 {
 	/// <summary>
 	/// Summary description for DnsZoneItem.

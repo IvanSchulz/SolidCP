@@ -39,7 +39,7 @@ using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
     //[Designer(typeof(WizardDesigner)), ToolboxBitmap(typeof(Wizard)), DefaultEvent("Cancel")]
     public class Wizard : ContainerControl

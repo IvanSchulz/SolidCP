@@ -40,18 +40,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     public partial class SettingsSharePointPolicy {
-        protected SolidCP.Portal.CollapsiblePanel secUsername;
+        protected FuseCP.Portal.CollapsiblePanel secUsername;
         protected System.Web.UI.WebControls.Panel UsernamePanel;
         protected System.Web.UI.WebControls.Label lblUsername;
-        protected SolidCP.Portal.UsernamePolicyEditor userNamePolicy;
+        protected FuseCP.Portal.UsernamePolicyEditor userNamePolicy;
         protected System.Web.UI.WebControls.Label lblPassword;
-        protected SolidCP.Portal.PasswordPolicyEditor userPasswordPolicy;
-        protected SolidCP.Portal.CollapsiblePanel secGroup;
+        protected FuseCP.Portal.PasswordPolicyEditor userPasswordPolicy;
+        protected FuseCP.Portal.CollapsiblePanel secGroup;
         protected System.Web.UI.WebControls.Panel GroupPanel;
         protected System.Web.UI.WebControls.Label lblGroupName;
-        protected SolidCP.Portal.UsernamePolicyEditor groupNamePolicy;
+        protected FuseCP.Portal.UsernamePolicyEditor groupNamePolicy;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
@@ -7,13 +7,13 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Web;
 using Cobalt;
-using SolidCP.WebDav.Core.Client;
-using SolidCP.WebDav.Core.Config;
-using SolidCP.WebDav.Core.Interfaces.Managers;
-using SolidCP.WebDav.Core.Interfaces.Owa;
-using SolidCP.WebDav.Core.Interfaces.Storages;
+using FuseCP.WebDav.Core.Client;
+using FuseCP.WebDav.Core.Config;
+using FuseCP.WebDav.Core.Interfaces.Managers;
+using FuseCP.WebDav.Core.Interfaces.Owa;
+using FuseCP.WebDav.Core.Interfaces.Storages;
 
-namespace SolidCP.WebDav.Core.Owa
+namespace FuseCP.WebDav.Core.Owa
 {
     public class CobaltSessionManager : IWopiFileManager
     {

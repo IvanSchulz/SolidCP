@@ -33,7 +33,7 @@
 using System;
 using System.Data;
 
-namespace SolidCP.Providers.Database
+namespace FuseCP.Providers.Database
 {
 	/// <summary>
 	/// Summary description for ISqlServerProvider.

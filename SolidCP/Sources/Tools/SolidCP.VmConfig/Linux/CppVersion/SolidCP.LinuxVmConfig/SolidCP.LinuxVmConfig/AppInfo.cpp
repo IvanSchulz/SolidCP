@@ -32,9 +32,9 @@
 
 #include "AppInfo.h"
 
-string AppInfo::appExeName = "SolidCP.LinuxVmConfig";
+string AppInfo::appExeName = "FuseCP.LinuxVmConfig";
 string AppInfo::appVersion = VERSION;
-string AppInfo::appPath = "/SolidCP";
+string AppInfo::appPath = "/FuseCP";
 string AppInfo::userName = "root";
 string AppInfo::pfSenseAdmin = "admin";
 

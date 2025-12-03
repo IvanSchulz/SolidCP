@@ -40,7 +40,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class NetticaDNS_Settings {
@@ -124,7 +124,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.Common_IPAddressesList iPAddressesList;
+        protected global::FuseCP.Portal.ProviderControls.Common_IPAddressesList iPAddressesList;
         
         /// <summary>
         /// lblSecondaryDNS control.
@@ -142,7 +142,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ProviderControls.Common_SecondaryDNSServers secondaryDNSServers;
+        protected global::FuseCP.Portal.ProviderControls.Common_SecondaryDNSServers secondaryDNSServers;
         
         /// <summary>
         /// cbApplyDefaultTemplate control.

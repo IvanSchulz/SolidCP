@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsPasswordSettings.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.OrganizationSettingsPasswordSettings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsPasswordSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationSettingsPasswordSettings" %>
 
 <%@ Register Src="UserControls/OrganizationSettingsTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>

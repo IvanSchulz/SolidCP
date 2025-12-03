@@ -31,11 +31,11 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class UserAccountEditDetails : SolidCPModuleBase
+    public partial class UserAccountEditDetails : FuseCPModuleBase
     {
         private const string UserStatusConst = "UserStatus";
         

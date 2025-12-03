@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     public class Apt: Installer
 	{
@@ -23,7 +23,7 @@ namespace SolidCP.Providers.OS
 
 			if (Directory.Exists("/etc/apt/sources.list.d"))
 			{
-				list = "/etc/apt/source.list.d/solidcp.list";
+				list = "/etc/apt/source.list.d/fusecp.list";
 				store = Directory.EnumerateFiles("/etc/apt/source.list.d/*.list")
 					.SelectMany(file => File.ReadAllLines(file))
 					.Select(line => line.Trim());

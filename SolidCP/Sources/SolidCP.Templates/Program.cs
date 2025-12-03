@@ -36,9 +36,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 
-using SolidCP.Templates.AST;
+using FuseCP.Templates.AST;
 
-namespace SolidCP.Templates
+namespace FuseCP.Templates
 {
     class Program
     {

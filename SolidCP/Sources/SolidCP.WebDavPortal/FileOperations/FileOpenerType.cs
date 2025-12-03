@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDavPortal.FileOperations
+namespace FuseCP.WebDavPortal.FileOperations
 {
     public enum FileOpenerType
     {

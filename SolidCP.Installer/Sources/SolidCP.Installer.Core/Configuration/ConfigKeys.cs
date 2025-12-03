@@ -34,7 +34,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SolidCP.Installer.Configuration
+namespace FuseCP.Installer.Configuration
 {
 	public class ConfigKeys
 	{

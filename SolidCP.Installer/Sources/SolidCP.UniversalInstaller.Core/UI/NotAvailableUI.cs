@@ -1,6 +1,6 @@
 using System;
 
-namespace SolidCP.UniversalInstaller {
+namespace FuseCP.UniversalInstaller {
 
 	public class NotAvailableUI : UI {
 

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,11 +35,11 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using Newtonsoft.Json;
-using SolidCP.Providers.DNS;
+using FuseCP.Providers.DNS;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class DomainsImportZone : SolidCPModuleBase
+    public partial class DomainsImportZone : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

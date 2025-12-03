@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ExchangeServer {
+namespace FuseCP.Portal.ExchangeServer {
     
     
     public partial class ExchangeMailboxPermissions {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.EnableAsyncTasksSupport asyncTasks;
+        protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
         /// <summary>
         /// Image1 control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.MailboxTabs tabs;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.MailboxTabs tabs;
         
         /// <summary>
         /// messageBox control.
@@ -64,7 +64,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBox;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
         /// <summary>
         /// secFullAccessPermission control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secFullAccessPermission;
+        protected global::FuseCP.Portal.CollapsiblePanel secFullAccessPermission;
         
         /// <summary>
         /// panelFullAccessPermission control.
@@ -100,7 +100,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsList fullAccessPermission;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsList fullAccessPermission;
         
         /// <summary>
         /// secSendAsPermission control.
@@ -109,7 +109,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secSendAsPermission;
+        protected global::FuseCP.Portal.CollapsiblePanel secSendAsPermission;
         
         /// <summary>
         /// panelSendAsPermission control.
@@ -136,7 +136,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsList sendAsPermission;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsList sendAsPermission;
         
         /// <summary>
         /// secOnBehalfOf control.
@@ -145,7 +145,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secOnBehalfOf;
+        protected global::FuseCP.Portal.CollapsiblePanel secOnBehalfOf;
         
         /// <summary>
         /// panelOnBehalfOf control.
@@ -172,7 +172,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsList onBehalfOfPermissions;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsList onBehalfOfPermissions;
         
         /// <summary>
         /// secCalendarPermissions control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secCalendarPermissions;
+        protected global::FuseCP.Portal.CollapsiblePanel secCalendarPermissions;
         
         /// <summary>
         /// panelCalendarPermissions control.
@@ -208,7 +208,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsListWithPermissions calendarPermissions;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsListWithPermissions calendarPermissions;
         
         /// <summary>
         /// secContactsPermissions control.
@@ -217,7 +217,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secContactsPermissions;
+        protected global::FuseCP.Portal.CollapsiblePanel secContactsPermissions;
         
         /// <summary>
         /// panelContactsPermissions control.
@@ -244,7 +244,7 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.AccountsListWithPermissions contactsPermissions;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.AccountsListWithPermissions contactsPermissions;
         
         /// <summary>
         /// buttonPanel control.
@@ -253,6 +253,6 @@ namespace SolidCP.Portal.ExchangeServer {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ItemButtonPanel buttonPanel;
+        protected global::FuseCP.Portal.ItemButtonPanel buttonPanel;
     }
 }

@@ -36,11 +36,11 @@ using System.IO;
 using System.Net.Mail;
 using System.Net.Mime;
 using System.Text;
-using SolidCP.EnterpriseServer;
-using SolidCP.EnterpriseServer.Code.HostedSolution;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.EnterpriseServer.Code.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class HostedSolutionReportTask : SchedulerTask
     {

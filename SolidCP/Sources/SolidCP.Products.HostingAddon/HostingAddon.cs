@@ -29,9 +29,9 @@
 using System;
 using System.Data;
 
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Ecommerce.EnterpriseServer
+namespace FuseCP.Ecommerce.EnterpriseServer
 {
 	public class HostingAddon : ProvisioningControllerBase, IProvisioningController
 	{

@@ -7,8 +7,8 @@ IF not defined NoRebuild (
 )
 
 IF not defined MsBuildSwitches ( Set MsBuildSwitches=/v:n /m)
-IF not defined SolidCPVersion ( Set SolidCPVersion=2.0.0)
-IF not defined SolidCPFileVersion ( Set SolidCPFileVersion=2.0.0)
+IF not defined FuseCPVersion ( Set FuseCPVersion=2.0.0)
+IF not defined FuseCPFileVersion ( Set FuseCPFileVersion=2.0.0)
 IF not defined Configuration ( Set Configuration=Debug)
 
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Community\MSBuild\Current\bin\MSBuild.exe" (
@@ -108,9 +108,9 @@ IF EXIST "%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" (
 	GOTO Build 
  )
 
-echo "VisualStudio not found. VisualStudio must be installed to build SolidCP."
+echo "VisualStudio not found. VisualStudio must be installed to build FuseCP."
 
 Set SCPMSBuild="msbuild"
 
 :Build
-dotnet msbuild build.xml /target:Deploy /p:BuildConfiguration=%Configuration% /p:Version="%SolidCPVersion%" /p:FileVersion="%SolidCPFileVersion%" /p:VersionLabel="%SolidCPFileVersion%" %MsBuildSwitches% /fileLogger /flp:verbosity=normal /p:VisualStudioVersion=%SCPVSVer%
+dotnet msbuild build.xml /target:Deploy /p:BuildConfiguration=%Configuration% /p:Version="%FuseCPVersion%" /p:FileVersion="%FuseCPFileVersion%" /p:VersionLabel="%FuseCPFileVersion%" %MsBuildSwitches% /fileLogger /flp:verbosity=normal /p:VisualStudioVersion=%SCPVSVer%

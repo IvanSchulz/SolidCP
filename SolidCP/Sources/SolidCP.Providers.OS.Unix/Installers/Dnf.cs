@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     public class Dnf : Installer
     {
-		const string RepoFile = "/etc/yum.repos.d/solidcp.repo";
+		const string RepoFile = "/etc/yum.repos.d/fusecp.repo";
         public override bool IsInstallerInstalled => Shell.Find("dnf") != null;
 
         public override Shell AddSourcesAsync(string sources)

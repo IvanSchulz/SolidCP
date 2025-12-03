@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.Mail
+namespace FuseCP.Providers.Mail
 { 
 	[Serializable] 
 	public class MailDomain : ServiceProviderItem

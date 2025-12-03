@@ -42,13 +42,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.Providers.DNS;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.DNS;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class DnsZoneRecords : SolidCPModuleBase
+    public partial class DnsZoneRecords : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -31,12 +31,12 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using System;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal.OCS
+namespace FuseCP.Portal.OCS
 {
-    public partial class EditOCSUser : SolidCPModuleBase
+    public partial class EditOCSUser : FuseCPModuleBase
     {
         public const string UPDATE_OCS_USER = "UPDATE_OCS_USER";
         

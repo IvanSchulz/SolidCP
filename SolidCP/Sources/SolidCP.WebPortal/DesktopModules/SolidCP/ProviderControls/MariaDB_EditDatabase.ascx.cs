@@ -1,9 +1,9 @@
-﻿using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Database;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Database;
 using System;
 
-namespace SolidCP.Portal.ProviderControls {
-    public partial class MariaDB_EditUser_EditField : SolidCPControlBase, IDatabaseEditDatabaseControl {
+namespace FuseCP.Portal.ProviderControls {
+    public partial class MariaDB_EditUser_EditField : FuseCPControlBase, IDatabaseEditDatabaseControl {
         protected void Page_Load(object sender, EventArgs e) {
             if(ViewState["ControlsToggled"] == null) {
                 bool editMode = (PanelRequest.ItemID > 0);

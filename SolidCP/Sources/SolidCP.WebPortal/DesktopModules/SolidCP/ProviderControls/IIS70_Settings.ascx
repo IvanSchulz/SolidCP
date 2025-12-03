@@ -1,11 +1,11 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IIS70_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.IIS70_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IIS70_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IIS70_Settings" %>
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 <%@ Register Src="Common_ActiveDirectoryIntegration.ascx" TagName="ActiveDirectoryIntegration" TagPrefix="uc1" %>
 <%@ Register Src="../UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc5" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagPrefix="scp" TagName="CollapsiblePanel" %>
 <%@ Register Src="../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
 <%@ Register src="../UserControls/EditFeedsList.ascx" tagname="EditFeedsList" tagprefix="uc6" %>
-<%@ Import Namespace="SolidCP.Portal.ProviderControls" %>
+<%@ Import Namespace="FuseCP.Portal.ProviderControls" %>
 
 <fieldset>
     <legend>

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SolidCP.WebDavPortal.UI.Routes
+namespace FuseCP.WebDavPortal.UI.Routes
 {
     public class AccountRouteNames
     {

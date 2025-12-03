@@ -42,9 +42,9 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-using SolidCP.UniversalInstaller;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.UniversalInstaller.Controls
+namespace FuseCP.UniversalInstaller.Controls
 {
 	/// <summary>
 	/// Settings control

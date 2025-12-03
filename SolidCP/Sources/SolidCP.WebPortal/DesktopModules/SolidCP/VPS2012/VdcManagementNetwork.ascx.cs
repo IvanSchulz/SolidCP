@@ -36,9 +36,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VdcManagementNetwork : SolidCPModuleBase
+    public partial class VdcManagementNetwork : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

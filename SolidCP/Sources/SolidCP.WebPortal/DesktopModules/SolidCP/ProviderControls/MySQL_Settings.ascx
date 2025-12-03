@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MySQL_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.MySQL_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MySQL_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MySQL_Settings" %>
 <%--<fieldset>
     <legend>
         <asp:Label runat="server" CssClass="NormalBold" meta:resourcekey="lblFtuNote" />

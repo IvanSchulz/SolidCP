@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsMariaDBPolicy.ascx.cs" Inherits="SolidCP.Portal.SettingsMariaDBPolicy" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsMariaDBPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsMariaDBPolicy" %>
 <%@ Register Src="UserControls/UsernamePolicyEditor.ascx" TagName="UsernamePolicyEditor" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="uc1" %>
 <%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>

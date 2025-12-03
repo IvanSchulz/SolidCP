@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using System.Text;
-using SolidCP.Server.Utils;
+using FuseCP.Server.Utils;
 
-namespace SolidCP.Providers.EnterpriseStorage
+namespace FuseCP.Providers.EnterpriseStorage
 {
     /// <summary>
-    /// Helper Class für Workfolderservice in Windows Server 2012
+    /// Helper Class f�r Workfolderservice in Windows Server 2012
     /// 
     /// Prerequisites:
     /// - Workfolder Feature must installed

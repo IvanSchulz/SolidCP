@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Text;
 
-namespace SolidCP.Providers
+namespace FuseCP.Providers
 {
 
     public class OrderedNameDictionary<T> : OrderedDictionary, IDictionary<string, T> where T: class

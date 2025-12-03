@@ -1,4 +1,4 @@
-﻿namespace SolidCP.WebDav.Core.Entities.Owa
+namespace FuseCP.WebDav.Core.Entities.Owa
 {
     public class PutRelativeFile
     {

@@ -38,9 +38,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.Remoting.Lifetime;
 using System.IO;
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Installer.Common
+namespace FuseCP.Installer.Common
 {
 	[Serializable]
 	public class AssemblyLoader : MarshalByRefObject

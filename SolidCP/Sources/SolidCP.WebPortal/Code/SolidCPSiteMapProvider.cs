@@ -38,9 +38,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 
-namespace SolidCP.WebPortal
+namespace FuseCP.WebPortal
 {
-    public class SolidCPSiteMapProvider : SiteMapProvider
+    public class FuseCPSiteMapProvider : SiteMapProvider
     {
         private const string DEFAULT_PAGE_URL = "~/Default.aspx?pid=";
         private const string ROOT_NODE_KEY = "scp_root";
@@ -48,7 +48,7 @@ namespace SolidCP.WebPortal
 
         private SiteMapProvider parentSiteMapProvider = null;
 
-        public SolidCPSiteMapProvider()
+        public FuseCPSiteMapProvider()
         {
         }
 

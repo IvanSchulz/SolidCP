@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2016, SolidCP
+// Copyright (c) 2016, SolidCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -34,10 +34,10 @@ using System.Collections.Generic;
 using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using SolidCP.Providers.DNS.SimpleDNS90.Models.Request;
-using SolidCP.Providers.DNS.SimpleDNS90.Models.Response;
+using FuseCP.Providers.DNS.SimpleDNS90.Models.Request;
+using FuseCP.Providers.DNS.SimpleDNS90.Models.Response;
 
-namespace SolidCP.Providers.DNS.SimpleDNS90.Models
+namespace FuseCP.Providers.DNS.SimpleDNS90.Models
 {
     public static class Serialize
     {

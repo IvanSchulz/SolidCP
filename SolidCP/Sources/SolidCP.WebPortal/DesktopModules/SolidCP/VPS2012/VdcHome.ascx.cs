@@ -34,12 +34,12 @@
 using System.Linq;
 using System.Text;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VdcHome : SolidCPModuleBase
+    public partial class VdcHome : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -55,7 +55,7 @@ namespace SolidCP.Portal.VPS2012
 
             // toggle columns
             gvServers.Columns[3].Visible = PackagesHelper.IsQuotaEnabled(PanelSecurity.PackageId, Quotas.VPS2012_DMZ_NETWORK_ENABLED);
-            bool isUserSelected = PanelSecurity.SelectedUser.Role == SolidCP.EnterpriseServer.UserRole.User;
+            bool isUserSelected = PanelSecurity.SelectedUser.Role == FuseCP.EnterpriseServer.UserRole.User;
             gvServers.Columns[4].Visible = !isUserSelected;
             gvServers.Columns[5].Visible = !isUserSelected;
 

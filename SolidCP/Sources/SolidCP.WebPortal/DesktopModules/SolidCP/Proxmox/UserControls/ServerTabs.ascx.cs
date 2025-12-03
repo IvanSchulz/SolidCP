@@ -36,13 +36,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.ResultObjects;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
+using FuseCP.Providers.ResultObjects;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.Proxmox.UserControls
+namespace FuseCP.Portal.Proxmox.UserControls
 {
-    public partial class ServerTabs : SolidCPControlBase
+    public partial class ServerTabs : FuseCPControlBase
     {
         class Tab
         {

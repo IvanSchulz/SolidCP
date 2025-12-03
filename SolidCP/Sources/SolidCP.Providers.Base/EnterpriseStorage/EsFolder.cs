@@ -1,6 +1,6 @@
-﻿using SolidCP.Providers.StorageSpaces;
+using FuseCP.Providers.StorageSpaces;
 
-namespace SolidCP.Providers.EnterpriseStorage
+namespace FuseCP.Providers.EnterpriseStorage
 {
     public class EsFolder : StorageSpaceFolder
     {

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="FormComments.Text" xml:space="preserve">
-    <value>&lt;p&gt;The form allows allocating of additional VLANs to this hosting space. These VLANs are used to configure VPS network adapter connected to Private network.&lt;/p&gt;&lt;p&gt;VPS module is looking for free VLANs in "Private Network VLANs" pool, so SolidCP administrator must make sure there are sufficient number of unallotted VLANs in that pool.&lt;/p&gt;</value>
+    <value>&lt;p&gt;The form allows allocating of additional VLANs to this hosting space. These VLANs are used to configure VPS network adapter connected to Private network.&lt;/p&gt;&lt;p&gt;VPS module is looking for free VLANs in "Private Network VLANs" pool, so FuseCP administrator must make sure there are sufficient number of unallotted VLANs in that pool.&lt;/p&gt;</value>
   </data>
   <data name="locTitle.Text" xml:space="preserve">
     <value>Allocate VLANs</value>

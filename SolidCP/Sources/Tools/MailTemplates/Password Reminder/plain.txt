@@ -13,6 +13,6 @@ One Time Password: #user.Password#
 If you have any questions regarding your hosting account, feel free to contact our support department at any time.
 
 Best regards,
-SolidCP.
+FuseCP.
 Web Site: https://HostingCompany.com"
 E-Mail: support@HostingCompany.com

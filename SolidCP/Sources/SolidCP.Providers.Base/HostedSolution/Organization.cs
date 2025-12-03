@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
     [LogParentProperty("Id", NameInLog = "Org ID")]
     [LogParentProperty("Name", NameInLog = "Org Name")]

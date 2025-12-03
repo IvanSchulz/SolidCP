@@ -36,7 +36,7 @@ using System.Text;
 using System.Collections;
 using System.Reflection;
 
-namespace SolidCP.Templates
+namespace FuseCP.Templates
 {
     internal class BuiltinFunctions
     {

@@ -40,10 +40,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SolidCP.WebPortal;
-using SolidCP.EnterpriseServer;
+using FuseCP.WebPortal;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal.SkinControls
+namespace FuseCP.Portal.SkinControls
 {
     public partial class TopMenu : System.Web.UI.UserControl
     {

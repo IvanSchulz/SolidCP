@@ -1,11 +1,11 @@
-﻿using Ninject.Activation;
+using Ninject.Activation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
 
-namespace SolidCP.WebDavPortal.DependencyInjection.Providers
+namespace FuseCP.WebDavPortal.DependencyInjection.Providers
 {
     public class HttpSessionStateProvider : Provider<HttpSessionState>
     {

@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SolidCP.Providers.SharePoint
+namespace FuseCP.Providers.SharePoint
 {
     [Serializable]
     public class SharePointEnterpriseSiteDiskSpace

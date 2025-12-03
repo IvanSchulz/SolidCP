@@ -33,7 +33,7 @@
 using System;
 using System.Xml;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public sealed class XmlUtils
 	{

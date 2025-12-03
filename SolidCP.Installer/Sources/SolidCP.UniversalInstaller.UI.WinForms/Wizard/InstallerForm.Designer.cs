@@ -30,7 +30,7 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING  IN  ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-namespace SolidCP.UniversalInstaller.WinForms
+namespace FuseCP.UniversalInstaller.WinForms
 {
 	partial class InstallerForm
 	{
@@ -63,18 +63,18 @@ namespace SolidCP.UniversalInstaller.WinForms
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallerForm));
-			this.wizard = new SolidCP.UniversalInstaller.WinForms.Wizard();
+			this.wizard = new FuseCP.UniversalInstaller.WinForms.Wizard();
 			this.SuspendLayout();
 			// 
 			// wizard
 			// 
-			this.wizard.BannerImage = global::SolidCP.UniversalInstaller.Properties.Resources.BannerImage;
+			this.wizard.BannerImage = global::FuseCP.UniversalInstaller.Properties.Resources.BannerImage;
 			this.wizard.CancelText = "&Cancel";
 			this.wizard.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.wizard.FinishText = "&Finish";
 			this.wizard.Location = new System.Drawing.Point(0, 0);
 			this.wizard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.wizard.MarginImage = global::SolidCP.UniversalInstaller.Properties.Resources.MarginImage;
+			this.wizard.MarginImage = global::FuseCP.UniversalInstaller.Properties.Resources.MarginImage;
 			this.wizard.Name = "wizard";
 			this.wizard.Size = new System.Drawing.Size(660, 441);
 			this.wizard.TabIndex = 0;

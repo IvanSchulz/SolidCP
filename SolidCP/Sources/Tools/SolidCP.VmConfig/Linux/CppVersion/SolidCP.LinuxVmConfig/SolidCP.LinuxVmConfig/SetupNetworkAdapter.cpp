@@ -672,7 +672,7 @@ void SetupNetworkAdapter::DisableDHCP_PfSense(ExecutionContext& context, string 
 		config.push_back("\t\t\t<mode>ipalias</mode>");
 		config.push_back("\t\t\t<interface>" + interfaceTyp + "</interface>");
 		config.push_back("\t\t\t<uniqid>" + GetUniqId(13) + "</uniqid>");
-		config.push_back("\t\t\t<descr>SolidCP virtual IP</descr>");
+		config.push_back("\t\t\t<descr>FuseCP virtual IP</descr>");
 		config.push_back("\t\t\t<type>single</type>");
 		config.push_back("\t\t\t<subnet_bits>" + subnetMasksPrefix[i] + "</subnet_bits>");
 		config.push_back("\t\t\t<subnet>" + ipAddresses[i] + "</subnet>");

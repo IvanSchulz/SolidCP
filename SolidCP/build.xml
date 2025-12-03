@@ -1,4 +1,4 @@
-ï»¿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
 	<PropertyGroup>
 		<Version>$(Version)</Version>
 		<FileVersion>$(BUILD_NUMBER)</FileVersion>
@@ -6,10 +6,10 @@
 		<ReleaseDate>2024-12-17</ReleaseDate>
 		<BuildConfiguration></BuildConfiguration>
 		<RootFolder>..</RootFolder>
-		<TrunkFolder>$(RootFolder)\SolidCP</TrunkFolder>
+		<TrunkFolder>$(RootFolder)\FuseCP</TrunkFolder>
 		<Platform>Any CPU</Platform>
 
-		<SetupTrunkFolder>$(RootFolder)\SolidCP.Installer</SetupTrunkFolder>
+		<SetupTrunkFolder>$(RootFolder)\FuseCP.Installer</SetupTrunkFolder>
 		<SetupBuildFolder>$(SetupTrunkFolder)\Build\$(BuildConfiguration)</SetupBuildFolder>
 		<MSBuildCommunityTasksPath>$(RootFolder)\MSBuildCommunityTasks</MSBuildCommunityTasksPath>
 
@@ -24,28 +24,28 @@
 		<MSDeployPath Condition="Exists('$(RootFolder)\tools\webdeploy\msdeploy.exe')">"$(RootFolder)\tools\webdeploy\msdeploy.exe"</MSDeployPath>
 		<ZipCmd>"$(RootFolder)\tools\7-Zip\7z.exe"</ZipCmd>
 		
-		<DataBaseName>SolidCP_build</DataBaseName>
+		<DataBaseName>FuseCP_build</DataBaseName>
 		<MSDeployConnectionString>server=(local);Initial Catalog=$(DataBaseName);Integrated Security=true;</MSDeployConnectionString>
 
-		<PortalSrc>$(TrunkFolder)\Sources\SolidCP.WebPortal</PortalSrc>
-		<WebDavPortalSrc>$(TrunkFolder)\Sources\SolidCP.WebDavPortal</WebDavPortalSrc>
-		<ServerSrc>$(TrunkFolder)\Sources\SolidCP.Server</ServerSrc>
-		<EnterpriseServerSrc>$(TrunkFolder)\Sources\SolidCP.EnterpriseServer</EnterpriseServerSrc>
-		<EnterpriseServerDataSrc>$(TrunkFolder)\Sources\SolidCP.EnterpriseServer.Data</EnterpriseServerDataSrc>
-		<SchedulerServiceSrc>$(TrunkFolder)\Sources\SolidCP.SchedulerService\bin</SchedulerServiceSrc>
-		<ImportCsvSrc>$(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk\bin\$(BuildConfiguration)</ImportCsvSrc>
-		<HyperVUtilsSrc>$(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils\bin\$(BuildConfiguration)</HyperVUtilsSrc>
-		<VMConfigSrc>$(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig\bin\$(BuildConfiguration)</VMConfigSrc>
-		<ImportEnterpriseSrc>$(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise\bin\$(BuildConfiguration)</ImportEnterpriseSrc>
+		<PortalSrc>$(TrunkFolder)\Sources\FuseCP.WebPortal</PortalSrc>
+		<WebDavPortalSrc>$(TrunkFolder)\Sources\FuseCP.WebDavPortal</WebDavPortalSrc>
+		<ServerSrc>$(TrunkFolder)\Sources\FuseCP.Server</ServerSrc>
+		<EnterpriseServerSrc>$(TrunkFolder)\Sources\FuseCP.EnterpriseServer</EnterpriseServerSrc>
+		<EnterpriseServerDataSrc>$(TrunkFolder)\Sources\FuseCP.EnterpriseServer.Data</EnterpriseServerDataSrc>
+		<SchedulerServiceSrc>$(TrunkFolder)\Sources\FuseCP.SchedulerService\bin</SchedulerServiceSrc>
+		<ImportCsvSrc>$(TrunkFolder)\Sources\Tools\FuseCP.Import.CsvBulk\bin\$(BuildConfiguration)</ImportCsvSrc>
+		<HyperVUtilsSrc>$(RootFolder)\FuseCP.HyperV.Utils\Sources\FuseCP.HyperV.Utils\bin\$(BuildConfiguration)</HyperVUtilsSrc>
+		<VMConfigSrc>$(RootFolder)\FuseCP.VmConfig\Sources\FuseCP.VmConfig\bin\$(BuildConfiguration)</VMConfigSrc>
+		<ImportEnterpriseSrc>$(TrunkFolder)\Sources\Tools\FuseCP.Import.Enterprise\bin\$(BuildConfiguration)</ImportEnterpriseSrc>
 		<CertMakerSrc>$(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker\bin\$(BuildConfiguration)</CertMakerSrc>
-		<AWStatsViewerSrc>$(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer</AWStatsViewerSrc>
+		<AWStatsViewerSrc>$(TrunkFolder)\Sources\Tools\FuseCP.AWStats.Viewer</AWStatsViewerSrc>
 		<SCPTransportAgentSrc>$(TrunkFolder)\Sources\Tools\SCPTransportAgent</SCPTransportAgentSrc>
-		<SolidCP-Configuration-ToolSrc>$(TrunkFolder)\Sources\Tools\SolidCP-Configuration-Tool</SolidCP-Configuration-ToolSrc>
+		<FuseCP-Configuration-ToolSrc>$(TrunkFolder)\Sources\Tools\FuseCP-Configuration-Tool</FuseCP-Configuration-ToolSrc>
 		<MSPtoSCPSrc>$(TrunkFolder)\Sources\Tools\MSPtoSCP</MSPtoSCPSrc>
 		<MailTemplatesSrc>$(TrunkFolder)\Sources\Tools\MailTemplates</MailTemplatesSrc>
-		<SolidCP-Auto-Upgrade-ToolSrc>$(TrunkFolder)\Sources\Tools\SolidCP-Auto-Upgrade-Tool</SolidCP-Auto-Upgrade-ToolSrc>
-		<SolidCP-dSHeuristicsSrc>$(TrunkFolder)\Sources\Tools\SolidCP-dSHeuristics</SolidCP-dSHeuristicsSrc>
-		<FixDefaultPublicFolderMailboxSrc>$(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox\bin\$(BuildConfiguration)</FixDefaultPublicFolderMailboxSrc>
+		<FuseCP-Auto-Upgrade-ToolSrc>$(TrunkFolder)\Sources\Tools\FuseCP-Auto-Upgrade-Tool</FuseCP-Auto-Upgrade-ToolSrc>
+		<FuseCP-dSHeuristicsSrc>$(TrunkFolder)\Sources\Tools\FuseCP-dSHeuristics</FuseCP-dSHeuristicsSrc>
+		<FixDefaultPublicFolderMailboxSrc>$(TrunkFolder)\Sources\Tools\FuseCP.FixDefaultPublicFolderMailbox\bin\$(BuildConfiguration)</FixDefaultPublicFolderMailboxSrc>
 		<ProgramFiles64>$(ProgramFiles.Replace(" (x86)", ""))</ProgramFiles64>
 		<DevEnv>$(ProgramFiles64)\Microsoft Visual Studio\18\Community\Common7\IDE\devenv.com</DevEnv>
 		<DevEnv Condition="!Exists('$(DevEnv)')">$(ProgramFiles64)\Microsoft Visual Studio\18\Professional\Common7\IDE\devenv.com</DevEnv>
@@ -89,7 +89,7 @@
 		<WIX Condition=" '$(WIX)' == '' ">$(RootFolder)\tools\WIX\x86</WIX>
 
 		<!-- Include pdb's since users can send back StackTraces to ISP's, and with the pdb's the StackTraces contain
-				line numbers and the ISP's can debug SolidCP. -->
+				line numbers and the ISP's can debug FuseCP. -->
 		<IncludeReleasePdbs Condition="'$(IncludeReleasePdbs)' == ''">true</IncludeReleasePdbs>
 
 		<!-- Use aspnet_compiler to precompile WebPortal if set to true (This also checks all ascx and aspx files for errors) -->
@@ -112,7 +112,7 @@
 
 	<PropertyGroup Label="WebPlatformFeed">
 		<!-- URI where to locate the installer's distributive online -->
-		<InstallerRemoteUri>http://installer.solidcp.com/files/$(Version)/SolidCP-$(Version)-webpi.msi</InstallerRemoteUri>
+		<InstallerRemoteUri>http://installer.fusecp.com/files/$(Version)/FuseCP-$(Version)-webpi.msi</InstallerRemoteUri>
 	</PropertyGroup>
 
 	<Target Name="ShowParameters">
@@ -130,26 +130,26 @@
 	</Target>
 
 	<Target Name="RestorePackages" DependsOnTargets="ShowParameters">
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\SolidCP.Server.sln" />
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" />
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" />
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" />
-		<Exec Command="dotnet restore $(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" />
-		<Exec Command="dotnet restore $(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" />
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise.sln" />
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\FuseCP.Server.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\FuseCP.WebPortalAndEnterpriseServer.sln" />
+		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\FuseCP.WebDavPortal.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.Import.CsvBulk.sln" />
+		<Exec Command="dotnet restore $(RootFolder)\FuseCP.HyperV.Utils\Sources\FuseCP.HyperV.Utils.sln" />
+		<Exec Command="dotnet restore $(RootFolder)\FuseCP.VmConfig\Sources\FuseCP.VmConfig.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.Import.Enterprise.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.AWStats.Viewer.sln" />
 		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" />
 		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" />
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.FixDefaultPublicFolderMailbox.sln" />
 	</Target>
 
 	<Target Name="GenerateBuildVersionFilesInstaller" DependsOnTargets="RestorePackages">
-		<AssemblyInfo CodeLanguage="CS" OutputFile="$(RootFolder)\SolidCP.Installer\Sources\VersionInfo.cs" AssemblyCompany="SolidCP" AssemblyCopyright="Copyright Â© 2024 SolidCP." AssemblyVersion="$(VersionLabel)" AssemblyFileVersion="$(FileVersion)" AssemblyInformationalVersion="$(Version)" />
+		<AssemblyInfo CodeLanguage="CS" OutputFile="$(RootFolder)\FuseCP.Installer\Sources\VersionInfo.cs" AssemblyCompany="FuseCP" AssemblyCopyright="Copyright © 2024 FuseCP." AssemblyVersion="$(VersionLabel)" AssemblyFileVersion="$(FileVersion)" AssemblyInformationalVersion="$(Version)" />
 	</Target>
 
 	<Target Name="GenerateBuildVersionFiles" DependsOnTargets="GenerateBuildVersionFilesInstaller">
-		<AssemblyInfo CodeLanguage="CS" OutputFile="$(TrunkFolder)\Sources\VersionInfo.cs" AssemblyCompany="SolidCP" AssemblyCopyright="Copyright Â© 2024 SolidCP." AssemblyVersion="$(VersionLabel)" AssemblyFileVersion="$(FileVersion)" AssemblyInformationalVersion="$(Version)" />
-		<AssemblyInfo CodeLanguage="VB" OutputFile="$(TrunkFolder)\Sources\VersionInfo.vb" AssemblyCompany="SolidCP" AssemblyCopyright="Copyright Â© 2024 SolidCP." AssemblyVersion="$(VersionLabel)" AssemblyFileVersion="$(FileVersion)" AssemblyInformationalVersion="$(Version)" />
+		<AssemblyInfo CodeLanguage="CS" OutputFile="$(TrunkFolder)\Sources\VersionInfo.cs" AssemblyCompany="FuseCP" AssemblyCopyright="Copyright © 2024 FuseCP." AssemblyVersion="$(VersionLabel)" AssemblyFileVersion="$(FileVersion)" AssemblyInformationalVersion="$(Version)" />
+		<AssemblyInfo CodeLanguage="VB" OutputFile="$(TrunkFolder)\Sources\VersionInfo.vb" AssemblyCompany="FuseCP" AssemblyCopyright="Copyright © 2024 FuseCP." AssemblyVersion="$(VersionLabel)" AssemblyFileVersion="$(FileVersion)" AssemblyInformationalVersion="$(Version)" />
 	</Target>
 
 	<Target Name="BackupModelSnapshots" DependsOnTargets="GenerateBuildVersionFiles">
@@ -181,22 +181,22 @@
 	</Target>
 
 	<Target Name="CompileSources" DependsOnTargets="GenerateBuildVersionFiles">
-		<!-- SolidCP -->
-		<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.Server.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.WebPortalAndEnterpriseServer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<Exec Command="&quot;$(MsBuildExe)&quot; &quot;$(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln&quot; &quot;/p:Configuration=$(BuildConfiguration);Platform=$(Platform)&quot; $(MsBuildSwitches)" />
+		<!-- FuseCP -->
+		<MSBuild Projects="$(TrunkFolder)\Sources\FuseCP.Server.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(TrunkFolder)\Sources\FuseCP.WebPortalAndEnterpriseServer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<Exec Command="&quot;$(MsBuildExe)&quot; &quot;$(TrunkFolder)\Sources\FuseCP.WebDavPortal.sln&quot; &quot;/p:Configuration=$(BuildConfiguration);Platform=$(Platform)&quot; $(MsBuildSwitches)" />
 
-		<!--<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.WebDavPortal.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />-->
+		<!--<MSBuild Projects="$(TrunkFolder)\Sources\FuseCP.WebDavPortal.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />-->
 
 		<!-- Tools -->
-		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.Import.CsvBulk.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<MSBuild Projects="$(RootFolder)\SolidCP.HyperV.Utils\Sources\SolidCP.HyperV.Utils.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<MSBuild Projects="$(RootFolder)\SolidCP.VmConfig\Sources\SolidCP.VmConfig.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.Import.Enterprise.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.AWStats.Viewer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.Import.CsvBulk.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(RootFolder)\FuseCP.HyperV.Utils\Sources\FuseCP.HyperV.Utils.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(RootFolder)\FuseCP.VmConfig\Sources\FuseCP.VmConfig.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.Import.Enterprise.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.AWStats.Viewer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
 		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
 		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-  		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.FixDefaultPublicFolderMailbox.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+  		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.FixDefaultPublicFolderMailbox.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
  	</Target>
 
 	<Target Name="PrepareBuilds" DependsOnTargets="CompileSources">
@@ -332,7 +332,7 @@
 		<Copy SourceFiles="@(PortalBuildFiles)" DestinationFolder="$(PortalBuild)\%(RecursiveDir)" Condition=" '$(UseAspNetPrecompile)' != 'true' " />
 
 		<!-- Use aspnet_compiler to percompile WebPortal if UseAspNetPrecompile is set to true -->
-		<MSBuild Projects="$(TrunkFolder)\Sources\SolidCP.WebPortal\SolidCP.WebPortal.csproj" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" Targets="DeployWithPrecompile" 
+		<MSBuild Projects="$(TrunkFolder)\Sources\FuseCP.WebPortal\FuseCP.WebPortal.csproj" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" Targets="DeployWithPrecompile" 
 			Condition=" '$(UseAspNetPrecompile)' == 'true' " />
 	</Target>
 
@@ -473,10 +473,10 @@
 	</Target>
 
 	<Target Name="CreateLocalizationToolkitBuild" DependsOnTargets="CreateSCPTransportAgentBuild">
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\SolidCP.LocalizationToolkit.sln" />
+		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\FuseCP.LocalizationToolkit.sln" />
 
 		<!-- compile toolkit -->
-		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.LocalizationToolkit\SolidCP.LocalizationToolkit.csproj" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)">
+		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.LocalizationToolkit\FuseCP.LocalizationToolkit.csproj" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)">
 			<Output
                 TaskParameter="TargetOutputs"
                 ItemName="LocalizationToolkitExe" />
@@ -486,28 +486,28 @@
 		<Exec Command="@(LocalizationToolkitExe) -L $(PortalSrc)"/>
 
 		<!-- build MSI package -->
-		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SolidCP.LocalizationToolkit.Wix\SolidCP.LocalizationToolkit.Wix.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);DefineSolutionProperties=false">
+		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.LocalizationToolkit.Wix\FuseCP.LocalizationToolkit.Wix.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);DefineSolutionProperties=false">
 			<Output
                 TaskParameter="TargetOutputs"
                 ItemName="LocalizationToolkitMsi" />
 		</MSBuild>
 		<Copy SourceFiles="@(LocalizationToolkitMsi)" DestinationFolder="$(LocalizationToolkitBuild)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(TrunkFolder)\Sources\Tools\SolidCP.LocalizationToolkit\bin\$(BuildConfiguration)\Data\en-US\Resources.xml" DestinationFolder="$(RootFolder)\Languages" />
+		<Copy SourceFiles="$(TrunkFolder)\Sources\Tools\FuseCP.LocalizationToolkit\bin\$(BuildConfiguration)\Data\en-US\Resources.xml" DestinationFolder="$(RootFolder)\Languages" />
 	</Target>
 
 	<Target Name="CreateSetupBuild" DependsOnTargets="CreateLocalizationToolkitBuild">
 
 		<PropertyGroup>
-			<InstallerProjectRoot>$(RootFolder)\SolidCP.Installer\Sources\</InstallerProjectRoot>
-			<InstallerProjectBin>$(InstallerProjectRoot)SolidCP.UniversalInstaller\bin\$(BuildConfiguration)\net10.0</InstallerProjectBin>
+			<InstallerProjectRoot>$(RootFolder)\FuseCP.Installer\Sources\</InstallerProjectRoot>
+			<InstallerProjectBin>$(InstallerProjectRoot)FuseCP.UniversalInstaller\bin\$(BuildConfiguration)\net10.0</InstallerProjectBin>
 		</PropertyGroup>
 
-		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)SolidCP.Installer.sln" />
-		<!--<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)SolidCP.Installer.Legacy.sln" />-->
+		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)FuseCP.Installer.sln" />
+		<!--<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(InstallerProjectRoot)FuseCP.Installer.Legacy.sln" />-->
 
 		<!-- compile Installer -->
-		<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />
-		<!--<MSBuild Projects="$(InstallerProjectRoot)SolidCP.Installer.Legacy.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=17.12.4" />-->
+		<MSBuild Projects="$(InstallerProjectRoot)FuseCP.Installer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />
+		<!--<MSBuild Projects="$(InstallerProjectRoot)FuseCP.Installer.Legacy.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=17.12.4" />-->
 
 		<!-- copy installer binaries for upgrade -->
 		<ItemGroup>
@@ -515,16 +515,16 @@
 			<InstallerBinaries Include="$(InstallerProjectBin)\**\*.exe" />
 			<InstallerBinaries Include="$(InstallerProjectBin)\**\*.Installer.deps.json" />
 			<InstallerBinaries Include="$(InstallerProjectBin)\**\*.runtimeconfig.json" />
-			<SetupDll Include="$(InstallerProjectRoot)\SolidCP.Setup\bin\$(BuildConfiguration)\**\Setup2.dll" />
-			<SetupDll Include="$(InstallerProjectRoot)\SolidCP.Setup\bin\$(BuildConfiguration)\**\Setup2.pdb" />
+			<SetupDll Include="$(InstallerProjectRoot)\FuseCP.Setup\bin\$(BuildConfiguration)\**\Setup2.dll" />
+			<SetupDll Include="$(InstallerProjectRoot)\FuseCP.Setup\bin\$(BuildConfiguration)\**\Setup2.pdb" />
 		</ItemGroup>
 		<Copy SourceFiles="@(InstallerBinaries)" DestinationFolder="$(InstallerBuild)\%(RecursiveDir)" />
 		<Copy SourceFiles="@(SetupDll)" DestinationFolder="$(SetupBuildFolder)" />
 
         <!-- build MSI package -->
-        <Exec Command="&quot;$(DevEnv)&quot; &quot;$(InstallerProjectRoot)SolidCP.UniversalInstaller.Msi.sln&quot; /build &quot;$(BuildConfiguration)|$(Platform)&quot;" />
+        <Exec Command="&quot;$(DevEnv)&quot; &quot;$(InstallerProjectRoot)FuseCP.UniversalInstaller.Msi.sln&quot; /build &quot;$(BuildConfiguration)|$(Platform)&quot;" />
         <ItemGroup>
-            <InstallerMsi Include="$(InstallerProjectRoot)\SolidCP.UniversalInstaller.Msi\$(BuildConfiguration)\*.msi" />
+            <InstallerMsi Include="$(InstallerProjectRoot)\FuseCP.UniversalInstaller.Msi\$(BuildConfiguration)\*.msi" />
         </ItemGroup>
         <Copy SourceFiles="@(InstallerMsi)" DestinationFolder="$(BuildFolder)" />
 
@@ -532,14 +532,14 @@
 	
 	<Target Name="CreateInstallPackages" DependsOnTargets="ZipTools" Condition="'$(BuildLinuxInstallPackages)' == 'true'">
 		<PropertyGroup>
-			<InstallerProjectRoot>$(RootFolder)\SolidCP.Installer\Sources\</InstallerProjectRoot>
-			<InstallerProjectBin>$(InstallerProjectRoot)SolidCP.UniversalInstaller\bin\$(BuildConfiguration)\net48\</InstallerProjectBin>
+			<InstallerProjectRoot>$(RootFolder)\FuseCP.Installer\Sources\</InstallerProjectRoot>
+			<InstallerProjectBin>$(InstallerProjectRoot)FuseCP.UniversalInstaller\bin\$(BuildConfiguration)\net48\</InstallerProjectBin>
 			<DeployPackagesDir>$(DeployFolder)\Packages</DeployPackagesDir>
-			<PackagesBinDir>$(InstallerProjectRoot)SolidCP.InstallPackages\bin</PackagesBinDir>
+			<PackagesBinDir>$(InstallerProjectRoot)FuseCP.InstallPackages\bin</PackagesBinDir>
 		</PropertyGroup>
 
 		<!-- build install packages -->
-		<MSBuild Projects="$(InstallerProjectRoot)SolidCP.InstallPackages\InstallPackages.proj" Properties="BuildConfiguration=$(BuildConfiguration);Configuration=$(BuildConfiguration);Version=$(Version);FileVersion=$(FileVersion);VersionLabel=$(VersionLabel);ReleaseDate=$(ReleaseDate);Platform=$(Platform)" />
+		<MSBuild Projects="$(InstallerProjectRoot)FuseCP.InstallPackages\InstallPackages.proj" Properties="BuildConfiguration=$(BuildConfiguration);Configuration=$(BuildConfiguration);Version=$(Version);FileVersion=$(FileVersion);VersionLabel=$(VersionLabel);ReleaseDate=$(ReleaseDate);Platform=$(Platform)" />
 
 		<MakeDir Directories="$(DeployPackagesDir)" />
 
@@ -554,8 +554,8 @@
 			<RPMPackages Include="$(DeployPackagesDir)\*.rpm" />
 		</ItemGroup>
 
-		<Copy SourceFiles="@(DebPackages)" DestinationFolder="$(InstallerProjectRoot)SolidCP.InstallPackages\www\debian\pool\main" />
-		<Copy SourceFiles="@(RPMPackages)" DestinationFolder="$(InstallerProjectRoot)SolidCP.InstallPackages\www\fedora\pool\main" />
+		<Copy SourceFiles="@(DebPackages)" DestinationFolder="$(InstallerProjectRoot)FuseCP.InstallPackages\www\debian\pool\main" />
+		<Copy SourceFiles="@(RPMPackages)" DestinationFolder="$(InstallerProjectRoot)FuseCP.InstallPackages\www\fedora\pool\main" />
 
 	</Target>
 
@@ -578,15 +578,15 @@
         <Exec Command='"$(WIX)\bin\heat.exe" dir $(PortalBuild) -o $(WiXInstallerBuild)\ComponentsFiles\PortalFiles.wxs -gg -sreg -srd -var wix.BUILDPPATH -cg PortalFiles -dr PI_PORTAL_INSTALL_DIR' />
         <Exec Command='"$(WIX)\bin\heat.exe" dir $(WebDavPortalBuild) -o $(WiXInstallerBuild)\ComponentsFiles\WebDavPortalFiles.wxs -gg -sreg -srd -var wix.BUILDWDPPATH -cg WebDavPortalFiles -dr PI_WEBDAVPORTAL_INSTALL_DIR' />
 
-		<MSBuild Projects="$(RootFolder)\SolidCP.Installer\Sources\Setup.WIX\Setup.Wix.wixproj" Properties="Configuration=$(BuildConfiguration);DefineSolutionProperties=false">
+		<MSBuild Projects="$(RootFolder)\FuseCP.Installer\Sources\Setup.WIX\Setup.Wix.wixproj" Properties="Configuration=$(BuildConfiguration);DefineSolutionProperties=false">
 			<Output
                 TaskParameter="TargetOutputs"
-                ItemName="SolidCPInstallerMsi" />
+                ItemName="FuseCPInstallerMsi" />
 		</MSBuild>
 
-		<MSBuild Projects="$(RootFolder)\SolidCP.Installer\Sources\SolidCP.SchedulerServiceInstaller\SolidCP.SchedulerServiceInstaller.csproj" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);DefineSolutionProperties=false"/>
+		<MSBuild Projects="$(RootFolder)\FuseCP.Installer\Sources\FuseCP.SchedulerServiceInstaller\FuseCP.SchedulerServiceInstaller.csproj" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);DefineSolutionProperties=false"/>
 
-		<Copy SourceFiles="@(SolidCPInstallerMsi)" DestinationFolder="$(DeployFolder)\%(RecursiveDir)" />
+		<Copy SourceFiles="@(FuseCPInstallerMsi)" DestinationFolder="$(DeployFolder)\%(RecursiveDir)" />
 	</Target>
 
     <Target Name="Build" DependsOnTargets="CreateFixDefaultPublicFolderMailboxBuild">
@@ -594,7 +594,7 @@
 	</Target>
 
 	<Target Name="Test">
-		<Exec Command="dotnet test $(TrunkFolder)\Sources\SolidCP.Test.sln" />
+		<Exec Command="dotnet test $(TrunkFolder)\Sources\FuseCP.Test.sln" />
 	</Target>
 
   <!-- Create full distributives -->
@@ -616,11 +616,11 @@
 		<AWStatsViewerInstall>$(ToolsFolder)\AWStats.Viewer</AWStatsViewerInstall>
 		<CertMakerInstall>$(ToolsFolder)\CertificateMaker</CertMakerInstall>
 		<SCPTransportAgentInstall>$(ToolsFolder)\SCPTransportAgent</SCPTransportAgentInstall>
-		<SolidCP-Configuration-ToolInstall>$(ToolsFolder)\SolidCP-Configuration-Tool</SolidCP-Configuration-ToolInstall>
+		<FuseCP-Configuration-ToolInstall>$(ToolsFolder)\FuseCP-Configuration-Tool</FuseCP-Configuration-ToolInstall>
 		<MSPtoSCPInstall>$(ToolsFolder)\MSPtoSCP</MSPtoSCPInstall>
 		<MailTemplatesInstall>$(ToolsFolder)\MailTemplates</MailTemplatesInstall>
-		<SolidCP-Auto-Upgrade-ToolInstall>$(ToolsFolder)\SolidCP-Auto-Upgrade-Tool</SolidCP-Auto-Upgrade-ToolInstall>
-		<SolidCP-dSHeuristicsInstall>$(ToolsFolder)\SolidCP-dSHeuristics</SolidCP-dSHeuristicsInstall>
+		<FuseCP-Auto-Upgrade-ToolInstall>$(ToolsFolder)\FuseCP-Auto-Upgrade-Tool</FuseCP-Auto-Upgrade-ToolInstall>
+		<FuseCP-dSHeuristicsInstall>$(ToolsFolder)\FuseCP-dSHeuristics</FuseCP-dSHeuristicsInstall>
     <FixDefaultPublicFolderMailboxInstall>$(ToolsFolder)\FixDefaultPublicFolderMailbox</FixDefaultPublicFolderMailboxInstall>
   </PropertyGroup>
 
@@ -641,14 +641,14 @@
 		<RemoveDir Directories="$(ServerInstall)"/>
 		<MakeDir Directories="$(ServerInstall)"/>
 		<Copy SourceFiles="@(ServerDeployFiles)" DestinationFolder="$(ServerInstall)\%(RecursiveDir)" />
-		<XmlUpdate XmlFileName="$(ServerInstall)\web.config" Xpath="//configuration/SolidCP.server/security/password/@value" Value="${installer.server.password}" />
+		<XmlUpdate XmlFileName="$(ServerInstall)\web.config" Xpath="//configuration/FuseCP.server/security/password/@value" Value="${installer.server.password}" />
 	</Target>
 
 	<Target Name="CreateEnterpriseServerInstall" DependsOnTargets="CreateServerInstall">
 		<ItemGroup>
 			<EnterpriseServerDeployFiles Include="$(EnterpriseServerBuild)\**\*.*" Exclude="@(EnterpriseServerDeployExclude)" />
 			<!-- Scheduler is already in EnterpriseServer bin folder 
-			<SchedulerServiceDeployExclude Include="$(SchedulerServiceBuild)\bin\SolidCP.SchedulerService.exe.config" />
+			<SchedulerServiceDeployExclude Include="$(SchedulerServiceBuild)\bin\FuseCP.SchedulerService.exe.config" />
 			<SchedulerServiceDeployFiles Include="$(SchedulerServiceBuild)\**\*.*" Exclude="@(SchedulerServiceDeployExclude)" />-->
 		</ItemGroup>
 		<RemoveDir Directories="$(EnterpriseServerInstall)"/>
@@ -656,7 +656,7 @@
 		<Copy SourceFiles="@(EnterpriseServerDeployFiles)" DestinationFolder="$(EnterpriseServerInstall)\%(RecursiveDir)" />
 		<!--<Copy SourceFiles="@(SchedulerServiceDeployFiles)" DestinationFolder="$(EnterpriseServerInstall)\%(RecursiveDir)\bin" />-->
 		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/connectionStrings/add/@connectionString" Value="${installer.connectionstring}"  />
-		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/appSettings/add[@key=%22SolidCP.CryptoKey%22]/@value" Value="${installer.cryptokey}"  />
+		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/appSettings/add[@key=%22FuseCP.CryptoKey%22]/@value" Value="${installer.cryptokey}"  />
 	</Target>
 
 	<Target Name="CreatePortalInstall" DependsOnTargets="CreateEnterpriseServerInstall">
@@ -765,17 +765,17 @@
     <Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FixDefaultPublicFolderMailboxInstall)" />
   </Target>
 
-  	<Target Name="CreateSolidCP-Configuration-ToolInstall" DependsOnTargets="CreateFixDefaultPublicFolderMailboxInstall">
+  	<Target Name="CreateFuseCP-Configuration-ToolInstall" DependsOnTargets="CreateFixDefaultPublicFolderMailboxInstall">
 		<ItemGroup>
-			<SolidCP-Configuration-ToolFiles Include="$(SolidCP-Configuration-ToolSrc)\*.*" />
+			<FuseCP-Configuration-ToolFiles Include="$(FuseCP-Configuration-ToolSrc)\*.*" />
 		</ItemGroup>
-		<RemoveDir Directories="$(SolidCP-Configuration-ToolInstall)"/>
-		<MakeDir Directories="$(SolidCP-Configuration-ToolInstall)"/>
-		<Copy SourceFiles="@(SolidCP-Configuration-ToolFiles)" DestinationFolder="$(SolidCP-Configuration-ToolInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(SolidCP-Configuration-ToolInstall)" />
+		<RemoveDir Directories="$(FuseCP-Configuration-ToolInstall)"/>
+		<MakeDir Directories="$(FuseCP-Configuration-ToolInstall)"/>
+		<Copy SourceFiles="@(FuseCP-Configuration-ToolFiles)" DestinationFolder="$(FuseCP-Configuration-ToolInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-Configuration-ToolInstall)" />
 	</Target>
 	
-  	<Target Name="MSPtoSCPInstall" DependsOnTargets="CreateSolidCP-Configuration-ToolInstall">
+  	<Target Name="MSPtoSCPInstall" DependsOnTargets="CreateFuseCP-Configuration-ToolInstall">
 		<ItemGroup>
 			<MSPtoSCPFiles Include="$(MSPtoSCPSrc)\*.*" />
 		</ItemGroup>
@@ -795,24 +795,24 @@
 	<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(MailTemplatesInstall)" />
 	</Target>
 	
-  	<Target Name="SolidCP-Auto-Upgrade-ToolInstall" DependsOnTargets="MailTemplatesInstall">
+  	<Target Name="FuseCP-Auto-Upgrade-ToolInstall" DependsOnTargets="MailTemplatesInstall">
 		<ItemGroup>
-			<SolidCP-Auto-Upgrade-ToolFiles Include="$(SolidCP-Auto-Upgrade-ToolSrc)\*.*" />
+			<FuseCP-Auto-Upgrade-ToolFiles Include="$(FuseCP-Auto-Upgrade-ToolSrc)\*.*" />
 		</ItemGroup>
-		<RemoveDir Directories="$(SolidCP-Auto-Upgrade-ToolInstall)"/>
-		<MakeDir Directories="$(SolidCP-Auto-Upgrade-ToolInstall)"/>
-		<Copy SourceFiles="@(SolidCP-Auto-Upgrade-ToolFiles)" DestinationFolder="$(SolidCP-Auto-Upgrade-ToolInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(SolidCP-Auto-Upgrade-ToolInstall)" />
+		<RemoveDir Directories="$(FuseCP-Auto-Upgrade-ToolInstall)"/>
+		<MakeDir Directories="$(FuseCP-Auto-Upgrade-ToolInstall)"/>
+		<Copy SourceFiles="@(FuseCP-Auto-Upgrade-ToolFiles)" DestinationFolder="$(FuseCP-Auto-Upgrade-ToolInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-Auto-Upgrade-ToolInstall)" />
 	</Target>
 	
-  	<Target Name="SolidCP-dSHeuristics" DependsOnTargets="SolidCP-Auto-Upgrade-ToolInstall">
+  	<Target Name="FuseCP-dSHeuristics" DependsOnTargets="FuseCP-Auto-Upgrade-ToolInstall">
 		<ItemGroup>
-			<SolidCP-dSHeuristicsFiles Include="$(SolidCP-dSHeuristicsSrc)\*.*" />
+			<FuseCP-dSHeuristicsFiles Include="$(FuseCP-dSHeuristicsSrc)\*.*" />
 		</ItemGroup>
-		<RemoveDir Directories="$(SolidCP-dSHeuristicsInstall)"/>
-		<MakeDir Directories="$(SolidCP-dSHeuristicsInstall)"/>
-		<Copy SourceFiles="@(SolidCP-dSHeuristicsFiles)" DestinationFolder="$(SolidCP-dSHeuristicsInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(SolidCP-dSHeuristicsInstall)" />
+		<RemoveDir Directories="$(FuseCP-dSHeuristicsInstall)"/>
+		<MakeDir Directories="$(FuseCP-dSHeuristicsInstall)"/>
+		<Copy SourceFiles="@(FuseCP-dSHeuristicsFiles)" DestinationFolder="$(FuseCP-dSHeuristicsInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-dSHeuristicsInstall)" />
 	</Target>
 
 
@@ -825,7 +825,7 @@
 		<WebDavPortalUpdate>$(UpdateFolder)\WebDavPortal</WebDavPortalUpdate>
 	</PropertyGroup>
 
-	<Target Name="PrepareUpdates" DependsOnTargets="SolidCP-dSHeuristics">
+	<Target Name="PrepareUpdates" DependsOnTargets="FuseCP-dSHeuristics">
 		<RemoveDir Directories="$(UpdateFolder)"/>
 		<MakeDir Directories="$(UpdateFolder)"/>
 
@@ -874,7 +874,7 @@
 	</Target>
 	
 	<Target Name="CreateWebDavPortalUpdate" DependsOnTargets="CreatePortalUpdate" >
-		<Exec Command="$(DiffCmd) %22$(PreviousBuildFolder)\WebDavPortal%22 %22$(WebDavPortalInstall)%22  %22$(WebDavPortalUpdate)%22 /ex:web.config,Web.Debug.config,Web.Release.config,SolidCP.WebDavPortal.sln"/>
+		<Exec Command="$(DiffCmd) %22$(PreviousBuildFolder)\WebDavPortal%22 %22$(WebDavPortalInstall)%22  %22$(WebDavPortalUpdate)%22 /ex:web.config,Web.Debug.config,Web.Release.config,FuseCP.WebDavPortal.sln"/>
 	</Target>
 
 	<!-- Create Enterprise Server database and script it -->
@@ -937,9 +937,9 @@
 	<!-- Compile and deploy Setup.dll -->
 	<Target Name="CopySetupDLL" DependsOnTargets="PublishSqlInstallScripts">
         <!-- Restore -->
-        <!--<Exec Command="dotnet restore $(InstallerProjectRoot)\SolidCP.Installer.sln" />-->
+        <!--<Exec Command="dotnet restore $(InstallerProjectRoot)\FuseCP.Installer.sln" />-->
         <!-- Compile Setup.dll -->
-        <!--<MSBuild Projects="$(SetupTrunkFolder)\Sources\SolidCP.Installer.sln"  Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />-->
+        <!--<MSBuild Projects="$(SetupTrunkFolder)\Sources\FuseCP.Installer.sln"  Properties="Configuration=$(BuildConfiguration);Platform=$(Platform);VisualStudioVersion=$(VisualStudioVersion)" />-->
 
 		<!-- Copy Setup.dll -->
 		<MakeDir Directories="$(ServerInstall)\Setup" />
@@ -1054,36 +1054,36 @@
     
 	<Target Name="ZipPortal" DependsOnTargets="ZipSetupDll">
 		<!--
-		<Zip Files="@(PortalInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-Portal-$(Version).zip" WorkingDirectory="$(PortalInstall)" />
-		<Zip Files="@(WebDavPortalInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-Web-Dav-Portal-$(Version).zip" WorkingDirectory="$(WebDavPortalInstall)" />
-		<Zip Files="@(EnterpriseServerInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-EnterpriseServer-$(Version).zip" WorkingDirectory="$(EnterpriseServerInstall)" />
-		<Zip Files="@(ServerInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-Server-$(Version).zip" WorkingDirectory="$(ServerInstall)" />
-		<Zip Files="@(StandaloneInstallFiles)" ZipFileName="$(DeployFolder)\SolidCP-StandaloneServerSetup-$(Version).zip" WorkingDirectory="$(StandaloneInstall)" />
+		<Zip Files="@(PortalInstallFiles)" ZipFileName="$(DeployFolder)\FuseCP-Portal-$(Version).zip" WorkingDirectory="$(PortalInstall)" />
+		<Zip Files="@(WebDavPortalInstallFiles)" ZipFileName="$(DeployFolder)\FuseCP-Web-Dav-Portal-$(Version).zip" WorkingDirectory="$(WebDavPortalInstall)" />
+		<Zip Files="@(EnterpriseServerInstallFiles)" ZipFileName="$(DeployFolder)\FuseCP-EnterpriseServer-$(Version).zip" WorkingDirectory="$(EnterpriseServerInstall)" />
+		<Zip Files="@(ServerInstallFiles)" ZipFileName="$(DeployFolder)\FuseCP-Server-$(Version).zip" WorkingDirectory="$(ServerInstall)" />
+		<Zip Files="@(StandaloneInstallFiles)" ZipFileName="$(DeployFolder)\FuseCP-StandaloneServerSetup-$(Version).zip" WorkingDirectory="$(StandaloneInstall)" />
 		-->
 		<Message Text="Zip Portal" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Portal$(ZipExt)&quot; &quot;$(PortalInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Portal$(ZipExt)&quot; &quot;$(PortalInstall)\*&quot;" />
 	</Target>
 	<Target Name="ZipWebDavPortal" DependsOnTargets="ZipPortal">
 		<Message Text="Zip WebDavPortal" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Web-Dav-Portal$(ZipExt)&quot; &quot;$(WebDavPortalInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Web-Dav-Portal$(ZipExt)&quot; &quot;$(WebDavPortalInstall)\*&quot;" />
 	</Target>
 	<Target Name="ZipEnterpriseServer" DependsOnTargets="ZipWebDavPortal">
 		<Message Text="Zip EnterpriseServer" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-EnterpriseServer$(ZipExt)&quot; &quot;$(EnterpriseServerInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-EnterpriseServer$(ZipExt)&quot; &quot;$(EnterpriseServerInstall)\*&quot;" />
 	</Target>
 	<Target Name="ZipServer" DependsOnTargets="ZipEnterpriseServer">
 		<Message Text="Zip Server" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Server$(ZipExt)&quot; &quot;$(ServerInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Server$(ZipExt)&quot; &quot;$(ServerInstall)\*&quot;" />
 	</Target>
 	<Target Name="ZipStandalone" DependsOnTargets="ZipServer">
 		<Message Text="Zip StandaloneServerSetup" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-StandaloneServerSetup$(ZipExt)&quot; &quot;$(StandaloneInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-StandaloneServerSetup$(ZipExt)&quot; &quot;$(StandaloneInstall)\*&quot;" />
 
 		<ItemGroup>
 			<InstallerMsiFile Include="$(BuildFolder)\*.msi" />
 		</ItemGroup>
 		
-		<Copy SourceFiles="@(InstallerMsiFile)" DestinationFiles="$(DeployFolder)\SolidCP.Installer-$(Version).msi" />
+		<Copy SourceFiles="@(InstallerMsiFile)" DestinationFiles="$(DeployFolder)\FuseCP.Installer-$(Version).msi" />
 	</Target>
 
 	<Target Name="ZipUpdates" DependsOnTargets="ZipStandalone">
@@ -1097,55 +1097,55 @@
 		</ItemGroup>
 
 
-		<Zip Files="@(PortalUpdateFiles)" ZipFileName="$(DeployFolder)\SolidCP-Portal-$(Version)-Update.zip" WorkingDirectory="$(PortalUpdate)" />
-		<Zip Files="@(EnterpriseServerUpdateFiles)" ZipFileName="$(DeployFolder)\SolidCP-EnterpriseServer-$(Version)-Update.zip" WorkingDirectory="$(EnterpriseServerUpdate)" />
-		<Zip Files="@(ServerUpdateFiles)" ZipFileName="$(DeployFolder)\SolidCP-Server-$(Version)-Update.zip" WorkingDirectory="$(ServerUpdate)" />
+		<Zip Files="@(PortalUpdateFiles)" ZipFileName="$(DeployFolder)\FuseCP-Portal-$(Version)-Update.zip" WorkingDirectory="$(PortalUpdate)" />
+		<Zip Files="@(EnterpriseServerUpdateFiles)" ZipFileName="$(DeployFolder)\FuseCP-EnterpriseServer-$(Version)-Update.zip" WorkingDirectory="$(EnterpriseServerUpdate)" />
+		<Zip Files="@(ServerUpdateFiles)" ZipFileName="$(DeployFolder)\FuseCP-Server-$(Version)-Update.zip" WorkingDirectory="$(ServerUpdate)" />
 		<Zip Files="@(ManualUpdateFiles)" ZipFileName="$(DeployFolder)\Manual-Update.zip" WorkingDirectory="$(UpdateFolder)" />
-		<Zip Files="@(InstallerUpdateFiles)" ZipFileName="$(DeployFolder)\SolidCP-Installer-$(Version)-Update.zip" WorkingDirectory="$(InstallerBuild)" />
+		<Zip Files="@(InstallerUpdateFiles)" ZipFileName="$(DeployFolder)\FuseCP-Installer-$(Version)-Update.zip" WorkingDirectory="$(InstallerBuild)" />
 		-->
 		<Message Text="Zip Updates" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Portal-Update$(ZipExt)&quot; &quot;$(PortalUpdate)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-WebDavPortal-Update$(ZipExt)&quot; &quot;$(WebDavPortalUpdate)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-EnterpriseServer-Update$(ZipExt)&quot; &quot;$(EnterpriseServerUpdate)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Server-Update$(ZipExt)&quot; &quot;$(ServerUpdate)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Manual-Update$(ZipExt)&quot; &quot;$(UpdateFolder)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Portal-Update$(ZipExt)&quot; &quot;$(PortalUpdate)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-WebDavPortal-Update$(ZipExt)&quot; &quot;$(WebDavPortalUpdate)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-EnterpriseServer-Update$(ZipExt)&quot; &quot;$(EnterpriseServerUpdate)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Server-Update$(ZipExt)&quot; &quot;$(ServerUpdate)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Manual-Update$(ZipExt)&quot; &quot;$(UpdateFolder)\*&quot;" />
 	</Target>
 
 	<Target Name="ZipInstaller" DependsOnTargets="ZipUpdates">
 		<Message Text="Zip Installer" Importance="high" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\SolidCP-Installer.zip&quot; &quot;$(InstallerBuild)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(DeployFolder)\FuseCP-Installer.zip&quot; &quot;$(InstallerBuild)\*&quot;" />
 
 		<!-- zip tools
-		<Zip Files="@(ImportCsvInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-Import-CsvBulk-$(Version).zip" WorkingDirectory="$(ImportCsvInstall)" />
-		<Zip Files="@(HyperVUtilsInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-HyperVUtils-$(Version).zip" WorkingDirectory="$(HyperVUtilsInstall)" />
-		<Zip Files="@(VMConfigInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-VMConfig-$(Version).zip" WorkingDirectory="$(VMConfigInstall)" />
-		<Zip Files="@(ImportEnterpriseInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-Import-Enterprise-$(Version).zip" WorkingDirectory="$(ImportEnterpriseInstall)" />
-		<Zip Files="@(AWStatsViewerInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-AWStatsViewer-$(Version).zip" WorkingDirectory="$(AWStatsViewerInstall)" />
-		<Zip Files="@(SCPTransportAgentInstallFiles)" ZipFileName="$(ToolsFolder)\SolidCP-SCPTransportAgent-$(Version).zip" WorkingDirectory="$(SCPTransportAgentInstall)" />
+		<Zip Files="@(ImportCsvInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-Import-CsvBulk-$(Version).zip" WorkingDirectory="$(ImportCsvInstall)" />
+		<Zip Files="@(HyperVUtilsInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-HyperVUtils-$(Version).zip" WorkingDirectory="$(HyperVUtilsInstall)" />
+		<Zip Files="@(VMConfigInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-VMConfig-$(Version).zip" WorkingDirectory="$(VMConfigInstall)" />
+		<Zip Files="@(ImportEnterpriseInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-Import-Enterprise-$(Version).zip" WorkingDirectory="$(ImportEnterpriseInstall)" />
+		<Zip Files="@(AWStatsViewerInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-AWStatsViewer-$(Version).zip" WorkingDirectory="$(AWStatsViewerInstall)" />
+		<Zip Files="@(SCPTransportAgentInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-SCPTransportAgent-$(Version).zip" WorkingDirectory="$(SCPTransportAgentInstall)" />
 		-->
 	</Target>
 
 	<Target Name="ZipTools" DependsOnTargets="ZipInstaller">
 		<Message Text="Zip Tools" Importance="high" />
-        <Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-Import-CsvBulk$(ZipExt)&quot; &quot;$(ImportCsvInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-HyperVUtils$(ZipExt)&quot; &quot;$(HyperVUtilsInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-VMConfig$(ZipExt)&quot; &quot;$(VMConfigInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-Import-Enterprise$(ZipExt)&quot; &quot;$(ImportEnterpriseInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-AWStatsViewer$(ZipExt)&quot; &quot;$(AWStatsViewerInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-SCPTransportAgent$(ZipExt)&quot; &quot;$(SCPTransportAgentInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-FixDefaultPublicFolderMailbox$(ZipExt)&quot; &quot;$(FixDefaultPublicFolderMailboxInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-Configuration-Tool$(ZipExt)&quot; &quot;$(SolidCP-Configuration-ToolInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-CertificateMaker$(ZipExt)&quot; &quot;$(CertMakerInstall)\*&quot;" />
+        <Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Import-CsvBulk$(ZipExt)&quot; &quot;$(ImportCsvInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-HyperVUtils$(ZipExt)&quot; &quot;$(HyperVUtilsInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-VMConfig$(ZipExt)&quot; &quot;$(VMConfigInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Import-Enterprise$(ZipExt)&quot; &quot;$(ImportEnterpriseInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-AWStatsViewer$(ZipExt)&quot; &quot;$(AWStatsViewerInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-SCPTransportAgent$(ZipExt)&quot; &quot;$(SCPTransportAgentInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-FixDefaultPublicFolderMailbox$(ZipExt)&quot; &quot;$(FixDefaultPublicFolderMailboxInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Configuration-Tool$(ZipExt)&quot; &quot;$(FuseCP-Configuration-ToolInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-CertificateMaker$(ZipExt)&quot; &quot;$(CertMakerInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\MSPtoSCP$(ZipExt)&quot; &quot;$(MSPtoSCPInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\MailTemplates$(ZipExt)&quot; &quot;$(MailTemplatesInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-Auto-Upgrade-Tool$(ZipExt)&quot; &quot;$(SolidCP-Auto-Upgrade-ToolInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\SolidCP-dSHeuristics$(ZipExt)&quot; &quot;$(SolidCP-dSHeuristicsInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Auto-Upgrade-Tool$(ZipExt)&quot; &quot;$(FuseCP-Auto-Upgrade-ToolInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-dSHeuristics$(ZipExt)&quot; &quot;$(FuseCP-dSHeuristicsInstall)\*&quot;" />
   </Target>
 
   <Target Name="Deploy" DependsOnTargets="CreateInstallPackages" />
 	
   <Target Name="uploadwebpi" DependsOnTargets="BuildWebPlatformInstallerFeed">
-		  <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCPFeed-$(Version).xml" LocalFile="$(DeployFolder)\SolidCPFeed.xml" />
+		  <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCPFeed-$(Version).xml" LocalFile="$(DeployFolder)\FuseCPFeed.xml" />
   </Target>
 
   <!-- This task depends on FTP upload task and will be run afterwards -->
@@ -1192,7 +1192,7 @@
         <ReplacementValue>$(Version)</ReplacementValue>
       </Tokens>
       <Tokens Include="ProductTitle">
-        <ReplacementValue>SolidCP $(Version)</ReplacementValue>
+        <ReplacementValue>FuseCP $(Version)</ReplacementValue>
       </Tokens>
       <Tokens Include="ReleaseDate">
         <ReplacementValue>$(ReleaseDate)T00:00:00Z</ReplacementValue>
@@ -1207,7 +1207,7 @@
         <ReplacementValue>$(InstallerRemoteUri)</ReplacementValue>
       </Tokens>
     </ItemGroup>
-    <TemplateFile Template="$(TrunkFolder)\SolidCPFeedTemplate.xml" OutputFilename="$(DeployFolder)\SolidCPFeed.xml" Tokens="@(Tokens)" />
+    <TemplateFile Template="$(TrunkFolder)\FuseCPFeedTemplate.xml" OutputFilename="$(DeployFolder)\FuseCPFeed.xml" Tokens="@(Tokens)" />
   </Target>
 
   <Target Name="upload-sp-update">
@@ -1215,28 +1215,28 @@
   </Target>
 
   <Target Name="uploadtoftp">
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Portal$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-Portal$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Web-Dav-Portal$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-Web-Dav-Portal$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-EnterpriseServer$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-EnterpriseServer$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Server$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-Server$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-StandaloneServerSetup$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-StandaloneServerSetup$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Portal-Update$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-Portal-Update$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-EnterpriseServer-Update$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-EnterpriseServer-Update$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Server-Update$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-Server-Update$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Installer-Update$(ZipExt)" LocalFile="$(DeployFolder)\SolidCP-Installer-Update$(ZipExt)" />
-    <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Installer-Unix-$(Version).zip" LocalFile="$(DeployFolder)\SolidCP-Installer-Unix-$(Version).zip" />
-    <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Import-CsvBulk$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-Import-CsvBulk$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-Import-Enterprise$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-Import-Enterprise$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-CertificateMaker$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-CertificateMaker$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-AWStatsViewer$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-AWStatsViewer$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-SCPTransportAgent$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-SCPTransportAgent$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP.LocalizationToolkit.msi" LocalFile="$(ToolsFolder)\SolidCP.LocalizationToolkit.msi" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP.Installer-$(Version).msi" LocalFile="$(DeployFolder)\SolidCP.Installer-$(Version).msi" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCPInstaller.exe" LocalFile="$(DeployFolder)\SolidCP.Installer.exe" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-HyperVUtils$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-HyperVUtils$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-VMConfig$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-VMConfig$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Portal$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-Portal$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Web-Dav-Portal$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-Web-Dav-Portal$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-EnterpriseServer$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-EnterpriseServer$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Server$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-Server$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-StandaloneServerSetup$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-StandaloneServerSetup$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Portal-Update$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-Portal-Update$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-EnterpriseServer-Update$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-EnterpriseServer-Update$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Server-Update$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-Server-Update$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Installer-Update$(ZipExt)" LocalFile="$(DeployFolder)\FuseCP-Installer-Update$(ZipExt)" />
+    <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Installer-Unix-$(Version).zip" LocalFile="$(DeployFolder)\FuseCP-Installer-Unix-$(Version).zip" />
+    <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Import-CsvBulk$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-Import-CsvBulk$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Import-Enterprise$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-Import-Enterprise$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-CertificateMaker$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-CertificateMaker$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-AWStatsViewer$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-AWStatsViewer$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-SCPTransportAgent$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-SCPTransportAgent$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP.LocalizationToolkit.msi" LocalFile="$(ToolsFolder)\FuseCP.LocalizationToolkit.msi" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP.Installer-$(Version).msi" LocalFile="$(DeployFolder)\FuseCP.Installer-$(Version).msi" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCPInstaller.exe" LocalFile="$(DeployFolder)\FuseCP.Installer.exe" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-HyperVUtils$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-HyperVUtils$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-VMConfig$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-VMConfig$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/Manual-Update$(ZipExt)" LocalFile="$(DeployFolder)\Manual-Update$(ZipExt)" />
-    <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/SolidCP-FixDefaultPublicFolderMailbox$(ZipExt)" LocalFile="$(ToolsFolder)\SolidCP-FixDefaultPublicFolderMailbox$(ZipExt)" />
+    <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-FixDefaultPublicFolderMailbox$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-FixDefaultPublicFolderMailbox$(ZipExt)" />
     <FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/Setup2.dll$(ZipExt)" LocalFile="$(DeployFolder)\Setup2.dll$(ZipExt)" />
   </Target>
 

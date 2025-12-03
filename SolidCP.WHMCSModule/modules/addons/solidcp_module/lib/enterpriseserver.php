@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,21 +32,21 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP Enterprise Server Client
- * For the SolidCP system only - Only tested against the SolidCP system
+ * FuseCP Enterprise Server Client
+ * For the FuseCP system only - Only tested against the FuseCP system
  * 
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  * @final
  */
-final class SolidCP_EnterpriseServer
+final class FuseCP_EnterpriseServer
 {
 	/**
-     * SolidCP user account statuses / states
+     * FuseCP user account statuses / states
      *
      * @access public
      * @var string
@@ -57,7 +57,7 @@ final class SolidCP_EnterpriseServer
     const USERSTATUS_PENDING = 'Pending';
     
     /**
-     * SolidCP usage calculation types
+     * FuseCP usage calculation types
      *
      * @access public
      * @var int
@@ -188,7 +188,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "DeleteUser" method
 	 * 
 	 * @access public
-	 * @param int $userId User's SolidCP userId
+	 * @param int $userId User's FuseCP userId
 	 * @throws Exception
 	 * @return int
 	 */
@@ -208,7 +208,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "GetUserByUsername" method
 	 * 
 	 * @access public
-	 * @param string $username SolidCP username
+	 * @param string $username FuseCP username
 	 * @throws Exception
 	 * @return array
 	 */
@@ -228,7 +228,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "ChangeUserStatus" method
 	 * 
 	 * @access public
-	 * @param int $userId User's SolidCP userId
+	 * @param int $userId User's FuseCP userId
 	 * @param string $status Account status (Active, Suspended, Cancelled, Pending)
 	 * @throws Exception
 	 * @return int
@@ -249,7 +249,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "ChangeUserPassword" method
 	 * 
 	 * @access public
-	 * @param int $userId User's SolidCP userId
+	 * @param int $userId User's FuseCP userId
 	 * @param string $password User's new password
 	 * @throws Exception
 	 * @return int
@@ -270,7 +270,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "GetMyPackages" method
 	 * 
 	 * @access public
-	 * @param int $userId User's SolidCP userId
+	 * @param int $userId User's FuseCP userId
 	 * @throws Exception
 	 * @return array
 	 */
@@ -290,7 +290,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "GetPackageAddons" method
 	 * 
 	 * @access public
-	 * @param int $packageId User's SolidCP packageId
+	 * @param int $packageId User's FuseCP packageId
 	 * @throws Exception
 	 * @return array
 	 */
@@ -310,7 +310,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "DeletePackageAddon" method
 	 * 
 	 * @access public
-	 * @param int $packageAddonId User's SolidCP packageAddonId
+	 * @param int $packageAddonId User's FuseCP packageAddonId
 	 * @throws Exception
 	 * @return int
 	 */
@@ -330,7 +330,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "GetUsersPagedRecursive" method
 	 * 
 	 * @access public
-	 * @param unknown $userId Users's SolidCP userId
+	 * @param unknown $userId Users's FuseCP userId
 	 * @param unknown $filterColumn Column value to filter against
 	 * @param unknown $filterValue Filter value
 	 * @param unknown $statusId Users's account status id
@@ -358,9 +358,9 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "UpdatePackageLiteral" method
 	 * 
 	 * @access public
-	 * @param int $packageId Package's SolidCP packageId
+	 * @param int $packageId Package's FuseCP packageId
 	 * @param int $statusId Package's status id
-	 * @param int $planId Package's SolidCP planid
+	 * @param int $planId Package's FuseCP planid
 	 * @param string $purchaseDate Package's purchase date
 	 * @param string $packageName Package's name
 	 * @param string $packageComments Package's comments
@@ -383,8 +383,8 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "AddPackageAddonById" method
 	 * 
 	 * @access public
-	 * @param unknown $packageId SolidCP package Id
-	 * @param unknown $addonPlanId SolidCP addon id
+	 * @param unknown $packageId FuseCP package Id
+	 * @param unknown $addonPlanId FuseCP addon id
 	 * @param number $quantity Number of addons to add :)
 	 * @throws Exception
 	 * @return array
@@ -405,7 +405,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "GetPackageBandwidth" method
 	 * 
 	 * @access public
-	 * @param unknown $packageId SolidCP package id
+	 * @param unknown $packageId FuseCP package id
 	 * @param unknown $startDate Calculation start date
 	 * @param unknown $endDate Calculation end date
 	 * @throws Exception
@@ -428,7 +428,7 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "GetPackageDiskspace" method
 	 *
 	 * @access public
-	 * @param unknown $packageId SolidCP package id
+	 * @param unknown $packageId FuseCP package id
 	 * @throws Exception
 	 * @return object
 	 */
@@ -449,9 +449,9 @@ final class SolidCP_EnterpriseServer
 	 * Executes the "AllocatePackageIPAddresses" method
 	 * 
 	 * @access public
-	 * @param int $packageId SolidCP package id
-	 * @param string $groupName SolidCP IP address group name
-	 * @param string $pool SolidCP IP address pool
+	 * @param int $packageId FuseCP package id
+	 * @param string $groupName FuseCP IP address group name
+	 * @param string $pool FuseCP IP address pool
 	 * @param int $addressesNumber Number of IP addresses to allocate
 	 * @param string $allocateRandom Allocate randomly
 	 * @throws Exception
@@ -470,10 +470,10 @@ final class SolidCP_EnterpriseServer
 	}
 	
 	/**
-	 * Converts the SolidCP error code to a friendly human-readable message
+	 * Converts the FuseCP error code to a friendly human-readable message
 	 * 
 	 * @access public
-	 * @param int $code SolidCP error code
+	 * @param int $code FuseCP error code
 	 * @return  string
 	 */
 	public static function getFriendlyError($code)
@@ -497,7 +497,7 @@ final class SolidCP_EnterpriseServer
 		}
 		else
 		{
-			return "An unknown error occured (Code: {$code}). Please reference SolidCP BusinessErrorCodes for further information";
+			return "An unknown error occured (Code: {$code}). Please reference FuseCP BusinessErrorCodes for further information";
 		}
 	}
 	
@@ -531,13 +531,13 @@ final class SolidCP_EnterpriseServer
 				$pwd = str_replace("&", "&amp;", $pwd);
 				$pwd = str_replace("<", "&lt;", $pwd);
 				$pwd = str_replace(">", "&gt;", $pwd);
-				$auth = "<Credentials xmlns=\"http://solidcp/headers/Credentials\"><Password xmlns=\"http://hostpanelpro/credentials\">$pwd</Password><Username xmlns=\"http://hostpanelpro/credentials\">$this->_username</Username></Credentials>";
+				$auth = "<Credentials xmlns=\"http://fusecp/headers/Credentials\"><Password xmlns=\"http://hostpanelpro/credentials\">$pwd</Password><Username xmlns=\"http://hostpanelpro/credentials\">$this->_username</Username></Credentials>";
 				$auth_block = new SoapVar( $auth, XSD_ANYXML, NULL, NULL, NULL, NULL );
-				$soapHeader = new SoapHeader('http://solidcp/headers/Credentials', 'Credentials', $auth_block);
+				$soapHeader = new SoapHeader('http://fusecp/headers/Credentials', 'Credentials', $auth_block);
 				$client -> __setSoapHeaders($soapHeader);
 			}
 		} catch (SoapFault $ex) {
-			// Old version of SolidCP
+			// Old version of FuseCP
 			$host = (($this->_secured) ? 'https' : 'http') . "://{$this->_host}:{$this->_port}/{$service}.asmx?WSDL";
 			// Create the SoapClient
 			$client = new SoapClient($host, array('login' => $this->_username, 'password' => $this->_password, 'compression' => (($this->_compression) ? (SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP) : ''), 'keep_alive' => false, 'cache_wsdl' => ($this->_caching) ? 1 : 0));

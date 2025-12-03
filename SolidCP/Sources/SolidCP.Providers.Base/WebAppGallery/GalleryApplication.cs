@@ -36,7 +36,7 @@ using System.Collections.Generic;
 using System.Xml.Schema;
 using System.Runtime.Serialization;
 
-namespace SolidCP.Providers.WebAppGallery
+namespace FuseCP.Providers.WebAppGallery
 {
     [Flags]
     public enum GalleryApplicationWellKnownDependency

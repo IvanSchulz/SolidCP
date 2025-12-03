@@ -1,5 +1,5 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
-// Copyright (c) 2023, SolidCP
+// Copyright (c) 2023, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -32,42 +32,42 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /**
- * SolidCP WHMCS SolidCP / WHMCS Hooks
+ * FuseCP WHMCS FuseCP / WHMCS Hooks
  *
- * @author SolidCP
- * @link https://solidcp.com/
+ * @author FuseCP
+ * @link https://fusecp.com/
  * @access public
- * @name SolidCP
+ * @name FuseCP
  * @version 1.1.4
  * @package WHMCS
  */
 
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/enterpriseserver.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/var_definition.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/database.php');
-require_once (ROOTDIR. '/modules/addons/solidcp_module/lib/settings.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/enterpriseserver.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/var_definition.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/database.php');
+require_once (ROOTDIR. '/modules/addons/fusecp_module/lib/settings.php');
 
 /**
- * Handles updating SolidCP account details when a client or administrator updates a client's details
+ * Handles updating FuseCP account details when a client or administrator updates a client's details
  * 
  * @access public
  * @param array $params WHMCS parameters
  * @throws Exception
  */
-function solidcp_module_ClientEdit($params)
+function fusecp_module_ClientEdit($params)
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return false;
-    if($solidcp_settings->settings['NeedMigration'] == 1) return false;
-    if($solidcp_settings->settings['SyncActive'] != 1) return false;
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return false;
+    if($fusecp_settings->settings['NeedMigration'] == 1) return false;
+    if($fusecp_settings->settings['SyncActive'] != 1) return false;
 
     // WHMCS server parameters & package parameters
     $userid = $params['userid'];
     $serviceid = 0;
     
-    // Query for the users SolidCP accounts - If they do not have any, just ignore the request
-    $scpaccounts = solidcp_database::getUserSCPAccounts($userid);
+    // Query for the users FuseCP accounts - If they do not have any, just ignore the request
+    $scpaccounts = fusecp_database::getUserSCPAccounts($userid);
     if(is_array($scpaccounts) && $scpaccounts['status']=='error'){
         throw new Exception($scpaccounts['description']);
     }
@@ -85,10 +85,10 @@ function solidcp_module_ClientEdit($params)
 
             try
             {
-                // Create the SolidCP Enterprise Server Client object instance
-                $scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+                // Create the FuseCP Enterprise Server Client object instance
+                $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 
-                // Get the user's details from SolidCP - We need the username
+                // Get the user's details from FuseCP - We need the username
                 $user = $scp->getUserByUsername($username);
                 if (empty($user))
                 {
@@ -135,12 +135,12 @@ function solidcp_module_ClientEdit($params)
                 $scp->updateUserDetails($userParams);
 
                 // Add log entry to client log
-                logactivity("SolidCP Sync - Account {$username} contact details updated successfully", $userid);
+                logactivity("FuseCP Sync - Account {$username} contact details updated successfully", $userid);
             }
             catch (Exception $e)
             {
                 // Error message to log / return
-                $errorMessage = "solidcp_module_ClientEdit Fault: (Code: {$e->getCode()}, Message: {$e->getMessage()}, Service ID: {$serviceid})";
+                $errorMessage = "fusecp_module_ClientEdit Fault: (Code: {$e->getCode()}, Message: {$e->getMessage()}, Service ID: {$serviceid})";
 
                 // Log to WHMCS
                 logactivity($errorMessage, $userid);
@@ -150,19 +150,19 @@ function solidcp_module_ClientEdit($params)
 }
 
 /**
- * Handles activating and adding client addons to SolidCP
+ * Handles activating and adding client addons to FuseCP
  * 
  * @access public
  * @param array $params WHMCS parameters
  * @throws Exception
  */
-function solidcp_module_AddonActivation($params)
+function fusecp_module_AddonActivation($params)
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return false;
-    if($solidcp_settings->settings['NeedMigration'] == 1) return false;
-    if($solidcp_settings->settings['AddonsActive'] != 1) return false;
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return false;
+    if($fusecp_settings->settings['NeedMigration'] == 1) return false;
+    if($fusecp_settings->settings['AddonsActive'] != 1) return false;
 
     // WHMCS server parameters & package parameters
     $userid = $params['userid'];
@@ -171,7 +171,7 @@ function solidcp_module_AddonActivation($params)
 
     try
     {
-        $scpaccount = solidcp_database::getAddonActivationSCPAccount($serviceid, $addonid);
+        $scpaccount = fusecp_database::getAddonActivationSCPAccount($serviceid, $addonid);
         if(is_array($scpaccount) && $scpaccount['status']=='error'){
             throw new Exception($scpaccount['description']);
         }
@@ -185,22 +185,22 @@ function solidcp_module_AddonActivation($params)
             $serverHost = empty($scpaccount->serverhostname) ? $scpaccount->serverip : $scpaccount->serverhostname;
             $serverSecure = $scpaccount->serversecure == 'on' ? TRUE : FALSE;
         
-            // Create the SolidCP Enterprise Server Client object instance
-            $scp = new SolidCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+            // Create the FuseCP Enterprise Server Client object instance
+            $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
         
-            // Get the user's details from SolidCP - We need the userid
+            // Get the user's details from FuseCP - We need the userid
             $user = $scp->getUserByUsername($username);
             if (empty($user))
             {
                 throw new Exception("User {$username} does not exist - Cannot allocate addon for unknown user");
             }
             
-            // Get the user's package details from SolidCP - We need the PackageId
+            // Get the user's package details from FuseCP - We need the PackageId
             $package = $scp->getUserPackages($user['UserId']);
             $packageId = $package['PackageId'];
             
-            // Get the associated SolidCP addon id
-            $addon = solidcp_database::getSCPAddon($addonid);
+            // Get the associated FuseCP addon id
+            $addon = fusecp_database::getSCPAddon($addonid);
             if(is_array($addon) && $addon['status']=='error'){
                 throw new Exception($addon['description']);
             }
@@ -208,7 +208,7 @@ function solidcp_module_AddonActivation($params)
                 throw new Exception("WHMCS AddonID {$addonid} doesn't exists in".SOLIDCP_ADDONS_TABLE);
             }
             
-            // Add the Addon Plan to the customer's SolidCP package / hosting space
+            // Add the Addon Plan to the customer's FuseCP package / hosting space
             $results = $scp->addPackageAddonById($packageId, $addon->scp_id);
             
             // Check the results to verify that the addon has been successfully allocated
@@ -221,7 +221,7 @@ function solidcp_module_AddonActivation($params)
                 }
                 
                 // Add log entry to client log
-                logactivity("SolidCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonid}", $userid);
+                logactivity("FuseCP Addon - Account {$username} addon successfully completed - Addon ID: {$addonid}", $userid);
             }
             else
             {
@@ -233,7 +233,7 @@ function solidcp_module_AddonActivation($params)
     catch (Exception $e)
     {
         // Error message to log / return
-        $errorMessage = "solidcp_addons_AddonActivation Fault: (Code: {$e->getCode()}, Message: {$e->getMessage()}, Service ID: {$serviceid})";
+        $errorMessage = "fusecp_addons_AddonActivation Fault: (Code: {$e->getCode()}, Message: {$e->getMessage()}, Service ID: {$serviceid})";
 
         // Log to WHMCS
         logactivity($errorMessage, $userid);
@@ -241,7 +241,7 @@ function solidcp_module_AddonActivation($params)
 }
 
 /**
- * Handles deleting addons to SolidCP from Admin area
+ * Handles deleting addons to FuseCP from Admin area
  * 
  * @access public
  * @param array $params WHMCS parameters
@@ -250,31 +250,31 @@ function solidcp_module_AddonActivation($params)
 /*  FIX ME!!!!!!
  * This code is executed, before the values are saved to the WHMCS DB. Therefore "modulechangepackage" doesn't work.
  * 
-function solidcp_module_AddonDeleted($params)
+function fusecp_module_AddonDeleted($params)
 {
-    $solidcp_settings = new solidcp_settings;
-    $solidcp_settings->getSettings();
-    if($solidcp_settings->settings['NeedFirstConfiguration'] == 1) return false;
-    if($solidcp_settings->settings['NeedMigration'] == 1) return false;
-    if($solidcp_settings->settings['AddonsActive'] != 1) return false;
+    $fusecp_settings = new fusecp_settings;
+    $fusecp_settings->getSettings();
+    if($fusecp_settings->settings['NeedFirstConfiguration'] == 1) return false;
+    if($fusecp_settings->settings['NeedMigration'] == 1) return false;
+    if($fusecp_settings->settings['AddonsActive'] != 1) return false;
 
     $id = $params['id'];
-    $result = full_query("SELECT h.id AS serviceid FROM `tblhostingaddons` AS a, `tblhosting` AS h, `tblservers` AS s, `tblproducts` AS p WHERE a.id = {$id} AND h.id = a.hostingid AND h.packageid = p.id AND h.server = s.id AND s.type = 'SolidCP' AND h.domainstatus IN ('Active', 'Suspended')");
+    $result = full_query("SELECT h.id AS serviceid FROM `tblhostingaddons` AS a, `tblhosting` AS h, `tblservers` AS s, `tblproducts` AS p WHERE a.id = {$id} AND h.id = a.hostingid AND h.packageid = p.id AND h.server = s.id AND s.type = 'FuseCP' AND h.domainstatus IN ('Active', 'Suspended')");
     if (mysql_num_rows($result) > 0)
     {
-        $adminuser = $solidcp_settings->settings['WhmcsAdmin'];
+        $adminuser = $fusecp_settings->settings['WhmcsAdmin'];
         $row = mysql_fetch_assoc($result);
         $values["serviceid"]  = $row['serviceid'];
         $command = "modulechangepackage";
         $results = localAPI($command,$values,$adminuser);
-        if($results['result'] == 'success') logactivity("SolidCP Addon - Addon ID: {$id} successfully deleted.");
-        elseif($results['result'] == 'error') logactivity("SolidCP Addon - Addon ID: {$id} couldn't be deleted. Error: {$results['message']}");
+        if($results['result'] == 'success') logactivity("FuseCP Addon - Addon ID: {$id} successfully deleted.");
+        elseif($results['result'] == 'error') logactivity("FuseCP Addon - Addon ID: {$id} couldn't be deleted. Error: {$results['message']}");
     }
 }*/
 
-/* Update Client Contact Details - SolidCP */
-add_hook('ClientEdit', 1, 'solidcp_module_ClientEdit');
-/* Addon Activation/Deleting - SolidCP */
-add_hook('AddonActivation', 1, 'solidcp_module_AddonActivation');
-add_hook('AddonAdd', 1, 'solidcp_module_AddonActivation');
-//add_hook('AddonDeleted', 1, 'solidcp_module_AddonDeleted');
+/* Update Client Contact Details - FuseCP */
+add_hook('ClientEdit', 1, 'fusecp_module_ClientEdit');
+/* Addon Activation/Deleting - FuseCP */
+add_hook('AddonActivation', 1, 'fusecp_module_AddonActivation');
+add_hook('AddonAdd', 1, 'fusecp_module_AddonActivation');
+//add_hook('AddonDeleted', 1, 'fusecp_module_AddonDeleted');

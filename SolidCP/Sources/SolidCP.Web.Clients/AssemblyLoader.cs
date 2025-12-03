@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -18,9 +18,9 @@ using System.Configuration.Assemblies;
 using System.Configuration;
 #endif
 
-using SolidCP.Providers.OS;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Web.Clients
+namespace FuseCP.Web.Clients
 {
     public class AssemblyLoader
     {
@@ -34,7 +34,7 @@ namespace SolidCP.Web.Clients
             {
                 if (shadowCopyFolder == null)
                 {
-                    shadowCopyFolder = Path.Combine(Path.GetTempPath(), "SolidCPShadowCopies");
+                    shadowCopyFolder = Path.Combine(Path.GetTempPath(), "FuseCPShadowCopies");
                     if (!Directory.Exists(shadowCopyFolder)) Directory.CreateDirectory(shadowCopyFolder);
                 }
                 return shadowCopyFolder;
@@ -183,11 +183,11 @@ namespace SolidCP.Web.Clients
                 {
                     if (loadEnterpriseServer)
                     {
-                        var eserver = Assembly.Load("SolidCP.EnterpriseServer");
+                        var eserver = Assembly.Load("FuseCP.EnterpriseServer");
                         if (eserver != null)
                         {
                             // init password validator
-                            var validatorType = eserver.GetType("SolidCP.EnterpriseServer.UsernamePasswordValidator");
+                            var validatorType = eserver.GetType("FuseCP.EnterpriseServer.UsernamePasswordValidator");
                             var init = validatorType.GetMethod("Init", BindingFlags.Public | BindingFlags.Static);
                             init.Invoke(null, new object[0]);
                         }
@@ -197,10 +197,10 @@ namespace SolidCP.Web.Clients
 
                 try
                 {
-                    var server = Assembly.Load("SolidCP.Server");
+                    var server = Assembly.Load("FuseCP.Server");
                     if (server != null)
                     {
-                        var validatorType = server.GetType("SolidCP.Server.PasswordValidator");
+                        var validatorType = server.GetType("FuseCP.Server.PasswordValidator");
                         var init = validatorType.GetMethod("Init", BindingFlags.Public | BindingFlags.Static);
                         init.Invoke(null, new object[0]);
                     }
@@ -219,8 +219,8 @@ namespace SolidCP.Web.Clients
         static void StartWebServices()
         {
 #if NETFRAMEWORK
-			var assembly = Assembly.Load("SolidCP.Web.Services");
-			var StartupNetFX = assembly?.GetType("SolidCP.Web.Services.StartupNetFX");
+			var assembly = Assembly.Load("FuseCP.Web.Services");
+			var StartupNetFX = assembly?.GetType("FuseCP.Web.Services.StartupNetFX");
 			var method = StartupNetFX?.GetMethod("Start", BindingFlags.Public | BindingFlags.Static);
 			method?.Invoke(null, new object[0]);
 #else

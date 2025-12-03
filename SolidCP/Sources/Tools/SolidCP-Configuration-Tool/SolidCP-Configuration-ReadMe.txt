@@ -1,8 +1,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SolidCP Readme - SolidCP-Configuration.ps1
+FuseCP Readme - FuseCP-Configuration.ps1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The SolidCP Configuration script has been designed to speed 
+The FuseCP Configuration script has been designed to speed 
 up the installation process as well as automate as much as 
 possible to ensure mistakes are not made when initially 
 setting up your environment or adding new servers to it.
@@ -18,9 +18,9 @@ Assumptions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We have presumed that you will be using the script to setup 
-a new SolidCP deployment on new machines that are NOT in 
+a new FuseCP deployment on new machines that are NOT in 
 production, but it can be used to add additional machines 
-to your SolidCP deployment.
+to your FuseCP deployment.
 Networking is configured on the machine and you are able to 
 get on the internet.
 ALL Windows Updates need to be done BEFORE running the 
@@ -58,7 +58,7 @@ Domain Controllers
 
 If you are planning on running Enterprise Services (such as 
 Exchange or SharePoint) you will need to have Domain 
-Controllers setup and configured for your SolidCP deployment.
+Controllers setup and configured for your FuseCP deployment.
 
 If you plan on adding Enterprise Services at a later date we 
 would recommend setting up your Domain Controllers now as 
@@ -80,7 +80,7 @@ the script, if you are no the script will point this out to
 you and not let you continue.
 
 To run the script simply right click on the 
-SolidCP-Configuration.ps1 and choose "Run with PowerShell"
+FuseCP-Configuration.ps1 and choose "Run with PowerShell"
 The script will do some checks to ensure you are logged in 
 with sufficient permissions and then present a menu to you.
 Simply select the option from the menu that you wish the 
@@ -105,7 +105,7 @@ possible.
 The script will also produce a small debug section which we 
 may ask you to email into us so we can fix the issue or let 
 you know what you have done wrong.
-Issues should be emailed into support@solidcp.com so our 
+Issues should be emailed into support@fusecp.com so our 
 developers can troubleshoot this, we would also ask for your 
 contact details so that we can contact you for any additional 
 information should it be required.

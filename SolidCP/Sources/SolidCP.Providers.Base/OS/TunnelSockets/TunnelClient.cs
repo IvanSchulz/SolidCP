@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Linq;
@@ -13,9 +13,9 @@ using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using System.Xml;
 using System.Threading.Tasks;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Providers.OS
+namespace FuseCP.Providers.OS
 {
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false)]
     public class TunnelClientAttribute : Attribute
@@ -30,21 +30,21 @@ namespace SolidCP.Providers.OS
     public class TunnelClient
     {
         public bool IsServerLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.Server");
+            .Any(a => a.GetName().Name == "FuseCP.Server");
         public bool IsEnterpriseServerLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.EnterpriseServer");
+            .Any(a => a.GetName().Name == "FuseCP.EnterpriseServer");
         public bool IsPortalLoaded => AppDomain.CurrentDomain.GetAssemblies()
-            .Any(a => a.GetName().Name == "SolidCP.WebPortal");
+            .Any(a => a.GetName().Name == "FuseCP.WebPortal");
 
         public ServerTunnelClientBase ServerClient => AppDomain.CurrentDomain.GetAssemblies()
-            .Where(a => a.GetName().Name == "SolidCP.Server.Client")
+            .Where(a => a.GetName().Name == "FuseCP.Server.Client")
             .SelectMany(a => a.GetCustomAttributes(typeof(TunnelClientAttribute), false))
             .OfType<TunnelClientAttribute>()
             .Select(a => (ServerTunnelClientBase)CopyTo(a.Instance))
             .FirstOrDefault();
 
         public EnterpriseServerTunnelClientBase EnterpriseServerClient => AppDomain.CurrentDomain.GetAssemblies()
-            .Where(a => a.GetName().Name == "SolidCP.EnterpriseServer.Client")
+            .Where(a => a.GetName().Name == "FuseCP.EnterpriseServer.Client")
             .SelectMany(a => a.GetCustomAttributes(typeof(TunnelClientAttribute), false))
             .OfType<TunnelClientAttribute>()
             .Select(a => (EnterpriseServerTunnelClientBase)CopyTo(a.Instance))
@@ -54,14 +54,14 @@ namespace SolidCP.Providers.OS
         {
             get
             {
-                if (ServerUrl == "assembly://SolidCP.Server")
+                if (ServerUrl == "assembly://FuseCP.Server")
                 {
-                    if (!IsServerLoaded) Assembly.Load("SolidCP.Server");
+                    if (!IsServerLoaded) Assembly.Load("FuseCP.Server");
                     return ServerClient;
                 }
-                else if (ServerUrl == "assembly://SolidCP.EnterpriseServer")
+                else if (ServerUrl == "assembly://FuseCP.EnterpriseServer")
                 {
-                    if (!IsEnterpriseServerLoaded) Assembly.Load("SolidCP.EnterpriseServer");
+                    if (!IsEnterpriseServerLoaded) Assembly.Load("FuseCP.EnterpriseServer");
                     return EnterpriseServerClient;
                 }
                 throw new NotSupportedException("Unknown assembly in AssemblyBinding.");

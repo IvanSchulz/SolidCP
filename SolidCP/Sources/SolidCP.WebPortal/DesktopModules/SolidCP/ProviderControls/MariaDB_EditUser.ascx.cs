@@ -1,8 +1,8 @@
-﻿using SolidCP.Providers.Database;
+using FuseCP.Providers.Database;
 using System;
 
-namespace SolidCP.Portal.ProviderControls {
-    public partial class MariaDB_EditUser : SolidCPControlBase, IDatabaseEditUserControl {
+namespace FuseCP.Portal.ProviderControls {
+    public partial class MariaDB_EditUser : FuseCPControlBase, IDatabaseEditUserControl {
         protected void Page_Load(object sender, EventArgs e) {
         }
         public void BindItem(SqlUser item) {

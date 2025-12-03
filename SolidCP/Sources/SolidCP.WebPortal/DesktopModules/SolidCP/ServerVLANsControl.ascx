@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerVLANsControl.ascx.cs" Inherits="SolidCP.Portal.ServerVLANsControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerVLANsControl.ascx.cs" Inherits="FuseCP.Portal.ServerVLANsControl" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
 <div class="FormButtonsBar">
     <asp:Button ID="btnAdd" runat="server" Text="Add" meta:resourcekey="btnAdd" CssClass="btn btn-primary" OnClick="btnAdd_Click" />
@@ -23,7 +23,7 @@
 	    SelectCountMethod="GetVLANsPagedCount"
 	    SelectMethod="GetVLANsPaged"
 	    SortParameterName="sortColumn"
-	    TypeName="SolidCP.Portal.VLANsHelper">
+	    TypeName="FuseCP.Portal.VLANsHelper">
     <SelectParameters>
 	    <asp:QueryStringParameter Name="serverId" QueryStringField="ServerID" DefaultValue="0" />
         <asp:Parameter Name="filterColumn" DefaultValue="" />

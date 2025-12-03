@@ -39,10 +39,10 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO.Compression;
 
-using SolidCP.Providers;
-using SolidCP.UniversalInstaller;
+using FuseCP.Providers;
+using FuseCP.UniversalInstaller;
 
-namespace SolidCP.Updater
+namespace FuseCP.Updater
 {
 	internal partial class UpdaterForm : Form
 	{
@@ -340,7 +340,7 @@ namespace SolidCP.Updater
 		private void ShowError()
 		{
 			string message = "An unexpected error has occurred. We apologize for this inconvenience.\n" +
-				"Please contact Technical Support at info@solidcp.com";
+				"Please contact Technical Support at info@fusecp.com";
 			MessageBox.Show(this, message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 	}

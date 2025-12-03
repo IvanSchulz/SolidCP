@@ -41,12 +41,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class IPAddressesEditIPAddress : SolidCPModuleBase
+    public partial class IPAddressesEditIPAddress : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

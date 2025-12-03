@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.VPS.UserControls {
+namespace FuseCP.Portal.VPS.UserControls {
     
     
     public partial class DynamicMemory {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal.VPS.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secDymanicMemory;
+        protected global::FuseCP.Portal.CollapsiblePanel secDymanicMemory;
         
         /// <summary>
         /// DymanicMemoryPanel control.

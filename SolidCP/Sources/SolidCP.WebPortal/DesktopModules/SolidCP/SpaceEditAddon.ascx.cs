@@ -32,11 +32,11 @@
 
 using System;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
+using FuseCP.EnterpriseServer;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SpaceEditAddon : SolidCPModuleBase
+    public partial class SpaceEditAddon : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

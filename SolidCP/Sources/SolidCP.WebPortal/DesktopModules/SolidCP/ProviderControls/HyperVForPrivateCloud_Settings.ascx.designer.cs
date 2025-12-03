@@ -39,7 +39,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.ProviderControls {
+namespace FuseCP.Portal.ProviderControls {
     
     
     public partial class HyperVForPrivateCloud_Settings {
@@ -69,7 +69,7 @@ namespace SolidCP.Portal.ProviderControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.UserControls.SimpleMessageBox messageBoxError;
+        protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBoxError;
         
         /// <summary>
         /// locConnectTypeName control.

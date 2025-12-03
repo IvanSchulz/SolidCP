@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SiteFooter.ascx.cs" Inherits="SolidCP.Portal.SkinControls.SiteFooter" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SiteFooter.ascx.cs" Inherits="FuseCP.Portal.SkinControls.SiteFooter" %>
 <%@ Register TagPrefix="scp" TagName="ProductVersion" Src="ProductVersion.ascx" %>
 <div class="row">
     <asp:Panel runat="server" ID="Copyright" CssClass="col-md-2 Copyright">
@@ -10,6 +10,6 @@
     </asp:Panel>
     <div class="col-md-3 Version">
         <asp:Localize ID="locVersion" runat="server" meta:resourcekey="locVersion" />
-        <scp:ProductVersion ID="scpVersion" runat="server" AssemblyName="SolidCP.Portal.Modules" />
+        <scp:ProductVersion ID="scpVersion" runat="server" AssemblyName="FuseCP.Portal.Modules" />
     </div>
 </div>

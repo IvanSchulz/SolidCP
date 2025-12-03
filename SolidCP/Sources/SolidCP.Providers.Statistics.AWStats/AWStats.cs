@@ -35,11 +35,11 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 
-using SolidCP.Server.Utils;
-using SolidCP.Providers.Utils;
+using FuseCP.Server.Utils;
+using FuseCP.Providers.Utils;
 using Microsoft.Win32;
 
-namespace SolidCP.Providers.Statistics
+namespace FuseCP.Providers.Statistics
 {
     public class AWStats : HostingServiceProviderBase, IStatisticsServer
     {

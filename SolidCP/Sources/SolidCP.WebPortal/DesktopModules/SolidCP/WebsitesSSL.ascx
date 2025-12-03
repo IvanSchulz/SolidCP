@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebsitesSSL.ascx.cs" Inherits="SolidCP.Portal.WebsitesSSL" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebsitesSSL.ascx.cs" Inherits="FuseCP.Portal.WebsitesSSL" %>
 <%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>

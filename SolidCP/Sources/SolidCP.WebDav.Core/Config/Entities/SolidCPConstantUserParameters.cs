@@ -1,14 +1,14 @@
-﻿namespace SolidCP.WebDav.Core.Config.Entities
+namespace FuseCP.WebDav.Core.Config.Entities
 {
-    public class SolidCPConstantUserParameters : AbstractConfigCollection
+    public class FuseCPConstantUserParameters : AbstractConfigCollection
     {
         public string Login { get; private set; }
         public string Password { get; private set; }
 
-        public SolidCPConstantUserParameters()
+        public FuseCPConstantUserParameters()
         {
-            Login = ConfigSection.SolidCPConstantUser.Login;
-            Password = ConfigSection.SolidCPConstantUser.Password;
+            Login = ConfigSection.FuseCPConstantUser.Login;
+            Password = ConfigSection.FuseCPConstantUser.Password;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2019, SolidCP
+// Copyright (c) 2019, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -33,10 +33,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using SolidCP.Providers.OS;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.OS;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Providers.Virtualization
+namespace FuseCP.Providers.Virtualization
 {
     public interface IVirtualizationServer2012
     {

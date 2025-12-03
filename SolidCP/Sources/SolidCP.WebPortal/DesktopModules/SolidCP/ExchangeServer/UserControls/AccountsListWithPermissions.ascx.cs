@@ -34,12 +34,12 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 using System.Data;
 
-namespace SolidCP.Portal.ExchangeServer.UserControls
+namespace FuseCP.Portal.ExchangeServer.UserControls
 {
-	public partial class AccountsListWithPermissions : SolidCPControlBase
+	public partial class AccountsListWithPermissions : FuseCPControlBase
 	{
 		private enum SelectedState
 		{

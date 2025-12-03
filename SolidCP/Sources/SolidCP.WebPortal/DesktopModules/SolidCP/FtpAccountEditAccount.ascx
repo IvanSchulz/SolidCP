@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FtpAccountEditAccount.ascx.cs" Inherits="SolidCP.Portal.FtpAccountEditAccount" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FtpAccountEditAccount.ascx.cs" Inherits="FuseCP.Portal.FtpAccountEditAccount" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc4" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc2" %>

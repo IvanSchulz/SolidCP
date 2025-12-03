@@ -1,4 +1,4 @@
-// Copyright (c) 2018, SolidCP
+// Copyright (c) 2018, FuseCP
 // SolidCP is distributed under the Creative Commons Share-alike license
 // 
 // SolidCP is a fork of WebsitePanel:
@@ -35,12 +35,12 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Common;
-using SolidCP.Providers.Virtualization;
+using FuseCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
 
-namespace SolidCP.Portal.VPS2012
+namespace FuseCP.Portal.VPS2012
 {
-    public partial class VpsToolsDeleteServer : SolidCPModuleBase
+    public partial class VpsToolsDeleteServer : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -87,7 +87,7 @@ namespace SolidCP.Portal.VPS2012
             }
 
             // load export settings
-            if (PanelSecurity.EffectiveUser.Role == SolidCP.EnterpriseServer.UserRole.Administrator)
+            if (PanelSecurity.EffectiveUser.Role == FuseCP.EnterpriseServer.UserRole.Administrator)
             {
                 txtExportPath.Text = ES.Services.VPS2012.GetDefaultExportPath(PanelRequest.ItemID);
             }

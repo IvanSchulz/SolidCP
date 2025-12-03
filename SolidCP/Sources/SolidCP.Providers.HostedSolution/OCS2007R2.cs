@@ -32,9 +32,9 @@
 
 using System;
 using System.Management;
-using SolidCP.Providers.Utils;
+using FuseCP.Providers.Utils;
 
-namespace SolidCP.Providers.HostedSolution
+namespace FuseCP.Providers.HostedSolution
 {
 	public class OCS2007R2 : HostingServiceProviderBase, IOCSServer
 	{
@@ -349,7 +349,7 @@ namespace SolidCP.Providers.HostedSolution
 
 		public override bool IsInstalled()
         {
-			if (!SolidCP.Providers.OS.OSInfo.IsWindows) return false;
+			if (!FuseCP.Providers.OS.OSInfo.IsWindows) return false;
 
 			try
 			{

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
-using SolidCP.Providers.StorageSpaces;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Providers.StorageSpaces;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class DefaultStorageSpaceSelector : ControllerBase, IStorageSpaceSelector
     {

@@ -38,7 +38,7 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.Text;
 
-namespace SolidCP.Providers.FTP
+namespace FuseCP.Providers.FTP
 {
 	[Serializable]
 	public class FtpSite : ServiceProviderItem

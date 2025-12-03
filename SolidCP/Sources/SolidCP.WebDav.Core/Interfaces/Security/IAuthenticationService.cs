@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
-using SolidCP.EnterpriseServer.Base.HostedSolution;
-using SolidCP.WebDav.Core.Security.Authentication.Principals;
+using FuseCP.EnterpriseServer.Base.HostedSolution;
+using FuseCP.WebDav.Core.Security.Authentication.Principals;
 
-namespace SolidCP.WebDav.Core.Interfaces.Security
+namespace FuseCP.WebDav.Core.Interfaces.Security
 {
     public interface IAuthenticationService
     {

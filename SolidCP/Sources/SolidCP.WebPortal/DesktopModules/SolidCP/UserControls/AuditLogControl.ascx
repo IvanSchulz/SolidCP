@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AuditLogControl.ascx.cs" Inherits="SolidCP.Portal.UserControls.AuditLogControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AuditLogControl.ascx.cs" Inherits="FuseCP.Portal.UserControls.AuditLogControl" %>
 <%@ Register Src="PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
-<%@ Import Namespace="SolidCP.Portal" %>
+<%@ Import Namespace="FuseCP.Portal" %>
 
 <table class="table">
     <tr>
@@ -154,7 +154,7 @@
     </Columns>
 </asp:GridView>
 <asp:ObjectDataSource ID="odsLog" runat="server" EnablePaging="True" SelectCountMethod="GetAuditLogRecordsPagedCount"
-    SelectMethod="GetAuditLogRecordsPaged" SortParameterName="sortColumn" TypeName="SolidCP.Portal.AuditLogHelper" OnSelected="odsLog_Selected">
+    SelectMethod="GetAuditLogRecordsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.AuditLogHelper" OnSelected="odsLog_Selected">
     <SelectParameters>
         <asp:ControlParameter Name="sStartDate" ControlID="litStartDate" PropertyName="Text" />
         <asp:ControlParameter Name="sEndDate" ControlID="litEndDate" PropertyName="Text" />

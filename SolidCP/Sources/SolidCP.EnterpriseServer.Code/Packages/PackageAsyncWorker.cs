@@ -35,13 +35,13 @@ using System.Data;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Threading;
-using SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
-using SolidCP.Providers;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.Virtualization;
-using SolidCP.Server.Client;
+using FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.PS;
+using FuseCP.Providers;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.Virtualization;
+using FuseCP.Server.Client;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     public class PackageAsyncWorker : ControllerAsyncBase
     {

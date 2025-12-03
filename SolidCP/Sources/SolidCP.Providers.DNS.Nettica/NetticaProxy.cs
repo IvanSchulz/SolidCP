@@ -45,7 +45,7 @@
 // 
 using System.Configuration;
 
-namespace SolidCP.ServiceProviders.DNS.Nettica {
+namespace FuseCP.ServiceProviders.DNS.Nettica {
     using System.Diagnostics;
     using System.Web.Services;
     using System.ComponentModel;

@@ -35,7 +35,7 @@ using System.Collections.Specialized;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 
-namespace SolidCP.EnterpriseServer
+namespace FuseCP.EnterpriseServer
 {
     /// <summary>
     /// Summary description for ServiceProviderSettings.
@@ -63,7 +63,7 @@ namespace SolidCP.EnterpriseServer
         public const string OS_POLICY = "OsPolicy";
         public const string EXCHANGE_POLICY = "ExchangePolicy";
         public const string EXCHANGE_HOSTED_EDITION_POLICY = "ExchangeHostedEditionPolicy";
-        public const string SolidCP_POLICY = "SolidCPPolicy";
+        public const string FuseCP_POLICY = "FuseCPPolicy";
         public const string VPS_POLICY = "VpsPolicy";
         public const string DISPLAY_PREFS = "DisplayPreferences";
         public const string GRID_ITEMS = "GridItems";

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SolidCP.EnterpriseServer.Data.Migrations.SqlServer
+namespace FuseCP.EnterpriseServer.Data.Migrations.SqlServer
 {
 	/// <inheritdoc />
 	public partial class v200 : Migration

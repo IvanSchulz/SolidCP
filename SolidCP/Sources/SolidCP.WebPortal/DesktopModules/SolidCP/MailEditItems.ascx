@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEditItems.ascx.cs" Inherits="SolidCP.Portal.MailEditItems" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEditItems.ascx.cs" Inherits="FuseCP.Portal.MailEditItems" %>
 <asp:TextBox id="txtItems" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="10"></asp:TextBox>
 <br/>
 <span class=Normal>

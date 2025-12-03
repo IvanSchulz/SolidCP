@@ -1,2 +1,2 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Logo.ascx.cs" Inherits="SolidCP.Portal.SkinControls.Logo" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Logo.ascx.cs" Inherits="FuseCP.Portal.SkinControls.Logo" %>
 <a href="<%= Page.ResolveUrl("~/") %>"><asp:Image ID="imgLogo" runat="server" /></a>

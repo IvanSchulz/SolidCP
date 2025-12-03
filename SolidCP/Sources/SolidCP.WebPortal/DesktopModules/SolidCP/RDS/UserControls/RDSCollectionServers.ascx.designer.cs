@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.RDS.UserControls {
+namespace FuseCP.Portal.RDS.UserControls {
     
     
     public partial class RDSCollectionServers {
@@ -91,7 +91,7 @@ namespace SolidCP.Portal.RDS.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secServerInfo;
+        protected global::FuseCP.Portal.CollapsiblePanel secServerInfo;
         
         /// <summary>
         /// panelHardwareInfo control.
@@ -181,7 +181,7 @@ namespace SolidCP.Portal.RDS.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secRdsApplicationEdit;
+        protected global::FuseCP.Portal.CollapsiblePanel secRdsApplicationEdit;
         
         /// <summary>
         /// panelDiskDrives control.

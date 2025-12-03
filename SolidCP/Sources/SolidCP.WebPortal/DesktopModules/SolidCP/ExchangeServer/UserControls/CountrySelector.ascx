@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CountrySelector.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.CountrySelector" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CountrySelector.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.CountrySelector" %>
 <asp:DropDownList ID="ddlCountry" runat="server" CssClass="form-control">
 	<asp:ListItem Value=""></asp:ListItem>
 	<asp:ListItem Value="AF">Afghanistan</asp:ListItem>

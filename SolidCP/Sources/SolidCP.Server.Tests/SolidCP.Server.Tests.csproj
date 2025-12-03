@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>net10.0;net48</TargetFrameworks>
@@ -22,9 +22,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\SolidCP.Providers.Base\SolidCP.Providers.Base.csproj" />
-        <ProjectReference Include="..\SolidCP.Server\WebServices\SolidCP.Build\SolidCP.Server.Client.csproj" />
-        <ProjectReference Include="..\SolidCP.Tests\SolidCP.Tests.csproj" />
+        <ProjectReference Include="..\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj" />
+        <ProjectReference Include="..\FuseCP.Server\WebServices\FuseCP.Build\FuseCP.Server.Client.csproj" />
+        <ProjectReference Include="..\FuseCP.Tests\FuseCP.Tests.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,11 +1,11 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	
 	<Import Project="build.xml" />
 	
 	<PropertyGroup>
-		<TestDatabase>SolidCP</TestDatabase>
+		<TestDatabase>FuseCP</TestDatabase>
 		<TestDatabaseFolder>$(BuildFolder)\Database</TestDatabaseFolder>
-		<TestDbLogin>SolidCP</TestDbLogin>
+		<TestDbLogin>FuseCP</TestDbLogin>
 		<TestDbPassword>Password12</TestDbPassword>
 		<TestServerAdminPassword>1234</TestServerAdminPassword>
 		<TestServerAdminEncryptedPassword>HcWzSyyxfo0751w/TwWUjQ==</TestServerAdminEncryptedPassword>
@@ -15,9 +15,9 @@
 	</PropertyGroup>	
 
 	<Target Name="ConfigTest" DependsOnTargets="Build">
-		<XmlUpdate XmlFileName="$(ServerInstall)\web.config" Xpath="//configuration/SolidCP.server/security/password/@value" Value="$(TestServerPassword)" />
+		<XmlUpdate XmlFileName="$(ServerInstall)\web.config" Xpath="//configuration/FuseCP.server/security/password/@value" Value="$(TestServerPassword)" />
 		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/connectionStrings/add/@connectionString" Value="Server=(local)\SQLExpress;Database=$(TestDatabase);uid=$(TestDbLogin);pwd=$(TestDbPassword);"  />
-		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/appSettings/add[@key=%22SolidCP.CryptoKey%22]/@value" Value="$(TestCryptoKey)"  />
+		<XmlUpdate XmlFileName="$(EnterpriseServerInstall)\web.config" Xpath="//configuration/appSettings/add[@key=%22FuseCP.CryptoKey%22]/@value" Value="$(TestCryptoKey)"  />
 		<XmlUpdate XmlFileName="$(PortalInstall)\App_Data\SiteSettings.config" Xpath="//SiteSettings/EnterpriseServer" Value="$(EnterpriseUrl)"  />
 	</Target>
 	

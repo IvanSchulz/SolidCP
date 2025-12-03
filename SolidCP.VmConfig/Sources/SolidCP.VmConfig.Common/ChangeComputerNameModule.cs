@@ -37,7 +37,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace SolidCP.VmConfig
+namespace FuseCP.VmConfig
 {
 	class ChangeComputerNameModule : IProvisioningModule
 	{

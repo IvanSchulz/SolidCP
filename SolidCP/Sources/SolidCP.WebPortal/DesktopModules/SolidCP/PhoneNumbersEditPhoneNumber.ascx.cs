@@ -42,12 +42,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class PhoneNumbersEditPhoneNumber : SolidCPModuleBase
+    public partial class PhoneNumbersEditPhoneNumber : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class SpaceViewQuotas {
@@ -19,7 +19,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SpaceDetailsHeaderControl spaceDetailsHeaderControl;
+        protected global::FuseCP.Portal.SpaceDetailsHeaderControl spaceDetailsHeaderControl;
         
         /// <summary>
         /// secAddons control.
@@ -28,7 +28,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secAddons;
+        protected global::FuseCP.Portal.CollapsiblePanel secAddons;
         
         /// <summary>
         /// AddonsPanel control.
@@ -55,7 +55,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.CollapsiblePanel secQuotas;
+        protected global::FuseCP.Portal.CollapsiblePanel secQuotas;
         
         /// <summary>
         /// QuotasPanel control.
@@ -73,7 +73,7 @@ namespace SolidCP.Portal {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.SpaceQuotasControl packagesQuotas;
+        protected global::FuseCP.Portal.SpaceQuotasControl packagesQuotas;
         
         /// <summary>
         /// btnCancel control.

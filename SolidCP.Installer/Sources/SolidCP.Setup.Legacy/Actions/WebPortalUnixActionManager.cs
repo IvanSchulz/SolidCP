@@ -37,11 +37,11 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using SolidCP.Setup.Common;
-using SolidCP.UniversalInstaller.Core;
-using SolidCP.EnterpriseServer.Data;
+using FuseCP.Setup.Common;
+using FuseCP.UniversalInstaller.Core;
+using FuseCP.EnterpriseServer.Data;
 
-namespace SolidCP.Setup.Actions
+namespace FuseCP.Setup.Actions
 {
     public class SetWebPortalWebSettingsAction : Action, IPrepareDefaultsAction
     {
@@ -176,7 +176,7 @@ namespace SolidCP.Setup.Actions
     {
         public const string LogStartInstallMessage = "Creating shortcut...";
         public const string ApplicationUrlNotFoundMessage = "Application url not found";
-        public const string Path2 = "SolidCP Software";
+        public const string Path2 = "FuseCP Software";
 
         void IInstallAction.Run(SetupVariables vars)
         {
@@ -202,7 +202,7 @@ namespace SolidCP.Setup.Actions
                 Log.WriteStart("Creating menu shortcut");
                 //
                 string programs = Environment.GetFolderPath(Environment.SpecialFolder.Programs);
-                string fileName = "Login to SolidCP.url";
+                string fileName = "Login to FuseCP.url";
                 string path = Path.Combine(programs, Path2);
                 //
                 if (!Directory.Exists(path))
@@ -338,12 +338,12 @@ namespace SolidCP.Setup.Actions
                     webConfig.Add(appSettings);
                 }
                 
-                AddOrSetAppSettings(appSettings, "SolidCP.CryptoKey", Utils.GetRandomString(20), true, "1234567890");
-                AddOrSetAppSettings(appSettings, "SolidCP.EncryptionEnabled", "true");
-                AddOrSetAppSettings(appSettings, "SolidCP.EnterpriseServer.WebApplicationsPath", "~/WebApplications", true, "~/WebApplications");
-                AddOrSetAppSettings(appSettings, "SolidCP.EnterpriseServer.ServerRequestTimeout", "3600", true, "3600");
-                AddOrSetAppSettings(appSettings, "SolidCP.AltConnectionString", "ConnectionString", true, "ConnectionString");
-                AddOrSetAppSettings(appSettings, "SolidCP.AltCryptoKey", "CryptoKey", true, "CryptoKey");
+                AddOrSetAppSettings(appSettings, "FuseCP.CryptoKey", Utils.GetRandomString(20), true, "1234567890");
+                AddOrSetAppSettings(appSettings, "FuseCP.EncryptionEnabled", "true");
+                AddOrSetAppSettings(appSettings, "FuseCP.EnterpriseServer.WebApplicationsPath", "~/WebApplications", true, "~/WebApplications");
+                AddOrSetAppSettings(appSettings, "FuseCP.EnterpriseServer.ServerRequestTimeout", "3600", true, "3600");
+                AddOrSetAppSettings(appSettings, "FuseCP.AltConnectionString", "ConnectionString", true, "ConnectionString");
+                AddOrSetAppSettings(appSettings, "FuseCP.AltCryptoKey", "CryptoKey", true, "CryptoKey");
                 AddOrSetAppSettings(appSettings, "ExternalProbingPaths", probingPaths, true);
                 AddOrSetAppSettings(appSettings, "ExposeWebServices", vars.ExposeEnterpriseServerWebservices ? "EnterpriseServer" : "none", true);
 
@@ -362,7 +362,7 @@ namespace SolidCP.Setup.Actions
                     .FirstOrDefault();
 
                 var connectionString = esConnectionString;
-                var csb = new SolidCP.Providers.Common.ConnectionStringBuilder(connectionString);
+                var csb = new FuseCP.Providers.Common.ConnectionStringBuilder(connectionString);
                 var dbType = csb["DbType"] as string;
                 if (dbType.Equals("sqlite", StringComparison.OrdinalIgnoreCase) ||
                     dbType.Equals("sqlitefx", StringComparison.OrdinalIgnoreCase))

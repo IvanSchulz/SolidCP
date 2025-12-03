@@ -34,12 +34,12 @@
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class WebApplicationGallery : SolidCPModuleBase
+    public partial class WebApplicationGallery : FuseCPModuleBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -194,7 +194,7 @@ namespace SolidCP.Portal
                 return "/App_Themes/Default/Icons/sphere_128.png";
             }
             
-            return "~/DesktopModules/SolidCP/ResizeImage.ashx?width=120&height=120&url=" + Server.UrlEncode(url);
+            return "~/DesktopModules/FuseCP/ResizeImage.ashx?width=120&height=120&url=" + Server.UrlEncode(url);
         }
     }
 }

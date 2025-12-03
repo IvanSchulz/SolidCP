@@ -1,6 +1,6 @@
 {
     "profiles": {
-        "SolidCP.UniversalInstaller": {
+        "FuseCP.UniversalInstaller": {
             "commandName": "Project",
             "commandLineArgs": "" //"-ui=console"
         },

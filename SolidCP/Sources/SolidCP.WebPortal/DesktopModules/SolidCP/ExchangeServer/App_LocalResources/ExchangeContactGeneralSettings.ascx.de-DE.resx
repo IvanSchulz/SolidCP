@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,19 +121,19 @@
     <value>ShowProgressDialog('Kontakteinstellungen werden aktualisiert...');</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>Ã„nderungen speichern</value>
+    <value>Änderungen speichern</value>
   </data>
   <data name="chkHideAddressBook.Text" xml:space="preserve">
     <value>Im Adressbuch verstecken</value>
   </data>
   <data name="FormComments.Text" xml:space="preserve">
-    <value>&lt;p&gt;&lt;b&gt;Anzeigename&lt;/b&gt; wird im globalen Adressbuch in Outlook und OWA (Webmail) angezeigt.&lt;/p&gt;&lt;p&gt;Sie kÃ¶nnen sowohl interne als auch externe E-Mail-Adressen im "E-Mail-Adresse"-Feld angeben.&lt;/p&gt;&lt;p&gt;Sie kÃ¶nnen den Vorgesetzten des Kontakts angeben, um die Organisationsstruktur Ihrer Firma abzubilden.&lt;/p&gt;</value>
+    <value>&lt;p&gt;&lt;b&gt;Anzeigename&lt;/b&gt; wird im globalen Adressbuch in Outlook und OWA (Webmail) angezeigt.&lt;/p&gt;&lt;p&gt;Sie können sowohl interne als auch externe E-Mail-Adressen im "E-Mail-Adresse"-Feld angeben.&lt;/p&gt;&lt;p&gt;Sie können den Vorgesetzten des Kontakts angeben, um die Organisationsstruktur Ihrer Firma abzubilden.&lt;/p&gt;</value>
   </data>
   <data name="locAddress.Text" xml:space="preserve">
     <value>Adresse:</value>
   </data>
   <data name="locBusinessPhone.Text" xml:space="preserve">
-    <value>Telefon geschÃ¤ftlich:</value>
+    <value>Telefon geschäftlich:</value>
   </data>
   <data name="locCity.Text" xml:space="preserve">
     <value>Stadt:</value>
@@ -187,7 +187,7 @@
     <value>Notizen:</value>
   </data>
   <data name="locOffice.Text" xml:space="preserve">
-    <value>BÃ¼ro:</value>
+    <value>Büro:</value>
   </data>
   <data name="locPager.Text" xml:space="preserve">
     <value>Pager:</value>
@@ -226,7 +226,7 @@
     <value>Kontakte</value>
   </data>
   <data name="valCorrectEmail.ErrorMessage" xml:space="preserve">
-    <value>Bitte geben Sie einen gÃ¼ltige E-Mail-Adresse ein, wie z.B. irgendwer@solidcp.com</value>
+    <value>Bitte geben Sie einen gültige E-Mail-Adresse ein, wie z.B. irgendwer@fusecp.com</value>
   </data>
   <data name="valCorrectEmail.Text" xml:space="preserve">
     <value>*</value>
@@ -244,6 +244,6 @@
     <value>*</value>
   </data>
   <data name="btnSaveText.Text" xml:space="preserve">
-    <value>Ã„nderungen speichern</value>
+    <value>Änderungen speichern</value>
   </data>
 </root>

@@ -33,7 +33,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SolidCP.UniversalInstaller;
+namespace FuseCP.UniversalInstaller;
 
 public sealed class User32
 {

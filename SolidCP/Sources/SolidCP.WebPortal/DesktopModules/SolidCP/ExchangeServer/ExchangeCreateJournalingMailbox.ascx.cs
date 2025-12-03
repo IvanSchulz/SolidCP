@@ -33,13 +33,13 @@
 using System;
 using System.Web.Security;
 using System.Web.UI.WebControls;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
-using SolidCP.Providers.ResultObjects;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
+using FuseCP.Providers.ResultObjects;
 
-namespace SolidCP.Portal.ExchangeServer
+namespace FuseCP.Portal.ExchangeServer
 {
-    public partial class ExchangeCreateJournalingMailbox : SolidCPModuleBase
+    public partial class ExchangeCreateJournalingMailbox : FuseCPModuleBase
     {
         private bool IsNewUser
         {

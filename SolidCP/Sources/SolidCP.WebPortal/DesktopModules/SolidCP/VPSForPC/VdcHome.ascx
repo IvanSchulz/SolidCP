@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcHome.ascx.cs" Inherits="SolidCP.Portal.VPSForPC.VdcHome" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcHome.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VdcHome" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
 <%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
@@ -85,7 +85,7 @@
 						    SelectCountMethod="GetVirtualMachinesCount"
 						    SelectMethod="GetVirtualMachines"
 						    SortParameterName="sortColumn"
-						    TypeName="SolidCP.Portal.VirtualMachinesForPCHelper"
+						    TypeName="FuseCP.Portal.VirtualMachinesForPCHelper"
 						    OnSelected="odsServersPaged_Selected">
 					    <SelectParameters>
 						    <asp:QueryStringParameter Name="packageId" QueryStringField="SpaceID" DefaultValue="0" />						    

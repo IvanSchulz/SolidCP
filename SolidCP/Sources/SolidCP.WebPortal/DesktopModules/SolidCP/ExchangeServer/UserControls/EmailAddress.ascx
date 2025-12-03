@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EmailAddress.ascx.cs" Inherits="SolidCP.Portal.ExchangeServer.UserControls.EmailAddress" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EmailAddress.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.EmailAddress" %>
 <%@ Register Src="DomainSelector.ascx" TagName="DomainSelector" TagPrefix="scp" %>
 <div class="input-group">
     <span class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>

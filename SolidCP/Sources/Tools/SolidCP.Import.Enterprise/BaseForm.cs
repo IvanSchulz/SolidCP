@@ -30,7 +30,7 @@ using System;
 using System.Windows.Forms;
 using System.Text;
 
-namespace SolidCP.Import.Enterprise
+namespace FuseCP.Import.Enterprise
 {
 	public class BaseForm : Form
 	{

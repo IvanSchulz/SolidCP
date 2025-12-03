@@ -1,42 +1,42 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SolidCP Readme - SolidCP-Auto-Upgrade.ps1
+FuseCP Readme - FuseCP-Auto-Upgrade.ps1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The SolidCP Auto Upgrade script needs to be run from your 
-SolidCP Enterprise Server.
-The script assumes that your SolidCP Portal Server is also 
+The FuseCP Auto Upgrade script needs to be run from your 
+FuseCP Enterprise Server.
+The script assumes that your FuseCP Portal Server is also 
 installed on the same server as your Enterprise Server.
 You MUST ensure that you are able to access the UNC share 
 on each remote server that forms part of your deployment 
 BEFORE running the script.
 
-There is an option to run the test to make sure your SolidCP 
+There is an option to run the test to make sure your FuseCP 
 Enterprise Server can reach the UNC Path on each server listed 
-in your SolidCP Enterprise Server Database.
+in your FuseCP Enterprise Server Database.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Upgrade Process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The SolidCP Enterprise Server will be backed up along with 
+The FuseCP Enterprise Server will be backed up along with 
 the Database.
-Once this is complete it will upgrade your SolidCP Enterprise 
+Once this is complete it will upgrade your FuseCP Enterprise 
 Server and Database as well as adding the additional keys 
 into your web.config file for any new features.
 
-Then the SolidCP Portal will be backed up.
-Once this is complete it will upgrade your SolidCP Portal and 
+Then the FuseCP Portal will be backed up.
+Once this is complete it will upgrade your FuseCP Portal and 
 add any additional keys into your web.config file for any new
 features.
 
-The script will read through the database on the SolidCP 
+The script will read through the database on the FuseCP 
 Enterprise Server and all servers that form part of your 
 deployment will be updated.
-Each SolidCP Server will be backed up (files will be saved on 
-the Enterprise Server), the SolidCP server will be upgraded 
+Each FuseCP Server will be backed up (files will be saved on 
+the Enterprise Server), the FuseCP server will be upgraded 
 and any new keys will be added into the web.config for the 
-server, then it will move onto the next SolidCP server in the 
+server, then it will move onto the next FuseCP server in the 
 database and repeat the backup and upgrade process until all 
 servers have been updated.
 
@@ -58,8 +58,8 @@ You now have the ability to exclude servers from the SQL query
 as well as include additional servers.
 You need to create 2 files in the same directory as the script
 and call them:-
-SolidCP-Auto-Upgrade-Exclude-Servers.txt
-SolidCP-Auto-Upgrade-Include-Servers.txt
+FuseCP-Auto-Upgrade-Exclude-Servers.txt
+FuseCP-Auto-Upgrade-Include-Servers.txt
 
 IP Addresses whould be on thier own line, no commas or quotes
 are required as delimiters as it is read in as an array

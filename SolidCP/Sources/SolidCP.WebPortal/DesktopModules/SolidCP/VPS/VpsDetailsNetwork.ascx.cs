@@ -35,13 +35,13 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SolidCP.Providers.Virtualization;
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.Common;
+using FuseCP.Providers.Virtualization;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.Common;
 
-namespace SolidCP.Portal.VPS
+namespace FuseCP.Portal.VPS
 {
-    public partial class VpsDetailsNetwork : SolidCPModuleBase
+    public partial class VpsDetailsNetwork : FuseCPModuleBase
     {
         VirtualMachine vm = null;
 

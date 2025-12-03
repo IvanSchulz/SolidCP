@@ -31,9 +31,9 @@
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ﻿using System.Collections.Generic;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Providers.ResultObjects
+namespace FuseCP.Providers.ResultObjects
 {
     public class BlackBerryUserStatsResult : ValueResultObject<List<BlackBerryStatsItem>>
     {

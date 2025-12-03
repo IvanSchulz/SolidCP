@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal.SfB.UserControls {
+namespace FuseCP.Portal.SfB.UserControls {
     
     
     public partial class SfBUserSettings {
@@ -28,6 +28,6 @@ namespace SolidCP.Portal.SfB.UserControls {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::SolidCP.Portal.ExchangeServer.UserControls.EmailAddress email;
+        protected global::FuseCP.Portal.ExchangeServer.UserControls.EmailAddress email;
     }
 }

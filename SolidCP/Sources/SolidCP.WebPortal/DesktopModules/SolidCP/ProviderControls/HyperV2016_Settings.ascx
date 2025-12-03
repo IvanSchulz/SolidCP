@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperV2016_Settings.ascx.cs" Inherits="SolidCP.Portal.ProviderControls.HyperV2016_Settings" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperV2016_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.HyperV2016_Settings" %>
 <%@ Register Src="../UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="scp" %>
 
 <asp:ValidationSummary ID="ValidationSummary" runat="server" ShowMessageBox="true" ShowSummary="false" />

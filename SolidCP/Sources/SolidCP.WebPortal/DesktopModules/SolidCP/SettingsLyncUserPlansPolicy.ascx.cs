@@ -48,12 +48,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 
-using SolidCP.EnterpriseServer;
-using SolidCP.Providers.HostedSolution;
+using FuseCP.EnterpriseServer;
+using FuseCP.Providers.HostedSolution;
 
-namespace SolidCP.Portal
+namespace FuseCP.Portal
 {
-    public partial class SettingsLyncUserPlansPolicy : SolidCPControlBase, IUserSettingsEditorControl
+    public partial class SettingsLyncUserPlansPolicy : FuseCPControlBase, IUserSettingsEditorControl
     {
 
         internal static List<LyncUserPlan> list; // compiler indicates is never used, but it is

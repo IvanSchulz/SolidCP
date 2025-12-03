@@ -1,9 +1,9 @@
-﻿using System.Security.Principal;
+using System.Security.Principal;
 using System.Web.Script.Serialization;
 using System.Web.Security;
 using System.Xml.Serialization;
 
-namespace SolidCP.WebDav.Core.Security.Authentication.Principals
+namespace FuseCP.WebDav.Core.Security.Authentication.Principals
 {
     public class ScpPrincipal : IPrincipal
     {

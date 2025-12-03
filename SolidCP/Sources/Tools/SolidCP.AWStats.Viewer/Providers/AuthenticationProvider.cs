@@ -29,7 +29,7 @@
 using System;
 using System.Configuration;
 
-namespace SolidCP.AWStats.Viewer
+namespace FuseCP.AWStats.Viewer
 {
 	/// <summary>
 	/// Summary description for AuthenticationProvider.

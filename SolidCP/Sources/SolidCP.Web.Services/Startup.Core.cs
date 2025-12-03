@@ -1,4 +1,4 @@
-﻿#if !NETFRAMEWORK
+#if !NETFRAMEWORK
 using CoreWCF;
 using CoreWCF.Channels;
 using CoreWCF.Configuration;
@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Systemd;
-using SolidCP.Providers;
-using SolidCP.Providers.OS;
-using SolidCP.Web.Services;
+using FuseCP.Providers;
+using FuseCP.Providers.OS;
+using FuseCP.Web.Services;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace SolidCP.Web.Services
+namespace FuseCP.Web.Services
 {
 	public static class StartupCore
 	{
@@ -48,7 +48,7 @@ namespace SolidCP.Web.Services
 		public static void Log(string msg)
 		{
 			Console.WriteLine(msg);
-			if (Debugger.IsAttached) Debugger.Log(1, "SolidCP", msg);
+			if (Debugger.IsAttached) Debugger.Log(1, "FuseCP", msg);
 			//Trace.TraceInformation(msg);
 		}
 		public static void Error(string msg)
@@ -57,7 +57,7 @@ namespace SolidCP.Web.Services
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.WriteLine(msg);
 			Console.ForegroundColor = col;
-			if (Debugger.IsAttached) Debugger.Log(1, "SolidCP", msg);
+			if (Debugger.IsAttached) Debugger.Log(1, "FuseCP", msg);
 			//Trace.TraceError(msg);
 		}
 
@@ -297,13 +297,13 @@ namespace SolidCP.Web.Services
 			var a = Assembly.GetEntryAssembly();
 			var srvcAssemblies = AppDomain.CurrentDomain.GetAssemblies()
 				.Select(assembly => assembly.GetName().Name.Replace('.', ' '))
-				.Where(name => name == "SolidCP Server" || name == "SolidCP EnterpriseServer");
+				.Where(name => name == "FuseCP Server" || name == "FuseCP EnterpriseServer");
 			var title = $"{string.Join(" & ", srvcAssemblies.ToArray())} API";
-            var hasServer = title.Contains("SolidCP Server");
-            var hasEnterprise = title.Contains("SolidCP EnterpriseServer");
+            var hasServer = title.Contains("FuseCP Server");
+            var hasEnterprise = title.Contains("FuseCP EnterpriseServer");
 
             var openServices = $"{(hasServer || hasEnterprise ? "but the " : "")}{(hasEnterprise ? $"esAuthentication{(hasServer ? ", " : " & ")}esTest{(hasServer ? ", " : " ")}" : "")}{(hasServer ? "AutoDiscovery & Test " : "")}";
-            var clientAssembly = $"{(hasEnterprise ? "SolidCP.EnterpriseServer.Client " : "")}{(hasEnterprise && hasServer ? "& " : "")}{(hasServer ? "SolidCP.Server.Client " : "")}";
+            var clientAssembly = $"{(hasEnterprise ? "FuseCP.EnterpriseServer.Client " : "")}{(hasEnterprise && hasServer ? "& " : "")}{(hasServer ? "FuseCP.Server.Client " : "")}";
 
             var ver = a.GetCustomAttribute<AssemblyVersionAttribute>();
 			services
@@ -313,12 +313,12 @@ namespace SolidCP.Web.Services
 				{
 					o.Title = title;
 					o.Version = ver?.Version ?? "1.0";
-					o.Description = $"This is the REST API of SolidCP. Note that all {openServices}services use Basic Http Authentication. If you use .NET, you might want to access the API over WCF/SOAP, in this case refer to the {clientAssembly}assembly.";
-					o.TermsOfService = new("http://solidcp.com/terms");
+					o.Description = $"This is the REST API of FuseCP. Note that all {openServices}services use Basic Http Authentication. If you use .NET, you might want to access the API over WCF/SOAP, in this case refer to the {clientAssembly}assembly.";
+					o.TermsOfService = new("http://fusecp.com/terms");
 					o.ContactName = "Contact";
-					o.ContactEmail = "support@solidcp.com";
-					o.ContactUrl = new("http://solidcp.com/contact");
-					o.ExternalDocumentUrl = new("http://solidcp.com/apidoc.pdf");
+					o.ContactEmail = "support@fusecp.com";
+					o.ContactUrl = new("http://fusecp.com/contact");
+					o.ExternalDocumentUrl = new("http://fusecp.com/apidoc.pdf");
 					o.ExternalDocumentDescription = "Documentation";
 				});
 

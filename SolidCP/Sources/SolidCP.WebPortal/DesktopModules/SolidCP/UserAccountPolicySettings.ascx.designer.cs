@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SolidCP.Portal {
+namespace FuseCP.Portal {
     
     
     public partial class UserAccountPolicySettings {
         
         /// <summary>
-        /// lnkSolidCPPolicy control.
+        /// lnkFuseCPPolicy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkSolidCPPolicy;
+        protected global::System.Web.UI.WebControls.HyperLink lnkFuseCPPolicy;
         
         /// <summary>
         /// lnkServiceLevels control.

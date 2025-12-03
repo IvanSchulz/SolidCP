@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -157,7 +157,7 @@
     <value>Backup Options:</value>
   </data>
   <data name="lblBackupPath.Text" xml:space="preserve">
-    <value>SolidCP Server backup path:</value>
+    <value>FuseCP Server backup path:</value>
   </data>
   <data name="lblBackupNetworkPath.Text" xml:space="preserve">
     <value>Network path or linux mount point:</value>

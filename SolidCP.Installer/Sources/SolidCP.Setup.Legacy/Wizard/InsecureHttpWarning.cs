@@ -43,10 +43,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-using SolidCP.Setup.Web;
-using SolidCP.Providers.OS;
+using FuseCP.Setup.Web;
+using FuseCP.Providers.OS;
 
-namespace SolidCP.Setup
+namespace FuseCP.Setup
 {
 	public partial class InsecureHttpWarningPage : BannerWizardPage
 	{

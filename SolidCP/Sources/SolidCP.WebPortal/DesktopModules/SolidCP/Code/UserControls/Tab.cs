@@ -35,7 +35,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SolidCP.Portal.Code.UserControls
+namespace FuseCP.Portal.Code.UserControls
 {
     public class Tab
     {

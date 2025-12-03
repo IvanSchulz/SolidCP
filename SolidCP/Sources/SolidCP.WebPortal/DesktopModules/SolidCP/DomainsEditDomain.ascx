@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsEditDomain.ascx.cs" Inherits="SolidCP.Portal.DomainsEditDomain" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsEditDomain.ascx.cs" Inherits="FuseCP.Portal.DomainsEditDomain" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
 <%@ Register Src="UserControls/CollapsiblePanel.ascx" TagPrefix="scp" TagName="CollapsiblePanel" %>
 <%@ Register Src="UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
@@ -12,7 +12,7 @@
     </div>
     
 
-    <fieldset id="SolidCP" runat="server" visible="false">
+    <fieldset id="FuseCP" runat="server" visible="false">
         <legend><asp:Localize ID="WebSiteSection" runat="server" meta:resourcekey="WebSiteSection" Text="Web site"></asp:Localize></legend>
         
         <ul class="VerticalButtons">
