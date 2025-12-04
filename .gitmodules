@@ -6,8 +6,8 @@
 	url = https://github.com/simonegli8/wpkg
 [submodule "FuseCP/Lib/novnc-fusecp"]
 	path = FuseCP/Lib/novnc-fusecp
-	url = https://github.com/simonegli8/novnc-fusecp
-	branch = fusecp1.4.0
+	url = https://github.com/simonegli8/novnc-solidcp
+	branch = solidcp1.4.0
 [submodule "FuseCP/Lib/WebFormsForCore"]
 	path = FuseCP/Lib/WebFormsForCore
 	url = https://github.com/webformsforcore/WebFormsForCore
