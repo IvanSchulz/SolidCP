@@ -1,21 +1,21 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPermissions.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VdcPermissions" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 	    <div class="Content">
 		    <div class="Center">
 			    <div class="panel-body form-horizontal">
     			
-			        <scp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:SimpleMessageBox id="messageBox" runat="server" />
     			
-			        <scp:CollapsiblePanel id="secVdcPermissions" runat="server"
+			        <fcp:CollapsiblePanel id="secVdcPermissions" runat="server"
                         TargetControlID="VdcPermissionsPanel" meta:resourcekey="secVdcPermissions" Text="Virtual Data Center Permissions">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="VdcPermissionsPanel" runat="server" Height="0" style="overflow:hidden;">
                     
 			            <asp:GridView ID="gvVdcPermissions" runat="server" AutoGenerateColumns="False"
@@ -51,9 +51,9 @@
                     </asp:Panel>
                     
                     
-			        <scp:CollapsiblePanel id="secVpsPermissions" runat="server"
+			        <fcp:CollapsiblePanel id="secVpsPermissions" runat="server"
                         TargetControlID="VpsPermissionsPanel" meta:resourcekey="secVpsPermissions" Text="Virtual Private Server Permissions">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="VpsPermissionsPanel" runat="server" Height="0" style="overflow:hidden;">
                     
 			            <asp:GridView ID="gvVpsPermissions" runat="server" AutoGenerateColumns="False"

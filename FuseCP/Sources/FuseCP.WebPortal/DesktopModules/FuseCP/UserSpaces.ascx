@@ -2,7 +2,7 @@
 <%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
-<%@ Register Src="UserOrganization.ascx" TagName="UserOrganization" TagPrefix="scp" %>
+<%@ Register Src="UserOrganization.ascx" TagName="UserOrganization" TagPrefix="fcp" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
 <script src="/JavaScript/chosen.min.js" type="text/javascript"></script>
@@ -52,7 +52,7 @@
 
                     </div>
                 <asp:Panel ID="OrgPanel" runat="server" Visible='<%# IsOrgPanelVisible((int)Eval("PackageID")) %>'>
-                    <scp:UserOrganization ID="UserOrganization" runat="server" PackageId='<%# (int)Eval("PackageID") %>' />
+                    <fcp:UserOrganization ID="UserOrganization" runat="server" PackageId='<%# (int)Eval("PackageID") %>' />
                 </asp:Panel>
             </ItemTemplate>
         </asp:Repeater>

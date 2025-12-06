@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeRetentionPolicyTag.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeRetentionPolicyTag" %>
-<%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %><%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %><%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
 
 <%@ Import Namespace="FuseCP.Portal" %>
 
@@ -15,7 +15,7 @@
     </h3>
 </div>
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <asp:GridView id="gvPolicy" runat="server"  EnableViewState="true" AutoGenerateColumns="false" Width="100%" EmptyDataText="gvPolicy" CssSelectorClass="NormalGridView" OnRowCommand="gvPolicy_RowCommand" >
         <Columns>
             <asp:TemplateField>
@@ -47,7 +47,7 @@
         </Columns>
     </asp:GridView>
     <br />
-    <scp:CollapsiblePanel id="secPolicy" runat="server" TargetControlID="Policy" meta:resourcekey="secPolicy" Text="Policy"></scp:CollapsiblePanel>
+    <fcp:CollapsiblePanel id="secPolicy" runat="server" TargetControlID="Policy" meta:resourcekey="secPolicy" Text="Policy"></fcp:CollapsiblePanel>
     <asp:Panel ID="Policy" runat="server" Height="0" style="overflow:hidden;">
         <div class="form-group">
             <asp:Label runat="server" CssClass="control-label col-sm-2" AssociatedControlID="valRequirePolicy">
@@ -60,7 +60,7 @@
             </div>
         </div>
     </asp:Panel>
-    <scp:CollapsiblePanel id="secPolicyFeatures" runat="server" TargetControlID="PolicyFeatures" meta:resourcekey="secPolicyFeatures" Text="Policy Tag Features"></scp:CollapsiblePanel>
+    <fcp:CollapsiblePanel id="secPolicyFeatures" runat="server" TargetControlID="PolicyFeatures" meta:resourcekey="secPolicyFeatures" Text="Policy Tag Features"></fcp:CollapsiblePanel>
     <asp:Panel ID="PolicyFeatures" runat="server" Height="0" style="overflow:hidden;">
         <div class="form-group">
             <asp:Label runat="server" CssClass="control-label col-sm-2" AssociatedControlID="ddTagType">

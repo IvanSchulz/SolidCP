@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesIPAddresses.ascx.cs" Inherits="FuseCP.Portal.WebSitesIPAddresses" %>
-<%@ Register Src="UserControls/PackageIPAddresses.ascx" TagName="PackageIPAddresses" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
+<%@ Register Src="UserControls/PackageIPAddresses.ascx" TagName="PackageIPAddresses" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
 
 <div class="panel-body form-horizontal">
-    <scp:PackageIPAddresses id="webAddresses" runat="server"
+    <fcp:PackageIPAddresses id="webAddresses" runat="server"
             Pool="WebSites"
             EditItemControl=""
             SpaceHomeControl=""
@@ -12,15 +12,15 @@
             ManageAllowed="true" />
     
     <br />
-    <scp:CollapsiblePanel id="secQuotas" runat="server"
+    <fcp:CollapsiblePanel id="secQuotas" runat="server"
         TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
     
     <table cellspacing="6">
         <tr>
             <td><asp:Localize ID="locIPQuota" runat="server" meta:resourcekey="locIPQuota" Text="Number of IP Addresses:"></asp:Localize></td>
-            <td><scp:Quota ID="addressesQuota" runat="server" QuotaName="Web.IPAddresses" /></td>
+            <td><fcp:Quota ID="addressesQuota" runat="server" QuotaName="Web.IPAddresses" /></td>
         </tr>
     </table>
     

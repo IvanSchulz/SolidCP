@@ -37,7 +37,7 @@ public abstract partial class Installer
 	public virtual string ServerUser => $"{FuseCP}Server";
 	public virtual string EnterpriseServerUser => $"{FuseCP}EnterpriseServer";
 	public virtual string WebPortalUser => $"{FuseCP}Portal";
-	public virtual string FuseCPWebUsersGroup => "SCP_IUSRS";
+	public virtual string FuseCPWebUsersGroup => "FCP_IUSRS";
 	public virtual string UnixAppRootPath => "/usr/share";
 	public virtual string NewLine => Environment.NewLine;
 	public virtual bool CanInstallServer => true;

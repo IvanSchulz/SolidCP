@@ -137,7 +137,7 @@ namespace FuseCP.Providers.WebAppGallery
     public class DeploymentParameter
     {
         #region Constants
-        public const string ResourceGroupParameterName = "SCPResourceGroup";
+        public const string ResourceGroupParameterName = "FCPResourceGroup";
         #endregion
 
         #region Properties

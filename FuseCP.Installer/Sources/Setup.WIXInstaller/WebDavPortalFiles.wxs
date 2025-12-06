@@ -770,10 +770,10 @@
                 <File Id="fil8CFE57841180674BF9FFD1130B6C5E1F" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\Scripts\appScripts\recalculateResourseHeight.js" />
             </Component>
             <Component Id="cmpB55E39260BD82ECDDCFADEEC51A027EE" Directory="dir3FB0494BCAA20B055B7EBA90A2E7E16F" Guid="{A4A3C7EE-8584-40EB-B8C5-0137DABA55C8}">
-                <File Id="fil7FCA84F3D0B255FDC9105A010B57A10A" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\Scripts\appScripts\SCP-webdav.js" />
+                <File Id="fil7FCA84F3D0B255FDC9105A010B57A10A" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\Scripts\appScripts\FCP-webdav.js" />
             </Component>
             <Component Id="cmpDE91D80AA483D363C28717C25DDFA382" Directory="dir3FB0494BCAA20B055B7EBA90A2E7E16F" Guid="{6086E375-B940-4433-83D1-C5AD32BB31C1}">
-                <File Id="fil8755D4654831A9355804E10B5B188EF3" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\Scripts\appScripts\SCP.js" />
+                <File Id="fil8755D4654831A9355804E10B5B188EF3" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\Scripts\appScripts\FCP.js" />
             </Component>
             <Component Id="cmp4854AC74CED31637AF261622B2ACA179" Directory="dir3FB0494BCAA20B055B7EBA90A2E7E16F" Guid="{10F9C774-E5A6-480B-85C3-ECF13AADC697}">
                 <File Id="filBDBA1F13FAE2A10B2432795B57635510" KeyPath="yes" Source="!(wix.BUILDWDPPATH)\Scripts\appScripts\uploadingData2.js" />

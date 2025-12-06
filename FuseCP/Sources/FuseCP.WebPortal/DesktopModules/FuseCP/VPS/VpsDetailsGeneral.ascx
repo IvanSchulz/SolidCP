@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsGeneral.ascx.cs" Inherits="FuseCP.Portal.VPS.VpsDetailsGeneral" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <asp:Timer runat="server" Interval="10000" ID="operationTimer" />
 
@@ -24,12 +24,12 @@ function OpenRemoteDesktopWindow(resolution, width, height) {
 			    <div class="panel-heading">
                     <h3 class="panel-title">
                         <asp:Image ID="imgIcon" SkinID="Server48" runat="server" />
-				        <scp:FormTitle ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="General" />
+				        <fcp:FormTitle ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="General" />
                     </h3>
                 </div>
 			    <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
-			        <scp:ServerTabs id="tabs" runat="server" SelectedTab="vps_general" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:ServerTabs id="tabs" runat="server" SelectedTab="vps_general" />	
 				    <table id="DetailsTable" runat="server" style="width:100%;" cellspacing="10">
 				        <tr>
 				            <td valign="top" style="width:40%;">
@@ -152,7 +152,7 @@ function OpenRemoteDesktopWindow(resolution, width, height) {
                                                     <asp:Localize ID="locCpu" runat="server" meta:resourcekey="locCpu" Text="CPU:"/>
                                                 </td>
 				                                <td class="NormalBold" style="width:150px;">
-				                                    <scp:Gauge ID="cpuGauge" runat="server" Progress="0" Total="100" />
+				                                    <fcp:Gauge ID="cpuGauge" runat="server" Progress="0" Total="100" />
 				                                    <asp:Literal ID="litCpuPercentage" runat="server" Text="0%"></asp:Literal>
 				                                </td>
 				                                <td>
@@ -164,7 +164,7 @@ function OpenRemoteDesktopWindow(resolution, width, height) {
                                                     <asp:Localize ID="locRam" runat="server" meta:resourcekey="locRam" Text="RAM:"/>
                                                 </td>
 				                                <td class="NormalBold">
-				                                    <scp:Gauge ID="ramGauge" runat="server" Progress="0" Total="100" />
+				                                    <fcp:Gauge ID="ramGauge" runat="server" Progress="0" Total="100" />
 				                                    <asp:Literal ID="litRamPercentage" runat="server" Text="0%"></asp:Literal>
 				                                </td>
 				                                <td>
@@ -176,7 +176,7 @@ function OpenRemoteDesktopWindow(resolution, width, height) {
                                                     <asp:Localize ID="locHdd" runat="server" meta:resourcekey="locHdd" Text="HDD:"/>
                                                 </td>
 				                                <td class="NormalBold">
-				                                    <scp:Gauge ID="hddGauge" runat="server" Progress="0" Total="100" />
+				                                    <fcp:Gauge ID="hddGauge" runat="server" Progress="0" Total="100" />
 				                                    <asp:Literal ID="litHddPercentage" runat="server" Text="0%"></asp:Literal>
 				                                </td>
 				                                <td>

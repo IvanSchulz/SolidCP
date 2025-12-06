@@ -43,7 +43,7 @@ namespace FuseCP.WebPortal
     public class FuseCPSiteMapProvider : SiteMapProvider
     {
         private const string DEFAULT_PAGE_URL = "~/Default.aspx?pid=";
-        private const string ROOT_NODE_KEY = "scp_root";
+        private const string ROOT_NODE_KEY = "fcp_root";
         private const string PAGE_ID_PARAM = "pid";
 
         private SiteMapProvider parentSiteMapProvider = null;

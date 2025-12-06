@@ -6230,11 +6230,11 @@ VALUES ('SecuredFoldersFilterPath', 2, '%SYSTEMROOT%\System32\InetSrv\IISPasswor
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('WebGroupName', 2, 'SCPWebUsers');
+VALUES ('WebGroupName', 2, 'FCPWebUsers');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('FtpGroupName', 3, 'SCPFtpUsers');
+VALUES ('FtpGroupName', 3, 'FCPFtpUsers');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6570,7 +6570,7 @@ VALUES ('MailboxDatabase', 27, 'Hosted Exchange Database');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('RootOU', 27, 'SCP Hosting');
+VALUES ('RootOU', 27, 'FCP Hosting');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6722,7 +6722,7 @@ VALUES ('MailboxDatabase', 32, 'Hosted Exchange Database');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('RootOU', 32, 'SCP Hosting');
+VALUES ('RootOU', 32, 'FCP Hosting');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7038,7 +7038,7 @@ VALUES ('SecureFoldersModuleAssembly', 101, 'FuseCP.IIsModules.SecureFolders, Fu
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('WebGroupName', 101, 'SCP_IUSRS');
+VALUES ('WebGroupName', 101, 'FCP_IUSRS');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7050,7 +7050,7 @@ VALUES ('WmSvc.Port', 101, '8172');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('FtpGroupName', 102, 'SCPFtpUsers');
+VALUES ('FtpGroupName', 102, 'FCPFtpUsers');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7142,7 +7142,7 @@ VALUES ('sslusesni', 105, 'True');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('WebGroupName', 105, 'SCP_IUSRS');
+VALUES ('WebGroupName', 105, 'FCP_IUSRS');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7154,7 +7154,7 @@ VALUES ('WmSvc.Port', 105, '8172');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('FtpGroupName', 106, 'SCPFtpUsers');
+VALUES ('FtpGroupName', 106, 'FCPFtpUsers');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7250,7 +7250,7 @@ VALUES ('sslusesni', 112, 'True');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('WebGroupName', 112, 'SCP_IUSRS');
+VALUES ('WebGroupName', 112, 'FCP_IUSRS');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -7262,7 +7262,7 @@ VALUES ('WmSvc.Port', 112, '8172');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-VALUES ('FtpGroupName', 113, 'SCPFtpUsers');
+VALUES ('FtpGroupName', 113, 'FCPFtpUsers');
 SELECT changes();
 
 INSERT INTO "ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")

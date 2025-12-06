@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsEditDomain.ascx.cs" Inherits="FuseCP.Portal.DomainsEditDomain" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagPrefix="scp" TagName="CollapsiblePanel" %>
-<%@ Register Src="UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagPrefix="fcp" TagName="CollapsiblePanel" %>
+<%@ Register Src="UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <div class="panel-body form-horizontal">
 
@@ -132,6 +132,6 @@
 </div>
 <div class="panel-footer text-right">
     <CPCC:StyleButton id="btnDelete" CssClass="btn btn-danger" meta:resourcekey="btnDelete" runat="server" OnClick="btnDelete_Click" CausesValidation="false"> <i class="fa fa-trash-o">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnDeleteText"/> </CPCC:StyleButton>&nbsp;
-    <scp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="EditMailbox" 
+    <fcp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="EditMailbox" 
         OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" OnSaveClientClick="ShowProgressDialog('Updating Domain...');" />
 </div>

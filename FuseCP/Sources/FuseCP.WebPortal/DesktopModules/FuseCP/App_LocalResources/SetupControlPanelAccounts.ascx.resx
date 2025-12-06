@@ -126,7 +126,7 @@
   <data name="lblUserNameA.Text" xml:space="preserve">
     <value>User Name:</value>
   </data>
-  <data name="ScpaProcedureDescription.Text" xml:space="preserve">
+  <data name="FcpaProcedureDescription.Text" xml:space="preserve">
     <value>Please setup passwords for FuseCP "serveradmin" and "admin" accounts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; is control panel administrator account. Using this account you can manage all your servers and services, create new hosting plans and customer accounts, both resellers and users.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; is a pre-configured reseller account with unlimited hosting plan to manage local server where control panel is installed.</value>
   </data>
 </root>

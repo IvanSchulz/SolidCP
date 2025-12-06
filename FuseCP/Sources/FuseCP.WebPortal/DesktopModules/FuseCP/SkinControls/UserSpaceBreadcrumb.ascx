@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserSpaceBreadcrumb.ascx.cs" Inherits="FuseCP.Portal.SkinControls.UserSpaceBreadcrumb" %>
-<%@ Register TagPrefix="scp" TagName="SpaceOrgsSelector" Src="SpaceOrganizationsSelector.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="SpaceOrgsSelector" Src="SpaceOrganizationsSelector.ascx" %>
 <div id="Breadcrumb">
     <div class="Path">
         <div class="col-xs-8">
@@ -29,7 +29,7 @@
             <asp:HyperLink ID="lnkOrgCurPage" runat="server">Home</asp:HyperLink>
         </span>
         </div>
-        <scp:SpaceOrgsSelector ID="SpaceOrgsSelector" runat="server" />
+        <fcp:SpaceOrgsSelector ID="SpaceOrgsSelector" runat="server" />
     </div>
 
 

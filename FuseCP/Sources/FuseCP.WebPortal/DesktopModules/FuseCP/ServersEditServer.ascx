@@ -4,13 +4,13 @@
 <%@ Register Src="ServerIPAddressesControl.ascx" TagName="ServerIPAddressesControl" TagPrefix="uc2" %>
 <%@ Register Src="ServerDnsRecordsControl.ascx" TagName="ServerDnsRecordsControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/ServerPasswordControl.ascx" TagName="ServerPasswordControl" TagPrefix="uc1" %>
-<%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="ProductVersion" Src="SkinControls/ProductVersion.ascx" %>
+<%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="ProductVersion" Src="SkinControls/ProductVersion.ascx" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 <asp:ValidationSummary ID="summary" runat="server" ShowMessageBox="true" ShowSummary="false" ValidationGroup="Server" />
 
 <section>
@@ -34,8 +34,8 @@
                         </td>
                     </tr>
                 </table>
-                <scp:CollapsiblePanel ID="ConnectionHeader" runat="server" IsCollapsed="true"
-                    TargetControlID="ConnectionPanel" ResourceKey="ConnectionHeader" Text="Connection Settings"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="ConnectionHeader" runat="server" IsCollapsed="true"
+                    TargetControlID="ConnectionPanel" ResourceKey="ConnectionHeader" Text="Connection Settings"></fcp:CollapsiblePanel>
                 <asp:Panel ID="ConnectionPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table width="100%">
                         <tr>
@@ -62,8 +62,8 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <scp:CollapsiblePanel ID="ADHeader" runat="server" IsCollapsed="true"
-                    TargetControlID="ADPanel" ResourceKey="ADHeader" Text="Active Directory Settings"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="ADHeader" runat="server" IsCollapsed="true"
+                    TargetControlID="ADPanel" ResourceKey="ADHeader" Text="Active Directory Settings"></fcp:CollapsiblePanel>
                 <asp:Panel ID="ADPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table>
                         <tr>
@@ -152,8 +152,8 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <scp:CollapsiblePanel ID="PreviewDomainHeader" runat="server" IsCollapsed="true"
-                    TargetControlID="PreviewDomainPanel" ResourceKey="PreviewDomainHeader" Text="Preview Domain"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="PreviewDomainHeader" runat="server" IsCollapsed="true"
+                    TargetControlID="PreviewDomainPanel" ResourceKey="PreviewDomainHeader" Text="Preview Domain"></fcp:CollapsiblePanel>
                 <asp:Panel ID="PreviewDomainPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table width="100%">
                         <tr>
@@ -169,8 +169,8 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <scp:CollapsiblePanel ID="IPAddressesHeader" runat="server" IsCollapsed="true"
-                    TargetControlID="IPAddressesPanel" ResourceKey="IPAddressesHeader" Text="IP Addresses"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="IPAddressesHeader" runat="server" IsCollapsed="true"
+                    TargetControlID="IPAddressesPanel" ResourceKey="IPAddressesHeader" Text="IP Addresses"></fcp:CollapsiblePanel>
                 <asp:Panel ID="IPAddressesPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table width="100%">
                         <tr>
@@ -180,8 +180,8 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <scp:CollapsiblePanel ID="VLANsHeader" runat="server" IsCollapsed="true"
-                    TargetControlID="VLANsPanel" ResourceKey="VLANsHeader" Text="Private Network VLANs"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="VLANsHeader" runat="server" IsCollapsed="true"
+                    TargetControlID="VLANsPanel" ResourceKey="VLANsHeader" Text="Private Network VLANs"></fcp:CollapsiblePanel>
                 <asp:Panel ID="VLANsPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table width="100%">
                         <tr>
@@ -191,8 +191,8 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <scp:CollapsiblePanel ID="ServicesHeader" runat="server"
-                    TargetControlID="ServicesPanel" ResourceKey="ServicesHeader" Text="Services"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="ServicesHeader" runat="server"
+                    TargetControlID="ServicesPanel" ResourceKey="ServicesHeader" Text="Services"></fcp:CollapsiblePanel>
                 <asp:Panel ID="ServicesPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table width="100%">
                         <tr>
@@ -210,8 +210,8 @@
                         </tr>
                     </table>
                 </asp:Panel>
-                <scp:CollapsiblePanel ID="DnsRecordsHeader" runat="server" IsCollapsed="true"
-                    TargetControlID="DnsRecordsPanel" ResourceKey="DnsRecordsHeader" Text="DNS Records Template"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel ID="DnsRecordsHeader" runat="server" IsCollapsed="true"
+                    TargetControlID="DnsRecordsPanel" ResourceKey="DnsRecordsHeader" Text="DNS Records Template"></fcp:CollapsiblePanel>
                 <asp:Panel ID="DnsRecordsPanel" runat="server" Height="0" Style="overflow: hidden;">
                     <table width="100%">
                         <tr>
@@ -303,13 +303,13 @@
                             <asp:Label ID="lblServerVersion" runat="server" meta:resourcekey="lblServerVersion" Text="FuseCP Server Version"></asp:Label>
                             :<br />
                             <asp:Localize ID="locVersion" runat="server" meta:resourcekey="locVersion" />
-                            <asp:Label ID="scpVersion" runat="server" />
+                            <asp:Label ID="fcpVersion" runat="server" />
                         </li>
                         <li class="list-group-item">
                             <asp:Label ID="lblServerFilePath" runat="server" meta:resourcekey="lblServerFilePath" Text="FuseCP Server Filepath"></asp:Label>
                             :<br />
                             <asp:Localize ID="locFilepath" runat="server" meta:resourcekey="locFilepath" />
-                            <asp:Label ID="scpFilepath" runat="server" />
+                            <asp:Label ID="fcpFilepath" runat="server" />
                         </li>
 
                     </ul>
@@ -335,7 +335,7 @@
                             (MB)
                         </li>
                         <li class="list-group-item">Usage:
-                            <scp:Gauge ID="ramGauge" runat="server" Progress="0" Total="100" />
+                            <fcp:Gauge ID="ramGauge" runat="server" Progress="0" Total="100" />
                         </li>
                     </ul>
                 </div>

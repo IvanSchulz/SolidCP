@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRM_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.CRM_Settings" %>
-<%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="fcp" %>
 <table>
     <tr>
         <td class="SubHead" width="200" nowrap><asp:Label runat="server" ID="lblSqlServer" meta:resourcekey="lblSqlServer" /></td>
@@ -38,7 +38,7 @@
     <tr>
         <td class="SubHead" width="200" nowrap><asp:Label runat="server" ID="lblCrmIP" meta:resourcekey="lblCrmIP"/></td>
         <td class="Normal" width="100%">
-            <scp:SelectIPAddress ID="ddlCrmIpAddress" runat="server" ServerIdParam="ServerID" AllowEmptySelection="false" />            
+            <fcp:SelectIPAddress ID="ddlCrmIpAddress" runat="server" ServerIdParam="ServerID" AllowEmptySelection="false" />            
         </td>
     </tr>
     

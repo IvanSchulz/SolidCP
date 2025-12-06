@@ -1,19 +1,19 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationUserGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.UserGeneralSettings" %>
-<%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SendToControl.ascx" TagName="SendToControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/UserTabs.ascx" TagName="UserTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="scp" %>
+<%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SendToControl.ascx" TagName="SendToControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/UserTabs.ascx" TagName="UserTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="fcp" %>
 
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 <div class="panel-heading">
     <h3 class="panel-title">
@@ -27,11 +27,11 @@
 </div>
 <div class="panel-body form-horizontal">
 <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-        <scp:UserTabs ID="UserTabsId" runat="server" SelectedTab="edit_user" />
-        <scp:MailboxTabs ID="MailboxTabsId" runat="server" SelectedTab="edit_user" />
+        <fcp:UserTabs ID="UserTabsId" runat="server" SelectedTab="edit_user" />
+        <fcp:MailboxTabs ID="MailboxTabsId" runat="server" SelectedTab="edit_user" />
 </div>
     <div class="panel panel-default tab-content">
-        <scp:SimpleMessageBox ID="messageBox" runat="server" />
+        <fcp:SimpleMessageBox ID="messageBox" runat="server" />
         <div class="row">
         <div class="col-sm-9">
             <h3><i class="fa fa-user"></i> <asp:Localize ID="Generalinfo" runat="server" meta:resourcekey="Generalinfo" Text="General Information"></asp:Localize></h3>
@@ -41,7 +41,7 @@
                                     </asp:Label>
 									</div>
                                     <div class="col-sm-7">
-                                            <scp:EmailAddress ID="upn" runat="server" ValidationGroup="CreateMailbox"></scp:EmailAddress>
+                                            <fcp:EmailAddress ID="upn" runat="server" ValidationGroup="CreateMailbox"></fcp:EmailAddress>
                                 <asp:DropDownList ID="ddlEmailAddresses" runat="server" CssClass="form-control"></asp:DropDownList>
                                     </div>
                                         <CPCC:StyleButton ID="btnSetUserPrincipalName" CssClass="col-sm-3 btn btn-primary" runat="server" OnClick="btnSetUserPrincipalName_Click"><i class="fa fa-user">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnSetUserPrincipalNameText" />
@@ -65,11 +65,11 @@
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-2">
                     <br />
-        <scp:SendToControl ID="sendToControl" runat="server" ValidationGroup="CreateMailbox" ControlToHide="PasswordBlock"></scp:SendToControl>
+        <fcp:SendToControl ID="sendToControl" runat="server" ValidationGroup="CreateMailbox" ControlToHide="PasswordBlock"></fcp:SendToControl>
                 </div>
                 </div>
                 <div id="PasswordBlock" runat="server">
-                    <scp:PasswordControl ID="password" runat="server" ValidationGroup="ValidatePassword" AllowGeneratePassword="true"></scp:PasswordControl>
+                    <fcp:PasswordControl ID="password" runat="server" ValidationGroup="ValidatePassword" AllowGeneratePassword="true"></fcp:PasswordControl>
 					<div class="col-sm-offset-6 col-sm-4 pull-right" style="margin-top: -50px;margin-right: -40px;"><CPCC:StyleButton ID="btnSetUserPassword" CssClass="btn btn-primary" runat="server" OnClick="btnSetUserPassword_Click" ValidationGroup="ValidatePassword"><i class="fa fa-key">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnSetUserPasswordText" />
                                 </CPCC:StyleButton></div>
                 </div>
@@ -265,7 +265,7 @@
                                                 <asp:Localize ID="locManager" runat="server" meta:resourcekey="locManager" Text="Manager:" />
                                             </asp:Label>
                                             <div class="col-sm-10">
-                                                <scp:UserSelector ID="manager" IncludeMailboxes="true" runat="server" />
+                                                <fcp:UserSelector ID="manager" IncludeMailboxes="true" runat="server" />
                                             </div>
                                         </div>
                          
@@ -392,7 +392,7 @@
                                                 <asp:Localize ID="locCountry" runat="server" meta:resourcekey="locCountry" Text="Country/Region:" />
                                             </asp:Label>
                                             <div class="col-sm-10">
-                                                <scp:CountrySelector ID="country" runat="server"></scp:CountrySelector>
+                                                <fcp:CountrySelector ID="country" runat="server"></fcp:CountrySelector>
                                             </div>
                                         </div>
                                     
@@ -428,7 +428,7 @@
         </div>
     </div>
 <div class="panel-footer text-right">
-    <scp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="EditMailbox"
+    <fcp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="EditMailbox"
         OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" ValidationGroup="EditMailbox" />
 </div>

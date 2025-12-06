@@ -1338,7 +1338,7 @@ namespace FuseCP.Providers.Mail
 
         protected MailList CreateMailListFromAccountObject(dynamic accountObject)
         {
-            // IceWarp has separate settings for list server and mailing list. Together they have all the info we need for a SCP MailList
+            // IceWarp has separate settings for list server and mailing list. Together they have all the info we need for a FCP MailList
             // From an accountObject of type list server, we can fetch the mailing lists associated with it
             // So, first we search and find the list server account that is associated with this mailing list account.
             var listServerAccountObject = FindMatchingListServerAccount(accountObject.EmailAddress, true);

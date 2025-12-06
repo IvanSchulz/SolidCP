@@ -468,7 +468,7 @@ namespace FuseCP.Providers.HostedSolution
             {
                 if (ex.Message == "Unknown error (0x80005000)")
                 {
-                    throw new Exception("Probably an authentication issue. Did you set the Active Directory settings of the involved SCP Server correctly (NONE/yourADdomain.com/blank/blank)?", ex);
+                    throw new Exception("Probably an authentication issue. Did you set the Active Directory settings of the involved FCP Server correctly (NONE/yourADdomain.com/blank/blank)?", ex);
                 }
                 throw;
             }

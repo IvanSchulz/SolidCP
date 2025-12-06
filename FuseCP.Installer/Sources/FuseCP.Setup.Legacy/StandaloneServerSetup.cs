@@ -201,7 +201,7 @@ namespace FuseCP.Setup
 						esServerSetup.ServerAdminPassword = Guid.NewGuid().ToString();
 						// Set peer admin password
 						esServerSetup.PeerAdminPassword = Guid.NewGuid().ToString();
-						// Instruct provisioning scenario to enter the application in SCPA mode (Setup Control Panel Acounts)
+						// Instruct provisioning scenario to enter the application in FCPA mode (Setup Control Panel Acounts)
 						esServerSetup.EnableScpaMode = true;
 					}
 					else
@@ -291,11 +291,11 @@ namespace FuseCP.Setup
 					new ConfigurationCheck(CheckTypes.IISVersion, "IIS Requirement"){ SetupVariables = serverSetup }, 
 					new ConfigurationCheck(CheckTypes.ASPNET, "ASP.NET Requirement"){ SetupVariables = serverSetup }, 
 					// Validate Server installation prerequisites
-					new ConfigurationCheck(CheckTypes.SCPServer, "FuseCP Server Requirement") { SetupVariables = serverSetup }, 
+					new ConfigurationCheck(CheckTypes.FCPServer, "FuseCP Server Requirement") { SetupVariables = serverSetup }, 
 					// Validate EnterpriseServer installation prerequisites
-					new ConfigurationCheck(CheckTypes.SCPEnterpriseServer, "FuseCP Enterprise Server Requirement") { SetupVariables = esServerSetup }, 
+					new ConfigurationCheck(CheckTypes.FCPEnterpriseServer, "FuseCP Enterprise Server Requirement") { SetupVariables = esServerSetup }, 
 					// Validate WebPortal installation prerequisites
-					new ConfigurationCheck(CheckTypes.SCPPortal, "FuseCP Portal Requirement") { SetupVariables = portalSetup }
+					new ConfigurationCheck(CheckTypes.FCPPortal, "FuseCP Portal Requirement") { SetupVariables = portalSetup }
 				});
 				// Assign WebPortal setup variables set to acquire corresponding settings
 				var page3 = new WebPage { SetupVariables = portalSetup };

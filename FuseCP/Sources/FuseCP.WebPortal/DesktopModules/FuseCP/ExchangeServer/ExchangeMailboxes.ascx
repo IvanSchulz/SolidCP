@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxes.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeMailboxes" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/UserActions.ascx" TagName="UserActions" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/UserActions.ascx" TagName="UserActions" TagPrefix="fcp" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
 <script type="text/javascript">
@@ -17,7 +17,7 @@
     }
 </script>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 <div class="panel-heading">
     <h3 class="panel-title">
         <asp:Image ID="Image1" SkinID="ExchangeMailbox48" runat="server" />
@@ -31,10 +31,10 @@
     </CPCC:StyleButton>
 </div>
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <div class="row">
         <div class="col-md-4">
-            <scp:UserActions ID="userActions" runat="server" GridViewID="gvMailboxes" CheckboxesName="chkSelectedUsersIds" ShowSetMailboxPlan="true" />
+            <fcp:UserActions ID="userActions" runat="server" GridViewID="gvMailboxes" CheckboxesName="chkSelectedUsersIds" ShowSetMailboxPlan="true" />
         </div>
         <asp:Panel ID="SearchPanel" runat="server" DefaultButton="cmdSearch" CssClass="col-md-8 text-right form-inline">
             <div class="form-group">
@@ -152,14 +152,14 @@
 <div class="panel-footer">
     <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Total Mailboxes Created:"></asp:Localize>
     &nbsp;&nbsp;&nbsp;
-    <scp:QuotaViewer ID="mailboxesQuota" runat="server" QuotaTypeId="2" />
+    <fcp:QuotaViewer ID="mailboxesQuota" runat="server" QuotaTypeId="2" />
 </div>
 <asp:Repeater ID="dlServiceLevelQuotas" runat="server" EnableViewState="false">
     <ItemTemplate>
         <div>
             <asp:Localize ID="locServiceLevelQuota" runat="server" Text='<%# Eval("QuotaDescription") %>'></asp:Localize>
             &nbsp;&nbsp;&nbsp;
-            <scp:QuotaViewer ID="serviceLevelQuota" runat="server"
+            <fcp:QuotaViewer ID="serviceLevelQuota" runat="server"
                 QuotaTypeId='<%# Eval("QuotaTypeId") %>'
                 QuotaUsedValue='<%# Eval("QuotaUsedValue") %>'
                 QuotaValue='<%# Eval("QuotaValue") %>'

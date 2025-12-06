@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsMySqlPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsMySqlPolicy" %>
 <%@ Register Src="UserControls/UsernamePolicyEditor.ascx" TagName="UsernamePolicyEditor" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 
-<scp:CollapsiblePanel id="secDatabase" runat="server"
+<fcp:CollapsiblePanel id="secDatabase" runat="server"
     TargetControlID="DatabasePanel" meta:resourcekey="secDatabase" Text="Database Policy"/>
 <asp:Panel ID="DatabasePanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -20,7 +20,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secUsername" runat="server"
+<fcp:CollapsiblePanel id="secUsername" runat="server"
     TargetControlID="UsernamePanel" meta:resourcekey="secUsername" Text="Username Policy"/>
 <asp:Panel ID="UsernamePanel" runat="server" Height="0" style="overflow:hidden;">
     <table>

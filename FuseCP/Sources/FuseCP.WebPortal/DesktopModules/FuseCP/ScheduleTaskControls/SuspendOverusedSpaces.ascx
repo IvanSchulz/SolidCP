@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SuspendOverusedSpaces.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.SuspendOverusedSpaces" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 
-<scp:CollapsiblePanel id="clpOverusageDefinitionHeader" runat="server"
+<fcp:CollapsiblePanel id="clpOverusageDefinitionHeader" runat="server"
     TargetControlID="pnlOverusageDefinition" resourcekey="clpOverusageDefinitionHeader" Text="Space overused when">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlOverusageDefinition" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>
@@ -28,9 +28,9 @@
 	<br />
 
 
-<scp:CollapsiblePanel id="clpWarningSettingsHeader" runat="server"
+<fcp:CollapsiblePanel id="clpWarningSettingsHeader" runat="server"
     TargetControlID="pnlWarningSettings" resourcekey="clpWarningSettingsHeader" Text="Issue warning">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlWarningSettings" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>
@@ -91,9 +91,9 @@
 
 	<br />
 
-<scp:CollapsiblePanel id="clpSuspensionSettingsHeader" runat="server"
+<fcp:CollapsiblePanel id="clpSuspensionSettingsHeader" runat="server"
     TargetControlID="pnlSuspensionSettings" resourcekey="clpSuspensionSettingsHeader" Text="Suspend space">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlSuspensionSettings" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>

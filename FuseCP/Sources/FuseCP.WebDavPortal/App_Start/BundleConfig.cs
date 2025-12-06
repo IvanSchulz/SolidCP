@@ -33,11 +33,11 @@ namespace FuseCP.WebDavPortal
                 "~/Scripts/appScripts/messages.js",
                 "~/Scripts/appScripts/fileBrowsing.js",
                 "~/Scripts/appScripts/dialogs.js",
-                "~/Scripts/appScripts/SCP.js"
+                "~/Scripts/appScripts/FCP.js"
                ));
 
             bundles.Add(new ScriptBundle("~/bundles/appScripts-webdav").Include(
-                "~/Scripts/appScripts/SCP-webdav.js"
+                "~/Scripts/appScripts/FCP-webdav.js"
                ));
 
             bundles.Add(new ScriptBundle("~/bundles/bigIconsScripts").Include(

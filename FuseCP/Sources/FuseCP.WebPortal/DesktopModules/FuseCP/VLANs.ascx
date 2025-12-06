@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VLANs.ascx.cs" Inherits="FuseCP.Portal.VLANs" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 <script type="text/javascript">
     function checkAll(selectAllCheckbox) {
@@ -13,7 +13,7 @@
     }
 </script>
 
-<scp:SimpleMessageBox ID="messageBox" runat="server" />
+<fcp:SimpleMessageBox ID="messageBox" runat="server" />
 
 
 <div class="FormButtonsBar right">

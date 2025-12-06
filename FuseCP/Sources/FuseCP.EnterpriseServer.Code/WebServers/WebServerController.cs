@@ -4551,7 +4551,7 @@ Please ensure the space has been allocated {0} IP address as a dedicated one and
                 foreach (DomainInfo pointer in pointers)
                     DeleteWebSitePointer(siteItemId, pointer.DomainId, true, true, true);
 
-                // Get certificateinfo to delete from metabase later, SCP expects only one active certificate for each site
+                // Get certificateinfo to delete from metabase later, FCP expects only one active certificate for each site
                 var certificatesToDeleteFromMetaBase = GetCertificatesForSite(item.Id).Where(c => c.Installed).ToList();
 
                 SSLCertificate certificate = server.InstallPFX(pfx, password, item);

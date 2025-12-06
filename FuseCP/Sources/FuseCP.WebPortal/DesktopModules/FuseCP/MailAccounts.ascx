@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailAccounts.ascx.cs" Inherits="FuseCP.Portal.MailAccounts" %>
-<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="fcp" %>
 
-<scp:SpaceServiceItems ID="itemsList" runat="server"
+<fcp:SpaceServiceItems ID="itemsList" runat="server"
     CreateButtonText="btnAddAccount"
     CreateControlID="edit_item"
     GroupName="Mail"

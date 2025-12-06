@@ -545,8 +545,8 @@
     <Content Include="Scripts\appScripts\recalculateResourseHeight.js" />
     <Content Include="Scripts\appScripts\uploadingData2.js" />
     <Content Include="Scripts\appScripts\validation\passwordeditor.unobtrusive.js" />
-    <Content Include="Scripts\appScripts\scp-webdav.js" />
-    <Content Include="Scripts\appScripts\scp.js" />
+    <Content Include="Scripts\appScripts\fcp-webdav.js" />
+    <Content Include="Scripts\appScripts\fcp.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

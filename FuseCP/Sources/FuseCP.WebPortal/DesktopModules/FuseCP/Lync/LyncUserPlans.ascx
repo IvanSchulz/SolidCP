@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncUserPlans.ascx.cs" Inherits="FuseCP.Portal.Lync.LyncUserPlans" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="UserControls/LyncUserPlanSelector.ascx" TagName="LyncUserPlanSelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/LyncUserPlanSelector.ascx" TagName="LyncUserPlanSelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 			<div class="panel-heading">
                     <h3 class="panel-title">
@@ -14,7 +14,7 @@
 				</h3>
                         </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
                     <div class="FormButtonsBarClean">
                         <CPCC:StyleButton id="btnAddPlan" CssClass="btn btn-primary" runat="server" OnClick="btnAddPlan_Click"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddPlanText"/> </CPCC:StyleButton>
@@ -56,20 +56,20 @@
 				        <CPCC:StyleButton id="btnSetDefaultPlan" CssClass="btn btn-success" runat="server" OnClick="btnSetDefaultPlan_Click"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnSetDefaultPlanText"/> </CPCC:StyleButton>
                     </div>
 				    
-                    <scp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true" TargetControlID="ToolsPanel" meta:resourcekey="secMainTools" Text="Lync user plan maintenance">
-					</scp:CollapsiblePanel>
+                    <fcp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true" TargetControlID="ToolsPanel" meta:resourcekey="secMainTools" Text="Lync user plan maintenance">
+					</fcp:CollapsiblePanel>
 					<asp:Panel ID="ToolsPanel" runat="server" Height="0" Style="overflow: hidden;">
 						<table id="tblMaintenance" runat="server" cellpadding="10">
 					        <tr>
 					            <td class="FormLabel150"><asp:Localize ID="lblSourcePlan" runat="server" meta:resourcekey="locSourcePlan" Text="Replace"></asp:Localize></td>
 					            <td>                                
-                                    <scp:LyncUserPlanSelector ID="lyncUserPlanSelectorSource" runat="server" AddNone="true"/>
+                                    <fcp:LyncUserPlanSelector ID="lyncUserPlanSelectorSource" runat="server" AddNone="true"/>
                                 </td>
 					        </tr>
 					        <tr>
 					            <td class="FormLabel150"><asp:Localize ID="lblTargetPlan" runat="server" meta:resourcekey="locTargetPlan" Text="With"></asp:Localize></td>
 					            <td>                                
-                                    <scp:LyncUserPlanSelector ID="lyncUserPlanSelectorTarget" runat="server" AddNone="false"/>
+                                    <fcp:LyncUserPlanSelector ID="lyncUserPlanSelectorTarget" runat="server" AddNone="false"/>
                                 </td>
 					        </tr>
                             <tr>

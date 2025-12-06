@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationCreateUser.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.OrganizationCreateUser" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SendToControl.ascx" TagName="SendToControl" TagPrefix="scp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SendToControl.ascx" TagName="SendToControl" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div runat="server" id="divWrapper">
     <script language="javascript" type="text/javascript">
@@ -34,7 +34,7 @@
 <asp:UpdatePanel ID="CreateUserUpdatePanel" runat="server" UpdateMode="Conditional">
     <ContentTemplate>
         <div class="panel-body form-horizontal">
-        <scp:SimpleMessageBox id="messageBox" runat="server" />
+        <fcp:SimpleMessageBox id="messageBox" runat="server" />
             <div id="NewUserDiv" runat="server">
              
                                 <div class="form-group">
@@ -89,14 +89,14 @@
                                         <asp:Localize ID="locAccount" runat="server" meta:resourcekey="locAccount" Text="E-mail Address: *" />
                                     </asp:Label>
                                     <div class="col-sm-10">
-                                        <scp:EmailAddress ID="email" runat="server" ValidationGroup="CreateMailbox"></scp:EmailAddress>
+                                        <fcp:EmailAddress ID="email" runat="server" ValidationGroup="CreateMailbox"></fcp:EmailAddress>
                                     </div>
                                 </div>
               
                 </div>
-                <scp:SendToControl ID="sendToControl" runat="server" ValidationGroup="CreateMailbox" ControlToHide="PasswordBlock"></scp:SendToControl>
+                <fcp:SendToControl ID="sendToControl" runat="server" ValidationGroup="CreateMailbox" ControlToHide="PasswordBlock"></fcp:SendToControl>
                 <div id="PasswordBlock" runat="server">
-                    <scp:PasswordControl ID="password" runat="server" ValidationGroup="CreateMailbox" AllowGeneratePassword="true"></scp:PasswordControl>
+                    <fcp:PasswordControl ID="password" runat="server" ValidationGroup="CreateMailbox" AllowGeneratePassword="true"></fcp:PasswordControl>
                     <asp:CheckBox ID="chkUserMustChangePassword" runat="server" meta:resourcekey="chkUserMustChangePassword" Text="User must change password at next login" Visible="False" />
                 </div>
                 <div class="container">
@@ -109,7 +109,7 @@
                                         </label>
                                     <div class="col-sm-10">
                                         <div class="input-group">
-                                            <scp:EmailControl id="sendInstructionEmail" runat="server" RequiredEnabled="true" ValidationGroup="CreateMailbox"></scp:EmailControl></td>
+                                            <fcp:EmailControl id="sendInstructionEmail" runat="server" RequiredEnabled="true" ValidationGroup="CreateMailbox"></fcp:EmailControl></td>
                                         </div>
                                     </div>
                                 </div>

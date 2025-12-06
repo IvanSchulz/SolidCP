@@ -2,23 +2,23 @@
 
 
 
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
-<%@ Register Src="UserControls/StorageSpaceLevelResourceGroups.ascx" TagName="ResourceGroups" TagPrefix="scp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/StorageSpaceLevelResourceGroups.ascx" TagName="ResourceGroups" TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 
         <div class="panel-body form-horizontal">
-            <scp:SimpleMessageBox ID="messageBox" runat="server" />
+            <fcp:SimpleMessageBox ID="messageBox" runat="server" />
 
-            <scp:CollapsiblePanel ID="colStorageSpaceGeneralSettings" runat="server"
+            <fcp:CollapsiblePanel ID="colStorageSpaceGeneralSettings" runat="server"
                 TargetControlID="panelStorageSpaceGeneralSettings" meta:ResourceKey="colStorageSpaceGeneralSettings">
-            </scp:CollapsiblePanel>
+            </fcp:CollapsiblePanel>
 
             <asp:Panel runat="server" ID="panelStorageSpaceGeneralSettings">
                 <asp:UpdatePanel runat="server">
@@ -112,7 +112,7 @@
 
         </div>
             <div class="panel-footer text-right">
-                <scp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="SaveSpaceStorage"
+                <fcp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="SaveSpaceStorage"
                     OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
             </div>
 <script type="text/javascript">

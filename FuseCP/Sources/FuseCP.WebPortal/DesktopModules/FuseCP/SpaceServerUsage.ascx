@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceServerUsage.ascx.cs" Inherits="FuseCP.Portal.SpaceServerUsage" %>
-<%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
+<%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="fcp" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
 <asp:UpdatePanel ID="upUsage" runat="server" UpdateMode="Conditional">
@@ -22,7 +22,7 @@
                 <ul class="list-group">
                 <li>
                     <asp:Localize ID="locUsageCpu" runat="server" meta:resourcekey="locUsageCpu" Text="CPU load:" /> 
-                    <scp:Gauge ID="cpuGauge" runat="server" Progress="0" Total="100" />
+                    <fcp:Gauge ID="cpuGauge" runat="server" Progress="0" Total="100" />
                     <asp:Label id="usageCpu" runat="server"/>%
                     of
                     <asp:Label id="totalCpu" runat="server"/>%
@@ -31,7 +31,7 @@
                 <ul class="list-group">
                     <li>
                         <asp:Localize ID="locUsageMemory" runat="server" meta:resourcekey="locUsageMemory" Text="RAM usage:" />
-                        <scp:Gauge ID="ramGauge" runat="server" Progress="0" Total="100" />
+                        <fcp:Gauge ID="ramGauge" runat="server" Progress="0" Total="100" />
                         <asp:Label id="freeMemory" runat="server"/> MB
                         of
                         <asp:Label id="totalMemory" runat="server"/> MB

@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageDriveMaps.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageDriveMaps" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 <div class="panel-heading">
     <h3 class="panel-title">
         <asp:Image ID="imgESDM" SkinID="EnterpriseStorageDriveMaps48" runat="server" />
@@ -16,7 +16,7 @@
     </CPCC:StyleButton>
 </div>
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <div class="row">
         <asp:Panel ID="SearchPanel" runat="server" DefaultButton="cmdSearch" CssClass="col-md-5 col-md-offset-7 text-right form-inline">
             <asp:Localize ID="locSearch" runat="server" meta:resourcekey="locSearch" Visible="false"></asp:Localize>

@@ -46,10 +46,10 @@ public enum CheckTypes
 	ApacheVersion,
 	Net10Runtime,
 	ASPNET,
-	SCPServer,
-	SCPEnterpriseServer,
-	SCPPortal,
-	SCPWebDavPortal,
+	FCPServer,
+	FCPEnterpriseServer,
+	FCPPortal,
+	FCPWebDavPortal,
 	ASPNET32
 }
 

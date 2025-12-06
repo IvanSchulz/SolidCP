@@ -124,7 +124,7 @@ namespace FuseCP.UniversalInstaller
 			public const string ComponentName = "Server";
 			public const string ComponentCode = "server";
 			public const string ComponentDescription = "FuseCP Server is a set of services running on the remote server to be controlled. Server application should be reachable from Enterprise Server one.";
-			public const string ServiceAccount = "SCPServer";
+			public const string ServiceAccount = "FCPServer";
 			public const string DefaultPort = "9003";
 			public const string DefaultIP = "127.0.0.1";
 			public const string SetupController = "Server";
@@ -146,7 +146,7 @@ namespace FuseCP.UniversalInstaller
         {
             public const string ComponentName = "WebDavPortal";
             public const string ComponentDescription = "FuseCP WebDav Portal is a client frontend for viewing and editing their WebDav Enterprise storage files.";
-            public const string ServiceAccount = "SCPWebDav";
+            public const string ServiceAccount = "FCPWebDav";
             public const string DefaultPort = "9004";
             public const string DefaultIP = "";
             public const string ComponentCode = "WebDavPortal";
@@ -185,7 +185,7 @@ namespace FuseCP.UniversalInstaller
 		{
 			public const string ComponentName = "Portal";
 			public const string ComponentDescription = "FuseCP Portal is a control panel itself with user interface which allows managing user accounts, hosting spaces, web sites, FTP accounts, files, etc.";
-			public const string ServiceAccount = "SCPPortal";
+			public const string ServiceAccount = "FCPPortal";
 			public const string DefaultPort = "9001";
 			public const string DefaultIP = "";
 			public const string DefaultEntServURL = "http://127.0.0.1:9002";
@@ -215,7 +215,7 @@ namespace FuseCP.UniversalInstaller
 		{
 			public const string ComponentName = "Enterprise Server";
 			public const string ComponentDescription = "Enterprise Server is the heart of FuseCP system. It includes all business logic of the application. Enterprise Server should have access to Server and be accessible from Portal applications.";
-			public const string ServiceAccount = "SCPEnterprise";
+			public const string ServiceAccount = "FCPEnterprise";
 			public const string DefaultPort = "9002";
 			public const string DefaultIP = "127.0.0.1";
 			public const string DefaultDomain = "";
@@ -283,11 +283,11 @@ namespace FuseCP.UniversalInstaller
 		private static Providers.OS.WindowsVersion osVersion = Providers.OS.WindowsVersion.Unknown;
 
 		/// <summary>
-		/// Represents Setup Control Panel Accounts system settings set (SCPA)
+		/// Represents Setup Control Panel Accounts system settings set (FCPA)
 		/// </summary>
-		public class SCPA
+		public class FCPA
 		{
-			public const string SettingsKeyName = "EnabledSCPA";
+			public const string SettingsKeyName = "EnabledFCPA";
 		}
 
 		public static Providers.OS.WindowsVersion OSVersionWindows

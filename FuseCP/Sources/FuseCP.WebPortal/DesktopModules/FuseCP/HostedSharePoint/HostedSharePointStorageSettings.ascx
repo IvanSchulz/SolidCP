@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePointStorageSettings.ascx.cs" Inherits="FuseCP.Portal.HostedSharePointStorageSettings" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel"
-    TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-    TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
 <%@ Register src="../UserControls/QuotaEditor.ascx" tagname="QuotaEditor" tagprefix="uc1" %>
 
 
@@ -22,11 +22,11 @@
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" ></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
-					<scp:CollapsiblePanel id="secStorageLimits" runat="server"
+					<fcp:CollapsiblePanel id="secStorageLimits" runat="server"
                         TargetControlID="StorageLimits" meta:resourcekey="secStorageLimits" >
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="StorageLimits" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    

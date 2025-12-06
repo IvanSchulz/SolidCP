@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SmarterMail50_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.SmarterMail50_EditAccount" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 
 <table width="100%">
@@ -45,9 +45,9 @@
 
 
 
-<scp:CollapsiblePanel id="secAutoresponder" runat="server" TargetControlID="AutoresponderPanel"
+<fcp:CollapsiblePanel id="secAutoresponder" runat="server" TargetControlID="AutoresponderPanel"
     meta:resourcekey="secAutoresponder" Text="Autoresponder">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="AutoresponderPanel" runat="server" Height="0" Style="overflow: hidden;">
     <table width="100%">
         <tr>
@@ -76,9 +76,9 @@
         </tr>
     </table>
 </asp:Panel>
-<scp:CollapsiblePanel id="secForwarding" runat="server" TargetControlID="ForwardingPanel"
+<fcp:CollapsiblePanel id="secForwarding" runat="server" TargetControlID="ForwardingPanel"
     meta:resourcekey="secForwarding" Text="Mail Forwarding">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="ForwardingPanel" runat="server" Height="0" Style="overflow: hidden;">
     <table width="100%">
         <tr>

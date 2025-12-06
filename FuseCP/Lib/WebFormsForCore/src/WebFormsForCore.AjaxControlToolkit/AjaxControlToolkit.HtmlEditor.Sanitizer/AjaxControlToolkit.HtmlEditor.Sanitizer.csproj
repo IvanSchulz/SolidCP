@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <ProjectGuid>{4F19469B-3352-4D93-89E2-4B79FD7086A6}</ProjectGuid>
+        <TargetFrameworks>net48;net8.0;net10.0</TargetFrameworks>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <GlobalOutputPath>..\bin\$(Configuration)\</GlobalOutputPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <OutputPath Condition="$(TargetFramework) == 'net48'">$(GlobalOutputPath)</OutputPath>
+        <OutputPath Condition="$(TargetFramework) != 'net48'">$(GlobalOutputPath)$(TargetFramework)\</OutputPath>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\AjaxKey.snk</AssemblyOriginatorKeyFile>
+        <RestoreSources>$(RestoreSources);../../../nupkg;https://api.nuget.org/v3/index.json</RestoreSources>
+
+        <PackageId>EstrellasDeEsperanza.WebFormsForCore.AjaxControlToolkit.HtmlEditor.Sanitizer</PackageId>
+        <Title>AjaxControlToolkit</Title>
+        <Authors>simonegli8</Authors>
+        <Company>Estrellas de Esperanza</Company>
+        <Product>AjaxControlToolkit</Product>
+        <Description>AjaxControlToolkit for WebFormsForCore</Description>
+        <Copyright>Estrellas de Esperanza</Copyright>
+        <PackageProjectUrl>https://github.com/webformsforcore/WebFormsForCore.AjaxControlToolkit</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/webformsforcore/WebFormsForCore.AjaxControlToolkit</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>WebForms;porting WebForms;NET Core;NET 8</PackageTags>
+        <AssemblyVersion>10.0.14.0</AssemblyVersion>
+        <FileVersion>10.0.14.0</FileVersion>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <IncludeSymbols>true</IncludeSymbols>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
+    </ItemGroup>
+    <ItemGroup Condition="$(TargetFramework) == 'net48'">
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.Web" />
+    </ItemGroup>
+    <ItemGroup Condition="$(TargetFramework) != 'net48'">
+        <!--<PackageReference Include="EstrellasDeEsperanza.WebFormsForCore.Configuration" Version="1.1.2-beta" />
+        <PackageReference Include="EstrellasDeEsperanza.WebFormsForCore.Web" Version="1.1.2-beta" />-->
+        <ProjectReference Include="..\..\WebFormsForCore.Web\WebFormsForCore.Web.csproj" />
+        <ProjectReference Include="..\..\WebFormsForCore.Configuration\WebFormsForCore.Configuration.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="..\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\AjaxControlToolkit\AjaxControlToolkit.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <Target Name="ChangeAliasesOfNugetRefs" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
+        <ItemGroup>
+            <!-- Do not import System.Configuration.ConfigurationManager version 8 -->
+            <ReferencePath Remove="%(Identity)" Condition="'%(FileName)' == 'System.Configuration.ConfigurationManager' AND $([System.Text.RegularExpressions.Regex]::IsMatch(%(Identity),'\\8\.0\..\\'))" />
+            <!-- Do not import System.Web from dotnet -->
+            <ReferencePath Remove="%(Identity)" Condition="'%(FileName)' == 'System.Web' AND $([System.Text.RegularExpressions.Regex]::IsMatch(%(Identity),'\\dotnet\\'))" />
+            <!-- Do not import System.Drawing from dotnet -->
+            <!--<ReferencePath Remove="%(Identity)" Condition="'%(FileName)' == 'System.Drawing' AND $([System.Text.RegularExpressions.Regex]::IsMatch(%(Identity),'\\dotnet\\'))" />-->
+        </ItemGroup>
+    </Target>
+
+</Project>

@@ -4,8 +4,8 @@ Import-Module activedirectory
 
 #This script is designed to setup dSHeuristics for the AD Domain.
 
-# This is the OU in the format of OU=Customers,DC=scp1,DC=local
-$CustomerOU = "OU=Customers,DC=scp1,DC=local"
+# This is the OU in the format of OU=Customers,DC=fcp1,DC=local
+$CustomerOU = "OU=Customers,DC=fcp1,DC=local"
 
 # Get SubOU
 $SubOUs = Get-ADOrganizationalUnit -SearchBase $CustomerOU -Filter * -SearchScope OneLevel

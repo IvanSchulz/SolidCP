@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationHome.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationHome" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
 				<div class="panel-heading">
                     <h3 class="panel-title">
                     <asp:Image ID="Image1" SkinID="Organization48" runat="server" />
@@ -49,7 +49,7 @@
                                 <asp:HyperLink ID="lnkDomains" runat="server" meta:resourcekey="lnkDomains"></asp:HyperLink>
                             </td>
                             <td width="100%">
-                                <scp:QuotaViewer ID="domainStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="domainStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
 -->
@@ -58,7 +58,7 @@
                                 <asp:HyperLink ID="lnkUsers" runat="server" meta:resourcekey="lnkUsers"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="userStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="userStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -66,7 +66,7 @@
                                 <asp:HyperLink ID="lnkDeletedUsers" runat="server" meta:resourcekey="lnkDeletedUsers"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="deletedUserStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="deletedUserStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow" id="securGroupsStat" runat="server">
@@ -74,7 +74,7 @@
                                 <asp:HyperLink ID="lnkGroups" runat="server" meta:resourcekey="lnkGroups" Text="Groups:"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="groupStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="groupStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -90,7 +90,7 @@
                                 <asp:HyperLink ID="lnkMailboxes" runat="server" meta:resourcekey="lnkMailboxes" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="mailboxesStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="mailboxesStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
 
@@ -99,7 +99,7 @@
                                 <asp:HyperLink ID="lnkSharedMailboxes" runat="server" meta:resourcekey="lnkSharedMailboxes" Text="Shared mailboxes" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="mailboxesSharedStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="mailboxesSharedStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow"> 
@@ -107,7 +107,7 @@
                                 <asp:HyperLink ID="lnkResourceMailboxes" runat="server" meta:resourcekey="lnkResourceMailboxes" Text="Resource mailboxes" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="mailboxesResourceStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="mailboxesResourceStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow"> 
@@ -115,7 +115,7 @@
                                 <asp:HyperLink ID="lnkJournalingMailboxes" runat="server" meta:resourcekey="lnkJournalingMailboxes" Text="Resource mailboxes" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="mailboxesJournalingStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="mailboxesJournalingStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
 
@@ -124,7 +124,7 @@
                                 <asp:HyperLink ID="lnkContacts" runat="server" meta:resourcekey="lnkContacts"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="contactsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="contactsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow" id="rowLists" runat="server">
@@ -132,7 +132,7 @@
                                 <asp:HyperLink ID="lnkLists" runat="server" meta:resourcekey="lnkLists"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="listsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="listsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow"  id="rowFolders" runat="server">
@@ -140,7 +140,7 @@
                                 <asp:HyperLink ID="lnkFolders" runat="server" meta:resourcekey="lnkFolders"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="foldersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="foldersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow" id="rowExchangeStorage" runat="server">
@@ -148,7 +148,7 @@
                                 <asp:HyperLink ID="lnkExchangeStorage" runat="server" meta:resourcekey="lnkExchangeStorage"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="exchangeStorageStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="exchangeStorageStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow" id="rowExchangeLitigationHold" runat="server">
@@ -156,7 +156,7 @@
                                 <asp:HyperLink ID="lnkExchangeLitigationHold" runat="server" meta:resourcekey="lnkExchangeLitigationHold"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="exchangeLitigationHoldStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="exchangeLitigationHoldStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow" id="rowExchangeArchiving" runat="server">
@@ -164,7 +164,7 @@
                                 <asp:HyperLink ID="lnkExchangeArchiving" runat="server" meta:resourcekey="lnkExchangeArchiving">Archiving Storage (Mb):</asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="exchangeArchivingStatus" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="exchangeArchivingStatus" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
 
@@ -181,7 +181,7 @@
                                 <asp:HyperLink ID="lnkBESUsers" runat="server" meta:resourcekey="lnkBESUsers" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="besUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="besUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -197,7 +197,7 @@
                                 <asp:HyperLink ID="lnkSfBUsers" runat="server" meta:resourcekey="lnkSfBUsers" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="sfbUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="sfbUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -213,7 +213,7 @@
                                 <asp:HyperLink ID="lnkLyncUsers" runat="server" meta:resourcekey="lnkLyncUsers" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="lyncUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="lyncUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -233,7 +233,7 @@
                                 <asp:HyperLink ID="lnkSiteCollections" runat="server" meta:resourcekey="lnkSiteCollections"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="siteCollectionsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="siteCollectionsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -250,7 +250,7 @@
                                 <asp:HyperLink ID="lnkEnterpriseSiteCollections" runat="server" meta:resourcekey="lnkSiteCollections"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="enterpriseSiteCollectionsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="enterpriseSiteCollectionsStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -268,7 +268,7 @@
                                 <asp:HyperLink ID="lnkOCSUsers" runat="server" meta:resourcekey="lnkOCSUsers" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="ocsUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="ocsUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -286,7 +286,7 @@
                                 <asp:HyperLink ID="lnkCRMUsers" runat="server" meta:resourcekey="lnkCRMUsers" Text="Full licenses :"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="crmUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="crmUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -294,7 +294,7 @@
                                 <asp:HyperLink ID="lnkLimitedCRMUsers" runat="server" meta:resourcekey="lnkLimitedCRMUsers" Text="Limited licenses :"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="crmLimitedUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="crmLimitedUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -302,7 +302,7 @@
                                 <asp:HyperLink ID="lnkESSCRMUsers" runat="server" meta:resourcekey="lnkESSCRMUsers" Text="ESS licenses :"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="crmESSUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="crmESSUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -310,7 +310,7 @@
 				                <asp:HyperLink ID="lnkCRMDBSize" runat="server" meta:resourcekey="lnkCRMDBSize" Text="Storage size (MB):"></asp:HyperLink>
                             </td>
                             <td>
-				                <scp:QuotaViewer ID="crmDBSize" runat="server" QuotaTypeId="2" DisplayGauge="true" />
+				                <fcp:QuotaViewer ID="crmDBSize" runat="server" QuotaTypeId="2" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -327,7 +327,7 @@
                                 <asp:HyperLink ID="lnkProfessionalCRMUsers" runat="server" meta:resourcekey="lnkProfessionalCRMUsers" Text="Professional licenses :"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="crmProfessionalUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="crmProfessionalUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -335,7 +335,7 @@
                                 <asp:HyperLink ID="lnkBasicCRMUsers" runat="server" meta:resourcekey="lnkBasicCRMUsers" Text="Basic licenses :"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="crmBasicUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="crmBasicUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -343,7 +343,7 @@
                                 <asp:HyperLink ID="lnkEssentialCRMUsers" runat="server" meta:resourcekey="lnkEssentialCRMUsers" Text="Essential licenses :"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="crmEssentialUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="crmEssentialUsersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -351,7 +351,7 @@
 				                <asp:HyperLink ID="lnkCRM2013DBSize" runat="server" meta:resourcekey="lnkCRMDBSize" Text="Storage size (MB):"></asp:HyperLink>
                             </td>
                             <td>
-				                <scp:QuotaViewer ID="crm2013DBSize" runat="server" QuotaTypeId="2" DisplayGauge="true" />
+				                <fcp:QuotaViewer ID="crm2013DBSize" runat="server" QuotaTypeId="2" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -368,7 +368,7 @@
                                 <asp:HyperLink ID="lnkEnterpriseStorageSpace" runat="server" meta:resourcekey="lnkEnterpriseStorageSpace" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="enterpriseStorageSpaceStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="enterpriseStorageSpaceStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow">
@@ -376,7 +376,7 @@
                                 <asp:HyperLink ID="lnkEnterpriseStorageFolders" runat="server" meta:resourcekey="lnkEnterpriseStorageFolders"></asp:HyperLink>
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="enterpriseStorageFoldersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="enterpriseStorageFoldersStats" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>
@@ -400,7 +400,7 @@
                                 <asp:HyperLink ID="lnkRdsServers" runat="server" meta:resourcekey="lnkRdsServers" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="rdsServers" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="rdsServers" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         <tr class="OrgStatsRow"> 
@@ -408,7 +408,7 @@
                                 <asp:HyperLink ID="lnkRdsCollections" runat="server" meta:resourcekey="lnkRdsCollections" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="rdsCollections" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="rdsCollections" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                             <tr class="OrgStatsRow"> 
@@ -416,7 +416,7 @@
                                 <asp:HyperLink ID="lnkRdsUsers" runat="server" meta:resourcekey="lnkRdsUsers" />
                             </td>
                             <td>
-                                <scp:QuotaViewer ID="rdsUsers" QuotaTypeId="2" runat="server" DisplayGauge="true" />
+                                <fcp:QuotaViewer ID="rdsUsers" QuotaTypeId="2" runat="server" DisplayGauge="true" />
                             </td>
                         </tr>
                         </asp:Panel>

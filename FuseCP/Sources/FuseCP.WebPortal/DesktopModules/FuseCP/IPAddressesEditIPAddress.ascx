@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IPAddressesEditIPAddress.ascx.cs" Inherits="FuseCP.Portal.IPAddressesEditIPAddress" %>
-<%@ Register Src="UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <asp:ValidationSummary ID="validatorsSummary" runat="server" ValidationGroup="EditAddress" ShowMessageBox="True" ShowSummary="False" />
     <table cellspacing="0" cellpadding="3">
 	    <tr>
@@ -33,7 +33,7 @@
                 <asp:Localize ID="lblExternalIP" runat="server" meta:resourcekey="lblExternalIP" Text="IP Address:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="externalIP" runat="server" ValidationGroup="EditAddress" Required="true" />
+		        <fcp:EditIPAddressControl id="externalIP" runat="server" ValidationGroup="EditAddress" Required="true" />
 		    </td>
 	    </tr>
 	    <tr id="InternalAddressRow" runat="server">
@@ -41,7 +41,7 @@
 		        <asp:Localize ID="lblInternalIP" runat="server" meta:resourcekey="lblInternalIP" Text="NAT Address:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="internalIP" runat="server" ValidationGroup="EditAddress"  />
+		        <fcp:EditIPAddressControl id="internalIP" runat="server" ValidationGroup="EditAddress"  />
             </td>
 	    </tr>
         <tr id="SubnetRow" runat="server">
@@ -49,7 +49,7 @@
                 <asp:Localize ID="locSubnetMask" runat="server" meta:resourcekey="locSubnetMask" Text="Subnet Mask:"></asp:Localize>
 	        </td>
 	        <td class="NormalBold">
-	            <scp:EditIPAddressControl id="subnetMask" runat="server" ValidationGroup="EditAddress" Required="true"  />
+	            <fcp:EditIPAddressControl id="subnetMask" runat="server" ValidationGroup="EditAddress" Required="true"  />
             </td>
         </tr>
         <tr id="GatewayRow" runat="server">
@@ -57,13 +57,13 @@
                 <asp:Localize ID="locDefaultGateway" runat="server" meta:resourcekey="locDefaultGateway" Text="Default Gateway:"></asp:Localize>
 	        </td>
 	        <td class="NormalBold">
-	            <scp:EditIPAddressControl id="defaultGateway" runat="server" ValidationGroup="EditAddress" Required="true"  />
+	            <fcp:EditIPAddressControl id="defaultGateway" runat="server" ValidationGroup="EditAddress" Required="true"  />
             </td>
         </tr>
         <tr id="VLANRow" runat="server">
 	        <td><asp:Localize ID="locVLAN" runat="server" meta:resourcekey="locVLAN" Text="VLAN:"></asp:Localize></td>
 	        <td class="NormalBold">
-	            <scp:EditIPAddressControl id="VLAN" runat="server" Required="true" Text="" />
+	            <fcp:EditIPAddressControl id="VLAN" runat="server" Required="true" Text="" />
             </td>
         </tr>
 	    <tr>

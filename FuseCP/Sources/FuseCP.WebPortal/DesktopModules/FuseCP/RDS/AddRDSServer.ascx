@@ -1,16 +1,16 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AddRDSServer.ascx.cs" Inherits="FuseCP.Portal.RDS.AddRDSServer" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-heading">
 					<asp:Image ID="imgAddRDSServer" SkinID="EnterpriseRDSServers48" runat="server" />
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Add Server To Organization"></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                   
 					<table>
 					    <tr>

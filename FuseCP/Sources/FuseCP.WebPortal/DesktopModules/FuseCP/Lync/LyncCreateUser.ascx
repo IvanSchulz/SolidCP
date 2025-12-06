@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncCreateUser.ascx.cs" Inherits="FuseCP.Portal.Lync.CreateLyncUser" %>
-<%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="UserControls/LyncUserPlanSelector.ascx" TagName="LyncUserPlanSelector" TagPrefix="scp" %>
+<%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/LyncUserPlanSelector.ascx" TagName="LyncUserPlanSelector" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 			<div class="panel-heading">
                     <h3 class="panel-title">
                     <asp:Image ID="Image1" SkinID="LyncLogo" runat="server" />
@@ -13,12 +13,12 @@
                 </h3>
                         </div>
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     <table id="ExistingUserTable"   runat="server" width="100%"> 					    
 					    <tr>
 					        <td class="FormLabel150"><asp:Localize ID="Localize1" runat="server" meta:resourcekey="locDisplayName" Text="Display Name: *"></asp:Localize></td>
 					        <td>                                
-                                <scp:UserSelector ID="userSelector" runat="server" IncludeMailboxesOnly="false" IncludeMailboxes="true" ExcludeOCSUsers="true" ExcludeLyncUsers="true"/>
+                                <fcp:UserSelector ID="userSelector" runat="server" IncludeMailboxesOnly="false" IncludeMailboxes="true" ExcludeOCSUsers="true" ExcludeLyncUsers="true"/>
                             </td>
 					    </tr>
 					    	    					    					    
@@ -30,7 +30,7 @@
                                     <asp:Localize ID="locPlanName" runat="server" meta:resourcekey="locPlanName" Text="Plan Name: *"></asp:Localize>
                                 </td>
                                 <td>                                
-                                    <scp:LyncUserPlanSelector ID="planSelector" runat="server" />
+                                    <fcp:LyncUserPlanSelector ID="planSelector" runat="server" />
                                 </td>
 					        </tr>
                         </table>

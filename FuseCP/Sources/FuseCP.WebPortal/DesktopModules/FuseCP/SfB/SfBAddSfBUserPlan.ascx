@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAddSfBUserPlan.ascx.cs" Inherits="FuseCP.Portal.SfB.SfBAddSfBUserPlan" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div id="ExchangeContainer">
 	<div class="Module">
@@ -18,11 +18,11 @@
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Add Mailboxplan"></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
-					<scp:CollapsiblePanel id="secPlan" runat="server"
+					<fcp:CollapsiblePanel id="secPlan" runat="server"
                         TargetControlID="Plan" meta:resourcekey="secPlan" Text="Plan">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="Plan" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -39,9 +39,9 @@
 					    <br />
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secPlanFeatures" runat="server"
+					<fcp:CollapsiblePanel id="secPlanFeatures" runat="server"
                         TargetControlID="PlanFeatures" meta:resourcekey="secPlanFeatures" Text="Plan Features">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="PlanFeatures" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -69,9 +69,9 @@
 					</asp:Panel>
 
 
-					<scp:CollapsiblePanel id="secPlanFeaturesFederation" runat="server"
+					<fcp:CollapsiblePanel id="secPlanFeaturesFederation" runat="server"
                         TargetControlID="PlanFeaturesFederation" meta:resourcekey="secPlanFeaturesFederation" Text="Federation">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="PlanFeaturesFederation" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -88,9 +88,9 @@
 						<br />
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secPlanFeaturesArchiving" runat="server"
+					<fcp:CollapsiblePanel id="secPlanFeaturesArchiving" runat="server"
                         TargetControlID="PlanFeaturesArchiving" meta:resourcekey="secPlanFeaturesArchiving" Text="Archiving">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="PlanFeaturesArchiving" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
                             <tr>
@@ -105,9 +105,9 @@
 						<br />
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secPlanFeaturesMeeting" runat="server"
+					<fcp:CollapsiblePanel id="secPlanFeaturesMeeting" runat="server"
                         TargetControlID="PlanFeaturesMeeting" meta:resourcekey="secPlanFeaturesMeeting" Text="Meeting">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="PlanFeaturesMeeting" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -119,9 +119,9 @@
 						<br />
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secPlanFeaturesTelephony" runat="server"
+					<fcp:CollapsiblePanel id="secPlanFeaturesTelephony" runat="server"
                         TargetControlID="PlanFeaturesTelephony" meta:resourcekey="secPlanFeaturesTelephony" Text="Telephony">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="PlanFeaturesTelephony" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
                             <tr>
@@ -195,9 +195,9 @@
 
 
 			        <%-- Disable because not used
-					<scp:CollapsiblePanel id="secEnterpriseVoice" runat="server"
+					<fcp:CollapsiblePanel id="secEnterpriseVoice" runat="server"
                         TargetControlID="EnterpriseVoice" meta:resourcekey="secEnterpriseVoice" Text="Enterprise Voice Policy">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="EnterpriseVoice" runat="server" Height="0" style="overflow:hidden;">
 						<table>
 						    <tr>

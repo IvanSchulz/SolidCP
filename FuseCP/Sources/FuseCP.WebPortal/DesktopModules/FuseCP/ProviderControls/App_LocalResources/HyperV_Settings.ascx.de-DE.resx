@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Benutzername</value>
   </data>
   <data name="ComparePasswordsValidator.ErrorMessage" xml:space="preserve">
-    <value>Beide Wiederverkäufer-Passwörter müssen übereinstimmen</value>
+    <value>Beide WiederverkÃ¤ufer-PasswÃ¶rter mÃ¼ssen Ã¼bereinstimmen</value>
   </data>
   <data name="DefaultGatewayValidator.ErrorMessage" xml:space="preserve">
     <value>Geben Sie eine Standard-Gateway-IP ein</value>
@@ -133,7 +133,7 @@
     <value>Geben Sie einen Pfad zum Speichern von exportierten VPS ein</value>
   </data>
   <data name="HostnamePatternValidator.ErrorMessage" xml:space="preserve">
-    <value>Geben Sie ein Muster für den Hostnamen ein</value>
+    <value>Geben Sie ein Muster fÃ¼r den Hostnamen ein</value>
   </data>
   <data name="locAlternateNameServer.Text" xml:space="preserve">
     <value>Alternativer Name-Server:</value>
@@ -144,8 +144,8 @@
   <data name="locDiskType.Text" xml:space="preserve">
     <value>Festplattentyp:</value>
   </data>
-  <data name="locSCPResellerAccount.Text" xml:space="preserve">
-    <value>FuseCP-Wiederverkäuferkonto</value>
+  <data name="locFCPResellerAccount.Text" xml:space="preserve">
+    <value>FuseCP-WiederverkÃ¤uferkonto</value>
   </data>
   <data name="locDvdIsoPath.Text" xml:space="preserve">
     <value>DVD-Bibliothek-Pfad:</value>
@@ -169,7 +169,7 @@
     <value>VPS-Hostname</value>
   </data>
   <data name="locHostnamePattern.Text" xml:space="preserve">
-    <value>Muster für Hostnamen:</value>
+    <value>Muster fÃ¼r Hostnamen:</value>
   </data>
   <data name="locIPFormat.Text" xml:space="preserve">
     <value>IP-Adressen-Format:</value>
@@ -184,7 +184,7 @@
     <value>Betriebssystemvorlagen-Pfad:</value>
   </data>
   <data name="locPatternText.Text" xml:space="preserve">
-    <value>Wenn es dem Benutzer nicht erlaubt ist, eigene individuelle Host-Namen zu vergeben, wird das System einen Host-Namen für neue VPS, basierend auf diesem Muster generieren.&lt;br/&gt;&lt;br/&gt;Die folgenden Platzhaltervariablen können in dem Muster benutzt werden:&lt;br/&gt;[USERNAME], [USER_ID], [SPACE_ID]</value>
+    <value>Wenn es dem Benutzer nicht erlaubt ist, eigene individuelle Host-Namen zu vergeben, wird das System einen Host-Namen fÃ¼r neue VPS, basierend auf diesem Muster generieren.&lt;br/&gt;&lt;br/&gt;Die folgenden Platzhaltervariablen kÃ¶nnen in dem Muster benutzt werden:&lt;br/&gt;[USERNAME], [USER_ID], [SPACE_ID]</value>
   </data>
   <data name="locPreferredNameServer.Text" xml:space="preserve">
     <value>Bevorzugter Nameserver:</value>
@@ -193,10 +193,10 @@
     <value>Privates Netzwerk</value>
   </data>
   <data name="locResellerAccountText.Text" xml:space="preserve">
-    <value>Für die automatische Bereitstellung des FuseCP Control Panels in VPS geben Sie bitte die FuseCP Wiederverkäuferkonto-Details unten ein:</value>
+    <value>FÃ¼r die automatische Bereitstellung des FuseCP Control Panels in VPS geben Sie bitte die FuseCP WiederverkÃ¤uferkonto-Details unten ein:</value>
   </data>
   <data name="locResellerConfirmPassword.Text" xml:space="preserve">
-    <value>Passwort bestätigen:</value>
+    <value>Passwort bestÃ¤tigen:</value>
   </data>
   <data name="locResellerPassword.Text" xml:space="preserve">
     <value>Passwort:</value>
@@ -214,16 +214,16 @@
     <value>Was soll der VPS tun, wenn der physikalische Computer startet?</value>
   </data>
   <data name="locStartupDelay.Text" xml:space="preserve">
-    <value>Startverzögerung:</value>
+    <value>StartverzÃ¶gerung:</value>
   </data>
   <data name="locStartupDelayText.Text" xml:space="preserve">
-    <value>Geben Sie eine Startverzögerung an, um den Verbrauch an Ressourcen zwischen den virtuellen Maschinen beim Start zu reduzieren.</value>
+    <value>Geben Sie eine StartverzÃ¶gerung an, um den Verbrauch an Ressourcen zwischen den virtuellen Maschinen beim Start zu reduzieren.</value>
   </data>
   <data name="locStopAction.Text" xml:space="preserve">
     <value>Automatische Stoppaktion</value>
   </data>
   <data name="locStopActionText.Text" xml:space="preserve">
-    <value>Was soll der VPS tun, wenn der physikalische Computer herunterfährt?</value>
+    <value>Was soll der VPS tun, wenn der physikalische Computer herunterfÃ¤hrt?</value>
   </data>
   <data name="locSubnetMask.Text" xml:space="preserve">
     <value>Subnetzmaske:</value>
@@ -232,7 +232,7 @@
     <value>Virtuelle Festplatte:</value>
   </data>
   <data name="locVpsFolderIncludes.Text" xml:space="preserve">
-    <value>VPS-Ordner enthält:</value>
+    <value>VPS-Ordner enthÃ¤lt:</value>
   </data>
   <data name="locVpsRootFolder.Text" xml:space="preserve">
     <value>VPS-Stammordner:</value>
@@ -268,7 +268,7 @@
     <value>Wird dynamisch erweitert</value>
   </data>
   <data name="radioVirtualDiskTypeFixed.Text" xml:space="preserve">
-    <value>Feste Größe</value>
+    <value>Feste GrÃ¶ÃŸe</value>
   </data>
   <data name="radioVpsFolderIncludesID.Text" xml:space="preserve">
     <value>VPS-Kennung, zum Beispiel "843FA-A0B2-24404"</value>
@@ -280,7 +280,7 @@
     <value>Geben Sie einen VPS-Stammordner ein</value>
   </data>
   <data name="StartupDelayValidator.ErrorMessage" xml:space="preserve">
-    <value>Startverzögerung darf nicht leer sein</value>
+    <value>StartverzÃ¶gerung darf nicht leer sein</value>
   </data>
   <data name="SubnetMaskValidator.ErrorMessage" xml:space="preserve">
     <value>Geben Sie eine Subnetz-Maske ein</value>
@@ -301,13 +301,13 @@
     <value>Begrenzung der virtuellen Maschine:</value>
   </data>
   <data name="locCpuReserve.Text" xml:space="preserve">
-    <value>Reserve für virtuelle Maschine:</value>
+    <value>Reserve fÃ¼r virtuelle Maschine:</value>
   </data>
   <data name="locCpuWeight.Text" xml:space="preserve">
     <value>Relative Gewichtung:</value>
   </data>
   <data name="locFolderVariables.Text" xml:space="preserve">
-    <value>Die folgenden Variablen werden unterstützt: [VPS_HOSTNAME], [USERNAME], [USER_ID], [SPACE_ID]</value>
+    <value>Die folgenden Variablen werden unterstÃ¼tzt: [VPS_HOSTNAME], [USERNAME], [USER_ID], [SPACE_ID]</value>
   </data>
   <data name="locProcessorSettings.Text" xml:space="preserve">
     <value>Prozessor-Ressourcen-Einstellungen</value>
@@ -319,7 +319,7 @@
     <value>&lt;Netzwerkliste kann nicht gelesen werden&gt;</value>
   </data>
   <data name="locErrorReadingNetworksList.Text" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;b&gt;Kann nicht zu Hyper-V server verbinden&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Mögliche Gründe:&lt;ol&gt;&lt;li&gt; Sie verwalten entfernten Hyper-V-Server (Server Core oder Hyper-V-Server 2008 Maschine) ohne dort installierten DNP-Server. Geben Sie den korrekten Servernamen oben in dieses Formular ein und klicken Sie dann auf den "Verbinden"-Knopf.&lt;/li&gt;&lt;li&gt;DNP-Server hat ungenügende Rechte um sich mit dem entfernten Hyper-V-Server zu verbinden. Bitte schlagen Sie im Administratorenleitfaden für Klient- und Servereinrichtungsanweisungen nach.&lt;li&gt;&lt;li&gt;Verbindung zum auf dem Hyper-V-Virtualisierungsserver installierten DNP-Server verloren. Überprüfen Sie die Verbindung und öffnen Sie die Diensteigenschaftenseite nocheinmal.&lt;/li&gt;&lt;/ol&gt;</value>
+    <value>&lt;br/&gt;&lt;b&gt;Kann nicht zu Hyper-V server verbinden&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;MÃ¶gliche GrÃ¼nde:&lt;ol&gt;&lt;li&gt; Sie verwalten entfernten Hyper-V-Server (Server Core oder Hyper-V-Server 2008 Maschine) ohne dort installierten DNP-Server. Geben Sie den korrekten Servernamen oben in dieses Formular ein und klicken Sie dann auf den "Verbinden"-Knopf.&lt;/li&gt;&lt;li&gt;DNP-Server hat ungenÃ¼gende Rechte um sich mit dem entfernten Hyper-V-Server zu verbinden. Bitte schlagen Sie im Administratorenleitfaden fÃ¼r Klient- und Servereinrichtungsanweisungen nach.&lt;li&gt;&lt;li&gt;Verbindung zum auf dem Hyper-V-Virtualisierungsserver installierten DNP-Server verloren. ÃœberprÃ¼fen Sie die Verbindung und Ã¶ffnen Sie die Diensteigenschaftenseite nocheinmal.&lt;/li&gt;&lt;/ol&gt;</value>
   </data>
   <data name="locHyperVServer.Text" xml:space="preserve">
     <value>Hyper-V Server</value>

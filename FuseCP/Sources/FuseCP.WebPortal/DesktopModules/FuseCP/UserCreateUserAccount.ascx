@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCreateUserAccount.ascx.cs"
     Inherits="FuseCP.Portal.UserCreateUserAccount" %>
 <%@ Register TagPrefix="dnc" TagName="UserContact" Src="UserControls/ContactDetails.ascx" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>
 <asp:BulletedList ID="blLog" runat="server" CssClass="ErrorText">
@@ -157,8 +157,8 @@
         </fieldset>
 
 
-        <scp:CollapsiblePanel id="headContact" runat="server" IsCollapsed="true" TargetControlID="pnlContact" meta:resourcekey="secContact" Text="Contact">
-        </scp:CollapsiblePanel>
+        <fcp:CollapsiblePanel id="headContact" runat="server" IsCollapsed="true" TargetControlID="pnlContact" meta:resourcekey="secContact" Text="Contact">
+        </fcp:CollapsiblePanel>
         <asp:Panel ID="pnlContact" runat="server" Height="0" Style="overflow: hidden;">
             <dnc:usercontact id="contact" runat="server"></dnc:usercontact>
         </asp:Panel>

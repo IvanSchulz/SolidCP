@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSCollections.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSCollections" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 
 <div class="panel-heading">
@@ -23,7 +23,7 @@
 </div>
 
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox ID="messageBox" runat="server" />
+    <fcp:SimpleMessageBox ID="messageBox" runat="server" />
     <div class="row" style="margin-bottom:15px;">
         <asp:Panel ID="SearchPanel" runat="server" DefaultButton="cmdSearch" CssClass="col-md-7 col-md-offset-5 text-right form-inline">
             <asp:Localize ID="locSearch" runat="server" meta:resourcekey="locSearch" Visible="false"></asp:Localize>
@@ -78,7 +78,7 @@
 </asp:GridView>
 <div class="panel-footer">
     <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Collections Created:"></asp:Localize>&nbsp;	
-    <scp:QuotaViewer ID="collectionsQuota" runat="server" QuotaTypeId="2" DisplayGauge="true" />
+    <fcp:QuotaViewer ID="collectionsQuota" runat="server" QuotaTypeId="2" DisplayGauge="true" />
 </div>
 <asp:ObjectDataSource ID="odsRDSCollectionsPaged" runat="server" EnablePaging="True" SelectCountMethod="GetRDSCollectonsPagedCount"
     SelectMethod="GetRDSCollectonsPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.RDSHelper">

@@ -125,9 +125,9 @@ namespace FuseCP.EnterpriseServer
 			{
                 TaskManager.StartTask(taskId, "BACKUP", "BACKUP", backupFileName, SecurityContext.User.UserId);
 
-                // Set Ending .scpak
-                if (!backupFileName.EndsWith(".scpak"))
-                    backupFileName += ".scpak";
+                // Set Ending .fcpak
+                if (!backupFileName.EndsWith(".fcpak"))
+                    backupFileName += ".fcpak";
 
                 // get the list of items to backup
                 TaskManager.Write("Calculate items to backup");

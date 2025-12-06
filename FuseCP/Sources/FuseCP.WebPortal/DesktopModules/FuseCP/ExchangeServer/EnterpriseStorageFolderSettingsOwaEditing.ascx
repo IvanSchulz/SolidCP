@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageFolderSettingsOwaEditing.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageFolderSettingsOwaEditing" %>
 
 
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnterpriseStorageOwaUsersList.ascx" TagName="OwaUsers" TagPrefix="scp"%>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnterpriseStorageEditFolderTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnterpriseStorageOwaUsersList.ascx" TagName="OwaUsers" TagPrefix="fcp"%>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnterpriseStorageEditFolderTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -20,14 +20,14 @@
                 </div>
 				<div class="panel-body form-horizontal">
                         <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-				            <scp:CollectionTabs id="tabs" runat="server" SelectedTab="enterprisestorage_folder_settings_owa_editing" />
+				            <fcp:CollectionTabs id="tabs" runat="server" SelectedTab="enterprisestorage_folder_settings_owa_editing" />
                         </div>
                         <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
-                    <scp:CollapsiblePanel id="colOwaEditing" runat="server"
+                    <fcp:CollapsiblePanel id="colOwaEditing" runat="server"
                         TargetControlID="panelFolderPermissions" meta:resourcekey="colOwaEditing" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                      <asp:Panel runat="server" ID="panelFolderPermissions">                                                
 					    <table>
@@ -35,7 +35,7 @@
 							    <td colspan="2">
                                     <fieldset id="OwaUsersPanel" runat="server">
                                         <legend><asp:Localize ID="locOwaEditingSection" runat="server" meta:resourcekey="locOwaEditingSection" Text="Users And Groups"></asp:Localize></legend>
-                                        <scp:OwaUsers id="owaUsers" runat="server" />
+                                        <fcp:OwaUsers id="owaUsers" runat="server" />
                                     </fieldset>
 						    </tr>
 					        <tr><td>&nbsp;</td></tr>

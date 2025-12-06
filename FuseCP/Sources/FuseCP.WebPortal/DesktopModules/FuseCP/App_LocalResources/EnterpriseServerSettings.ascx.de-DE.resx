@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -127,7 +127,7 @@
     <value>DotNetNuke-Konten auf die passenden FuseCP-Konten mappen</value>
   </data>
   <data name="lblUseSpecifiedAccount.Text" xml:space="preserve">
-    <value>Das angegebene Konto für alle DotNetNuke-Benutzer verwenden</value>
+    <value>Das angegebene Konto fÃ¼r alle DotNetNuke-Benutzer verwenden</value>
   </data>
   <data name="lblUsername.Text" xml:space="preserve">
     <value>Benutzername:</value>
@@ -136,7 +136,7 @@
     <value>Passwort:</value>
   </data>
   <data name="lblConfirmPassword.Text" xml:space="preserve">
-    <value>Passwort bestätigen:</value>
+    <value>Passwort bestÃ¤tigen:</value>
   </data>
   <data name="secRoles.Text" xml:space="preserve">
     <value>FuseCP-Rollenmapping</value>
@@ -151,7 +151,7 @@
     <value>Administrator</value>
   </data>
   <data name="lblReseller.Text" xml:space="preserve">
-    <value>Wiederverkäufer</value>
+    <value>WiederverkÃ¤ufer</value>
   </data>
   <data name="lblUser.Text" xml:space="preserve">
     <value>Benutzer</value>
@@ -163,7 +163,7 @@
     <value>Konten synchronisieren</value>
   </data>
   <data name="rblAuthModeItem.Account" xml:space="preserve">
-    <value>Das angegebene Konto für alle DotNetNuke-Benutzer verwenden</value>
+    <value>Das angegebene Konto fÃ¼r alle DotNetNuke-Benutzer verwenden</value>
   </data>
   <data name="rblAuthModeItem.Map" xml:space="preserve">
     <value>DotNetNuke-Konten auf die passenden FuseCP-Konten mappen</value>

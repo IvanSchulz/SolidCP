@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiskspaceReportPackageDetails.ascx.cs" Inherits="FuseCP.Portal.DiskspaceReportPackageDetails" %>
-<%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="uc1" %>
 
 <div class="panel-body form-horizontal">
-    <scp:SpaceDetailsHeaderControl ID="spaceDetails" runat="server" />
+    <fcp:SpaceDetailsHeaderControl ID="spaceDetails" runat="server" />
 
-    <scp:CollapsiblePanel id="secSummary" runat="server"
+    <fcp:CollapsiblePanel id="secSummary" runat="server"
         TargetControlID="SummaryPanel" meta:resourcekey="secSummary" Text="Disk Space by Resources">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="SummaryPanel" runat="server" Height="0" style="overflow:hidden;">
 
         <asp:GridView ID="gvSummary" runat="server" AutoGenerateColumns="False"

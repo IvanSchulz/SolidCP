@@ -12,6 +12,6 @@ namespace FuseCP.WebDav.Core
     public class ScpContext
     {
         public static ScpPrincipal User { get { return HttpContext.Current.User as ScpPrincipal; } }
-        public static SCP Services { get { return SCP.Services; } }
+        public static FCP Services { get { return FCP.Services; } }
     }
 }

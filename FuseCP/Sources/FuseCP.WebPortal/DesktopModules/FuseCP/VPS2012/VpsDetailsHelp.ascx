@@ -1,23 +1,23 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsHelp.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VpsDetailsHelp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 	    <div class="Content">
 		    <div class="Center">
 			    <div class="panel-body form-horizontal">
-			        <scp:ServerTabs id="tabs" runat="server" SelectedTab="vps_help" />	
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:ServerTabs id="tabs" runat="server" SelectedTab="vps_help" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
-                    <scp:CollapsiblePanel id="secEmail" runat="server" IsCollapsed="true"
+                    <fcp:CollapsiblePanel id="secEmail" runat="server" IsCollapsed="true"
                         TargetControlID="EmailPanel" meta:resourcekey="secEmail" Text="Send instructions by E-Mail">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
 	                <asp:Panel ID="EmailPanel" runat="server" Height="0" style="overflow:hidden;">
                         <table id="tblEmail" runat="server" cellpadding="2">
                             <tr>

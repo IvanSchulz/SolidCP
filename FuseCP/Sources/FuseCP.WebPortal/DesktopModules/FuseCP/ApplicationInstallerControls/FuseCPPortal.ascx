@@ -10,8 +10,8 @@
 		
 		public void GetSettings(InstallationInfo inst)
 		{
-			inst["scp.portalname"] = txtPortalName.Text;
-			inst["scp.enterpriseserver"] = txtEsURL.Text;
+			inst["fcp.portalname"] = txtPortalName.Text;
+			inst["fcp.enterpriseserver"] = txtEsURL.Text;
 		}
 </script>
 <table cellPadding="2" width="100%">

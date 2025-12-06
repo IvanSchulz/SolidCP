@@ -3,7 +3,7 @@
 <%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="uc4" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="uc2" %>
-<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
+<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
 
 <asp:UpdatePanel runat="server" ID="updatePanelUsers">
     <ContentTemplate> 

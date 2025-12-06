@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LyncAddFederationDomain.ascx.cs" Inherits="FuseCP.Portal.LyncAddFederationDomain" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 			<div class="panel-heading">
                     <h3 class="panel-title">
@@ -11,7 +11,7 @@
               </h3>
                           </div>
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     <table id="AddFederationDomain"   runat="server" width="100%"> 					    
                         <tr>
                             <td class="FormLabel150">

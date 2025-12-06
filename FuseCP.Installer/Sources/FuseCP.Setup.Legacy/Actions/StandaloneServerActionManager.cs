@@ -1017,25 +1017,25 @@ namespace FuseCP.Setup.Actions
 			//
 			try
 			{
-				var scpaSysSettings = ES.Services.System.GetSystemSettings(SystemSettings.SETUP_SETTINGS);
+				var fcpaSysSettings = ES.Services.System.GetSystemSettings(SystemSettings.SETUP_SETTINGS);
 				//
-				scpaSysSettings[Global.SCPA.SettingsKeyName] = EnterpriseServerSetup.EnableScpaMode.ToString();
+				fcpaSysSettings[Global.FCPA.SettingsKeyName] = EnterpriseServerSetup.EnableScpaMode.ToString();
 				//
-				var resultCode = ES.Services.System.SetSystemSettings(SystemSettings.SETUP_SETTINGS, scpaSysSettings);
+				var resultCode = ES.Services.System.SetSystemSettings(SystemSettings.SETUP_SETTINGS, fcpaSysSettings);
 				//
 				if (resultCode < 0)
 				{
-					Log.WriteError(String.Format("Failed to enter SCPA mode: {0}", resultCode));
+					Log.WriteError(String.Format("Failed to enter FCPA mode: {0}", resultCode));
 					//
 					return;
 				}
 				//
-				Log.WriteInfo("The system has been switched to SCPA mode");
+				Log.WriteInfo("The system has been switched to FCPA mode");
 			}
 			catch (Exception ex)
 			{
 				if (!Utils.IsThreadAbortException(ex))
-					Log.WriteError("SCPA mode configuration error", ex);
+					Log.WriteError("FCPA mode configuration error", ex);
 			}
 		}
 	}

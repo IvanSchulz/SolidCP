@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailAccessEditAccess.ascx.cs" Inherits="FuseCP.Portal.MailAccessEditAccess" %>
 
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
+	TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <div class="panel-body form-horizontal">
     <div class="Huge">

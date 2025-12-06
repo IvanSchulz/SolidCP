@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Lokale hosts-Datei bereitstellen</value>
   </data>
   <data name="lblBackupTempFolder.Text" xml:space="preserve">
-    <value>Tempor�rer Ordner der SharePoint-Sicherung:</value>
+    <value>Temporärer Ordner der SharePoint-Sicherung:</value>
   </data>
   <data name="lblRootWebApplication.Text" xml:space="preserve">
     <value>SharePoint-Webanwendungs-URL:</value>

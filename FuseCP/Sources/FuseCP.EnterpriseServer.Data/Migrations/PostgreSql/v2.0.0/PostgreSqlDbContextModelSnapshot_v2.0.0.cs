@@ -11253,13 +11253,13 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 2,
                             PropertyName = "WebGroupName",
-                            PropertyValue = "SCPWebUsers"
+                            PropertyValue = "FCPWebUsers"
                         },
                         new
                         {
                             ProviderId = 3,
                             PropertyName = "FtpGroupName",
-                            PropertyValue = "SCPFtpUsers"
+                            PropertyValue = "FCPFtpUsers"
                         },
                         new
                         {
@@ -11763,7 +11763,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 27,
                             PropertyName = "RootOU",
-                            PropertyValue = "SCP Hosting"
+                            PropertyValue = "FCP Hosting"
                         },
                         new
                         {
@@ -11991,7 +11991,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 32,
                             PropertyName = "RootOU",
-                            PropertyValue = "SCP Hosting"
+                            PropertyValue = "FCP Hosting"
                         },
                         new
                         {
@@ -12465,7 +12465,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 101,
                             PropertyName = "WebGroupName",
-                            PropertyValue = "SCP_IUSRS"
+                            PropertyValue = "FCP_IUSRS"
                         },
                         new
                         {
@@ -12483,7 +12483,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 102,
                             PropertyName = "FtpGroupName",
-                            PropertyValue = "SCPFtpUsers"
+                            PropertyValue = "FCPFtpUsers"
                         },
                         new
                         {
@@ -12621,7 +12621,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 105,
                             PropertyName = "WebGroupName",
-                            PropertyValue = "SCP_IUSRS"
+                            PropertyValue = "FCP_IUSRS"
                         },
                         new
                         {
@@ -12639,7 +12639,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 106,
                             PropertyName = "FtpGroupName",
-                            PropertyValue = "SCPFtpUsers"
+                            PropertyValue = "FCPFtpUsers"
                         },
                         new
                         {
@@ -12783,7 +12783,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 112,
                             PropertyName = "WebGroupName",
-                            PropertyValue = "SCP_IUSRS"
+                            PropertyValue = "FCP_IUSRS"
                         },
                         new
                         {
@@ -12801,7 +12801,7 @@ namespace FuseCP.EnterpriseServer.Data.Migrations.PostgreSql
                         {
                             ProviderId = 113,
                             PropertyName = "FtpGroupName",
-                            PropertyValue = "SCPFtpUsers"
+                            PropertyValue = "FCPFtpUsers"
                         },
                         new
                         {

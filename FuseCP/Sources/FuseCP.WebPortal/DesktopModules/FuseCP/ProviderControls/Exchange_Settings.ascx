@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Exchange_Settings.ascx.cs"
     Inherits="FuseCP.Portal.ProviderControls.Exchange2010_Settings" %>
-<%@ Register Src="../SkinControls/BootstrapDropDownList.ascx" TagName="BootstrapDropDownList" TagPrefix="scp" %>
+<%@ Register Src="../SkinControls/BootstrapDropDownList.ascx" TagName="BootstrapDropDownList" TagPrefix="fcp" %>
 
 <%@ Import Namespace="FuseCP.Portal" %>
 

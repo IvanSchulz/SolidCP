@@ -1,4 +1,4 @@
-<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BootstrapDropDownList.ascx.cs" Inherits="FuseCP.Portal.SkinControls.BootstrapDropDownList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BootstrapDropDownList.ascx.cs" Inherits="FuseCP.Portal.SkinControls.BootstrapDropDownList" %>
 
 <div id="ddl" runat="server">
     <input type="hidden" id="hdSelectedIndex" runat="server" />

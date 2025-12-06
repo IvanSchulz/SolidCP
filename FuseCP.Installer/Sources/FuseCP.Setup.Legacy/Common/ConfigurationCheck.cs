@@ -46,10 +46,10 @@ namespace FuseCP.Setup
 		ApacheVersion,
 		Net8Runtime,
 		ASPNET,
-		SCPServer,
-		SCPEnterpriseServer,
-		SCPPortal,
-		SCPWebDavPortal,
+		FCPServer,
+		FCPEnterpriseServer,
+		FCPPortal,
+		FCPWebDavPortal,
 		ASPNET32
 	}
 

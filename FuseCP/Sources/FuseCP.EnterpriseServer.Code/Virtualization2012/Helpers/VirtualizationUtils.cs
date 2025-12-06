@@ -14,7 +14,7 @@ namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
     {
         public const Int64 Size1G = 0x40000000;
 
-        private const string SCP_HOSTNAME_PREFIX = "SCP-"; //min and max are 4 symbols! ([0-9][A-z] and -)
+        private const string FCP_HOSTNAME_PREFIX = "FCP-"; //min and max are 4 symbols! ([0-9][A-z] and -)
 
         public VirtualizationUtils(ControllerBase provider) : base(provider) { }
 
@@ -103,7 +103,7 @@ namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
         }
         public string GenerateFakeNetBIOS()
         {
-            return SCP_HOSTNAME_PREFIX + Utils.GetRandomString(11);
+            return FCP_HOSTNAME_PREFIX + Utils.GetRandomString(11);
         }
 
         public string GetIPv4LastOctetsFromPackage(ushort octets, int packageId)

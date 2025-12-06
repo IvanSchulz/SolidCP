@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>CSR erzeugen</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>Zertifikat löschen</value>
+    <value>Zertifikat lÃ¶schen</value>
   </data>
   <data name="btnExport.Text" xml:space="preserve">
     <value>Zertifikat exportieren</value>
@@ -157,13 +157,13 @@
     <value>Zertifikat-Info</value>
   </data>
   <data name="headerPFXPassword.Text" xml:space="preserve">
-    <value>Geben Sie ein Passwort für die PFX-Datei ein</value>
+    <value>Geben Sie ein Passwort fÃ¼r die PFX-Datei ein</value>
   </data>
   <data name="InstallCSRCertificate.Text" xml:space="preserve">
-    <value>Fügen Sie Ihr Zertifikat aus Ihrem CA in das Textfeld ein und klicken Sie auf "Zertifikat installieren".</value>
+    <value>FÃ¼gen Sie Ihr Zertifikat aus Ihrem CA in das Textfeld ein und klicken Sie auf "Zertifikat installieren".</value>
   </data>
   <data name="InstallCSRDescription.Text" xml:space="preserve">
-    <value>Ein CSR wurde erfolgreich für Ihre Webseite erstellt und wird unten gezeigt. Kopieren Sie den Text darunter und fügen Sie ihn ins CA ein um das Zertifikat anzufragen.</value>
+    <value>Ein CSR wurde erfolgreich fÃ¼r Ihre Webseite erstellt und wird unten gezeigt. Kopieren Sie den Text darunter und fÃ¼gen Sie ihn ins CA ein um das Zertifikat anzufragen.</value>
   </data>
   <data name="InstallCSRHeading.Text" xml:space="preserve">
     <value>Zertifikat installieren</value>
@@ -172,7 +172,7 @@
     <value>PFX-Passwort</value>
   </data>
   <data name="sslBitLength.Text" xml:space="preserve">
-    <value>Bit-Länge:</value>
+    <value>Bit-LÃ¤nge:</value>
   </data>
   <data name="sslCertificate.Text" xml:space="preserve">
     <value>Zertifikat</value>
@@ -187,7 +187,7 @@
     <value>CSR</value>
   </data>
   <data name="sslDomain.Text" xml:space="preserve">
-    <value>Domäne:</value>
+    <value>DomÃ¤ne:</value>
   </data>
   <data name="sslExpiry.Text" xml:space="preserve">
     <value>Ablaufdatum:</value>
@@ -199,10 +199,10 @@
     <value>Vorhandenes Zertifikat gefunden</value>
   </data>
   <data name="SSLInstalledNewDescription.Text" xml:space="preserve">
-    <value>Es ist bereits ein Zertifikat auf dieser Webseite eingerichtet. Sie können eine neue Anfrage erstellen oder ein neues Zertifikat hochladen, jedoch wird das aktuelle Zertifikat dadurch entfernt. Falls Sie das aktuelle Zertifikat erneuern müssen, klicken Sie auf den "Erneuern"-Knopf auf der Registerkarte "Installierte Zertifikate".</value>
+    <value>Es ist bereits ein Zertifikat auf dieser Webseite eingerichtet. Sie kÃ¶nnen eine neue Anfrage erstellen oder ein neues Zertifikat hochladen, jedoch wird das aktuelle Zertifikat dadurch entfernt. Falls Sie das aktuelle Zertifikat erneuern mÃ¼ssen, klicken Sie auf den "Erneuern"-Knopf auf der Registerkarte "Installierte Zertifikate".</value>
   </data>
   <data name="SSLNotInstalledDescription.Text" xml:space="preserve">
-    <value>Es wurde bisher noch kein SSL-Zertifikat auf der Webseite eingerichtet. Um SSL zu verwenden müssen Sie zuerst eine Zertifikatsanforderung (CSR) erstellen, indem Sie auf "Zertifikatsanforderung erstellen" klicken. Sie müssen dann das Zertifikat bei Ihrer Zertifizierungsstelle beantragen, welche Ihnen dann das Zertifikat ausstellt. Wenn Sie schon über ein Zertifikat auf einem anderen Server verfügen, können Sie auch die .pfx-Datei über die Funktion "Zertifikat hochladen" importieren.</value>
+    <value>Es wurde bisher noch kein SSL-Zertifikat auf der Webseite eingerichtet. Um SSL zu verwenden mÃ¼ssen Sie zuerst eine Zertifikatsanforderung (CSR) erstellen, indem Sie auf "Zertifikatsanforderung erstellen" klicken. Sie mÃ¼ssen dann das Zertifikat bei Ihrer Zertifizierungsstelle beantragen, welche Ihnen dann das Zertifikat ausstellt. Wenn Sie schon Ã¼ber ein Zertifikat auf einem anderen Server verfÃ¼gen, kÃ¶nnen Sie auch die .pfx-Datei Ã¼ber die Funktion "Zertifikat hochladen" importieren.</value>
   </data>
   <data name="SSLNotInstalledHeading.Text" xml:space="preserve">
     <value>SSL nicht installiert</value>
@@ -226,7 +226,7 @@
     <value>Anfrage ausstehend</value>
   </data>
   <data name="btnInstallConfirm.Text" xml:space="preserve">
-    <value>Sind Sie sicher? Ihr aktuell eingerichtetes Zertifikat wird gelöscht.</value>
+    <value>Sind Sie sicher? Ihr aktuell eingerichtetes Zertifikat wird gelÃ¶scht.</value>
   </data>
   <data name="btnRenCSR.Text" xml:space="preserve">
     <value>Erneuerungs-CSR erzeugen</value>
@@ -235,13 +235,13 @@
     <value>Erneuerungs-Anfrage erzeugen</value>
   </data>
   <data name="sslIncludewww.Text" xml:space="preserve">
-    <value>www. einschließen</value>
+    <value>www. einschlieÃŸen</value>
   </data>
   <data name="SSLInstalledNewHeading.Text" xml:space="preserve">
     <value>Neues Zertifikat installieren</value>
   </data>
   <data name="sslWildcard.Text" xml:space="preserve">
-    <value>Wildcard-Zertifikat (deckt alle Sub-Domänen ab)</value>
+    <value>Wildcard-Zertifikat (deckt alle Sub-DomÃ¤nen ab)</value>
   </data>
   <data name="btnDelete.OnClientClick" xml:space="preserve">
     <value>return confirm('SSL von dieser Webseite entfernen?');</value>
@@ -253,7 +253,7 @@
     <value>Passwort:</value>
   </data>
   <data name="PfxPasswordConfirmation.Text" xml:space="preserve">
-    <value>Bestätigen:</value>
+    <value>BestÃ¤tigen:</value>
   </data>
   <data name="SSLSSLStateReq.ErrorMessage" xml:space="preserve">
     <value>*</value>
@@ -262,10 +262,10 @@
     <value>*</value>
   </data>
   <data name="valtxtPFXPassConfirm.ErrorMessage" xml:space="preserve">
-    <value>Passwörter stimmen nicht überein</value>
+    <value>PasswÃ¶rter stimmen nicht Ã¼berein</value>
   </data>
   <data name="SelectCertType.Text" xml:space="preserve">
-    <value>Zertifikatstyp auswählen</value>
+    <value>Zertifikatstyp auswÃ¤hlen</value>
   </data>
   <data name="btnCancelRequestText.Text" xml:space="preserve">
     <value>Anfrage abbrechen</value>
@@ -274,7 +274,7 @@
     <value>CSR erzeugen</value>
   </data>
   <data name="btnDeleteText.Text" xml:space="preserve">
-    <value>Löschen</value>
+    <value>LÃ¶schen</value>
   </data>
   <data name="btnExportModalText.Text" xml:space="preserve">
     <value>Exportieren</value>

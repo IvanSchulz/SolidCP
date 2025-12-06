@@ -218,13 +218,13 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLDatabasesSettings</Key>
+    <Key>ModuleTitle.FCPSQLDatabasesSettings</Key>
     <DefaultValue>FuseCP SQL Databases Settings</DefaultValue>
     <Value>إعدادات قواعد بيانات FuseCP SQL</Value>
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLUserSettings</Key>
+    <Key>ModuleTitle.FCPSQLUserSettings</Key>
     <DefaultValue>FuseCP SQL User Settings</DefaultValue>
     <Value>إعدادات مستخدم FuseCP SQL</Value>
   </Resource>
@@ -25027,7 +25027,7 @@
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\SetupControlPanelAccounts.ascx.resx</File>
-    <Key>ScpaProcedureDescription.Text</Key>
+    <Key>FcpaProcedureDescription.Text</Key>
     <DefaultValue>Please setup passwords for FuseCP "serveradmin" and "admin" accounts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; is control panel administrator account. Using this account you can manage all your servers and services, create new hosting plans and customer accounts, both resellers and users.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; is a pre-configured reseller account with unlimited hosting plan to manage local server where control panel is installed.</DefaultValue>
     <Value>يرجى إعداد كلمات المرور لحسابات FuseCP "serveradmin" و "admin".&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; هو حساب مسؤول لوحة التحكم. باستخدام هذا الحساب ، يمكنك إدارة جميع الخوادم والخدمات الخاصة بك ، وإنشاء خطط استضافة جديدة وحسابات العملاء ، سواء الموزعين والمستخدمين.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt;هو حساب موزع تم تكوينه مسبقًا بخطة استضافة غير محدودة لإدارة الخادم المحلي حيث يتم تثبيت لوحة التحكم.</Value>
   </Resource>
@@ -44723,7 +44723,7 @@ After creating your virtual directory go to FP administrator and create a subweb
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV2012R2_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>حساب موزع FuseCP</Value>
   </Resource>
@@ -45647,7 +45647,7 @@ Example: &lt;b&gt;[NetBIOSName].domain.local&lt;/b&gt; (max-15-symbols.domain.zo
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperVForPrivateCloud_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>حساب موزع FuseCP</Value>
   </Resource>
@@ -46329,7 +46329,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperVvmm_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>حساب موزع FuseCP</Value>
   </Resource>
@@ -46933,7 +46933,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>حساب موزع FuseCP</Value>
   </Resource>

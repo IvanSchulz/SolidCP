@@ -20,8 +20,8 @@
 {
     <script>
         $(document).ready(function() {
-            scp.fileBrowser.setSettings({ deletionUrl: "@Url.RouteUrl(FileSystemRouteNames.DeleteFiles)" });
-            scp.fileBrowser.initSearchDataTable('#search-items-table', '@Url.RouteUrl(FileSystemRouteNames.ShowContentDetails)', '@Model.SearchValue');
+            fcp.fileBrowser.setSettings({ deletionUrl: "@Url.RouteUrl(FileSystemRouteNames.DeleteFiles)" });
+            fcp.fileBrowser.initSearchDataTable('#search-items-table', '@Url.RouteUrl(FileSystemRouteNames.ShowContentDetails)', '@Model.SearchValue');
         });
     </script>
     @Scripts.Render("~/bundles/appScripts-webdav")

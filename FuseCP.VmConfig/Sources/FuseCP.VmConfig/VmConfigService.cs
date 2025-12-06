@@ -50,8 +50,8 @@ namespace FuseCP.VmConfig
 		internal const string RegistryInputKey = "SOFTWARE\\Microsoft\\Virtual Machine\\External";
 		internal const string RegistryOutputKey = "SOFTWARE\\Microsoft\\Virtual Machine\\Guest";
 
-		internal const string TaskPrefix = "SCP-";
-		internal const string CurrentTaskName = "SCP-CurrentTask";
+		internal const string TaskPrefix = "FCP-";
+		internal const string CurrentTaskName = "FCP-CurrentTask";
 
         internal const string RAM_SUMMARY_KEY = "VM-RAM-Summary";
         internal const string HDD_SUMMARY_KEY = "VM-HDD-Summary";

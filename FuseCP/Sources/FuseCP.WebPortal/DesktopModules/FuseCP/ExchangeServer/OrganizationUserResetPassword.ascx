@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationUserResetPassword.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationUserResetPassword" %>
 
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 
 
 				<div class="panel-heading">

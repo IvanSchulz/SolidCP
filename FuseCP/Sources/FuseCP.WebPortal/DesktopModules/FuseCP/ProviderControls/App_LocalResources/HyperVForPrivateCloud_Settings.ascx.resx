@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -144,7 +144,7 @@
   <data name="locDiskType.Text" xml:space="preserve">
     <value>Disk Type:</value>
   </data>
-  <data name="locSCPResellerAccount.Text" xml:space="preserve">
+  <data name="locFCPResellerAccount.Text" xml:space="preserve">
     <value>FuseCP Reseller Account</value>
   </data>
   <data name="locDvdIsoPath.Text" xml:space="preserve">

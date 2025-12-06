@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSEditApplicationUsers.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSEditApplicationUsers" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/RDSCollectionUsers.ascx" TagName="CollectionUsers" TagPrefix="scp"%>
-<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/RDSCollectionUsers.ascx" TagName="CollectionUsers" TagPrefix="fcp"%>
+<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-heading">
 					<asp:Image ID="imgEditRDSCollection" SkinID="EnterpriseRDSCollections48" runat="server" />
@@ -16,13 +16,13 @@
 					<asp:Literal ID="litCollectionName" runat="server" Text="" />
 				</div>
                 <div class="panel-body form-horizontal">
-				<scp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_collection_edit_apps" />
+				<fcp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_collection_edit_apps" />
                 <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="SimpleMessageBox1" runat="server" />
-                    <scp:CollapsiblePanel id="secRdsApplicationEdit" runat="server"
+				    <fcp:SimpleMessageBox id="SimpleMessageBox1" runat="server" />
+                    <fcp:CollapsiblePanel id="secRdsApplicationEdit" runat="server"
                         TargetControlID="panelRdsApplicationEdit" meta:resourcekey="secRdsApplicationEdit" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                     <asp:Panel runat="server" ID="panelRdsApplicationEdit">                                                
                         <div style="padding: 10px;">
@@ -69,13 +69,13 @@
                         </div>                            
                     </asp:Panel>
                     					
-                    <scp:CollapsiblePanel id="secRdsApplicationUsers" runat="server"
+                    <fcp:CollapsiblePanel id="secRdsApplicationUsers" runat="server"
                         TargetControlID="panelRdsApplicationUsers" meta:resourcekey="secRdsApplicationUsers" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                     <asp:Panel runat="server" ID="panelRdsApplicationUsers">                                                
                         <div style="padding: 10px;">
-                            <scp:CollectionUsers id="users" runat="server" />
+                            <fcp:CollectionUsers id="users" runat="server" />
                         </div>                            
                     </asp:Panel>
                     <div class="text-right">

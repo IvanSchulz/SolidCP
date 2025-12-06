@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailDomains.ascx.cs" Inherits="FuseCP.Portal.MailDomains" %>
-<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="fcp" %>
 
-<scp:SpaceServiceItems ID="itemsList" runat="server"
+<fcp:SpaceServiceItems ID="itemsList" runat="server"
     ShowCreateButton="False"
     ShowQuota="False"
     CreateControlID="edit_item"

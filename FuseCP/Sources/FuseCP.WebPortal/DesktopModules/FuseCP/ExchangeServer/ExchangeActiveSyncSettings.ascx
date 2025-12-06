@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeActiveSyncSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeActiveSyncSettings" %>
-<%@ Register Src="UserControls/HoursBox.ascx" TagName="HoursBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/HoursBox.ascx" TagName="HoursBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -16,7 +16,7 @@
 				    </h3>
                 </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
 				    <table>
 					    <tr>
@@ -27,15 +27,15 @@
 						</tr>
 						<tr>
 						    <td nowrap><asp:Label meta:resourcekey="lblRefreshInterval" runat="server" ID="lblRefreshInterval" /></td>
-						    <td><scp:HoursBox id="hoursRefreshInterval" runat="server"  ValidationGroup="EditMailbox">
-                                </scp:HoursBox>
+						    <td><fcp:HoursBox id="hoursRefreshInterval" runat="server"  ValidationGroup="EditMailbox">
+                                </fcp:HoursBox>
 				            </td>
 						</tr>
 					</table>
                     
-					<scp:CollapsiblePanel id="secApplication" runat="server"
+					<fcp:CollapsiblePanel id="secApplication" runat="server"
                         TargetControlID="ApplicationPanel" meta:resourcekey="secApplication" Text="Application">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ApplicationPanel" runat="server" Height="0" style="overflow:hidden;">
                         <table>
 					        <tr>
@@ -49,7 +49,7 @@
 							        <asp:Localize ID="locMaxAttachmentSize" runat="server"
 							            meta:resourcekey="locMaxAttachmentSize" Text="Maximum attachment size:"></asp:Localize></td>
 							    <td>
-									<scp:SizeBox id="sizeMaxAttachmentSize" runat="server" ValidationGroup="EditMailbox" DisplayUnitsKB="true" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
+									<fcp:SizeBox id="sizeMaxAttachmentSize" runat="server" ValidationGroup="EditMailbox" DisplayUnitsKB="true" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
 								</td>
 						    </tr>
 						</table>
@@ -57,9 +57,9 @@
 				    </asp:Panel>
 				    
 				    
-					<scp:CollapsiblePanel id="secWSS" runat="server"
+					<fcp:CollapsiblePanel id="secWSS" runat="server"
                         TargetControlID="WSSPanel" meta:resourcekey="secWSS" Text="WSS/UNC">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="WSSPanel" runat="server" Height="0" style="overflow:hidden;">
 				        <table>
 					        <tr>
@@ -79,9 +79,9 @@
 				    </asp:Panel>
 				    
 				    
-					<scp:CollapsiblePanel id="secPassword" runat="server"
+					<fcp:CollapsiblePanel id="secPassword" runat="server"
                         TargetControlID="PasswordPanel" meta:resourcekey="secPassword" Text="Password">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="PasswordPanel" runat="server" Height="0" style="overflow:hidden;">
                     
 						<asp:UpdatePanel ID="PasswordUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
@@ -127,7 +127,7 @@
 							                    <asp:Localize ID="locNumberAttempts" runat="server"
 							                        meta:resourcekey="locNumberAttempts" Text="Number of failed attempts allowed:"></asp:Localize></td>
 							                <td>
-									            <scp:SizeBox id="sizeNumberAttempts" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
+									            <fcp:SizeBox id="sizeNumberAttempts" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
 								            </td>
 						                </tr>
 						                <tr>
@@ -135,7 +135,7 @@
 							                    <asp:Localize ID="locMinimumPasswordLength" runat="server"
 							                        meta:resourcekey="locMinimumPasswordLength" Text="Minimum password length:"></asp:Localize></td>
 							                <td>
-									            <scp:SizeBox id="sizeMinimumPasswordLength" runat="server" ValidationGroup="EditMailbox"
+									            <fcp:SizeBox id="sizeMinimumPasswordLength" runat="server" ValidationGroup="EditMailbox"
 									                DisplayUnits="false" EmptyValue="0"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
 								            </td>
 						                </tr>
@@ -144,7 +144,7 @@
 							                    <asp:Localize ID="locTimeReenter" runat="server"
 							                        meta:resourcekey="locTimeReenter" Text="Time without user input before password must be re-entered:"></asp:Localize></td>
 							                <td>
-									            <scp:SizeBox id="sizeTimeReenter" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
+									            <fcp:SizeBox id="sizeTimeReenter" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
 									            <asp:Localize ID="locMinutes" runat="server"
 							                        meta:resourcekey="locMinutes" Text="minutes"></asp:Localize>
 								            </td>
@@ -154,7 +154,7 @@
 							                    <asp:Localize ID="locPasswordExpiration" runat="server"
 							                        meta:resourcekey="locPasswordExpiration" Text="Password expiration:"></asp:Localize></td>
 							                <td>
-									            <scp:SizeBox id="sizePasswordExpiration" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
+									            <fcp:SizeBox id="sizePasswordExpiration" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
 									            <asp:Localize ID="locDays" runat="server"
 							                        meta:resourcekey="locDays" Text="days"></asp:Localize>
 								            </td>
@@ -164,7 +164,7 @@
 							                    <asp:Localize ID="locPasswordHistory" runat="server"
 							                        meta:resourcekey="locPasswordHistory" Text="Enforce password history:"></asp:Localize></td>
 							                <td>
-									            <scp:SizeBox id="sizePasswordHistory" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false" RequireValidatorEnabled="true"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
+									            <fcp:SizeBox id="sizePasswordHistory" runat="server" ValidationGroup="EditMailbox" DisplayUnits="false" RequireValidatorEnabled="true"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="false"/>
 								            </td>
 						                </tr>
 					                </table>

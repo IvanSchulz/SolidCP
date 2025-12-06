@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDistributionListGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDistributionListGeneralSettings" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="scp" %>
-<%@ Register Src="UserControls/DistributionListTabs.ascx" TagName="DistributionListTabs" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/DistributionListTabs.ascx" TagName="DistributionListTabs" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -19,10 +19,10 @@
                 </div>
 				<div class="panel-body form-horizontal">
                     <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-                    <scp:DistributionListTabs id="tabs" runat="server" SelectedTab="dlist_settings" />
+                    <fcp:DistributionListTabs id="tabs" runat="server" SelectedTab="dlist_settings" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 					<div class="form-group">
                         <asp:Label runat="server" CssClass="control-label col-sm-2" AssociatedControlID="txtDisplayName">
                             <asp:Localize ID="locDisplayName" runat="server" meta:resourcekey="locDisplayName" Text="Display Name: *"></asp:Localize>
@@ -45,7 +45,7 @@
 						   <asp:Localize ID="locManager" runat="server" meta:resourcekey="locManager" Text="Manager:"></asp:Localize>
                         </asp:label>
                         <div class="col-sm-6">
-                                <scp:MailboxSelector id="manager" runat="server"
+                                <fcp:MailboxSelector id="manager" runat="server"
                                             ShowOnlyMailboxes="true" 
 											MailboxesEnabled="true"
 											DistributionListsEnabled="true" />
@@ -62,7 +62,7 @@
                         </asp:label>
 						<div class="col-sm-10">
                                  <div class="input-group">
-                                            <scp:AccountsList id="members" runat="server" MailboxesEnabled="true" EnableMailboxOnly="true" ContactsEnabled="true" DistributionListsEnabled="true" SharedMailboxEnabled="true"  />
+                                            <fcp:AccountsList id="members" runat="server" MailboxesEnabled="true" EnableMailboxOnly="true" ContactsEnabled="true" DistributionListsEnabled="true" SharedMailboxEnabled="true"  />
                                 </div>
 						</div>
                         </div>

@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlUsers.ascx.cs" Inherits="FuseCP.Portal.SqlUsers" %>
-<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="fcp" %>
 
-<scp:SpaceServiceItems ID="itemsList" runat="server"
+<fcp:SpaceServiceItems ID="itemsList" runat="server"
     CreateButtonText="btnAddUser"
     CreateControlID="edit_item"
     GroupName="MsSQL2000"

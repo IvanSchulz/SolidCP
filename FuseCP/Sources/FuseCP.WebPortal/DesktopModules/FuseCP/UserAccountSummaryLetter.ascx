@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountSummaryLetter.ascx.cs" Inherits="FuseCP.Portal.UserAccountSummaryLetter" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <div class="panel-body form-horizontal">
 
-    <scp:CollapsiblePanel id="secEmail" runat="server"
+    <fcp:CollapsiblePanel id="secEmail" runat="server"
         TargetControlID="EmailPanel" meta:resourcekey="secEmail" Text="Send via E-Mail">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
 	<asp:Panel ID="EmailPanel" runat="server" Height="0" style="overflow:hidden;">
         <table id="tblEmail" runat="server" cellpadding="2">
             <tr>

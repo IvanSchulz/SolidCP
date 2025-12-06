@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDomainNames.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDomainNames" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -14,7 +14,7 @@
                     <div class="FormButtonsBar right">
                         <CPCC:StyleButton id="btnAddDomain" CssClass="btn btn-primary" runat="server" OnClick="btnAddDomain_Click"> <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddDomain"/> </CPCC:StyleButton>
                     </div>
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    <asp:GridView ID="gvDomains" runat="server" AutoGenerateColumns="False" EnableViewState="true"
 					    Width="100%" EmptyDataText="gvDomains" CssSelectorClass="NormalGridView" OnRowCommand="gvDomains_RowCommand">
 					    <Columns>
@@ -64,7 +64,7 @@
 				 
 				    <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Total Domains Used:"></asp:Localize>
 				    &nbsp;&nbsp;&nbsp;
-				    <scp:QuotaViewer ID="domainsQuota" runat="server" QuotaTypeId="2" />
+				    <fcp:QuotaViewer ID="domainsQuota" runat="server" QuotaTypeId="2" />
 </div>
                          <div class="col-md-6 text-right">
 				        <CPCC:StyleButton id="btnSetDefaultDomain" CssClass="btn btn-success" runat="server"  CausesValidation="false" OnClick="btnSetDefaultDomain_Click"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnSetDefaultDomain"/> </CPCC:StyleButton>&nbsp;

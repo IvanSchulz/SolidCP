@@ -144,17 +144,17 @@ namespace FuseCP.Setup
 						case CheckTypes.ASPNET:
 							status = CheckASPNET(check.SetupVariables, out details);
 							break;
-						case CheckTypes.SCPServer:
-							status = CheckSCPServer(check.SetupVariables, out details);
+						case CheckTypes.FCPServer:
+							status = CheckFCPServer(check.SetupVariables, out details);
 							break;
-						case CheckTypes.SCPEnterpriseServer:
-							status = CheckSCPEnterpriseServer(check.SetupVariables, out details);
+						case CheckTypes.FCPEnterpriseServer:
+							status = CheckFCPEnterpriseServer(check.SetupVariables, out details);
 							break;
-						case CheckTypes.SCPPortal:
-							status = CheckSCPPortal(check.SetupVariables, out details);
+						case CheckTypes.FCPPortal:
+							status = CheckFCPPortal(check.SetupVariables, out details);
 							break;
-                        case CheckTypes.SCPWebDavPortal:
-                            status = CheckSCPWebDavPortal(check.SetupVariables, out details);
+                        case CheckTypes.FCPWebDavPortal:
+                            status = CheckFCPWebDavPortal(check.SetupVariables, out details);
                             break;
 						case CheckTypes.Net8Runtime:
 							status = CheckNet8Runtime(check.SetupVariables, out details);
@@ -521,7 +521,7 @@ namespace FuseCP.Setup
 			return SecurityUtils.UserExists(domain, username);
 		}
 
-		private CheckStatuses CheckSCPServer(SetupVariables setupVariables, out string details)
+		private CheckStatuses CheckFCPServer(SetupVariables setupVariables, out string details)
 		{
 			details = "";
 
@@ -608,7 +608,7 @@ namespace FuseCP.Setup
 			return true;
 		}
 
-		private CheckStatuses CheckSCPEnterpriseServer(SetupVariables setupVariables, out string details)
+		private CheckStatuses CheckFCPEnterpriseServer(SetupVariables setupVariables, out string details)
 		{
 			if (!OSInfo.IsWindows)
 			{
@@ -651,7 +651,7 @@ namespace FuseCP.Setup
 			}
 		}
 
-		private CheckStatuses CheckSCPPortal(SetupVariables setupVariables, out string details)
+		private CheckStatuses CheckFCPPortal(SetupVariables setupVariables, out string details)
 		{
 			if (!OSInfo.IsWindows)
 			{
@@ -687,7 +687,7 @@ namespace FuseCP.Setup
 		}
 
 
-        private CheckStatuses CheckSCPWebDavPortal(SetupVariables setupVariables, out string details)
+        private CheckStatuses CheckFCPWebDavPortal(SetupVariables setupVariables, out string details)
         {
 			if (!OSInfo.IsWindows)
 			{

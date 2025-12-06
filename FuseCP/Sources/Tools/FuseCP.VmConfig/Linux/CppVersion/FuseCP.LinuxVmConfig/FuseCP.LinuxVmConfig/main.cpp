@@ -61,8 +61,8 @@ void ParseParameters(map<string, string>& dictionary, string parameters);
 void SaveExecutionResult(string name, const ExecutionResult& res, string started, string ended);
 void Start();
 
-const string TaskPrefix = "SCP-";
-const string CurrentTaskName = "SCP-CurrentTask";
+const string TaskPrefix = "FCP-";
+const string CurrentTaskName = "FCP-CurrentTask";
 
 const string DEFAULT_KVP_DIRECTORY_LINUX = "/var/lib/hyperv/";
 const string DEFAULT_KVP_DIRECTORY_FREEBSD = "/var/db/hyperv/pool/";

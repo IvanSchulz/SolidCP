@@ -43,7 +43,7 @@ namespace FuseCP.WebDavPortal.HttpHandlers
                             var cryptography = DependencyResolver.Current.GetService<ICryptography>();
 
 
-                            var user = SCP.Services.ExchangeServer.GetAccount(token.ItemId, token.AccountId);
+                            var user = FCP.Services.ExchangeServer.GetAccount(token.ItemId, token.AccountId);
 
                             authenticationService.LogIn(user.UserPrincipalName, cryptography.Decrypt(token.AuthData));
                         }

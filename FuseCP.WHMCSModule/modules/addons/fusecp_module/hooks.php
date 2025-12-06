@@ -67,29 +67,29 @@ function fusecp_module_ClientEdit($params)
     $serviceid = 0;
     
     // Query for the users FuseCP accounts - If they do not have any, just ignore the request
-    $scpaccounts = fusecp_database::getUserSCPAccounts($userid);
-    if(is_array($scpaccounts) && $scpaccounts['status']=='error'){
-        throw new Exception($scpaccounts['description']);
+    $fcpaccounts = fusecp_database::getUserFCPAccounts($userid);
+    if(is_array($fcpaccounts) && $fcpaccounts['status']=='error'){
+        throw new Exception($fcpaccounts['description']);
     }
-    if(!empty($scpaccounts)){
-        foreach($scpaccounts as $scpaccount){
+    if(!empty($fcpaccounts)){
+        foreach($fcpaccounts as $fcpaccount){
             // Start updating the users account details
-            $serviceid = $scpaccount->serviceid;
-            $username = $scpaccount->username;
-            $serverUsername = $scpaccount->serverusername;
-            $serverPassword = decrypt($scpaccount->serverpassword);
-            $serverPort = empty($scpaccount->serverport) ? '9002' : $scpaccount->serverport;
-            $serverHost = empty($scpaccount->serverhostname) ? $scpaccount->serverip : $scpaccount->serverhostname;
-            $serverSecure = $scpaccount->serversecure == 'on' ? TRUE : FALSE;
+            $serviceid = $fcpaccount->serviceid;
+            $username = $fcpaccount->username;
+            $serverUsername = $fcpaccount->serverusername;
+            $serverPassword = decrypt($fcpaccount->serverpassword);
+            $serverPort = empty($fcpaccount->serverport) ? '9002' : $fcpaccount->serverport;
+            $serverHost = empty($fcpaccount->serverhostname) ? $fcpaccount->serverip : $fcpaccount->serverhostname;
+            $serverSecure = $fcpaccount->serversecure == 'on' ? TRUE : FALSE;
             $clientsDetails = $params;
 
             try
             {
                 // Create the FuseCP Enterprise Server Client object instance
-                $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+                $fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 
                 // Get the user's details from FuseCP - We need the username
-                $user = $scp->getUserByUsername($username);
+                $user = $fcp->getUserByUsername($username);
                 if (empty($user))
                 {
                     throw new Exception("User {$username} does not exist - Cannot update account details for unknown user");
@@ -132,7 +132,7 @@ function fusecp_module_ClientEdit($params)
 								'MfaMode' => $user['MfaMode']);
 
                 // Execute the UpdateUserDetails method
-                $scp->updateUserDetails($userParams);
+                $fcp->updateUserDetails($userParams);
 
                 // Add log entry to client log
                 logactivity("FuseCP Sync - Account {$username} contact details updated successfully", $userid);
@@ -171,36 +171,36 @@ function fusecp_module_AddonActivation($params)
 
     try
     {
-        $scpaccount = fusecp_database::getAddonActivationSCPAccount($serviceid, $addonid);
-        if(is_array($scpaccount) && $scpaccount['status']=='error'){
-            throw new Exception($scpaccount['description']);
+        $fcpaccount = fusecp_database::getAddonActivationFCPAccount($serviceid, $addonid);
+        if(is_array($fcpaccount) && $fcpaccount['status']=='error'){
+            throw new Exception($fcpaccount['description']);
         }
 
-        if (!empty($scpaccount)){
+        if (!empty($fcpaccount)){
             // Start processing the users addon
-            $username = $scpaccount->username;
-            $serverUsername = $scpaccount->serverusername;
-            $serverPassword = decrypt($scpaccount->serverpassword);
-            $serverPort = empty($scpaccount->serverport) ? '9002' : $scpaccount->serverport;
-            $serverHost = empty($scpaccount->serverhostname) ? $scpaccount->serverip : $scpaccount->serverhostname;
-            $serverSecure = $scpaccount->serversecure == 'on' ? TRUE : FALSE;
+            $username = $fcpaccount->username;
+            $serverUsername = $fcpaccount->serverusername;
+            $serverPassword = decrypt($fcpaccount->serverpassword);
+            $serverPort = empty($fcpaccount->serverport) ? '9002' : $fcpaccount->serverport;
+            $serverHost = empty($fcpaccount->serverhostname) ? $fcpaccount->serverip : $fcpaccount->serverhostname;
+            $serverSecure = $fcpaccount->serversecure == 'on' ? TRUE : FALSE;
         
             // Create the FuseCP Enterprise Server Client object instance
-            $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+            $fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
         
             // Get the user's details from FuseCP - We need the userid
-            $user = $scp->getUserByUsername($username);
+            $user = $fcp->getUserByUsername($username);
             if (empty($user))
             {
                 throw new Exception("User {$username} does not exist - Cannot allocate addon for unknown user");
             }
             
             // Get the user's package details from FuseCP - We need the PackageId
-            $package = $scp->getUserPackages($user['UserId']);
+            $package = $fcp->getUserPackages($user['UserId']);
             $packageId = $package['PackageId'];
             
             // Get the associated FuseCP addon id
-            $addon = fusecp_database::getSCPAddon($addonid);
+            $addon = fusecp_database::getFCPAddon($addonid);
             if(is_array($addon) && $addon['status']=='error'){
                 throw new Exception($addon['description']);
             }
@@ -209,7 +209,7 @@ function fusecp_module_AddonActivation($params)
             }
             
             // Add the Addon Plan to the customer's FuseCP package / hosting space
-            $results = $scp->addPackageAddonById($packageId, $addon->scp_id);
+            $results = $fcp->addPackageAddonById($packageId, $addon->fcp_id);
             
             // Check the results to verify that the addon has been successfully allocated
             if ($results['Result'] > 0)
@@ -217,7 +217,7 @@ function fusecp_module_AddonActivation($params)
                 // If this addon is an IP address addon - attempt to randomly allocate an IP address to the customer's hosting space
                 if ($addon->is_ipaddress == 1)
                 {
-                    $scp->allocatePackageIPAddresses($packageId);
+                    $fcp->allocatePackageIPAddresses($packageId);
                 }
                 
                 // Add log entry to client log

@@ -27,7 +27,7 @@ else
 @section scripts{
 
     <script>
-        scp.fileBrowser.setSettings({
+        fcp.fileBrowser.setSettings({
             deletionUrl: "@Url.RouteUrl(FileSystemRouteNames.DeleteFiles)",
             fileExistUrl: "@Url.RouteUrl(FileSystemRouteNames.ItemExist)",
             textItemExist: "@UI.ItemExist." });
@@ -43,7 +43,7 @@ else
             $(document).ready(function () {
                 @if (string.IsNullOrEmpty(Model.SearchValue))
                 {
-                    @:scp.fileBrowser.initBigIcons('#resourcesDiv', '@Url.RouteUrl(FileSystemRouteNames.ShowAdditionalContent)');
+                    @:fcp.fileBrowser.initBigIcons('#resourcesDiv', '@Url.RouteUrl(FileSystemRouteNames.ShowAdditionalContent)');
                 }
                 recalculateResourseHeight();
             });
@@ -53,7 +53,7 @@ else
     {
         <script>
             $(document).ready(function () {
-                scp.fileBrowser.initDataTable('#webdav-items-table', '@Url.RouteUrl(FileSystemRouteNames.ShowContentDetails)');
+                fcp.fileBrowser.initDataTable('#webdav-items-table', '@Url.RouteUrl(FileSystemRouteNames.ShowContentDetails)');
             });
         </script>
     }

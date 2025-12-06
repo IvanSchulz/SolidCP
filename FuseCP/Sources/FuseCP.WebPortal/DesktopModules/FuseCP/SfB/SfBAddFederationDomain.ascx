@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAddFederationDomain.ascx.cs" Inherits="FuseCP.Portal.SfBAddFederationDomain" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <div id="ExchangeContainer">
     <div class="Module">
@@ -15,7 +15,7 @@
                     <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle"></asp:Localize>
                 </div>
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     <table id="AddFederationDomain"   runat="server" width="100%"> 					    
                         <tr>
                             <td class="FormLabel150">

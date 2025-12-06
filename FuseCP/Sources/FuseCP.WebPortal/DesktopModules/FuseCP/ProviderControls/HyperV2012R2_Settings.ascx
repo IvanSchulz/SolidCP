@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperV2012R2_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.HyperV2012R2_Settings" %>
-<%@ Register Src="../UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
 
 <asp:ValidationSummary ID="ValidationSummary" runat="server" ShowMessageBox="true" ShowSummary="false" />
 
@@ -377,9 +377,9 @@
                 
                 <tr>
                     <td colspan="3">
-                        <scp:CollapsiblePanel id="clpAdvancedTemplateSettings" runat="server" IsCollapsed="true"
+                        <fcp:CollapsiblePanel id="clpAdvancedTemplateSettings" runat="server" IsCollapsed="true"
 	                        TargetControlID="pAdvancedTemplateSettings" meta:resourcekey="clpAdvancedTemplateSettings" Text="Advanced template settings">
-                        </scp:CollapsiblePanel>
+                        </fcp:CollapsiblePanel>
                         <asp:Panel ID="pAdvancedTemplateSettings" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                             <table style="border-collapse: separate; border-spacing: 5px 3px; margin: 10px; width: 100%;">
                                 <tr>
@@ -711,7 +711,7 @@
 		        <asp:Localize ID="locPreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td colspan="2">
-		        <scp:EditIPAddressControl id="externalPreferredNameServer" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="externalPreferredNameServer" runat="server" Required="true" />
             </td>
 	    </tr>
 	    <tr>
@@ -719,7 +719,7 @@
 		        <asp:Localize ID="locAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td colspan="2">
-		        <scp:EditIPAddressControl id="externalAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="externalAlternateNameServer" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -767,7 +767,7 @@
 		        <asp:Localize ID="locManagePreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="managePreferredNameServer" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="managePreferredNameServer" runat="server" Required="true" />
             </td>
 	    </tr>
 	    <tr id="ManageAlternateNameServerRow" runat="server">
@@ -775,7 +775,7 @@
 		        <asp:Localize ID="locManageAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="manageAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="manageAlternateNameServer" runat="server" />
             </td>
 	    </tr>
 	</table>
@@ -812,7 +812,7 @@
 		        <asp:Localize ID="locPrivCustomFormat" runat="server" meta:resourcekey="locPrivCustomFormat" Text="Start IP Address:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privateIPAddress" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="privateIPAddress" runat="server" Required="true" />
 		        /
 		        <asp:TextBox ID="privateSubnetMask" runat="server" MaxLength="3" Width="40px" CssClass="form-control"></asp:TextBox>
 		        <asp:RequiredFieldValidator ID="privateSubnetMaskValidator" runat="server" ControlToValidate="privateSubnetMask"
@@ -824,7 +824,7 @@
 		        <asp:Localize ID="locPrivDefaultGateway" runat="server" meta:resourcekey="locDefaultGateway" Text="Default Gateway:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privateDefaultGateway" runat="server" />
+		        <fcp:EditIPAddressControl id="privateDefaultGateway" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -832,7 +832,7 @@
 		        <asp:Localize ID="locPrivPreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privatePreferredNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="privatePreferredNameServer" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -840,7 +840,7 @@
 		        <asp:Localize ID="locPrivAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privateAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="privateAlternateNameServer" runat="server" />
             </td>
 	    </tr>
         <tr>
@@ -902,7 +902,7 @@
 		        <asp:Localize ID="locDmzCustomFormat" runat="server" meta:resourcekey="locPrivCustomFormat" Text="Start IP Address:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="dmzIPAddress" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="dmzIPAddress" runat="server" Required="true" />
 		        /
 		        <asp:TextBox ID="dmzSubnetMask" runat="server" MaxLength="3" Width="40px" CssClass="form-control"></asp:TextBox>
 		        <asp:RequiredFieldValidator ID="dmzSubnetMaskValidator" runat="server" ControlToValidate="dmzSubnetMask"
@@ -914,7 +914,7 @@
 		        <asp:Localize ID="locDmzDefaultGateway" runat="server" meta:resourcekey="locDefaultGateway" Text="Default Gateway:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="dmzDefaultGateway" runat="server" />
+		        <fcp:EditIPAddressControl id="dmzDefaultGateway" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -922,7 +922,7 @@
 		        <asp:Localize ID="locDmzPreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="dmzPreferredNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="dmzPreferredNameServer" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -930,7 +930,7 @@
 		        <asp:Localize ID="locDmzAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="dmzAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="dmzAlternateNameServer" runat="server" />
             </td>
 	    </tr>
         <tr>

@@ -6,11 +6,11 @@
 {else}
     <script type="text/javascript">
     function runAddonSaveCommand() {
-			var scp_id_input = document.getElementById("addon_scp_id");
-			var scp_id = parseInt(scp_id_input.value);
-			if (isNaN(scp_id) || scp_id <= 0 || scp_id > 2147483647){
+			var fcp_id_input = document.getElementById("addon_fcp_id");
+			var fcp_id = parseInt(fcp_id_input.value);
+			if (isNaN(fcp_id) || fcp_id <= 0 || fcp_id > 2147483647){
 				alert("Invalid FuseCP-ID.");
-				scp_id_input.focus();
+				fcp_id_input.focus();
 				return false;
 			}
             // Hide the modal that was activated.
@@ -57,12 +57,12 @@
             }
         }
 		
-		function openAddonEditDialog(whmcs_id, scp_id, is_ipaddress){
+		function openAddonEditDialog(whmcs_id, fcp_id, is_ipaddress){
 			document.getElementById("addon_whmcs_id").value = whmcs_id;
-			if (scp_id){
-				document.getElementById("addon_scp_id").value = scp_id;
+			if (fcp_id){
+				document.getElementById("addon_fcp_id").value = fcp_id;
 			}else{
-				document.getElementById("addon_scp_id").value = "";
+				document.getElementById("addon_fcp_id").value = "";
 			}
 			if (is_ipaddress == 1){
 				document.getElementById("addon_is_ipaddress").checked = true;
@@ -106,7 +106,7 @@
                         <input type="hidden" name="action" value="edit_addon">
                         <input type="hidden" name="module" value="fusecp_module">
 						<input type="hidden" id="addon_whmcs_id" name="whmcs_id" value="" />
-                        <div class="form-group"><label>{$LANG.FuseCP_fusecp_id}:</label><input type="text" id="addon_scp_id" name="scp_id" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_fusecp_id_tooltip}" /></div>
+                        <div class="form-group"><label>{$LANG.FuseCP_fusecp_id}:</label><input type="text" id="addon_fcp_id" name="fcp_id" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_fusecp_id_tooltip}" /></div>
                         <div class="form-group"><label><input type="checkbox" id="addon_is_ipaddress" name="is_ipaddress" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_is_ip_address_tooltip}" /> {$LANG.FuseCP_is_ip_address}</label></div>
                 </div>
                 <div class="modal-footer panel-footer">
@@ -151,11 +151,11 @@
                 <tr>
 					<td>{$addon->name}</td>
 					<td>{$addon->whmcs_id}</td>
-					<td>{$addon->scp_id}</td>
+					<td>{$addon->fcp_id}</td>
 					<td>{$addon->hidden}</td>
-					<td><a href="#" onclick="openAddonEditDialog('{$addon->whmcs_id}', '{$addon->scp_id}', '{$addon->is_ipaddress}'); return false;" title="{$LANG.FuseCP_edit}"><i class="fas fa-pencil-alt"></i></a></td>
+					<td><a href="#" onclick="openAddonEditDialog('{$addon->whmcs_id}', '{$addon->fcp_id}', '{$addon->is_ipaddress}'); return false;" title="{$LANG.FuseCP_edit}"><i class="fas fa-pencil-alt"></i></a></td>
 					<td>
-						{if $addon->scp_id}
+						{if $addon->fcp_id}
 						<a href="{$params['modulelink']}&action=addon_delete&id={$addon->whmcs_id}" onclick="runAddonDeleteCommand('{$addon->whmcs_id}'); return false;" title="{$LANG.FuseCP_delete}"><i class="fa fa-times textred"></i></a>
 						{/if}
 					</td>

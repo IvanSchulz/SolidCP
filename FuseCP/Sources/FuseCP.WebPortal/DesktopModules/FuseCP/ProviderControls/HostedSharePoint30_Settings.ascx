@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePoint30_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.HostedSharePoint30_Settings" %>
-<%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="fcp" %>
 
 <table cellpadding="4" cellspacing="0" width="100%">
 	<tr>
@@ -15,7 +15,7 @@
 		    <asp:Label ID="lblRootWebApplicationIpAddress" runat="server" meta:resourcekey="lblRootWebApplicationIpAddress" Text="SharePoint Web Application IP:"></asp:Label>
 		</td>
 		<td width="100%">
-			 <scp:SelectIPAddress ID="ddlRootWebApplicationIpAddress" runat="server" ServerIdParam="ServerID" AllowEmptySelection="false" />
+			 <fcp:SelectIPAddress ID="ddlRootWebApplicationIpAddress" runat="server" ServerIdParam="ServerID" AllowEmptySelection="false" />
         </td>
     </tr>
 	<tr>

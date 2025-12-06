@@ -53,10 +53,10 @@ Class fusecp_addonautomation{
     
     public function getAddonAutomation(){
         try{
-            $this->addonautomation = Capsule::select("(SELECT a.name, a.id AS whmcs_id, sa.scp_id, sa.is_ipaddress, a.hidden FROM tbladdons AS a
+            $this->addonautomation = Capsule::select("(SELECT a.name, a.id AS whmcs_id, sa.fcp_id, sa.is_ipaddress, a.hidden FROM tbladdons AS a
 				LEFT JOIN ".SOLIDCP_ADDONS_TABLE." AS sa ON sa.whmcs_id=a.id)
                 UNION
-                (SELECT '*** Removed ***' AS name, sa.whmcs_id, sa.scp_id, sa.is_ipaddress, 0 AS hidden FROM tbladdons AS a
+                (SELECT '*** Removed ***' AS name, sa.whmcs_id, sa.fcp_id, sa.is_ipaddress, 0 AS hidden FROM tbladdons AS a
                 RIGHT JOIN ".SOLIDCP_ADDONS_TABLE." AS sa ON sa.whmcs_id=a.id
                 WHERE a.id IS NULL)
 				ORDER BY name");
@@ -79,7 +79,7 @@ Class fusecp_addonautomation{
 					->where('whmcs_id', $new['whmcs_id'])
 					->update(
 					[
-						'scp_id' => $new['scp_id'],
+						'fcp_id' => $new['fcp_id'],
 						'is_ipaddress' => $new['is_ipaddress'],
 						'updated_at' => date('Y-m-d H:i:s')
 					]
@@ -89,7 +89,7 @@ Class fusecp_addonautomation{
 					->insert(
 					[
 						'whmcs_id' => $new['whmcs_id'],
-						'scp_id' => $new['scp_id'],
+						'fcp_id' => $new['fcp_id'],
 						'is_ipaddress' => $new['is_ipaddress'],
 						'created_at' => date('Y-m-d H:i:s')
 					]

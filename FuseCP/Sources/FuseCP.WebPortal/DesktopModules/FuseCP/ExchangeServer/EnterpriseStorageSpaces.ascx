@@ -1,19 +1,19 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageSpaces.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageSpaces" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 <div id="ExchangeContainer">
 	<div class="Module">
 		<div class="Header">
-			<scp:Breadcrumb ID="breadcrumb" runat="server" PageName="Text.PageName" />
+			<fcp:Breadcrumb ID="breadcrumb" runat="server" PageName="Text.PageName" />
 		</div>
 		<div class="Left">
-			<scp:Menu ID="menu" runat="server" SelectedItem="domains" />
+			<fcp:Menu ID="menu" runat="server" SelectedItem="domains" />
 		</div>
 		<div class="Content">
 			<div class="Center">
@@ -22,7 +22,7 @@
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Space Names"></asp:Localize>
 				</div>
 				<div class="FormBody">
-					<scp:SimpleMessageBox ID="messageBox" runat="server" />
+					<fcp:SimpleMessageBox ID="messageBox" runat="server" />
 
 					<div class="FormButtonsBarClean">
 						<asp:Button ID="btnAddSpace" runat="server" meta:resourcekey="btnAddSpace"
@@ -72,7 +72,7 @@
 
 					<asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Total Spaces Used:"></asp:Localize>
 					&nbsp;&nbsp;&nbsp;
-				    <scp:QuotaViewer ID="spacesQuota" runat="server" QuotaTypeId="2" />
+				    <fcp:QuotaViewer ID="spacesQuota" runat="server" QuotaTypeId="2" />
 
 
 				</div>

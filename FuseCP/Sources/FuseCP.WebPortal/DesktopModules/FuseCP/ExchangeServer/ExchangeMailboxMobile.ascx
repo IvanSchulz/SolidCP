@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxMobile.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeMailboxMobile" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="fcp" %>
 
 
 
@@ -14,10 +14,10 @@
                 </div>
 				<div class="panel-body form-horizontal">
                     <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-                    <scp:MailboxTabs id="tabs" runat="server" SelectedTab="mailbox_mobile" />
+                    <fcp:MailboxTabs id="tabs" runat="server" SelectedTab="mailbox_mobile" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                     <asp:GridView ID="gvMobile" runat="server" AutoGenerateColumns="False" EnableViewState="true"
 					    Width="100%" EmptyDataText="gvUsers" CssSelectorClass="NormalGridView"

@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRM2011_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.CRM2011_Settings" %>
-<%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="fcp" %>
 <table>
     <tr>
         <td class="SubHead" width="200" nowrap>Sql Server</td>
@@ -38,7 +38,7 @@
     <tr>
         <td class="SubHead" width="200" nowrap>CRM Website IP</td>
         <td class="Normal" width="100%">
-            <scp:SelectIPAddress ID="ddlCrmIpAddress" runat="server" ServerIdParam="ServerID" AllowEmptySelection="false" />            
+            <fcp:SelectIPAddress ID="ddlCrmIpAddress" runat="server" ServerIdParam="ServerID" AllowEmptySelection="false" />            
         </td>
     </tr>
     

@@ -1,7 +1,7 @@
-// Copyright (c) 2016, SolidCP
-// SolidCP is distributed under the Creative Commons Share-alike license
+﻿// Copyright (c) 2016, FuseCP
+// FuseCP is distributed under the Creative Commons Share-alike license
 // 
-// SolidCP is a fork of WebsitePanel:
+// FuseCP is a fork of WebsitePanel:
 // Copyright (c) 2015, Outercurve Foundation.
 // All rights reserved.
 //
@@ -396,7 +396,7 @@ namespace FuseCP.Portal.SkinControls
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            FuseCPControlBase solidCPControlBase;
+            FuseCPControlBase fuseCPControlBase;
             HtmlInputHidden str;
             HtmlInputHidden htmlInputHidden;
             string str1;
@@ -418,10 +418,10 @@ namespace FuseCP.Portal.SkinControls
                         this.ViewState["index"] = this.SelectedIndex;
                         return;
                     }
-                    solidCPControlBase = parent as FuseCPControlBase;
+                    fuseCPControlBase = parent as FuseCPControlBase;
                 }
-                while (solidCPControlBase == null);
-                solidCPControlBase.LocalizeListItems(item, this.Items);
+                while (fuseCPControlBase == null);
+                fuseCPControlBase.LocalizeListItems(item, this.Items);
             }
             this.BindItems();
             str = this.hdSelectedIndex;

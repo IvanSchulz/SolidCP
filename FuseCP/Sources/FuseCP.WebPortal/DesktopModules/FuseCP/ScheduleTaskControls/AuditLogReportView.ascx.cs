@@ -35,7 +35,7 @@ using System.Data;
 using System.Web.UI.WebControls;
 using FuseCP.EnterpriseServer;
 using FuseCP.Portal.UserControls.ScheduleTaskView;
-using SCP = FuseCP.EnterpriseServer;
+using FCP = FuseCP.EnterpriseServer;
 
 namespace FuseCP.Portal.ScheduleTaskControls
 {
@@ -61,7 +61,7 @@ namespace FuseCP.Portal.ScheduleTaskControls
         {
             base.SetParameters(parameters);
 
-            SCP.SystemSettings settings = ES.Services.System.GetSystemSettingsActive(SCP.SystemSettings.SMTP_SETTINGS, false);
+            FCP.SystemSettings settings = ES.Services.System.GetSystemSettingsActive(FCP.SystemSettings.SMTP_SETTINGS, false);
             if (settings != null)
             {
                 txtMailFrom.Text = settings["SmtpUsername"];

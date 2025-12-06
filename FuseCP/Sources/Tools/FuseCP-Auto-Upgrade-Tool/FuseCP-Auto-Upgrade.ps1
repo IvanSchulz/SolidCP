@@ -1,5 +1,5 @@
 <####################################################################################################
-SolidSCP - Upgrade Menu
+SolidFCP - Upgrade Menu
 
 v1.0    14th July 2016:      First release of the FuseCP Upgrade Script
 v1.1    2nd  August 2016:    Added dynamic Database & Folder detection to enable upgrade on older WSP or DNP installations
@@ -78,7 +78,7 @@ Write-Host "
 
 # Editable features are below this line
 
-$SCP_Portal_Svr_IP = "" # IP Address of the Portal component if not running on the Enterprise Server
+$FCP_Portal_Svr_IP = "" # IP Address of the Portal component if not running on the Enterprise Server
 
 # Editable features are above this line
 
@@ -116,21 +116,21 @@ $SCP_Portal_Svr_IP = "" # IP Address of the Portal component if not running on t
 ####################################################################################################
 ####################################################################################################
 # General settings - do not modify them or anyting else below this line                            #
-$SCP_Installer_Site = "https://installer.fusecp.com" # FuseCP Installer Site
+$FCP_Installer_Site = "https://installer.fusecp.com" # FuseCP Installer Site
 Add-Type -assembly "system.io.compression.filesystem"
 Import-Module WebAdministration
 if ([bool](Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {(($_.Name -match "FuseCP|WebsitePanel|DotNetPanel") -and ($_.Name -match "Portal|Enterprise Server| Server"))})) {
-	$SCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).physicalPath) # FuseCP Enterprise Server Files Location
-	$SCP_EntSvr_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).name)         # FuseCP Enterprise Server IIS Website Name
-	$SCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).physicalPath)                                  # FuseCP Portal Files Location
-	$SCP_Portal_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).name)                                          # FuseCP Portal IIS Website Name
-	$SCP_EntSvr_WebCfg  = ([xml](Get-Content "$SCP_EntSvr_Dir\Web.config"))
-	$SCP_EntSvr_ConStr  = ($SCP_EntSvr_WebCfg.configuration.connectionStrings.add.connectionString)
-	$SCP_EntSvr_CryptoK = ($SCP_EntSvr_WebCfg.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.CryptoKey']").value)
-	$SCP_Database_Name  = ( $SCP_EntSvr_ConStr | Select-String 'Database=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Name from the Enterprise Server Connection String in the web.config file
-	$SCP_Database_Servr = ( $SCP_EntSvr_ConStr | Select-String 'server=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Server from the Enterprise Server Connection String in the web.config file
+	$FCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).physicalPath) # FuseCP Enterprise Server Files Location
+	$FCP_EntSvr_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"} -ErrorAction SilentlyContinue).name)         # FuseCP Enterprise Server IIS Website Name
+	$FCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).physicalPath)                                  # FuseCP Portal Files Location
+	$FCP_Portal_WebName = ((Get-ChildItem IIS:\Sites -ErrorAction SilentlyContinue | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"} -ErrorAction SilentlyContinue).name)                                          # FuseCP Portal IIS Website Name
+	$FCP_EntSvr_WebCfg  = ([xml](Get-Content "$FCP_EntSvr_Dir\Web.config"))
+	$FCP_EntSvr_ConStr  = ($FCP_EntSvr_WebCfg.configuration.connectionStrings.add.connectionString)
+	$FCP_EntSvr_CryptoK = ($FCP_EntSvr_WebCfg.SelectSingleNode("//configuration/appSettings/add[@key='FuseCP.CryptoKey']").value)
+	$FCP_Database_Name  = ( $FCP_EntSvr_ConStr | Select-String 'Database=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Name from the Enterprise Server Connection String in the web.config file
+	$FCP_Database_Servr = ( $FCP_EntSvr_ConStr | Select-String 'server=(?<ic>[^;]+?);' | ForEach-Object  {$_.Matches} | ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Server from the Enterprise Server Connection String in the web.config file
 }
-$SCP_Backup_Time    = [System.DateTime]::Now.ToString("yyyy-MM-dd - (HH.mm tt)")
+$FCP_Backup_Time    = [System.DateTime]::Now.ToString("yyyy-MM-dd - (HH.mm tt)")
 $dIPV4              = ((Test-Connection $env:computername -count 1).IPv4address.IPAddressToString)
 ####################################################################################################
 # Additional items used in the below functions, they are stored as variables for easy use later    #
@@ -156,49 +156,49 @@ $dIncludedIPaddressesFile  = "FuseCP-Auto-Upgrade-Include-Servers.txt" # File na
 ####################################################################################################
 ####################################################################################################
 ####################################################################################################################################################################################
-Function SCPupgradeMenu() # Ask the user if they want to use the Stable Release or if they want to use the BETA release
+Function FCPupgradeMenu() # Ask the user if they want to use the Stable Release or if they want to use the BETA release
 {
 	DNPversionCheck
-	SCPcheckIfEnterpriseServer
+	FCPcheckIfEnterpriseServer
 	dSQLPScheckInstalled
-	GetSCPserverIPaddresses
+	GetFCPserverIPaddresses
 
 	$choice = ""
 	while ($choice -notmatch "[1|2|3|9|x]") {
-		$SCP_Stable_Version      = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum               # FuseCP Current Stable Version
-		$SCP_BETA_Version        = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.Beta.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum          # FuseCP Current BETA Version
-		$SCP_Prev_Stable_Version = ((([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | select -Unique | sort -Descending)["1"] # FuseCP Previous Stable Version
+		$FCP_Stable_Version      = ((([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum               # FuseCP Current Stable Version
+		$FCP_BETA_Version        = ((([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.Beta.xml")).SelectNodes("//release").version) | measure -Maximum).Maximum          # FuseCP Current BETA Version
+		$FCP_Prev_Stable_Version = ((([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//release").version) | select -Unique | sort -Descending)["1"] # FuseCP Previous Stable Version
 
 		cls
 		Write-Host "`n`tFuseCP Upgrade Menu $scriptversion`n" -ForegroundColor Magenta
 		Write-Host "`t`tPlease select version of FuseCP you would like to upgrade your deployment to`n" -ForegroundColor Cyan
-		Write-Host "`t`t 1. FuseCP v$SCP_Stable_Version - `"Stable`"" -ForegroundColor Cyan
-		Write-Host "`t`t 2. FuseCP v$SCP_BETA_Version -  `"BETA`"" -ForegroundColor Cyan
+		Write-Host "`t`t 1. FuseCP v$FCP_Stable_Version - `"Stable`"" -ForegroundColor Cyan
+		Write-Host "`t`t 2. FuseCP v$FCP_BETA_Version -  `"BETA`"" -ForegroundColor Cyan
 		Write-Host "`t`t 3. FuseCP Test Remote Servers UNC Path (Firewall Test)" -ForegroundColor Cyan
-		Write-Host "`n`t`t 9. FuseCP v$SCP_Prev_Stable_Version - `"Previous Stable Version`"" -ForegroundColor Cyan
+		Write-Host "`n`t`t 9. FuseCP v$FCP_Prev_Stable_Version - `"Previous Stable Version`"" -ForegroundColor Cyan
 		Write-Host "`n`t`t X. Exit this menu" -ForegroundColor Cyan
 		$choice = Read-Host "`n`tEnter Option From Above Menu"
 	}
 	if ($choice -eq "1") {
-		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the latest Stable release (v$SCP_Stable_Version)" -ForegroundColor Green
-		$script:SCP_Version = "$SCP_Stable_Version"
-		UpgradeSCPChoseComponent
+		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the latest Stable release (v$FCP_Stable_Version)" -ForegroundColor Green
+		$script:FCP_Version = "$FCP_Stable_Version"
+		UpgradeFCPChoseComponent
 	}
 	elseif ($choice -eq "2") {
-		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the latest BETA release (v$SCP_BETA_Version)" -ForegroundColor Green
-		$script:SCP_Version = "$SCP_BETA_Version"
-		UpgradeSCPChoseComponent
+		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the latest BETA release (v$FCP_BETA_Version)" -ForegroundColor Green
+		$script:FCP_Version = "$FCP_BETA_Version"
+		UpgradeFCPChoseComponent
 	}
 	elseif ($choice -eq "3") {
 		Write-Host "`n`tTest FuseCP Remote servers UNC Path" -ForegroundColor Cyan
-		UpgradeSCPcheckUNCpath -IPs $SCP_ServerIPs
+		UpgradeFCPcheckUNCpath -IPs $FCP_ServerIPs
 		dPressAnyKeyToContinue
-		SCPupgradeMenu
+		FCPupgradeMenu
 	}
 	elseif ($choice -eq "9") {
-		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the previous Stable release (v$SCP_Prev_Stable_Version)" -ForegroundColor Green
-		$script:SCP_Version = "$SCP_Prev_Stable_Version"
-		UpgradeSCPChoseComponent
+		Write-Host "`n`tPreparing to Upgrade your FuseCP servers to the previous Stable release (v$FCP_Prev_Stable_Version)" -ForegroundColor Green
+		$script:FCP_Version = "$FCP_Prev_Stable_Version"
+		UpgradeFCPChoseComponent
 	}
 	elseif ($choice -eq "x") {
 		exit
@@ -208,9 +208,9 @@ Function SCPupgradeMenu() # Ask the user if they want to use the Stable Release 
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPChoseComponent() # Function to download the files from the FuseCP Installer site for the FuseCP upgrade
+function UpgradeFCPChoseComponent() # Function to download the files from the FuseCP Installer site for the FuseCP upgrade
 {
-	GetSCPserverIPaddresses
+	GetFCPserverIPaddresses
 	do {
 		do {
 		cls
@@ -238,49 +238,49 @@ function UpgradeSCPChoseComponent() # Function to download the files from the Fu
 
 		switch -Regex ( $choice1 ) {
 			"A" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPentSvr
-					UpgradeSCPPortal
-					UpgradeSCPserver -IPs $SCP_ServerIPs
-					UpgradeSCPwebDav -IPs $SCP_ServerIPs
-					UpgradeSCPPortalPost
+					UpgradeFCPDownloadFiles
+					UpgradeFCPentSvr
+					UpgradeFCPPortal
+					UpgradeFCPserver -IPs $FCP_ServerIPs
+					UpgradeFCPwebDav -IPs $FCP_ServerIPs
+					UpgradeFCPPortalPost
 					dPressAnyKeyToExit
 				}
 
 			"B" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPentSvr
+					UpgradeFCPDownloadFiles
+					UpgradeFCPentSvr
 					dPressAnyKeyToExit
 				}
 
 			"C" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPPortal
-					UpgradeSCPPortalPost
+					UpgradeFCPDownloadFiles
+					UpgradeFCPPortal
+					UpgradeFCPPortalPost
 					dPressAnyKeyToExit
 				}
 
 			"D" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPserver -IPs "127.0.0.1"
+					UpgradeFCPDownloadFiles
+					UpgradeFCPserver -IPs "127.0.0.1"
 					dPressAnyKeyToExit
 				}
 
 			"E" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPserver -IPs $SCP_ServerIPs
+					UpgradeFCPDownloadFiles
+					UpgradeFCPserver -IPs $FCP_ServerIPs
 					dPressAnyKeyToExit
 				}
 
 			"F" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPwebDav -IPs "127.0.0.1"
+					UpgradeFCPDownloadFiles
+					UpgradeFCPwebDav -IPs "127.0.0.1"
 					dPressAnyKeyToExit
 				}
 
 			"G" {
-					UpgradeSCPDownloadFiles
-					UpgradeSCPwebDav -IPs $SCP_ServerIPs
+					UpgradeFCPDownloadFiles
+					UpgradeFCPwebDav -IPs $FCP_ServerIPs
 					dPressAnyKeyToExit
 				}
 		}
@@ -289,21 +289,21 @@ function UpgradeSCPChoseComponent() # Function to download the files from the Fu
 
 
 ####################################################################################################################################################################################
-function GetSCPserverIPaddresses()  # Function to get a list of the FuseCP Server IP Addresses to be upgraded
+function GetFCPserverIPaddresses()  # Function to get a list of the FuseCP Server IP Addresses to be upgraded
 {
 	if (Test-Path ".\$dExcludedIPaddressesFile") {
-		$dSCPexcludeServerList = Get-Content ".\$dExcludedIPaddressesFile"  # Array with IP Addresses to Exclude from the upgrade
+		$dFCPexcludeServerList = Get-Content ".\$dExcludedIPaddressesFile"  # Array with IP Addresses to Exclude from the upgrade
 	}
 	if (Test-Path ".\$dIncludedIPaddressesFile") {
-		$dSCPincludeServerList = Get-Content ".\$dIncludedIPaddressesFile"  # Array with IP Addresses to Include with the upgrade
+		$dFCPincludeServerList = Get-Content ".\$dIncludedIPaddressesFile"  # Array with IP Addresses to Include with the upgrade
 	}
 	# Get the list of IP Addresses from the FuseCP Database and store tham as an array, also add the additional IP Addresses and remove the ones to be excluded
-	push-location ; ($script:SCP_ServerIPs = ((Invoke-SQLCmd -query "SELECT [ServerUrl] FROM [$SCP_Database_Name].[dbo].[Servers] WHERE [VirtualServer]='0'" -Server $SCP_Database_Servr).ServerUrl -replace "^[^_]*\/\/|:.*|\/.*", "" ) + $dSCPincludeServerList | WHERE {$_} | Select -Unique | WHERE {$dSCPexcludeServerList -notcontains $_}) | Out-Null ; Pop-Location
+	push-location ; ($script:FCP_ServerIPs = ((Invoke-SQLCmd -query "SELECT [ServerUrl] FROM [$FCP_Database_Name].[dbo].[Servers] WHERE [VirtualServer]='0'" -Server $FCP_Database_Servr).ServerUrl -replace "^[^_]*\/\/|:.*|\/.*", "" ) + $dFCPincludeServerList | WHERE {$_} | Select -Unique | WHERE {$dFCPexcludeServerList -notcontains $_}) | Out-Null ; Pop-Location
 }
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPcheckUNCpath()   # Function to test the UNC Path to each server is accessable
+function UpgradeFCPcheckUNCpath()   # Function to test the UNC Path to each server is accessable
 {
 	Param(
 		[String[]]$IPs        # Specify the Server IPs that are to be checked
@@ -322,20 +322,20 @@ function UpgradeSCPcheckUNCpath()   # Function to test the UNC Path to each serv
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPDownloadFiles() # Function to download the files from the FuseCP Installer site for the FuseCP upgrade
+function UpgradeFCPDownloadFiles() # Function to download the files from the FuseCP Installer site for the FuseCP upgrade
 {
-	if ($SCP_Version) {
-		$script:SCP_UpdateDir      = "C:\Program Files (x86)\FuseCP Installer\Manual Updates\$SCP_Backup_Time - (Before v$SCP_Version)"
+	if ($FCP_Version) {
+		$script:FCP_UpdateDir      = "C:\Program Files (x86)\FuseCP Installer\Manual Updates\$FCP_Backup_Time - (Before v$FCP_Version)"
 		# FuseCP - Download files and prepare the upgrade
-		if (!(Test-Path "$SCP_UpdateDir\Updates")) {
+		if (!(Test-Path "$FCP_UpdateDir\Updates")) {
 			################################################################################
 			# FuseCP - Get the Values to update the "FuseCP.Installer.exe.config" later
-			$script:SCP_XML_EntSvr = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Enterprise Server']/releases/release[@available='true'][@version='$SCP_Version']")
-			$script:SCP_XML_Portal = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Portal']/releases/release[@available='true'][@version='$SCP_Version']")
-			$script:SCP_XML_Server = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Server']/releases/release[@available='true'][@version='$SCP_Version']")
-			$script:SCP_XML_WebDav = ([xml](New-Object System.Net.WebClient).DownloadString("$SCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Cloud Storage Portal']/releases/release[@available='true'][@version='$SCP_Version']")
+			$script:FCP_XML_EntSvr = ([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Enterprise Server']/releases/release[@available='true'][@version='$FCP_Version']")
+			$script:FCP_XML_Portal = ([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Portal']/releases/release[@available='true'][@version='$FCP_Version']")
+			$script:FCP_XML_Server = ([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Server']/releases/release[@available='true'][@version='$FCP_Version']")
+			$script:FCP_XML_WebDav = ([xml](New-Object System.Net.WebClient).DownloadString("$FCP_Installer_Site/Data/ProductReleasesFeed.xml")).SelectNodes("//component[@name='Cloud Storage Portal']/releases/release[@available='true'][@version='$FCP_Version']")
 			# Create the directory to download the updates to
-			(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Updates" -Force) | Out-Null
+			(New-Item -ItemType Directory -Path "$FCP_UpdateDir\Updates" -Force) | Out-Null
 			# Check if user wants to download the files from the installer site - Mainly for Developers what want to build the source on thier machine and update the servers from that
 			$choiceDownload = ""
 			while ($choiceDownload -notmatch "[y|n]") { $choiceDownload = read-host "`n`tWould you like to download the update files from the FuseCP website`? (Y/N)" }
@@ -344,118 +344,118 @@ function UpgradeSCPDownloadFiles() # Function to download the files from the Fus
 				$script:StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 				# Download the Manual-Update.zip file from the FuseCP Installer website
 				Write-Host "`t Downloading the Files ready for updating" -ForegroundColor Green
-				Invoke-WebRequest -Uri ("$SCP_Installer_Site/Files/$SCP_Version/Manual-Update.zip") -OutFile "$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip" -PassThru -UseBasicParsing  | out-null
+				Invoke-WebRequest -Uri ("$FCP_Installer_Site/Files/$FCP_Version/Manual-Update.zip") -OutFile "$FCP_UpdateDir\Updates\Manual-Update-$FCP_Version.zip" -PassThru -UseBasicParsing  | out-null
 			}else{
 				# Developers can manually place the installation files that they have built in the directory specified on screen
 				Write-Host "`tPlace the `"Manual-Update.zip`" file in the following directory" -ForegroundColor Yellow
-				Write-Host "$SCP_UpdateDir\" -ForegroundColor Yellow
-				do {Start-Sleep -Milliseconds 500} until (Test-Path "$SCP_UpdateDir\Manual-Update.zip")
+				Write-Host "$FCP_UpdateDir\" -ForegroundColor Yellow
+				do {Start-Sleep -Milliseconds 500} until (Test-Path "$FCP_UpdateDir\Manual-Update.zip")
 				# Start a timer to see how long the script takes to upgrade all of the servers once the file has been copied to the server
 				$script:StopWatch = [System.Diagnostics.Stopwatch]::StartNew()
 				# Move the file to the corect location
-				(Move-Item "$SCP_UpdateDir\Manual-Update.zip" "$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip") | Out-Null
+				(Move-Item "$FCP_UpdateDir\Manual-Update.zip" "$FCP_UpdateDir\Updates\Manual-Update-$FCP_Version.zip") | Out-Null
 			}
 			# Unzip the files
 			Write-Host "`t Extracting the Files ready for updating" -ForegroundColor Green
-			[io.compression.zipfile]::ExtractToDirectory("$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip", "$SCP_UpdateDir\Updates") | Out-Null
+			[io.compression.zipfile]::ExtractToDirectory("$FCP_UpdateDir\Updates\Manual-Update-$FCP_Version.zip", "$FCP_UpdateDir\Updates") | Out-Null
 			# Update the SQL Update File with the FuseCP Database Name
-			(Get-Content "$SCP_UpdateDir\Updates\update_db.sql").replace('${install.database}', "$SCP_Database_Name") | Set-Content "$SCP_UpdateDir\Updates\update_db.sql"
+			(Get-Content "$FCP_UpdateDir\Updates\update_db.sql").replace('${install.database}', "$FCP_Database_Name") | Set-Content "$FCP_UpdateDir\Updates\update_db.sql"
 			# Remove the downloaded ZIP File to save space
-			(Remove-Item "$SCP_UpdateDir\Updates\Manual-Update-$SCP_Version.zip" -Force) | Out-Null
+			(Remove-Item "$FCP_UpdateDir\Updates\Manual-Update-$FCP_Version.zip" -Force) | Out-Null
 		}
 	}
 }
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPentSvr() # Function to upgrade the FuseCP Enterprise Server Component
+function UpgradeFCPentSvr() # Function to upgrade the FuseCP Enterprise Server Component
 {
-	if (Test-Path "$SCP_EntSvr_Dir") { # Upgrade the Enterprise Server
-		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\EnterpriseServer\")) { # Check if the Enterprise Server Update Folder has any files in it before upgrading
-			if (([bool](Get-WebSite -Name "$SCP_EntSvr_WebName" -ErrorAction SilentlyContinue)) -and ($SCP_EntSvr_WebName -ne $null)) { # Check if the Enterprise Server website exists
+	if (Test-Path "$FCP_EntSvr_Dir") { # Upgrade the Enterprise Server
+		if (!(IsFolderEmpty -Path "$FCP_UpdateDir\Updates\EnterpriseServer\")) { # Check if the Enterprise Server Update Folder has any files in it before upgrading
+			if (([bool](Get-WebSite -Name "$FCP_EntSvr_WebName" -ErrorAction SilentlyContinue)) -and ($FCP_EntSvr_WebName -ne $null)) { # Check if the Enterprise Server website exists
 				# Start the Enterprise Server upgrade
 				Write-Host "`n`tStarting the `"FuseCP Enterprise Server`" upgrade" -ForegroundColor Cyan
 
 				# Stop the Enterprise Server Website
-				Write-Host "`t Stopping the `"$SCP_EntSvr_WebName`" website" -ForegroundColor Green
-				(Stop-WebSite "$SCP_EntSvr_WebName") | Out-Null
+				Write-Host "`t Stopping the `"$FCP_EntSvr_WebName`" website" -ForegroundColor Green
+				(Stop-WebSite "$FCP_EntSvr_WebName") | Out-Null
 
 				# Restart IIS on this server to ensure none of the files are locked - ensures clean upgrade
 				Write-Host "`t Restarting IIS on this server for a clean upgrade" -ForegroundColor Green
 				(Restart-Service 'W3SVC' -WarningAction SilentlyContinue -Force) | Out-Null
 
 				# Stop the Enterprise Server Scheduler service
-				Write-Host "`t Stopping the `"$SCP_EntSvr_WebName`" Scheduler service" -ForegroundColor Green
+				Write-Host "`t Stopping the `"$FCP_EntSvr_WebName`" Scheduler service" -ForegroundColor Green
 				if ( ((Get-Service -Name "FuseCP Scheduler"      -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "FuseCP";      (Stop-Service "FuseCP Scheduler"      -Force -WarningAction SilentlyContinue)}
 				if ( ((Get-Service -Name "WebsitePanel Scheduler" -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "WebsitePanel"; (Stop-Service "WebsitePanel Scheduler" -Force -WarningAction SilentlyContinue)}
 				if ( ((Get-Service -Name "DotNetPanel Scheduler"  -ErrorAction SilentlyContinue).Status) -eq "Running" ) {$SchedularServiceName = "DotNetPanel";  (Stop-Service "DotNetPanel Scheduler"  -Force -WarningAction SilentlyContinue)}
 
 				# Backup the Enterprise Server files
 				Write-Host "`t Creating a backup of the `"Enterprise Server`" files" -ForegroundColor Green
-				if (!(Test-Path "$SCP_UpdateDir\Enterprise Server - Backup")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Enterprise Server - Backup" -Force) | Out-Null}
-				[System.IO.Compression.ZipFile]::CreateFromDirectory($SCP_EntSvr_Dir, "$SCP_UpdateDir\Enterprise Server - Backup\Files.zip")
-				#Copy-Item -Path "$SCP_EntSvr_Dir\*" -Destination "$SCP_UpdateDir\Enterprise Server - Backup" -Recurse -ErrorAction SilentlyContinue | Out-Null
+				if (!(Test-Path "$FCP_UpdateDir\Enterprise Server - Backup")) {(New-Item -ItemType Directory -Path "$FCP_UpdateDir\Enterprise Server - Backup" -Force) | Out-Null}
+				[System.IO.Compression.ZipFile]::CreateFromDirectory($FCP_EntSvr_Dir, "$FCP_UpdateDir\Enterprise Server - Backup\Files.zip")
+				#Copy-Item -Path "$FCP_EntSvr_Dir\*" -Destination "$FCP_UpdateDir\Enterprise Server - Backup" -Recurse -ErrorAction SilentlyContinue | Out-Null
 
 				# Backup the Enterprise Server Database
-				if ($SCP_Database_Servr -and $SCP_Database_Name -and $SCP_UpdateDir -and $SCP_Backup_Time) {
+				if ($FCP_Database_Servr -and $FCP_Database_Name -and $FCP_UpdateDir -and $FCP_Backup_Time) {
 					Write-Host "`t Creating a backup of the `"Enterprise Server`" Database" -ForegroundColor Green
 					# Create the SQL Database backup directory if it doesn't exist
-					if (!(Test-Path "$SCP_UpdateDir\Enterprise Server - Database")) {
-						(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Enterprise Server - Database" -Force) | Out-Null
+					if (!(Test-Path "$FCP_UpdateDir\Enterprise Server - Database")) {
+						(New-Item -ItemType Directory -Path "$FCP_UpdateDir\Enterprise Server - Database" -Force) | Out-Null
 					}
 					# Set the permissions on the SQL Database backup directory for full access
 					Write-Host "`t`t Set the permissions on the SQL Database backup directory for full access"
-					$acl = Get-Acl -Path "$SCP_UpdateDir\Enterprise Server - Database"
+					$acl = Get-Acl -Path "$FCP_UpdateDir\Enterprise Server - Database"
 					$acl.SetAccessRule($(New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList 'Everyone', 'FullControl', 'ContainerInherit, ObjectInherit', 'None', 'Allow'))
-					$acl | Set-Acl -Path "$SCP_UpdateDir\Enterprise Server - Database"
+					$acl | Set-Acl -Path "$FCP_UpdateDir\Enterprise Server - Database"
 					# Create temporary Share for SQL Backup
 					Write-Host "`t`t Create temporary Share for SQL Backup"
-					New-SMBShare -Name "SCPUpgrade$" -Path "$SCP_UpdateDir\Enterprise Server - Database" -FullAccess "Everyone" -Temporary | Out-Null
+					New-SMBShare -Name "FCPUpgrade$" -Path "$FCP_UpdateDir\Enterprise Server - Database" -FullAccess "Everyone" -Temporary | Out-Null
 					# Backup the SQL Database
 					Write-Host "`t`t Backup the SQL Database"
 					push-location
 					# Import the SQL PowerShell Module
 					Import-Module SQLPS -DisableNameChecking
-					if (([System.Net.Dns]::gethostentry("$($SCP_Database_Servr.Split("\")[0])").HostName) -match $env:USERDNSDOMAIN) { # Check if local or domain
-						Backup-SqlDatabase -ServerInstance "$SCP_Database_Servr" -Database "$SCP_Database_Name" -BackupFile "\\$dIPV4\SCPUpgrade$\$SCP_Database_Name - $SCP_Backup_Time.bak"
+					if (([System.Net.Dns]::gethostentry("$($FCP_Database_Servr.Split("\")[0])").HostName) -match $env:USERDNSDOMAIN) { # Check if local or domain
+						Backup-SqlDatabase -ServerInstance "$FCP_Database_Servr" -Database "$FCP_Database_Name" -BackupFile "\\$dIPV4\FCPUpgrade$\$FCP_Database_Name - $FCP_Backup_Time.bak"
 					}else{ # If the SQL Server is not local or on the same domain then prompt for the SQL Admin users credentials
-						Backup-SqlDatabase -ServerInstance "$SCP_Database_Servr" -Database "$SCP_Database_Name" -BackupFile "\\$dIPV4\SCPUpgrade$\$SCP_Database_Name - $SCP_Backup_Time.bak" -Credential (Get-Credential "sa")
+						Backup-SqlDatabase -ServerInstance "$FCP_Database_Servr" -Database "$FCP_Database_Name" -BackupFile "\\$dIPV4\FCPUpgrade$\$FCP_Database_Name - $FCP_Backup_Time.bak" -Credential (Get-Credential "sa")
 					}
 					Pop-Location
 					$loop = 0
-					do {Start-Sleep -Milliseconds 500; $loop++; If ($loop -ge "61") {break}} until (Test-Path "$SCP_UpdateDir\Enterprise Server - Database\$SCP_Database_Name - $SCP_Backup_Time.bak")
+					do {Start-Sleep -Milliseconds 500; $loop++; If ($loop -ge "61") {break}} until (Test-Path "$FCP_UpdateDir\Enterprise Server - Database\$FCP_Database_Name - $FCP_Backup_Time.bak")
 					If ($loop -ge 60) {
 						$choicedbbackupfailed = ""
 						while ($choicedbbackupfailed -notmatch "[y]") { $choicedbbackupfailed = read-host "`n`tDatabase backup timed out, please confirm you have an manual backup before proceeding (Y)" }
 						if ($choicedbbackupfailed -eq "y") {
 							# Remove the temporary Share for SQL Backup
 							Write-Host "`t`t Remove the temporary Share for SQL Backup"
-							(Remove-SmbShare -Name "SCPUpgrade$" -Force) | Out-Null
+							(Remove-SmbShare -Name "FCPUpgrade$" -Force) | Out-Null
 						}
 					}
 					else {
 						# Zip the backup to save space
 						Write-Host "`t`t Zip the backup to save space"
-						[System.IO.Compression.ZipFile]::CreateFromDirectory("$SCP_UpdateDir\Enterprise Server - Database", "$SCP_UpdateDir\Enterprise Server - Backup\Database.zip")
+						[System.IO.Compression.ZipFile]::CreateFromDirectory("$FCP_UpdateDir\Enterprise Server - Database", "$FCP_UpdateDir\Enterprise Server - Backup\Database.zip")
 						# Remove the temporary Share for SQL Backup
 						Write-Host "`t`t Remove the temporary Share for SQL Backup"
-						(Remove-SmbShare -Name "SCPUpgrade$" -Force) | Out-Null
+						(Remove-SmbShare -Name "FCPUpgrade$" -Force) | Out-Null
 						# Remove the SQL Database backup directory as it is no longer required
 						Write-Host "`t`t Remove the SQL Database backup directory as it is no longer required" 
-						(Remove-Item "$SCP_UpdateDir\Enterprise Server - Database" -Recurse -Force -confirm:$false) | Out-Null
+						(Remove-Item "$FCP_UpdateDir\Enterprise Server - Database" -Recurse -Force -confirm:$false) | Out-Null
 						Write-Host "`t`t The `"Enterprise Server`" Database has been backed up successfully" -ForegroundColor Green
 					}
 				}
 
 				# Remove old Enterprise Server Files that are no longer in use or will be replaced by the upgraded files
 				Write-Host "`t Preparing the existing `"Enterprise Server`" files for upgrading" -ForegroundColor Green
-				if (Test-Path "$SCP_UpdateDir\Updates\EnterpriseServer\setup\delete.txt") {
-					foreach ($SCP_File_Tidy in (Get-Content "$SCP_UpdateDir\Updates\EnterpriseServer\setup\delete.txt")) {
-						if (Test-Path "$SCP_EntSvr_Dir\$SCP_File_Tidy") {
-							if ((Get-Item "$SCP_EntSvr_Dir\$SCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
-								(Remove-Item -Path "$SCP_EntSvr_Dir\$SCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+				if (Test-Path "$FCP_UpdateDir\Updates\EnterpriseServer\setup\delete.txt") {
+					foreach ($FCP_File_Tidy in (Get-Content "$FCP_UpdateDir\Updates\EnterpriseServer\setup\delete.txt")) {
+						if (Test-Path "$FCP_EntSvr_Dir\$FCP_File_Tidy") {
+							if ((Get-Item "$FCP_EntSvr_Dir\$FCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
+								(Remove-Item -Path "$FCP_EntSvr_Dir\$FCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 							}else{ # otherwise delete the specified file
-								(Remove-Item -Path "$SCP_EntSvr_Dir\$SCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+								(Remove-Item -Path "$FCP_EntSvr_Dir\$FCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 							}
 						}
 					}
@@ -463,43 +463,43 @@ function UpgradeSCPentSvr() # Function to upgrade the FuseCP Enterprise Server C
 
 				# Upgrade the Enterprise Server files
 				Write-Host "`t Upgrading the `"Enterprise Server`" files" -ForegroundColor Green
-				Copy-Item -Path "$SCP_UpdateDir\Updates\EnterpriseServer\*" -Exclude "delete.txt" -Destination "$SCP_EntSvr_Dir\" -Recurse -Force | Out-Null
-				(Remove-Item -Path "$SCP_EntSvr_Dir\setup\update_db.sql" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+				Copy-Item -Path "$FCP_UpdateDir\Updates\EnterpriseServer\*" -Exclude "delete.txt" -Destination "$FCP_EntSvr_Dir\" -Recurse -Force | Out-Null
+				(Remove-Item -Path "$FCP_EntSvr_Dir\setup\update_db.sql" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 
 				# Upgrade the Enterprise Server databaseM
-				if (Test-Path "$SCP_UpdateDir\Updates\update_db.sql") {
+				if (Test-Path "$FCP_UpdateDir\Updates\update_db.sql") {
 					Write-Host "`t Upgrading the `"Enterprise Server`" database" -ForegroundColor Green
-					push-location ; Invoke-Sqlcmd -InputFile "$SCP_UpdateDir\Updates\update_db.sql" -ServerInstance "$SCP_Database_Servr" -Database "$SCP_Database_Name" | Out-Null ; Pop-Location
+					push-location ; Invoke-Sqlcmd -InputFile "$FCP_UpdateDir\Updates\update_db.sql" -ServerInstance "$FCP_Database_Servr" -Database "$FCP_Database_Name" | Out-Null ; Pop-Location
 				}
 
 				# Update the web.config file from Website Panel to FuseCP
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.CryptoKey']/@key" "FuseCP.CryptoKey"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EncryptionEnabled']/@key" "FuseCP.EncryptionEnabled"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.WebApplicationsPath']/@key" "FuseCP.EnterpriseServer.WebApplicationsPath"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.ServerRequestTimeout']/@key" "FuseCP.EnterpriseServer.ServerRequestTimeout"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","FuseCP.AltConnectionString"), ("value","ConnectionString") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","FuseCP.AltCryptoKey"), ("value","CryptoKey") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/system.web/compilation/@targetFramework" "4.8"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Update" "//configuration/microsoft.web.services3/security/securityTokenManager/add[@type='WebsitePanel.EnterpriseServer.ServiceUsernameTokenManager, WebsitePanel.EnterpriseServer']/@type" "FuseCP.EnterpriseServer.ServiceUsernameTokenManager, FuseCP.EnterpriseServer.Code"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.CryptoKey']/@key" "FuseCP.CryptoKey"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EncryptionEnabled']/@key" "FuseCP.EncryptionEnabled"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.WebApplicationsPath']/@key" "FuseCP.EnterpriseServer.WebApplicationsPath"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebsitePanel.EnterpriseServer.ServerRequestTimeout']/@key" "FuseCP.EnterpriseServer.ServerRequestTimeout"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","FuseCP.AltConnectionString"), ("value","ConnectionString") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key","FuseCP.AltCryptoKey"), ("value","CryptoKey") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Update" "//configuration/system.web/compilation/@targetFramework" "4.8"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Update" "//configuration/microsoft.web.services3/security/securityTokenManager/add[@type='WebsitePanel.EnterpriseServer.ServiceUsernameTokenManager, WebsitePanel.EnterpriseServer']/@type" "FuseCP.EnterpriseServer.ServiceUsernameTokenManager, FuseCP.EnterpriseServer.Code"
 				# v1.5.0
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration" "runtime"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Microsoft.Bcl.AsyncInterfaces"), ("publicKeyToken","cc7b13ffcd2ddd51"), ("culture","neutral") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-7.0.0.0"), ("newVersion","7.0.0.0") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","System.Text.Json"), ("publicKeyToken","cc7b13ffcd2ddd51"), ("culture","neutral") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-7.0.0.1"), ("newVersion","7.0.0.1") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","System.Runtime.CompilerServices.Unsafe"), ("publicKeyToken","b03f5f7f11d50a3a"), ("culture","neutral") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-6.0.0.0"), ("newVersion","6.0.0.0") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
-				ModifyXML "$SCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-13.0.0.0"), ("newVersion","13.0.0.0") )
-				#ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.EnterpriseServer.dll.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$SCP_EntSvr_ConStr"
-				#ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.EnterpriseServer.dll.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value" "$SCP_EntSvr_CryptoK"
-				ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$SCP_EntSvr_ConStr"
-				ModifyXML "$SCP_EntSvr_Dir\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value" "$SCP_EntSvr_CryptoK"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration" "runtime"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Microsoft.Bcl.AsyncInterfaces"), ("publicKeyToken","cc7b13ffcd2ddd51"), ("culture","neutral") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-7.0.0.0"), ("newVersion","7.0.0.0") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","System.Text.Json"), ("publicKeyToken","cc7b13ffcd2ddd51"), ("culture","neutral") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-7.0.0.1"), ("newVersion","7.0.0.1") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","System.Runtime.CompilerServices.Unsafe"), ("publicKeyToken","b03f5f7f11d50a3a"), ("culture","neutral") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-6.0.0.0"), ("newVersion","6.0.0.0") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
+				ModifyXML "$FCP_EntSvr_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-13.0.0.0"), ("newVersion","13.0.0.0") )
+				#ModifyXML "$FCP_EntSvr_Dir\bin\FuseCP.EnterpriseServer.dll.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$FCP_EntSvr_ConStr"
+				#ModifyXML "$FCP_EntSvr_Dir\bin\FuseCP.EnterpriseServer.dll.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value" "$FCP_EntSvr_CryptoK"
+				ModifyXML "$FCP_EntSvr_Dir\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/connectionStrings/add[@name='EnterpriseServer']/@connectionString" "$FCP_EntSvr_ConStr"
+				ModifyXML "$FCP_EntSvr_Dir\bin\FuseCP.SchedulerService.exe.config" "Update" "//configuration/appSettings/add[@key='FuseCP.CryptoKey']/@value" "$FCP_EntSvr_CryptoK"
 				Write-Host "`t The `"FuseCP Enterprise Server`" web.config file has been updated" -ForegroundColor Green
 
 				# Start the Enterprise Server Scheduler service
@@ -509,8 +509,8 @@ function UpgradeSCPentSvr() # Function to upgrade the FuseCP Enterprise Server C
 				}
 
 				# Start the Enterprise Server Website
-				Write-Host "`t Starting the `"$SCP_EntSvr_WebName`" website" -ForegroundColor Green
-				(Start-WebSite "$SCP_EntSvr_WebName") | Out-Null
+				Write-Host "`t Starting the `"$FCP_EntSvr_WebName`" website" -ForegroundColor Green
+				(Start-WebSite "$FCP_EntSvr_WebName") | Out-Null
 
 				# Wake the Enterprise Server so it is more responsive after the upgrade
 				try {(Invoke-WebRequest "http://$([System.Net.Dns]::gethostentry("$dIPV4").HostName):9002" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
@@ -531,33 +531,33 @@ function UpgradeSCPentSvr() # Function to upgrade the FuseCP Enterprise Server C
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPPortal() # Function to upgrade the FuseCP Portal Component
+function UpgradeFCPPortal() # Function to upgrade the FuseCP Portal Component
 {
-	if (Test-Path "$SCP_Portal_Dir") { # Upgrade the Portal if the path exists
-		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\Portal\")) { # Check if the Portal Update Folder has any files in it before upgrading
-			if (([bool](Get-WebSite -Name "$SCP_Portal_WebName" -ErrorAction SilentlyContinue)) -and ($SCP_Portal_WebName -ne $null)) { # Check if the FuseCP Portal website exists
+	if (Test-Path "$FCP_Portal_Dir") { # Upgrade the Portal if the path exists
+		if (!(IsFolderEmpty -Path "$FCP_UpdateDir\Updates\Portal\")) { # Check if the Portal Update Folder has any files in it before upgrading
+			if (([bool](Get-WebSite -Name "$FCP_Portal_WebName" -ErrorAction SilentlyContinue)) -and ($FCP_Portal_WebName -ne $null)) { # Check if the FuseCP Portal website exists
 				# Start the Portal upgrade
 				Write-Host "`n`tStarting the `"FuseCP Portal`" upgrade" -ForegroundColor Cyan
 
 				# Stop the Portal Website
-				Write-Host "`t Stopping the `"$SCP_Portal_WebName`" website" -ForegroundColor Green
-				(Stop-WebSite "$SCP_Portal_WebName") | Out-Null
+				Write-Host "`t Stopping the `"$FCP_Portal_WebName`" website" -ForegroundColor Green
+				(Stop-WebSite "$FCP_Portal_WebName") | Out-Null
 
 				# Backup the Portal files
 				Write-Host "`t Creating a backup of the `"Portal`" files" -ForegroundColor Green
-				if (!(Test-Path "$SCP_UpdateDir\Portal - Backup")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Portal - Backup" -Force) | Out-Null}
-				[System.IO.Compression.ZipFile]::CreateFromDirectory($SCP_Portal_Dir, "$SCP_UpdateDir\Portal - Backup\Files.zip")
-				#Copy-Item -Path "$SCP_Portal_Dir\*" -Destination "$SCP_UpdateDir\Portal - Backup" -Recurse -ErrorAction SilentlyContinue | Out-Null
+				if (!(Test-Path "$FCP_UpdateDir\Portal - Backup")) {(New-Item -ItemType Directory -Path "$FCP_UpdateDir\Portal - Backup" -Force) | Out-Null}
+				[System.IO.Compression.ZipFile]::CreateFromDirectory($FCP_Portal_Dir, "$FCP_UpdateDir\Portal - Backup\Files.zip")
+				#Copy-Item -Path "$FCP_Portal_Dir\*" -Destination "$FCP_UpdateDir\Portal - Backup" -Recurse -ErrorAction SilentlyContinue | Out-Null
 
 				# Remove old Portal Files that are no longer in use or will be replaced by the upgraded files
 				Write-Host "`t Preparing the existing `"Portal`" files for upgrading" -ForegroundColor Green
-				if (Test-Path "$SCP_UpdateDir\Updates\Portal\setup\delete.txt") {
-					foreach ($SCP_File_Tidy in (Get-Content "$SCP_UpdateDir\Updates\Portal\setup\delete.txt")) {
-						if (Test-Path "$SCP_Portal_Dir\$SCP_File_Tidy") {
-							if ((Get-Item "$SCP_Portal_Dir\$SCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
-								(Remove-Item -Path "$SCP_Portal_Dir\$SCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+				if (Test-Path "$FCP_UpdateDir\Updates\Portal\setup\delete.txt") {
+					foreach ($FCP_File_Tidy in (Get-Content "$FCP_UpdateDir\Updates\Portal\setup\delete.txt")) {
+						if (Test-Path "$FCP_Portal_Dir\$FCP_File_Tidy") {
+							if ((Get-Item "$FCP_Portal_Dir\$FCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
+								(Remove-Item -Path "$FCP_Portal_Dir\$FCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 							}else{ # otherwise delete the specified file
-								(Remove-Item -Path "$SCP_Portal_Dir\$SCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+								(Remove-Item -Path "$FCP_Portal_Dir\$FCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 							}
 						}
 					}
@@ -565,123 +565,123 @@ function UpgradeSCPPortal() # Function to upgrade the FuseCP Portal Component
 
 				# Upgrade the Portal files
 				Write-Host "`t Upgrading the `"Portal`" files" -ForegroundColor Green
-				Copy-Item -Path "$SCP_UpdateDir\Updates\Portal\*" -Exclude "delete.txt" -Destination "$SCP_Portal_Dir\" -Recurse -Force | Out-Null
+				Copy-Item -Path "$FCP_UpdateDir\Updates\Portal\*" -Exclude "delete.txt" -Destination "$FCP_Portal_Dir\" -Recurse -Force | Out-Null
 
 				# Update the web.config to change the "xmlns" to "xmlns-temp" otherwise we have issues when parsing the XML file
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace " xmlns=`"", " xmlns-temp=`"" | Set-Content "$SCP_Portal_Dir\web.config"
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace " xmlns=`"", " xmlns-temp=`"" | Set-Content "$FCP_Portal_Dir\web.config"
 				# Update the web.config file from Website Panel to FuseCP
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.ThemeProvider'][@value='WebsitePanel.Portal.WebPortalThemeProvider, WebsitePanel.Portal.Modules']/@value" "FuseCP.Portal.WebPortalThemeProvider, FuseCP.Portal.Modules"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.PageTitleProvider'][@value='WebsitePanel.Portal.WebPortalPageTitleProvider, WebsitePanel.Portal.Modules']/@value" "FuseCP.Portal.WebPortalPageTitleProvider, FuseCP.Portal.Modules"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap[@defaultProvider='WebsitePanelSiteMapProvider'][@enabled='true']/@defaultProvider" "FuseCPSiteMapProvider"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='WebsitePanelSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@name" "FuseCPSiteMapProvider"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='FuseCPSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@type" "FuseCP.WebPortal.FuseCPSiteMapProvider, FuseCP.WebPortal"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//system.web/siteMap/providers" "remove" @("name","MySqlSiteMapProvider")
-				if ( !(CheckXMLnode "$SCP_Portal_Dir\web.config" "//configuration/system.web/httpHandlers/add[@verb='*'][@path='AjaxHandler.ashx'][@type='FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal']" "type") ) {
-					ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.web/httpHandlers" "add" @( ("verb", ".*"), ("path", "AjaxHandler.ashx"), ("type", "FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal") )
-					ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/httpHandlers/add[@path='AjaxHandler.ashx'][@type='FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal']/@verb" "*"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.ThemeProvider'][@value='WebsitePanel.Portal.WebPortalThemeProvider, WebsitePanel.Portal.Modules']/@value" "FuseCP.Portal.WebPortalThemeProvider, FuseCP.Portal.Modules"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/appSettings/add[@key='WebPortal.PageTitleProvider'][@value='WebsitePanel.Portal.WebPortalPageTitleProvider, WebsitePanel.Portal.Modules']/@value" "FuseCP.Portal.WebPortalPageTitleProvider, FuseCP.Portal.Modules"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap[@defaultProvider='WebsitePanelSiteMapProvider'][@enabled='true']/@defaultProvider" "FuseCPSiteMapProvider"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='WebsitePanelSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@name" "FuseCPSiteMapProvider"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/siteMap/providers/add[@name='FuseCPSiteMapProvider'][@type='WebsitePanel.WebPortal.WebsitePanelSiteMapProvider, WebsitePanel.WebPortal'][@securityTrimmingEnabled='true']/@type" "FuseCP.WebPortal.FuseCPSiteMapProvider, FuseCP.WebPortal"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//system.web/siteMap/providers" "remove" @("name","MySqlSiteMapProvider")
+				if ( !(CheckXMLnode "$FCP_Portal_Dir\web.config" "//configuration/system.web/httpHandlers/add[@verb='*'][@path='AjaxHandler.ashx'][@type='FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal']" "type") ) {
+					ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.web/httpHandlers" "add" @( ("verb", ".*"), ("path", "AjaxHandler.ashx"), ("type", "FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal") )
+					ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/httpHandlers/add[@path='AjaxHandler.ashx'][@type='FuseCP.WebPortal.FuseCPAjaxHandler, FuseCP.WebPortal']/@verb" "*"
 				}
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/authentication[@mode='Forms']/forms[@name='.WEBSITEPANELPORTALAUTHASPX'][@protection='All'][@timeout='30'][@path='/'][@requireSSL='false'][@slidingExpiration='true'][@cookieless='UseDeviceProfile'][@domain=''][@enableCrossAppRedirects='false']/@name" ".FuseCPPORTALAUTHASPX"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/compilation[@debug='true'][@targetFramework='4.8']/@debug" "false"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.web/compilation[@targetFramework='4.0']/@targetFramework" "4.8"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Delete" "//configuration/system.webServer/modules"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer" 'staticContent'
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "remove" @("fileExtension",".woff")
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "remove" @("fileExtension",".woff2")
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "mimeMap" @( ("fileExtension",".woff"), ("mimeType","application/x-font-woff") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "mimeMap" @( ("fileExtension",".woff2"), ("mimeType","application/font-woff2") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/authentication[@mode='Forms']/forms[@name='.WEBSITEPANELPORTALAUTHASPX'][@protection='All'][@timeout='30'][@path='/'][@requireSSL='false'][@slidingExpiration='true'][@cookieless='UseDeviceProfile'][@domain=''][@enableCrossAppRedirects='false']/@name" ".FuseCPPORTALAUTHASPX"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/compilation[@debug='true'][@targetFramework='4.8']/@debug" "false"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.web/compilation[@targetFramework='4.0']/@targetFramework" "4.8"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Delete" "//configuration/system.webServer/modules"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer" 'staticContent'
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "remove" @("fileExtension",".woff")
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "remove" @("fileExtension",".woff2")
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "mimeMap" @( ("fileExtension",".woff"), ("mimeType","application/x-font-woff") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/staticContent" "mimeMap" @( ("fileExtension",".woff2"), ("mimeType","application/font-woff2") )
 				# Update the web.config file to make sure it is up to date with the new Mailcleaner (Ignore SSL Check) Settings
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" 'system.net'
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net" "settings"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net/settings" "servicePointManager" @( ("checkCertificateName","false"), ("checkCertificateRevocationList","false") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" 'system.net'
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.net" "settings"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.net/settings" "servicePointManager" @( ("checkCertificateName","false"), ("checkCertificateRevocationList","false") )
 				# Update the web.config file to make sure it is up to date with the new Settings for v1.1.0 of FuseCP
-				if (!(CheckXMLnode "$SCP_Portal_Dir\Web.config" "//configuration" "configSections")) {
-					(Get-Content "$SCP_Portal_Dir\web.config") -replace "<configuration>", "<configuration>`n  <configSections>`n  </configSections>" | Set-Content "$SCP_Portal_Dir\web.config"
+				if (!(CheckXMLnode "$FCP_Portal_Dir\Web.config" "//configuration" "configSections")) {
+					(Get-Content "$FCP_Portal_Dir\web.config") -replace "<configuration>", "<configuration>`n  <configSections>`n  </configSections>" | Set-Content "$FCP_Portal_Dir\web.config"
 				}
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","jsEngineSwitcher")
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"jsEngineSwitcher`" />", "    <sectionGroup name=`"jsEngineSwitcher`">`n    </sectionGroup>" | Set-Content "$SCP_Portal_Dir\web.config"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","core"), ("type","JavaScriptEngineSwitcher.Core.Configuration.CoreConfiguration, JavaScriptEngineSwitcher.Core") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","msie"), ("type","JavaScriptEngineSwitcher.Msie.Configuration.MsieConfiguration, JavaScriptEngineSwitcher.Msie") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","bundleTransformer")
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"bundleTransformer`" />", "    <sectionGroup name=`"bundleTransformer`">`n    </sectionGroup>" | Set-Content "$SCP_Portal_Dir\web.config"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","core"), ("type","BundleTransformer.Core.Configuration.CoreSettings, BundleTransformer.Core") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","less"), ("type","BundleTransformer.Less.Configuration.LessSettings, BundleTransformer.Less") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.web/pages[@theme='Default'][@validateRequest='false'][@controlRenderingCompatibilityVersion='3.5'][@clientIDMode='AutoID']/controls" "add" @( ("tagPrefix","CPCC"), ("namespace","CPCC"), ("assembly","CPCC") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/handlers" "add" @( ("name","LessAssetHandler"), ("path","`*.less"), ("verb","GET"), ("type","BundleTransformer.Less.HttpHandlers.LessAssetHandler, BundleTransformer.Less"), ("resourceType","File"), ("preCondition","") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "jsEngineSwitcher" @("xmlns-temp","http`:`/`/tempuri.org`/JavaScriptEngineSwitcher.Configuration.xsd")
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`" />", "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`">`n  </jsEngineSwitcher>" | Set-Content "$SCP_Portal_Dir\web.config"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']" "core"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core" "engines"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core/engines" "add" @( ("name","MsieJsEngine"), ("type","JavaScriptEngineSwitcher.Msie.MsieJsEngine, JavaScriptEngineSwitcher.Msie") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "bundleTransformer" @("xmlns-temp","http://tempuri.org/BundleTransformer.Configuration.xsd")
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`" />", "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`">`n  </bundleTransformer>" | Set-Content "$SCP_Portal_Dir\web.config"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "core"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "css"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "translators"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","LessTranslator"), ("type","BundleTransformer.Less.Translators.LessTranslator, BundleTransformer.Less") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "postProcessors"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/postProcessors" "add" @( ("name","UrlRewritingCssPostProcessor"), ("type","BundleTransformer.Core.PostProcessors.UrlRewritingCssPostProcessor, BundleTransformer.Core"), ("useInDebugMode","false") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "minifiers"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "fileExtensions"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".css"), ("assetTypeCode","Css") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".less"), ("assetTypeCode","Less") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "js"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "translators"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "minifiers"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "fileExtensions"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/fileExtensions" "add" @( ("fileExtension",".js"), ("assetTypeCode","JavaScript") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "less" @( ("useNativeMinification","true"), ("ieCompat","true"), ("strictMath","false"), ("strictUnits","false"), ("dumpLineNumbers","None"), ("javascriptEnabled","true") )
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`" />", "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`">`n    </less>" | Set-Content "$SCP_Portal_Dir\web.config"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/less[@useNativeMinification='true'][@ieCompat='true'][@strictMath='false'][@strictUnits='false'][@dumpLineNumbers='None'][@javascriptEnabled='true']" "jsEngine" @("name","MsieJsEngine")
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "runtime"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`" />", "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`">`n    </assemblyBinding>" | Set-Content "$SCP_Portal_Dir\web.config"
-				(Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <assemblyIdentity name="JavaScriptEngineSwitcher.Core" publicKeyToken="C608B2A8CC9E4472" culture="neutral" />[\r\n]+        <bindingRedirect oldVersion="0.0.0.0-2.4.10.0" newVersion="2.4.10.0" />', "        <assemblyIdentity name=`"JavaScriptEngineSwitcher.Core`" publicKeyToken=`"c608b2a8cc9e4472`" culture=`"neutral`" />`r`n        <bindingRedirect oldVersion=`"0.0.0.0-3.19.0.0`" newVersion=`"3.19.0.0`" />" | Set-Content "$SCP_Portal_Dir\web.config"
-				(Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />[\r\n]+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />', "        <assemblyIdentity name=`"Newtonsoft.Json`" publicKeyToken=`"30ad4fe6b2a6aeed`" culture=`"neutral`" />`r`n        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />" | Set-Content "$SCP_Portal_Dir\web.config"
-				(Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />[\r\n]+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />', "        <assemblyIdentity name=`"Newtonsoft.Json`" publicKeyToken=`"30ad4fe6b2a6aeed`" culture=`"neutral`" />`r`n        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />" | Set-Content "$SCP_Portal_Dir\web.config"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-13.0.0.0"), ("newVersion","13.0.0.0") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","WebGrease"), ("publicKeyToken","31bf3856ad364e35"), ("culture","neutral") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-1.6.5135.21930"), ("newVersion","1.6.5135.21930") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Antlr3.Runtime"), ("publicKeyToken","eb42632606e9261f"), ("culture","neutral") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-3.5.0.2"), ("newVersion","3.5.0.2") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Microsoft.Web.Infrastructure"), ("publicKeyToken","31bf3856ad364e35"), ("culture","neutral") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-2.0.0.0"), ("newVersion","2.0.0.0") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","jsEngineSwitcher")
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"jsEngineSwitcher`" />", "    <sectionGroup name=`"jsEngineSwitcher`">`n    </sectionGroup>" | Set-Content "$FCP_Portal_Dir\web.config"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","core"), ("type","JavaScriptEngineSwitcher.Core.Configuration.CoreConfiguration, JavaScriptEngineSwitcher.Core") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","msie"), ("type","JavaScriptEngineSwitcher.Msie.Configuration.MsieConfiguration, JavaScriptEngineSwitcher.Msie") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","bundleTransformer")
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"bundleTransformer`" />", "    <sectionGroup name=`"bundleTransformer`">`n    </sectionGroup>" | Set-Content "$FCP_Portal_Dir\web.config"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","core"), ("type","BundleTransformer.Core.Configuration.CoreSettings, BundleTransformer.Core") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","less"), ("type","BundleTransformer.Less.Configuration.LessSettings, BundleTransformer.Less") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.web/pages[@theme='Default'][@validateRequest='false'][@controlRenderingCompatibilityVersion='3.5'][@clientIDMode='AutoID']/controls" "add" @( ("tagPrefix","CPCC"), ("namespace","CPCC"), ("assembly","CPCC") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/handlers" "add" @( ("name","LessAssetHandler"), ("path","`*.less"), ("verb","GET"), ("type","BundleTransformer.Less.HttpHandlers.LessAssetHandler, BundleTransformer.Less"), ("resourceType","File"), ("preCondition","") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "jsEngineSwitcher" @("xmlns-temp","http`:`/`/tempuri.org`/JavaScriptEngineSwitcher.Configuration.xsd")
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`" />", "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`">`n  </jsEngineSwitcher>" | Set-Content "$FCP_Portal_Dir\web.config"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']" "core"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core" "engines"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core/engines" "add" @( ("name","MsieJsEngine"), ("type","JavaScriptEngineSwitcher.Msie.MsieJsEngine, JavaScriptEngineSwitcher.Msie") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "bundleTransformer" @("xmlns-temp","http://tempuri.org/BundleTransformer.Configuration.xsd")
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`" />", "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`">`n  </bundleTransformer>" | Set-Content "$FCP_Portal_Dir\web.config"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "core"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "css"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "translators"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","LessTranslator"), ("type","BundleTransformer.Less.Translators.LessTranslator, BundleTransformer.Less") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "postProcessors"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/postProcessors" "add" @( ("name","UrlRewritingCssPostProcessor"), ("type","BundleTransformer.Core.PostProcessors.UrlRewritingCssPostProcessor, BundleTransformer.Core"), ("useInDebugMode","false") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "minifiers"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "fileExtensions"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".css"), ("assetTypeCode","Css") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".less"), ("assetTypeCode","Less") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "js"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "translators"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "minifiers"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "fileExtensions"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/fileExtensions" "add" @( ("fileExtension",".js"), ("assetTypeCode","JavaScript") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "less" @( ("useNativeMinification","true"), ("ieCompat","true"), ("strictMath","false"), ("strictUnits","false"), ("dumpLineNumbers","None"), ("javascriptEnabled","true") )
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`" />", "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`">`n    </less>" | Set-Content "$FCP_Portal_Dir\web.config"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/less[@useNativeMinification='true'][@ieCompat='true'][@strictMath='false'][@strictUnits='false'][@dumpLineNumbers='None'][@javascriptEnabled='true']" "jsEngine" @("name","MsieJsEngine")
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "runtime"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`" />", "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`">`n    </assemblyBinding>" | Set-Content "$FCP_Portal_Dir\web.config"
+				(Get-Content "$FCP_Portal_Dir\web.config" -Raw) -replace '        <assemblyIdentity name="JavaScriptEngineSwitcher.Core" publicKeyToken="C608B2A8CC9E4472" culture="neutral" />[\r\n]+        <bindingRedirect oldVersion="0.0.0.0-2.4.10.0" newVersion="2.4.10.0" />', "        <assemblyIdentity name=`"JavaScriptEngineSwitcher.Core`" publicKeyToken=`"c608b2a8cc9e4472`" culture=`"neutral`" />`r`n        <bindingRedirect oldVersion=`"0.0.0.0-3.19.0.0`" newVersion=`"3.19.0.0`" />" | Set-Content "$FCP_Portal_Dir\web.config"
+				(Get-Content "$FCP_Portal_Dir\web.config" -Raw) -replace '        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />[\r\n]+        <bindingRedirect oldVersion="0.0.0.0-9.0.0.0" newVersion="9.0.0.0" />', "        <assemblyIdentity name=`"Newtonsoft.Json`" publicKeyToken=`"30ad4fe6b2a6aeed`" culture=`"neutral`" />`r`n        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />" | Set-Content "$FCP_Portal_Dir\web.config"
+				(Get-Content "$FCP_Portal_Dir\web.config" -Raw) -replace '        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />[\r\n]+        <bindingRedirect oldVersion="0.0.0.0-10.0.0.0" newVersion="10.0.0.0" />', "        <assemblyIdentity name=`"Newtonsoft.Json`" publicKeyToken=`"30ad4fe6b2a6aeed`" culture=`"neutral`" />`r`n        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />" | Set-Content "$FCP_Portal_Dir\web.config"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-13.0.0.0"), ("newVersion","13.0.0.0") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","WebGrease"), ("publicKeyToken","31bf3856ad364e35"), ("culture","neutral") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-1.6.5135.21930"), ("newVersion","1.6.5135.21930") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Antlr3.Runtime"), ("publicKeyToken","eb42632606e9261f"), ("culture","neutral") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-3.5.0.2"), ("newVersion","3.5.0.2") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Microsoft.Web.Infrastructure"), ("publicKeyToken","31bf3856ad364e35"), ("culture","neutral") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-2.0.0.0"), ("newVersion","2.0.0.0") )
 				# Fix for the Security settings needed for newer ASP update
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @( ("name","system.data.dataset.serialization"), ("type","System.Data.SerializationSettingsSectionGroup, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='system.data.dataset.serialization']" "section" @( ("name","allowedTypes"), ("type","System.Data.AllowedTypesSectionHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "system.data.dataset.serialization"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization" "allowedTypes"
-				ModifyXML "$SCP_Portal_Dir\web.config" "Update" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","FuseCP.Providers.ResultObjects.HeliconApeStatus, FuseCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
-				ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","FuseCP.Providers.ResultObjects.HeliconApeStatus, FuseCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @( ("name","system.data.dataset.serialization"), ("type","System.Data.SerializationSettingsSectionGroup, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='system.data.dataset.serialization']" "section" @( ("name","allowedTypes"), ("type","System.Data.AllowedTypesSectionHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "system.data.dataset.serialization"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization" "allowedTypes"
+				ModifyXML "$FCP_Portal_Dir\web.config" "Update" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","FuseCP.Providers.ResultObjects.HeliconApeStatus, FuseCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
+				ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.data.dataset.serialization/allowedTypes" "add" @( ("type","FuseCP.Providers.ResultObjects.HeliconApeStatus, FuseCP.Providers.Base, Version=1.5.1.0, Culture=neutral, PublicKeyToken=da8782a6fc4d0081") )
 				
 				# Add the edditional "<dependentAssembly>" tags in the Runtime section and remove any additional charichter returns from the end of the file
-				((Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <bindingRedirect oldVersion="0\.0\.0\.0-13\.0\.0\.0" newVersion="13\.0\.0\.0" \/>[\r\n]+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" \/>', "        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />`r`n      </dependentAssembly>`r`n      <dependentAssembly>`r`n        <assemblyIdentity name=`"WebGrease`" publicKeyToken=`"31bf3856ad364e35`" culture=`"neutral`" />" -replace '</configuration>[\r\n]+', "</configuration>") | Set-Content "$SCP_Portal_Dir\web.config"
-				(Get-Content "$SCP_Portal_Dir\web.config" -Raw) -replace '        <bindingRedirect oldVersion="0\.0\.0\.0-3\.5\.0\.2" newVersion="3\.5\.0\.2" \/>[\r\n]+        <assemblyIdentity name="Microsoft.Web.Infrastructure" publicKeyToken="31bf3856ad364e35" culture="neutral" \/>', "        <bindingRedirect oldVersion=`"0.0.0.0-3.5.0.2`" newVersion=`"3.5.0.2`" />`r`n      </dependentAssembly>`r`n      <dependentAssembly>`r`n        <assemblyIdentity name=`"Microsoft.Web.Infrastructure`" publicKeyToken=`"31bf3856ad364e35`" culture=`"neutral`" />" | Set-Content "$SCP_Portal_Dir\web.config"
+				((Get-Content "$FCP_Portal_Dir\web.config" -Raw) -replace '        <bindingRedirect oldVersion="0\.0\.0\.0-13\.0\.0\.0" newVersion="13\.0\.0\.0" \/>[\r\n]+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" \/>', "        <bindingRedirect oldVersion=`"0.0.0.0-13.0.0.0`" newVersion=`"13.0.0.0`" />`r`n      </dependentAssembly>`r`n      <dependentAssembly>`r`n        <assemblyIdentity name=`"WebGrease`" publicKeyToken=`"31bf3856ad364e35`" culture=`"neutral`" />" -replace '</configuration>[\r\n]+', "</configuration>") | Set-Content "$FCP_Portal_Dir\web.config"
+				(Get-Content "$FCP_Portal_Dir\web.config" -Raw) -replace '        <bindingRedirect oldVersion="0\.0\.0\.0-3\.5\.0\.2" newVersion="3\.5\.0\.2" \/>[\r\n]+        <assemblyIdentity name="Microsoft.Web.Infrastructure" publicKeyToken="31bf3856ad364e35" culture="neutral" \/>', "        <bindingRedirect oldVersion=`"0.0.0.0-3.5.0.2`" newVersion=`"3.5.0.2`" />`r`n      </dependentAssembly>`r`n      <dependentAssembly>`r`n        <assemblyIdentity name=`"Microsoft.Web.Infrastructure`" publicKeyToken=`"31bf3856ad364e35`" culture=`"neutral`" />" | Set-Content "$FCP_Portal_Dir\web.config"
 				# Update the web.config to change the "xmlns-temp" back to "xmlns" now we have finished parsing the XML file
-				(Get-Content "$SCP_Portal_Dir\web.config") -replace " xmlns-temp=`"", " xmlns=`"" | Set-Content "$SCP_Portal_Dir\web.config"
+				(Get-Content "$FCP_Portal_Dir\web.config") -replace " xmlns-temp=`"", " xmlns=`"" | Set-Content "$FCP_Portal_Dir\web.config"
 				Write-Host "`t The `"FuseCP Portal`" web.config file has been updated" -ForegroundColor Green
 
 				# Delete the old css files from the themes styles directory
-				if (Test-Path "$SCP_Portal_Dir\App_Themes\Default\Styles\bootstrap.min.css") {Remove-Item -Path "$SCP_Portal_Dir\App_Themes\Default\Styles\bootstrap.min.css" -Force}
-				if (Test-Path "$SCP_Portal_Dir\App_Themes\Default\Styles\menus.css")         {Remove-Item -Path "$SCP_Portal_Dir\App_Themes\Default\Styles\menus.css" -Force}
+				if (Test-Path "$FCP_Portal_Dir\App_Themes\Default\Styles\bootstrap.min.css") {Remove-Item -Path "$FCP_Portal_Dir\App_Themes\Default\Styles\bootstrap.min.css" -Force}
+				if (Test-Path "$FCP_Portal_Dir\App_Themes\Default\Styles\menus.css")         {Remove-Item -Path "$FCP_Portal_Dir\App_Themes\Default\Styles\menus.css" -Force}
 				# Delete files which should not be in the project
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\MSO365\MSO365Address.ascx") {Remove-Item -Recurse -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\MSO365" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\Locations\LocationAddress.ascx") {Remove-Item -Recurse -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\Locations\" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\SpamExperts_Settings.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\SpamExperts_Settings.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalNotificationLetter.ascx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalNotificationLetter.ascx" -Force}
-				if (Test-Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx") {Remove-Item -Path "$SCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\MSO365\MSO365Address.ascx") {Remove-Item -Recurse -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\MSO365" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\Locations\LocationAddress.ascx") {Remove-Item -Recurse -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ExchangeServer\UserControls\Locations\" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\SpamExperts_Settings.ascx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\SpamExperts_Settings.ascx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ProviderControls\App_LocalResources\SpamExperts_Settings.ascx.resx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\ScheduleTaskControls\LetsEncryptRenewalView.ascx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalAdminNotificationLetter.ascx.resx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalNotificationLetter.ascx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\SettingsLetsEncryptRenewalNotificationLetter.ascx" -Force}
+				if (Test-Path "$FCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx") {Remove-Item -Path "$FCP_Portal_Dir\DesktopModules\FuseCP\App_LocalResources\SettingsLetsEncryptRenewalNotificationLetter.ascx.resx" -Force}
 				
 				# Upgrade complete
 				Write-Host "`t  The `"FuseCP Portal`" has been upgraded" -ForegroundColor Green
@@ -698,14 +698,14 @@ function UpgradeSCPPortal() # Function to upgrade the FuseCP Portal Component
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPPortalPost() # Function to Start the FuseCP Portal website after the upgrade has been completed
+function UpgradeFCPPortalPost() # Function to Start the FuseCP Portal website after the upgrade has been completed
 {
-	if (Test-Path "$SCP_Portal_Dir") { # Upgrade the Portal if the path exists
-		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\Portal\")) { # Check if the Portal Update Folder has any files in it before upgrading
-			if ([bool](Get-WebSite "$SCP_Portal_WebName")) { # Check if the FuseCP Portal website exists
+	if (Test-Path "$FCP_Portal_Dir") { # Upgrade the Portal if the path exists
+		if (!(IsFolderEmpty -Path "$FCP_UpdateDir\Updates\Portal\")) { # Check if the Portal Update Folder has any files in it before upgrading
+			if ([bool](Get-WebSite "$FCP_Portal_WebName")) { # Check if the FuseCP Portal website exists
 				# Start the Portal Website
-				Write-Host "`n`t Starting the `"$SCP_Portal_WebName`" website" -ForegroundColor Green
-				(Start-WebSite "$SCP_Portal_WebName") | Out-Null
+				Write-Host "`n`t Starting the `"$FCP_Portal_WebName`" website" -ForegroundColor Green
+				(Start-WebSite "$FCP_Portal_WebName") | Out-Null
 
 				# Wake the FuseCP Portal so it is more responsive after the upgrade
 				try {(Invoke-WebRequest "http://$([System.Net.Dns]::gethostentry("$dIPV4").HostName):80" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
@@ -721,83 +721,83 @@ function UpgradeSCPPortalPost() # Function to Start the FuseCP Portal website af
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPserver() # Function to upgrade the FuseCP Server Component
+function UpgradeFCPserver() # Function to upgrade the FuseCP Server Component
 {
 	Param(
 		[String[]]$IPs        # Specify the Server IPs that are to be upgraded
 	)
 	if ($IPs) { # Check to make sure there are servers in the $IPs Array
-		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\Server\")) { # Check if the Server Update Folder has any files in it before upgrading
-			if (!(Test-Path "$SCP_UpdateDir\Server - Backups")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Server - Backups" -Force) | Out-Null}
-			foreach ($SCP_RemoteServer in $IPs) { # Loop through each server in the $IPs Array
-				if (Test-Path "\\$SCP_RemoteServer\c$") { # Check to make sure the servers UNC Default Share is accessable
-					foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_RemoteServer\c$\" -Include ("WebsitePanel", "FuseCP", "DotNetPanel")).FullName -Directory)) {
+		if (!(IsFolderEmpty -Path "$FCP_UpdateDir\Updates\Server\")) { # Check if the Server Update Folder has any files in it before upgrading
+			if (!(Test-Path "$FCP_UpdateDir\Server - Backups")) {(New-Item -ItemType Directory -Path "$FCP_UpdateDir\Server - Backups" -Force) | Out-Null}
+			foreach ($FCP_RemoteServer in $IPs) { # Loop through each server in the $IPs Array
+				if (Test-Path "\\$FCP_RemoteServer\c$") { # Check to make sure the servers UNC Default Share is accessable
+					foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$FCP_RemoteServer\c$\" -Include ("WebsitePanel", "FuseCP", "DotNetPanel")).FullName -Directory)) {
 						If ($RemoteServer.name -eq "Server" -Or $RemoteServer.name -eq "Server asp.net v4.5" -Or $RemoteServer.name -eq "Server asp.net v2.0") {
-							$SCP_Server_Dir  = $RemoteServer.FullName
-							$SCP_Server_FQDN = $([System.Net.Dns]::gethostentry("$SCP_RemoteServer").HostName)
-							$SCP_Server_Name = $SCP_Server_FQDN.split('.')[0]
+							$FCP_Server_Dir  = $RemoteServer.FullName
+							$FCP_Server_FQDN = $([System.Net.Dns]::gethostentry("$FCP_RemoteServer").HostName)
+							$FCP_Server_Name = $FCP_Server_FQDN.split('.')[0]
 
 							# Start the Server upgrade
-							Write-Host "`n`tStarting the `"FuseCP Server`" upgrade on `"$SCP_Server_FQDN`"" -ForegroundColor Cyan
+							Write-Host "`n`tStarting the `"FuseCP Server`" upgrade on `"$FCP_Server_FQDN`"" -ForegroundColor Cyan
 							# Backup the Server files
 							Write-Host "`t Creating a backup of the `"Server`" files" -ForegroundColor Green
-							[System.IO.Compression.ZipFile]::CreateFromDirectory($SCP_Server_Dir, "$SCP_UpdateDir\Server - Backups\$SCP_Server_Name.zip")
-							#if (!(Test-Path "$SCP_UpdateDir\Server - Backups\$SCP_Server_Name")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\Server - Backups\$SCP_Server_Name" -Force) | Out-Null}
-							#Copy-Item -Path "$SCP_Server_Dir\*" -Destination "$SCP_UpdateDir\Server - Backups\$SCP_Server_Name" -Recurse -ErrorAction SilentlyContinue | Out-Null
+							[System.IO.Compression.ZipFile]::CreateFromDirectory($FCP_Server_Dir, "$FCP_UpdateDir\Server - Backups\$FCP_Server_Name.zip")
+							#if (!(Test-Path "$FCP_UpdateDir\Server - Backups\$FCP_Server_Name")) {(New-Item -ItemType Directory -Path "$FCP_UpdateDir\Server - Backups\$FCP_Server_Name" -Force) | Out-Null}
+							#Copy-Item -Path "$FCP_Server_Dir\*" -Destination "$FCP_UpdateDir\Server - Backups\$FCP_Server_Name" -Recurse -ErrorAction SilentlyContinue | Out-Null
 
 							# Remove old Server Files that are no longer in use or will be replaced by the upgraded files
 							Write-Host "`t Preparing the existing `"Server`" files for upgrading" -ForegroundColor Green
-							if (Test-Path "$SCP_UpdateDir\Updates\Server\setup\delete.txt") {
-								foreach ($SCP_File_Tidy in (Get-Content "$SCP_UpdateDir\Updates\Server\setup\delete.txt")) {
-									if (Test-Path "$SCP_Server_Dir\$SCP_File_Tidy") {
-										if ((Get-Item "$SCP_Server_Dir\$SCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
-											(Remove-Item -Path "$SCP_Server_Dir\$SCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+							if (Test-Path "$FCP_UpdateDir\Updates\Server\setup\delete.txt") {
+								foreach ($FCP_File_Tidy in (Get-Content "$FCP_UpdateDir\Updates\Server\setup\delete.txt")) {
+									if (Test-Path "$FCP_Server_Dir\$FCP_File_Tidy") {
+										if ((Get-Item "$FCP_Server_Dir\$FCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
+											(Remove-Item -Path "$FCP_Server_Dir\$FCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 										}else{ # otherwise delete the specified file
-											(Remove-Item -Path "$SCP_Server_Dir\$SCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+											(Remove-Item -Path "$FCP_Server_Dir\$FCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 										}
 									}
 								}
 							}
 
 							# Remove some files which should have not been included
-							if (Test-Path "$SCP_Server_Dir\EmailSecurity.asmx") {Remove-Item -Path "$SCP_Server_Dir\EmailSecurity.asmx" -Force}
-							if (Test-Path "$SCP_Server_Dir\srvLetsEncrypt.asmx") {Remove-Item -Path "$SCP_Server_Dir\srvLetsEncrypt.asmx" -Force}
-							if (Test-Path "$SCP_Server_Dir\bin\Filters\FuseCP.Providers.EmailSecurity.SpamExperts.dll") {Remove-Item -Path "$SCP_Server_Dir\bin\Filters\FuseCP.Providers.EmailSecurity.SpamExperts.dll" -Force}
+							if (Test-Path "$FCP_Server_Dir\EmailSecurity.asmx") {Remove-Item -Path "$FCP_Server_Dir\EmailSecurity.asmx" -Force}
+							if (Test-Path "$FCP_Server_Dir\srvLetsEncrypt.asmx") {Remove-Item -Path "$FCP_Server_Dir\srvLetsEncrypt.asmx" -Force}
+							if (Test-Path "$FCP_Server_Dir\bin\Filters\FuseCP.Providers.EmailSecurity.SpamExperts.dll") {Remove-Item -Path "$FCP_Server_Dir\bin\Filters\FuseCP.Providers.EmailSecurity.SpamExperts.dll" -Force}
 
 							# Upgrade the Server files
 							Write-Host "`t Upgrading the `"Server`" files" -ForegroundColor Green
-							Copy-Item -Path "$SCP_UpdateDir\Updates\Server\*" -Exclude "delete.txt" -Destination "$SCP_Server_Dir\" -Recurse -Force | Out-Null
+							Copy-Item -Path "$FCP_UpdateDir\Updates\Server\*" -Exclude "delete.txt" -Destination "$FCP_Server_Dir\" -Recurse -Force | Out-Null
 
 							# Update the web.config file from Website Panel to FuseCP
-							((Get-Content "$SCP_Server_Dir\web.config").replace('WebsitePanel', 'FuseCP') | Set-Content "$SCP_Server_Dir\web.config")
-							((Get-Content "$SCP_Server_Dir\web.config").replace('websitepanel', 'FuseCP') | Set-Content "$SCP_Server_Dir\web.config")
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "FuseCP.Exchange.ClearQueryBaseDN"), ("value", "false") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "FuseCP.Exchange.enableSP2abp"), ("value", "false") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SCVMMServerName"), ("value", "") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SCVMMServerPort"), ("value", "") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/system.web" "compilation" @( ("debug", "true"), ("targetFramework", "4.8") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Update" "//configuration/system.web/compilation/@targetFramework" "4.8"
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/system.web" "pages" @( ("controlRenderingCompatibilityVersion", "3.5"), ("clientIDMode", "AutoID") )
-							ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration" "runtime"
-							if ( !(CheckXMLnode "$SCP_Server_Dir\web.config" "//configuration/runtime" "assemblyBinding") ) {
-								ModifyXML "$SCP_Server_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns", "urn:schemas-microsoft-com:asm.v1")
-								((Get-Content "$SCP_Server_Dir\web.config").replace('    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" />', "    <assemblyBinding xmlns=`"urn:schemas-microsoft-com:asm.v1`">`n      <probing privatePath=`"bin/Crm2011;bin/Crm2013;bin/Exchange2013;bin/Exchange2016;bin/Exchange2019;bin/Sharepoint2013;bin/Sharepoint2016;bin/Sharepoint2019;bin/Lync2013;bin/SfB2015;bin/SfB2019;bin/Lync2013HP;bin/Dns2012;bin/IceWarp;bin/IIs80;bin/IIs100;bin/HyperV2012R2;bin/HyperVvmm;bin/Crm2015;bin/Crm2016;bin/Filters`" />`n    </assemblyBinding>") | Set-Content "$dFilePath1")
+							((Get-Content "$FCP_Server_Dir\web.config").replace('WebsitePanel', 'FuseCP') | Set-Content "$FCP_Server_Dir\web.config")
+							((Get-Content "$FCP_Server_Dir\web.config").replace('websitepanel', 'FuseCP') | Set-Content "$FCP_Server_Dir\web.config")
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "FuseCP.Exchange.ClearQueryBaseDN"), ("value", "false") )
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "FuseCP.Exchange.enableSP2abp"), ("value", "false") )
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SCVMMServerName"), ("value", "") )
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/appSettings" "add" @( ("key", "SCVMMServerPort"), ("value", "") )
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/system.web" "compilation" @( ("debug", "true"), ("targetFramework", "4.8") )
+							ModifyXML "$FCP_Server_Dir\web.config" "Update" "//configuration/system.web/compilation/@targetFramework" "4.8"
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/system.web" "pages" @( ("controlRenderingCompatibilityVersion", "3.5"), ("clientIDMode", "AutoID") )
+							ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration" "runtime"
+							if ( !(CheckXMLnode "$FCP_Server_Dir\web.config" "//configuration/runtime" "assemblyBinding") ) {
+								ModifyXML "$FCP_Server_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns", "urn:schemas-microsoft-com:asm.v1")
+								((Get-Content "$FCP_Server_Dir\web.config").replace('    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" />', "    <assemblyBinding xmlns=`"urn:schemas-microsoft-com:asm.v1`">`n      <probing privatePath=`"bin/Crm2011;bin/Crm2013;bin/Exchange2013;bin/Exchange2016;bin/Exchange2019;bin/Sharepoint2013;bin/Sharepoint2016;bin/Sharepoint2019;bin/Lync2013;bin/SfB2015;bin/SfB2019;bin/Lync2013HP;bin/Dns2012;bin/IceWarp;bin/IIs80;bin/IIs100;bin/HyperV2012R2;bin/HyperVvmm;bin/Crm2015;bin/Crm2016;bin/Filters`" />`n    </assemblyBinding>") | Set-Content "$dFilePath1")
 							}
 							# Update the web.config file to make sure it is up to date with the new Settings
-							[xml]$SCP_Server_XML = Get-Content -Path "$SCP_Server_Dir\web.config"
-							$SCP_Server_XML.configuration.runtime.assemblyBinding.probing.privatePath = "bin/Crm2011;bin/Crm2013;bin/Exchange2013;bin/Exchange2016;bin/Exchange2019;bin/Sharepoint2013;bin/Sharepoint2016;bin/Sharepoint2019;bin/Lync2013;bin/SfB2015;bin/SfB2019;bin/Lync2013HP;bin/Dns2012;bin/IceWarp;bin/IIs80;bin/IIs100;bin/HyperV2012R2;bin/HyperVvmm;bin/Crm2015;bin/Crm2016;bin/Filters"
-							$SCP_Server_XML.Save("$SCP_Server_Dir\web.config") | Out-Null
+							[xml]$FCP_Server_XML = Get-Content -Path "$FCP_Server_Dir\web.config"
+							$FCP_Server_XML.configuration.runtime.assemblyBinding.probing.privatePath = "bin/Crm2011;bin/Crm2013;bin/Exchange2013;bin/Exchange2016;bin/Exchange2019;bin/Sharepoint2013;bin/Sharepoint2016;bin/Sharepoint2019;bin/Lync2013;bin/SfB2015;bin/SfB2019;bin/Lync2013HP;bin/Dns2012;bin/IceWarp;bin/IIs80;bin/IIs100;bin/HyperV2012R2;bin/HyperVvmm;bin/Crm2015;bin/Crm2016;bin/Filters"
+							$FCP_Server_XML.Save("$FCP_Server_Dir\web.config") | Out-Null
 							Write-Host "`t The `"FuseCP Server`" web.config file has been updated" -ForegroundColor Green
 
 							# Wake the FuseCP Server so it is more responsive after the upgrade
-							try {(Invoke-WebRequest "http://$($SCP_Server_FQDN):9003" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
+							try {(Invoke-WebRequest "http://$($FCP_Server_FQDN):9003" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 
 							# Upgrade complete
-							Write-Host "`t  The `"FuseCP Server`" has been upgraded on `"$SCP_Server_FQDN`"" -ForegroundColor Green
+							Write-Host "`t  The `"FuseCP Server`" has been upgraded on `"$FCP_Server_FQDN`"" -ForegroundColor Green
 						}
 					}
 				}else{
-					Write-Host "`t Unable to connect to $SCP_RemoteServer - Check Firewall Settings" -ForegroundColor Yellow
+					Write-Host "`t Unable to connect to $FCP_RemoteServer - Check Firewall Settings" -ForegroundColor Yellow
 					# Add the IP Address to the excluded IP Addresses
 					Write-Host "`t $RemoteServer has been added to the `"$dExcludedIPaddressesFile`" file" -ForegroundColor Yellow
 					$RemoteServer | Out-File -FilePath "$dExcludedIPaddressesFile" -Append -Encoding ascii
@@ -813,37 +813,37 @@ function UpgradeSCPserver() # Function to upgrade the FuseCP Server Component
 
 
 ####################################################################################################################################################################################
-function UpgradeSCPwebDav() # Function to upgrade the FuseCP Cloud Storage Portal (WebDAV) Component
+function UpgradeFCPwebDav() # Function to upgrade the FuseCP Cloud Storage Portal (WebDAV) Component
 {
 	Param(
 		[String[]]$IPs        # Specify the Cloud Storage Portal IPs that are to be upgraded
 	)
 	if ($IPs) { # Check to make sure there are IP Addresses in the $IPs Array
-		if (!(IsFolderEmpty -Path "$SCP_UpdateDir\Updates\WebDavPortal\")) { # Check if the WebDAV Update Folder has any files in it before upgrading
-			if (!(Test-Path "$SCP_UpdateDir\WebDAV - Backups")) {(New-Item -ItemType Directory -Path "$SCP_UpdateDir\WebDAV - Backups" -Force) | Out-Null}
-			foreach ($SCP_RemoteWebDAV in $IPs) { # Loop through each IP Address in the $IPs Array
-				if (Test-Path "\\$SCP_RemoteWebDAV\c$") { # Check to make sure the WebDAVs UNC Default Share is accessable
-					foreach ($RemoteWebDAV in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_RemoteWebDAV\c$\" -Include ("WebsitePanel", "FuseCP")).FullName -Directory)) {
+		if (!(IsFolderEmpty -Path "$FCP_UpdateDir\Updates\WebDavPortal\")) { # Check if the WebDAV Update Folder has any files in it before upgrading
+			if (!(Test-Path "$FCP_UpdateDir\WebDAV - Backups")) {(New-Item -ItemType Directory -Path "$FCP_UpdateDir\WebDAV - Backups" -Force) | Out-Null}
+			foreach ($FCP_RemoteWebDAV in $IPs) { # Loop through each IP Address in the $IPs Array
+				if (Test-Path "\\$FCP_RemoteWebDAV\c$") { # Check to make sure the WebDAVs UNC Default Share is accessable
+					foreach ($RemoteWebDAV in (Get-ChildItem (Get-ChildItem -Path "\\$FCP_RemoteWebDAV\c$\" -Include ("WebsitePanel", "FuseCP")).FullName -Directory)) {
 						If ($RemoteWebDAV.name -eq "Cloud Storage Portal") {
-							$SCP_WebDAV_Dir  = $RemoteWebDAV.FullName
-							$SCP_WebDAV_FQDN = $([System.Net.Dns]::gethostentry("$SCP_RemoteWebDAV").HostName)
-							$SCP_WebDAV_Name = $SCP_WebDAV_FQDN.split('.')[0]
+							$FCP_WebDAV_Dir  = $RemoteWebDAV.FullName
+							$FCP_WebDAV_FQDN = $([System.Net.Dns]::gethostentry("$FCP_RemoteWebDAV").HostName)
+							$FCP_WebDAV_Name = $FCP_WebDAV_FQDN.split('.')[0]
 
 							# Start the Cloud Storage Portal upgrade
-							Write-Host "`n`tStarting the `"FuseCP Cloud Storage Portal`" upgrade on `"$SCP_WebDAV_FQDN`"" -ForegroundColor Cyan
+							Write-Host "`n`tStarting the `"FuseCP Cloud Storage Portal`" upgrade on `"$FCP_WebDAV_FQDN`"" -ForegroundColor Cyan
 							# Backup the Cloud Storage Portal files
 							Write-Host "`t Creating a backup of the `"Cloud Storage Portal`" files" -ForegroundColor Green
-							[System.IO.Compression.ZipFile]::CreateFromDirectory($SCP_WebDAV_Dir, "$SCP_UpdateDir\WebDAV - Backups\$SCP_WebDAV_Name.zip")
+							[System.IO.Compression.ZipFile]::CreateFromDirectory($FCP_WebDAV_Dir, "$FCP_UpdateDir\WebDAV - Backups\$FCP_WebDAV_Name.zip")
 
 							# Remove old Cloud Storage Portal Files that are no longer in use or will be replaced by the upgraded files
 							Write-Host "`t Preparing the existing `"Cloud Storage Portal`" files for upgrading" -ForegroundColor Green
-							if (Test-Path "$SCP_UpdateDir\Updates\WebDavPortal\setup\delete.txt") {
-								foreach ($SCP_File_Tidy in (Get-Content "$SCP_UpdateDir\Updates\WebDavPortal\setup\delete.txt")) {
-									if (Test-Path "$SCP_WebDAV_Dir\$SCP_File_Tidy") {
-										if ((Get-Item "$SCP_WebDAV_Dir\$SCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
-											(Remove-Item -Path "$SCP_WebDAV_Dir\$SCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+							if (Test-Path "$FCP_UpdateDir\Updates\WebDavPortal\setup\delete.txt") {
+								foreach ($FCP_File_Tidy in (Get-Content "$FCP_UpdateDir\Updates\WebDavPortal\setup\delete.txt")) {
+									if (Test-Path "$FCP_WebDAV_Dir\$FCP_File_Tidy") {
+										if ((Get-Item "$FCP_WebDAV_Dir\$FCP_File_Tidy") -is [System.IO.DirectoryInfo]) { # check if item is a directory and delete files within it
+											(Remove-Item -Path "$FCP_WebDAV_Dir\$FCP_File_Tidy\*" -Force -Recurse -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 										}else{ # otherwise delete the specified file
-											(Remove-Item -Path "$SCP_WebDAV_Dir\$SCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
+											(Remove-Item -Path "$FCP_WebDAV_Dir\$FCP_File_Tidy" -Force -Confirm:$false -ErrorAction SilentlyContinue) | Out-Null
 										}
 									}
 								}
@@ -851,17 +851,17 @@ function UpgradeSCPwebDav() # Function to upgrade the FuseCP Cloud Storage Porta
 
 							# Upgrade the Cloud Storage Portal files
 							Write-Host "`t Upgrading the `"FuseCP Cloud Storage Portal`" files" -ForegroundColor Green
-							Copy-Item -Path "$SCP_UpdateDir\Updates\WebDavPortal\*" -Exclude "delete.txt" -Destination "$SCP_WebDAV_Dir\" -Recurse -Force | Out-Null
+							Copy-Item -Path "$FCP_UpdateDir\Updates\WebDavPortal\*" -Exclude "delete.txt" -Destination "$FCP_WebDAV_Dir\" -Recurse -Force | Out-Null
 
 							# Wake the FuseCP Cloud Storage Portal so it is more responsive after the upgrade
-							try {(Invoke-WebRequest "http://$($SCP_WebDAV_FQDN):9004" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
+							try {(Invoke-WebRequest "http://$($FCP_WebDAV_FQDN):9004" -DisableKeepAlive -UseBasicParsing -Method head) | Out-Null} catch {}
 
 							# Upgrade complete
-							Write-Host "`t  The `"FuseCP Cloud Storage Portal`" has been upgraded on `"$SCP_WebDAV_FQDN`"" -ForegroundColor Green
+							Write-Host "`t  The `"FuseCP Cloud Storage Portal`" has been upgraded on `"$FCP_WebDAV_FQDN`"" -ForegroundColor Green
 						}
 					}
 				}else{
-					Write-Host "`t Unable to connect to $SCP_RemoteWebDAV - Check Firewall Settings" -ForegroundColor Yellow
+					Write-Host "`t Unable to connect to $FCP_RemoteWebDAV - Check Firewall Settings" -ForegroundColor Yellow
 					# Add the IP Address to the excluded IP Addresses
 					Write-Host "`t $RemoteWebDAV has been added to the `"$dExcludedIPaddressesFile`" file" -ForegroundColor Yellow
 					$RemoteWebDAV | Out-File -FilePath "$dExcludedIPaddressesFile" -Append -Encoding ascii
@@ -881,8 +881,8 @@ function DNPversionCheck() # Check if DNP is installed, if so advise a manual up
 {
 	if ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -like "* Enterprise Server*"}).name -like "DotNetPanel*") {
 		# Check the Database to make sure it has been upgraded to FuseCP if DotNetPanel is detected
-		push-location ; ($SCP_Database_Check = (Invoke-SQLCmd -query "SELECT FuseCPdatabase = ( COUNT([DatabaseVersion])) FROM [$SCP_Database_Name].[dbo].[Versions] WHERE BuildDate >= '2016' AND DatabaseVersion >= '1.0.1'" -Server $SCP_Database_Servr).FuseCPdatabase) | Out-Null ; Pop-Location
-		if ($SCP_Database_Check -eq '0') { # Show a warning message to the user if DNP is detected and has not been upgraded to SCP
+		push-location ; ($FCP_Database_Check = (Invoke-SQLCmd -query "SELECT FuseCPdatabase = ( COUNT([DatabaseVersion])) FROM [$FCP_Database_Name].[dbo].[Versions] WHERE BuildDate >= '2016' AND DatabaseVersion >= '1.0.1'" -Server $FCP_Database_Servr).FuseCPdatabase) | Out-Null ; Pop-Location
+		if ($FCP_Database_Check -eq '0') { # Show a warning message to the user if DNP is detected and has not been upgraded to FCP
 			Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 			Write-Host "`t *                                               *" -ForegroundColor Yellow
 			Write-Host "`t *     You have a VERY old version installed     *" -ForegroundColor Yellow
@@ -901,7 +901,7 @@ function DNPversionCheck() # Check if DNP is installed, if so advise a manual up
 
 
 ####################################################################################################################################################################################
-function SCPcheckIfEnterpriseServer() # Check if the script is being run on the Enterprise Server, if not then advise end user
+function FCPcheckIfEnterpriseServer() # Check if the script is being run on the Enterprise Server, if not then advise end user
 {
 	if (! ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -like "* Enterprise Server*"}).name -match "FuseCP|WebsitePanel|DotNetPanel") ) {
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
@@ -1229,12 +1229,12 @@ if (($Host.Version).Major -le 2) {
 	dPressAnyKeyToExit
 }else{
 	# Run the FuseCP Installation Menu as long as the logged in user is member of the Local "Administrators" group of the "Domain Admins" group
-	if (Test-Path "$SCP_EntSvr_Dir") { # Check to make sure the script is being run on the Enterprise Server
+	if (Test-Path "$FCP_EntSvr_Dir") { # Check to make sure the script is being run on the Enterprise Server
 		if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 			if (CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local") { # Run the SOlidCP Menu if the logged in user is a Local Administrator
 				Write-Host "`n`t This machine is NOT Joined to domain and you are logged in as Local Administrator Account" -ForegroundColor Green
 				Write-Host "`t The FuseCP Upgrade menu is being loaded" -ForegroundColor Green
-				SCPupgradeMenu
+				FCPupgradeMenu
 			}elseif (!(CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local")) { # The logged in user is NOT a Local Administrator
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -1266,7 +1266,7 @@ if (($Host.Version).Major -le 2) {
 			if (CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain") { # Run the SOlidCP Menu if the logged in user is a Domain Administrator
 				Write-Host "`n`t This machine is Joined to domain and you are logged in as Domain Administrator Account" -ForegroundColor Green
 				Write-Host "`t The FuseCP Upgrade menu is being loaded" -ForegroundColor Green
-				SCPupgradeMenu
+				FCPupgradeMenu
 			}elseif (!(CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain")) { # The logged in user is NOT a Domain Administrator
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow

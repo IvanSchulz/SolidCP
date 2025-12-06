@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxMobileDetails.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeMailboxMobileDetails" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="fcp" %>
 
 
 
@@ -14,10 +14,10 @@
                 </div>
 				<div class="panel-body form-horizontal">
                     <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-                    <scp:MailboxTabs id="tabs" runat="server" SelectedTab="mailbox_mobile" />
+                    <fcp:MailboxTabs id="tabs" runat="server" SelectedTab="mailbox_mobile" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    <CPCC:StyleButton id="btnCancel" CssClass="btn btn-warning" runat="server" CausesValidation="False" OnClick="btnCancel_Click"> <i class="fa fa-times">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnCancel"/> </CPCC:StyleButton>&nbsp;
                     <CPCC:StyleButton id="btnWipeAllData" CssClass="btn btn-danger" runat="server" OnClick="btnWipeAllData_Click"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnWipeAllDataText"/> </CPCC:StyleButton>
 					<table>					    

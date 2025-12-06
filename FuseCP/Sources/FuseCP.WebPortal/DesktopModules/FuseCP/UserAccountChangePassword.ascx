@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserAccountChangePassword.ascx.cs"
     Inherits="FuseCP.Portal.UserAccountChangePassword" %>
-<%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
+<%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
 <asp:Panel ID="PasswordPanel" runat="server" DefaultButton="cmdChangePassword">
     <div class="panel-body form-horizontal">
         <table cellspacing="0" cellpadding="2" width="100%">
@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <scp:PasswordControl ID="userPassword" runat="server" />
+                    <fcp:PasswordControl ID="userPassword" runat="server" />
                 </td>
             </tr>
             <tr id="trChangePasswordWarning" runat="server" visible="false">

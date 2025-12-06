@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeFolder.ascx.cs"
 	Inherits="FuseCP.Portal.WebSitesEditHeliconApeFolder" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
-<%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
+<%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="fcp" %>
 <link rel="stylesheet" href="/JavaScript/codemirror/codemirror.css" />
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>
 <script type="text/javascript" src="/JavaScript/codemirror/codemirror.js"></script>
@@ -62,7 +62,7 @@
 <asp:Panel ID="DebuggingPageLinkPanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnCancelDebuggingPageLinkPanel">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-list"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblDebuggingPageLink" Text="Debugging Page Link" /></h3>
+            <h3><i class="fa fa-list"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblDebuggingPageLink" Text="Debugging Page Link" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">

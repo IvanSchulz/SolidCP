@@ -35,8 +35,10 @@ using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using FuseCP.LocalizationToolkit;
+using System.Diagnostics;
 
-namespace FuseCP.LocalizationToolkit
+namespace FusecpCP.LocalizationToolkit
 {
 	static class Program
 	{
@@ -171,7 +173,8 @@ namespace FuseCP.LocalizationToolkit
 		private static void LoadFile(string file, string baseDir)
 		{
 			string path = file.Substring(baseDir.Length);
-			if ( path.StartsWith(Path.DirectorySeparatorChar.ToString()))
+            Debug.Print("Loading " + path);
+            if ( path.StartsWith(Path.DirectorySeparatorChar.ToString()))
 			{
 				path = path.TrimStart(Path.DirectorySeparatorChar);
 			}

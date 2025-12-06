@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangePublicFolderEmailAddresses.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangePublicFolderEmailAddresses" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="UserControls/PublicFolderTabs.ascx" TagName="PublicFolderTabs" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/PublicFolderTabs.ascx" TagName="PublicFolderTabs" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <script type="text/javascript">
                 function checkAll(selectAllCheckbox) {
@@ -27,10 +27,10 @@
                 </div>
 				<div class="panel-body form-horizontal">
                     <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-                    <scp:PublicFolderTabs id="tabs" runat="server" SelectedTab="public_folder_addresses" />
+                    <fcp:PublicFolderTabs id="tabs" runat="server" SelectedTab="public_folder_addresses" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
 					<fieldset>
 					    <legend>
@@ -41,7 +41,7 @@
                                <asp:Localize ID="locAccount" runat="server" meta:resourcekey="locAccount" Text="E-mail Address: *"></asp:Localize></td>
 						   </div>
                            <div class="input-group col-sm-10">
-									<scp:EmailAddress id="email" runat="server" ValidationGroup="AddEmail"></scp:EmailAddress>
+									<fcp:EmailAddress id="email" runat="server" ValidationGroup="AddEmail"></fcp:EmailAddress>
                                     <span class="input-group-btn"><CPCC:StyleButton id="btnAddEmail" CssClass="btn btn-success" runat="server" OnClick="btnAddEmail_Click" ValidationGroup="AddEmail"> <i class="fa fa-envelope">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddEmail"/> </CPCC:StyleButton></span>
                            </div>
 					   </div>
@@ -49,9 +49,9 @@
 					<br />
 					<br />
 					
-					<scp:CollapsiblePanel id="secExistingAddresses" runat="server"
+					<fcp:CollapsiblePanel id="secExistingAddresses" runat="server"
                         TargetControlID="ExistingAddresses" meta:resourcekey="secExistingAddresses" Text="Existing E-mail Addresses">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ExistingAddresses" runat="server" Height="0" style="overflow:hidden;">
                         <br />
 				        <asp:GridView ID="gvEmails" runat="server" AutoGenerateColumns="False"

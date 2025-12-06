@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBAllocatePackagePhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.UserControls.SfBAllocatePackagePhoneNumbers" %>
-<%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 
-<scp:SimpleMessageBox id="messageBox" runat="server" />
+<fcp:SimpleMessageBox id="messageBox" runat="server" />
 
 <asp:ValidationSummary ID="validatorsSummary" runat="server" 
     ValidationGroup="AddAddress" ShowMessageBox="True" ShowSummary="False" />

@@ -19,24 +19,24 @@ namespace FuseCP.WebDav.Core.Managers
             token.ExpirationDate = DateTime.Now.AddHours(3);
             token.FilePath = filePath;
 
-            token.Id = SCP.Services.EnterpriseStorage.AddWebDavAccessToken(token);
+            token.Id = FCP.Services.EnterpriseStorage.AddWebDavAccessToken(token);
 
             return token;
         }
 
         public WebDavAccessToken GetToken(int id)
         {
-            return SCP.Services.EnterpriseStorage.GetWebDavAccessTokenById(id);
+            return FCP.Services.EnterpriseStorage.GetWebDavAccessTokenById(id);
         }
 
         public WebDavAccessToken GetToken(Guid guid)
         {
-            return SCP.Services.EnterpriseStorage.GetWebDavAccessTokenByAccessToken(guid);
+            return FCP.Services.EnterpriseStorage.GetWebDavAccessTokenByAccessToken(guid);
         }
 
         public void ClearExpiredTokens()
         {
-            SCP.Services.EnterpriseStorage.DeleteExpiredWebDavAccessTokens();
+            FCP.Services.EnterpriseStorage.DeleteExpiredWebDavAccessTokens();
         }
     }
 }

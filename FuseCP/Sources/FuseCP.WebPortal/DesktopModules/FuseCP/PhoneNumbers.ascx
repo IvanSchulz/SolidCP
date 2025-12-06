@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.PhoneNumbers" %>
-<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 <script type="text/javascript">
                 function checkAll(selectAllCheckbox) {
@@ -14,7 +14,7 @@
                 }
 </script>
 
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
 
 <div class="FormButtonsBar right">
@@ -26,7 +26,7 @@
 
 <div class="panel-body text-right">
 
-		<scp:SearchBox ID="searchBox" runat="server" />
+		<fcp:SearchBox ID="searchBox" runat="server" />
 
 </div>
     

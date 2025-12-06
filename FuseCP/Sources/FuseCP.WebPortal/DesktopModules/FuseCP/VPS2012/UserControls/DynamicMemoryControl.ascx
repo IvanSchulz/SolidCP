@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DynamicMemoryControl.ascx.cs" Inherits="FuseCP.Portal.VPS2012.UserControls.DynamicMemoryControl" %>
 <%@ Import Namespace="FuseCP.Portal" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register TagPrefix="scp" TagName="CheckBoxOption" Src="../../UserControls/CheckBoxOption.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CheckBoxOption" Src="../../UserControls/CheckBoxOption.ascx" %>
 
 <% if (Mode != VirtualMachineSettingsMode.Summary){ %>
-    <scp:CollapsiblePanel id="secDymanicMemory" runat="server" TargetControlID="DymanicMemoryPanel" meta:resourcekey="secDymanicMemory" Text="Dymanic memory">
-    </scp:CollapsiblePanel>
+    <fcp:CollapsiblePanel id="secDymanicMemory" runat="server" TargetControlID="DymanicMemoryPanel" meta:resourcekey="secDymanicMemory" Text="Dymanic memory">
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="DymanicMemoryPanel" runat="server" Height="0" Style="overflow: hidden; padding: 5px;">
         <table>
             <% if (Mode == VirtualMachineSettingsMode.Edit) { %>
@@ -80,7 +80,7 @@
             <% } else { %>
             <tr>
                 <td colspan="2">
-                    <scp:CheckBoxOption ID="optionDymanicMemoryDisplay" runat="server" Text="Dymanic memory enabled" meta:resourcekey="optionDymanicMemory" />
+                    <fcp:CheckBoxOption ID="optionDymanicMemoryDisplay" runat="server" Text="Dymanic memory enabled" meta:resourcekey="optionDymanicMemory" />
                 </td>
             </tr>
             <tr runat="server" id="trMinimumDisplay">
@@ -105,7 +105,7 @@
 <% } else { %>
     <tr>
         <td><asp:Localize ID="locDymanicMemorySummary" runat="server" meta:resourcekey="locDymanicMemorySummary" Text="Dymanic memory enabled:" /></td>
-        <td><scp:CheckBoxOption id="optionDymanicMemorySummary" runat="server" /></td>
+        <td><fcp:CheckBoxOption id="optionDymanicMemorySummary" runat="server" /></td>
     </tr>
     <tr runat="server" id="trMinimumSummary">
         <td><asp:Localize ID="locMinimumSummary" runat="server" meta:resourcekey="locMinimum" Text="Minimum:" /></td>

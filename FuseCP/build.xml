@@ -39,9 +39,9 @@
 		<ImportEnterpriseSrc>$(TrunkFolder)\Sources\Tools\FuseCP.Import.Enterprise\bin\$(BuildConfiguration)</ImportEnterpriseSrc>
 		<CertMakerSrc>$(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker\bin\$(BuildConfiguration)</CertMakerSrc>
 		<AWStatsViewerSrc>$(TrunkFolder)\Sources\Tools\FuseCP.AWStats.Viewer</AWStatsViewerSrc>
-		<SCPTransportAgentSrc>$(TrunkFolder)\Sources\Tools\SCPTransportAgent</SCPTransportAgentSrc>
+		<FCPTransportAgentSrc>$(TrunkFolder)\Sources\Tools\FCPTransportAgent</FCPTransportAgentSrc>
 		<FuseCP-Configuration-ToolSrc>$(TrunkFolder)\Sources\Tools\FuseCP-Configuration-Tool</FuseCP-Configuration-ToolSrc>
-		<MSPtoSCPSrc>$(TrunkFolder)\Sources\Tools\MSPtoSCP</MSPtoSCPSrc>
+		<MSPtoFCPSrc>$(TrunkFolder)\Sources\Tools\MSPtoFCP</MSPtoFCPSrc>
 		<MailTemplatesSrc>$(TrunkFolder)\Sources\Tools\MailTemplates</MailTemplatesSrc>
 		<FuseCP-Auto-Upgrade-ToolSrc>$(TrunkFolder)\Sources\Tools\FuseCP-Auto-Upgrade-Tool</FuseCP-Auto-Upgrade-ToolSrc>
 		<FuseCP-dSHeuristicsSrc>$(TrunkFolder)\Sources\Tools\FuseCP-dSHeuristics</FuseCP-dSHeuristicsSrc>
@@ -81,7 +81,7 @@
 		<ImportEnterpriseBuild>$(BuildFolder)\Import.Enterprise</ImportEnterpriseBuild>
 		<CertMakerBuild>$(BuildFolder)\CertificateMaker</CertMakerBuild>
 		<AWStatsViewerBuild>$(BuildFolder)\AWStats.Viewer</AWStatsViewerBuild>
-		<SCPTransportAgentBuild>$(BuildFolder)\SCPTransportAgent</SCPTransportAgentBuild>
+		<FCPTransportAgentBuild>$(BuildFolder)\FCPTransportAgent</FCPTransportAgentBuild>
 		<LocalizationToolkitBuild>$(BuildFolder)\LocalizationToolkit</LocalizationToolkitBuild>
 		<InstallerBuild>$(BuildFolder)\Installer</InstallerBuild>
 		<FixDefaultPublicFolderMailboxBuild>$(BuildFolder)\FixDefaultPublicFolderMailbox</FixDefaultPublicFolderMailboxBuild>
@@ -139,7 +139,7 @@
 		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.Import.Enterprise.sln" />
 		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.AWStats.Viewer.sln" />
 		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" />
-		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" />
+		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FCPTransportAgent.sln" />
 		<Exec Command="dotnet restore $(TrunkFolder)\Sources\Tools\FuseCP.FixDefaultPublicFolderMailbox.sln" />
 	</Target>
 
@@ -195,7 +195,7 @@
 		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.Import.Enterprise.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
 		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.AWStats.Viewer.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
 		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SSL-Certificate-Maker\SSLCertificateMaker.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
-		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\SCPTransportAgent.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
+		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FCPTransportAgent.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
   		<MSBuild Projects="$(TrunkFolder)\Sources\Tools\FuseCP.FixDefaultPublicFolderMailbox.sln" Properties="Configuration=$(BuildConfiguration);Platform=$(Platform)" />
  	</Target>
 
@@ -212,7 +212,7 @@
 		<RemoveDir Directories="$(VMConfigBuild)"/>
 		<RemoveDir Directories="$(HyperVUtilsBuild)"/>
 		<RemoveDir Directories="$(AWStatsViewerBuild)"/>
-		<RemoveDir Directories="$(SCPTransportAgentBuild)"/>
+		<RemoveDir Directories="$(FCPTransportAgentBuild)"/>
 		<RemoveDir Directories="$(LocalizationToolkitBuild)"/>
 		<RemoveDir Directories="$(InstallerBuild)"/>
 	    <RemoveDir Directories="$(FixDefaultPublicFolderMailboxBuild)"/>
@@ -230,7 +230,7 @@
 		<MakeDir Directories="$(ImportEnterpriseBuild)"/>
 		<MakeDir Directories="$(CertMakerBuild)"/>
 		<MakeDir Directories="$(AWStatsViewerBuild)"/>
-		<MakeDir Directories="$(SCPTransportAgentBuild)"/>
+		<MakeDir Directories="$(FCPTransportAgentBuild)"/>
 		<MakeDir Directories="$(LocalizationToolkitBuild)"/>
 		<MakeDir Directories="$(InstallerBuild)"/>
     	<MakeDir Directories="$(FixDefaultPublicFolderMailboxBuild)"/>
@@ -450,29 +450,29 @@
 		<Copy SourceFiles="@(AWStatsViewerBuildFiles)" DestinationFolder="$(AWStatsViewerBuild)\%(RecursiveDir)" />
 	</Target>
 
-	<Target Name="CreateSCPTransportAgentBuild" DependsOnTargets="CreateAWStatsViewerBuild">
+	<Target Name="CreateFCPTransportAgentBuild" DependsOnTargets="CreateAWStatsViewerBuild">
 		<ItemGroup>
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\ref\**" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\.svn\**" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\obj\**" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\bin\*.xml" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.cache" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\microsoft.*" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\app.config" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.txt" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.pdb" Condition=" '$(BuildConfiguration)' == 'Release' And !$(IncludeReleasePdbs) " />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.user" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.suo" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.cs" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.csproj" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\Code\**" />
-				<SCPTransportAgentBuildExclude Include="$(SCPTransportAgentSrc)\**\*.publish.xml" />
-				<SCPTransportAgentBuildFiles Include="$(SCPTransportAgentSrc)\**\*.*" Exclude="@(SCPTransportAgentBuildExclude)" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\ref\**" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\.svn\**" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\obj\**" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\bin\*.xml" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.cache" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\microsoft.*" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\app.config" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.txt" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.pdb" Condition=" '$(BuildConfiguration)' == 'Release' And !$(IncludeReleasePdbs) " />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.user" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.suo" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.cs" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.csproj" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\Code\**" />
+				<FCPTransportAgentBuildExclude Include="$(FCPTransportAgentSrc)\**\*.publish.xml" />
+				<FCPTransportAgentBuildFiles Include="$(FCPTransportAgentSrc)\**\*.*" Exclude="@(FCPTransportAgentBuildExclude)" />
 		</ItemGroup>
-		<Copy SourceFiles="@(SCPTransportAgentBuildFiles)" DestinationFolder="$(SCPTransportAgentBuild)\%(RecursiveDir)" />
+		<Copy SourceFiles="@(FCPTransportAgentBuildFiles)" DestinationFolder="$(FCPTransportAgentBuild)\%(RecursiveDir)" />
 	</Target>
 
-	<Target Name="CreateLocalizationToolkitBuild" DependsOnTargets="CreateSCPTransportAgentBuild">
+	<Target Name="CreateLocalizationToolkitBuild" DependsOnTargets="CreateFCPTransportAgentBuild">
 		<Exec Command="dotnet restore /p:BuildWithNetFrameworkHostedCompiler=true $(TrunkFolder)\Sources\Tools\FuseCP.LocalizationToolkit.sln" />
 
 		<!-- compile toolkit -->
@@ -615,9 +615,9 @@
 		<ImportEnterpriseInstall>$(ToolsFolder)\Import.Enterprise</ImportEnterpriseInstall>
 		<AWStatsViewerInstall>$(ToolsFolder)\AWStats.Viewer</AWStatsViewerInstall>
 		<CertMakerInstall>$(ToolsFolder)\CertificateMaker</CertMakerInstall>
-		<SCPTransportAgentInstall>$(ToolsFolder)\SCPTransportAgent</SCPTransportAgentInstall>
+		<FCPTransportAgentInstall>$(ToolsFolder)\FCPTransportAgent</FCPTransportAgentInstall>
 		<FuseCP-Configuration-ToolInstall>$(ToolsFolder)\FuseCP-Configuration-Tool</FuseCP-Configuration-ToolInstall>
-		<MSPtoSCPInstall>$(ToolsFolder)\MSPtoSCP</MSPtoSCPInstall>
+		<MSPtoFCPInstall>$(ToolsFolder)\MSPtoFCP</MSPtoFCPInstall>
 		<MailTemplatesInstall>$(ToolsFolder)\MailTemplates</MailTemplatesInstall>
 		<FuseCP-Auto-Upgrade-ToolInstall>$(ToolsFolder)\FuseCP-Auto-Upgrade-Tool</FuseCP-Auto-Upgrade-ToolInstall>
 		<FuseCP-dSHeuristicsInstall>$(ToolsFolder)\FuseCP-dSHeuristics</FuseCP-dSHeuristicsInstall>
@@ -728,17 +728,17 @@
 		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(CertMakerInstall)" />
 	</Target>
 	
-	<Target Name="CreateSCPTransportAgentInstall" DependsOnTargets="CreateCertMakerInstall">
+	<Target Name="CreateFCPTransportAgentInstall" DependsOnTargets="CreateCertMakerInstall">
 		<ItemGroup>
-			<SCPTransportAgentDeployFiles Include="$(SCPTransportAgentBuild)\**\*.*" />
+			<FCPTransportAgentDeployFiles Include="$(FCPTransportAgentBuild)\**\*.*" />
 		</ItemGroup>
-		<RemoveDir Directories="$(SCPTransportAgentInstall)"/>
-		<MakeDir Directories="$(SCPTransportAgentInstall)"/>
-		<Copy SourceFiles="@(SCPTransportAgentDeployFiles)" DestinationFolder="$(SCPTransportAgentInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(SCPTransportAgentInstall)" />
+		<RemoveDir Directories="$(FCPTransportAgentInstall)"/>
+		<MakeDir Directories="$(FCPTransportAgentInstall)"/>
+		<Copy SourceFiles="@(FCPTransportAgentDeployFiles)" DestinationFolder="$(FCPTransportAgentInstall)\%(RecursiveDir)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FCPTransportAgentInstall)" />
 	</Target>
 
-	<Target Name="CreateAWStatsViewerInstall" DependsOnTargets="CreateSCPTransportAgentInstall">
+	<Target Name="CreateAWStatsViewerInstall" DependsOnTargets="CreateFCPTransportAgentInstall">
 		<ItemGroup>
 			<AWStatsViewerDeployFiles Include="$(AWStatsViewerBuild)\**\*.*" />
 		</ItemGroup>
@@ -775,17 +775,17 @@
 		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-Configuration-ToolInstall)" />
 	</Target>
 	
-  	<Target Name="MSPtoSCPInstall" DependsOnTargets="CreateFuseCP-Configuration-ToolInstall">
+  	<Target Name="MSPtoFCPInstall" DependsOnTargets="CreateFuseCP-Configuration-ToolInstall">
 		<ItemGroup>
-			<MSPtoSCPFiles Include="$(MSPtoSCPSrc)\*.*" />
+			<MSPtoFCPFiles Include="$(MSPtoFCPSrc)\*.*" />
 		</ItemGroup>
-		<RemoveDir Directories="$(MSPtoSCPInstall)"/>
-		<MakeDir Directories="$(MSPtoSCPInstall)"/>
-		<Copy SourceFiles="@(MSPtoSCPFiles)" DestinationFolder="$(MSPtoSCPInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(MSPtoSCPInstall)" />
+		<RemoveDir Directories="$(MSPtoFCPInstall)"/>
+		<MakeDir Directories="$(MSPtoFCPInstall)"/>
+		<Copy SourceFiles="@(MSPtoFCPFiles)" DestinationFolder="$(MSPtoFCPInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(MSPtoFCPInstall)" />
 	</Target>
 	
-	<Target Name="MailTemplatesInstall" DependsOnTargets="MSPtoSCPInstall">
+	<Target Name="MailTemplatesInstall" DependsOnTargets="MSPtoFCPInstall">
 	<ItemGroup>
 		<MailTemplatesFiles Include="$(MailTemplatesSrc)\**\*.*" />
 	</ItemGroup>
@@ -1022,7 +1022,7 @@
 			<VMConfigInstallFiles Include="$(VMConfigInstall)\**\*.*" />
 			<ImportEnterpriseInstallFiles Include="$(ImportEnterpriseInstall)\**\*.*" />
 			<AWStatsViewerInstallFiles Include="$(AWStatsViewerInstall)\**\*.*" />
-			<SCPTransportAgentInstallFiles Include="$(SCPTransportAgentInstall)\**\*.*" />
+			<FCPTransportAgentInstallFiles Include="$(FCPTransportAgentInstall)\**\*.*" />
 			-->
 		</ItemGroup>
 
@@ -1121,7 +1121,7 @@
 		<Zip Files="@(VMConfigInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-VMConfig-$(Version).zip" WorkingDirectory="$(VMConfigInstall)" />
 		<Zip Files="@(ImportEnterpriseInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-Import-Enterprise-$(Version).zip" WorkingDirectory="$(ImportEnterpriseInstall)" />
 		<Zip Files="@(AWStatsViewerInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-AWStatsViewer-$(Version).zip" WorkingDirectory="$(AWStatsViewerInstall)" />
-		<Zip Files="@(SCPTransportAgentInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-SCPTransportAgent-$(Version).zip" WorkingDirectory="$(SCPTransportAgentInstall)" />
+		<Zip Files="@(FCPTransportAgentInstallFiles)" ZipFileName="$(ToolsFolder)\FuseCP-FCPTransportAgent-$(Version).zip" WorkingDirectory="$(FCPTransportAgentInstall)" />
 		-->
 	</Target>
 
@@ -1132,11 +1132,11 @@
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-VMConfig$(ZipExt)&quot; &quot;$(VMConfigInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Import-Enterprise$(ZipExt)&quot; &quot;$(ImportEnterpriseInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-AWStatsViewer$(ZipExt)&quot; &quot;$(AWStatsViewerInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-SCPTransportAgent$(ZipExt)&quot; &quot;$(SCPTransportAgentInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-FCPTransportAgent$(ZipExt)&quot; &quot;$(FCPTransportAgentInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-FixDefaultPublicFolderMailbox$(ZipExt)&quot; &quot;$(FixDefaultPublicFolderMailboxInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Configuration-Tool$(ZipExt)&quot; &quot;$(FuseCP-Configuration-ToolInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-CertificateMaker$(ZipExt)&quot; &quot;$(CertMakerInstall)\*&quot;" />
-		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\MSPtoSCP$(ZipExt)&quot; &quot;$(MSPtoSCPInstall)\*&quot;" />
+		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\MSPtoFCP$(ZipExt)&quot; &quot;$(MSPtoFCPInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\MailTemplates$(ZipExt)&quot; &quot;$(MailTemplatesInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-Auto-Upgrade-Tool$(ZipExt)&quot; &quot;$(FuseCP-Auto-Upgrade-ToolInstall)\*&quot;" />
 		<Exec Command="$(ZipCmd)$(ZipLevel) a &quot;$(ToolsFolder)\FuseCP-dSHeuristics$(ZipExt)&quot; &quot;$(FuseCP-dSHeuristicsInstall)\*&quot;" />
@@ -1229,7 +1229,7 @@
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-Import-Enterprise$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-Import-Enterprise$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-CertificateMaker$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-CertificateMaker$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-AWStatsViewer$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-AWStatsViewer$(ZipExt)" />
-	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-SCPTransportAgent$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-SCPTransportAgent$(ZipExt)" />
+	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP-FCPTransportAgent$(ZipExt)" LocalFile="$(ToolsFolder)\FuseCP-FCPTransportAgent$(ZipExt)" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP.LocalizationToolkit.msi" LocalFile="$(ToolsFolder)\FuseCP.LocalizationToolkit.msi" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCP.Installer-$(Version).msi" LocalFile="$(DeployFolder)\FuseCP.Installer-$(Version).msi" />
 	<FtpUpload Username="$(ftpUsername)" password="$(ftpPassword)" RemoteUri="ftp://$(ftphost)/FuseCPInstaller.exe" LocalFile="$(DeployFolder)\FuseCP.Installer.exe" />

@@ -212,13 +212,13 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLDatabasesSettings</Key>
+    <Key>ModuleTitle.FCPSQLDatabasesSettings</Key>
     <DefaultValue>FuseCP SQL Databases Settings</DefaultValue>
     <Value>FuseCP-SQL-Datenbankeinstellungen</Value>
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLUserSettings</Key>
+    <Key>ModuleTitle.FCPSQLUserSettings</Key>
     <DefaultValue>FuseCP SQL User Settings</DefaultValue>
     <Value>FuseCP-SQL-Benutzereinstellungen</Value>
   </Resource>
@@ -23809,7 +23809,7 @@
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\SetupControlPanelAccounts.ascx.resx</File>
-    <Key>ScpaProcedureDescription.Text</Key>
+    <Key>fcpaProcedureDescription.Text</Key>
     <DefaultValue>Please setup passwords for FuseCP "serveradmin" and "admin" accounts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; is control panel administrator account. Using this account you can manage all your servers and services, create new hosting plans and customer accounts, both resellers and users.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; is a pre-configured reseller account with unlimited hosting plan to manage local server where control panel is installed.</DefaultValue>
     <Value>Bitte Passwörter für FuseCP "serveradmin" und "admin" Benutzer vergeben.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; ist das FuseCP Administrator-Konto. Mit diesem Konto können Sie alle Ihre Server und Dienste verwalten, neue Hosting-Pläne und Kundenkonten anlegen - sowohl Wiederverkäufer als auch Endkunden.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; ist ein vorkonfiguriertes Wiederverkäuferkonto mit einem unbegrenzten Hosting-Plan, um den lokalen Sever zu verwalten, auf dem FuseCP installiert ist.</Value>
   </Resource>
@@ -43170,7 +43170,7 @@ To connect to web site management service please use username and password provi
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV2012R2_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>FuseCP-Wiederverkäuferkonto</Value>
   </Resource>
@@ -44000,7 +44000,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperVForPrivateCloud_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>FuseCP-Wiederverkäuferkonto</Value>
   </Resource>
@@ -44680,7 +44680,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperVvmm_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>FuseCP-Wiederverkäuferkonto</Value>
   </Resource>
@@ -45282,7 +45282,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
     <Value>FuseCP-Wiederverkäuferkonto</Value>
   </Resource>

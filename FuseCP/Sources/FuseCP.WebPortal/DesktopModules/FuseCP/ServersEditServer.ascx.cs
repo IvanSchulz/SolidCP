@@ -202,7 +202,7 @@ namespace FuseCP.Portal
 
 		private async Task BindServerVersion()
 		{
-			scpVersion.Text = await ES.Services.Servers.GetServerVersionAsync(ServerId);
+			fcpVersion.Text = await ES.Services.Servers.GetServerVersionAsync(ServerId);
 		}
 
 		private async Task BindServerMemory()
@@ -233,7 +233,7 @@ namespace FuseCP.Portal
 
 		private async Task BindServerFilepath()
 		{
-			scpFilepath.Text = await ES.Services.Servers.GetServerFilePathAsync(ServerId);
+			fcpFilepath.Text = await ES.Services.Servers.GetServerFilePathAsync(ServerId);
 		}
 
 		private void UpdateServer()

@@ -100,7 +100,7 @@ Class fusecp_database{
                     function ($table){
                         $table->engine='InnoDB';
                         $table->integer('whmcs_id')->primary();
-                        $table->integer('scp_id');
+                        $table->integer('fcp_id');
                         $table->boolean('is_ipaddress')->default(0);
                         $table->text('ipadress_type')->nullable();
                         $table->timestamps();
@@ -130,7 +130,7 @@ Class fusecp_database{
                     function ($table){
                         $table->engine='InnoDB';
                         $table->integer('whmcs_id')->primary();
-                        $table->integer('scp_id');
+                        $table->integer('fcp_id');
                         $table->boolean('is_ipaddress')->default(0);
                         $table->text('ipadress_type')->nullable();
                         $table->timestamps();
@@ -195,7 +195,7 @@ Class fusecp_database{
      * Get an Addon with a specified ID from the WHMCS FuseCP Addons table
      * @return StdClass object 
      */
-    public static function getSCPAddon($addonid){
+    public static function getFCPAddon($addonid){
         try{
             $addon = Capsule::table(SOLIDCP_ADDONS_TABLE)->where('whmcs_id', $addonid)->first();
             return $addon;
@@ -238,9 +238,9 @@ Class fusecp_database{
      * @return StdClass object 
      * 
      */
-    public static function getUserSCPAccounts($userid){
+    public static function getUserFCPAccounts($userid){
         try{
-            $scpaccounts = Capsule::select("
+            $fcpaccounts = Capsule::select("
                 SELECT 
                     h.username AS username,
                     s.ipaddress AS serverip,
@@ -261,7 +261,7 @@ Class fusecp_database{
                     AND s.type = 'FuseCP'
                     AND h.domainstatus IN ('Active', 'Suspended')
             ");
-            return $scpaccounts;
+            return $fcpaccounts;
         }
         catch (Exception $e){
             return array('status' => 'error', 'description' => "Couldn't get FuseCP accounts for Userid {$userid} from WHMCS database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
@@ -274,9 +274,9 @@ Class fusecp_database{
      * @return StdClass object 
      * 
      */
-    public static function getAddonActivationSCPAccount($serviceid, $addonid){
+    public static function getAddonActivationFCPAccount($serviceid, $addonid){
         try{
-            $scpaccounts = Capsule::select("
+            $fcpaccounts = Capsule::select("
                 SELECT
                     h.username AS username,
                     s.ipaddress AS serverip,
@@ -297,8 +297,8 @@ Class fusecp_database{
                     AND h.server = s.id
                     AND s.type = 'FuseCP'
             ");
-            if(count($scpaccounts)>0) return $scpaccounts[0];
-            else return $scpaccounts;
+            if(count($fcpaccounts)>0) return $fcpaccounts[0];
+            else return $fcpaccounts;
         }
         catch (Exception $e){
             return array('status' => 'error', 'description' => "Couldn't get FuseCP accounts for Userid {$userid} from WHMCS database: (Code: {$e->getCode()}, Message: {$e->getMessage()}");
@@ -314,7 +314,7 @@ Class fusecp_database{
         try{
             $configurableoptions = Capsule::select("
                 SELECT
-                    c.scp_id as scp_id,
+                    c.fcp_id as fcp_id,
                     o.qty as qty,
                     c.is_ipaddress as is_ipaddress,
                     co.optiontype as optiontype,
@@ -348,7 +348,7 @@ Class fusecp_database{
         try{
             $addons = Capsule::select("
                 SELECT
-                    s.scp_id as scp_id,
+                    s.fcp_id as fcp_id,
                     s.is_ipaddress as is_ipaddress
                 FROM
                     tblhostingaddons AS a,

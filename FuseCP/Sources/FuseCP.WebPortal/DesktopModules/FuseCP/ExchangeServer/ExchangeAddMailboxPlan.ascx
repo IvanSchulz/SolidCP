@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeAddMailboxPlan.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeAddMailboxPlan" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
 
 <%@ Import Namespace="FuseCP.Portal" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -17,13 +17,13 @@
 				</h3>
                         </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
                     <asp:HiddenField runat="server" ID="hfArchivingPlan" />
 
-					<scp:CollapsiblePanel id="secMailboxPlan" runat="server"
+					<fcp:CollapsiblePanel id="secMailboxPlan" runat="server"
                         TargetControlID="MailboxPlan" meta:resourcekey="secMailboxPlan" Text="Mailboxplan">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="MailboxPlan" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -40,9 +40,9 @@
 					    <br />
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secMailboxFeatures" runat="server"
+					<fcp:CollapsiblePanel id="secMailboxFeatures" runat="server"
                         TargetControlID="MailboxFeatures" meta:resourcekey="secMailboxFeatures" Text="Mailbox Features">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="MailboxFeatures" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -74,9 +74,9 @@
 						<br />
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secMailboxGeneral" runat="server"
+					<fcp:CollapsiblePanel id="secMailboxGeneral" runat="server"
                         TargetControlID="MailboxGeneral" meta:resourcekey="secMailboxGeneral" Text="Mailbox General">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="MailboxGeneral" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
 						    <tr>
@@ -92,9 +92,9 @@
 						</table>
 					</asp:Panel>
 				
-					<scp:CollapsiblePanel id="secStorageQuotas" runat="server"
+					<fcp:CollapsiblePanel id="secStorageQuotas" runat="server"
                         TargetControlID="StorageQuotas" meta:resourcekey="secStorageQuotas" Text="Storage Quotas">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="StorageQuotas" runat="server" Height="0" style="overflow:hidden;">
 						<table>
                             <tr>
@@ -154,41 +154,41 @@
 							<tr>
 								<td class="FormLabel200" align="right"><asp:Localize ID="locIssueWarning" runat="server" meta:resourcekey="locIssueWarning" Text="Issue warning at:"></asp:Localize></td>
 								<td style="padding-left: 5px;">
-									<scp:SizeBox id="sizeIssueWarning" runat="server" ValidationGroup="CreateMailboxPlan" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
+									<fcp:SizeBox id="sizeIssueWarning" runat="server" ValidationGroup="CreateMailboxPlan" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="FormLabel200" align="right"><asp:Localize ID="locProhibitSend" runat="server" meta:resourcekey="locProhibitSend" Text="Prohibit send at:"></asp:Localize></td>
 								<td style="padding-left: 5px;">
-									<scp:SizeBox id="sizeProhibitSend" runat="server" ValidationGroup="CreateMailboxPlan"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
+									<fcp:SizeBox id="sizeProhibitSend" runat="server" ValidationGroup="CreateMailboxPlan"  DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="FormLabel200" align="right"><asp:Localize ID="locProhibitSendReceive" runat="server" meta:resourcekey="locProhibitSendReceive" Text="Prohibit send and receive at:"></asp:Localize></td>
 								<td style="padding-left: 5px;">
-									<scp:SizeBox id="sizeProhibitSendReceive" runat="server" ValidationGroup="CreateMailboxPlan" DisplayUnitsKB=false DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
+									<fcp:SizeBox id="sizeProhibitSendReceive" runat="server" ValidationGroup="CreateMailboxPlan" DisplayUnitsKB=false DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
 								</td>
 							</tr>
 						</table>
 					</asp:Panel>
 					
-					<scp:CollapsiblePanel id="secDeleteRetention" runat="server"
+					<fcp:CollapsiblePanel id="secDeleteRetention" runat="server"
                         TargetControlID="DeleteRetention" meta:resourcekey="secDeleteRetention" Text="Delete Item Retention">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="DeleteRetention" runat="server" Height="0" style="overflow:hidden;">
 						<table>
 							<tr>
 								<td class="FormLabel200" align="right"><asp:Localize ID="locKeepDeletedItems" runat="server" meta:resourcekey="locKeepDeletedItems" Text="Keep deleted items for:"></asp:Localize></td>
 								<td style="padding-left: 5px;">
-									<scp:DaysBox id="daysKeepDeletedItems" runat="server" ValidationGroup="CreateMailboxPlan" />
+									<fcp:DaysBox id="daysKeepDeletedItems" runat="server" ValidationGroup="CreateMailboxPlan" />
 								</td>
 							</tr>
 						</table>
 					</asp:Panel>
 
-					<scp:CollapsiblePanel id="secLitigationHold" runat="server"
+					<fcp:CollapsiblePanel id="secLitigationHold" runat="server"
                         TargetControlID="LitigationHold" meta:resourcekey="secLitigationHold" Text="LitigationHold">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="LitigationHold" runat="server" Height="0" style="overflow:hidden;">
 						<table>
 						    <tr>
@@ -211,7 +211,7 @@
 							<tr>
 								<td class="FormLabel200" align="right"><asp:Localize ID="locRecoverableItemsWarning" runat="server" meta:resourcekey="locRecoverableItemsWarning" Text="Issue warning at:"></asp:Localize></td>
 								<td style="padding-left: 5px;">
-									<scp:SizeBox id="recoverableItemsWarning" runat="server" ValidationGroup="CreateMailboxPlan" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
+									<fcp:SizeBox id="recoverableItemsWarning" runat="server" ValidationGroup="CreateMailboxPlan" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
 								</td>
 							</tr>
                             <tr>
@@ -228,9 +228,9 @@
 						</table>
 					</asp:Panel>
 
-		            <scp:CollapsiblePanel id="secArchiving" runat="server"
+		            <fcp:CollapsiblePanel id="secArchiving" runat="server"
                         TargetControlID="Archiving" meta:resourcekey="secArchiving" Text="Archiving">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="Archiving" runat="server" Height="0" style="overflow:hidden;">
 			            <table>
 				            <tr>
@@ -254,7 +254,7 @@
 				            <tr>
 					            <td class="FormLabel200" align="right"><asp:Localize ID="locArchiveWarningQuota" runat="server" meta:resourcekey="locArchiveWarningQuota" Text="Archive warning quota:"></asp:Localize></td>
 					            <td style="padding-left: 5px;">
-						            <scp:SizeBox id="archiveWarningQuota" runat="server" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
+						            <fcp:SizeBox id="archiveWarningQuota" runat="server" DisplayUnitsKB="false" DisplayUnitsMB="false" DisplayUnitsPct="true" RequireValidatorEnabled="true"/>
 					            </td>
 				            </tr>
                             <tr>
@@ -267,9 +267,9 @@
 		            </asp:Panel>
 
 
-                    <scp:CollapsiblePanel id="secRetentionPolicyTags" runat="server"
+                    <fcp:CollapsiblePanel id="secRetentionPolicyTags" runat="server"
                         TargetControlID="RetentionPolicyTags" meta:resourcekey="secRetentionPolicyTags" Text="Retention policy tags">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="RetentionPolicyTags" runat="server" Height="0" style="overflow:hidden;">
                         <asp:UpdatePanel ID="GeneralUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
                             <ContentTemplate>

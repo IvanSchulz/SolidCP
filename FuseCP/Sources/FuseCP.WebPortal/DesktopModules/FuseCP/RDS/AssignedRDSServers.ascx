@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AssignedRDSServers.ascx.cs" Inherits="FuseCP.Portal.RDS.AssignedRDSServers" %>
 <%@ Import Namespace="FuseCP.Portal" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 <div class="panel-heading">
     <asp:Image ID="imgRDSServers" SkinID="EnterpriseRDSServers48" runat="server" />
     <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Assigned RDS Servers"></asp:Localize>
@@ -16,7 +16,7 @@
     </CPCC:StyleButton>
 </div>
 <div class="panel-body">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <div class="row">
         <asp:Panel ID="SearchPanel" runat="server" DefaultButton="cmdSearch" CssClass="col-md-7 col-md-offset-5 text-right form-inline">
             <asp:Localize ID="locSearch" runat="server" meta:resourcekey="locSearch" Visible="false"></asp:Localize>
@@ -72,7 +72,7 @@
 <div class="panel-footer">
     <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="RDS Servers:"></asp:Localize>
     &nbsp;&nbsp;&nbsp;
-    <scp:QuotaViewer ID="rdsServersQuota" runat="server" QuotaTypeId="2" DisplayGauge="true"/>
+    <fcp:QuotaViewer ID="rdsServersQuota" runat="server" QuotaTypeId="2" DisplayGauge="true"/>
 </div>
 <asp:ObjectDataSource ID="odsRDSAssignedServersPaged" runat="server" EnablePaging="True" SelectCountMethod="GetOrganizationRdsServersPagedCount" SelectMethod="GetOrganizationRdsServersPaged" SortParameterName="sortColumn" TypeName="FuseCP.Portal.RDSHelper">
     <SelectParameters>

@@ -203,7 +203,7 @@ namespace FuseCP.Portal.UserControls
             }
 
             string cleanedPeriod = litPeriod.Text.Replace(" ", "").Replace("/", "-").Replace(",", "-");
-            string fileName = "SCP-AuditLog-" + cleanedPeriod + ".csv";
+            string fileName = "FCP-AuditLog-" + cleanedPeriod + ".csv";
 
             Response.Clear();
             Response.AddHeader("Content-Disposition", "attachment; filename=" + fileName);

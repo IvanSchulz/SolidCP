@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CheckWebsite.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.CheckWebsite" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="clpSendMessageIfHeader" runat="server"
+<fcp:CollapsiblePanel id="clpSendMessageIfHeader" runat="server"
     TargetControlID="pnlSendMessageIf" resourcekey="clpSendMessageIfHeader" Text="Send message if">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlSendMessageIf" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>
@@ -36,9 +36,9 @@
 
 	<br />	
 
-<scp:CollapsiblePanel id="clpMessageHeader" runat="server"
+<fcp:CollapsiblePanel id="clpMessageHeader" runat="server"
     TargetControlID="pnlMessage" resourcekey="clpMessageHeader" Text="Configure target site and message as">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlMessage" runat="server" CssClass="Normal">
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>

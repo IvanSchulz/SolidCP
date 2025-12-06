@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsMonitoring.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VpsMonitoring" %>
 <%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
     Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 <asp:Timer runat="server" Interval="180000" ID="operationTimer" />
 
 <link type="text/css" href="/App_Themes/Default/Styles/jquery-ui-1.8.9.css" rel="stylesheet" />	
@@ -36,14 +36,14 @@
 	    <div class="panel panel-default">
 			    <div class="panel-heading">
 				    <asp:Image ID="imgIcon" SkinID="Monitoring48" runat="server" />
-                    <scp:FormTitle ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Monitoring" />
+                    <fcp:FormTitle ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Monitoring" />
 			    </div>
 			    <div class="panel-body form-horizontal">
-                    <scp:Menu id="menu" runat="server" SelectedItem="" />
+                    <fcp:Menu id="menu" runat="server" SelectedItem="" />
                  <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
-                    <scp:ServerTabs id="tabs" runat="server" SelectedTab="vps_monitoring" />	
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:ServerTabs id="tabs" runat="server" SelectedTab="vps_monitoring" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
                     <h1>Monitoring</h1>
                <div id="testClass">

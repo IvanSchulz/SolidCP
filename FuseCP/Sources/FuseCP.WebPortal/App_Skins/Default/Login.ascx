@@ -1,6 +1,6 @@
 <%@ Control AutoEventWireup="true" %>
-<%@ Register TagPrefix="scp" TagName="SiteFooter" Src="~/DesktopModules/FuseCP/SkinControls/SiteFooter.ascx" %>
-<%@ Register TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="SiteFooter" Src="~/DesktopModules/FuseCP/SkinControls/SiteFooter.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
 <style>
     body {
         background-color: #EFEFEF;
@@ -19,7 +19,7 @@
             <div class="col-sm-4 centering">
                 <asp:PlaceHolder ID="ContentPane" runat="server"></asp:PlaceHolder>
                 <div class="login-footer">
-                    <scp:SiteFooter ID="SiteFooter2" runat="server" />
+                    <fcp:SiteFooter ID="SiteFooter2" runat="server" />
                 </div>
             </div>
         </div>
@@ -29,4 +29,4 @@
 <!-- Javascript -->
 <script src="/JavaScript/jquery-2.1.0.min.js"></script>
 <script src="/JavaScript/bootstrap/bootstrap.js"></script>
-<script src="/Javascript/scp-form-layouts.js"></script>
+<script src="/Javascript/fcp-form-layouts.js"></script>

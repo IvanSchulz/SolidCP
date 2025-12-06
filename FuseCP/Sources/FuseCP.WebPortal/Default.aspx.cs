@@ -491,11 +491,11 @@ namespace FuseCP.WebPortal
             List<string> list1 = null;
             if (suffix == "Pages")
             {
-                list1 = GetResourceFiles("Pages", "SCPLocaleAdapterPages");
+                list1 = GetResourceFiles("Pages", "FCPLocaleAdapterPages");
             }
             else
             {
-                list1 = GetResourceFiles("Modules", "SCPLocaleAdapterModules");
+                list1 = GetResourceFiles("Modules", "FCPLocaleAdapterModules");
             }
 
             string text1 = null;

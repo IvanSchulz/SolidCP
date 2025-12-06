@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FuseCP.Portal.Code.UserControls;
-using SCP = FuseCP.EnterpriseServer;
+using FCP = FuseCP.EnterpriseServer;
 
 namespace FuseCP.Portal.ExchangeServer.UserControls
 {
@@ -24,11 +24,11 @@ namespace FuseCP.Portal.ExchangeServer.UserControls
             tabsList.Add(CreateTab("enterprisestorage_folder_settings", "Tab.GeneralSettings"));
             tabsList.Add(CreateTab("enterprisestorage_folder_settings_folder_permissions", "Tab.FolderPermissions"));
 
-            SCP.SystemSettings settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.WEBDAV_PORTAL_SETTINGS);
+            FCP.SystemSettings settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.WEBDAV_PORTAL_SETTINGS);
             bool isOwaEnabled = false;
             if (settings != null)
             {
-                isOwaEnabled = Utils.ParseBool(settings[SCP.SystemSettings.WEBDAV_OWA_ENABLED_KEY], false);
+                isOwaEnabled = Utils.ParseBool(settings[FCP.SystemSettings.WEBDAV_OWA_ENABLED_KEY], false);
             }
             if (isOwaEnabled) tabsList.Add(CreateTab("enterprisestorage_folder_settings_owa_editing", "Tab.OwaEditPermissions"));
 

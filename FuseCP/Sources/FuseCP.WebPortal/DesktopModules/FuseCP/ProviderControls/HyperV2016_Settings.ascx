@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HyperV2016_Settings.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.HyperV2016_Settings" %>
-<%@ Register Src="../UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/EditIPAddressControl.ascx" TagName="EditIPAddressControl" TagPrefix="fcp" %>
 
 <asp:ValidationSummary ID="ValidationSummary" runat="server" ShowMessageBox="true" ShowSummary="false" />
 
@@ -467,7 +467,7 @@
 		        <asp:Localize ID="locPreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="externalPreferredNameServer" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="externalPreferredNameServer" runat="server" Required="true" />
             </td>
 	    </tr>
 	    <tr>
@@ -475,7 +475,7 @@
 		        <asp:Localize ID="locAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="externalAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="externalAlternateNameServer" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -523,7 +523,7 @@
 		        <asp:Localize ID="locManagePreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="managePreferredNameServer" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="managePreferredNameServer" runat="server" Required="true" />
             </td>
 	    </tr>
 	    <tr id="ManageAlternateNameServerRow" runat="server">
@@ -531,7 +531,7 @@
 		        <asp:Localize ID="locManageAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="manageAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="manageAlternateNameServer" runat="server" />
             </td>
 	    </tr>
 	</table>
@@ -568,7 +568,7 @@
 		        <asp:Localize ID="locPrivCustomFormat" runat="server" meta:resourcekey="locPrivCustomFormat" Text="Start IP Address:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privateIPAddress" runat="server" Required="true" />
+		        <fcp:EditIPAddressControl id="privateIPAddress" runat="server" Required="true" />
 		        /
 		        <asp:TextBox ID="privateSubnetMask" runat="server" MaxLength="3" Width="40px" CssClass="form-control"></asp:TextBox>
 		        <asp:RequiredFieldValidator ID="privateSubnetMaskValidator" runat="server" ControlToValidate="privateSubnetMask"
@@ -580,7 +580,7 @@
 		        <asp:Localize ID="locPrivDefaultGateway" runat="server" meta:resourcekey="locDefaultGateway" Text="Default Gateway:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privateDefaultGateway" runat="server" />
+		        <fcp:EditIPAddressControl id="privateDefaultGateway" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -588,7 +588,7 @@
 		        <asp:Localize ID="locPrivPreferredNameServer" runat="server" meta:resourcekey="locPreferredNameServer" Text="Preferred Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privatePreferredNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="privatePreferredNameServer" runat="server" />
             </td>
 	    </tr>
 	    <tr>
@@ -596,7 +596,7 @@
 		        <asp:Localize ID="locPrivAlternateNameServer" runat="server" meta:resourcekey="locAlternateNameServer" Text="Alternate Name Server:"></asp:Localize>
 		    </td>
 		    <td>
-		        <scp:EditIPAddressControl id="privateAlternateNameServer" runat="server" />
+		        <fcp:EditIPAddressControl id="privateAlternateNameServer" runat="server" />
             </td>
 	    </tr>
 	</table>

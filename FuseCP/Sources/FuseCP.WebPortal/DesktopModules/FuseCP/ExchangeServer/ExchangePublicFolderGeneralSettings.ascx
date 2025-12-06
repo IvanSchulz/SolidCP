@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangePublicFolderGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangePublicFolderGeneralSettings" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="scp" %>
-<%@ Register Src="UserControls/PublicFolderTabs.ascx" TagName="PublicFolderTabs" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register src="UserControls/AccountsListWithPermissions.ascx" tagname="AccountsListWithPermissions" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/PublicFolderTabs.ascx" TagName="PublicFolderTabs" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register src="UserControls/AccountsListWithPermissions.ascx" tagname="AccountsListWithPermissions" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -20,10 +20,10 @@
                 </div>
 				<div class="panel-body form-horizontal">
                     <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-                    <scp:PublicFolderTabs id="tabs" runat="server" SelectedTab="public_folder_settings" />
+                    <fcp:PublicFolderTabs id="tabs" runat="server" SelectedTab="public_folder_settings" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
 					<table>
 						<tr>
@@ -52,7 +52,7 @@
 						</tr>
 						<tr>
 						    <td colspan="2">                                
-                            	<scp:AccountsListWithPermissions ID="allAccounts" runat="server" MailboxesEnabled="true" EnableMailboxOnly="true" DistributionListsEnabled="true" SecurityGroupsEnabled="false"/>
+                            	<fcp:AccountsListWithPermissions ID="allAccounts" runat="server" MailboxesEnabled="true" EnableMailboxOnly="true" DistributionListsEnabled="true" SecurityGroupsEnabled="false"/>
                                 
                             </td>
 						</tr>

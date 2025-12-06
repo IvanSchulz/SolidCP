@@ -72,12 +72,12 @@ namespace FuseCP.Providers.HostedSolution
         }
 
         [LogProperty("Disclaimer Unique Name")]
-        public string SCPUniqueName
+        public string FCPUniqueName
         {
             get
             {
                 Regex r = new Regex(@"[^A-Za-z0-9]");
-                return "SCPDisclaimer" + ExchangeDisclaimerId.ToString() + "_" + r.Replace(DisclaimerName, "");
+                return "FCPDisclaimer" + ExchangeDisclaimerId.ToString() + "_" + r.Replace(DisclaimerName, "");
             }
         }
 

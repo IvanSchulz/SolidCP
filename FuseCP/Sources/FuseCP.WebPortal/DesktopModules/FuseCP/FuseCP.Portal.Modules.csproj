@@ -9163,7 +9163,7 @@
         <ProjectReference Include="..\..\FuseCP.WebPortal.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="ApplicationInstallerControls\scp_logo.png" />
+        <Content Include="ApplicationInstallerControls\fcp_logo.png" />
         <Content Include="BlackBerry\BlackBerryUsers.ascx" />
         <Content Include="BlackBerry\CreateNewBlackBerryUser.ascx" />
         <Content Include="BlackBerry\EditBlackBerryUser.ascx" />

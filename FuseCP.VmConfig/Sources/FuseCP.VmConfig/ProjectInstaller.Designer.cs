@@ -73,7 +73,7 @@ namespace FuseCP.VmConfig
             // 
             this.serviceInstaller.Description = "Performs provisioning operations in the quest operating system.";
             this.serviceInstaller.DisplayName = "FuseCP Virtual Machine Configuration Service";
-            this.serviceInstaller.ServiceName = "SCPVmConfig";
+            this.serviceInstaller.ServiceName = "FCPVmConfig";
             this.serviceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
 
             this.serviceInstaller.ServicesDependedOn = new string[] { "vmickvpexchange" };

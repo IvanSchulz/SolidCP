@@ -92,12 +92,12 @@ namespace FuseCP.Providers.HostedSolution
         }
 
         [LogProperty("Tag Unique Name")]
-        public string SCPUniqueName
+        public string FCPUniqueName
         {
             get
             {
                 Regex r = new Regex(@"[^A-Za-z0-9]");
-                return "SCPPolicyTag" + TagID.ToString() + "_" + r.Replace(TagName, "");
+                return "FCPPolicyTag" + TagID.ToString() + "_" + r.Replace(TagName, "");
             }
         }
     }

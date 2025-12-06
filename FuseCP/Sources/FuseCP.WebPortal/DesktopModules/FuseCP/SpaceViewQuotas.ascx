@@ -1,16 +1,16 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceViewQuotas.ascx.cs" Inherits="FuseCP.Portal.SpaceViewQuotas" %>
 <%@ Import Namespace="FuseCP.Portal" %>
-<%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="scp" %>
-<%@ Register Src="SpaceQuotasControl.ascx" TagName="SpaceQuotasControl" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="fcp" %>
+<%@ Register Src="SpaceQuotasControl.ascx" TagName="SpaceQuotasControl" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <div class="panel-body form-horizontal">
-    <scp:SpaceDetailsHeaderControl id="spaceDetailsHeaderControl" runat="server">
-    </scp:SpaceDetailsHeaderControl>
+    <fcp:SpaceDetailsHeaderControl id="spaceDetailsHeaderControl" runat="server">
+    </fcp:SpaceDetailsHeaderControl>
 
-    <scp:CollapsiblePanel id="secAddons" runat="server"
+    <fcp:CollapsiblePanel id="secAddons" runat="server"
         TargetControlID="AddonsPanel" meta:resourcekey="secAddons" Text="Space Add-Ons">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="AddonsPanel" runat="server" Height="0" style="overflow:hidden;">
         <asp:GridView ID="gvAddons" runat="server" AutoGenerateColumns="False"
                 CssSelectorClass="NormalGridView"
@@ -38,12 +38,12 @@
         <br />
     </asp:Panel>
 
-    <scp:CollapsiblePanel id="secQuotas" runat="server"
+    <fcp:CollapsiblePanel id="secQuotas" runat="server"
         TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Space Quotas">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
-        <scp:SpaceQuotasControl id="packagesQuotas" runat="server">
-        </scp:SpaceQuotasControl>
+        <fcp:SpaceQuotasControl id="packagesQuotas" runat="server">
+        </fcp:SpaceQuotasControl>
     </asp:Panel>
 </div>
 

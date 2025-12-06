@@ -243,38 +243,38 @@ namespace FuseCP.Portal
 
         private void RenderValidationJavaScript()
         {
-            if (!Page.ClientScript.IsClientScriptIncludeRegistered("scpValidationFunctions"))
+            if (!Page.ClientScript.IsClientScriptIncludeRegistered("fcpValidationFunctions"))
             {
-              Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "scpValidationFunctions", @"
+              Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "fcpValidationFunctions", @"
                 
-                function scpValidatePasswordNumbers(source, args)
+                function fcpValidatePasswordNumbers(source, args)
                 {
                     if(args.Value == source.getAttribute('dpsw')) return true;
-                    args.IsValid = scpValidatePattern(/(\d)/g, args.Value,
+                    args.IsValid = fcpValidatePattern(/(\d)/g, args.Value,
                         parseInt(source.getAttribute('minimumNumber')));
                 }
 
-                function scpValidatePasswordUppercase(source, args)
+                function fcpValidatePasswordUppercase(source, args)
                 {
                     if(args.Value == source.getAttribute('dpsw')) return true;
-                    args.IsValid = scpValidatePattern(/([A-Z])/g, args.Value,
+                    args.IsValid = fcpValidatePattern(/([A-Z])/g, args.Value,
                         parseInt(source.getAttribute('minimumNumber')));
                 }
 
-                function scpValidatePasswordSymbols(source, args)
+                function fcpValidatePasswordSymbols(source, args)
                 {
                     if(args.Value == source.getAttribute('dpsw')) return true;
-                    args.IsValid = scpValidatePattern(/([\W_])/g, args.Value,
+                    args.IsValid = fcpValidatePattern(/([\W_])/g, args.Value,
                         parseInt(source.getAttribute('minimumNumber')));
                 }
 
-                function scpValidatePasswordLength(source, args)
+                function fcpValidatePasswordLength(source, args)
                 {
                     if(args.Value == source.getAttribute('dpsw')) return true;
                     args.IsValid = (args.Value.length >= parseInt(source.getAttribute('minimumLength')));
                 }
                 
-                function scpValidatePattern(re, val, minMatches)
+                function fcpValidatePattern(re, val, minMatches)
                 {
                     var matches = val.match(re);
                     return ((matches != null) && matches.length >= minMatches);

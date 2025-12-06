@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharedSSLAddFolder.ascx.cs" Inherits="FuseCP.Portal.SharedSSLAddFolder" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc2" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-body form-horizontal">
     <table cellSpacing="0" cellPadding="3">

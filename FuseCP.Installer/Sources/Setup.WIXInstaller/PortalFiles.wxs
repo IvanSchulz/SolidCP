@@ -12,7 +12,7 @@
             <Directory Id="dirA414043D81AC8A3356F7204F25B3F015" Name="DesktopModules" />
             <Directory Id="dir0D6E6D7892126E59E3E23E26EA0AEE62" Name="Handlers" />
             <Directory Id="dir727C327315B2130EC99A705E33B2E40E" Name="JavaScript" />
-            <Directory Id="dirAE5202FDEC1338056D7985CDA598C6A7" Name="SCPIcons" />
+            <Directory Id="dirAE5202FDEC1338056D7985CDA598C6A7" Name="FCPIcons" />
             <Directory Id="dirB3B7CBA4A6F2E3D571AA6D739300ED92" Name="Styles" />
             <Directory Id="dir1721BDE32A4B661EEB8CCA84C008E88A" Name="tinymce" />
         </DirectoryRef>
@@ -1619,25 +1619,25 @@
                 <File Id="fil34D288F0ECCFEA9A22E4FA9D576A629A" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\Images\VPSForPC\vlan_icon.png" />
             </Component>
             <Component Id="cmp7E948CE5A0A6D8DE93FD719B2D51CFCD" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{0432D91E-A8D9-43BD-AA5D-6648F694EC69}">
-                <File Id="fil6D56A81A3699BA31759E14C5DCD2CEB4" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-charts.js" />
+                <File Id="fil6D56A81A3699BA31759E14C5DCD2CEB4" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-charts.js" />
             </Component>
             <Component Id="cmpE5D4B23F6C23F8CE7BDE277FB333A1C0" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{B35CF152-BC24-420C-9A55-7F2432BE5DA2}">
-                <File Id="fil45EAF85239A889C6BD6B66220029345C" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-common.js" />
+                <File Id="fil45EAF85239A889C6BD6B66220029345C" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-common.js" />
             </Component>
             <Component Id="cmp17EA5FF26D272D27B5118FF9C4D61811" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{6B6B45DC-610A-4FF3-AA25-3F44E5BBA055}">
-                <File Id="fil2C44C57173C15010EA27DAE7E771F2B2" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-elements.js" />
+                <File Id="fil2C44C57173C15010EA27DAE7E771F2B2" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-elements.js" />
             </Component>
             <Component Id="cmpBB94714338D56CF7F646165872ACAB8D" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{C8BEF807-5D1A-4697-8F38-05D758BC53A0}">
-                <File Id="filA8A51C8121FE18C2A45261EBF24C4125" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-form-layouts.js" />
+                <File Id="filA8A51C8121FE18C2A45261EBF24C4125" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-form-layouts.js" />
             </Component>
             <Component Id="cmp6504CE898FEEFCA61AECD1617329B049" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{DBDB53DF-8DA0-4BD9-A890-2AEB48E6484C}">
-                <File Id="fil183E122A8F66FC56E87FDF161438255B" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-maps.js" />
+                <File Id="fil183E122A8F66FC56E87FDF161438255B" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-maps.js" />
             </Component>
             <Component Id="cmpE9AEE7DBF783EE3864F33C2D3EE79B41" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{0FDC6E77-063B-497D-8220-2128E016DBF2}">
-                <File Id="fil53C35681112DB89F24263B904BA7FED4" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-page.js" />
+                <File Id="fil53C35681112DB89F24263B904BA7FED4" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-page.js" />
             </Component>
             <Component Id="cmp5F0713E3A24E97DBF3684587615B1382" Directory="dir8DD6577F1ABA829F01B9F2C9F420BD14" Guid="{D9E909B1-9E67-4074-BBE2-D671918D8B43}">
-                <File Id="fil67BC2C223B97A6604C20B3F3F32643E7" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\scp-table.js" />
+                <File Id="fil67BC2C223B97A6604C20B3F3F32643E7" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\fcp-table.js" />
             </Component>
             <Component Id="cmp6E8D241CC06F4D842355E5734E3E763D" Directory="dir1D91419800C29E18F3E31B681DBA0F8F" Guid="{2660B3D4-DF17-4295-BE50-CFED8FE1238D}">
                 <File Id="fil90FFD2FB703EBD1955736138B69F38F8" KeyPath="yes" Source="!(wix.BUILDPPATH)\App_Themes\Default\js\bootstrap\bootstrap.js" />
@@ -2816,7 +2816,7 @@
                 <File Id="fil28261F0D09D6AC889254F69B295E6E98" KeyPath="yes" Source="!(wix.BUILDPPATH)\DesktopModules\FuseCP\ApplicationInstallerControls\phpmyadmin.gif" />
             </Component>
             <Component Id="cmpD85A068BF9EB5BA78D8F9C404E1E8AAD" Directory="dir8682CE15EB45897FE982E9D0CFF67FDC" Guid="{B30A9817-E5BD-446E-A854-8A895E5AFCD8}">
-                <File Id="fil25EA91CACCA149756B0AB8D456CEED51" KeyPath="yes" Source="!(wix.BUILDPPATH)\DesktopModules\FuseCP\ApplicationInstallerControls\SCP_logo.png" />
+                <File Id="fil25EA91CACCA149756B0AB8D456CEED51" KeyPath="yes" Source="!(wix.BUILDPPATH)\DesktopModules\FuseCP\ApplicationInstallerControls\FCP_logo.png" />
             </Component>
             <Component Id="cmpDD00CDA796E22C4F7496A291F1B5468E" Directory="dir8682CE15EB45897FE982E9D0CFF67FDC" Guid="{CC97485D-83C2-4A3B-9F13-571F8F640DC2}">
                 <File Id="fil1FDF46371DBC0FB5A2D8372F949C6445" KeyPath="yes" Source="!(wix.BUILDPPATH)\DesktopModules\FuseCP\ApplicationInstallerControls\small_business.gif" />
@@ -8489,25 +8489,25 @@
                 <File Id="fil6D3A7DA6010E938032398CA18B061856" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\MenuAdapter.js" />
             </Component>
             <Component Id="cmpEE358D5B7D9BAE71F75A0F604A881521" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{333524DD-EA00-4186-BC0F-FD4097AD6367}">
-                <File Id="fil74636C1AAEC09FBB4D384BAA077B0F15" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-charts.js" />
+                <File Id="fil74636C1AAEC09FBB4D384BAA077B0F15" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-charts.js" />
             </Component>
             <Component Id="cmpF38081C57319765B2885439421D8BA90" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{9799A473-F43B-40CA-A863-F48683819FD7}">
-                <File Id="fil91CB0EA4C890D62268644E338DAF189C" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-common.js" />
+                <File Id="fil91CB0EA4C890D62268644E338DAF189C" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-common.js" />
             </Component>
             <Component Id="cmp1965E1E41EB6B13355DA745A02ECD672" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{658B7C4B-C9DD-4195-A258-6E0D43C8B18D}">
-                <File Id="fil44CCCCB4B241AA7ACBDB2644CA94EDA6" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-elements.js" />
+                <File Id="fil44CCCCB4B241AA7ACBDB2644CA94EDA6" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-elements.js" />
             </Component>
             <Component Id="cmp4F289A9D2B7E95356155BB8C7A1543A0" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{2B51FF27-28BC-45E8-A3E3-F7F9C1AB751F}">
-                <File Id="fil77FFB37477773C4BA2621A15911036E9" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-form-layouts.js" />
+                <File Id="fil77FFB37477773C4BA2621A15911036E9" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-form-layouts.js" />
             </Component>
             <Component Id="cmp422B0032946037DF63C73B908AC464CD" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{19A86FBB-2080-4DDE-B808-176ADE73335C}">
-                <File Id="fil23C2E5E724889AB7E56BAF7382FF5958" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-maps.js" />
+                <File Id="fil23C2E5E724889AB7E56BAF7382FF5958" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-maps.js" />
             </Component>
             <Component Id="cmp5762C1852E58D854ED5890BD3A88E27F" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{4E6D7445-9AF5-47EC-A5A1-03DA1CA7623A}">
-                <File Id="filCA1F167D1FF0181ABE41B0BDBB6871B3" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-page.js" />
+                <File Id="filCA1F167D1FF0181ABE41B0BDBB6871B3" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-page.js" />
             </Component>
             <Component Id="cmp78EFA726B2FFB367582A56AB4049AF35" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{578CAE21-05EB-4E2D-A89D-C58BB689D2DA}">
-                <File Id="fil3186F8DB060C4EEA12FA1BFC217DBA87" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\scp-table.js" />
+                <File Id="fil3186F8DB060C4EEA12FA1BFC217DBA87" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\fcp-table.js" />
             </Component>
             <Component Id="cmp4A48296292DE1C5CE28C7D0BB056CBBF" Directory="dir727C327315B2130EC99A705E33B2E40E" Guid="{3F33FDF1-D9AF-4D9C-A770-FC5F1BEAFA4B}">
                 <File Id="filCC6A2109EB94E7986862A20A806BF990" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\TreeViewAdapter.js" />
@@ -8540,19 +8540,19 @@
                 <File Id="fil0E853C7461669ED8605F05344DD0F631" KeyPath="yes" Source="!(wix.BUILDPPATH)\JavaScript\plugins\plugins.js" />
             </Component>
             <Component Id="cmp4D14A6D4C7F9A1B016439CD2EC0D9C04" Directory="dirAE5202FDEC1338056D7985CDA598C6A7" Guid="{4A453C9A-91FB-4101-BDC0-283E1CF160AF}">
-                <File Id="fil947B6E914EEEF0065B6F296648D330FB" KeyPath="yes" Source="!(wix.BUILDPPATH)\SCPIcons\apple-touch-icon-114x114.png" />
+                <File Id="fil947B6E914EEEF0065B6F296648D330FB" KeyPath="yes" Source="!(wix.BUILDPPATH)\FCPIcons\apple-touch-icon-114x114.png" />
             </Component>
             <Component Id="cmp3ABFC8E6CAD05324D51F1F56B5B0E710" Directory="dirAE5202FDEC1338056D7985CDA598C6A7" Guid="{28BC0C74-D7DE-4791-BFAD-6E97C9F044A6}">
-                <File Id="fil2B995DBD13CD50A42AF14568DA0A2A7A" KeyPath="yes" Source="!(wix.BUILDPPATH)\SCPIcons\apple-touch-icon-144x144.png" />
+                <File Id="fil2B995DBD13CD50A42AF14568DA0A2A7A" KeyPath="yes" Source="!(wix.BUILDPPATH)\FCPIcons\apple-touch-icon-144x144.png" />
             </Component>
             <Component Id="cmpDF17444F53A69B6CA77056B1C3386E94" Directory="dirAE5202FDEC1338056D7985CDA598C6A7" Guid="{96F2FCD6-C662-47FD-93F6-5275C34FA776}">
-                <File Id="filE94FC41805C9E3DAEDE2ECCDA63294D3" KeyPath="yes" Source="!(wix.BUILDPPATH)\SCPIcons\apple-touch-icon-57x57.png" />
+                <File Id="filE94FC41805C9E3DAEDE2ECCDA63294D3" KeyPath="yes" Source="!(wix.BUILDPPATH)\FCPIcons\apple-touch-icon-57x57.png" />
             </Component>
             <Component Id="cmp61B3B6A8092669A4065B1EC1FB8627EA" Directory="dirAE5202FDEC1338056D7985CDA598C6A7" Guid="{9BA65776-6ED8-4AB9-8C5E-0CE4090B519A}">
-                <File Id="fil1EDE25A42E38CB8BF8F23C653C1C870A" KeyPath="yes" Source="!(wix.BUILDPPATH)\SCPIcons\apple-touch-icon-72x72.png" />
+                <File Id="fil1EDE25A42E38CB8BF8F23C653C1C870A" KeyPath="yes" Source="!(wix.BUILDPPATH)\FCPIcons\apple-touch-icon-72x72.png" />
             </Component>
             <Component Id="cmp7ED07846B5B935416A653BE7E3FA534D" Directory="dirAE5202FDEC1338056D7985CDA598C6A7" Guid="{D44F668A-B36D-40C1-A1A2-D27794E64501}">
-                <File Id="fil33F7A885BE9575E49BAFBD16DFE386FA" KeyPath="yes" Source="!(wix.BUILDPPATH)\SCPIcons\favicon.ico" />
+                <File Id="fil33F7A885BE9575E49BAFBD16DFE386FA" KeyPath="yes" Source="!(wix.BUILDPPATH)\FCPIcons\favicon.ico" />
             </Component>
             <Component Id="cmp208409DE068967370614DCF6FA31583B" Directory="dirB3B7CBA4A6F2E3D571AA6D739300ED92" Guid="{789E8C14-92AB-4994-8EF8-99447B52DD57}">
                 <File Id="filB74C3EC5F86E40C5E934743BD63F1394" KeyPath="yes" Source="!(wix.BUILDPPATH)\Styles\ChangePassword.css" />

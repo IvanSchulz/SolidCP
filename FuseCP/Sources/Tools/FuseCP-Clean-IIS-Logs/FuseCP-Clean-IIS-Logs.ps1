@@ -1,5 +1,5 @@
 <####################################################################################################
-SolidSCP - Clean IIS Logs
+SolidFCP - Clean IIS Logs
 
 v1.0    8th August 2016:    First release of the FuseCP Clean IIS Logs Script
 

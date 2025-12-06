@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSummaryLetter.ascx.cs" Inherits="FuseCP.Portal.SpaceSummaryLetter" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-body form-horizontal">
 
-    <scp:CollapsiblePanel id="secEmail" runat="server"
+    <fcp:CollapsiblePanel id="secEmail" runat="server"
         TargetControlID="EmailPanel" meta:resourcekey="secEmail" Text="Send via E-Mail">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
 	<asp:Panel ID="EmailPanel" runat="server" Height="0" style="overflow:hidden;">
         <table id="tblEmail" runat="server" cellpadding="2">
             <tr>

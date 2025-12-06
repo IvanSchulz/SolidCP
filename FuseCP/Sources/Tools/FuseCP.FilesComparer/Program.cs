@@ -43,7 +43,7 @@ namespace FuseCP.FilesComparer
             if (args.Length < 3 && args.Length > 4)
             {
                 Console.WriteLine("Usage: Diff.exe [sourceDir] [targetDir] [resultDir] [/ex:fileToExclude.ext,fileToExclude.ext]");
-                Console.WriteLine("Example: Diff.exe c:\\SCP1 c:\\SCP2 c:\\result /ex:Default.aspx,Error.htm");
+                Console.WriteLine("Example: Diff.exe c:\\FCP1 c:\\FCP2 c:\\result /ex:Default.aspx,Error.htm");
                 Console.WriteLine("NOTE: Please make sure all parameters containg spaces are enclosed in quotes.");
                 return;
             }

@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CreateOCSUser.ascx.cs" Inherits="FuseCP.Portal.OCS.CreateOCSUser" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
 <%@ Register src="../ExchangeServer/UserControls/MailboxSelector.ascx" tagname="MailboxSelector" tagprefix="uc1" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <div id="ExchangeContainer">
     <div class="Module">
         <div class="Left">
@@ -19,12 +19,12 @@
                     <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle"></asp:Localize>
                 </div>
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     <table id="ExistingUserTable"   runat="server" width="100%"> 					    
 					    <tr>
 					        <td class="FormLabel150"><asp:Localize ID="Localize1" runat="server" meta:resourcekey="locDisplayName" Text="Display Name: *"></asp:Localize></td>
 					        <td>                                
-                                <scp:UserSelector ID="userSelector" runat="server" IncludeMailboxes="true" />
+                                <fcp:UserSelector ID="userSelector" runat="server" IncludeMailboxes="true" />
                             </td>
 					    </tr>
 					    	    					    					    

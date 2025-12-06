@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMOrganizationDetails.ascx.cs" Inherits="FuseCP.Portal.CRM.CRMOrganizationDetails" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
-    TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -14,7 +14,7 @@
 					<asp:Localize ID="locTitle" runat="server"  Text="CRM Organization"></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
 				    <div >
 				       <table>
@@ -31,8 +31,8 @@
 				          <tr height="23px">
 				            <td class="FormLabel150"><asp:Label runat="server" ID="lblAdministrator" meta:resourcekey="lblAdministrator"/></td>
 				            <td>
-                                <scp:UserSelector  id="administrator" runat="server" IncludeMailboxes="true">
-                                </scp:UserSelector>
+                                <fcp:UserSelector  id="administrator" runat="server" IncludeMailboxes="true">
+                                </fcp:UserSelector>
                                 <asp:Label runat="server" ID="lblAdminValid" Text="*" ForeColor="red" Visible="false" />
                                 <asp:Label runat="server" ID="lblAdmin" />
                                 </td>

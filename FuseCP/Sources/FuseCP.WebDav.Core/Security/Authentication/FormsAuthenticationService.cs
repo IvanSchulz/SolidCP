@@ -50,8 +50,8 @@ namespace FuseCP.WebDav.Core.Security.Authentication
 
             var principal = new ScpPrincipal(login);
             
-            var exchangeAccount = SCP.Services.ExchangeServer.GetAccountByAccountNameWithoutItemId(login);
-            var organization = SCP.Services.Organizations.GetOrganization(exchangeAccount.ItemId);
+            var exchangeAccount = FCP.Services.ExchangeServer.GetAccountByAccountNameWithoutItemId(login);
+            var organization = FCP.Services.Organizations.GetOrganization(exchangeAccount.ItemId);
 
             principal.AccountId = exchangeAccount.AccountId;
             principal.ItemId = exchangeAccount.ItemId;

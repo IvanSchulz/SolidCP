@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointUsersEditUser.ascx.cs" Inherits="FuseCP.Portal.SharePointUsersEditUser" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc2" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <div class="panel-body form-horizontal">
     <table cellSpacing="0" cellPadding="5" width="100%">
         <tr>
@@ -19,9 +19,9 @@
         </tr>
     </table>
     
-    <scp:CollapsiblePanel id="secGroups" runat="server"
+    <fcp:CollapsiblePanel id="secGroups" runat="server"
         TargetControlID="GroupsPanel" meta:resourcekey="secGroups" Text="Member Of">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="GroupsPanel" runat="server" Height="0" style="overflow:hidden;">
         <table id="tblGroups" runat="server" cellSpacing="0" cellPadding="3" width="100%">
             <tr>

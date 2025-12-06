@@ -53,13 +53,13 @@ Class fusecp_configurableoptions{
     
     public function getConfigurableOptions(){
         try{
-            $this->configurableoptions = Capsule::select("(SELECT CONCAT(g.name, ' -> ', o.optionname, ' -> ', os.optionname) AS name, os.id AS whmcs_id, c.scp_id, c.is_ipaddress, os.hidden,
+            $this->configurableoptions = Capsule::select("(SELECT CONCAT(g.name, ' -> ', o.optionname, ' -> ', os.optionname) AS name, os.id AS whmcs_id, c.fcp_id, c.is_ipaddress, os.hidden,
 				o.`order`, os.sortorder FROM tblproductconfigoptionssub AS os
 				LEFT JOIN ".SOLIDCP_CONFIGURABLE_OPTIONS_TABLE." AS c ON c.whmcs_id=os.id
 				LEFT JOIN tblproductconfigoptions AS o ON os.configid=o.id
 				LEFT JOIN tblproductconfiggroups AS g ON o.gid=g.id)
 				UNION
-				(SELECT '*** Removed ***' AS name, c.whmcs_id, c.scp_id, c.is_ipaddress, 0 AS hidden, 0 AS `order`, 0 AS sortorder FROM tblproductconfigoptionssub AS os
+				(SELECT '*** Removed ***' AS name, c.whmcs_id, c.fcp_id, c.is_ipaddress, 0 AS hidden, 0 AS `order`, 0 AS sortorder FROM tblproductconfigoptionssub AS os
 				RIGHT JOIN ".SOLIDCP_CONFIGURABLE_OPTIONS_TABLE." AS c ON c.whmcs_id=os.id
 				WHERE os.id IS NULL)
 				ORDER BY name, `order`, sortorder");
@@ -82,7 +82,7 @@ Class fusecp_configurableoptions{
 					->where('whmcs_id', $new['whmcs_id'])
 					->update(
 					[
-						'scp_id' => $new['scp_id'],
+						'fcp_id' => $new['fcp_id'],
 						'is_ipaddress' => $new['is_ipaddress'],
 						'updated_at' => date('Y-m-d H:i:s')
 					]
@@ -92,7 +92,7 @@ Class fusecp_configurableoptions{
 					->insert(
 					[
 						'whmcs_id' => $new['whmcs_id'],
-						'scp_id' => $new['scp_id'],
+						'fcp_id' => $new['fcp_id'],
 						'is_ipaddress' => $new['is_ipaddress'],
 						'created_at' => date('Y-m-d H:i:s')
 					]

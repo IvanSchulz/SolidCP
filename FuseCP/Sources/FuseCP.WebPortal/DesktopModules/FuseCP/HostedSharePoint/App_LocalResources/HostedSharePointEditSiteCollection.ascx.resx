@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+Ôªø<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -139,7 +139,7 @@
     <value>Update</value>
   </data>
   <data name="FormComments.Text" xml:space="preserve">
-    <value>&lt;p&gt;Here you can create new SharePoint site collection. Choose URL from the list of domains you already own. Site URL like team.yourcompany.com should be added as domain in ìDomain namesî organizationís menu before SharePoint site collection creation.&lt;/p&gt;
+    <value>&lt;p&gt;Here you can create new SharePoint site collection. Choose URL from the list of domains you already own. Site URL like team.yourcompany.com should be added as domain in ‚ÄúDomain names‚Äù organization‚Äôs menu before SharePoint site collection creation.&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;Site owner&lt;/b&gt; is member of your organization who will be responsible for this SharePoint site collection administration: choosing site templates, adding other users, creating sub-sites.&lt;/p&gt;
 
@@ -151,7 +151,7 @@
 
 &lt;p&gt;After you create this site open it using owner login, and do at least 2 main steps:
 1.	Choose site template
-2.	Define who will be able to access this site. To add user from your hosted organization to SharePoint site, please copy/paste his or her e-mail from user's properties in FuseCP to SharePoint site collectionís Users/Groups field.&lt;/p&gt;</value>
+2.	Define who will be able to access this site. To add user from your hosted organization to SharePoint site, please copy/paste his or her e-mail from user's properties in FuseCP to SharePoint site collection‚Äôs Users/Groups field.&lt;/p&gt;</value>
   </data>
   <data name="gvUserEmail.HeaderText" xml:space="preserve">
     <value>Email</value>

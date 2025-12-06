@@ -1,5 +1,5 @@
 <####################################################################################################
-SolidSCP - Simple server setup menu
+SolidFCP - Simple server setup menu
 
 v1.0    24th May 2016:       First release of the FuseCP Install Script
 v1.0.1  15th June 2016       Added Exchange 2016 and Silent Installation to the script
@@ -10,7 +10,7 @@ v1.0.5  25th June 2016       New menu structure added for simplicity
 v1.0.6  28th June 2016       Additional deployment options for Active Directory
 v1.0.7  04th July 2016       Added XML function and improved the File Permission Hardening for the XML files in IIS for .NET
 v1.0.8  05th August 2016     Added IP Address checking for Firewall Rules - allow UNC access for FuseCP upgrade via Portal or Auto-Upgrade Script
-v1.0.9  09th August 2016     Added VC++ 2012 runtime for PHP and option for phpMyAdmin, added submenu for SCP ES and Portal installation options - Thanks to S.Brown
+v1.0.9  09th August 2016     Added VC++ 2012 runtime for PHP and option for phpMyAdmin, added submenu for FCP ES and Portal installation options - Thanks to S.Brown
 v1.1.0  2nd  September 2016: Added web.config file updates to the script so the new features are added
 v1.1.1  10th October 2016:   Added IIS SSL Hardening and fixed PHP v7.0 installation bug
 v1.1.2  19th October 2016:   Added Dynamic Download Support - will download the latest files from the FuseCP XML List
@@ -115,7 +115,7 @@ $dExchangeAutoDisc = ""                     # Set the FQDN for Exchange Autodisc
 $dRDSconnBroker    = ""                     # Set the FQDN for your Remote Desktop Connection Broker
 $dRDSGatewayFQDN   = ""                     # Set the FQDN for your RD Gateway cluster
 $dSolidCp_OU_Name  = "FuseCP"              # Set the Active Directory Organisational Unit Name
-$dSCPhstd_OU_Name  = "Hosted"               # Set the Active Directory Organisational Unit Name for your Hosted Accounts (Exchange / SharePoint / RDP)
+$dFCPhstd_OU_Name  = "Hosted"               # Set the Active Directory Organisational Unit Name for your Hosted Accounts (Exchange / SharePoint / RDP)
 $dExchangeInstal   = "D:"                   # Set the installation directory of where your Exchange files are located (i.e. D: for the DVD)
 $dExchangeImportUserFirst = "FuseCP"                # Exchange Import/Export Active Directory Account First Name
 $dExchangeImportUserLast  = "Exchange Administrator" # Exchange Import/Export Active Directory Account Last Name
@@ -130,11 +130,11 @@ $dFuseCPCloudPortlPasswd = "YourPassword"  # FuseCP Cloud Storage Server - Passw
 $dRDSourganisationalUnit  = "RemoteDesktopServers"  # Remote Desktop Services Organisational Unit
 $dFuseCPEnterpriseSvrIP  = ""              # Enterprise Server IP Address (i.e. 192.168.1.1)
 $dFuseCPEnterpriseSvrURL = ""              # Enterprise Server URL - FULL URL with Port (i.e. http://192.168.1.1:9002)
-$dSCPdomainName           = ""              # FQDN used for Active Directory (i.e. hosted.fusecp.com)
-$dSCPfirewallUNCshareIPs  = ""              # IPV4 Addresses seperated by semicolon for UNC Access to servers (192.168.1.1; 192.168.2.0/24)
-$dSCPfirewallRDPaccess    = ""              # IPV4 Addresses seperated by semicolon for RDP Access to servers (192.168.1.1; 192.168.2.0/24)
-$dSCPqualitySSLlabsRating = "A"             # Qualys SSL Labs Rating - https://www.ssllabs.com/ssltest/
-$ddSCPqualySSLScheduleTsk = $true           # Setup an Automated Script to check for new SSL Fixes on your web servers by $true|$false
+$dFCPdomainName           = ""              # FQDN used for Active Directory (i.e. hosted.fusecp.com)
+$dFCPfirewallUNCshareIPs  = ""              # IPV4 Addresses seperated by semicolon for UNC Access to servers (192.168.1.1; 192.168.2.0/24)
+$dFCPfirewallRDPaccess    = ""              # IPV4 Addresses seperated by semicolon for RDP Access to servers (192.168.1.1; 192.168.2.0/24)
+$dFCPqualitySSLlabsRating = "A"             # Qualys SSL Labs Rating - https://www.ssllabs.com/ssltest/
+$ddFCPqualySSLScheduleTsk = $true           # Setup an Automated Script to check for new SSL Fixes on your web servers by $true|$false
 $dMailEnableDirectory     = "C:\Program Files (x86)\Mail Enable" # Specify the installation directory where MailEnable needs to be installed to on the machine
 $dMailEnableContactName   = "FuseCP"       # Mail Enable Company Name (who it needs to be registered to
 $dWebDavStoragePath       = "C:\CloudStorage"                    # The path for the FuseCP WebDav Storage
@@ -195,11 +195,11 @@ if ($dDomainMember) { # Only do the following if the server is a member of a dom
 	$dLangDomainAdministratorName = (([wmi]"Win32_SID.SID='$dDomainAdministratorSID'").AccountName); # Administrator
 	$dLangDomainEnterpriseAdmins  = (([wmi]"Win32_SID.SID='$dDomainSID-519'").AccountName);          # Enterprise Admins
 }
-$dSCPiisSSLratingURLa     = "http://installer.fusecp.com/Files/XML/SSL/IIS_SSL_Hardening_A.xml"     # XML Feed for A Rating from Qualys SSL Labs for your IIS Server
-$dSCPiisSSLratingURLb     = "http://installer.fusecp.com/Files/XML/SSL/IIS_SSL_Hardening_B.xml"     # XML Feed for B Rating from Qualys SSL Labs for your IIS Server
-$dSCPiisSSLDateCheckFile  = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"                                   # This is the location of the file that stores the last date the IIS SSL Security was updated on the server
-$dSCPFileURL              = "http://installer.fusecp.com/Files/XML/Downloads/Download-Links.xml"    # XML Feed for files that are downloaded as part of the PowerShell Auto Installation Script
-$dSCPFileDownloadLinks    = ([xml](New-Object System.Net.WebClient).DownloadString("$dSCPFileURL"))  # Download the XML Feed for files and store as a variable
+$dFCPiisSSLratingURLa     = "http://installer.fusecp.com/Files/XML/SSL/IIS_SSL_Hardening_A.xml"     # XML Feed for A Rating from Qualys SSL Labs for your IIS Server
+$dFCPiisSSLratingURLb     = "http://installer.fusecp.com/Files/XML/SSL/IIS_SSL_Hardening_B.xml"     # XML Feed for B Rating from Qualys SSL Labs for your IIS Server
+$dFCPiisSSLDateCheckFile  = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"                                   # This is the location of the file that stores the last date the IIS SSL Security was updated on the server
+$dFCPFileURL              = "http://installer.fusecp.com/Files/XML/Downloads/Download-Links.xml"    # XML Feed for files that are downloaded as part of the PowerShell Auto Installation Script
+$dFCPFileDownloadLinks    = ([xml](New-Object System.Net.WebClient).DownloadString("$dFCPFileURL"))  # Download the XML Feed for files and store as a variable
 (Import-Module ServerManager) | Out-Null                                                             # Import the "ServerManager" module
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12                      # Set powershell to use TLS 1.2
 ####################################################################################################
@@ -1500,19 +1500,19 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			Write-Host "`t *    Upgrade feature from the FuseCP Portal    *" -ForegroundColor Yellow
 			Write-Host "`t *        or from the FuseCP PowerShell         *" -ForegroundColor Yellow
 			Write-Host "`t *              Auto-Upgrade Script              *" -ForegroundColor Yellow
-			if (!$dSCPfirewallUNCshareIPs) {
+			if (!$dFCPfirewallUNCshareIPs) {
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *      We would also reccomend setting the      *" -ForegroundColor Yellow
-				Write-Host "`t *           `$dSCPfirewallUNCshareIPs            *" -ForegroundColor Yellow
+				Write-Host "`t *           `$dFCPfirewallUNCshareIPs            *" -ForegroundColor Yellow
 				Write-Host "`t *   with any additional IP Addresses that you   *" -ForegroundColor Yellow
 				Write-Host "`t *    would like to access the UNC path from     *" -ForegroundColor Yellow
 			}
-			if (!$dSCPfirewallRDPaccess) {
+			if (!$dFCPfirewallRDPaccess) {
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *     You can also specify IP Addresses in      *" -ForegroundColor Yellow
-				Write-Host "`t *            `$dSCPfirewallRDPaccess             *" -ForegroundColor Yellow
+				Write-Host "`t *            `$dFCPfirewallRDPaccess             *" -ForegroundColor Yellow
 				Write-Host "`t *    so you can access this server remotely     *" -ForegroundColor Yellow
 				Write-Host "`t *              via Remote Desktop               *" -ForegroundColor Yellow
 			}
@@ -1538,7 +1538,7 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			"N" { Write-Host "`n`tYou will need to manually set the firewall rules to allow UNC Access to this machine from your Enterprise Server" -ForegroundColor Yellow }
 		}
 	}
-	if (!$dSCPfirewallRDPaccess) { # If the Remote Desktop access IP Address has not been set ask the user for one
+	if (!$dFCPfirewallRDPaccess) { # If the Remote Desktop access IP Address has not been set ask the user for one
 		do { # Ask if user wants to allow Remote Desktop access to this machine
 			$choice_UNC = Read-Host "`n`tDo you want to allow Remote Desktop Access to this server`? (Y/N)"
 			$ok_UNC = $choice_UNC -match '[y|n]'
@@ -1550,19 +1550,19 @@ Function dCheckIPaddressesSet() {                            # Function to check
 			"Y" {
 				do { # Ask for the IP Address (can be single IP or in CIDR format) that RDP access will be allowed from
 					$ok_RDP_IP = ""
-					$script:dSCPfirewallRDPaccess = Read-Host "`n`tPlease enter the IPV4 Address to allow RDP access from"
-					$ok_RDP_IP = CheckIP -IPV4 "$dSCPfirewallRDPaccess"
+					$script:dFCPfirewallRDPaccess = Read-Host "`n`tPlease enter the IPV4 Address to allow RDP access from"
+					$ok_RDP_IP = CheckIP -IPV4 "$dFCPfirewallRDPaccess"
 					if ( -not $ok_RDP_IP) { Write-Host "`tInvalid selection" -ForegroundColor Yellow ; start-Sleep -Seconds 1 }
 				} until ( $ok_RDP_IP )
-				Write-Host "`t You entered `"$dSCPfirewallRDPaccess`"" -ForegroundColor Green
+				Write-Host "`t You entered `"$dFCPfirewallRDPaccess`"" -ForegroundColor Green
 			}
 
 			"N" { Write-Host "`n`tYou will need to manually set the firewall rules to allow RDP Access to this machine" -ForegroundColor Yellow }
 		}
 	}
 	if ($dFuseCPEnterpriseSvrIP) {ValidateIP -IPaddress "$dFuseCPEnterpriseSvrIP"} # Check that the Enterprise Server IP Address is valid
-	if ($dSCPfirewallUNCshareIPs) {ValidateIP -IPaddress "$dSCPfirewallUNCshareIPs"} # Check that the UNC Share IP Address(es) are valid
-	if ($dSCPfirewallRDPaccess)   {ValidateIP -IPaddress "$dSCPfirewallRDPaccess"}   # Check that the Remote Desktop IP Address(es) are valid
+	if ($dFCPfirewallUNCshareIPs) {ValidateIP -IPaddress "$dFCPfirewallUNCshareIPs"} # Check that the UNC Share IP Address(es) are valid
+	if ($dFCPfirewallRDPaccess)   {ValidateIP -IPaddress "$dFCPfirewallRDPaccess"}   # Check that the Remote Desktop IP Address(es) are valid
 }
 
 
@@ -1693,7 +1693,7 @@ Function ValidateIP()                                       # Function for check
 ####################################################################################################################################################################################
 Function FuseCPFileDownload($dProduct)                     # Function to get the Download URL, Folder Name and File Name from the FuseCP Installer Site for the required file
 {
-	Return ($dSCPFileDownloadLinks.SelectNodes("//Feed/Files/Downloads/$dProduct"))
+	Return ($dFCPFileDownloadLinks.SelectNodes("//Feed/Files/Downloads/$dProduct"))
 }
 
 
@@ -1755,7 +1755,7 @@ Function InstallCommonFeatures()                            # Function for commo
 	Enable-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv6-In)"
 	# Add the firewall rule in for UNC Access to this machine from the IP Addresses specified in the user defined section unless it already exists
 	if ( !(Get-NetFirewallRule | where DisplayName -EQ "Allow FuseCP UNC Share") ) {
-		if ($dSCPfirewallUNCshareIPs) { $IPV4addresses_UNC = $dSCPfirewallUNCshareIPs.replace(' ','').split(';') } # Build the array of IP Addresses
+		if ($dFCPfirewallUNCshareIPs) { $IPV4addresses_UNC = $dFCPfirewallUNCshareIPs.replace(' ','').split(';') } # Build the array of IP Addresses
 		if ($dFuseCPEnterpriseSvrIP) { $IPV4addresses_UNC += "$dFuseCPEnterpriseSvrIP" }                         # Add the Enterprise Server IP Address to the array
 		if ($IPV4addresses_UNC) { # If the array is not empty then create and enable the firewall rule
 			(New-NetFirewallRule -DisplayName "Allow FuseCP UNC Share" -Description "Firewall rule to allow remote UNC access to the default share from the FuseCP Enterprise Server" -Protocol "TCP" -LocalPort "445" -RemoteAddress $IPV4addresses_UNC -WarningAction SilentlyContinue) | Out-Null
@@ -1763,7 +1763,7 @@ Function InstallCommonFeatures()                            # Function for commo
 		}
 	}
 	# Add the firewall rule in for Remote Desktop Access to this machine from the IP Addresses specified in the user defined section
-	if ($dSCPfirewallRDPaccess) { $IPV4addresses_RDP = $dSCPfirewallRDPaccess.replace(' ','').split(';') } # Build the array of IP Addresses
+	if ($dFCPfirewallRDPaccess) { $IPV4addresses_RDP = $dFCPfirewallRDPaccess.replace(' ','').split(';') } # Build the array of IP Addresses
 	if ($IPV4addresses_RDP) { # If the array is not empty then create and enable the firewall rule and enable Remote Desktop access
 		(Set-NetFirewallRule -DisplayName "Remote Desktop - User Mode (TCP-In)" -RemoteAddress $IPV4addresses_RDP) | Out-Null
 		(Enable-NetFirewallRule -DisplayName "Remote Desktop - User Mode (TCP-In)") | Out-Null
@@ -1799,7 +1799,7 @@ Function InstallIISforHosting()         # Function to install additional IIS fea
 	# Configure all logging options to be enabled for websites in IIS
 	Set-WebConfigurationProperty -Filter System.Applicationhost/Sites/SiteDefaults/logfile -Name LogExtFileFlags -Value "Date,Time,ClientIP,UserName,SiteName,ComputerName,ServerIP,Method,UriStem,UriQuery,HttpStatus,Win32Status,BytesSent,BytesRecv,TimeTaken,ServerPort,UserAgent,Cookie,Referer,ProtocolVersion,Host,HttpSubStatus"
 	if ($dDomainMember) {
-		# Create a domain group called "SCP_IUSRS_ComputerName" within the Web Server Organisational Unit in Active Directory
+		# Create a domain group called "FCP_IUSRS_ComputerName" within the Web Server Organisational Unit in Active Directory
 		CreateFuseCPdomainOU -Web_Server
 	}
 }
@@ -1814,18 +1814,18 @@ Function InstallFTPforHosting()         # Function to install additional IIS fea
 	Write-Host "`tConfiguring the FTP Server on this machine" -ForegroundColor Cyan
 	# Check if the FTP Server is installed on this machine, if it check to make sure the Default FTP Site is not setup, then set it up corectly for FuseCP
 	If ( ((Get-WindowsFeature *Web-Ftp-Service*).Installed[0]) -And !(Test-Path "IIS:\Sites\Default FTP Site" -pathType container) ) {
-		# Create a local group called "SCPFtpUsers" on the local web server unless it already exists
-		CreateLocalUserOrGroup "SCPFtpUsers" "FuseCP FTP Users Group  ********* DO NOT DELETE *********" "Group"
-		# Create a domain group called "SCPFtpUsers_ComputerName" within the FTP Server Organisational Unit in Active Directory
+		# Create a local group called "FCPFtpUsers" on the local web server unless it already exists
+		CreateLocalUserOrGroup "FCPFtpUsers" "FuseCP FTP Users Group  ********* DO NOT DELETE *********" "Group"
+		# Create a domain group called "FCPFtpUsers_ComputerName" within the FTP Server Organisational Unit in Active Directory
 		if ($dDomainMember) {
 			CreateFuseCPdomainOU -FTP_Server
 		}
 		# Create the "ftproot" folder in "C:\inetpub" if it doesnt exist
 		if(!(Test-Path "$env:SystemDrive\inetpub\ftproot")) {New-Item "$env:SystemDrive\inetpub\ftproot" -itemType directory}
-		# Grant permissions for the "C:\inetpub\ftproot" folder to the SCPFtpUsers Group (Read ONLY Access)
-		SetAccessToFolder "C:\inetpub\ftproot" "SCPFtpUsers" "Read" "Allow" "Local"
+		# Grant permissions for the "C:\inetpub\ftproot" folder to the FCPFtpUsers Group (Read ONLY Access)
+		SetAccessToFolder "C:\inetpub\ftproot" "FCPFtpUsers" "Read" "Allow" "Local"
 		if ($dDomainMember) {
-			SetAccessToFolder "C:\inetpub\ftproot" "SCPFtpUsers_$env:COMPUTERNAME" "Read" "Allow" "Domain"
+			SetAccessToFolder "C:\inetpub\ftproot" "FCPFtpUsers_$env:COMPUTERNAME" "Read" "Allow" "Domain"
 		}
 		# Create the FTP Site for FuseCP only if it does not alreayd exist
 		if (!(Test-Path "IIS:\Sites\Default FTP Site" -pathType container)) { # Setup the SolifCP FTP Site only if it doesn't already exist
@@ -1841,10 +1841,10 @@ Function InstallFTPforHosting()         # Function to install additional IIS fea
 			Set-ItemProperty "IIS:\Sites\Default FTP Site" -Name ftpserver.logFile.directory -Value "%SystemDrive%\inetpub\logs\LogFiles"  # Set Log File Directory
 			# Configure all logging options to be enabled for FTP Sites in IIS
 			Set-WebConfigurationProperty -Filter "system.applicationHost/sites/siteDefaults/ftpServer/logFile" -Name LogExtFileFlags -Value "Date,Time,ClientIP,UserName,SiteName,ComputerName,ServerIP,Method,UriStem,FtpStatus,Win32Status,BytesSent,BytesRecv,TimeTaken,ServerPort,Host,FtpSubStatus,Session,FullPath,Info,ClientPort"
-			# Give Authorization to SCPFtpUsers and grant "read" privileges in IIS (Default FTP Site)
-			Add-WebConfiguration "/system.ftpServer/security/authorization" -value @{accessType="Allow";roles="SCPFtpUsers";permissions="Read";users=""} -PSPath IIS:\ -location "Default FTP Site"
+			# Give Authorization to FCPFtpUsers and grant "read" privileges in IIS (Default FTP Site)
+			Add-WebConfiguration "/system.ftpServer/security/authorization" -value @{accessType="Allow";roles="FCPFtpUsers";permissions="Read";users=""} -PSPath IIS:\ -location "Default FTP Site"
 			if ($dDomainMember) {
-				Add-WebConfiguration "/system.ftpServer/security/authorization" -value @{accessType="Allow";roles="$env:USERDOMAIN\SCPFtpUsers_$env:COMPUTERNAME";permissions="Read";users=""} -PSPath IIS:\ -location "Default FTP Site"
+				Add-WebConfiguration "/system.ftpServer/security/authorization" -value @{accessType="Allow";roles="$env:USERDOMAIN\FCPFtpUsers_$env:COMPUTERNAME";permissions="Read";users=""} -PSPath IIS:\ -location "Default FTP Site"
 			}
 			Restart-WebItem "IIS:\Sites\Default FTP Site"  # Restart the FTP site for all changes to take effect
 		}
@@ -2298,11 +2298,11 @@ Function CreateFuseCPdomainOU()        # Function to create the FuseCP Organisat
 				do { $dCheckWebServerOUcreated2 = ([adsi]::Exists("LDAP://OU=Users,OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckWebServerOUcreated2 -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\WebServers\$env:COMPUTERNAME\Users`" created in Active Directory" -ForegroundColor Green
 			}
-			# Create the SCP_IUSRS_ComputerName Security Group in the WebServers Organisational Unit if it doesn't already exist
-			if (!([bool](Get-ADGroup -LDAPFilter "(sAMAccountName=SCP_IUSRS_$env:COMPUTERNAME)"))) {
-				New-ADGroup -Name "SCP_IUSRS_$env:COMPUTERNAME" -SamAccountName "SCP_IUSRS_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "FuseCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
-				do { $dCheckWebServerUsercreated = ([bool](([ADSISearcher]"(sAMAccountName=SCP_IUSRS_$env:COMPUTERNAME)").FindOne())) } until ($dCheckWebServerUsercreated -eq $true)
-				Write-Host "`t The `"SCP_IUSRS_$env:COMPUTERNAME`" Security Group has been created in Active Directory" -ForegroundColor Green
+			# Create the FCP_IUSRS_ComputerName Security Group in the WebServers Organisational Unit if it doesn't already exist
+			if (!([bool](Get-ADGroup -LDAPFilter "(sAMAccountName=FCP_IUSRS_$env:COMPUTERNAME)"))) {
+				New-ADGroup -Name "FCP_IUSRS_$env:COMPUTERNAME" -SamAccountName "FCP_IUSRS_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "FuseCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=WebServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
+				do { $dCheckWebServerUsercreated = ([bool](([ADSISearcher]"(sAMAccountName=FCP_IUSRS_$env:COMPUTERNAME)").FindOne())) } until ($dCheckWebServerUsercreated -eq $true)
+				Write-Host "`t The `"FCP_IUSRS_$env:COMPUTERNAME`" Security Group has been created in Active Directory" -ForegroundColor Green
 			}
 		}elseif ($FTP_Server) {
 			# Check to see if the FtpServers Organisational Unit is created in the FuseCP Organisational Unit created above
@@ -2323,19 +2323,19 @@ Function CreateFuseCPdomainOU()        # Function to create the FuseCP Organisat
 				do { $dCheckFtpServerOUcreated2 = ([adsi]::Exists("LDAP://OU=Users,OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckFtpServerOUcreated2 -eq $true)
 				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\FtpServers\$env:COMPUTERNAME\Users`" created in Active Directory" -ForegroundColor Green
 			}
-			# Create the SCPFtpUsers_ComputerName Security Group in the FtpServers Organisational Unit if it doesn't already exist
-			if (!([bool](Get-ADGroup -LDAPFilter "(sAMAccountName=SCPFtpUsers_$env:COMPUTERNAME)"))) {
-				New-ADGroup -Name "SCPFtpUsers_$env:COMPUTERNAME" -SamAccountName "SCPFtpUsers_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "FuseCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
-				do { $dCheckFtpServerUsercreated = ([bool](([ADSISearcher]"(sAMAccountName=SCPFtpUsers_$env:COMPUTERNAME)").FindOne())) } until ($dCheckFtpServerUsercreated -eq $true)
-				Write-Host "`t The `"SCPFtpUsers_$env:COMPUTERNAME`" Security Group has been created in Active Directory" -ForegroundColor Green
+			# Create the FCPFtpUsers_ComputerName Security Group in the FtpServers Organisational Unit if it doesn't already exist
+			if (!([bool](Get-ADGroup -LDAPFilter "(sAMAccountName=FCPFtpUsers_$env:COMPUTERNAME)"))) {
+				New-ADGroup -Name "FCPFtpUsers_$env:COMPUTERNAME" -SamAccountName "FCPFtpUsers_$env:COMPUTERNAME" -GroupCategory Security -GroupScope Global -Description "FuseCP System Group for $env:COMPUTERNAME" -Path "OU=$env:COMPUTERNAME,OU=FtpServers,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"
+				do { $dCheckFtpServerUsercreated = ([bool](([ADSISearcher]"(sAMAccountName=FCPFtpUsers_$env:COMPUTERNAME)").FindOne())) } until ($dCheckFtpServerUsercreated -eq $true)
+				Write-Host "`t The `"FCPFtpUsers_$env:COMPUTERNAME`" Security Group has been created in Active Directory" -ForegroundColor Green
 			}
 		}elseif ($Hosted) {
 			# Check to see if the Hosted Organisational Unit is created in the FuseCP Organisational Unit created above
-			if (!($dSCPhstd_OU_Name)) {$dSCPhstd_OU_Name = "Hosted"}
-			if (!([adsi]::Exists("LDAP://OU=$dSCPhstd_OU_Name,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
-				New-ADOrganizationalUnit -Name "$dSCPhstd_OU_Name" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Web Servers"
-				do { $dCheckHostedOUcreated = ([adsi]::Exists("LDAP://OU=$dSCPhstd_OU_Name,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckHostedOUcreated -eq $true)
-				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\$dSCPhstd_OU_Name`" created in Active Directory" -ForegroundColor Green
+			if (!($dFCPhstd_OU_Name)) {$dFCPhstd_OU_Name = "Hosted"}
+			if (!([adsi]::Exists("LDAP://OU=$dFCPhstd_OU_Name,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)"))) {
+				New-ADOrganizationalUnit -Name "$dFCPhstd_OU_Name" -Path "OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)" -Description "FuseCP Web Servers"
+				do { $dCheckHostedOUcreated = ([adsi]::Exists("LDAP://OU=$dFCPhstd_OU_Name,OU=$dSolidCp_OU_Name,$(([ADSI]"LDAP://RootDSE").rootDomainNamingContext)")) } until ($dCheckHostedOUcreated -eq $true)
+				Write-Host "`t Organisational Unit `"$dSolidCp_OU_Name\$dFCPhstd_OU_Name`" created in Active Directory" -ForegroundColor Green
 			}
 		}
 	}
@@ -2544,15 +2544,15 @@ Function ModifyRegistryKeys()           # Function to modify registry paths and 
 Function HardenIIS_SSL()           # Function to Check if the IIS SSL Registry fixes have already been applied
 {
 	Write-Host "`tChecking the SSL Security on this machine" -ForegroundColor Cyan
-	if (!($dSCPiisSSLDateCheckFile)) { # Set the location of the IIS SSL file used to store the date of the last update unless it has already been definied in the user variables
+	if (!($dFCPiisSSLDateCheckFile)) { # Set the location of the IIS SSL file used to store the date of the last update unless it has already been definied in the user variables
 		$dLocalDateFile = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"
 	}else{
-		$dLocalDateFile = $dSCPiisSSLDateCheckFile
+		$dLocalDateFile = $dFCPiisSSLDateCheckFile
 	}
-	if ($dSCPqualitySSLlabsRating -eq "B") { # Check if B Rating is required for IIS SSL Security
-		$dRemoteXMLdata = ([xml](New-Object System.Net.WebClient).DownloadString("$dSCPiisSSLratingURLb"))
+	if ($dFCPqualitySSLlabsRating -eq "B") { # Check if B Rating is required for IIS SSL Security
+		$dRemoteXMLdata = ([xml](New-Object System.Net.WebClient).DownloadString("$dFCPiisSSLratingURLb"))
 	}else{ # Otherwise use A Rating for best IIS SSL Security
-		$dRemoteXMLdata = ([xml](New-Object System.Net.WebClient).DownloadString("$dSCPiisSSLratingURLa"))
+		$dRemoteXMLdata = ([xml](New-Object System.Net.WebClient).DownloadString("$dFCPiisSSLratingURLa"))
 	}
 	$dCurrentDate   = (Get-Date -Format "yyyy-MM-dd HH:mm")
 
@@ -2624,7 +2624,7 @@ Function HardenIIS_SSL()           # Function to Check if the IIS SSL Registry f
 			(Restart-Service 'World Wide Web Publishing Service' -Force -WarningAction SilentlyContinue) | Out-Null
 			start-Sleep -Seconds 5
 		}
-		if ($ddSCPqualySSLScheduleTsk) { # Create the Scheduled Task if enabled in the user settings at the top of this script
+		if ($ddFCPqualySSLScheduleTsk) { # Create the Scheduled Task if enabled in the user settings at the top of this script
 			Write-Host "`t Creating the SSL Security Check as a Scheduled Task" -ForegroundColor Green
 			CreateIISsslScheduledTask
 		}
@@ -2637,9 +2637,9 @@ Function HardenIIS_SSL()           # Function to Check if the IIS SSL Registry f
 ####################################################################################################################################################################################
 Function CreateIISsslScheduledTask()           # Function to create a Scheduled Task to automatically Check if the IIS SSL Registry fixes have already been applied
 {
-	$dSCPiisSSLAutoScript = @'
+	$dFCPiisSSLAutoScript = @'
 <####################################################################################################
-SolidSCP - IIS SSL Hardening
+SolidFCP - IIS SSL Hardening
 
 v1.0    4th  October 2016:   First release of the FuseCP IIS SSL Hardeing Script
 
@@ -2739,7 +2739,7 @@ Function ModifyRegistryKeys()           # Function to modify registry paths and 
 ####################################################################################################################################################################################
 Function HardenIIS_SSL()           # Function to Check if the IIS SSL Registry fixes have already been applied
 {
-    $dLocalDateFile = "_SCP_Date_Check_File_"
+    $dLocalDateFile = "_FCP_Date_Check_File_"
     $dRemoteXMLdata = ([xml](New-Object System.Net.WebClient).DownloadString("_XML_Installer_Site_"))
     $dCurrentDate   = (Get-Date -Format "yyyy-MM-dd HH:mm")
 
@@ -2812,15 +2812,15 @@ HardenIIS_SSL
 
 '@
 
-	if (!($dSCPiisSSLDateCheckFile)) { # Set the location of the IIS SSL file used to store the date of the last update unless it has already been definied in the user variables
+	if (!($dFCPiisSSLDateCheckFile)) { # Set the location of the IIS SSL file used to store the date of the last update unless it has already been definied in the user variables
 		$dLocalDateFile = "C:\FuseCP\SSL_Fix_DO_NOT_DELETE.txt"
 	}else{
-		$dLocalDateFile = $dSCPiisSSLDateCheckFile
+		$dLocalDateFile = $dFCPiisSSLDateCheckFile
 	}
-	if ($dSCPqualitySSLlabsRating -eq "B") { # Check if B Rating is required for IIS SSL Security
-		$dRemoteXMLfile = $dSCPiisSSLratingURLb
+	if ($dFCPqualitySSLlabsRating -eq "B") { # Check if B Rating is required for IIS SSL Security
+		$dRemoteXMLfile = $dFCPiisSSLratingURLb
 	}else{ # Otherwise use A Rating for best IIS SSL Security
-		$dRemoteXMLfile = $dSCPiisSSLratingURLa
+		$dRemoteXMLfile = $dFCPiisSSLratingURLa
 	}
 	if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 		if (CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local") { # Logged in user is a Local Administrator
@@ -2833,7 +2833,7 @@ HardenIIS_SSL
 	}
 
 	# Create the IIS SSL Hardening PowerShell Script on the Server so we can run it as a Scheduled Task
-	(New-Item "C:\FuseCP\IIS_SSL_Hardening.ps1" -type file -force -value "$((($dSCPiisSSLAutoScript -replace "_XML_Installer_Site_", $dRemoteXMLfile) -replace "_SCP_Date_Check_File_", $dLocalDateFile) -replace "`n", "`r`n")") | Out-Null
+	(New-Item "C:\FuseCP\IIS_SSL_Hardening.ps1" -type file -force -value "$((($dFCPiisSSLAutoScript -replace "_XML_Installer_Site_", $dRemoteXMLfile) -replace "_FCP_Date_Check_File_", $dLocalDateFile) -replace "`n", "`r`n")") | Out-Null
 	# Create the IIS SSL Hardening Scheduled Task as XML Format so we can import it
 	(New-Item "C:\FuseCP\IIS_SSL_Hardening-Scheduled-Task-Import.xml" -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>FuseCP</Author>`r`n    <Description>PowerShell file that runs Daily to fix any new SSL Security Issues from and XML file on the FuseCP Installer Site.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <CalendarTrigger>`r`n      <Repetition>`r`n        <Interval>P1D</Interval>`r`n        <Duration>P1D</Duration>`r`n        <StopAtDurationEnd>false</StopAtDurationEnd>`r`n      </Repetition>`r`n      <StartBoundary>2015-01-01T00:00:00</StartBoundary>`r`n      <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>`r`n      <Enabled>true</Enabled>`r`n      <ScheduleByDay>`r`n        <DaysInterval>1</DaysInterval>`r`n      </ScheduleByDay>`r`n    </CalendarTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dSSLtaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>false</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT6H</Interval>`r`n      <Count>4</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>powershell.exe</Command>`r`n      <Arguments>-file `"C:\FuseCP\IIS_SSL_Hardening.ps1`"</Arguments>`r`n      <WorkingDirectory>C:\FuseCP</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
 	# Create the task and import the settings from the XML file we created above
@@ -2844,12 +2844,12 @@ HardenIIS_SSL
 
 
 ####################################################################################################################################################################################
-Function AddWebServerToDomainIISacco()  # Add the SCPServer-ComputerName account to the Domain Group called "IIS_IUSRS" only if the SCP Server component is installed
+Function AddWebServerToDomainIISacco()  # Add the FCPServer-ComputerName account to the Domain Group called "IIS_IUSRS" only if the FCP Server component is installed
 {
 	if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
 		if (!(Test-Path "C:\FuseCP\Server")) { # Make sure the Server Component is installed
-			if ([bool](([ADSISearcher]"(sAMAccountName=SCPServer-$env:COMPUTERNAME)").FindOne())) { # Make sure the SCPServer-ComputerName Domain Account exists
-				(AddDomainUserToDomainGroup "IIS_IUSRS" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "IIS_IUSRS"
+			if ([bool](([ADSISearcher]"(sAMAccountName=FCPServer-$env:COMPUTERNAME)").FindOne())) { # Make sure the FCPServer-ComputerName Domain Account exists
+				(AddDomainUserToDomainGroup "IIS_IUSRS" "FCPServer-$env:computerName") | Out-Null    # Add the "FCPServer-[ComputerName]" User to the Domain Group called "IIS_IUSRS"
 			}
 		}
 	}
@@ -3452,12 +3452,12 @@ Function InstallActiveDirectory()   # Function to install features for Active Di
 				}
 				if ($InstallADprimary -eq "y") { # Configure this server as the Primary Domain Controller if the user answers Yes to the question
 					# If a Domain Name has not been defined in the user variables ask the user to enter one
-					if (!$dSCPdomainName) { $dSCPdomainName = Read-Host "Please enter the Domain Name you would like to use for Active Directory" }
+					if (!$dFCPdomainName) { $dFCPdomainName = Read-Host "Please enter the Domain Name you would like to use for Active Directory" }
 					Write-Host "`t Configuring this server as the first Domain Controller`n" -ForegroundColor Green
 					# Import the Active Directory Deployment Module
 					Import-Module ADDSDeployment
 					# Configure this server as the First Domain Controller in a new forest
-					(Install-ADDSForest -CreateDnsDelegation:$false -DomainName "$dSCPdomainName" -InstallDns:$true -NoRebootOnCompletion:$true -Force:$true -WarningAction SilentlyContinue) | Out-Null
+					(Install-ADDSForest -CreateDnsDelegation:$false -DomainName "$dFCPdomainName" -InstallDns:$true -NoRebootOnCompletion:$true -Force:$true -WarningAction SilentlyContinue) | Out-Null
 					Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 					Write-Host "`t *                                               *" -ForegroundColor Yellow
 					Write-Host "`t *       This server has been successfully       *" -ForegroundColor Yellow
@@ -4365,7 +4365,7 @@ Function InstallWebDavFeatures()                            # Function to instal
 		# Install the features required by the FuseCP Cloud Storage Portal on the server.
 		(Add-WindowsFeature -Name Web-DAV-Publishing, FS-Resource-Manager, Search-Service, Web-Basic-Auth) | Out-Null
 		# Create a local group called "Administrators File Access" on the serverif it does not exist
-		CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
+		CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - FCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 	}else{
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -4866,7 +4866,7 @@ Function Exchange2016PreReq()           # Function to install the features requi
 	# Check if a restart is pending on this machine after installing the required features for Exchange 2016
 	dCheckPendingRestart
 	# Create a local group called "Administrators File Access" on the serverif it does not exist
-	CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
+	CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - FCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 }
 
 
@@ -4887,7 +4887,7 @@ Function Exchange2016PreReqMgmtTools()  # Function to install the features requi
 	# Check if a restart is pending on this machine after installing the required features for Exchange 2016
 	dCheckPendingRestart
 	# Create a local group called "Administrators File Access" on the serverif it does not exist
-	CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
+	CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - FCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 }
 
 
@@ -5043,7 +5043,7 @@ Function Exchange2016ImportExportSvr()  # Function to setup the Microsoft Exchan
 		if (!([bool](Get-ADUser -Filter {SamAccountName -eq "$dExchangeImportLogonName"}))) {
 			$dExchangeImportPassword = Read-Host "Enter a Password for the `"$dExchangeImportLogonName`" user" -AsSecureString
 			Write-Host "`t Creating the `"$dExchangeImportLogonName`" User Account" -ForegroundColor Green
-			New-ADUser -Name "$dExchangeImportUserFirst $dExchangeImportUserLast" -SamAccountName "$dExchangeImportLogonName" -DisplayName "$dExchangeImportUserFirst $dExchangeImportUserLast" -AccountPassword $dExchangeImportPassword -Enabled $true  -Description "Account to Import and Export PST Files to Exchange" -CannotChangePassword $true -PasswordNeverExpires $true -GivenName "$dExchangeImportUserFirst" -Surname "$dExchangeImportUserLast" -UserPrincipalName "$dExchangeImportLogonName@$dSCPdomainName"
+			New-ADUser -Name "$dExchangeImportUserFirst $dExchangeImportUserLast" -SamAccountName "$dExchangeImportLogonName" -DisplayName "$dExchangeImportUserFirst $dExchangeImportUserLast" -AccountPassword $dExchangeImportPassword -Enabled $true  -Description "Account to Import and Export PST Files to Exchange" -CannotChangePassword $true -PasswordNeverExpires $true -GivenName "$dExchangeImportUserFirst" -Surname "$dExchangeImportUserLast" -UserPrincipalName "$dExchangeImportLogonName@$dFCPdomainName"
 		}
 		# Add the user to the "Exchange Mailbox Import Export" group unless it is already a member
 		if (!((Get-ADGroupMember -identity "Exchange Mailbox Import Export" -Recursive).SamAccountName -match "$dExchangeImportLogonName")) {
@@ -5078,7 +5078,7 @@ Function Exchange2016ImportExportSvr()  # Function to setup the Microsoft Exchan
 		# Assign the "Exchange Mailbox Import Export" Security Group permissions to be able to import and export PST Files into exchange unless it already has permission
 		if (!([bool]((Get-ManagementRoleAssignment -role "Mailbox Import Export").RoleAssigneeName -match "Exchange Mailbox Import Export"))) {
 			Write-Host "`t Adding permissions to the `"Exchange Mailbox Import Export`" Security Group" -ForegroundColor Green
-			(New-ManagementRoleAssignment -Role "Mailbox Import Export" -SecurityGroup "$dSCPdomainName\Exchange Mailbox Import Export") | Out-Null
+			(New-ManagementRoleAssignment -Role "Mailbox Import Export" -SecurityGroup "$dFCPdomainName\Exchange Mailbox Import Export") | Out-Null
 		}
 	}
 }
@@ -5148,9 +5148,9 @@ Function Exchange2016_PostCheck()  # Function to check Exchange 2016 Installatio
 			}
 		}
 		if ( (Test-Path "C:\Program Files (x86)\FuseCP Installer") -and  (Test-Path "C:\Program Files\Microsoft\Exchange Server\V15") ) {
-			# Add the SCPServer User to the Domain Groups called "Enterprise Admins" and "Organization Management"
-			(AddDomainUserToDomainGroup "$dLangDomainEnterpriseAdmins" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Enterprise Admins"
-			(AddDomainUserToDomainGroup "Organization Management" "SCPServer-$env:computerName") | Out-Null         # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Organization Management"
+			# Add the FCPServer User to the Domain Groups called "Enterprise Admins" and "Organization Management"
+			(AddDomainUserToDomainGroup "$dLangDomainEnterpriseAdmins" "FCPServer-$env:computerName") | Out-Null    # Add the "FCPServer-[ComputerName]" User to the Domain Group called "Enterprise Admins"
+			(AddDomainUserToDomainGroup "Organization Management" "FCPServer-$env:computerName") | Out-Null         # Add the "FCPServer-[ComputerName]" User to the Domain Group called "Organization Management"
 		}
 		# Check to make sure the default options for FuseCP are configured corectly
 		Exchange2016_UpgradeCheck
@@ -5198,12 +5198,12 @@ Function Exchange2016_Set_OOA()       # Function to configure the Outlook Anywhe
 					if (!((Get-OrganizationConfig).MapiHttpEnabled)) {(Set-OrganizationConfig -MapiHttpEnabled $true)}
 				}
 			}
-			if ($dSCPdomainName) {
+			if ($dFCPdomainName) {
 				while ($dWildcardSSLchoice -notmatch "[y|n]") {
 					$dWildcardSSLchoice = Read-Host "`n`t Will you be using a Wildcard SSL Certificate for Exchange`? (Y/N)"
 				}
 				if ($dWildcardSSLchoice -eq "y") {
-					(Set-OutlookProvider EXCH -CertPrincipalName "msstd:*.$dSCPdomainName" -WarningAction SilentlyContinue) | Out-Null
+					(Set-OutlookProvider EXCH -CertPrincipalName "msstd:*.$dFCPdomainName" -WarningAction SilentlyContinue) | Out-Null
 					(set-POPSettings -X509CertificateName "$dOutlookAnywhFQDN" -WarningAction SilentlyContinue) | Out-Null
 					(set-IMAPSettings -X509CertificateName "$dOutlookAnywhFQDN" -WarningAction SilentlyContinue) | Out-Null
 					(Restart-Service 'MSExchangePop3*' -WarningAction SilentlyContinue) | Out-Null
@@ -5294,9 +5294,9 @@ Function CreateIISHTTPtoHTTPSScheduledTask()   # Function to create a Scheduled 
 		if (Test-Path "C:\Program Files\Microsoft\Exchange Server\V15") {
 			# Check if the web.config file exists
 			if (Test-Path "$dExchangeServerWebConfig ") {
-				$dSCPiisHTTPSAutoScript = @'
+				$dFCPiisHTTPSAutoScript = @'
 <####################################################################################################
-SolidSCP - Exchange HTTP to HTTPS Redirection
+SolidFCP - Exchange HTTP to HTTPS Redirection
 
 v1.0    31st October 2016:   First release of the FuseCP Exchange HTTP to HTTPS Redirection Script
 
@@ -5402,7 +5402,7 @@ ModifyXML "_FuseCP_Exchange_Web_Config_File_" "Add" "//configuration/system.webS
 				# Check if the FuseCP directory exists, if not then create it
 				if (!(Test-Path "C:\FuseCP")) { (md -Path "C:\FuseCP" -Force) | Out-Null }
 				# Create the IIS SSL Hardening PowerShell Script on the Server so we can run it as a Scheduled Task
-				( (($dSCPiisHTTPSAutoScript -replace "_FuseCP_Exchange_Web_Config_File_", $dExchangeServerWebConfig) -replace "_FuseCP_Exchange_OWA_URL_", $dOutlookAnywhFQDN) | Out-File -Encoding "ascii" -FilePath "C:\FuseCP\Exchange_HTTP_to_HTTPS_Redirection.ps1" ) | Out-Null
+				( (($dFCPiisHTTPSAutoScript -replace "_FuseCP_Exchange_Web_Config_File_", $dExchangeServerWebConfig) -replace "_FuseCP_Exchange_OWA_URL_", $dOutlookAnywhFQDN) | Out-File -Encoding "ascii" -FilePath "C:\FuseCP\Exchange_HTTP_to_HTTPS_Redirection.ps1" ) | Out-Null
 				# Create the IIS SSL Hardening Scheduled Task as XML Format so we can import it
 				(New-Item "C:\FuseCP\Exchange_HTTP_Redirect-Scheduled-Task-Import.xml" -type file -force -value "<?xml version=`"1.0`" encoding=`"UTF-16`"?>`r`n<Task version=`"1.2`" xmlns=`"http://schemas.microsoft.com/windows/2004/02/mit/task`">`r`n  <RegistrationInfo>`r`n    <Date>2015-01-01T00:00:00.000000</Date>`r`n    <Author>FuseCP</Author>`r`n    <Description>PowerShell file that runs on Startup to fix the Microsoft Exchange HTTP to HTTPS settings in IIS.</Description>`r`n  </RegistrationInfo>`r`n  <Triggers>`r`n    <BootTrigger>`r`n      <Enabled>true</Enabled>`r`n    </BootTrigger>`r`n  </Triggers>`r`n  <Principals>`r`n    <Principal id=`"Author`">`r`n      <RunLevel>HighestAvailable</RunLevel>`r`n      <UserId>$dIISredirectTaskUser</UserId>`r`n      <LogonType>S4U</LogonType>`r`n    </Principal>`r`n  </Principals>`r`n  <Settings>`r`n    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>`r`n    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>`r`n    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>`r`n    <AllowHardTerminate>true</AllowHardTerminate>`r`n    <StartWhenAvailable>true</StartWhenAvailable>`r`n    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>`r`n    <IdleSettings>`r`n      <StopOnIdleEnd>true</StopOnIdleEnd>`r`n      <RestartOnIdle>false</RestartOnIdle>`r`n    </IdleSettings>`r`n    <AllowStartOnDemand>true</AllowStartOnDemand>`r`n    <Enabled>true</Enabled>`r`n    <Hidden>false</Hidden>`r`n    <RunOnlyIfIdle>false</RunOnlyIfIdle>`r`n    <WakeToRun>false</WakeToRun>`r`n    <ExecutionTimeLimit>PT12H</ExecutionTimeLimit>`r`n    <Priority>7</Priority>`r`n    <RestartOnFailure>`r`n      <Interval>PT6H</Interval>`r`n      <Count>4</Count>`r`n    </RestartOnFailure>`r`n  </Settings>`r`n  <Actions Context=`"Author`">`r`n    <Exec>`r`n      <Command>powershell.exe</Command>`r`n      <Arguments>-file `"C:\FuseCP\Exchange_HTTP_to_HTTPS_Redirection.ps1`"</Arguments>`r`n      <WorkingDirectory>C:\FuseCP</WorkingDirectory>`r`n    </Exec>`r`n  </Actions>`r`n</Task>`r`n") | Out-Null
 				# Create the task and import the settings from the XML file we created above
@@ -5811,7 +5811,7 @@ Function InstallMailEnable()           # Function to install the features requir
 		# Configure the Webmail and Web Admin sites
 		Set-WebConfigurationProperty -Filter '/system.applicationHost/sites/site[@name="MailEnable WebMail"]' -PSPath "IIS:\" -Name "Bindings" -Value (@{protocol="http";bindingInformation="*:80:"})
 		# Create a local group called "Administrators File Access" on the serverif it does not exist
-		CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
+		CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - FCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 		# Add the Local "Administrator" to the Local Group called "Administrators File Access" unless it is already a mmember of the group
 		AddLocalUserToLocalGroup "Administrators File Access" "$dLangAdministratorName"
 		# Copy over the members of the Local "Administrators" group over to the Local "Administrators File Access" group
@@ -6079,7 +6079,7 @@ Function HardenFilePermissions()            # Function to harden the file permis
 {
 	Write-Host "`tChecking File Permissions on this machine" -ForegroundColor Cyan
 	# Create a local group called "Administrators File Access" on the serverif it does not exist
-	CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
+	CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - FCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 	# Add the Local "Administrator" to the Local Group called "Administrators File Access" unless it is already a mmember of the group
 	AddLocalUserToLocalGroup "Administrators File Access" "$dLangAdministratorName"
 	# If the machine is a member of a domain then add the "Domain Admins" group to the Local Group called "Administrators File Access" unless it is already a mmember of the group
@@ -6274,7 +6274,7 @@ Function HardenDotNETforIIS()               # Function to harden .NET for IIS to
 ####################################################################################################################################################################################
 Function dEntSvrQuerySQL ($dQueryString)    # Function to query the Enterprise Server Database directly
 { # Usage - (dEntSvrQuerySQL "[Query String]").ValueRequired
-  # Usage - (dEntSvrQuerySQL "SELECT [Username], [Password] FROM [Users] WHERE [Username] = 'SCPWebDavPeer'").Password
+  # Usage - (dEntSvrQuerySQL "SELECT [Username], [Password] FROM [Users] WHERE [Username] = 'FCPWebDavPeer'").Password
 	$SqlConnection = New-Object System.Data.SqlClient.SqlConnection
 	$SqlConnection.ConnectionString = (( ([xml](Get-Content ( "\\" + ($dFuseCPEnterpriseSvrIP) + "\c$\FuseCP\Enterprise Server\Web.config" ) )).configuration.connectionStrings.add.connectionString) -replace "localhost", $dFuseCPEnterpriseSvrIP)
 	$SqlConnection.Open()
@@ -6311,11 +6311,11 @@ Function CheckFuseCPdomainUser($dComponent)                        # Function to
 {# Usage - CheckFuseCPdomainUser Enterprise|Portal|Server|WebDav
 	if ($dDomainMember) {
 		if ($dComponent -eq "Enterprise") { # Check if the FuseCP Enterprise Server user account exists in Active Directory
-			if ([adsi]::Exists("LDAP://CN=SCPEnterprise,CN=Users,$dRootDN")) {
+			if ([adsi]::Exists("LDAP://CN=FCPEnterprise,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *       Oops, There seems to be a problem!      *" -ForegroundColor Yellow
-				Write-Host "`t *        The `"SCPEnterprise`" user account       *" -ForegroundColor Yellow
+				Write-Host "`t *        The `"FCPEnterprise`" user account       *" -ForegroundColor Yellow
 				Write-Host "`t *       already exists in Active Directory      *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *    We can't install a new Enterprise Server   *" -ForegroundColor Yellow
@@ -6329,11 +6329,11 @@ Function CheckFuseCPdomainUser($dComponent)                        # Function to
 				dPressAnyKeyToExit
 			}
 		}elseif ($dComponent -eq "Portal") { # Check if the FuseCP Portal user account exists in Active Directory
-			if ([adsi]::Exists("LDAP://CN=SCPPortal,CN=Users,$dRootDN")) {
+			if ([adsi]::Exists("LDAP://CN=FCPPortal,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *       Oops, There seems to be a problem!      *" -ForegroundColor Yellow
-				Write-Host "`t *          The `"SCPPortal`" user account         *" -ForegroundColor Yellow
+				Write-Host "`t *          The `"FCPPortal`" user account         *" -ForegroundColor Yellow
 				Write-Host "`t *       already exists in Active Directory      *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *      We can't install a new Portal Server     *" -ForegroundColor Yellow
@@ -6347,32 +6347,32 @@ Function CheckFuseCPdomainUser($dComponent)                        # Function to
 				dPressAnyKeyToExit
 			}
 		}elseif ($dComponent -eq "Server") { # Check if the FuseCP Server user account exists in Active Directory
-			if ([adsi]::Exists("LDAP://CN=SCPServer-$env:computerName,CN=Users,$dRootDN")) {
+			if ([adsi]::Exists("LDAP://CN=FCPServer-$env:computerName,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *       Oops, There seems to be a problem!      *" -ForegroundColor Yellow
-				Write-Host "`t *   The `"SCPServer-computerName`" user account   *" -ForegroundColor Yellow
+				Write-Host "`t *   The `"FCPServer-computerName`" user account   *" -ForegroundColor Yellow
 				Write-Host "`t *       already exists in Active Directory      *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *     Please check your Active Directory for    *" -ForegroundColor Yellow
 				Write-Host "`t *     a user account in the following format    *" -ForegroundColor Yellow
-				Write-Host "`t *           `"SCPServer-computerName`"            *" -ForegroundColor Yellow
+				Write-Host "`t *           `"FCPServer-computerName`"            *" -ForegroundColor Yellow
 				Write-Host "`t *           and run this script again           *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *************************************************" -ForegroundColor Yellow
 				dPressAnyKeyToExit
 			}
 		}elseif ($dComponent -eq "WebDav") { # Check if the FuseCP WebDav user account exists in Active Directory
-			if ([adsi]::Exists("LDAP://CN=SCPWebDav-$env:computerName,CN=Users,$dRootDN")) {
+			if ([adsi]::Exists("LDAP://CN=FCPWebDav-$env:computerName,CN=Users,$dRootDN")) {
 				Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *       Oops, There seems to be a problem!      *" -ForegroundColor Yellow
-				Write-Host "`t *   The `"SCPWebDav-computerName`" user account   *" -ForegroundColor Yellow
+				Write-Host "`t *   The `"FCPWebDav-computerName`" user account   *" -ForegroundColor Yellow
 				Write-Host "`t *       already exists in Active Directory      *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *     Please check your Active Directory for    *" -ForegroundColor Yellow
 				Write-Host "`t *     a user account in the following format    *" -ForegroundColor Yellow
-				Write-Host "`t *           `"SCPWebDav-computerName`"            *" -ForegroundColor Yellow
+				Write-Host "`t *           `"FCPWebDav-computerName`"            *" -ForegroundColor Yellow
 				Write-Host "`t *           and run this script again           *" -ForegroundColor Yellow
 				Write-Host "`t *                                               *" -ForegroundColor Yellow
 				Write-Host "`t *************************************************" -ForegroundColor Yellow
@@ -6471,7 +6471,7 @@ Function InstallFuseCPcomponent()  # Function to install the required FuseCP Com
 				Write-Host "`tDownloading and Installing the FuseCP `"Enterprise Server`" component" -ForegroundColor Cyan
 				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP Enterprise Server component Service Account in Active Directory
 					$dRandomPasswordEntSvr = [guid]::NewGuid() # Generate a random password for the Domain FuseCP Enterprise Server Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dFuseCPportalPassword`" /webip:`"*`" /webport:`"9002`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPEnterprise`" /upassw:`"$dRandomPasswordEntSvr`"" -Wait -Passthru).ExitCode | Out-Null
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dFuseCPportalPassword`" /webip:`"*`" /webport:`"9002`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"FCPEnterprise`" /upassw:`"$dRandomPasswordEntSvr`"" -Wait -Passthru).ExitCode | Out-Null
 				}else{ # If the server is not joined to a domain then install the FuseCP Enterprise Server component normally
 					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Enterprise Server`" /passw:`"$dFuseCPportalPassword`" /webip:`"*`" /webport:`"9002`"" -Wait -Passthru).ExitCode | Out-Null
 				}
@@ -6519,7 +6519,7 @@ Function InstallFuseCPcomponent()  # Function to install the required FuseCP Com
 				Write-Host "`tDownloading and Installing the FuseCP `"Portal`" component" -ForegroundColor Cyan
 				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP Portal component Service Account in Active Directory
 					$dRandomPasswordPortal = [guid]::NewGuid() # Generate a random password for the Domain FuseCP Portal Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dFuseCPportalIPaddress`" /webport:`"$dFuseCPportalPortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPPortal`" /upassw:`"$dRandomPasswordPortal`"" -Wait -Passthru).ExitCode | Out-Null
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dFuseCPportalIPaddress`" /webport:`"$dFuseCPportalPortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"FCPPortal`" /upassw:`"$dRandomPasswordPortal`"" -Wait -Passthru).ExitCode | Out-Null
 				}else{ # If the server is not joined to a domain then install the FuseCP Portal component normally
 					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Portal`" /webip:`"$dFuseCPportalIPaddress`" /webport:`"$dFuseCPportalPortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`"" -Wait -Passthru).ExitCode | Out-Null
 				}
@@ -6567,24 +6567,24 @@ Function InstallFuseCPcomponent()  # Function to install the required FuseCP Com
 					$dFuseCPserverPassword = Read-Host "Please enter the password you want to use for the FuseCP Server Component"
 				}
 				# Create a local group called "Administrators File Access" on the serverif it does not exist
-				CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - SCP Harden IIS  ********* DO NOT DELETE *********" "Group"
+				CreateLocalUserOrGroup "Administrators File Access" "Local Administrators File Access - FCP Harden IIS  ********* DO NOT DELETE *********" "Group"
 				# Add the Local "Administrator" to the Local Group called "Administrators File Access" unless it is already a mmember of the group
 				AddLocalUserToLocalGroup "Administrators File Access" "$dLangAdministratorName"
 				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP Server component Service Account in Active Directory
 					$dRandomPasswordServer = [guid]::NewGuid() # Generate a random password for the Domain FuseCP Server Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dFuseCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPServer-$env:computerName`" /upassw:`"$dRandomPasswordServer`"" -Wait -Passthru).ExitCode | Out-Null
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dFuseCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"FCPServer-$env:computerName`" /upassw:`"$dRandomPasswordServer`"" -Wait -Passthru).ExitCode | Out-Null
 					(AddDomainUserToLocalGroup "Administrators File Access" "$dLangDomainAdminsGroup") | Out-Null      # Add the "Domain Admins" User to the new group called "Administrators File Access"
-					(AddDomainUserToLocalGroup "Administrators File Access" "SCPServer-$env:computerName") | Out-Null  # Add the "SCPServer-[ComputerName]" User to the new group called "Administrators File Access"
-					(AddDomainUserToDomainGroup "$dLangDomainAdminsGroup" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Domain Admins"
-					(AddDomainUserToDomainGroup "$dLangAdministratorGroup" "SCPServer-$env:computerName") | Out-Null   # Add the "SCPServer-[ComputerName]" User to the Domain Group called "Administrators"
+					(AddDomainUserToLocalGroup "Administrators File Access" "FCPServer-$env:computerName") | Out-Null  # Add the "FCPServer-[ComputerName]" User to the new group called "Administrators File Access"
+					(AddDomainUserToDomainGroup "$dLangDomainAdminsGroup" "FCPServer-$env:computerName") | Out-Null    # Add the "FCPServer-[ComputerName]" User to the Domain Group called "Domain Admins"
+					(AddDomainUserToDomainGroup "$dLangAdministratorGroup" "FCPServer-$env:computerName") | Out-Null   # Add the "FCPServer-[ComputerName]" User to the Domain Group called "Administrators"
 					## May need to add the following groups in Active Directory due to the File Permissions that are set to harden the server
-					#(AddDomainUserToDomainGroup "IIS_IUSRS" "SCPServer-$env:computerName") | Out-Null    # Add the "SCPServer-[ComputerName]" User to the Domain Group called "IIS_IUSRS"
+					#(AddDomainUserToDomainGroup "IIS_IUSRS" "FCPServer-$env:computerName") | Out-Null    # Add the "FCPServer-[ComputerName]" User to the Domain Group called "IIS_IUSRS"
 				}else{ # If the server is not joined to a domain then install the FuseCP Server component normally
 					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"Server`" /passw:`"$dFuseCPserverPassword`" /webip:`"$dIPAddres`" /webport:`"9003`"" -Wait -Passthru).ExitCode | Out-Null
-					(AddLocalUserToLocalGroup "Administrators File Access" "SCPServer") | Out-Null                     # Add the "SCPServer" User to the new group called "Administrators File Access"
+					(AddLocalUserToLocalGroup "Administrators File Access" "FCPServer") | Out-Null                     # Add the "FCPServer" User to the new group called "Administrators File Access"
 				}
 				# Add the firewall rule to open Port 9003 for the FuseCP Enterprise Server only if the Enterprise Server IP is set also add RDP Allowed IP's
-				if ($dSCPfirewallRDPaccess) { $dFuseCPServerPort9003ips = $dSCPfirewallRDPaccess.replace(' ','').split(';') } # Build the array of IP Addresses
+				if ($dFCPfirewallRDPaccess) { $dFuseCPServerPort9003ips = $dFCPfirewallRDPaccess.replace(' ','').split(';') } # Build the array of IP Addresses
 				if ($dFuseCPEnterpriseSvrIP) { $dFuseCPServerPort9003ips += "$dFuseCPEnterpriseSvrIP" }                     # Add the Enterprise Server IP Address to the array
 				if ($dFuseCPServerPort9003ips) { # If the array is not empty then create and enable the firewall rule with the correct IPs
 					if ((Get-NetFirewallRule | where DisplayName -EQ "FuseCP Server").DisplayName -eq "FuseCP Server") {
@@ -6620,13 +6620,13 @@ Function InstallFuseCPcomponent()  # Function to install the required FuseCP Com
 						Set-ItemProperty "IIS:\Sites\FuseCP Server" -Name applicationDefaults.preloadEnabled -Value $true
 					}
 				}
-				# if SQL has been installed then make sure the SQL Server Service Account has full permissions on the SCPServer's AppData Temp folder
-				if ((Test-Path "C:\Users\SCPServer-$env:computerName\AppData\Local") -and ([bool](Get-Service "MSSQL**").Status)) {
-					if (!([bool]((Get-Acl -Path "C:\Users\SCPServer-$env:computerName\AppData\Local\Temp").Access | WHERE {(($_.IdentityReference -eq "$((Get-WmiObject Win32_Service -ComputerName localhost -Filter "name Like 'MSSQL%'").StartName)") -and ($_.FileSystemRights -eq "FullControl"))}))) {
+				# if SQL has been installed then make sure the SQL Server Service Account has full permissions on the FCPServer's AppData Temp folder
+				if ((Test-Path "C:\Users\FCPServer-$env:computerName\AppData\Local") -and ([bool](Get-Service "MSSQL**").Status)) {
+					if (!([bool]((Get-Acl -Path "C:\Users\FCPServer-$env:computerName\AppData\Local\Temp").Access | WHERE {(($_.IdentityReference -eq "$((Get-WmiObject Win32_Service -ComputerName localhost -Filter "name Like 'MSSQL%'").StartName)") -and ($_.FileSystemRights -eq "FullControl"))}))) {
 						Write-Host "`t Fixing the Microsoft SQL Server Backup Permissions" -ForegroundColor Green
-						$acl = Get-Acl -Path "C:\Users\SCPServer-$env:computerName\AppData\Local\Temp"
+						$acl = Get-Acl -Path "C:\Users\FCPServer-$env:computerName\AppData\Local\Temp"
 						$acl.SetAccessRule($(New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList "$((Get-WmiObject Win32_Service -ComputerName localhost -Filter "name Like 'MSSQL%'").StartName)", 'FullControl', 'ContainerInherit, ObjectInherit', 'None', 'Allow'))
-						$acl | Set-Acl -Path "C:\Users\SCPServer-$env:computerName\AppData\Local\Temp"
+						$acl | Set-Acl -Path "C:\Users\FCPServer-$env:computerName\AppData\Local\Temp"
 					}
 				}
 			}
@@ -6660,12 +6660,12 @@ Function InstallFuseCPcomponent()  # Function to install the required FuseCP Com
 				}
 				if ($dDomainMember) { # If this server is joined to a domain then install the FuseCP WebDav (Cloud Storage Portal) component Service Account in Active Directory
 					$dRandomPasswordWebDav = [guid]::NewGuid() # Generate a random password for the Domain FuseCP WebDav Service Account
-					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"SCPWebDav-$env:computerName`" /upassw:`"$dRandomPasswordWebDav`"" -Wait -Passthru).ExitCode | Out-Null
-					(AddDomainUserToLocalGroup "Administrators File Access" "SCPWebDav-$env:computerName") | Out-Null  # Add the "SCPWebDav-[ComputerName]" User to the new group called "Administrators File Access"
-					(AddDomainUserToDomainGroup "$dLangDomainAdminsGroup" "SCPWebDav-$env:computerName") | Out-Null    # Add the "SCPWebDav-[ComputerName]" User to the group "Domain Admins"
-				}else{ # If the server is not joined to a domain then install the FuseCP SCPWebDav (Cloud Storage Portal) component normally
+					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`" /udomaim:`"$env:USERDNSDOMAIN`" /uname:`"FCPWebDav-$env:computerName`" /upassw:`"$dRandomPasswordWebDav`"" -Wait -Passthru).ExitCode | Out-Null
+					(AddDomainUserToLocalGroup "Administrators File Access" "FCPWebDav-$env:computerName") | Out-Null  # Add the "FCPWebDav-[ComputerName]" User to the new group called "Administrators File Access"
+					(AddDomainUserToDomainGroup "$dLangDomainAdminsGroup" "FCPWebDav-$env:computerName") | Out-Null    # Add the "FCPWebDav-[ComputerName]" User to the group "Domain Admins"
+				}else{ # If the server is not joined to a domain then install the FuseCP FCPWebDav (Cloud Storage Portal) component normally
 					(Start-Process -FilePath "C:\Program Files (x86)\FuseCP Installer\FuseCP.SilentInstaller.exe" -Argumentlist "/cname:`"WebDavPortal`" /webip:`"*`" /webport:`"$dWebDavStoragePortNumber`" /esurl:`"$dFuseCPEnterpriseSvrURL`"" -Wait -Passthru).ExitCode | Out-Null
-					(AddLocalUserToLocalGroup "Administrators File Access" "SCPWebDav") | Out-Null                     # Add the "SCPWebDav" User to the new group called "Administrators File Access"
+					(AddLocalUserToLocalGroup "Administrators File Access" "FCPWebDav") | Out-Null                     # Add the "FCPWebDav" User to the new group called "Administrators File Access"
 				}
 				# Check if the FuseCP Cloud Storage Portal web.config file is there, if it is then modify it as below
 				if (Test-Path "C:\FuseCP\Cloud Storage Portal\Web.config") {

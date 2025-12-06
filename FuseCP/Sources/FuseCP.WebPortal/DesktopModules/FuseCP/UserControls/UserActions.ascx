@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserActions.ascx.cs" Inherits="FuseCP.Portal.UserActions" %>
-<%@ Register Src="../ExchangeServer/UserControls/MailboxPlanSelector.ascx" TagName="MailboxPlanSelector" TagPrefix="scp" %>
+<%@ Register Src="../ExchangeServer/UserControls/MailboxPlanSelector.ascx" TagName="MailboxPlanSelector" TagPrefix="fcp" %>
 
 <style type="text/css">
     .accounts-without-phone-list li {
@@ -85,7 +85,7 @@
                     <div class="widget-content Popup">
                     <asp:Literal ID="litMailboxPlan" runat="server" meta:resourcekey="litMailboxPlan"></asp:Literal>
                     <br/>
-                    <scp:MailboxPlanSelector ID="mailboxPlanSelector" runat="server" />
+                    <fcp:MailboxPlanSelector ID="mailboxPlanSelector" runat="server" />
                     </div>
 					<div class="popup-buttons text-right">
                     <CPCC:StyleButton id="btnMailboxPlanCancel" CssClass="btn btn-warning" runat="server" OnClick="btnModalCancel_OnClick" CausesValidation="false"> <i class="fa fa-times">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnMailboxPlanCancelText"/> </CPCC:StyleButton>&nbsp;

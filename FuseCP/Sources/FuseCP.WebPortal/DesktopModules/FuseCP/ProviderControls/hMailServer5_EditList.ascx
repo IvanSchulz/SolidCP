@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hMailServer5_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.hMailServer5_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 
 <table cellSpacing="0" cellPadding="3" width="100%">
@@ -40,8 +40,8 @@
 		</td>
 	</tr>
 </table>
-<scp:collapsiblepanel id="Security" runat="server" targetcontrolid="pSecurity"
-    meta:resourcekey="Security" Text="Security"></scp:collapsiblepanel>
+<fcp:collapsiblepanel id="Security" runat="server" targetcontrolid="pSecurity"
+    meta:resourcekey="Security" Text="Security"></fcp:collapsiblepanel>
 <asp:Panel runat="server" ID="pSecurity">
         <asp:CheckBox runat="server" ID="cbSMTPAuthentication"/>
         <asp:Label ID="Label1" runat="server" meta:resourcekey="lblSMTPAuthentication" Text="Require SMTP Authentication"/>

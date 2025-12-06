@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditOCSUser.ascx.cs" Inherits="FuseCP.Portal.OCS.EditOCSUser" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
 <%@ Register src="../ExchangeServer/UserControls/MailboxSelector.ascx" tagname="MailboxSelector" tagprefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <div id="ExchangeContainer">
     <div class="Module">
         <div class="Left">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="panel-body form-horizontal">
                     
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                     <table>
                         <tr>
@@ -44,7 +44,7 @@
                         </tr>
                     </table>
                     
-                    <scp:CollapsiblePanel id="secFedaration" runat="server"
+                    <fcp:CollapsiblePanel id="secFedaration" runat="server"
                         TargetControlID="pnlFedaration" meta:resourcekey="secFedaration" Text="Company Information"/>
                     
                     <asp:Panel runat="server" ID="pnlFedaration" >
@@ -54,7 +54,7 @@
                     </asp:Panel>
                     <br />
                     
-                    <scp:CollapsiblePanel id="secArchiving" runat="server"
+                    <fcp:CollapsiblePanel id="secArchiving" runat="server"
                         TargetControlID="pnlArchiving" meta:resourcekey="secArchiving" Text="Company Information"/>
                     
                     <asp:Panel runat="server" ID="pnlArchiving" >
@@ -63,7 +63,7 @@
                     </asp:Panel>
                     <br />
                     
-                    <scp:CollapsiblePanel id="secPresence" runat="server"
+                    <fcp:CollapsiblePanel id="secPresence" runat="server"
                         TargetControlID="pnlPresence" meta:resourcekey="secPresence" Text="Company Information"/>
                     
                     <asp:Panel runat="server" ID="pnlPresence" >

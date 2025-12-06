@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsReplications.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VpsDetailsReplications" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <script type="text/javascript">
     function ValidateCheckBoxList(sender, args) {
@@ -35,14 +35,14 @@
 	    <div class="Content">
 		    <div class="Center">
                 <div class="panel-body form-horizontal">
-                    <scp:ServerTabs ID="tabs" runat="server" SelectedTab="vps_replication" />
-                    <scp:SimpleMessageBox ID="messageBox" runat="server" />
+                    <fcp:ServerTabs ID="tabs" runat="server" SelectedTab="vps_replication" />
+                    <fcp:SimpleMessageBox ID="messageBox" runat="server" />
                     
                     <asp:ValidationSummary ID="validatorsSummary" runat="server"
                         ValidationGroup="Vps" ShowMessageBox="True" ShowSummary="False" />
 
-                    <%--<scp:CollapsiblePanel ID="secReplicationDetails" runat="server" Visible="False"
-                        TargetControlID="ReplicationDetailsPanel" meta:ResourceKey="secReplicationDetails" Text="Health"></scp:CollapsiblePanel> Height="0" Style="overflow: hidden; padding: 10px; width: 750px;"--%>
+                    <%--<fcp:CollapsiblePanel ID="secReplicationDetails" runat="server" Visible="False"
+                        TargetControlID="ReplicationDetailsPanel" meta:ResourceKey="secReplicationDetails" Text="Health"></fcp:CollapsiblePanel> Height="0" Style="overflow: hidden; padding: 10px; width: 750px;"--%>
                     <asp:Panel ID="ReplicationDetailsPanel" runat="server" Visible="False" Style="padding: 10px;">
                         <asp:Localize ID="locHealth" runat="server" meta:resourcekey="locHealth" Text="Health:"></asp:Localize>
                         <asp:Label ID="labHealth" runat="server"></asp:Label>
@@ -54,9 +54,9 @@
                             meta:resourcekey="btnResume" Text="Resume" OnClick="btnResume_Click" Style="margin-left: 20px"></asp:Button>
                     </asp:Panel>
 
-                    <scp:CollapsiblePanel ID="secReplication" runat="server" Visible="True"
+                    <fcp:CollapsiblePanel ID="secReplication" runat="server" Visible="True"
                         TargetControlID="ReplicationPanel" meta:ResourceKey="secReplication" Text="Replication Configuration">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ReplicationPanel" runat="server" Height="0" Style="overflow: hidden; padding: 10px; width: 750px;">
                         <div class="FormButtonsBarClean" onclick="ShowProgressDialog('Prepare UI...');">
                             <asp:CheckBox ID="chbEnable" runat="server" meta:resourcekey="chbEnable" Text="Enable replication" AutoPostBack="True"  />
@@ -242,8 +242,8 @@
                 </tr>
 			</table>
 
-            <scp:CollapsiblePanel ID="StatisticCollapsiblePanel" runat="server" Visible="True"
-                TargetControlID="StatisticPanel" meta:ResourceKey="secStatisticPanel" Text="Statistic for past "></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="StatisticCollapsiblePanel" runat="server" Visible="True"
+                TargetControlID="StatisticPanel" meta:ResourceKey="secStatisticPanel" Text="Statistic for past "></fcp:CollapsiblePanel>
             <asp:Panel ID="StatisticPanel" runat="server" Height="0" Style="overflow: hidden; padding: 10px; width: 400px;">
                 <table cellspacing="10">
                     <tr>
@@ -306,8 +306,8 @@
             </asp:Panel>
 
                       
-            <scp:CollapsiblePanel ID="PendingReplicationCollapsiblePanel" runat="server" Visible="True"
-                TargetControlID="PendingReplicationPanel" meta:ResourceKey="secPendingReplication" Text="Pending replication"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="PendingReplicationCollapsiblePanel" runat="server" Visible="True"
+                TargetControlID="PendingReplicationPanel" meta:ResourceKey="secPendingReplication" Text="Pending replication"></fcp:CollapsiblePanel>
             <asp:Panel ID="PendingReplicationPanel" runat="server" Height="0" Style="overflow: hidden; padding: 10px; width: 400px;">
                 <table cellspacing="10">
                     <tr>

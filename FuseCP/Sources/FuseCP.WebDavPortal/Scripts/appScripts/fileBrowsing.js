@@ -1,4 +1,4 @@
-﻿function ScpFileBrowser() {
+function ScpFileBrowser() {
     this.settings = {
         deletionBlockSelector: ".file-actions-menu .file-deletion",
         deletionUrl: "storage/files-group-action/delete",
@@ -53,8 +53,8 @@ ScpFileBrowser.prototype = {
 
         $.ajax({
             type: 'POST',
-            url: scp.fileBrowser.settings.deletionUrl,
-            data: { filePathes: scp.fileBrowser.getSelectedItemsPaths(), deleteNonEmptyFolder: false },
+            url: fcp.fileBrowser.settings.deletionUrl,
+            data: { filePathes: fcp.fileBrowser.getSelectedItemsPaths(), deleteNonEmptyFolder: false },
             dataType: "json",
             success: function (model) {
                 var showDialog = false;
@@ -66,58 +66,58 @@ ScpFileBrowser.prototype = {
                 });
                 if (showDialog) {
                     model.Messages = null;
-                    scp.dialogs.hideProcessDialog();
+                    fcp.dialogs.hideProcessDialog();
                     document.getElementById('delete-all-button').click();
                 } else {
-                    scp.messages.showMessages(model.Messages);
+                    fcp.messages.showMessages(model.Messages);
 
-                    scp.fileBrowser.clearDeletedItems(model.DeletedFiles);
-                    scp.fileBrowser.refreshDeletionBlock();
-                    scp.fileBrowser.refreshDataTable(scp.fileBrowser.itemsTable);
+                    fcp.fileBrowser.clearDeletedItems(model.DeletedFiles);
+                    fcp.fileBrowser.refreshDeletionBlock();
+                    fcp.fileBrowser.refreshDataTable(fcp.fileBrowser.itemsTable);
 
-                    scp.dialogs.hideProcessDialog();
+                    fcp.dialogs.hideProcessDialog();
                 }
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                scp.messages.addErrorMessage(errorThrown);
+                fcp.messages.addErrorMessage(errorThrown);
 
-                scp.fileBrowser.refreshDeletionBlock();
-                scp.fileBrowser.refreshDataTable(scp.fileBrowser.itemsTable);
+                fcp.fileBrowser.refreshDeletionBlock();
+                fcp.fileBrowser.refreshDataTable(fcp.fileBrowser.itemsTable);
 
-                scp.dialogs.hideProcessDialog();
+                fcp.dialogs.hideProcessDialog();
             }
         });
 
-        scp.dialogs.showProcessDialog();
+        fcp.dialogs.showProcessDialog();
     },
 
     deleteNonEmptyFolder: function (e) {
 
         $.ajax({
             type: 'POST',
-            url: scp.fileBrowser.settings.deletionUrl,
-            data: { filePathes: scp.fileBrowser.getSelectedItemsPaths(), deleteNonEmptyFolder: true },
+            url: fcp.fileBrowser.settings.deletionUrl,
+            data: { filePathes: fcp.fileBrowser.getSelectedItemsPaths(), deleteNonEmptyFolder: true },
             dataType: "json",
             success: function (model) {
-                    scp.messages.showMessages(model.Messages);
+                    fcp.messages.showMessages(model.Messages);
 
-                    scp.fileBrowser.clearDeletedItems(model.DeletedFiles);
-                    scp.fileBrowser.refreshDeletionBlock();
-                    scp.fileBrowser.refreshDataTable(scp.fileBrowser.itemsTable);
+                    fcp.fileBrowser.clearDeletedItems(model.DeletedFiles);
+                    fcp.fileBrowser.refreshDeletionBlock();
+                    fcp.fileBrowser.refreshDataTable(fcp.fileBrowser.itemsTable);
 
-                    scp.dialogs.hideProcessDialog();
+                    fcp.dialogs.hideProcessDialog();
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                scp.messages.addErrorMessage(errorThrown);
+                fcp.messages.addErrorMessage(errorThrown);
 
-                scp.fileBrowser.refreshDeletionBlock();
-                scp.fileBrowser.refreshDataTable(scp.fileBrowser.itemsTable);
+                fcp.fileBrowser.refreshDeletionBlock();
+                fcp.fileBrowser.refreshDataTable(fcp.fileBrowser.itemsTable);
 
-                scp.dialogs.hideProcessDialog();
+                fcp.dialogs.hideProcessDialog();
             }
         });
 
-        scp.dialogs.showProcessDialog();
+        fcp.dialogs.showProcessDialog();
     },
 
     clearDeletedItems: function(items) {
@@ -148,7 +148,7 @@ ScpFileBrowser.prototype = {
                         return '<div class="column-name"><img class="table-icon" src="' + row.IconHref + '"/>' +
                             '<a href="' + row.Url + '" ' + (row.IsTargetBlank ? 'target="_blank"' : '') + ' class="file-link" title="' + row.DisplayName + '">' +
                                     row.DisplayName +
-                                '</a>' + (row.IsRoot ? '<span id="quota">' + scp.fileBrowser.bytesToSize(row.Size) + ' / ' + scp.fileBrowser.bytesToSize(row.Quota) + '</span>' : '')
+                                '</a>' + (row.IsRoot ? '<span id="quota">' + fcp.fileBrowser.bytesToSize(row.Size) + ' / ' + fcp.fileBrowser.bytesToSize(row.Quota) + '</span>' : '')
                         +'</div>';
                     },
                     "targets": 0
@@ -335,14 +335,14 @@ ScpFileBrowser.prototype = {
             type: "post",
             data: {
                 newItemName: function() {
-                    return $(fieldId).val() + $(scp.fileBrowser.settings.createNewItemButtonId).data('extension');
+                    return $(fieldId).val() + $(fcp.fileBrowser.settings.createNewItemButtonId).data('extension');
                 } 
             },
             beforeSend: function(response) {
-                scp.dialogs.showInlineProcessing(fieldId);
+                fcp.dialogs.showInlineProcessing(fieldId);
             },
             complete: function() {
-                scp.dialogs.hideInlineProcessing(fieldId);
+                fcp.dialogs.hideInlineProcessing(fieldId);
             }
         };
     }

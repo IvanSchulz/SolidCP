@@ -1,24 +1,24 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationDeletedUserMemberOf.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.DeletedUserMemberOf" %>
-<%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
-<%@ Register Src="UserControls/GroupsList.ascx" TagName="GroupsList" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/GroupsList.ascx" TagName="GroupsList" TagPrefix="fcp" %>
 
 
 
 <%@ Register src="UserControls/DeletedUserTabs.ascx" tagname="UserTabs" tagprefix="uc1" %>
 <%@ Register src="UserControls/MailboxTabs.ascx" tagname="MailboxTabs" tagprefix="uc1" %>
 
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -35,14 +35,14 @@
                     <uc1:MailboxTabs ID="MailboxTabsId" runat="server" SelectedTab="deleted_user_memberof" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
-					<scp:CollapsiblePanel id="secGroups" runat="server" TargetControlID="GroupsPanel" meta:resourcekey="secGroups" Text="Groups"></scp:CollapsiblePanel>
+					<fcp:CollapsiblePanel id="secGroups" runat="server" TargetControlID="GroupsPanel" meta:resourcekey="secGroups" Text="Groups"></fcp:CollapsiblePanel>
                     <asp:Panel ID="GroupsPanel" runat="server" Height="0" style="overflow:hidden;">
 						<asp:UpdatePanel ID="GeneralUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
 							<ContentTemplate>
 
-                                <scp:AccountsList id="groups" runat="server"
+                                <fcp:AccountsList id="groups" runat="server"
                                             Disabled="true"
                                             MailboxesEnabled="false" 
                                             EnableMailboxOnly="true" 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webessentials version="1.9">
+  <settings>
+    <CssEnableMinification>true</CssEnableMinification>
+    <JavaScriptEnableMinification>true</JavaScriptEnableMinification>
+    <JavaScriptGenerateSourceMaps>false</JavaScriptGenerateSourceMaps>
+    <UseBom>true</UseBom>
+  </settings>
+</webessentials>

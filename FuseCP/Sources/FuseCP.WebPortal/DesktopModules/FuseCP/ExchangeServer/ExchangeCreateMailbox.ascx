@@ -1,16 +1,16 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeCreateMailbox.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeCreateMailbox" %>
-<%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="fcp" %>
 <%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="uc1" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxPlanSelector.ascx" TagName="MailboxPlanSelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SendToControl.ascx" TagName="SendToControl" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxPlanSelector.ascx" TagName="MailboxPlanSelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SendToControl.ascx" TagName="SendToControl" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 <div runat="server" id="divWrapper">
     <script type="text/javascript">
@@ -36,7 +36,7 @@
 </div>
 
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox ID="messageBox" runat="server" />
+    <fcp:SimpleMessageBox ID="messageBox" runat="server" />
     <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Always" runat="server">
         <ContentTemplate>
                
@@ -125,15 +125,15 @@
                                         <asp:Localize ID="locAccount" runat="server" meta:resourcekey="locAccount" Text="E-mail Address: *" />
                                     </asp:Label>
                                     <div class="col-sm-10">
-                                        <scp:EmailAddress ID="email" runat="server" ValidationGroup="CreateMailbox"></scp:EmailAddress>
+                                        <fcp:EmailAddress ID="email" runat="server" ValidationGroup="CreateMailbox"></fcp:EmailAddress>
                                     </div>
                                 </div>
                        
                     </fieldset>
               
-                <scp:SendToControl ID="sendToControl" runat="server" ValidationGroup="CreateMailbox" ControlToHide="PasswordBlock"></scp:SendToControl>
+                <fcp:SendToControl ID="sendToControl" runat="server" ValidationGroup="CreateMailbox" ControlToHide="PasswordBlock"></fcp:SendToControl>
                 <div id="PasswordBlock" runat="server">
-                    <scp:PasswordControl ID="password" runat="server" ValidationGroup="CreateMailbox" AllowGeneratePassword="true"></scp:PasswordControl>
+                    <fcp:PasswordControl ID="password" runat="server" ValidationGroup="CreateMailbox" AllowGeneratePassword="true"></fcp:PasswordControl>
                     <asp:CheckBox ID="chkUserMustChangePassword" runat="server" meta:resourcekey="chkUserMustChangePassword" Text="User must change password at next login" Visible="False" />
                 </div>
                 <fieldset>
@@ -171,7 +171,7 @@
                         </label>
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <scp:MailboxPlanSelector ID="mailboxPlanSelector" runat="server" Archiving="false" ValidationGroup="CreateMailbox" IsForJournaling="false" OnChanged="mailboxPlanSelector_Change" />
+                                <fcp:MailboxPlanSelector ID="mailboxPlanSelector" runat="server" Archiving="false" ValidationGroup="CreateMailbox" IsForJournaling="false" OnChanged="mailboxPlanSelector_Change" />
                             </div>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                         </label>
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <scp:MailboxPlanSelector ID="archivingMailboxPlanSelector" runat="server" ValidationGroup="CreateMailbox" Archiving="true" AddNone="true" />
+                                <fcp:MailboxPlanSelector ID="archivingMailboxPlanSelector" runat="server" ValidationGroup="CreateMailbox" Archiving="true" AddNone="true" />
                             </div>
                         </div>
                     </div>
@@ -213,7 +213,7 @@
                         </label>
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <scp:EmailControl ID="sendInstructionEmail" runat="server" RequiredEnabled="true" ValidationGroup="CreateMailbox"></scp:EmailControl>
+                                <fcp:EmailControl ID="sendInstructionEmail" runat="server" RequiredEnabled="true" ValidationGroup="CreateMailbox"></fcp:EmailControl>
                             </div>
                         </div>
                     </div>

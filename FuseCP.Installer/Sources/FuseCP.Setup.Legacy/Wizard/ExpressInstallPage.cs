@@ -261,8 +261,8 @@ namespace FuseCP.Setup
 						case ActionTypes.ConfigureStandaloneServerData:
 							ConfigureStandaloneServer(action.Url);
 							break;
-						case ActionTypes.CreateSCPServerLogin:
-							CreateSCPServerLogin();
+						case ActionTypes.CreateFCPServerLogin:
+							CreateFCPServerLogin();
 							break;
 						case ActionTypes.FolderPermissions:
 							ConfigureFolderPermissions();
@@ -1511,7 +1511,7 @@ namespace FuseCP.Setup
 		}
 		#endregion
 
-		private void CreateSCPServerLogin()
+		private void CreateFCPServerLogin()
 		{
 			try
 			{

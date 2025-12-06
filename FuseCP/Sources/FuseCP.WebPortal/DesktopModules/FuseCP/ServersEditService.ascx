@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditService.ascx.cs"
 	Inherits="FuseCP.Portal.ServersEditService" %>
 <%@ Register Src="GlobalDnsRecordsControl.ascx" TagName="GlobalDnsRecordsControl"
-	TagPrefix="scp" %>
-<%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+	TagPrefix="fcp" %>
+<%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+	TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <script type="text/javascript">
 
 	function confirmation() {
@@ -14,7 +14,7 @@
 	}
 </script>
 <div class="panel-body form-horizontal">
-	<scp:ServerHeaderControl ID="ServerHeaderControl" runat="server" />
+	<fcp:ServerHeaderControl ID="ServerHeaderControl" runat="server" />
 	<table cellspacing="0" cellpadding="2" width="100%">
 		<tr>
 			<td class="SubHead" style="width: 200px;">
@@ -73,11 +73,11 @@
     <h3><asp:Localize ID="SettingsHeader" runat="server" meta:resourcekey="SettingsHeader" Text="Settings"></asp:Localize></h3>
     <asp:PlaceHolder ID="serviceProps" runat="server"></asp:PlaceHolder>
 
-    <scp:CollapsiblePanel id="DnsRecrodsHeader" runat="server" TargetControlID="DnsRecrodsPanel"
+    <fcp:CollapsiblePanel id="DnsRecrodsHeader" runat="server" TargetControlID="DnsRecrodsPanel"
 		resourcekey="DnsRecrodsHeader" Text="DNS Records Template">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="DnsRecrodsPanel" runat="server">
-					<scp:GlobalDnsRecordsControl ID="GlobalDnsRecordsControl" runat="server" IPServerIDParam="ServerID" ServiceIdParam="ServiceID" />
+					<fcp:GlobalDnsRecordsControl ID="GlobalDnsRecordsControl" runat="server" IPServerIDParam="ServerID" ServiceIdParam="ServiceID" />
 	</asp:Panel>
 	<asp:Panel ID="pnlQuota" runat="server" Visible="false">
 		<table id="tblQuota" runat="server" width="100%" visible="false">

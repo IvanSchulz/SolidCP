@@ -1,9 +1,9 @@
 <%@ Control Language="C#" CodeBehind="MariaDB_EditDatabase.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MariaDB_EditUser_EditField" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="secDataFiles" runat="server" IsCollapsed="true"
+<fcp:CollapsiblePanel id="secDataFiles" runat="server" IsCollapsed="true"
     TargetControlID="FilesPanel" meta:resourcekey="secDataFiles" Text="Database Files">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="FilesPanel" runat="server" Height="0" style="overflow:hidden;">
     <table id="tblFiles" runat="server" width="100%" cellpadding="3">
         <tr>
@@ -23,9 +23,9 @@
         </tr>
     </table> 
 </asp:Panel>
-<scp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true"
+<fcp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true"
     TargetControlID="MainToolsPanel" meta:resourcekey="secMainTools" Text="Maintenance Tools">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="MainToolsPanel" runat="server" Height="0" style="overflow:hidden;">
     <table cellpadding="10">
         <tr>
@@ -37,9 +37,9 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="secHousekeepingTools" runat="server" IsCollapsed="true"
+<fcp:CollapsiblePanel id="secHousekeepingTools" runat="server" IsCollapsed="true"
     TargetControlID="HousekeepingToolsPanel" meta:resourcekey="secHousekeepingTools" Text="Housekeeping Tools">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="HousekeepingToolsPanel" runat="server" Height="0" style="overflow:hidden;">
     <table cellpadding="10">
         <tr>

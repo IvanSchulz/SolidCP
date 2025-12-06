@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackageIPAddresses.ascx.cs" Inherits="FuseCP.Portal.UserControls.PackageIPAddresses" %>
-<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
+<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
 
 
 <script type="text/javascript">
@@ -15,7 +15,7 @@
                 }
 </script>
 
-<scp:SimpleMessageBox id="messageBox" runat="server" />
+<fcp:SimpleMessageBox id="messageBox" runat="server" />
 
 <div class="FormButtonsBarClean">
     <div class="FormButtonsBarCleanLeft">
@@ -23,7 +23,7 @@
     </div>
     <div class="FormButtonsBarCleanRight">
 		<div style="float: right;"> <!-- In the future, make it more elegant way -->
-			<scp:SearchBox ID="searchBox" runat="server" />	 
+			<fcp:SearchBox ID="searchBox" runat="server" />	 
 		</div>
 		<div style="float: right;">
 			<asp:Label runat="server" Text="Page size:" CssClass="Normal"></asp:Label>

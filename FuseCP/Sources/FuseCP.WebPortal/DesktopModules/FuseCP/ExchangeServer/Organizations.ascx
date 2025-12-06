@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Organizations.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.Organizations" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-heading">
     <h3 class="panel-title">
@@ -17,7 +17,7 @@
     </CPCC:StyleButton>
 </div>
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <div style="text-align:right;margin-bottom: 4px;">
         <asp:CheckBox ID="chkRecursive" runat="server" Text="Show Reseller Organizations" meta:resourcekey="chkRecursive" AutoPostBack="true" CssClass="Normal" />
     </div>
@@ -106,7 +106,7 @@
         <div class="col-md-6">
             <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Total Organizations Created:"></asp:Localize>
             &nbsp;&nbsp;&nbsp;
-            <scp:Quota ID="orgsQuota" runat="server" QuotaName="HostedSolution.Organizations" />
+            <fcp:Quota ID="orgsQuota" runat="server" QuotaName="HostedSolution.Organizations" />
         </div>
         <div class="col-md-6 text-right">
             <CPCC:StyleButton id="btnSetDefaultOrganization" CssClass="btn btn-success" runat="server" OnClick="btnSetDefaultOrganization_Click">

@@ -5579,7 +5579,7 @@ DELETE FROM DeleteRDSCollectionSettings
 WHERE Id = @Id
 GO
 
--- scp-10269: Changed php extension path in default properties for IIS70 and IIS80 provider
+-- fcp-10269: Changed php extension path in default properties for IIS70 and IIS80 provider
 update ServiceDefaultProperties
 set PropertyValue='%PROGRAMFILES(x86)%\PHP\php-cgi.exe'
 where PropertyName='PhpPath' and ProviderId in(101, 105, 112)

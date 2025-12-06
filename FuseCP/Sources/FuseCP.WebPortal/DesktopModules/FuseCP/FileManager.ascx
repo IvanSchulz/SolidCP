@@ -2,16 +2,16 @@
 <%@ Register Src="UserControls/FileNameControl.ascx" TagName="FileNameControl" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="uc4" %>
-<%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
+	TagPrefix="fcp" %>
 	
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <asp:UpdatePanel ID="MessageBoxUpdatePanel" runat="server" UpdateMode="Always">
 <ContentTemplate>
-<scp:SimpleMessageBox id="messageBox" runat="server"></scp:SimpleMessageBox>
+<fcp:SimpleMessageBox id="messageBox" runat="server"></fcp:SimpleMessageBox>
 </ContentTemplate>
 </asp:UpdatePanel>
 
@@ -128,7 +128,7 @@
 <asp:Panel ID="UploadFilePanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnUpload">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-upload"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblUploadFile" Text="Upload File" /></h3>
+            <h3><i class="fa fa-upload"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblUploadFile" Text="Upload File" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -153,7 +153,7 @@
 <asp:Panel ID="CopyFilesPanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnCopy">
      <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-files-o"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblCopySelectedFiles" Text="Copy Selected Files" /></h3>
+            <h3><i class="fa fa-files-o"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblCopySelectedFiles" Text="Copy Selected Files" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -175,7 +175,7 @@
 <asp:Panel ID="MoveFilesPanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnMove">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-clipboard"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblMoveSelectedFiles" Text="Move Selected Files" /></h3>
+            <h3><i class="fa fa-clipboard"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblMoveSelectedFiles" Text="Move Selected Files" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -198,7 +198,7 @@
 <asp:Panel ID="CreateFilePanel" runat="server" CssClass="PopupContainer mpeTarget" style="display:none" DefaultButton="btnCreateFile">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-file-code-o"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblCreateFile" Text="Create Text File" /></h3>
+            <h3><i class="fa fa-file-code-o"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblCreateFile" Text="Create Text File" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -225,7 +225,7 @@
 <asp:Panel ID="CreateFolderPanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnCreateFolder">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-folder"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblCreateFolder" Text="Create Folder" /></h3>
+            <h3><i class="fa fa-folder"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblCreateFolder" Text="Create Folder" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -247,7 +247,7 @@
 <asp:Panel ID="ZipFilesPanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnZip">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-file-archive-o"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblZipFiles" Text="Zip Selected Files" /></h3>
+            <h3><i class="fa fa-file-archive-o"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblZipFiles" Text="Zip Selected Files" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -269,7 +269,7 @@
 <asp:Panel ID="CreateDatabasePanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnCreateDatabase">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-database"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblCreateAccessDatabase" Text="Create Access Database" /></h3>
+            <h3><i class="fa fa-database"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblCreateAccessDatabase" Text="Create Access Database" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -292,7 +292,7 @@
 <asp:Panel ID="DeleteFilesPanel" runat="server" CssClass="PopupContainer" style="display:none">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-trash"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblDeleteFiles" Text="Delete Selected Files" /></h3>
+            <h3><i class="fa fa-trash"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblDeleteFiles" Text="Delete Selected Files" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -411,7 +411,7 @@
 <asp:Panel ID="EditFilePanel" runat="server" CssClass="PopupContainer fileeditor" style="display:none" DefaultButton="btnSaveEditFile">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-pencil"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblEditFile" Text="Edit File" /></h3>
+            <h3><i class="fa fa-pencil"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblEditFile" Text="Edit File" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -438,7 +438,7 @@
 <asp:Panel ID="RenameFilePanel" runat="server" CssClass="PopupContainer" style="display:none" DefaultButton="btnRename">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-pencil"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblRenameFileFolder" Text="Rename File" /></h3>
+            <h3><i class="fa fa-pencil"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblRenameFileFolder" Text="Rename File" /></h3>
         </div>
         <div class="widget-content Popup">
 			<div class="FormRow">
@@ -461,7 +461,7 @@
 <asp:Panel ID="PermissionsWindowsFilePanel" runat="server" CssClass="PopupContainer" style="display:none">
     <div class="widget">
         <div class="widget-header clearfix">
-            <h3><i class="fa fa-users"></i> <scp:PopupHeader runat="server" meta:resourcekey="lblPermissions" Text="File/Folder Permissions" /></h3>
+            <h3><i class="fa fa-users"></i> <fcp:PopupHeader runat="server" meta:resourcekey="lblPermissions" Text="File/Folder Permissions" /></h3>
         </div>
         <div class="widget-content Popup">
             <div style="border-top: solid 1px #e0e0e0;width:380px; height: 175px; overflow: auto; white-space: nowrap;">

@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeUser.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditHeliconApeUser" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc2" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <script src="/JavaScript/jquery.min.js?v=1.4.4" type="text/javascript">
 
 </script>
@@ -80,9 +80,9 @@ function authTypeChanged(el) {
 	            </tr>
             </table>
             
-            <scp:CollapsiblePanel id="secGroups" runat="server"
+            <fcp:CollapsiblePanel id="secGroups" runat="server"
                 TargetControlID="GroupsPanel" meta:resourcekey="secGroups" Text="Member Of">
-            </scp:CollapsiblePanel>
+            </fcp:CollapsiblePanel>
 	        <asp:Panel ID="GroupsPanel" runat="server" Height="0" style="overflow:hidden;">
                 <table id="tblGroups" runat="server" cellSpacing="0" cellPadding="3" width="100%">
 	                <tr>

@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Backup.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.Backup" %>
-<%@ Register Src="../UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="fcp" %>
 
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>
@@ -40,8 +40,8 @@
                     <asp:Label ID="lblSpaceFolder" runat="server" meta:resourcekey="lblSpaceFolder" Text="Folder:"></asp:Label>
                 </td>
                 <td class="SubHead" width="100%">
-                    <scp:FileLookup id="spaceFolder" runat="server" ValidationGroup="Backup">
-                    </scp:FileLookup>
+                    <fcp:FileLookup id="spaceFolder" runat="server" ValidationGroup="Backup">
+                    </fcp:FileLookup>
                 </td>
             </tr>
         </table>

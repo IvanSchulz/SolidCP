@@ -38,11 +38,11 @@ namespace FuseCP.UniversalInstaller.Controls
 {
 	internal class ResultViewControl : UserControl
 	{
-		private SCPAppContext appContext;
+		private FCPAppContext appContext;
 		private bool isInitialized;
 
 		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-		public SCPAppContext AppContext
+		public FCPAppContext AppContext
 		{
 			get { return appContext; }
 			set { appContext = value; }
@@ -54,7 +54,7 @@ namespace FuseCP.UniversalInstaller.Controls
 			set { isInitialized = value; }
 		}
 
-		public virtual void ShowControl(SCPAppContext context)
+		public virtual void ShowControl(FCPAppContext context)
 		{
 			this.AppContext = context;
 		}

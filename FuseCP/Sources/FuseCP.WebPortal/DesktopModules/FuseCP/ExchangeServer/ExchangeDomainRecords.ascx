@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDomainRecords.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDomainRecords" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 				<div class="panel-heading">
                     <h3 class="panel-title">
 					<asp:Image ID="Image1" SkinID="ExchangeDomainName48" runat="server" />
@@ -15,7 +15,7 @@
     <div class="FormButtonsBar right" style="margin: -68px 0px 20px !important;">
 						<CPCC:StyleButton ID="btnAdd" runat="server" CssClass="btn btn-primary" CausesValidation="False"> <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAdd"/> </CPCC:StyleButton>
 	</div>
-				<scp:SimpleMessageBox id="messageBox" runat="server" />
+				<fcp:SimpleMessageBox id="messageBox" runat="server" />
 		    
 					<div class="FormButtonsBarCleanRight">
 						<asp:UpdateProgress ID="recordsProgress" runat="server"

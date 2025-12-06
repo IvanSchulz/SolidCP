@@ -12,105 +12,105 @@ IF not defined FuseCPFileVersion ( Set FuseCPFileVersion=2.0.0)
 IF not defined Configuration ( Set Configuration=Release)
 
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Community\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=18.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Community\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=18.0
 	Echo Found VS 2026 Community
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Professional\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Professional\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=18.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Professional\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=18.0
 	Echo Found VS 2026 Professional
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Enterprise\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=18.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=18.0
 	Echo Found VS 2026 Enterprise
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\18\Preview\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Preview\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=18.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\18\Preview\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=18.0
 	Echo Found VS 2026 Preview
 	GOTO Build 
  )
  IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=18.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\18\BuildTools\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=18.0
 	Echo Found VS 2026 Build Tools
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2022\Community\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=17.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=17.0
 	Echo Found VS 2022 Community
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2022\Professional\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=17.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=17.0
 	Echo Found VS 2022 Professional
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=17.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=17.0
 	Echo Found VS 2022 Enterprise
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles%\Microsoft Visual Studio\2022\Preview\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Preview\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=17.0
+	Set FCPMSBuild="%ProgramFiles%\Microsoft Visual Studio\2022\Preview\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=17.0
 	Echo Found VS 2022 Preview
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=16.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=16.0
 	Echo Found VS 2019 Community
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=16.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=16.0
 	Echo Found VS 2019 Professional
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
-	Set SCPVSVer=16.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+	Set FCPVSVer=16.0
 	Echo Found VS 2019 Enterprise
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
-	Set SCPVSVer=15.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
+	Set FCPVSVer=15.0
 	Echo Found VS 2017 Community
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe"
-	Set SCPVSVer=15.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe"
+	Set FCPVSVer=15.0
 	Echo Found VS 2017 Professional
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
-	Set SCPVSVer=15.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
+	Set FCPVSVer=15.0
 	Echo Found VS 2017 Enterprise
 	GOTO Build 
  )
 IF EXIST "%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" (
-	Set SCPMSBuild="%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe"
-	Set SCPVSVer=14.0
+	Set FCPMSBuild="%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe"
+	Set FCPVSVer=14.0
 	Echo Found VS 2015
 	GOTO Build 
  )
 
 echo "VisualStudio not found. VisualStudio must be installed to build FuseCP."
 
-Set SCPMSBuild="msbuild"
+Set FCPMSBuild="msbuild"
 
 :Build
-dotnet msbuild build.xml /target:Build/p:BuildConfiguration=%Configuration% /p:Version="%FuseCPVersion%" /p:FileVersion="%FuseCPFileVersion%" /p:VersionLabel="%FuseCPFileVersion%" %MsBuildSwitches% /fileLogger /flp:verbosity=normal /p:VisualStudioVersion=%SCPVSVer%
+dotnet msbuild build.xml /target:Build/p:BuildConfiguration=%Configuration% /p:Version="%FuseCPVersion%" /p:FileVersion="%FuseCPFileVersion%" /p:VersionLabel="%FuseCPFileVersion%" %MsBuildSwitches% /fileLogger /flp:verbosity=normal /p:VisualStudioVersion=%FCPVSVer%

@@ -1,0 +1,2712 @@
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..2125666
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1 @@
++* text=auto
+\ No newline at end of file
+diff --git a/.gitignore b/.gitignore
+index 333c25e..09fd210 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -153,5 +153,5 @@ $RECYCLE.BIN/
+ 
+ # custom entries
+ /src/SampleService/obj
+-/(Vendor)/NuGet/
+-/(Stage)/
++/(Vendor)/NuGet/
++/(Stage)/
+diff --git a/KornSW.SwaggerWcf.nuspec b/KornSW.SwaggerWcf.nuspec
+index 0d56805..a1a976f 100644
+--- a/KornSW.SwaggerWcf.nuspec
++++ b/KornSW.SwaggerWcf.nuspec
+@@ -1,31 +1,31 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+-  <metadata>
+-    <id>KornSW.SwaggerWcf</id>
+-    <version>1.3.0-localbuild</version>
+-    <title>KornSW.SwaggerWcf (fork)</title>
+-    <authors>KornSW (feat. abelsilva)</authors>
+-    <owners>KornSW (feat. abelsilva)</owners>
+-    <copyright>KornSW (feat. abelsilva)</copyright>
+-    <description>Swagger for WCF (fork by KornSW)</description>
+-    <tags>swagger wcf .net core c# openapi</tags>
+-    <!-- https://spdx.org/licenses/ -->
+-    <license type="expression">Apache-2.0</license>
+-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+-    <icon>PackageIcon.png</icon>
+-    <projectUrl>https://github.com/KornSW/swaggerwcf</projectUrl>
+-    <dependencies>
+-      <group targetFramework=".NETFramework4.6">
+-        <dependency id="Newtonsoft.Json" version="[13.0.3,13.9999]" />
+-      </group>
+-    </dependencies>
+-  </metadata>
+-  <files>
+-    <!-- https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#from-a-convention-based-working-directory -->
+-    <file src="PackageIcon.png" target="" />
+-    <!-- .NET 4.6.1 -->
+-    <file src="(Stage)\Bin\net46\SwaggerWcf.dll" target="lib/net46" />
+-    <file src="(Stage)\Bin\net46\SwaggerWcf.xml" target="lib/net46" />
+-    <file src="(Stage)\Bin\net46\SwaggerWcf.pdb" target="lib/net46" />
+-  </files>
+-</package>
++<?xml version="1.0" encoding="utf-8"?>
++<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
++  <metadata>
++    <id>KornSW.SwaggerWcf</id>
++    <version>1.3.0-localbuild</version>
++    <title>KornSW.SwaggerWcf (fork)</title>
++    <authors>KornSW (feat. abelsilva)</authors>
++    <owners>KornSW (feat. abelsilva)</owners>
++    <copyright>KornSW (feat. abelsilva)</copyright>
++    <description>Swagger for WCF (fork by KornSW)</description>
++    <tags>swagger wcf .net core c# openapi</tags>
++    <!-- https://spdx.org/licenses/ -->
++    <license type="expression">Apache-2.0</license>
++    <requireLicenseAcceptance>false</requireLicenseAcceptance>
++    <icon>PackageIcon.png</icon>
++    <projectUrl>https://github.com/KornSW/swaggerwcf</projectUrl>
++    <dependencies>
++      <group targetFramework=".NETFramework4.6">
++        <dependency id="Newtonsoft.Json" version="[13.0.3,13.9999]" />
++      </group>
++    </dependencies>
++  </metadata>
++  <files>
++    <!-- https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#from-a-convention-based-working-directory -->
++    <file src="PackageIcon.png" target="" />
++    <!-- .NET 4.6.1 -->
++    <file src="(Stage)\Bin\net46\SwaggerWcf.dll" target="lib/net46" />
++    <file src="(Stage)\Bin\net46\SwaggerWcf.xml" target="lib/net46" />
++    <file src="(Stage)\Bin\net46\SwaggerWcf.pdb" target="lib/net46" />
++  </files>
++</package>
+diff --git a/Pack-KornSW.SwaggerWcf.bat b/Pack-KornSW.SwaggerWcf.bat
+index 52effe9..413d03d 100644
+--- a/Pack-KornSW.SwaggerWcf.bat
++++ b/Pack-KornSW.SwaggerWcf.bat
+@@ -1,9 +1,9 @@
+-
+-nuget pack ./KornSW.SwaggerWcf.nuspec -Symbols -OutputDirectory ".\(Stage)\Packages" -InstallPackageToOutputPath
+-
+-IF NOT EXIST "..\..\(NuGetRepo)" GOTO NOCOPYTOGLOBALREPO
+-xcopy ".\(Stage)\Packages\*.nuspec" "..\..\(NuGetRepo)\" /d /r /y /s
+-xcopy ".\(Stage)\Packages\*.nupkg*" "..\..\(NuGetRepo)\" /d /r /y /s
+-:NOCOPYTOGLOBALREPO
+-
++
++nuget pack ./KornSW.SwaggerWcf.nuspec -Symbols -OutputDirectory ".\(Stage)\Packages" -InstallPackageToOutputPath
++
++IF NOT EXIST "..\..\(NuGetRepo)" GOTO NOCOPYTOGLOBALREPO
++xcopy ".\(Stage)\Packages\*.nuspec" "..\..\(NuGetRepo)\" /d /r /y /s
++xcopy ".\(Stage)\Packages\*.nupkg*" "..\..\(NuGetRepo)\" /d /r /y /s
++:NOCOPYTOGLOBALREPO
++
+ PAUSE
+\ No newline at end of file
+diff --git a/patches/Added-long-Enum-and-non-generic-IEnumerable-support.patch b/patches/Added-long-Enum-and-non-generic-IEnumerable-support.patch
+new file mode 100644
+index 0000000..6dcb602
+--- /dev/null
++++ b/patches/Added-long-Enum-and-non-generic-IEnumerable-support.patch
+@@ -0,0 +1,194 @@
++diff --git a/.gitattributes b/.gitattributes
++new file mode 100644
++index 0000000..2125666
++--- /dev/null
+++++ b/.gitattributes
++@@ -0,0 +1 @@
+++* text=auto
++\ No newline at end of file
++diff --git a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
++index 1645fc3..1a266c5 100644
++--- a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
+++++ b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
++@@ -35,7 +35,7 @@
++     <WarningLevel>4</WarningLevel>
++   </PropertyGroup>
++   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++-    <DebugType>pdbonly</DebugType>
+++    <DebugType>portable</DebugType>
++     <Optimize>true</Optimize>
++     <OutputPath>bin\</OutputPath>
++     <DefineConstants>TRACE</DefineConstants>
++@@ -126,11 +126,11 @@
++       </FlavorProperties>
++     </VisualStudio>
++   </ProjectExtensions>
++-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
++-       Other similar extension points exist, see Microsoft.Common.targets.
++-  <Target Name="BeforeBuild">
++-  </Target>
++-  <Target Name="AfterBuild">
++-  </Target>
+++  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+++       Other similar extension points exist, see Microsoft.Common.targets.
+++  <Target Name="BeforeBuild">
+++  </Target>
+++  <Target Name="AfterBuild">
+++  </Target>
++   -->
++ </Project>
++\ No newline at end of file
++diff --git a/src/SwaggerWcf/Models/DefinitionProperty.cs b/src/SwaggerWcf/Models/DefinitionProperty.cs
++index b708ca8..821c588 100644
++--- a/src/SwaggerWcf/Models/DefinitionProperty.cs
+++++ b/src/SwaggerWcf/Models/DefinitionProperty.cs
++@@ -53,7 +53,7 @@ namespace SwaggerWcf.Models
++ 
++         public bool UniqueItems { get; set; }
++ 
++-        public List<int> Enum { get; set; }
+++        public List<long> Enum { get; set; }
++ 
++         public decimal MultipleOf { get; set; }
++ 
++diff --git a/src/SwaggerWcf/Models/DefinitionSchema.cs b/src/SwaggerWcf/Models/DefinitionSchema.cs
++index a1e9d15..dbf0e9e 100644
++--- a/src/SwaggerWcf/Models/DefinitionSchema.cs
+++++ b/src/SwaggerWcf/Models/DefinitionSchema.cs
++@@ -22,7 +22,7 @@ namespace SwaggerWcf.Models
++ 
++         public List<DefinitionProperty> Properties { get; set; }
++ 
++-        public List<int> Enum { get; set; }
+++        public List<long> Enum { get; set; }
++ 
++         public void Serialize(JsonWriter writer)
++         {
++diff --git a/src/SwaggerWcf/Properties/AssemblyInfo.cs b/src/SwaggerWcf/Properties/AssemblyInfo.cs
++index 784b59e..7e78ca5 100644
++--- a/src/SwaggerWcf/Properties/AssemblyInfo.cs
+++++ b/src/SwaggerWcf/Properties/AssemblyInfo.cs
++@@ -1,4 +1,4 @@
++-﻿using System;
+++﻿using System;
++ using System.Reflection;
++ using System.Runtime.InteropServices;
++ 
++@@ -20,6 +20,6 @@ using System.Runtime.InteropServices;
++ [assembly: ComVisible(false)]
++ [assembly: Guid("d2eeaa63-60e5-4fda-8b62-e05dc8be8b5f")]
++ 
++-[assembly: AssemblyVersion("1.3.0.*")]
++-[assembly: AssemblyInformationalVersion("1.3.0-localbuild")]
+++[assembly: AssemblyVersion("1.3.1.*")]
+++[assembly: AssemblyInformationalVersion("1.3.1-localbuild")]
++ //DONT ADD: [assembly: AssemblyFileVersion] !!!
++\ No newline at end of file
++diff --git a/src/SwaggerWcf/Support/DefinitionsBuilder.cs b/src/SwaggerWcf/Support/DefinitionsBuilder.cs
++index 7988c42..1ae12b6 100644
++--- a/src/SwaggerWcf/Support/DefinitionsBuilder.cs
+++++ b/src/SwaggerWcf/Support/DefinitionsBuilder.cs
++@@ -1,4 +1,5 @@
++ ﻿using System;
+++using System.Collections;
++ using System.Collections.Generic;
++ using System.ComponentModel;
++ using System.Linq;
++@@ -67,7 +68,7 @@ namespace SwaggerWcf.Support
++ 
++             if (schema.TypeFormat.Type == ParameterType.Integer && schema.TypeFormat.Format == "enum")
++             {
++-                schema.Enum = new List<int>();
+++                schema.Enum = new List<long>();
++ 
++                 Type propType = definitionType;
++ 
++@@ -139,6 +140,14 @@ namespace SwaggerWcf.Support
++             Type iface = (from i in type.GetInterfaces()
++                           where i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>)
++                           select i).FirstOrDefault();
+++            
+++            if (iface == null)
+++            {
+++                if (type == typeof(IEnumerable) || type.GetInterfaces().Any(i => i == typeof(IEnumerable)))
+++                {
+++                    return typeof(object);
+++                }
+++            }
++ 
++             return iface == null ? null : GetEnumerableType(iface);
++         }
++@@ -215,14 +224,14 @@ namespace SwaggerWcf.Support
++             ApplyIfValid(LastValidValue(attrs, a => a._MultipleOf), x => prop.MultipleOf = x.Value);
++         }
++         
++-        public static int GetEnumMemberValue(Type enumType, string enumName)
+++        public static long GetEnumMemberValue(Type enumType, string enumName)
++         {
++             if (string.IsNullOrWhiteSpace(enumName))
++                 return 0;
++             var enumVal = Enum.Parse(enumType, enumName, true);
++             var underlyingType = Enum.GetUnderlyingType(enumType);
++             var val = Convert.ChangeType(enumVal, underlyingType);
++-            return Convert.ToInt32(val);
+++            return Convert.ToInt64(val);
++         }
++ 
++         public static string GetEnumDescription(Enum value)
++diff --git a/src/SwaggerWcf/Support/TypeFieldsProcessor.cs b/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
++index 7c6d9d0..9869c1e 100644
++--- a/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
+++++ b/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
++@@ -130,7 +130,7 @@ namespace SwaggerWcf.Support
++ 
++             if ((prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum") || (prop.TypeFormat.Type == ParameterType.Array && prop.Items.TypeFormat.Format == "enum"))
++             {
++-                prop.Enum = new List<int>();
+++                prop.Enum = new List<long>();
++ 
++                 Type propType = propertyInfo.FieldType;
++ 
++@@ -144,7 +144,7 @@ namespace SwaggerWcf.Support
++                     var enumMemberItem = Enum.Parse(propType, enumName, true);
++                     string enumMemberDescription = DefinitionsBuilder.GetEnumDescription((Enum)enumMemberItem);
++                     enumMemberDescription = (string.IsNullOrWhiteSpace(enumMemberDescription)) ? "" : $"({enumMemberDescription})";
++-                    int enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
+++                    long enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
++                     if (prop.Description != null) prop.Enum.Add(enumMemberValue);
++                     enumDescription += $"    {enumName}{System.Web.HttpUtility.HtmlEncode(" = ")}{enumMemberValue} {enumMemberDescription}\r\n";
++                 }
++diff --git a/src/SwaggerWcf/Support/TypePropertiesProcessor.cs b/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
++index eb8f18f..54e4772 100644
++--- a/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
+++++ b/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
++@@ -130,7 +130,7 @@ namespace SwaggerWcf.Support
++ 
++             if ((prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum") || (prop.TypeFormat.Type == ParameterType.Array && prop.Items.TypeFormat.Format == "enum"))
++             {
++-                prop.Enum = new List<int>();
+++                prop.Enum = new List<long>();
++ 
++                 Type propType = propertyInfo.PropertyType;
++ 
++@@ -144,7 +144,7 @@ namespace SwaggerWcf.Support
++                     var enumMemberItem = Enum.Parse(propType, enumName, true);
++                     string enumMemberDescription = DefinitionsBuilder.GetEnumDescription((Enum)enumMemberItem);
++                     enumMemberDescription = (string.IsNullOrWhiteSpace(enumMemberDescription)) ? "" : $"({enumMemberDescription})";
++-                    int enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
+++                    long enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
++                     if (prop.Description != null) prop.Enum.Add(enumMemberValue);
++                     enumDescription += $"    {enumName}{System.Web.HttpUtility.HtmlEncode(" = ")}{enumMemberValue} {enumMemberDescription}\r\n";
++                 }
++diff --git a/src/SwaggerWcf/packages.config b/src/SwaggerWcf/packages.config
++index 6033a9c..64c7b75 100644
++--- a/src/SwaggerWcf/packages.config
+++++ b/src/SwaggerWcf/packages.config
++@@ -1,4 +1,4 @@
++-﻿<?xml version="1.0" encoding="utf-8"?>
++-<packages>
++-  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net461" />
+++﻿<?xml version="1.0" encoding="utf-8"?>
+++<packages>
+++  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net461" />
++ </packages>
++\ No newline at end of file
+diff --git a/src/.nuget/NuGet.Config b/src/.nuget/NuGet.Config
+index c69a277..93e3e25 100644
+--- a/src/.nuget/NuGet.Config
++++ b/src/.nuget/NuGet.Config
+@@ -1,4 +1,4 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
++<?xml version="1.0" encoding="utf-8"?>
+ <configuration>
+ 
+   <!-- Controls whether the packages folder of a solution is included in source control. -->
+diff --git a/src/KornSW.SwaggerWcf.sln b/src/KornSW.SwaggerWcf.sln
+index 71ea2e5..7cd6019 100644
+--- a/src/KornSW.SwaggerWcf.sln
++++ b/src/KornSW.SwaggerWcf.sln
+@@ -1,43 +1,43 @@
+-﻿
+-Microsoft Visual Studio Solution File, Format Version 12.00
+-# Visual Studio Version 16
+-VisualStudioVersion = 16.0.30907.101
+-MinimumVisualStudioVersion = 10.0.40219.1
+-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4130D21C-FE8F-4925-93E7-217B4AF1B7D9}"
+-	ProjectSection(SolutionItems) = preProject
+-		..\KornSW.SwaggerWcf.nuspec = ..\KornSW.SwaggerWcf.nuspec
+-		SwaggerWcf\SwaggerWcf.nuspec = SwaggerWcf\SwaggerWcf.nuspec
+-	EndProjectSection
+-EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf", "SwaggerWcf\SwaggerWcf.csproj", "{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}"
+-EndProject
+-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{EFB5135D-039A-4D92-8FDD-9EA5D070F991}"
+-EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf.Test.Service", "SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{FD02752A-614D-4FAF-8994-519C754107B1}"
+-EndProject
+-Global
+-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+-		Debug|Any CPU = Debug|Any CPU
+-		Release|Any CPU = Release|Any CPU
+-	EndGlobalSection
+-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.Build.0 = Release|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.Build.0 = Release|Any CPU
+-	EndGlobalSection
+-	GlobalSection(SolutionProperties) = preSolution
+-		HideSolutionNode = FALSE
+-	EndGlobalSection
+-	GlobalSection(NestedProjects) = preSolution
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
+-		{FD02752A-614D-4FAF-8994-519C754107B1} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
+-	EndGlobalSection
+-	GlobalSection(ExtensibilityGlobals) = postSolution
+-		SolutionGuid = {D2F37C1D-32F0-4BF2-AAEB-46B9D8C07D23}
+-	EndGlobalSection
+-EndGlobal
++
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio Version 16
++VisualStudioVersion = 16.0.30907.101
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4130D21C-FE8F-4925-93E7-217B4AF1B7D9}"
++	ProjectSection(SolutionItems) = preProject
++		..\KornSW.SwaggerWcf.nuspec = ..\KornSW.SwaggerWcf.nuspec
++		SwaggerWcf\SwaggerWcf.nuspec = SwaggerWcf\SwaggerWcf.nuspec
++	EndProjectSection
++EndProject
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf", "SwaggerWcf\SwaggerWcf.csproj", "{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}"
++EndProject
++Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{EFB5135D-039A-4D92-8FDD-9EA5D070F991}"
++EndProject
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf.Test.Service", "SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{FD02752A-614D-4FAF-8994-519C754107B1}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Any CPU = Debug|Any CPU
++		Release|Any CPU = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.Build.0 = Release|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.Build.0 = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++	GlobalSection(NestedProjects) = preSolution
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
++		{FD02752A-614D-4FAF-8994-519C754107B1} = {EFB5135D-039A-4D92-8FDD-9EA5D070F991}
++	EndGlobalSection
++	GlobalSection(ExtensibilityGlobals) = postSolution
++		SolutionGuid = {D2F37C1D-32F0-4BF2-AAEB-46B9D8C07D23}
++	EndGlobalSection
++EndGlobal
+diff --git a/src/SwaggerWcf.Test.Service/AuthorService.cs b/src/SwaggerWcf.Test.Service/AuthorService.cs
+index 86cb029..24a35b9 100644
+--- a/src/SwaggerWcf.Test.Service/AuthorService.cs
++++ b/src/SwaggerWcf.Test.Service/AuthorService.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Attributes;
++using SwaggerWcf.Attributes;
+ using SwaggerWcf.Test.Service.Data;
+ using System;
+ using System.Collections.Generic;
+diff --git a/src/SwaggerWcf.Test.Service/BaseService.cs b/src/SwaggerWcf.Test.Service/BaseService.cs
+index 9001a32..8a1aff3 100644
+--- a/src/SwaggerWcf.Test.Service/BaseService.cs
++++ b/src/SwaggerWcf.Test.Service/BaseService.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Test.Service.Data;
++using SwaggerWcf.Test.Service.Data;
+ using System;
+ using System.Collections.Generic;
+ using System.Linq;
+diff --git a/src/SwaggerWcf.Test.Service/Data/Author.cs b/src/SwaggerWcf.Test.Service/Data/Author.cs
+index 7d54509..fc14199 100644
+--- a/src/SwaggerWcf.Test.Service/Data/Author.cs
++++ b/src/SwaggerWcf.Test.Service/Data/Author.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Runtime.Serialization;
++using System.Runtime.Serialization;
+ using SwaggerWcf.Attributes;
+ 
+ namespace SwaggerWcf.Test.Service.Data
+diff --git a/src/SwaggerWcf.Test.Service/Data/Book.cs b/src/SwaggerWcf.Test.Service/Data/Book.cs
+index 67ede98..657e100 100644
+--- a/src/SwaggerWcf.Test.Service/Data/Book.cs
++++ b/src/SwaggerWcf.Test.Service/Data/Book.cs
+@@ -1,4 +1,4 @@
+-﻿using System.ComponentModel;
++using System.ComponentModel;
+ using System.Runtime.Serialization;
+ using SwaggerWcf.Attributes;
+ 
+diff --git a/src/SwaggerWcf.Test.Service/Data/Language.cs b/src/SwaggerWcf.Test.Service/Data/Language.cs
+index 1d01b9d..7bc7852 100644
+--- a/src/SwaggerWcf.Test.Service/Data/Language.cs
++++ b/src/SwaggerWcf.Test.Service/Data/Language.cs
+@@ -1,4 +1,4 @@
+-﻿using System.ComponentModel;
++using System.ComponentModel;
+ using System.Runtime.Serialization;
+ 
+ namespace SwaggerWcf.Test.Service.Data
+diff --git a/src/SwaggerWcf.Test.Service/Data/Store.cs b/src/SwaggerWcf.Test.Service/Data/Store.cs
+index 9303677..6b134fb 100644
+--- a/src/SwaggerWcf.Test.Service/Data/Store.cs
++++ b/src/SwaggerWcf.Test.Service/Data/Store.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ 
+ namespace SwaggerWcf.Test.Service.Data
+diff --git a/src/SwaggerWcf.Test.Service/Global.asax b/src/SwaggerWcf.Test.Service/Global.asax
+index 6254f83..e1a6bf1 100644
+--- a/src/SwaggerWcf.Test.Service/Global.asax
++++ b/src/SwaggerWcf.Test.Service/Global.asax
+@@ -1 +1 @@
+-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="SwaggerWcf.Test.Service.Global" Language="C#" %>
++<%@ Application Codebehind="Global.asax.cs" Inherits="SwaggerWcf.Test.Service.Global" Language="C#" %>
+diff --git a/src/SwaggerWcf.Test.Service/Global.asax.cs b/src/SwaggerWcf.Test.Service/Global.asax.cs
+index a6a66cf..16b870b 100644
+--- a/src/SwaggerWcf.Test.Service/Global.asax.cs
++++ b/src/SwaggerWcf.Test.Service/Global.asax.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.ServiceModel.Activation;
+ using System.Web;
+diff --git a/src/SwaggerWcf.Test.Service/IAuthorService.cs b/src/SwaggerWcf.Test.Service/IAuthorService.cs
+index 3dab7dd..c0fe76a 100644
+--- a/src/SwaggerWcf.Test.Service/IAuthorService.cs
++++ b/src/SwaggerWcf.Test.Service/IAuthorService.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Test.Service.Data;
++using SwaggerWcf.Test.Service.Data;
+ using System;
+ using System.Collections.Generic;
+ using System.Linq;
+diff --git a/src/SwaggerWcf.Test.Service/IBaseCRUDService.cs b/src/SwaggerWcf.Test.Service/IBaseCRUDService.cs
+index e62126b..2008aec 100644
+--- a/src/SwaggerWcf.Test.Service/IBaseCRUDService.cs
++++ b/src/SwaggerWcf.Test.Service/IBaseCRUDService.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Attributes;
++using SwaggerWcf.Attributes;
+ using System;
+ using System.Collections.Generic;
+ using System.Linq;
+diff --git a/src/SwaggerWcf.Test.Service/IBaseService.cs b/src/SwaggerWcf.Test.Service/IBaseService.cs
+index ae19326..cf2d772 100644
+--- a/src/SwaggerWcf.Test.Service/IBaseService.cs
++++ b/src/SwaggerWcf.Test.Service/IBaseService.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Attributes;
++using SwaggerWcf.Attributes;
+ using System;
+ using System.Collections.Generic;
+ using System.Linq;
+diff --git a/src/SwaggerWcf.Test.Service/IStore.cs b/src/SwaggerWcf.Test.Service/IStore.cs
+index 308e5ce..8a2cbdf 100644
+--- a/src/SwaggerWcf.Test.Service/IStore.cs
++++ b/src/SwaggerWcf.Test.Service/IStore.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.Net;
+ using System.ServiceModel;
+diff --git a/src/SwaggerWcf.Test.Service/Properties/AssemblyInfo.cs b/src/SwaggerWcf.Test.Service/Properties/AssemblyInfo.cs
+index d05b030..14b35ac 100644
+--- a/src/SwaggerWcf.Test.Service/Properties/AssemblyInfo.cs
++++ b/src/SwaggerWcf.Test.Service/Properties/AssemblyInfo.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Reflection;
++using System.Reflection;
+ using System.Runtime.CompilerServices;
+ using System.Runtime.InteropServices;
+ 
+diff --git a/src/SwaggerWcf.Test.Service/Store.svc b/src/SwaggerWcf.Test.Service/Store.svc
+index e00069a..1e4e97e 100644
+--- a/src/SwaggerWcf.Test.Service/Store.svc
++++ b/src/SwaggerWcf.Test.Service/Store.svc
+@@ -1 +1 @@
+-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SwaggerWcf.Test.Service.BookStore" CodeBehind="Store.svc.cs" %>
+\ No newline at end of file
++<%@ ServiceHost Language="C#" Debug="true" Service="SwaggerWcf.Test.Service.BookStore" CodeBehind="Store.svc.cs" %>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf.Test.Service/Store.svc.cs b/src/SwaggerWcf.Test.Service/Store.svc.cs
+index cf425dc..6603fc2 100644
+--- a/src/SwaggerWcf.Test.Service/Store.svc.cs
++++ b/src/SwaggerWcf.Test.Service/Store.svc.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.Linq;
+ using System.Net;
+diff --git a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
+index 1645fc3..a69c091 100644
+--- a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
++++ b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
+@@ -1,136 +1,136 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+-  <PropertyGroup>
+-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+-    <ProductVersion>
+-    </ProductVersion>
+-    <SchemaVersion>2.0</SchemaVersion>
+-    <ProjectGuid>{FD02752A-614D-4FAF-8994-519C754107B1}</ProjectGuid>
+-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+-    <OutputType>Library</OutputType>
+-    <AppDesignerFolder>Properties</AppDesignerFolder>
+-    <RootNamespace>SwaggerWcf.Test.Service</RootNamespace>
+-    <AssemblyName>SwaggerWcf.Test.Service</AssemblyName>
+-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+-    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+-    <UseIISExpress>true</UseIISExpress>
+-    <IISExpressSSLPort />
+-    <IISExpressAnonymousAuthentication />
+-    <IISExpressWindowsAuthentication />
+-    <IISExpressUseClassicPipelineMode />
+-    <UseGlobalApplicationHostFile />
+-    <TargetFrameworkProfile />
+-    <Use64BitIISExpress />
+-  </PropertyGroup>
+-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+-    <DebugSymbols>true</DebugSymbols>
+-    <DebugType>full</DebugType>
+-    <Optimize>false</Optimize>
+-    <OutputPath>bin\</OutputPath>
+-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+-    <ErrorReport>prompt</ErrorReport>
+-    <WarningLevel>4</WarningLevel>
+-  </PropertyGroup>
+-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+-    <DebugType>pdbonly</DebugType>
+-    <Optimize>true</Optimize>
+-    <OutputPath>bin\</OutputPath>
+-    <DefineConstants>TRACE</DefineConstants>
+-    <ErrorReport>prompt</ErrorReport>
+-    <WarningLevel>4</WarningLevel>
+-  </PropertyGroup>
+-  <ItemGroup>
+-    <Reference Include="Microsoft.CSharp" />
+-    <Reference Include="System.Data.DataSetExtensions" />
+-    <Reference Include="System.ServiceModel.Activation" />
+-    <Reference Include="System.Web.DynamicData" />
+-    <Reference Include="System.Web.Entity" />
+-    <Reference Include="System.Web.ApplicationServices" />
+-    <Reference Include="System" />
+-    <Reference Include="System.Configuration" />
+-    <Reference Include="System.Data" />
+-    <Reference Include="System.Drawing" />
+-    <Reference Include="System.EnterpriseServices" />
+-    <Reference Include="System.Runtime.Serialization" />
+-    <Reference Include="System.ServiceModel" />
+-    <Reference Include="System.ServiceModel.Web" />
+-    <Reference Include="System.Web" />
+-    <Reference Include="System.Web.Extensions" />
+-    <Reference Include="System.Web.Services" />
+-    <Reference Include="System.Xml" />
+-    <Reference Include="System.Xml.Linq" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <Content Include="Store.svc" />
+-    <Content Include="Global.asax" />
+-    <Content Include="Web.config" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <Compile Include="AuthorService.cs" />
+-    <Compile Include="BaseService.cs" />
+-    <Compile Include="Data\Author.cs" />
+-    <Compile Include="Data\Book.cs" />
+-    <Compile Include="Data\Language.cs" />
+-    <Compile Include="Data\Store.cs" />
+-    <Compile Include="IAuthorService.cs" />
+-    <Compile Include="IBaseCRUDService.cs" />
+-    <Compile Include="IBaseService.cs" />
+-    <Compile Include="Store.svc.cs">
+-      <DependentUpon>Store.svc</DependentUpon>
+-    </Compile>
+-    <Compile Include="Global.asax.cs">
+-      <DependentUpon>Global.asax</DependentUpon>
+-    </Compile>
+-    <Compile Include="IStore.cs" />
+-    <Compile Include="Properties\AssemblyInfo.cs" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <None Include="Web.Debug.config">
+-      <DependentUpon>Web.config</DependentUpon>
+-    </None>
+-    <None Include="Web.Release.config">
+-      <DependentUpon>Web.config</DependentUpon>
+-    </None>
+-  </ItemGroup>
+-  <ItemGroup>
+-    <ProjectReference Include="..\SwaggerWcf\SwaggerWcf.csproj">
+-      <Project>{0ad6efbc-412f-4c0e-8e0a-0faf28151b55}</Project>
+-      <Name>SwaggerWcf</Name>
+-    </ProjectReference>
+-  </ItemGroup>
+-  <PropertyGroup>
+-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+-  </PropertyGroup>
+-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+-  <ProjectExtensions>
+-    <VisualStudio>
+-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+-        <WebProjectProperties>
+-          <UseIIS>True</UseIIS>
+-          <AutoAssignPort>True</AutoAssignPort>
+-          <DevelopmentServerPort>52331</DevelopmentServerPort>
+-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+-          <IISUrl>http://localhost:52331/</IISUrl>
+-          <NTLMAuthentication>False</NTLMAuthentication>
+-          <UseCustomServer>False</UseCustomServer>
+-          <CustomServerUrl>
+-          </CustomServerUrl>
+-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+-        </WebProjectProperties>
+-      </FlavorProperties>
+-    </VisualStudio>
+-  </ProjectExtensions>
++<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
++  <PropertyGroup>
++    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
++    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
++    <ProductVersion>
++    </ProductVersion>
++    <SchemaVersion>2.0</SchemaVersion>
++    <ProjectGuid>{FD02752A-614D-4FAF-8994-519C754107B1}</ProjectGuid>
++    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
++    <OutputType>Library</OutputType>
++    <AppDesignerFolder>Properties</AppDesignerFolder>
++    <RootNamespace>SwaggerWcf.Test.Service</RootNamespace>
++    <AssemblyName>SwaggerWcf.Test.Service</AssemblyName>
++    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
++    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
++    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
++    <UseIISExpress>true</UseIISExpress>
++    <IISExpressSSLPort />
++    <IISExpressAnonymousAuthentication />
++    <IISExpressWindowsAuthentication />
++    <IISExpressUseClassicPipelineMode />
++    <UseGlobalApplicationHostFile />
++    <TargetFrameworkProfile />
++    <Use64BitIISExpress />
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
++    <DebugSymbols>true</DebugSymbols>
++    <DebugType>full</DebugType>
++    <Optimize>false</Optimize>
++    <OutputPath>bin\</OutputPath>
++    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++    <DebugType>portable</DebugType>
++    <Optimize>true</Optimize>
++    <OutputPath>bin\</OutputPath>
++    <DefineConstants>TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <ItemGroup>
++    <Reference Include="Microsoft.CSharp" />
++    <Reference Include="System.Data.DataSetExtensions" />
++    <Reference Include="System.ServiceModel.Activation" />
++    <Reference Include="System.Web.DynamicData" />
++    <Reference Include="System.Web.Entity" />
++    <Reference Include="System.Web.ApplicationServices" />
++    <Reference Include="System" />
++    <Reference Include="System.Configuration" />
++    <Reference Include="System.Data" />
++    <Reference Include="System.Drawing" />
++    <Reference Include="System.EnterpriseServices" />
++    <Reference Include="System.Runtime.Serialization" />
++    <Reference Include="System.ServiceModel" />
++    <Reference Include="System.ServiceModel.Web" />
++    <Reference Include="System.Web" />
++    <Reference Include="System.Web.Extensions" />
++    <Reference Include="System.Web.Services" />
++    <Reference Include="System.Xml" />
++    <Reference Include="System.Xml.Linq" />
++  </ItemGroup>
++  <ItemGroup>
++    <Content Include="Store.svc" />
++    <Content Include="Global.asax" />
++    <Content Include="Web.config" />
++  </ItemGroup>
++  <ItemGroup>
++    <Compile Include="AuthorService.cs" />
++    <Compile Include="BaseService.cs" />
++    <Compile Include="Data\Author.cs" />
++    <Compile Include="Data\Book.cs" />
++    <Compile Include="Data\Language.cs" />
++    <Compile Include="Data\Store.cs" />
++    <Compile Include="IAuthorService.cs" />
++    <Compile Include="IBaseCRUDService.cs" />
++    <Compile Include="IBaseService.cs" />
++    <Compile Include="Store.svc.cs">
++      <DependentUpon>Store.svc</DependentUpon>
++    </Compile>
++    <Compile Include="Global.asax.cs">
++      <DependentUpon>Global.asax</DependentUpon>
++    </Compile>
++    <Compile Include="IStore.cs" />
++    <Compile Include="Properties\AssemblyInfo.cs" />
++  </ItemGroup>
++  <ItemGroup>
++    <None Include="Web.Debug.config">
++      <DependentUpon>Web.config</DependentUpon>
++    </None>
++    <None Include="Web.Release.config">
++      <DependentUpon>Web.config</DependentUpon>
++    </None>
++  </ItemGroup>
++  <ItemGroup>
++    <ProjectReference Include="..\SwaggerWcf\SwaggerWcf.csproj">
++      <Project>{0ad6efbc-412f-4c0e-8e0a-0faf28151b55}</Project>
++      <Name>SwaggerWcf</Name>
++    </ProjectReference>
++  </ItemGroup>
++  <PropertyGroup>
++    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
++    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
++  </PropertyGroup>
++  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
++  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
++  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
++  <ProjectExtensions>
++    <VisualStudio>
++      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
++        <WebProjectProperties>
++          <UseIIS>True</UseIIS>
++          <AutoAssignPort>True</AutoAssignPort>
++          <DevelopmentServerPort>52331</DevelopmentServerPort>
++          <DevelopmentServerVPath>/</DevelopmentServerVPath>
++          <IISUrl>http://localhost:52331/</IISUrl>
++          <NTLMAuthentication>False</NTLMAuthentication>
++          <UseCustomServer>False</UseCustomServer>
++          <CustomServerUrl>
++          </CustomServerUrl>
++          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
++        </WebProjectProperties>
++      </FlavorProperties>
++    </VisualStudio>
++  </ProjectExtensions>
+   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+        Other similar extension points exist, see Microsoft.Common.targets.
+   <Target Name="BeforeBuild">
+   </Target>
+   <Target Name="AfterBuild">
+   </Target>
+-  -->
++  -->
+ </Project>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj.DotSettings b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj.DotSettings
+index c54c126..5f64202 100644
+--- a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj.DotSettings
++++ b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj.DotSettings
+@@ -1,2 +1,2 @@
+-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
++<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+ 	<s:String x:Key="/Default/CodeInspection/CSharpLanguageProject/LanguageLevel/@EntryValue">CSharp70</s:String></wpf:ResourceDictionary>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf.Test.Service/Web.config b/src/SwaggerWcf.Test.Service/Web.config
+index bc8475b..65c2186 100644
+--- a/src/SwaggerWcf.Test.Service/Web.config
++++ b/src/SwaggerWcf.Test.Service/Web.config
+@@ -1,70 +1,70 @@
+-﻿<?xml version="1.0"?>
+-<configuration>
+-  <!--
+-  <configSections>
+-    <section name="swaggerwcf" type="SwaggerWcf.Configuration.SwaggerWcfSection, SwaggerWcf"/>
+-  </configSections>
+-  <swaggerwcf>
+-    <tags>
+-      <tag name="LowPerformance" visible="false"/>
+-    </tags>
+-    <settings>
+-      <setting name="Schemes" value="https;http"/>
+-      <setting name="InfoDescription" value="Sample Service to test SwaggerWCF"/>
+-      <setting name="InfoVersion" value="0.0.1"/>
+-      <setting name="InfoTermsOfService" value="Terms of Service"/>
+-      <setting name="InfoTitle" value="SampleService"/>
+-      <setting name="InfoContactName" value="Abel Silva"/>
+-      <setting name="InfoContactUrl" value="http://github.com/abelsilva"/>
+-      <setting name="InfoContactEmail" value="no@e.mail"/>
+-      <setting name="InfoLicenseUrl" value="https://github.com/abelsilva/SwaggerWCF/blob/master/LICENSE"/>
+-      <setting name="InfoLicenseName" value="Apache License"/>
+-    </settings>
+-  </swaggerwcf>
+-  -->
+-  <appSettings>
+-    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
+-  </appSettings>
+-  <!--
+-    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+-
+-    The following attributes can be set on the <httpRuntime> tag.
+-      <system.Web>
+-        <httpRuntime targetFramework="4.5" />
+-      </system.Web>
+-  -->
+-  <system.web>
+-    <compilation debug="true" targetFramework="4.6.1"/>
+-    <httpRuntime targetFramework="4.5"/>
+-  </system.web>
+-  <system.serviceModel>
+-    <behaviors>
+-      <!-- ADDED automaticFormatSelectionEnabled -->
+-      <endpointBehaviors>
+-        <behavior>
+-          <webHttp automaticFormatSelectionEnabled="true"/>
+-        </behavior>
+-      </endpointBehaviors>
+-      <serviceBehaviors>
+-        <behavior>
+-          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
+-          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+-          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+-          <serviceDebug includeExceptionDetailInFaults="false"/>
+-        </behavior>
+-      </serviceBehaviors>
+-    </behaviors>
+-    <protocolMapping>
+-      <add binding="basicHttpsBinding" scheme="https"/>
+-    </protocolMapping>
+-    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true"/>
+-  </system.serviceModel>
+-  <system.webServer>
+-    <modules runAllManagedModulesForAllRequests="true"/>
+-    <!--
+-        To browse web app root directory during debugging, set the value below to true.
+-        Set to false before deployment to avoid disclosing web app folder information.
+-      -->
+-    <directoryBrowse enabled="true"/>
+-  </system.webServer>
++<?xml version="1.0"?>
++<configuration>
++  <!--
++  <configSections>
++    <section name="swaggerwcf" type="SwaggerWcf.Configuration.SwaggerWcfSection, SwaggerWcf"/>
++  </configSections>
++  <swaggerwcf>
++    <tags>
++      <tag name="LowPerformance" visible="false"/>
++    </tags>
++    <settings>
++      <setting name="Schemes" value="https;http"/>
++      <setting name="InfoDescription" value="Sample Service to test SwaggerWCF"/>
++      <setting name="InfoVersion" value="0.0.1"/>
++      <setting name="InfoTermsOfService" value="Terms of Service"/>
++      <setting name="InfoTitle" value="SampleService"/>
++      <setting name="InfoContactName" value="Abel Silva"/>
++      <setting name="InfoContactUrl" value="http://github.com/abelsilva"/>
++      <setting name="InfoContactEmail" value="no@e.mail"/>
++      <setting name="InfoLicenseUrl" value="https://github.com/abelsilva/SwaggerWCF/blob/master/LICENSE"/>
++      <setting name="InfoLicenseName" value="Apache License"/>
++    </settings>
++  </swaggerwcf>
++  -->
++  <appSettings>
++    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
++  </appSettings>
++  <!--
++    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
++
++    The following attributes can be set on the <httpRuntime> tag.
++      <system.Web>
++        <httpRuntime targetFramework="4.5" />
++      </system.Web>
++  -->
++  <system.web>
++    <compilation debug="true" targetFramework="4.6.1"/>
++    <httpRuntime targetFramework="4.5"/>
++  </system.web>
++  <system.serviceModel>
++    <behaviors>
++      <!-- ADDED automaticFormatSelectionEnabled -->
++      <endpointBehaviors>
++        <behavior>
++          <webHttp automaticFormatSelectionEnabled="true"/>
++        </behavior>
++      </endpointBehaviors>
++      <serviceBehaviors>
++        <behavior>
++          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
++          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
++          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
++          <serviceDebug includeExceptionDetailInFaults="false"/>
++        </behavior>
++      </serviceBehaviors>
++    </behaviors>
++    <protocolMapping>
++      <add binding="basicHttpsBinding" scheme="https"/>
++    </protocolMapping>
++    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true"/>
++  </system.serviceModel>
++  <system.webServer>
++    <modules runAllManagedModulesForAllRequests="true"/>
++    <!--
++        To browse web app root directory during debugging, set the value below to true.
++        Set to false before deployment to avoid disclosing web app folder information.
++      -->
++    <directoryBrowse enabled="true"/>
++  </system.webServer>
+ </configuration>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf.sln b/src/SwaggerWcf.sln
+index 58b87c2..cd7bdb8 100644
+--- a/src/SwaggerWcf.sln
++++ b/src/SwaggerWcf.sln
+@@ -1,40 +1,40 @@
+-﻿
+-Microsoft Visual Studio Solution File, Format Version 12.00
+-# Visual Studio Version 16
+-VisualStudioVersion = 16.0.30907.101
+-MinimumVisualStudioVersion = 10.0.40219.1
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf", "SwaggerWcf\SwaggerWcf.csproj", "{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}"
+-EndProject
+-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{479EF2BE-93C9-4DE8-ACDD-538BB2203DB4}"
+-	ProjectSection(SolutionItems) = preProject
+-		..\README.md = ..\README.md
+-		..\notes\spec-2.0.md = ..\notes\spec-2.0.md
+-	EndProjectSection
+-EndProject
+-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf.Test.Service", "SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{FD02752A-614D-4FAF-8994-519C754107B1}"
+-EndProject
+-Global
+-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+-		SwaggerWcf\KornSW.SwaggerWcf.projitems*{0ad6efbc-412f-4c0e-8e0a-0faf28151b55}*SharedItemsImports = 4
+-	EndGlobalSection
+-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+-		Debug|Any CPU = Debug|Any CPU
+-		Release|Any CPU = Release|Any CPU
+-	EndGlobalSection
+-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+-		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.Build.0 = Release|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+-		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.Build.0 = Release|Any CPU
+-	EndGlobalSection
+-	GlobalSection(SolutionProperties) = preSolution
+-		HideSolutionNode = FALSE
+-	EndGlobalSection
+-	GlobalSection(ExtensibilityGlobals) = postSolution
+-		SolutionGuid = {0BA78E93-31AC-4114-8E60-0B949A3D2732}
+-	EndGlobalSection
+-EndGlobal
++
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio Version 16
++VisualStudioVersion = 16.0.30907.101
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf", "SwaggerWcf\SwaggerWcf.csproj", "{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}"
++EndProject
++Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{479EF2BE-93C9-4DE8-ACDD-538BB2203DB4}"
++	ProjectSection(SolutionItems) = preProject
++		..\README.md = ..\README.md
++		..\notes\spec-2.0.md = ..\notes\spec-2.0.md
++	EndProjectSection
++EndProject
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerWcf.Test.Service", "SwaggerWcf.Test.Service\SwaggerWcf.Test.Service.csproj", "{FD02752A-614D-4FAF-8994-519C754107B1}"
++EndProject
++Global
++	GlobalSection(SharedMSBuildProjectFiles) = preSolution
++		SwaggerWcf\KornSW.SwaggerWcf.projitems*{0ad6efbc-412f-4c0e-8e0a-0faf28151b55}*SharedItemsImports = 4
++	EndGlobalSection
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Any CPU = Debug|Any CPU
++		Release|Any CPU = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}.Release|Any CPU.Build.0 = Release|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{FD02752A-614D-4FAF-8994-519C754107B1}.Release|Any CPU.Build.0 = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++	GlobalSection(ExtensibilityGlobals) = postSolution
++		SolutionGuid = {0BA78E93-31AC-4114-8E60-0B949A3D2732}
++	EndGlobalSection
++EndGlobal
+diff --git a/src/SwaggerWcf.sln.DotSettings b/src/SwaggerWcf.sln.DotSettings
+index 7fada3c..4bd647f 100644
+--- a/src/SwaggerWcf.sln.DotSettings
++++ b/src/SwaggerWcf.sln.DotSettings
+@@ -1,3 +1,3 @@
+-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
++<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+ 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/Abbreviations/=UI/@EntryIndexedValue">UI</s:String>
+ 	<s:String x:Key="/Default/CodeStyle/Naming/CSharpNaming/Abbreviations/=WCF/@EntryIndexedValue">WCF</s:String></wpf:ResourceDictionary>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfAttribute.cs
+index 965a6c9..f6d3a04 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfContactInfoAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfContactInfoAttribute.cs
+index bee6a1b..921e843 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfContactInfoAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfContactInfoAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Models;
++using SwaggerWcf.Models;
+ using System;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfContentTypesAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfContentTypesAttribute.cs
+index 042f0bd..cc02a8e 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfContentTypesAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfContentTypesAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Net;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfDefinitionAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfDefinitionAttribute.cs
+index 3944498..9d422ee 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfDefinitionAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfDefinitionAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfHeaderAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfHeaderAttribute.cs
+index 6a17ca6..6dac04a 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfHeaderAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfHeaderAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfHiddenAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfHiddenAttribute.cs
+index a63d8c5..3154fee 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfHiddenAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfHiddenAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfLicenseInfoAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfLicenseInfoAttribute.cs
+index 60efea2..e902ac7 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfLicenseInfoAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfLicenseInfoAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Models;
++using SwaggerWcf.Models;
+ using System;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfParameterAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfParameterAttribute.cs
+index b2699d7..cef233d 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfParameterAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfParameterAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfPathAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfPathAttribute.cs
+index cba2cc2..2f85716 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfPathAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfPathAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfPropertyAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfPropertyAttribute.cs
+index 6c3f2a4..b930213 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfPropertyAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfPropertyAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ using SwaggerWcf.Models;
+ 
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfRegexAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfRegexAttribute.cs
+index da2d3d7..4299e84 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfRegexAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfRegexAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfRequestTypeAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfRequestTypeAttribute.cs
+index 9c62a20..39d96e8 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfRequestTypeAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfRequestTypeAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Net;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfResponseAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfResponseAttribute.cs
+index ab54a14..f99b7fc 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfResponseAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfResponseAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Net;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfReturnTypeAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfReturnTypeAttribute.cs
+index 1a43c87..79ab15e 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfReturnTypeAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfReturnTypeAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Net;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfSecurityAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfSecurityAttribute.cs
+index fb6c8e4..18f56a2 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfSecurityAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfSecurityAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfServiceInfoAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfServiceInfoAttribute.cs
+index c3c85db..a4f5348 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfServiceInfoAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfServiceInfoAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Models;
++using SwaggerWcf.Models;
+ using System;
+ 
+ namespace SwaggerWcf.Attributes
+diff --git a/src/SwaggerWcf/Attributes/SwaggerWcfTagAttribute.cs b/src/SwaggerWcf/Attributes/SwaggerWcfTagAttribute.cs
+index ec8b316..1a63f3d 100644
+--- a/src/SwaggerWcf/Attributes/SwaggerWcfTagAttribute.cs
++++ b/src/SwaggerWcf/Attributes/SwaggerWcfTagAttribute.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ 
+ namespace SwaggerWcf.Attributes
+ {
+diff --git a/src/SwaggerWcf/Configuration/SettingCollection.cs b/src/SwaggerWcf/Configuration/SettingCollection.cs
+index 39d04b9..e9b01c8 100644
+--- a/src/SwaggerWcf/Configuration/SettingCollection.cs
++++ b/src/SwaggerWcf/Configuration/SettingCollection.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Configuration;
+ 
+ namespace SwaggerWcf.Configuration
+diff --git a/src/SwaggerWcf/Configuration/SettingElement.cs b/src/SwaggerWcf/Configuration/SettingElement.cs
+index fa0a34b..a364e32 100644
+--- a/src/SwaggerWcf/Configuration/SettingElement.cs
++++ b/src/SwaggerWcf/Configuration/SettingElement.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Configuration;
++using System.Configuration;
+ 
+ namespace SwaggerWcf.Configuration
+ {
+diff --git a/src/SwaggerWcf/Configuration/SwaggerWcfSection.cs b/src/SwaggerWcf/Configuration/SwaggerWcfSection.cs
+index b3fd4c9..61de0f7 100644
+--- a/src/SwaggerWcf/Configuration/SwaggerWcfSection.cs
++++ b/src/SwaggerWcf/Configuration/SwaggerWcfSection.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Configuration;
++using System.Configuration;
+ 
+ namespace SwaggerWcf.Configuration
+ {
+diff --git a/src/SwaggerWcf/Configuration/TagCollection.cs b/src/SwaggerWcf/Configuration/TagCollection.cs
+index e5e9510..634cbcc 100644
+--- a/src/SwaggerWcf/Configuration/TagCollection.cs
++++ b/src/SwaggerWcf/Configuration/TagCollection.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Configuration;
+ 
+ namespace SwaggerWcf.Configuration
+diff --git a/src/SwaggerWcf/Configuration/TagElement.cs b/src/SwaggerWcf/Configuration/TagElement.cs
+index acb671f..73dc611 100644
+--- a/src/SwaggerWcf/Configuration/TagElement.cs
++++ b/src/SwaggerWcf/Configuration/TagElement.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Configuration;
++using System.Configuration;
+ 
+ namespace SwaggerWcf.Configuration
+ {
+diff --git a/src/SwaggerWcf/ISwaggerWcfEndpoint.cs b/src/SwaggerWcf/ISwaggerWcfEndpoint.cs
+index c1638b4..d302f22 100644
+--- a/src/SwaggerWcf/ISwaggerWcfEndpoint.cs
++++ b/src/SwaggerWcf/ISwaggerWcfEndpoint.cs
+@@ -1,4 +1,4 @@
+-﻿using System.IO;
++using System.IO;
+ using System.ServiceModel;
+ using System.ServiceModel.Web;
+ 
+diff --git a/src/SwaggerWcf/Models/CollectionFormat.cs b/src/SwaggerWcf/Models/CollectionFormat.cs
+index b11492f..cad81a5 100644
+--- a/src/SwaggerWcf/Models/CollectionFormat.cs
++++ b/src/SwaggerWcf/Models/CollectionFormat.cs
+@@ -1,4 +1,4 @@
+-﻿namespace SwaggerWcf.Models
++namespace SwaggerWcf.Models
+ {
+     public enum CollectionFormat
+     {
+diff --git a/src/SwaggerWcf/Models/Definition.cs b/src/SwaggerWcf/Models/Definition.cs
+index dd4a2ae..da47310 100644
+--- a/src/SwaggerWcf/Models/Definition.cs
++++ b/src/SwaggerWcf/Models/Definition.cs
+@@ -1,4 +1,4 @@
+-﻿using Newtonsoft.Json;
++using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+ {
+diff --git a/src/SwaggerWcf/Models/DefinitionProperty.cs b/src/SwaggerWcf/Models/DefinitionProperty.cs
+index b708ca8..029e562 100644
+--- a/src/SwaggerWcf/Models/DefinitionProperty.cs
++++ b/src/SwaggerWcf/Models/DefinitionProperty.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+@@ -53,7 +53,7 @@ namespace SwaggerWcf.Models
+ 
+         public bool UniqueItems { get; set; }
+ 
+-        public List<int> Enum { get; set; }
++        public List<long> Enum { get; set; }
+ 
+         public decimal MultipleOf { get; set; }
+ 
+diff --git a/src/SwaggerWcf/Models/DefinitionSchema.cs b/src/SwaggerWcf/Models/DefinitionSchema.cs
+index a1e9d15..a0137e7 100644
+--- a/src/SwaggerWcf/Models/DefinitionSchema.cs
++++ b/src/SwaggerWcf/Models/DefinitionSchema.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+@@ -22,7 +22,7 @@ namespace SwaggerWcf.Models
+ 
+         public List<DefinitionProperty> Properties { get; set; }
+ 
+-        public List<int> Enum { get; set; }
++        public List<long> Enum { get; set; }
+ 
+         public void Serialize(JsonWriter writer)
+         {
+diff --git a/src/SwaggerWcf/Models/Example.cs b/src/SwaggerWcf/Models/Example.cs
+index a0484f9..60a000d 100644
+--- a/src/SwaggerWcf/Models/Example.cs
++++ b/src/SwaggerWcf/Models/Example.cs
+@@ -1,4 +1,4 @@
+-﻿namespace SwaggerWcf.Models
++namespace SwaggerWcf.Models
+ {
+     internal class Example
+     {
+diff --git a/src/SwaggerWcf/Models/ExternalDocumentation.cs b/src/SwaggerWcf/Models/ExternalDocumentation.cs
+index 38af761..7dbbcf2 100644
+--- a/src/SwaggerWcf/Models/ExternalDocumentation.cs
++++ b/src/SwaggerWcf/Models/ExternalDocumentation.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+diff --git a/src/SwaggerWcf/Models/InType.cs b/src/SwaggerWcf/Models/InType.cs
+index ac4f14c..2a1af96 100644
+--- a/src/SwaggerWcf/Models/InType.cs
++++ b/src/SwaggerWcf/Models/InType.cs
+@@ -1,4 +1,4 @@
+-﻿namespace SwaggerWcf.Models
++namespace SwaggerWcf.Models
+ {
+     internal enum InType
+     {
+diff --git a/src/SwaggerWcf/Models/Info.cs b/src/SwaggerWcf/Models/Info.cs
+index 0c4f9a8..bec2066 100644
+--- a/src/SwaggerWcf/Models/Info.cs
++++ b/src/SwaggerWcf/Models/Info.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+diff --git a/src/SwaggerWcf/Models/InfoContact.cs b/src/SwaggerWcf/Models/InfoContact.cs
+index e206059..f310f4b 100644
+--- a/src/SwaggerWcf/Models/InfoContact.cs
++++ b/src/SwaggerWcf/Models/InfoContact.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ using System;
+ 
+diff --git a/src/SwaggerWcf/Models/InfoLicense.cs b/src/SwaggerWcf/Models/InfoLicense.cs
+index 102b1c8..2a73006 100644
+--- a/src/SwaggerWcf/Models/InfoLicense.cs
++++ b/src/SwaggerWcf/Models/InfoLicense.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ using System;
+ 
+diff --git a/src/SwaggerWcf/Models/ParameterBase.cs b/src/SwaggerWcf/Models/ParameterBase.cs
+index 5adcd22..52e916f 100644
+--- a/src/SwaggerWcf/Models/ParameterBase.cs
++++ b/src/SwaggerWcf/Models/ParameterBase.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+diff --git a/src/SwaggerWcf/Models/ParameterItems.cs b/src/SwaggerWcf/Models/ParameterItems.cs
+index 6091d14..ba881a1 100644
+--- a/src/SwaggerWcf/Models/ParameterItems.cs
++++ b/src/SwaggerWcf/Models/ParameterItems.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+diff --git a/src/SwaggerWcf/Models/ParameterPrimitive.cs b/src/SwaggerWcf/Models/ParameterPrimitive.cs
+index d6fc46b..42f587f 100644
+--- a/src/SwaggerWcf/Models/ParameterPrimitive.cs
++++ b/src/SwaggerWcf/Models/ParameterPrimitive.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/ParameterSchema.cs b/src/SwaggerWcf/Models/ParameterSchema.cs
+index 5d6f5b3..cfb65fd 100644
+--- a/src/SwaggerWcf/Models/ParameterSchema.cs
++++ b/src/SwaggerWcf/Models/ParameterSchema.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+diff --git a/src/SwaggerWcf/Models/ParameterType.cs b/src/SwaggerWcf/Models/ParameterType.cs
+index 9a1f472..3b4ac88 100644
+--- a/src/SwaggerWcf/Models/ParameterType.cs
++++ b/src/SwaggerWcf/Models/ParameterType.cs
+@@ -1,4 +1,4 @@
+-﻿namespace SwaggerWcf.Models
++namespace SwaggerWcf.Models
+ {
+     public enum ParameterType
+     {
+diff --git a/src/SwaggerWcf/Models/Path.cs b/src/SwaggerWcf/Models/Path.cs
+index 6577ef7..5f4c291 100644
+--- a/src/SwaggerWcf/Models/Path.cs
++++ b/src/SwaggerWcf/Models/Path.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/PathAction.cs b/src/SwaggerWcf/Models/PathAction.cs
+index a77dc81..9769bab 100644
+--- a/src/SwaggerWcf/Models/PathAction.cs
++++ b/src/SwaggerWcf/Models/PathAction.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/Property.cs b/src/SwaggerWcf/Models/Property.cs
+index 7bdff23..05d37bb 100644
+--- a/src/SwaggerWcf/Models/Property.cs
++++ b/src/SwaggerWcf/Models/Property.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/Response.cs b/src/SwaggerWcf/Models/Response.cs
+index 1f075ce..49cd2ff 100644
+--- a/src/SwaggerWcf/Models/Response.cs
++++ b/src/SwaggerWcf/Models/Response.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/Schema.cs b/src/SwaggerWcf/Models/Schema.cs
+index fcdc4dc..67e94d7 100644
+--- a/src/SwaggerWcf/Models/Schema.cs
++++ b/src/SwaggerWcf/Models/Schema.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/SecurityAuthorization.cs b/src/SwaggerWcf/Models/SecurityAuthorization.cs
+index 453321e..39624ff 100644
+--- a/src/SwaggerWcf/Models/SecurityAuthorization.cs
++++ b/src/SwaggerWcf/Models/SecurityAuthorization.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using Newtonsoft.Json;
+ 
+ namespace SwaggerWcf.Models
+diff --git a/src/SwaggerWcf/Models/SecurityDefinitions.cs b/src/SwaggerWcf/Models/SecurityDefinitions.cs
+index 1f5b933..3d6def7 100644
+--- a/src/SwaggerWcf/Models/SecurityDefinitions.cs
++++ b/src/SwaggerWcf/Models/SecurityDefinitions.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ 
+ namespace SwaggerWcf.Models
+ {
+diff --git a/src/SwaggerWcf/Models/Service.cs b/src/SwaggerWcf/Models/Service.cs
+index 4c78e9e..704710a 100644
+--- a/src/SwaggerWcf/Models/Service.cs
++++ b/src/SwaggerWcf/Models/Service.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.Linq;
+ using Newtonsoft.Json;
+ 
+diff --git a/src/SwaggerWcf/Models/TypeFormat.cs b/src/SwaggerWcf/Models/TypeFormat.cs
+index c6e0f9f..0957459 100644
+--- a/src/SwaggerWcf/Models/TypeFormat.cs
++++ b/src/SwaggerWcf/Models/TypeFormat.cs
+@@ -1,4 +1,4 @@
+-﻿namespace SwaggerWcf.Models
++namespace SwaggerWcf.Models
+ {
+     public struct TypeFormat
+     {
+diff --git a/src/SwaggerWcf/Properties/AssemblyInfo.cs b/src/SwaggerWcf/Properties/AssemblyInfo.cs
+index 784b59e..cf9ea13 100644
+--- a/src/SwaggerWcf/Properties/AssemblyInfo.cs
++++ b/src/SwaggerWcf/Properties/AssemblyInfo.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Reflection;
+ using System.Runtime.InteropServices;
+ 
+@@ -20,6 +20,6 @@ using System.Runtime.InteropServices;
+ [assembly: ComVisible(false)]
+ [assembly: Guid("d2eeaa63-60e5-4fda-8b62-e05dc8be8b5f")]
+ 
+-[assembly: AssemblyVersion("1.3.0.*")]
+-[assembly: AssemblyInformationalVersion("1.3.0-localbuild")]
++[assembly: AssemblyVersion("1.3.1.*")]
++[assembly: AssemblyInformationalVersion("1.3.1-localbuild")]
+ //DONT ADD: [assembly: AssemblyFileVersion] !!!
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/Support/DefinitionsBuilder.cs b/src/SwaggerWcf/Support/DefinitionsBuilder.cs
+index 7988c42..9569b12 100644
+--- a/src/SwaggerWcf/Support/DefinitionsBuilder.cs
++++ b/src/SwaggerWcf/Support/DefinitionsBuilder.cs
+@@ -1,4 +1,5 @@
+-﻿using System;
++using System;
++using System.Collections;
+ using System.Collections.Generic;
+ using System.ComponentModel;
+ using System.Linq;
+@@ -67,7 +68,7 @@ namespace SwaggerWcf.Support
+ 
+             if (schema.TypeFormat.Type == ParameterType.Integer && schema.TypeFormat.Format == "enum")
+             {
+-                schema.Enum = new List<int>();
++                schema.Enum = new List<long>();
+ 
+                 Type propType = definitionType;
+ 
+@@ -139,6 +140,14 @@ namespace SwaggerWcf.Support
+             Type iface = (from i in type.GetInterfaces()
+                           where i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>)
+                           select i).FirstOrDefault();
++            
++            if (iface == null)
++            {
++                if (type == typeof(IEnumerable) || type.GetInterfaces().Any(i => i == typeof(IEnumerable)))
++                {
++                    return typeof(object);
++                }
++            }
+ 
+             return iface == null ? null : GetEnumerableType(iface);
+         }
+@@ -215,14 +224,14 @@ namespace SwaggerWcf.Support
+             ApplyIfValid(LastValidValue(attrs, a => a._MultipleOf), x => prop.MultipleOf = x.Value);
+         }
+         
+-        public static int GetEnumMemberValue(Type enumType, string enumName)
++        public static long GetEnumMemberValue(Type enumType, string enumName)
+         {
+             if (string.IsNullOrWhiteSpace(enumName))
+                 return 0;
+             var enumVal = Enum.Parse(enumType, enumName, true);
+             var underlyingType = Enum.GetUnderlyingType(enumType);
+             var val = Convert.ChangeType(enumVal, underlyingType);
+-            return Convert.ToInt32(val);
++            return Convert.ToInt64(val);
+         }
+ 
+         public static string GetEnumDescription(Enum value)
+diff --git a/src/SwaggerWcf/Support/EnumerableExtensions.cs b/src/SwaggerWcf/Support/EnumerableExtensions.cs
+index ea51fad..670f30c 100644
+--- a/src/SwaggerWcf/Support/EnumerableExtensions.cs
++++ b/src/SwaggerWcf/Support/EnumerableExtensions.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.Linq;
+ using System.Text;
+diff --git a/src/SwaggerWcf/Support/Helpers.cs b/src/SwaggerWcf/Support/Helpers.cs
+index 168acaa..63d1279 100644
+--- a/src/SwaggerWcf/Support/Helpers.cs
++++ b/src/SwaggerWcf/Support/Helpers.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.IO;
+ using System.Linq;
+diff --git a/src/SwaggerWcf/Support/ListExtensions.cs b/src/SwaggerWcf/Support/ListExtensions.cs
+index e966d3a..cef1528 100644
+--- a/src/SwaggerWcf/Support/ListExtensions.cs
++++ b/src/SwaggerWcf/Support/ListExtensions.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ 
+ namespace SwaggerWcf.Support
+diff --git a/src/SwaggerWcf/Support/Mapper.cs b/src/SwaggerWcf/Support/Mapper.cs
+index f75d796..6a02dd9 100644
+--- a/src/SwaggerWcf/Support/Mapper.cs
++++ b/src/SwaggerWcf/Support/Mapper.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.ComponentModel;
+ using System.Linq;
+@@ -33,24 +33,24 @@ namespace SwaggerWcf.Support
+             List <Type> types;
+             Type serviceType;
+             if (markedType.IsInterface)
+-            {
+-                //search for service impl type
+-                var allTypes = AppDomain.CurrentDomain
+-                  .GetAssemblies()
+-                  .SelectMany(s => {
+-                    //avoids an exception when there is a broken reference somewhere in the assembly reference tree
+-                    //for example if a base type or the type of an return value is located in another missing assembly
+-                    try { 
+-                      return s.GetTypes();
+-                    }
+-                    catch (ReflectionTypeLoadException ex) {
+-                      //as fallback microsoft provides all other types (which were loaded sucessfully) on this way:
+-                      return ex.Types.Where(t => t != null);
+-                    }
+-                  })
+-                  .Where(type => markedType.IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
+-                  .ToList();
+-
++            {
++                //search for service impl type
++                var allTypes = AppDomain.CurrentDomain
++                  .GetAssemblies()
++                  .SelectMany(s => {
++                    //avoids an exception when there is a broken reference somewhere in the assembly reference tree
++                    //for example if a base type or the type of an return value is located in another missing assembly
++                    try { 
++                      return s.GetTypes();
++                    }
++                    catch (ReflectionTypeLoadException ex) {
++                      //as fallback microsoft provides all other types (which were loaded sucessfully) on this way:
++                      return ex.Types.Where(t => t != null);
++                    }
++                  })
++                  .Where(type => markedType.IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
++                  .ToList();
++
+                 serviceType = allTypes.Except(allTypes.Select(type => type.BaseType)).Single();
+ 
+                 types = new List<Type> { markedType };
+@@ -165,23 +165,23 @@ namespace SwaggerWcf.Support
+ 
+                 //find the WebGet/Invoke attributes, or skip if neither is present
+                 WebGetAttribute wg = declaration.GetCustomAttribute<WebGetAttribute>();
+-                WebInvokeAttribute wi = declaration.GetCustomAttribute<WebInvokeAttribute>();
+-                OperationContractAttribute oc = declaration.GetCustomAttribute<OperationContractAttribute>();
+-
+-                string httpMethod;
+-                if (wg != null) {
+-                  httpMethod = "GET";
+-                }
+-                else if (wi != null) {
+-                  httpMethod = wi.Method;
+-                }
+-                else if (oc != null) {
+-                  httpMethod = "POST";
+-                }
+-                else {
+-                  continue;
+-                }
+-
++                WebInvokeAttribute wi = declaration.GetCustomAttribute<WebInvokeAttribute>();
++                OperationContractAttribute oc = declaration.GetCustomAttribute<OperationContractAttribute>();
++
++                string httpMethod;
++                if (wg != null) {
++                  httpMethod = "GET";
++                }
++                else if (wi != null) {
++                  httpMethod = wi.Method;
++                }
++                else if (oc != null) {
++                  httpMethod = "POST";
++                }
++                else {
++                  continue;
++                }
++
+                 string uriTemplate = GetUriTemplate(wi, wg, declaration);
+ 
+                 bool wrappedRequest = IsRequestWrapped(wg, wi);
+@@ -372,11 +372,11 @@ namespace SwaggerWcf.Support
+             }
+         }
+ 
+-        private string GetUriTemplate(WebInvokeAttribute wi, WebGetAttribute wg, MethodInfo declaration)
+-        {
+-            if (wi != null) return wi.UriTemplate;
+-            if (wg != null) return wg.UriTemplate;
+-            return declaration.Name;
++        private string GetUriTemplate(WebInvokeAttribute wi, WebGetAttribute wg, MethodInfo declaration)
++        {
++            if (wi != null) return wi.UriTemplate;
++            if (wg != null) return wg.UriTemplate;
++            return declaration.Name;
+         }
+ 
+         private string RemoveParametersDefaultValuesFromUri(string uriTemplate)
+diff --git a/src/SwaggerWcf/Support/MethodInfoExtensions.cs b/src/SwaggerWcf/Support/MethodInfoExtensions.cs
+index 23841e7..1bc3275 100644
+--- a/src/SwaggerWcf/Support/MethodInfoExtensions.cs
++++ b/src/SwaggerWcf/Support/MethodInfoExtensions.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Linq;
+ using System.Reflection;
+ using SwaggerWcf.Attributes;
+diff --git a/src/SwaggerWcf/Support/Serializer.cs b/src/SwaggerWcf/Support/Serializer.cs
+index 93a68e8..84efe6d 100644
+--- a/src/SwaggerWcf/Support/Serializer.cs
++++ b/src/SwaggerWcf/Support/Serializer.cs
+@@ -1,4 +1,4 @@
+-﻿using System.Collections.Generic;
++using System.Collections.Generic;
+ using System.IO;
+ using System.Text;
+ using Newtonsoft.Json;
+diff --git a/src/SwaggerWcf/Support/ServiceBuilder.cs b/src/SwaggerWcf/Support/ServiceBuilder.cs
+index 56235f2..d4b3241 100644
+--- a/src/SwaggerWcf/Support/ServiceBuilder.cs
++++ b/src/SwaggerWcf/Support/ServiceBuilder.cs
+@@ -1,212 +1,212 @@
+-﻿using System;
+-using System.Collections.Generic;
+-using System.Configuration;
+-using System.Linq;
+-using System.Reflection;
+-using System.ServiceModel;
+-using Newtonsoft.Json;
+-using SwaggerWcf.Attributes;
+-using SwaggerWcf.Configuration;
+-using SwaggerWcf.Models;
+-using SettingElement = SwaggerWcf.Configuration.SettingElement;
+-
+-namespace SwaggerWcf.Support
+-{
+-    internal class ServiceBuilder
+-    {
+-        public static Service Build(string path)
+-        {
+-            return BuildServiceCommon(path, BuildPaths);
+-        }
+-
+-        public static Service Build<TBusiness>(string path)
+-        {
+-            return BuildServiceCommon(path, BuildPaths<TBusiness>);
+-        }
+-
+-        private static Service BuildServiceCommon(string path, Action<Service, IList<string>, List<string>, IList<Type>> buildPaths)
+-        {
+-            const string sectionName = "swaggerwcf";
+-            SwaggerWcfSection config =
+-                (SwaggerWcfSection)(ConfigurationManager.GetSection(sectionName) ?? new SwaggerWcfSection());
+-
+-            List<Type> definitionsTypesList = new List<Type>();
+-            Service service = new Service();
+-            List<string> hiddenTags = SwaggerWcfEndpoint.FilterHiddenTags(path, GetHiddenTags(config));
+-            List<string> visibleTags = SwaggerWcfEndpoint.FilterVisibleTags(path, GetVisibleTags(config));
+-            IReadOnlyDictionary<string, string> settings = GetSettings(config);
+-
+-            ProcessSettings(service, settings);
+-
+-            buildPaths(service, hiddenTags, visibleTags, definitionsTypesList);
+-
+-            service.Definitions = DefinitionsBuilder.Process(hiddenTags, visibleTags, definitionsTypesList);
+-
+-            return service;
+-        }
+-
+-
+-        private static List<string> GetHiddenTags(SwaggerWcfSection config)
+-        {
+-            return config.Tags?.OfType<TagElement>()
+-                       .Where(t => t.Visibile.Equals(false))
+-                       .Select(t => t.Name)
+-                       .ToList() ?? new List<string>();
+-        }
+-
+-        private static List<string> GetVisibleTags(SwaggerWcfSection config)
+-        {
+-            return config.Tags?.OfType<TagElement>()
+-                       .Where(t => t.Visibile.Equals(true))
+-                       .Select(t => t.Name)
+-                       .ToList() ?? new List<string>();
+-        }
+-
+-        private static IReadOnlyDictionary<string, string> GetSettings(SwaggerWcfSection config)
+-        {
+-            return config.Settings?.OfType<SettingElement>().ToDictionary(se => se.Name, se => se.Value)
+-                ?? new Dictionary<string, string>();
+-        }
+-
+-        private static void ProcessSettings(Service service, IReadOnlyDictionary<string, string> settings)
+-        {
+-            if (settings.ContainsKey("BasePath"))
+-                service.BasePath = settings["BasePath"];
+-            if (settings.ContainsKey("Host"))
+-                service.Host = settings["Host"];
+-            if (settings.ContainsKey("Schemes"))
+-                service.Schemes = settings["Schemes"].Split(';').ToList();
+-
+-            if (settings.Keys.Any(k => k.StartsWith("Info")))
+-                service.Info = new Info();
+-            if (settings.ContainsKey("InfoDescription"))
+-                service.Info.Description = settings["InfoDescription"];
+-            if (settings.ContainsKey("InfoVersion"))
+-                service.Info.Version = settings["InfoVersion"];
+-            if (settings.ContainsKey("InfoTermsOfService"))
+-                service.Info.TermsOfService = settings["InfoTermsOfService"];
+-            if (settings.ContainsKey("InfoTitle"))
+-                service.Info.Title = settings["InfoTitle"];
+-
+-            if (settings.Keys.Any(k => k.StartsWith("InfoContact")))
+-                service.Info.Contact = new InfoContact();
+-            if (settings.ContainsKey("InfoContactName"))
+-                service.Info.Contact.Name = settings["InfoContactName"];
+-            if (settings.ContainsKey("InfoContactUrl"))
+-                service.Info.Contact.Url = settings["InfoContactUrl"];
+-            if (settings.ContainsKey("InfoContactEmail"))
+-                service.Info.Contact.Email = settings["InfoContactEmail"];
+-
+-            if (settings.Keys.Any(k => k.StartsWith("InfoLicense")))
+-                service.Info.License = new InfoLicense();
+-            if (settings.ContainsKey("InfoLicenseUrl"))
+-                service.Info.License.Url = settings["InfoLicenseUrl"];
+-            if (settings.ContainsKey("InfoLicenseName"))
+-                service.Info.License.Name = settings["InfoLicenseName"];
+-        }
+-
+-        private static void BuildPaths(Service service, IList<string> hiddenTags, List<string> visibleTags, IList<Type> definitionsTypesList)
+-        {
+-            service.Paths = new List<Path>();
+-
+-            var types = GetAssemblyTypes(hiddenTags);
+-            var useBasePathProperty = types.Select(t => t.GetCustomAttribute<SwaggerWcfAttribute>().ServicePath)
+-                                   .Distinct()
+-                                   .Count() == 1;
+-            
+-            foreach (var ti in types)
+-            {
+-                var da = ti.GetCustomAttribute<SwaggerWcfAttribute>();
+-                var sa = ti.GetCustomAttribute<ServiceContractAttribute>();
+-
+-                if (service.Info is null)
+-                    service.Info = ti.GetServiceInfo();
+-
+-                var mapper = new Mapper(hiddenTags, visibleTags);
+-                  
+-                if (string.IsNullOrWhiteSpace(service.BasePath) && useBasePathProperty)
+-                    service.BasePath = da.ServicePath;
+-
+-                if (service.BasePath != null && service.BasePath.EndsWith("/"))
+-                    service.BasePath = service.BasePath.Substring(0, service.BasePath.Length - 1);
+-
+-                string basePath = null;
+-                if (!useBasePathProperty)
+-                {
+-                    if (da != null) {
+-                      basePath = da.ServicePath;
+-                    }
+-                    else {
+-                      basePath = ti.Name;
+-                    }
+-
+-                    if (basePath != null && basePath.EndsWith("/"))
+-                        basePath = basePath.Substring(0, basePath.Length - 1);
+-                    if (basePath != null && basePath.StartsWith("/") == false)
+-                        basePath = "/" + basePath;
+-                }
+-
+-                var paths = mapper.FindMethods(ti.AsType(), definitionsTypesList, basePath);
+-                service.Paths.AddRange(paths);
+-            }
+-        }
+-
+-        private static IEnumerable<TypeInfo> GetAssemblyTypes(IList<string> hiddenTags)
+-        {
+-            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+-
+-            foreach (var assembly in assemblies)
+-            {
+-                IEnumerable<TypeInfo> types;
+-                try
+-                {
+-                    types = assembly.DefinedTypes;
+-                }
+-                catch (Exception)
+-                {
+-                    // ignore assembly and continue
+-                    continue;
+-                }
+-
+-                foreach (TypeInfo ti in types)
+-                {
+-                    var da = ti.GetCustomAttribute<SwaggerWcfAttribute>();
+-                    var sa = ti.GetCustomAttribute<ServiceContractAttribute>();
+-                    if ((da == null && sa == null) || hiddenTags.Any(ht => ht == ti.AsType().Name))
+-                      continue;
+-
+-                    yield return ti;
+-                }
+-            }
+-        }
+-
+-        private static void BuildPaths<TBusiness>(Service service, IList<string> hiddenTags, List<string> visibleTags, IList<Type> definitionsTypesList)
+-        {
+-            var type = typeof(TBusiness);
+-            service.Paths = new List<Path>();
+-
+-            var da = type.GetCustomAttribute<SwaggerWcfAttribute>();
+-            var sa = type.GetCustomAttribute<ServiceContractAttribute>();
+-
+-            if ((da == null && sa == null) || hiddenTags.Any(ht => ht == type.Name))
+-              return;
+-
+-            var mapper = new Mapper(hiddenTags, visibleTags);
+-
+-            if (string.IsNullOrWhiteSpace(service.BasePath)) {
+-              if (da != null) {
+-                service.BasePath = da.ServicePath;
+-              }
+-              else {
+-                service.BasePath = type.Name;
+-              }
+-            }
+-
+-            if (service.BasePath.EndsWith("/"))
+-                service.BasePath = service.BasePath.Substring(0, service.BasePath.Length - 1);
+-
+-            var paths = mapper.FindMethods(type, definitionsTypesList);
+-            service.Paths.AddRange(paths);
+-        }
+-    }
+-}
++using System;
++using System.Collections.Generic;
++using System.Configuration;
++using System.Linq;
++using System.Reflection;
++using System.ServiceModel;
++using Newtonsoft.Json;
++using SwaggerWcf.Attributes;
++using SwaggerWcf.Configuration;
++using SwaggerWcf.Models;
++using SettingElement = SwaggerWcf.Configuration.SettingElement;
++
++namespace SwaggerWcf.Support
++{
++    internal class ServiceBuilder
++    {
++        public static Service Build(string path)
++        {
++            return BuildServiceCommon(path, BuildPaths);
++        }
++
++        public static Service Build<TBusiness>(string path)
++        {
++            return BuildServiceCommon(path, BuildPaths<TBusiness>);
++        }
++
++        private static Service BuildServiceCommon(string path, Action<Service, IList<string>, List<string>, IList<Type>> buildPaths)
++        {
++            const string sectionName = "swaggerwcf";
++            SwaggerWcfSection config =
++                (SwaggerWcfSection)(ConfigurationManager.GetSection(sectionName) ?? new SwaggerWcfSection());
++
++            List<Type> definitionsTypesList = new List<Type>();
++            Service service = new Service();
++            List<string> hiddenTags = SwaggerWcfEndpoint.FilterHiddenTags(path, GetHiddenTags(config));
++            List<string> visibleTags = SwaggerWcfEndpoint.FilterVisibleTags(path, GetVisibleTags(config));
++            IReadOnlyDictionary<string, string> settings = GetSettings(config);
++
++            ProcessSettings(service, settings);
++
++            buildPaths(service, hiddenTags, visibleTags, definitionsTypesList);
++
++            service.Definitions = DefinitionsBuilder.Process(hiddenTags, visibleTags, definitionsTypesList);
++
++            return service;
++        }
++
++
++        private static List<string> GetHiddenTags(SwaggerWcfSection config)
++        {
++            return config.Tags?.OfType<TagElement>()
++                       .Where(t => t.Visibile.Equals(false))
++                       .Select(t => t.Name)
++                       .ToList() ?? new List<string>();
++        }
++
++        private static List<string> GetVisibleTags(SwaggerWcfSection config)
++        {
++            return config.Tags?.OfType<TagElement>()
++                       .Where(t => t.Visibile.Equals(true))
++                       .Select(t => t.Name)
++                       .ToList() ?? new List<string>();
++        }
++
++        private static IReadOnlyDictionary<string, string> GetSettings(SwaggerWcfSection config)
++        {
++            return config.Settings?.OfType<SettingElement>().ToDictionary(se => se.Name, se => se.Value)
++                ?? new Dictionary<string, string>();
++        }
++
++        private static void ProcessSettings(Service service, IReadOnlyDictionary<string, string> settings)
++        {
++            if (settings.ContainsKey("BasePath"))
++                service.BasePath = settings["BasePath"];
++            if (settings.ContainsKey("Host"))
++                service.Host = settings["Host"];
++            if (settings.ContainsKey("Schemes"))
++                service.Schemes = settings["Schemes"].Split(';').ToList();
++
++            if (settings.Keys.Any(k => k.StartsWith("Info")))
++                service.Info = new Info();
++            if (settings.ContainsKey("InfoDescription"))
++                service.Info.Description = settings["InfoDescription"];
++            if (settings.ContainsKey("InfoVersion"))
++                service.Info.Version = settings["InfoVersion"];
++            if (settings.ContainsKey("InfoTermsOfService"))
++                service.Info.TermsOfService = settings["InfoTermsOfService"];
++            if (settings.ContainsKey("InfoTitle"))
++                service.Info.Title = settings["InfoTitle"];
++
++            if (settings.Keys.Any(k => k.StartsWith("InfoContact")))
++                service.Info.Contact = new InfoContact();
++            if (settings.ContainsKey("InfoContactName"))
++                service.Info.Contact.Name = settings["InfoContactName"];
++            if (settings.ContainsKey("InfoContactUrl"))
++                service.Info.Contact.Url = settings["InfoContactUrl"];
++            if (settings.ContainsKey("InfoContactEmail"))
++                service.Info.Contact.Email = settings["InfoContactEmail"];
++
++            if (settings.Keys.Any(k => k.StartsWith("InfoLicense")))
++                service.Info.License = new InfoLicense();
++            if (settings.ContainsKey("InfoLicenseUrl"))
++                service.Info.License.Url = settings["InfoLicenseUrl"];
++            if (settings.ContainsKey("InfoLicenseName"))
++                service.Info.License.Name = settings["InfoLicenseName"];
++        }
++
++        private static void BuildPaths(Service service, IList<string> hiddenTags, List<string> visibleTags, IList<Type> definitionsTypesList)
++        {
++            service.Paths = new List<Path>();
++
++            var types = GetAssemblyTypes(hiddenTags);
++            var useBasePathProperty = types.Select(t => t.GetCustomAttribute<SwaggerWcfAttribute>().ServicePath)
++                                   .Distinct()
++                                   .Count() == 1;
++            
++            foreach (var ti in types)
++            {
++                var da = ti.GetCustomAttribute<SwaggerWcfAttribute>();
++                var sa = ti.GetCustomAttribute<ServiceContractAttribute>();
++
++                if (service.Info is null)
++                    service.Info = ti.GetServiceInfo();
++
++                var mapper = new Mapper(hiddenTags, visibleTags);
++                  
++                if (string.IsNullOrWhiteSpace(service.BasePath) && useBasePathProperty)
++                    service.BasePath = da.ServicePath;
++
++                if (service.BasePath != null && service.BasePath.EndsWith("/"))
++                    service.BasePath = service.BasePath.Substring(0, service.BasePath.Length - 1);
++
++                string basePath = null;
++                if (!useBasePathProperty)
++                {
++                    if (da != null) {
++                      basePath = da.ServicePath;
++                    }
++                    else {
++                      basePath = ti.Name;
++                    }
++
++                    if (basePath != null && basePath.EndsWith("/"))
++                        basePath = basePath.Substring(0, basePath.Length - 1);
++                    if (basePath != null && basePath.StartsWith("/") == false)
++                        basePath = "/" + basePath;
++                }
++
++                var paths = mapper.FindMethods(ti.AsType(), definitionsTypesList, basePath);
++                service.Paths.AddRange(paths);
++            }
++        }
++
++        private static IEnumerable<TypeInfo> GetAssemblyTypes(IList<string> hiddenTags)
++        {
++            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
++
++            foreach (var assembly in assemblies)
++            {
++                IEnumerable<TypeInfo> types;
++                try
++                {
++                    types = assembly.DefinedTypes;
++                }
++                catch (Exception)
++                {
++                    // ignore assembly and continue
++                    continue;
++                }
++
++                foreach (TypeInfo ti in types)
++                {
++                    var da = ti.GetCustomAttribute<SwaggerWcfAttribute>();
++                    var sa = ti.GetCustomAttribute<ServiceContractAttribute>();
++                    if ((da == null && sa == null) || hiddenTags.Any(ht => ht == ti.AsType().Name))
++                      continue;
++
++                    yield return ti;
++                }
++            }
++        }
++
++        private static void BuildPaths<TBusiness>(Service service, IList<string> hiddenTags, List<string> visibleTags, IList<Type> definitionsTypesList)
++        {
++            var type = typeof(TBusiness);
++            service.Paths = new List<Path>();
++
++            var da = type.GetCustomAttribute<SwaggerWcfAttribute>();
++            var sa = type.GetCustomAttribute<ServiceContractAttribute>();
++
++            if ((da == null && sa == null) || hiddenTags.Any(ht => ht == type.Name))
++              return;
++
++            var mapper = new Mapper(hiddenTags, visibleTags);
++
++            if (string.IsNullOrWhiteSpace(service.BasePath)) {
++              if (da != null) {
++                service.BasePath = da.ServicePath;
++              }
++              else {
++                service.BasePath = type.Name;
++              }
++            }
++
++            if (service.BasePath.EndsWith("/"))
++                service.BasePath = service.BasePath.Substring(0, service.BasePath.Length - 1);
++
++            var paths = mapper.FindMethods(type, definitionsTypesList);
++            service.Paths.AddRange(paths);
++        }
++    }
++}
+diff --git a/src/SwaggerWcf/Support/StaticContent.cs b/src/SwaggerWcf/Support/StaticContent.cs
+index de1a59e..15037ea 100644
+--- a/src/SwaggerWcf/Support/StaticContent.cs
++++ b/src/SwaggerWcf/Support/StaticContent.cs
+@@ -1,4 +1,4 @@
+-﻿using System.IO;
++using System.IO;
+ using System.IO.Compression;
+ using System.Linq;
+ using System.Reflection;
+diff --git a/src/SwaggerWcf/Support/TypeBuilder.cs b/src/SwaggerWcf/Support/TypeBuilder.cs
+index 35f0ebf..42862b8 100644
+--- a/src/SwaggerWcf/Support/TypeBuilder.cs
++++ b/src/SwaggerWcf/Support/TypeBuilder.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.ComponentModel;
+ using System.Reflection;
+@@ -68,13 +68,13 @@ namespace SwaggerWcf.Support
+         }
+ 
+         private static void CreateProperty(System.Reflection.Emit.TypeBuilder tb, string propertyName, Type propertyType, bool required)
+-        {
+-
+-            if (propertyType.IsByRef) {
+-              //avoids an exception in code below when by ref parameters are used
++        {
++
++            if (propertyType.IsByRef) {
++              //avoids an exception in code below when by ref parameters are used
+               propertyType = propertyType.GetElementType();
+-            }
+-
++            }
++
+             FieldBuilder fieldBuilder = tb.DefineField("_" + propertyName, propertyType, FieldAttributes.Private);
+ 
+             PropertyBuilder propertyBuilder = tb.DefineProperty(propertyName, PropertyAttributes.HasDefault, propertyType, null);
+diff --git a/src/SwaggerWcf/Support/TypeExtensions.cs b/src/SwaggerWcf/Support/TypeExtensions.cs
+index 96e3076..7fa39e0 100644
+--- a/src/SwaggerWcf/Support/TypeExtensions.cs
++++ b/src/SwaggerWcf/Support/TypeExtensions.cs
+@@ -1,4 +1,4 @@
+-﻿using SwaggerWcf.Attributes;
++using SwaggerWcf.Attributes;
+ using SwaggerWcf.Models;
+ using System;
+ using System.Linq;
+diff --git a/src/SwaggerWcf/Support/TypeFieldsProcessor.cs b/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
+index 7c6d9d0..f90d939 100644
+--- a/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
++++ b/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.ComponentModel;
+ using System.ComponentModel.DataAnnotations;
+@@ -130,7 +130,7 @@ namespace SwaggerWcf.Support
+ 
+             if ((prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum") || (prop.TypeFormat.Type == ParameterType.Array && prop.Items.TypeFormat.Format == "enum"))
+             {
+-                prop.Enum = new List<int>();
++                prop.Enum = new List<long>();
+ 
+                 Type propType = propertyInfo.FieldType;
+ 
+@@ -144,7 +144,7 @@ namespace SwaggerWcf.Support
+                     var enumMemberItem = Enum.Parse(propType, enumName, true);
+                     string enumMemberDescription = DefinitionsBuilder.GetEnumDescription((Enum)enumMemberItem);
+                     enumMemberDescription = (string.IsNullOrWhiteSpace(enumMemberDescription)) ? "" : $"({enumMemberDescription})";
+-                    int enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
++                    long enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
+                     if (prop.Description != null) prop.Enum.Add(enumMemberValue);
+                     enumDescription += $"    {enumName}{System.Web.HttpUtility.HtmlEncode(" = ")}{enumMemberValue} {enumMemberDescription}\r\n";
+                 }
+diff --git a/src/SwaggerWcf/Support/TypePropertiesProcessor.cs b/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
+index eb8f18f..86dec5f 100644
+--- a/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
++++ b/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.ComponentModel;
+ using System.ComponentModel.DataAnnotations;
+@@ -130,7 +130,7 @@ namespace SwaggerWcf.Support
+ 
+             if ((prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum") || (prop.TypeFormat.Type == ParameterType.Array && prop.Items.TypeFormat.Format == "enum"))
+             {
+-                prop.Enum = new List<int>();
++                prop.Enum = new List<long>();
+ 
+                 Type propType = propertyInfo.PropertyType;
+ 
+@@ -144,7 +144,7 @@ namespace SwaggerWcf.Support
+                     var enumMemberItem = Enum.Parse(propType, enumName, true);
+                     string enumMemberDescription = DefinitionsBuilder.GetEnumDescription((Enum)enumMemberItem);
+                     enumMemberDescription = (string.IsNullOrWhiteSpace(enumMemberDescription)) ? "" : $"({enumMemberDescription})";
+-                    int enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
++                    long enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
+                     if (prop.Description != null) prop.Enum.Add(enumMemberValue);
+                     enumDescription += $"    {enumName}{System.Web.HttpUtility.HtmlEncode(" = ")}{enumMemberValue} {enumMemberDescription}\r\n";
+                 }
+diff --git a/src/SwaggerWcf/SwaggerWcf.csproj b/src/SwaggerWcf/SwaggerWcf.csproj
+index a9cb0f2..e6d87de 100644
+--- a/src/SwaggerWcf/SwaggerWcf.csproj
++++ b/src/SwaggerWcf/SwaggerWcf.csproj
+@@ -1,140 +1,140 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+-  <PropertyGroup>
+-    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+-    <ProjectGuid>{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}</ProjectGuid>
+-    <OutputType>Library</OutputType>
+-    <AppDesignerFolder>Properties</AppDesignerFolder>
+-    <RootNamespace>SwaggerWcf</RootNamespace>
+-    <AssemblyName>SwaggerWcf</AssemblyName>
+-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+-    <FileAlignment>512</FileAlignment>
+-    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+-    <TargetFrameworkProfile />
+-  </PropertyGroup>
+-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+-    <DebugSymbols>true</DebugSymbols>
+-    <DebugType>full</DebugType>
+-    <Optimize>false</Optimize>
+-    <OutputPath>..\..\%28Stage%29\Bin\net46\</OutputPath>
+-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+-    <ErrorReport>prompt</ErrorReport>
+-    <WarningLevel>4</WarningLevel>
+-    <DocumentationFile>..\..\%28Stage%29\Bin\net46\SwaggerWcf.xml</DocumentationFile>
+-  </PropertyGroup>
+-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+-    <DebugType>pdbonly</DebugType>
+-    <Optimize>true</Optimize>
+-    <OutputPath>..\..\%28Stage%29\Bin\net46\</OutputPath>
+-    <DefineConstants>TRACE</DefineConstants>
+-    <ErrorReport>prompt</ErrorReport>
+-    <WarningLevel>4</WarningLevel>
+-    <DocumentationFile>..\..\%28Stage%29\Bin\net46\SwaggerWcf.xml</DocumentationFile>
+-  </PropertyGroup>
+-  <ItemGroup>
+-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+-      <HintPath>..\..\(Vendor)\NuGet\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+-      <SpecificVersion>False</SpecificVersion>
+-    </Reference>
+-    <Reference Include="System" />
+-    <Reference Include="System.Configuration" />
+-    <Reference Include="System.Core" />
+-    <Reference Include="System.IO.Compression" />
+-    <Reference Include="System.Runtime.Serialization" />
+-    <Reference Include="System.ServiceModel" />
+-    <Reference Include="System.ServiceModel.Activation" />
+-    <Reference Include="System.ServiceModel.Routing" />
+-    <Reference Include="System.ServiceModel.Web" />
+-    <Reference Include="System.Web" />
+-    <Reference Include="System.Web.ApplicationServices" />
+-    <Reference Include="System.Web.Extensions" />
+-    <Reference Include="System.Web.Routing" />
+-    <Reference Include="System.Web.Services" />
+-    <Reference Include="System.Xml.Linq" />
+-    <Reference Include="System.Data.DataSetExtensions" />
+-    <Reference Include="Microsoft.CSharp" />
+-    <Reference Include="System.Data" />
+-    <Reference Include="System.Xml" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <Compile Include="Attributes\SwaggerWcfAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfContactInfoAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfContentTypesAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfDefinitionAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfHeaderAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfHiddenAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfLicenseInfoAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfParameterAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfPathAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfPropertyAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfRegexAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfRequestTypeAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfResponseAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfReturnTypeAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfSecurityAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfServiceInfoAttribute.cs" />
+-    <Compile Include="Attributes\SwaggerWcfTagAttribute.cs" />
+-    <Compile Include="Configuration\SettingCollection.cs" />
+-    <Compile Include="Configuration\SettingElement.cs" />
+-    <Compile Include="Configuration\SwaggerWcfSection.cs" />
+-    <Compile Include="Configuration\TagCollection.cs" />
+-    <Compile Include="Configuration\TagElement.cs" />
+-    <Compile Include="ISwaggerWcfEndpoint.cs" />
+-    <Compile Include="Models\CollectionFormat.cs" />
+-    <Compile Include="Models\Definition.cs" />
+-    <Compile Include="Models\DefinitionProperty.cs" />
+-    <Compile Include="Models\DefinitionSchema.cs" />
+-    <Compile Include="Models\Example.cs" />
+-    <Compile Include="Models\ExternalDocumentation.cs" />
+-    <Compile Include="Models\Info.cs" />
+-    <Compile Include="Models\InfoContact.cs" />
+-    <Compile Include="Models\InfoLicense.cs" />
+-    <Compile Include="Models\InType.cs" />
+-    <Compile Include="Models\ParameterBase.cs" />
+-    <Compile Include="Models\ParameterItems.cs" />
+-    <Compile Include="Models\ParameterPrimitive.cs" />
+-    <Compile Include="Models\ParameterSchema.cs" />
+-    <Compile Include="Models\ParameterType.cs" />
+-    <Compile Include="Models\Path.cs" />
+-    <Compile Include="Models\PathAction.cs" />
+-    <Compile Include="Models\Property.cs" />
+-    <Compile Include="Models\Response.cs" />
+-    <Compile Include="Models\Schema.cs" />
+-    <Compile Include="Models\SecurityAuthorization.cs" />
+-    <Compile Include="Models\SecurityDefinitions.cs" />
+-    <Compile Include="Models\Service.cs" />
+-    <Compile Include="Models\TypeFormat.cs" />
+-    <Compile Include="Properties\AssemblyInfo.cs" />
+-    <Compile Include="Support\DefinitionsBuilder.cs" />
+-    <Compile Include="Support\EnumerableExtensions.cs" />
+-    <Compile Include="Support\Helpers.cs" />
+-    <Compile Include="Support\ListExtensions.cs" />
+-    <Compile Include="Support\Mapper.cs" />
+-    <Compile Include="Support\MethodInfoExtensions.cs" />
+-    <Compile Include="Support\Serializer.cs" />
+-    <Compile Include="Support\ServiceBuilder.cs" />
+-    <Compile Include="Support\StaticContent.cs" />
+-    <Compile Include="Support\TypeBuilder.cs" />
+-    <Compile Include="Support\TypeExtensions.cs" />
+-    <Compile Include="Support\TypeFieldsProcessor.cs" />
+-    <Compile Include="Support\TypePropertiesProcessor.cs" />
+-    <Compile Include="SwaggerWcfEndpoint.cs" />
+-    <Compile Include="SwaggerWcfEndpointGeneric.cs" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <EmbeddedResource Include="www\swagger-ui.zip" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <None Include="packages.config" />
+-  </ItemGroup>
+-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+-       Other similar extension points exist, see Microsoft.Common.targets.
+-  <Target Name="BeforeBuild">
+-  </Target>
+-  <Target Name="AfterBuild">
+-  </Target>
+-  -->
++<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
++  <PropertyGroup>
++    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
++    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
++    <ProjectGuid>{0AD6EFBC-412F-4C0E-8E0A-0FAF28151B55}</ProjectGuid>
++    <OutputType>Library</OutputType>
++    <AppDesignerFolder>Properties</AppDesignerFolder>
++    <RootNamespace>SwaggerWcf</RootNamespace>
++    <AssemblyName>SwaggerWcf</AssemblyName>
++    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
++    <FileAlignment>512</FileAlignment>
++    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
++    <TargetFrameworkProfile />
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
++    <DebugSymbols>true</DebugSymbols>
++    <DebugType>full</DebugType>
++    <Optimize>false</Optimize>
++    <OutputPath>..\..\%28Stage%29\Bin\net46\</OutputPath>
++    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++    <DocumentationFile>..\..\%28Stage%29\Bin\net46\SwaggerWcf.xml</DocumentationFile>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++    <DebugType>pdbonly</DebugType>
++    <Optimize>true</Optimize>
++    <OutputPath>..\..\%28Stage%29\Bin\net46\</OutputPath>
++    <DefineConstants>TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++    <DocumentationFile>..\..\%28Stage%29\Bin\net46\SwaggerWcf.xml</DocumentationFile>
++  </PropertyGroup>
++  <ItemGroup>
++    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
++      <HintPath>..\..\(Vendor)\NuGet\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
++      <SpecificVersion>False</SpecificVersion>
++    </Reference>
++    <Reference Include="System" />
++    <Reference Include="System.Configuration" />
++    <Reference Include="System.Core" />
++    <Reference Include="System.IO.Compression" />
++    <Reference Include="System.Runtime.Serialization" />
++    <Reference Include="System.ServiceModel" />
++    <Reference Include="System.ServiceModel.Activation" />
++    <Reference Include="System.ServiceModel.Routing" />
++    <Reference Include="System.ServiceModel.Web" />
++    <Reference Include="System.Web" />
++    <Reference Include="System.Web.ApplicationServices" />
++    <Reference Include="System.Web.Extensions" />
++    <Reference Include="System.Web.Routing" />
++    <Reference Include="System.Web.Services" />
++    <Reference Include="System.Xml.Linq" />
++    <Reference Include="System.Data.DataSetExtensions" />
++    <Reference Include="Microsoft.CSharp" />
++    <Reference Include="System.Data" />
++    <Reference Include="System.Xml" />
++  </ItemGroup>
++  <ItemGroup>
++    <Compile Include="Attributes\SwaggerWcfAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfContactInfoAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfContentTypesAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfDefinitionAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfHeaderAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfHiddenAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfLicenseInfoAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfParameterAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfPathAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfPropertyAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfRegexAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfRequestTypeAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfResponseAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfReturnTypeAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfSecurityAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfServiceInfoAttribute.cs" />
++    <Compile Include="Attributes\SwaggerWcfTagAttribute.cs" />
++    <Compile Include="Configuration\SettingCollection.cs" />
++    <Compile Include="Configuration\SettingElement.cs" />
++    <Compile Include="Configuration\SwaggerWcfSection.cs" />
++    <Compile Include="Configuration\TagCollection.cs" />
++    <Compile Include="Configuration\TagElement.cs" />
++    <Compile Include="ISwaggerWcfEndpoint.cs" />
++    <Compile Include="Models\CollectionFormat.cs" />
++    <Compile Include="Models\Definition.cs" />
++    <Compile Include="Models\DefinitionProperty.cs" />
++    <Compile Include="Models\DefinitionSchema.cs" />
++    <Compile Include="Models\Example.cs" />
++    <Compile Include="Models\ExternalDocumentation.cs" />
++    <Compile Include="Models\Info.cs" />
++    <Compile Include="Models\InfoContact.cs" />
++    <Compile Include="Models\InfoLicense.cs" />
++    <Compile Include="Models\InType.cs" />
++    <Compile Include="Models\ParameterBase.cs" />
++    <Compile Include="Models\ParameterItems.cs" />
++    <Compile Include="Models\ParameterPrimitive.cs" />
++    <Compile Include="Models\ParameterSchema.cs" />
++    <Compile Include="Models\ParameterType.cs" />
++    <Compile Include="Models\Path.cs" />
++    <Compile Include="Models\PathAction.cs" />
++    <Compile Include="Models\Property.cs" />
++    <Compile Include="Models\Response.cs" />
++    <Compile Include="Models\Schema.cs" />
++    <Compile Include="Models\SecurityAuthorization.cs" />
++    <Compile Include="Models\SecurityDefinitions.cs" />
++    <Compile Include="Models\Service.cs" />
++    <Compile Include="Models\TypeFormat.cs" />
++    <Compile Include="Properties\AssemblyInfo.cs" />
++    <Compile Include="Support\DefinitionsBuilder.cs" />
++    <Compile Include="Support\EnumerableExtensions.cs" />
++    <Compile Include="Support\Helpers.cs" />
++    <Compile Include="Support\ListExtensions.cs" />
++    <Compile Include="Support\Mapper.cs" />
++    <Compile Include="Support\MethodInfoExtensions.cs" />
++    <Compile Include="Support\Serializer.cs" />
++    <Compile Include="Support\ServiceBuilder.cs" />
++    <Compile Include="Support\StaticContent.cs" />
++    <Compile Include="Support\TypeBuilder.cs" />
++    <Compile Include="Support\TypeExtensions.cs" />
++    <Compile Include="Support\TypeFieldsProcessor.cs" />
++    <Compile Include="Support\TypePropertiesProcessor.cs" />
++    <Compile Include="SwaggerWcfEndpoint.cs" />
++    <Compile Include="SwaggerWcfEndpointGeneric.cs" />
++  </ItemGroup>
++  <ItemGroup>
++    <EmbeddedResource Include="www\swagger-ui.zip" />
++  </ItemGroup>
++  <ItemGroup>
++    <None Include="packages.config" />
++  </ItemGroup>
++  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
++  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
++       Other similar extension points exist, see Microsoft.Common.targets.
++  <Target Name="BeforeBuild">
++  </Target>
++  <Target Name="AfterBuild">
++  </Target>
++  -->
+ </Project>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/SwaggerWcf.csproj.DotSettings b/src/SwaggerWcf/SwaggerWcf.csproj.DotSettings
+index c54c126..5f64202 100644
+--- a/src/SwaggerWcf/SwaggerWcf.csproj.DotSettings
++++ b/src/SwaggerWcf/SwaggerWcf.csproj.DotSettings
+@@ -1,2 +1,2 @@
+-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
++<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+ 	<s:String x:Key="/Default/CodeInspection/CSharpLanguageProject/LanguageLevel/@EntryValue">CSharp70</s:String></wpf:ResourceDictionary>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/SwaggerWcf.nuspec b/src/SwaggerWcf/SwaggerWcf.nuspec
+index 175d170..f766e58 100644
+--- a/src/SwaggerWcf/SwaggerWcf.nuspec
++++ b/src/SwaggerWcf/SwaggerWcf.nuspec
+@@ -1,4 +1,4 @@
+-﻿<?xml version="1.0"?>
++<?xml version="1.0"?>
+ <package>
+   <metadata>
+     <id>$title$</id>
+diff --git a/src/SwaggerWcf/SwaggerWcfEndpoint.cs b/src/SwaggerWcf/SwaggerWcfEndpoint.cs
+index d0a30ea..74cae12 100644
+--- a/src/SwaggerWcf/SwaggerWcfEndpoint.cs
++++ b/src/SwaggerWcf/SwaggerWcfEndpoint.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++using System;
+ using System.Collections.Generic;
+ using System.IO;
+ using System.Linq;
+diff --git a/src/SwaggerWcf/SwaggerWcfEndpointGeneric.cs b/src/SwaggerWcf/SwaggerWcfEndpointGeneric.cs
+index 986549e..5205fb2 100644
+--- a/src/SwaggerWcf/SwaggerWcfEndpointGeneric.cs
++++ b/src/SwaggerWcf/SwaggerWcfEndpointGeneric.cs
+@@ -1,13 +1,13 @@
+-﻿using System.ServiceModel.Activation;
+-using SwaggerWcf.Support;
+-
+-namespace SwaggerWcf
+-{
+-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+-    public class SwaggerWcfEndpoint<TBusiness> : SwaggerWcfEndpoint
+-    {
+-        public SwaggerWcfEndpoint() : base(ServiceBuilder.Build<TBusiness>)
+-        {
+-        }
+-    }
++using System.ServiceModel.Activation;
++using SwaggerWcf.Support;
++
++namespace SwaggerWcf
++{
++    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
++    public class SwaggerWcfEndpoint<TBusiness> : SwaggerWcfEndpoint
++    {
++        public SwaggerWcfEndpoint() : base(ServiceBuilder.Build<TBusiness>)
++        {
++        }
++    }
+ }
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/packages.config b/src/SwaggerWcf/packages.config
+index 6033a9c..aab9c8b 100644
+--- a/src/SwaggerWcf/packages.config
++++ b/src/SwaggerWcf/packages.config
+@@ -1,4 +1,4 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<packages>
+-  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net461" />
++<?xml version="1.0" encoding="utf-8"?>
++<packages>
++  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net461" />
+ </packages>
+\ No newline at end of file
+diff --git a/src/nuget.config b/src/nuget.config
+index 1875fc4..ce9d2a3 100644
+--- a/src/nuget.config
++++ b/src/nuget.config
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<configuration>
+-  <config>
+-    <add key="repositoryPath" value="..\(Vendor)\NuGet\" />
+-  </config>
+-  <packageSources>
+-  </packageSources>
++<?xml version="1.0" encoding="utf-8"?>
++<configuration>
++  <config>
++    <add key="repositoryPath" value="..\(Vendor)\NuGet\" />
++  </config>
++  <packageSources>
++  </packageSources>
+ </configuration>
+\ No newline at end of file

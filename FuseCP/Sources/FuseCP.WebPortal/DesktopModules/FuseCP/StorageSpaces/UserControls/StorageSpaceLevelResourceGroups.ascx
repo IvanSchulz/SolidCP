@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="StorageSpaceLevelResourceGroups.ascx.cs" Inherits="FuseCP.Portal.StorageSpaces.UserControls.StorageSpaceLevelResourceGroups" %>
 
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../../UserControls/CollapsiblePanel.ascx" %>
 
 <asp:UpdatePanel ID="ResourceGroupsUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate>

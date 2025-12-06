@@ -37,7 +37,7 @@ using System.Web.UI;
 using System.Threading;
 using System.Threading.Tasks;
 using FuseCP.EnterpriseServer;
-using SCP = FuseCP.EnterpriseServer;
+using FCP = FuseCP.EnterpriseServer;
 
 
 
@@ -97,7 +97,7 @@ namespace FuseCP.Portal
 			if (!IsPostBack)
 			{
 				Page.RegisterAsyncTask(new PageAsyncTask(() => Task.WhenAll(
-					EnsureSCPAAsync(),
+					EnsureFCPAAsync(),
 					BindThemesAsync())));
 
 				BindControls();
@@ -131,7 +131,7 @@ namespace FuseCP.Portal
 			}
 		}
 
-		private async Task EnsureSCPAAsync()
+		private async Task EnsureFCPAAsync()
 		{
 			var enabledScpa = await ES.Services.Authentication.GetSystemSetupModeAsync().ConfigureAwait(false);
 			//
@@ -140,7 +140,7 @@ namespace FuseCP.Portal
 				return;
 			}
 			//
-			Response.Redirect(EditUrl("scpa"), true);
+			Response.Redirect(EditUrl("fcpa"), true);
 		}
 
 		protected override void Render(HtmlTextWriter writer)
@@ -252,12 +252,12 @@ namespace FuseCP.Portal
 		private void CompleteLogin(int loginStatus)
 		{
 			// Access IP Settings
-			SCP.SystemSettings settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.ACCESS_IP_SETTINGS);
+			FCP.SystemSettings settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.ACCESS_IP_SETTINGS);
 			String AccessIps = String.Empty;
 			String[] arAccessIps = null;
 			if (settings != null)
 			{
-				AccessIps = settings.GetValueOrDefault(SCP.SystemSettings.ACCESS_IPs, string.Empty);
+				AccessIps = settings.GetValueOrDefault(FCP.SystemSettings.ACCESS_IPs, string.Empty);
 				arAccessIps = AccessIps.Split(',');
 			}
 

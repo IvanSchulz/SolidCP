@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <components>
     <!-- Minor version (.12) of FuseCP Installer 1.0.1 differs from the component's minor version (.13), 
-  because a patch was released that is applied to SCP components only -->
+  because a patch was released that is applied to FCP components only -->
 
     <!-- FuseCP Standalone -->
     <component application="FuseCP" name="Standalone Server Setup" code="standalone">

@@ -10,7 +10,7 @@ namespace FuseCP.WebDav.Core.Managers.Users
     {
         public UserPortalSettings GetUserSettings(int accountId)
         {
-            string xml = SCP.Services.EnterpriseStorage.GetWebDavPortalUserSettingsByAccountId(accountId);
+            string xml = FCP.Services.EnterpriseStorage.GetWebDavPortalUserSettingsByAccountId(accountId);
 
             if (string.IsNullOrEmpty(xml))
             {
@@ -24,7 +24,7 @@ namespace FuseCP.WebDav.Core.Managers.Users
         {
             var xml = SerializeHelper.Serialize(settings);
 
-            SCP.Services.EnterpriseStorage.UpdateWebDavPortalUserSettings(accountId, xml);
+            FCP.Services.EnterpriseStorage.UpdateWebDavPortalUserSettings(accountId, xml);
         }
 
         public void ChangeWebDavViewType(int accountId, FolderViewTypes type)

@@ -345,7 +345,7 @@ Install Component to:
 					{
 						//creating user account
 						string userName = settings.ComponentName.Replace(" ", string.Empty);
-						userName = userName.Replace("FuseCP", "SCP");
+						userName = userName.Replace("FuseCP", "FCP");
 
 						var domain = "mydomain.com";
 

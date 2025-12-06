@@ -61,7 +61,7 @@ namespace FuseCP.Setup.Actions
 				vars.WebSitePort = "9002";
 			//
 			if (String.IsNullOrEmpty(vars.UserAccount))
-				vars.UserAccount = "SCPEnterprise";
+				vars.UserAccount = "FCPEnterprise";
 		}
 	}
 

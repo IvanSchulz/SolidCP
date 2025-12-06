@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceEditAddon.ascx.cs" Inherits="FuseCP.Portal.SpaceEditAddon" %>
-<%@ Register Src="UserControls/CalendarControl.ascx" TagName="CalendarControl" TagPrefix="scp" %>
+<%@ Register Src="UserControls/CalendarControl.ascx" TagName="CalendarControl" TagPrefix="fcp" %>
 
 <div class="panel-body form-horizontal">
 <asp:Label ID="lblMessage" runat="server" CssClass="NormalBold" ForeColor="red"></asp:Label>
@@ -33,7 +33,7 @@
 		<td class="SubHead">
             <asp:Label ID="lblCreationDate" runat="server" meta:resourcekey="lblCreationDate" Text="Creation date:"></asp:Label></td>
 		<td class="Normal">
-			<scp:CalendarControl id="PurchaseDate" runat="server" ValidationEnabled="true" ValidationGroup="EditAddon" />
+			<fcp:CalendarControl id="PurchaseDate" runat="server" ValidationEnabled="true" ValidationGroup="EditAddon" />
 		</td>
 	</tr>
 	<tr>

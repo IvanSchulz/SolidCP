@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsServiceLevels.ascx.cs" Inherits="FuseCP.Portal.SettingsServiceLevels" %>
-<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
-    <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 	<asp:GridView id="gvServiceLevels" runat="server"  EnableViewState="true" AutoGenerateColumns="false"
 		Width="100%" EmptyDataText="gvServiceLevels" CssSelectorClass="NormalGridView" OnRowCommand="gvServiceLevels_RowCommand">
 		<Columns>
@@ -35,9 +35,9 @@
 	</asp:GridView>
 	<br />
 
-	<scp:CollapsiblePanel id="secServiceLevel" runat="server"
+	<fcp:CollapsiblePanel id="secServiceLevel" runat="server"
         TargetControlID="ServiceLevel" meta:resourcekey="secServiceLevel" Text="Service Level">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="ServiceLevel" runat="server" Height="0" style="overflow:hidden;">
 		<table>
             <tr>

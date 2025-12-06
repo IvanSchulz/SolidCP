@@ -30,8 +30,8 @@ namespace FuseCP.EnterpriseServer.Data
 
 			var match = Regex.Match("", @$"^using\s+{Regex.Escape(EntityType.Name)}\s*=.*?$", RegexOptions.Multiline);
 
-			var scp = Assembly.Load("FuseCP.EnterpriseServer.Data.Core");
-			var scaffoldType = scp.GetType("FuseCP.EnterpriseServer.Data.Scaffolding.Scaffold, FuseCP.EnterpriseServer.Data.Core");
+			var fcp = Assembly.Load("FuseCP.EnterpriseServer.Data.Core");
+			var scaffoldType = fcp.GetType("FuseCP.EnterpriseServer.Data.Scaffolding.Scaffold, FuseCP.EnterpriseServer.Data.Core");
 			var getEntityDataMethod = scaffoldType.GetMethod("GetEntityData");
 			var entityData = (StringBuilder)getEntityDataMethod.Invoke(null, new object[] { EntityType, Options, 12 });
 

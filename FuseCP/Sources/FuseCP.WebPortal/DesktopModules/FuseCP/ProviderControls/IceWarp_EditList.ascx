@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IceWarp_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <asp:Panel runat="server" ID="MainPanel">
         <table width="100%">
@@ -50,7 +50,7 @@
     </asp:UpdatePanel>
 </asp:Panel>    
 
-<scp:CollapsiblePanel id="Message" runat="server" targetcontrolid="MessagePanel" meta:resourcekey="Message" Text="Message"></scp:CollapsiblePanel>
+<fcp:CollapsiblePanel id="Message" runat="server" targetcontrolid="MessagePanel" meta:resourcekey="Message" Text="Message"></fcp:CollapsiblePanel>
 <asp:Panel runat="server" ID="MessagePanel">
     <asp:UpdatePanel ID="FromHeaderUpdatePanel" runat="server" UpdateMode="Conditional">
     <ContentTemplate>
@@ -136,7 +136,7 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="Security" runat="server" targetcontrolid="SecurityPanel" meta:resourcekey="Security" Text="Security"></scp:CollapsiblePanel>
+<fcp:CollapsiblePanel id="Security" runat="server" targetcontrolid="SecurityPanel" meta:resourcekey="Security" Text="Security"></fcp:CollapsiblePanel>
 <asp:Panel runat="server" ID="SecurityPanel">
     <table width="100%">
 	    <tr>
@@ -228,7 +228,7 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="Options" runat="server" targetcontrolid="OptionsPanel" meta:resourcekey="Options" Text="Options"></scp:CollapsiblePanel>
+<fcp:CollapsiblePanel id="Options" runat="server" targetcontrolid="OptionsPanel" meta:resourcekey="Options" Text="Options"></fcp:CollapsiblePanel>
 <asp:Panel runat="server" ID="OptionsPanel">
    <table width="100%">
         <tr>

@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BandwidthReportPackageDetails.ascx.cs" Inherits="FuseCP.Portal.BandwidthReportPackageDetails" %>
-<%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="scp" %>
+<%@ Register Src="SpaceDetailsHeaderControl.ascx" TagName="SpaceDetailsHeaderControl" TagPrefix="fcp" %>
 <%@ Register Src="UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <div class="panel-body form-horizontal">
-    <scp:SpaceDetailsHeaderControl ID="spaceDetails" runat="server" />
+    <fcp:SpaceDetailsHeaderControl ID="spaceDetails" runat="server" />
     
-    <scp:CollapsiblePanel id="secSummary" runat="server"
+    <fcp:CollapsiblePanel id="secSummary" runat="server"
         TargetControlID="SummaryPanel" meta:resourcekey="secSummary" Text="Bandwidth by Resources">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="SummaryPanel" runat="server" Height="0" style="overflow:hidden;">
         <div class="Big">
             <asp:Literal ID="litPeriod" runat="server"></asp:Literal>

@@ -1,5 +1,5 @@
 <####################################################################################################
-SolidSCP - web.config Fix Script
+SolidFCP - web.config Fix Script
 
 v1.0    1st September 2016:    First release of the FuseCP web.config Fix Script
 v1.1    2nd September 2016:    2nd release - Added Portal to the script so the new features are added
@@ -138,19 +138,19 @@ Function dPressAnyKeyToExit()                               # Function to press 
 
 ####################################################################################################################################################################################
 Import-Module WebAdministration
-$SCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"}).physicalPath) # FuseCP Enterprise Server Files Location
-$SCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"}).physicalPath)                                  # FuseCP Portal Files Location
-$SCP_Database_Name  = ( (([xml](Get-Content "$SCP_EntSvr_Dir\Web.config")).configuration.connectionStrings.add.connectionString) | `
+$FCP_EntSvr_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "FuseCP Enterprise Server|WebsitePanel Enterprise Server|DotNetPanel Enterprise Server"}).physicalPath) # FuseCP Enterprise Server Files Location
+$FCP_Portal_Dir     = ((Get-ChildItem IIS:\Sites | Where-Object {$_.Name -match "FuseCP Portal|WebsitePanel Portal|DotNetPanel Portal"}).physicalPath)                                  # FuseCP Portal Files Location
+$FCP_Database_Name  = ( (([xml](Get-Content "$FCP_EntSvr_Dir\Web.config")).configuration.connectionStrings.add.connectionString) | `
                         Select-String '((Initial\sCatalog)|((Database)))\s*=(?<ic>[a-z\s0-9]+?);' | `
                         ForEach-Object  {$_.Matches} | `
                         ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Name from the Enterprise Server Connection String in the web.config file
-$SCP_Database_Servr = ( (([xml](Get-Content "$SCP_EntSvr_Dir\Web.config")).configuration.connectionStrings.add.connectionString) | `
+$FCP_Database_Servr = ( (([xml](Get-Content "$FCP_EntSvr_Dir\Web.config")).configuration.connectionStrings.add.connectionString) | `
                         Select-String 'server=(?<ic>[^;]+?);' | `
                         ForEach-Object  {$_.Matches} | `
                         ForEach-Object {$_.Groups["ic"].Value} ) # Get the FuseCP Database Server from the Enterprise Server Connection String in the web.config file
 
 # Update the Enterprise Server web.config file and remove the Windows Authentication that some people had mistakenly set
-ModifyXML "$SCP_EntSvr_Dir\web.config" "Delete" "//configuration/system.webServer"
+ModifyXML "$FCP_EntSvr_Dir\web.config" "Delete" "//configuration/system.webServer"
 Write-Host "`t Enterprise Server - web.config Upgraded" -ForegroundColor Green
 
 # Set the correct values in the "bin\FuseCP.SchedulerService.exe.config" file so they match the ones in the "web.config" file for the Connection String and the CryptoKey
@@ -160,79 +160,79 @@ Write-Host "`t Enterprise Server - Schedular Config File Upgraded" -ForegroundCo
 
 # Update the Portal web.config file and the additional items if they are missing
 # Update the web.config to change the "xmlns" to "xmlns-temp" otherwise we have issues when parsing the XML file
-(Get-Content "$SCP_Portal_Dir\web.config") -replace " xmlns=`"", " xmlns-temp=`"" | Set-Content "$SCP_Portal_Dir\web.config"
+(Get-Content "$FCP_Portal_Dir\web.config") -replace " xmlns=`"", " xmlns-temp=`"" | Set-Content "$FCP_Portal_Dir\web.config"
 # Update the web.config file to make sure it is up to date with the new Mailcleaner (Ignore SSL Check) Settings
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" 'system.net'
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net" "settings"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.net/settings" "servicePointManager" @( ("checkCertificateName","false"), ("checkCertificateRevocationList","false") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" 'system.net'
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.net" "settings"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.net/settings" "servicePointManager" @( ("checkCertificateName","false"), ("checkCertificateRevocationList","false") )
 # Update the web.config file to make sure it is up to date with the new Settings for v1.1.0 of FuseCP
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "configSections"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","jsEngineSwitcher")
-(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"jsEngineSwitcher`" />", "    <sectionGroup name=`"jsEngineSwitcher`">`n    </sectionGroup>" | Set-Content "$SCP_Portal_Dir\web.config"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","core"), ("type","JavaScriptEngineSwitcher.Core.Configuration.CoreConfiguration, JavaScriptEngineSwitcher.Core") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","msie"), ("type","JavaScriptEngineSwitcher.Msie.Configuration.MsieConfiguration, JavaScriptEngineSwitcher.Msie") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","bundleTransformer")
-(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"bundleTransformer`" />", "    <sectionGroup name=`"bundleTransformer`">`n    </sectionGroup>" | Set-Content "$SCP_Portal_Dir\web.config"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","core"), ("type","BundleTransformer.Core.Configuration.CoreSettings, BundleTransformer.Core") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","less"), ("type","BundleTransformer.Less.Configuration.LessSettings, BundleTransformer.Less") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.web/pages[@theme='Default'][@validateRequest='false'][@controlRenderingCompatibilityVersion='3.5'][@clientIDMode='AutoID']/controls" "add" @( ("tagPrefix","CPCC"), ("namespace","CPCC"), ("assembly","CPCC") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/handlers" "add" @( ("name","LessAssetHandler"), ("path","`*.less"), ("verb","GET"), ("type","BundleTransformer.Less.HttpHandlers.LessAssetHandler, BundleTransformer.Less"), ("resourceType","File"), ("preCondition","") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "jsEngineSwitcher" @("xmlns-temp","http`:`/`/tempuri.org`/JavaScriptEngineSwitcher.Configuration.xsd")
-(Get-Content "$SCP_Portal_Dir\web.config") -replace "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`" />", "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`">`n  </jsEngineSwitcher>" | Set-Content "$SCP_Portal_Dir\web.config"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']" "core"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core" "engines"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core/engines" "add" @( ("name","MsieJsEngine"), ("type","JavaScriptEngineSwitcher.Msie.MsieJsEngine, JavaScriptEngineSwitcher.Msie") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "bundleTransformer" @("xmlns-temp","http://tempuri.org/BundleTransformer.Configuration.xsd")
-(Get-Content "$SCP_Portal_Dir\web.config") -replace "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`" />", "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`">`n  </bundleTransformer>" | Set-Content "$SCP_Portal_Dir\web.config"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "core"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "css"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "translators"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","LessTranslator"), ("type","BundleTransformer.Less.Translators.LessTranslator, BundleTransformer.Less") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "postProcessors"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/postProcessors" "add" @( ("name","UrlRewritingCssPostProcessor"), ("type","BundleTransformer.Core.PostProcessors.UrlRewritingCssPostProcessor, BundleTransformer.Core"), ("useInDebugMode","false") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "minifiers"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "fileExtensions"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".css"), ("assetTypeCode","Css") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".less"), ("assetTypeCode","Less") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "js"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "translators"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "minifiers"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "fileExtensions"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/fileExtensions" "add" @( ("fileExtension",".js"), ("assetTypeCode","JavaScript") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "less" @( ("useNativeMinification","true"), ("ieCompat","true"), ("strictMath","false"), ("strictUnits","false"), ("dumpLineNumbers","None"), ("javascriptEnabled","true") )
-(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`" />", "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`">`n    </less>" | Set-Content "$SCP_Portal_Dir\web.config"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/less[@useNativeMinification='true'][@ieCompat='true'][@strictMath='false'][@strictUnits='false'][@dumpLineNumbers='None'][@javascriptEnabled='true']" "jsEngine" @("name","MsieJsEngine")
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration" "runtime"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
-(Get-Content "$SCP_Portal_Dir\web.config") -replace "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`" />", "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`">`n    </assemblyBinding>" | Set-Content "$SCP_Portal_Dir\web.config"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-9.0.0.0"), ("newVersion","9.0.0.0") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","WebGrease"), ("publicKeyToken","31bf3856ad364e35"), ("culture","neutral") )
-ModifyXML "$SCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-1.5.2.14234"), ("newVersion","1.5.2.14234") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "configSections"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","jsEngineSwitcher")
+(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"jsEngineSwitcher`" />", "    <sectionGroup name=`"jsEngineSwitcher`">`n    </sectionGroup>" | Set-Content "$FCP_Portal_Dir\web.config"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","core"), ("type","JavaScriptEngineSwitcher.Core.Configuration.CoreConfiguration, JavaScriptEngineSwitcher.Core") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='jsEngineSwitcher']" "section" @( ("name","msie"), ("type","JavaScriptEngineSwitcher.Msie.Configuration.MsieConfiguration, JavaScriptEngineSwitcher.Msie") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections" "sectionGroup" @("name","bundleTransformer")
+(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <sectionGroup name=`"bundleTransformer`" />", "    <sectionGroup name=`"bundleTransformer`">`n    </sectionGroup>" | Set-Content "$FCP_Portal_Dir\web.config"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","core"), ("type","BundleTransformer.Core.Configuration.CoreSettings, BundleTransformer.Core") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/configSections/sectionGroup[@name='bundleTransformer']" "section" @( ("name","less"), ("type","BundleTransformer.Less.Configuration.LessSettings, BundleTransformer.Less") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.web/pages[@theme='Default'][@validateRequest='false'][@controlRenderingCompatibilityVersion='3.5'][@clientIDMode='AutoID']/controls" "add" @( ("tagPrefix","CPCC"), ("namespace","CPCC"), ("assembly","CPCC") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/system.webServer/handlers" "add" @( ("name","LessAssetHandler"), ("path","`*.less"), ("verb","GET"), ("type","BundleTransformer.Less.HttpHandlers.LessAssetHandler, BundleTransformer.Less"), ("resourceType","File"), ("preCondition","") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "jsEngineSwitcher" @("xmlns-temp","http`:`/`/tempuri.org`/JavaScriptEngineSwitcher.Configuration.xsd")
+(Get-Content "$FCP_Portal_Dir\web.config") -replace "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`" />", "  <jsEngineSwitcher xmlns-temp=`"http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd`">`n  </jsEngineSwitcher>" | Set-Content "$FCP_Portal_Dir\web.config"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']" "core"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core" "engines"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/jsEngineSwitcher[@xmlns-temp='http://tempuri.org/JavaScriptEngineSwitcher.Configuration.xsd']/core/engines" "add" @( ("name","MsieJsEngine"), ("type","JavaScriptEngineSwitcher.Msie.MsieJsEngine, JavaScriptEngineSwitcher.Msie") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "bundleTransformer" @("xmlns-temp","http://tempuri.org/BundleTransformer.Configuration.xsd")
+(Get-Content "$FCP_Portal_Dir\web.config") -replace "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`" />", "  <bundleTransformer xmlns-temp=`"http://tempuri.org/BundleTransformer.Configuration.xsd`">`n  </bundleTransformer>" | Set-Content "$FCP_Portal_Dir\web.config"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "core"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "css"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "translators"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/translators" "add" @( ("name","LessTranslator"), ("type","BundleTransformer.Less.Translators.LessTranslator, BundleTransformer.Less") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "postProcessors"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/postProcessors" "add" @( ("name","UrlRewritingCssPostProcessor"), ("type","BundleTransformer.Core.PostProcessors.UrlRewritingCssPostProcessor, BundleTransformer.Core"), ("useInDebugMode","false") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "minifiers"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css" "fileExtensions"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".css"), ("assetTypeCode","Css") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/css/fileExtensions" "add" @( ("fileExtension",".less"), ("assetTypeCode","Less") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core" "js"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "translators"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/translators" "add" @( ("name","NullTranslator"), ("type","BundleTransformer.Core.Translators.NullTranslator, BundleTransformer.Core"), ("enabled","false") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "minifiers"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/minifiers" "add" @( ("name","NullMinifier"), ("type","BundleTransformer.Core.Minifiers.NullMinifier, BundleTransformer.Core") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js" "fileExtensions"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/core/js/fileExtensions" "add" @( ("fileExtension",".js"), ("assetTypeCode","JavaScript") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']" "less" @( ("useNativeMinification","true"), ("ieCompat","true"), ("strictMath","false"), ("strictUnits","false"), ("dumpLineNumbers","None"), ("javascriptEnabled","true") )
+(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`" />", "    <less useNativeMinification=`"true`" ieCompat=`"true`" strictMath=`"false`" strictUnits=`"false`" dumpLineNumbers=`"None`" javascriptEnabled=`"true`">`n    </less>" | Set-Content "$FCP_Portal_Dir\web.config"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/bundleTransformer[@xmlns-temp='http://tempuri.org/BundleTransformer.Configuration.xsd']/less[@useNativeMinification='true'][@ieCompat='true'][@strictMath='false'][@strictUnits='false'][@dumpLineNumbers='None'][@javascriptEnabled='true']" "jsEngine" @("name","MsieJsEngine")
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration" "runtime"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime" "assemblyBinding" @("xmlns-temp","urn:schemas-microsoft-com:asm.v1")
+(Get-Content "$FCP_Portal_Dir\web.config") -replace "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`" />", "    <assemblyBinding xmlns-temp=`"urn:schemas-microsoft-com:asm.v1`">`n    </assemblyBinding>" | Set-Content "$FCP_Portal_Dir\web.config"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","Newtonsoft.Json"), ("publicKeyToken","30ad4fe6b2a6aeed"), ("culture","neutral") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-9.0.0.0"), ("newVersion","9.0.0.0") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']" "dependentAssembly"
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "assemblyIdentity" @( ("name","WebGrease"), ("publicKeyToken","31bf3856ad364e35"), ("culture","neutral") )
+ModifyXML "$FCP_Portal_Dir\web.config" "Add" "//configuration/runtime/assemblyBinding[@xmlns-temp='urn:schemas-microsoft-com:asm.v1']/dependentAssembly" "bindingRedirect" @( ("oldVersion","0.0.0.0-1.5.2.14234"), ("newVersion","1.5.2.14234") )
 # Update the web.config to change the "xmlns-temp" back to "xmlns" now we have finished parsing the XML file
-(Get-Content "$SCP_Portal_Dir\web.config") -replace " xmlns-temp=`"", " xmlns=`"" | Set-Content "$SCP_Portal_Dir\web.config"
+(Get-Content "$FCP_Portal_Dir\web.config") -replace " xmlns-temp=`"", " xmlns=`"" | Set-Content "$FCP_Portal_Dir\web.config"
 
 # Update each of the Server web.config file and remove the Windows Authentication from them that some people had mistakenly set
-push-location ; ($SCP_UNC_Test = Invoke-SQLCmd -query "SELECT [ServerName], [ServerUrl] FROM [$SCP_Database_Name].[dbo].[Servers] WHERE [VirtualServer]='0'" -Server $SCP_Database_Servr) | Out-Null ; Pop-Location
-for ($i = 0; $i -lt ($SCP_UNC_Test.count); $i++) { # Loop through each server in the $SQPServerQuery variable
+push-location ; ($FCP_UNC_Test = Invoke-SQLCmd -query "SELECT [ServerName], [ServerUrl] FROM [$FCP_Database_Name].[dbo].[Servers] WHERE [VirtualServer]='0'" -Server $FCP_Database_Servr) | Out-Null ; Pop-Location
+for ($i = 0; $i -lt ($FCP_UNC_Test.count); $i++) { # Loop through each server in the $SQPServerQuery variable
 	# Define the Variables to be used per Server
-	$SCP_UNCsvr_Name = $SCP_UNC_Test.ServerName[$i]
-	$SCP_Server_Root = ($SCP_UNC_Test.ServerUrl[$i] -replace "http://|https://|:9003", "")
+	$FCP_UNCsvr_Name = $FCP_UNC_Test.ServerName[$i]
+	$FCP_Server_Root = ($FCP_UNC_Test.ServerUrl[$i] -replace "http://|https://|:9003", "")
 	# Loop through the hard drive on the Remote Server to find the FuseCP Server directory
-	foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$SCP_Server_Root\c$\" -Include ("WebsitePanel", "FuseCP", "DotNetPanel")).FullName)) {
-		If ($RemoteServer.name -eq "Server") {$SCP_UNCsvr_Dir = $RemoteServer.FullName}
+	foreach ($RemoteServer in (Get-ChildItem (Get-ChildItem -Path "\\$FCP_Server_Root\c$\" -Include ("WebsitePanel", "FuseCP", "DotNetPanel")).FullName)) {
+		If ($RemoteServer.name -eq "Server") {$FCP_UNCsvr_Dir = $RemoteServer.FullName}
 	}
-	if (Test-Path "$SCP_UNCsvr_Dir") {
-		ModifyXML "$SCP_UNCsvr_Dir\web.config" "Delete" "//configuration/system.webServer"
-		Write-Host "`t $SCP_UNCsvr_Name - web.config Upgraded" -ForegroundColor Green
+	if (Test-Path "$FCP_UNCsvr_Dir") {
+		ModifyXML "$FCP_UNCsvr_Dir\web.config" "Delete" "//configuration/system.webServer"
+		Write-Host "`t $FCP_UNCsvr_Name - web.config Upgraded" -ForegroundColor Green
 	}else{
-		Write-Host "`t Unable to connect to $SCP_UNCsvr_Name - Check Firewall Settings" -ForegroundColor Yellow
+		Write-Host "`t Unable to connect to $FCP_UNCsvr_Name - Check Firewall Settings" -ForegroundColor Yellow
 	}
 }
 dPressAnyKeyToExit

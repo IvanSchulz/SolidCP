@@ -1,0 +1,141 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <RootNamespace>FuseCP.Providers.Virtualization.NoVNC</RootNamespace>
+        <AssemblyName>FuseCP.Providers.Virtualization.NoVNC</AssemblyName>
+        <OutputType>Library</OutputType>
+        <TargetFrameworks>net48;net10.0</TargetFrameworks>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <PortalDirectory>..\..\Sources\FuseCP.WebPortal</PortalDirectory>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(TargetFramework.ToLowerInvariant())\</IntermediateOutputPath>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+        <RestoreSources>$(RestoreSources);../../Lib/WebFormsForCore/nupkg;https://api.nuget.org/v3/index.json</RestoreSources>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>portable</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(TargetFramework) == 'net48'">
+        <OutputPath>..\..\Sources\FuseCP.WebPortal\bin</OutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(TargetFramework) != 'net48'">
+        <OutputPath>..\..\Sources\FuseCP.WebPortal\bin_dotnet</OutputPath>
+    </PropertyGroup>
+
+    <ItemGroup Condition="$(TargetFramework) != 'net48'">
+        <PackageReference Include="EstrellasDeEsperanza.WebFormsForCore.Web" Version="1.4.2" />
+        <PackageReference Include="EstrellasDeEsperanza.WebFormsForCore.Build" Version="1.4.2" ExcludeAssets="runtime" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />
+    </ItemGroup>
+
+    <ItemGroup Condition="$(TargetFramework) == 'net48'">
+        <Reference Include="System" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Data.DataSetExtensions" />
+        <Reference Include="System.Web" />
+        <Reference Include="System.Web.Extensions" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Configuration" />
+        <Reference Include="System.EnterpriseServices" />
+        <Reference Include="System.Xml.Linq" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="$(PortalDirectory)\..\VersionInfo.cs">
+            <Link>Properties\VersionInfo.cs</Link>
+        </Compile>
+        <AppContent Include="app\**\*.*">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </AppContent>
+        <CoreContent Include="core\**\*.*">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </CoreContent>
+        <VendorContent Include="vendor\**\*.*">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </VendorContent>
+        <Content Include="vnc.html">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </Content>
+        <Content Include="vnc.aspx">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\..\Sources\FuseCP.EnterpriseServer.Base\FuseCP.EnterpriseServer.Base.csproj">
+            <Project>{c09ce910-f16b-48a1-b2cc-c99b8c1cf775}</Project>
+            <Name>FuseCP.EnterpriseServer.Base</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Sources\FuseCP.EnterpriseServer\WebServices\FuseCP.Build\FuseCP.EnterpriseServer.Client.csproj">
+            <Project>{df3d477e-741c-4871-b838-c1635e72474b}</Project>
+            <Name>FuseCP.EnterpriseServer.Client</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Sources\FuseCP.Providers.Base\FuseCP.Providers.Base.csproj">
+            <Project>{684c932a-6c75-46ac-a327-f3689d89eb42}</Project>
+            <Name>FuseCP.Providers.Base</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Sources\FuseCP.Web.Clients\FuseCP.Web.Clients.csproj">
+            <Project>{652639d5-59ce-4f42-8a5f-87cb1e812961}</Project>
+            <Name>FuseCP.Web.Clients</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Sources\FuseCP.WebPortal\DesktopModules\FuseCP\FuseCP.Portal.Modules.csproj" />
+        <ProjectReference Include="..\..\Sources\FuseCP.WebPortal\FuseCP.WebPortal.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Common\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="package.json" />
+    </ItemGroup>
+
+    <Target Name="CopyContentToPortal" AfterTargets="Build">
+        <!--<ItemGroup>
+            <OutputFiles Include="bin\$(Configuration)\FuseCP.Providers.Virtualization.NoVNC.*" />
+        </ItemGroup>-->
+        <MakeDir Directories="$(PortalDirectory)\novnc" Condition="!Exists('$(PortalDirectory)\novnc')" />
+        <Copy SourceFiles="@(Content)" DestinationFiles="@(Content->'$(PortalDirectory)\novnc\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(AppContent)" DestinationFiles="@(AppContent->'$(PortalDirectory)\novnc\app\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(CoreContent)" DestinationFiles="@(CoreContent->'$(PortalDirectory)\novnc\core\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(VendorContent)" DestinationFiles="@(VendorContent->'$(PortalDirectory)\novnc\vendor\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+        <!--<Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(PortalDirectory)\bin_dotnet" />-->
+    </Target>
+
+    <Target Name="DeleteUnusedDlls" AfterTargets="Build" Condition="$(TargetFramework) == 'net48'">
+
+        <!-- move lazy loaded assemblies to $(OutputPath)\Code and delete unused assemblies in bin -->
+        <Message Text="Delete unused dll files" Importance="high" />
+        <ItemGroup>
+            <FilesToMove Include="$(OutputPath)\Microsoft.Bcl.*" />
+            <FilesToMove Include="$(OutputPath)\Microsoft.Win32.Registry.*" />
+            <FilesToMove Include="$(OutputPath)\Newtonsoft.Json.*" />
+            <FilesToMove Include="$(OutputPath)\Microsoft.IdentityModel.*" />
+            <FilesToMove Include="$(OutputPath)\Microsoft.Web.Administration.*" />
+            <FilesToMove Include="$(OutputPath)\Microsoft.ReportViewer.*" />
+            <FilesToMove Include="$(OutputPath)\Microsoft.Extensions.*" />
+            <FilesToMove Include="$(OutputPath)\Microsoft.Web.*" />
+            <FilesToMove Include="$(OutputPath)\FuseCP.Server.Client.*" />
+            <FilesToMove Include="$(OutputPath)\MsieJavaScriptEngine.*" />
+            <FilesToMove Include="$(OutputPath)\Renci.SshNet.*" />
+            <FilesToMove Include="$(OutputPath)\FuseCP.EnterpriseServer.Client.*" />
+            <FilesToMove Include="$(OutputPath)\FuseCP.Providers.*" Exclude="$(OutputPath)\FuseCP.Providers.Virtualization.NoVNC.*" />
+            <FilesToMove Include="$(OutputPath)\WebGrease.*" />
+            <FilesToMove Include="$(OutputPath)\JavaScriptEngineSwitcher.*" />
+            <FilesToMove Include="$(OutputPath)\System.*" />
+            <FilesToMove Include="$(OutputPath)\SwaggerWcf.*" />
+            <FilesToMove Include="$(OutputPath)\SkiaSharp.*" />
+            <FilesToMove Include="$(OutputPath)\BouncyCastle.*" />
+            <FilesToMove Include="$(OutputPath)\Antlr3.*" />
+            <FilesToMove Include="$(OutputPath)\AdvancedStringBuilder.*" />
+            <FilesToMove Include="$(OutputPath)\AntiXssLibrary.*" />
+            <FilesToMove Include="$(OutputPath)\HtmlSanitizationLibrary.*" />
+            <FilesToDelete Include="$(OutputPath)\WebServices\**\*.*" />
+        </ItemGroup>
+
+        <Delete Files="@(FilesToDelete)" ContinueOnError="true" />
+        <Move SourceFiles="@(FilesToMove)" DestinationFolder="$(OutputPath)\Lazy" ContinueOnError="true" />
+        <RemoveDir Directories="$(OutputPath)\WebServices;" ContinueOnError="true" />
+    </Target>
+
+</Project>

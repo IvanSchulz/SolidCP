@@ -2856,12 +2856,12 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLDatabasesSettings</Key>
+    <Key>ModuleTitle.FCPSQLDatabasesSettings</Key>
     <DefaultValue>FuseCP SQL Databases Settings</DefaultValue>
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLUserSettings</Key>
+    <Key>ModuleTitle.FCPSQLUserSettings</Key>
     <DefaultValue>FuseCP SQL User Settings</DefaultValue>
   </Resource>
   <Resource>
@@ -31702,7 +31702,7 @@ Exchange-enabled organization has its own Global Address List (GAL) and Offline 
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
   </Resource>
   <Resource>

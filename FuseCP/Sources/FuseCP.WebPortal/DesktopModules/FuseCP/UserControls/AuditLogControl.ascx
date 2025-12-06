@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AuditLogControl.ascx.cs" Inherits="FuseCP.Portal.UserControls.AuditLogControl" %>
-<%@ Register Src="PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
+<%@ Register Src="PopupHeader.ascx" TagName="PopupHeader" TagPrefix="fcp" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
 <table class="table">

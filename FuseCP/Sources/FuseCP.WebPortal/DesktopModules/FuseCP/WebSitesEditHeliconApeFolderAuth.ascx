@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebSitesEditHeliconApeFolderAuth.ascx.cs" Inherits="FuseCP.Portal.WebSitesEditHeliconApeFolderAuth" %>
 <%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <div class="panel-body form-horizontal">
 <table cellSpacing="0" cellPadding="0" width="100%">
 	<tr>
@@ -29,9 +29,9 @@
 	            </tr>
             </table>
             
-            <scp:CollapsiblePanel id="secUsers" runat="server"
+            <fcp:CollapsiblePanel id="secUsers" runat="server"
                 TargetControlID="UsersPanel" meta:resourcekey="secUsers" Text="Allowed Users">
-            </scp:CollapsiblePanel>
+            </fcp:CollapsiblePanel>
 	        <asp:Panel ID="UsersPanel" runat="server" Height="0" style="overflow:hidden;">
                 <table cellspacing="0" cellpadding="3" width="100%">
 	                <tr>
@@ -43,9 +43,9 @@
                 </table>
             </asp:Panel>
             
-            <scp:CollapsiblePanel id="secGroups" runat="server"
+            <fcp:CollapsiblePanel id="secGroups" runat="server"
                 TargetControlID="GroupsPanel" meta:resourcekey="secGroups" Text="Allowed Groups">
-            </scp:CollapsiblePanel>
+            </fcp:CollapsiblePanel>
 	        <asp:Panel ID="GroupsPanel" runat="server" Height="0" style="overflow:hidden;">
                 <table cellspacing="0" cellpadding="3" width="100%">
 	                <tr>

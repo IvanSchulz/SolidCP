@@ -2,8 +2,8 @@
 <%@ Register Src="../UserControls/SelectIPAddress.ascx" TagName="SelectIPAddress" TagPrefix="uc1" %>
 <%@ Register Src="Common_ActiveDirectoryIntegration.ascx" TagName="ActiveDirectoryIntegration" TagPrefix="uc1" %>
 <%@ Register Src="../UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc5" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagPrefix="scp" TagName="CollapsiblePanel" %>
-<%@ Register Src="../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagPrefix="fcp" TagName="CollapsiblePanel" %>
+<%@ Register Src="../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="fcp" %>
 <%@ Register src="../UserControls/EditFeedsList.ascx" tagname="EditFeedsList" tagprefix="uc6" %>
 
 <fieldset>

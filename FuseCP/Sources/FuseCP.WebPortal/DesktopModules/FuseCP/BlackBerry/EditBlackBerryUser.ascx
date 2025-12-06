@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditBlackBerryUser.ascx.cs" Inherits="FuseCP.Portal.BlackBerry.EditBlackBerryUser" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
 <%@ Register src="../ExchangeServer/UserControls/MailboxSelector.ascx" tagname="MailboxSelector" tagprefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <div id="ExchangeContainer">
     <div class="Module">
         <div class="Left">
@@ -21,11 +21,11 @@
                 </div>
                 <div class="panel-body form-horizontal">
                     
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
-                    <scp:CollapsiblePanel id="secPassword" runat="server"
+                    <fcp:CollapsiblePanel id="secPassword" runat="server"
                         TargetControlID="pnlSetPassword" meta:resourcekey="secPassowrd">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     
                     <asp:Panel runat="server" ID="pnlSetPassword">
                     <asp:UpdatePanel runat="server" UpdateMode="Conditional">

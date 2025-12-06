@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,159 +118,159 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ADHeader.Text" xml:space="preserve">
-    <value>??????? ???? Active Directory</value>
+    <value>إعدادات خدمة Active Directory</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
-    <value>?????</value>
+    <value>إلغاء</value>
   </data>
   <data name="btnChangeADPassword.Text" xml:space="preserve">
-    <value>????? ???? ??????</value>
+    <value>تغيير كلمة المرور</value>
   </data>
   <data name="btnChangeServerPassword.Text" xml:space="preserve">
-    <value>????? ???? ??????</value>
+    <value>تغيير كلمة المرور</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>???</value>
+    <value>حذف</value>
   </data>
   <data name="btnUpdate.Text" xml:space="preserve">
-    <value>?????</value>
+    <value>تحديث</value>
   </data>
   <data name="chkEnableAdSupport.Text" xml:space="preserve">
-    <value>?????</value>
+    <value>تمكين</value>
   </data>
   <data name="ConnectionHeader.Text" xml:space="preserve">
-    <value>??????? ???????</value>
+    <value>إعدادات الإتصال</value>
   </data>
   <data name="ddlAdAuthTypeItem.Anonymous" xml:space="preserve">
-    <value>?????</value>
+    <value>مجهول</value>
   </data>
   <data name="ddlAdAuthTypeItem.Delegation" xml:space="preserve">
-    <value>???????</value>
+    <value>التفويض</value>
   </data>
   <data name="ddlAdAuthTypeItem.None" xml:space="preserve">
-    <value>?? ???</value>
+    <value>لا شيء</value>
   </data>
   <data name="ddlAdAuthTypeItem.Secure" xml:space="preserve">
-    <value>???</value>
+    <value>آمن</value>
   </data>
   <data name="DnsRecordsHeader.Text" xml:space="preserve">
-    <value>???? ????? DNS</value>
+    <value>قالب سجلات DNS</value>
   </data>
   <data name="PreviewDomainHeader.Text" xml:space="preserve">
-    <value>?????? ??????</value>
+    <value>معاينة النطاق</value>
   </data>
   <data name="IPAddressesHeader.Text" xml:space="preserve">
-    <value>?????? IP</value>
+    <value>عناوين IP</value>
   </data>
   <data name="VLANsHeader.Text" xml:space="preserve">
-    <value>?????? ?????? - ????? VLAN</value>
+    <value>الشبكة الخاصة - شبكات VLAN</value>
   </data>
   <data name="lblAdDomain.Text" xml:space="preserve">
-    <value>???? ?????:</value>
+    <value>نطاق الجذر:</value>
   </data>
   <data name="lblAdPassword.Text" xml:space="preserve">
-    <value>???? ??????:</value>
+    <value>كلمة المرور:</value>
   </data>
   <data name="lblAdSupport.Text" xml:space="preserve">
-    <value>AD ?????:</value>
+    <value>AD الدعم:</value>
   </data>
   <data name="lblAdUsername.Text" xml:space="preserve">
-    <value>??? ????????:</value>
+    <value>اسم المستخدم:</value>
   </data>
   <data name="lblAuthType.Text" xml:space="preserve">
-    <value>??? ????????:</value>
+    <value>نوع المصادقة:</value>
   </data>
   <data name="lblPreviewDomain.Text" xml:space="preserve">
-    <value>?????? ??????</value>
+    <value>معاينة النطاق</value>
   </data>
   <data name="lblNewPassword.Text" xml:space="preserve">
-    <value>???? ???? ???????:</value>
+    <value>كلمة السر الجديدة:</value>
   </data>
   <data name="lblRecoveryTools.Text" xml:space="preserve">
-    <value>??????? ??????</value>
+    <value>استعادة الخادم</value>
   </data>
   <data name="lblSecurityMode.Text" xml:space="preserve">
-    <value>??? ???????:</value>
+    <value>وضع الحماية:</value>
   </data>
   <data name="lblServerComments.Text" xml:space="preserve">
-    <value>??????? ??????:</value>
+    <value>تعليقات الخادم:</value>
   </data>
   <data name="lblServerName.Text" xml:space="preserve">
-    <value>??? ??????:</value>
+    <value>اسم الخادم:</value>
   </data>
   <data name="lblServerTools.Text" xml:space="preserve">
-    <value>????? ??????</value>
+    <value>أدوات الخادم</value>
   </data>
   <data name="lblServerUrl.Text" xml:space="preserve">
-    <value>URL ??????:</value>
+    <value>URL الخادم:</value>
   </data>
   <data name="lnkBackup.Text" xml:space="preserve">
-    <value>????? ?????????</value>
+    <value>النسخ الاحتياطي</value>
   </data>
   <data name="lnkEventViewer.Text" xml:space="preserve">
-    <value>???? ???????</value>
+    <value>عارض الأحداث</value>
   </data>
   <data name="lnkRestore.Text" xml:space="preserve">
-    <value>???????</value>
+    <value>استعادة</value>
   </data>
   <data name="lnkServerReboot.Text" xml:space="preserve">
-    <value>????? ????? ??????</value>
+    <value>إعادة تشغيل الخادم</value>
   </data>
   <data name="lnkTerminalConnections.Text" xml:space="preserve">
-    <value>????? ??? ?????? ??????</value>
+    <value>جلسات سطح المكتب البعيد</value>
   </data>
   <data name="lnkWindowsProcesses.Text" xml:space="preserve">
-    <value>?????? ??????</value>
+    <value>عمليات النظام</value>
   </data>
   <data name="lnkWindowsServices.Text" xml:space="preserve">
-    <value>????? ????????</value>
+    <value>خدمات الويندوز</value>
   </data>
   <data name="rbUsersCreationModeItem.ADAccounts" xml:space="preserve">
-    <value>?????? ?????? Active Directory</value>
+    <value>استخدم حسابات Active Directory</value>
   </data>
   <data name="rbUsersCreationModeItem.LocalAccounts" xml:space="preserve">
-    <value>?????? ???????? ???????</value>
+    <value>استخدم الحسابات المحلية</value>
   </data>
   <data name="ServicesHeader.Text" xml:space="preserve">
-    <value>???????</value>
+    <value>الخدمات</value>
   </data>
   <data name="btnDelete.OnClientClick" xml:space="preserve">
-    <value>????? ??????? ("?? ??? ????? ??? ???? ??? ??? ???????") ?</value>
+    <value>تأكيد الإرجاع ("هل أنت متأكد أنك تريد حذف هذا الخادم؟") ؛</value>
   </data>
   <data name="btnUpdate.OnClientClick" xml:space="preserve">
-    <value>ShowProgressDialog('???? ????? ?????? ...');</value>
+    <value>ShowProgressDialog('جارٍ تحديث الخادم ...');</value>
   </data>
   <data name="lblServerVersion.Text" xml:space="preserve">
-    <value>????? ???? FuseCP</value>
+    <value>إصدار خادم FuseCP</value>
   </data>
   <data name="DomainFormatValidator.ErrorMessage" xml:space="preserve">
-    <value>?????? ????? ??? ?????? ?????? ? ??? ???? ?????? "mydomain.com" ?? "sub.mydomain.com".</value>
+    <value>الرجاء إدخال اسم النطاق الصحيح ، على سبيل المثال "mydomain.com" أو "sub.mydomain.com".</value>
   </data>
   <data name="DomainFormatValidator.Text" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="ServerNameValidator.ErrorMessage" xml:space="preserve">
-    <value>??? ?????? ?????.</value>
+    <value>اسم الخادم مطلوب.</value>
   </data>
   <data name="ServerNameValidator.Text" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="lnkPlatformInstaller.Text" xml:space="preserve">
-    <value>???? ???? ?????</value>
+    <value>مثبت منصة الويب</value>
   </data>
   <data name="btnDeleteText.Text" xml:space="preserve">
-    <value>???</value>
+    <value>حذف</value>
   </data>
   <data name="btnUpdateText.Text" xml:space="preserve">
-    <value>?????</value>
+    <value>تحديث</value>
   </data>
   <data name="lblAdUseParentDomain.text" xml:space="preserve">
-    <value>?????? ?????? ??????:</value>
+    <value>النطاق الأصلي البديل:</value>
   </data>
   <data name="lblAdParentDomain.text" xml:space="preserve">
-    <value>?????? ??????:</value>
+    <value>النطاق الأصلي:</value>
   </data>
   <data name="lblAdParentDomainController.text" xml:space="preserve">
-    <value>???? ???? ?????? ?????:</value>
+    <value>وحدة تحكم النطاق الأصل:</value>
   </data>
 </root>

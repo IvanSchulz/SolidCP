@@ -180,11 +180,11 @@ namespace FuseCP.Portal
                 // check if this is a "demo" message and it is overriden
                 if (resultCode == BusinessErrorCodes.ERROR_USER_ACCOUNT_DEMO)
                 {
-                    UserSettings scpSettings = UsersHelper.GetCachedUserSettings(
+                    UserSettings fcpSettings = UsersHelper.GetCachedUserSettings(
                         PanelSecurity.EffectiveUserId, UserSettings.FuseCP_POLICY);
-                    if (!String.IsNullOrEmpty(scpSettings["DemoMessage"]))
+                    if (!String.IsNullOrEmpty(fcpSettings["DemoMessage"]))
                     {
-                        localizedDescription = scpSettings["DemoMessage"];
+                        localizedDescription = fcpSettings["DemoMessage"];
                     }
                 }
 

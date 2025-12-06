@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceDetails.ascx.cs" Inherits="FuseCP.Portal.SpaceDetails" %>
-<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
+<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="fcp" %>
 <div class="widget">
 	<div class="widget-header clearfix">
 		<h3><i class="fa fa-server"></i><span>
@@ -36,7 +36,7 @@
 				<td class="SubHead">
 					<asp:Label ID="lblServer" runat="server" meta:resourcekey="lblServer" Text="Server:"></asp:Label></td>
 				<td class="Normal">
-					<scp:ServerDetails ID="serverDetails" runat="server" />
+					<fcp:ServerDetails ID="serverDetails" runat="server" />
 				</td>
 			</tr>
 		</table>

@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsWebPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsWebPolicy" %>
 <%@ Register Src="UserControls/UsernamePolicyEditor.ascx" TagName="UsernamePolicyEditor" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="secParkingPage" runat="server"
+<fcp:CollapsiblePanel id="secParkingPage" runat="server"
     TargetControlID="ParkingPagePanel" meta:resourcekey="secParkingPage" Text="Parking Page"/>
 <asp:Panel ID="ParkingPagePanel" runat="server" Height="0" style="overflow:hidden;">
     <table width="100%">
@@ -28,7 +28,7 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="secHostNamePanel" runat="server"
+<fcp:CollapsiblePanel id="secHostNamePanel" runat="server"
     TargetControlID="HostNamePanel" meta:resourcekey="secHostNamePanel" Text="Parking Page"/>
 <asp:Panel ID="HostNamePanel" runat="server" Height="0" style="overflow:hidden;">
     <table width="100%">
@@ -41,7 +41,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel runat="server" ID="WebPublishingProfile" 
+<fcp:CollapsiblePanel runat="server" ID="WebPublishingProfile" 
 	meta:resourcekey="WebPublishingProfile" Text="Web Publishing Profile" TargetControlID="WebPublishingProfilePanel" />
 <asp:Panel runat="server" ID="WebPublishingProfilePanel" Height="0" style="overflow:hidden;">
 	<table width="100%">
@@ -56,7 +56,7 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="secDefaultDocs" runat="server"
+<fcp:CollapsiblePanel id="secDefaultDocs" runat="server"
     TargetControlID="DefaultDocsPanel" meta:resourcekey="secDefaultDocs" Text="Default Documents"/>
 <asp:Panel ID="DefaultDocsPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -72,7 +72,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secGeneralSettings" runat="server"
+<fcp:CollapsiblePanel id="secGeneralSettings" runat="server"
     TargetControlID="GeneralSettingsPanel" meta:resourcekey="secGeneralSettings" Text="General Settings"/>
 <asp:Panel ID="GeneralSettingsPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -122,7 +122,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secExtensions" runat="server"
+<fcp:CollapsiblePanel id="secExtensions" runat="server"
     TargetControlID="ExtensionsPanel" meta:resourcekey="secExtensions" Text="Extensions"/>
 <asp:Panel ID="ExtensionsPanel" runat="server" Height="0" style="overflow:hidden;">
     <table cellpadding="4">
@@ -220,7 +220,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secAnonymousAccount" runat="server"
+<fcp:CollapsiblePanel id="secAnonymousAccount" runat="server"
     TargetControlID="AnonymousAccountPanel" meta:resourcekey="secAnonymousAccount" Text="Anonymous Account Policy"/>
 <asp:Panel ID="AnonymousAccountPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -236,7 +236,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secAppVirtualDirectories" runat="server"
+<fcp:CollapsiblePanel id="secAppVirtualDirectories" runat="server"
     TargetControlID="AppVirtualDirectoriesPanel" meta:resourcekey="secAppVirtualDirectories" Text="Virtual Directories"/>
 <asp:Panel ID="AppVirtualDirectoriesPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -251,7 +251,7 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="secFrontPage" runat="server"
+<fcp:CollapsiblePanel id="secFrontPage" runat="server"
     TargetControlID="FrontPagePanel" meta:resourcekey="secFrontPage" Text="FrontPage Account Policy"/>
 <asp:Panel ID="FrontPagePanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -274,7 +274,7 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="secSecuredFolders" runat="server"
+<fcp:CollapsiblePanel id="secSecuredFolders" runat="server"
     TargetControlID="SecuredFoldersPanel" meta:resourcekey="secSecuredFolders" Text="Secured Web Folders"/>
 <asp:Panel ID="SecuredFoldersPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -306,7 +306,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secFolders" runat="server"
+<fcp:CollapsiblePanel id="secFolders" runat="server"
     TargetControlID="FoldersPanel" meta:resourcekey="secFolders" Text="Web Site Folders"/>
 <asp:Panel ID="FoldersPanel" runat="server" Height="0" style="overflow:hidden;">
     <table cellpadding="4">

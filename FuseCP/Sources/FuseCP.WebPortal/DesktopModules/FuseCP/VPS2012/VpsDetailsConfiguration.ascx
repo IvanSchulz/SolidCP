@@ -1,28 +1,28 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsConfiguration.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VpsDetailsConfiguration" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CheckBoxOption.ascx" TagName="CheckBoxOption" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="Generation" Src="UserControls/Generation.ascx" %>
-<%@ Register TagPrefix="scp" TagName="DynamicMemoryControl" Src="UserControls/DynamicMemoryControl.ascx" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CheckBoxOption.ascx" TagName="CheckBoxOption" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="Generation" Src="UserControls/Generation.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="DynamicMemoryControl" Src="UserControls/DynamicMemoryControl.ascx" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 	    <div class="Content">
 		    <div class="Center">
 			    <div class="panel-body form-horizontal">
-			        <scp:ServerTabs id="tabs" runat="server" SelectedTab="vps_config" />	
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:ServerTabs id="tabs" runat="server" SelectedTab="vps_config" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                    
-                    <scp:CollapsiblePanel id="secSoftware" runat="server"
+                    <fcp:CollapsiblePanel id="secSoftware" runat="server"
                         TargetControlID="SoftwarePanel" meta:resourcekey="secSoftware" Text="Software">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="SoftwarePanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <table style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
@@ -44,11 +44,11 @@
                         </table>
                     </asp:Panel>
                     
-                    <scp:Generation runat="server" ID="GenerationSetting" Mode="Display"/>
+                    <fcp:Generation runat="server" ID="GenerationSetting" Mode="Display"/>
 
-                    <scp:CollapsiblePanel id="secResources" runat="server"
+                    <fcp:CollapsiblePanel id="secResources" runat="server"
                         TargetControlID="ResourcesPanel" meta:resourcekey="secResources" Text="Resources">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ResourcesPanel" runat="server" Height="0" style="overflow:hidden;padding:10px;width:400px;">
                         <table style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
@@ -95,9 +95,9 @@
                         </table>
                     </asp:Panel>
 
-                    <scp:CollapsiblePanel id="secHddQOS" runat="server" IsCollapsed="true"
+                    <fcp:CollapsiblePanel id="secHddQOS" runat="server" IsCollapsed="true"
                         TargetControlID="QOSManag" meta:resourcekey="secHddQOS" Text="Virtual Hard Disk Drive Quality of Service management">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="QOSManag" runat="server" Height="0" style="overflow:hidden;padding:10px;width:400px;">
                         <p>
 		                <asp:Localize ID="locHddIOPSTitle" runat="server" meta:resourcekey="locHddIOPSTitle" 
@@ -125,11 +125,11 @@
 
 
                     
-                    <scp:DynamicMemoryControl runat="server" ID="DynamicMemorySetting" Mode="Display"/>
+                    <fcp:DynamicMemoryControl runat="server" ID="DynamicMemorySetting" Mode="Display"/>
 
-                    <scp:CollapsiblePanel id="secSnapshots" runat="server"
+                    <fcp:CollapsiblePanel id="secSnapshots" runat="server"
                         TargetControlID="SnapshotsPanel" meta:resourcekey="secSnapshots" Text="Snapshots">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="SnapshotsPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <table style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
@@ -142,70 +142,70 @@
                         </table>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secDvd" runat="server"
+                    <fcp:CollapsiblePanel id="secDvd" runat="server"
                         TargetControlID="DvdPanel" meta:resourcekey="secDvd" Text="DVD">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="DvdPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <table style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
                                 <td>
-                                    <scp:CheckBoxOption id="optionDvdInstalled" runat="server"
+                                    <fcp:CheckBoxOption id="optionDvdInstalled" runat="server"
                                         Text="DVD Drive installed" meta:resourcekey="optionDvdInstalled" Value="True" />
                                 </td>
                             </tr>
                         </table>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secBios" runat="server"
+                    <fcp:CollapsiblePanel id="secBios" runat="server"
                         TargetControlID="BiosPanel" meta:resourcekey="secBios" Text="BIOS">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="BiosPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <table style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
                                 <td style="width:200px;">
-                                    <scp:CheckBoxOption id="optionBootFromCD" runat="server"
+                                    <fcp:CheckBoxOption id="optionBootFromCD" runat="server"
                                         Text="Boot from CD" meta:resourcekey="optionBootFromCD" Value="True" />
                                 </td>
                                 <td style="width:200px;">
-                                    <scp:CheckBoxOption id="optionNumLock" runat="server"
+                                    <fcp:CheckBoxOption id="optionNumLock" runat="server"
                                         Text="Num Lock enabled" meta:resourcekey="optionNumLock" Value="False" />
                                 </td>
                                 <td>
-                                    <scp:CheckBoxOption id="optionSecureBoot" runat="server"
+                                    <fcp:CheckBoxOption id="optionSecureBoot" runat="server"
                                         Text="Secure Boot enabled" meta:resourcekey="optionSecureBoot" Value="False" />
                                 </td>
                             </tr>
                         </table>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secActions" runat="server"
+                    <fcp:CollapsiblePanel id="secActions" runat="server"
                         TargetControlID="ActionsPanel" meta:resourcekey="secActions" Text="Allowed actions">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ActionsPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <table style="width:400px;" style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
                                 <td style="width:200px;">
-                                    <scp:CheckBoxOption id="optionStartShutdown" runat="server"
+                                    <fcp:CheckBoxOption id="optionStartShutdown" runat="server"
                                         Text="Start, Turn off and Shutdown" meta:resourcekey="optionStartShutdown" Value="True" />
                                 </td>
                                 <td>
-                                    <scp:CheckBoxOption id="optionReset" runat="server"
+                                    <fcp:CheckBoxOption id="optionReset" runat="server"
                                         Text="Reset" meta:resourcekey="optionReset" Value="True" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <scp:CheckBoxOption id="optionPauseResume" runat="server"
+                                    <fcp:CheckBoxOption id="optionPauseResume" runat="server"
                                         Text="Pause, Resume" meta:resourcekey="optionPauseResume" Value="False" />
                                 </td>
                                 <td>
-                                    <scp:CheckBoxOption id="optionReinstall" runat="server"
+                                    <fcp:CheckBoxOption id="optionReinstall" runat="server"
                                         Text="Re-install" meta:resourcekey="optionReinstall" Value="True" />
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <scp:CheckBoxOption id="optionReboot" runat="server"
+                                    <fcp:CheckBoxOption id="optionReboot" runat="server"
                                         Text="Reboot" meta:resourcekey="optionReboot" Value="True" />
                                 </td>
                                 <td>
@@ -215,23 +215,23 @@
                         </table>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secNetwork" runat="server"
+                    <fcp:CollapsiblePanel id="secNetwork" runat="server"
                         TargetControlID="NetworkPanel" meta:resourcekey="secNetwork" Text="Network">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="NetworkPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <table style="border-collapse: separate; border-spacing: 5px 1px;">
                             <tr>
-                                <td><scp:CheckBoxOption id="optionExternalNetwork" runat="server"
+                                <td><fcp:CheckBoxOption id="optionExternalNetwork" runat="server"
                                         Text="External network enabled" meta:resourcekey="optionExternalNetwork" Value="True" />
                                 </td>
                             </tr>
                             <tr>
-                                <td><scp:CheckBoxOption id="optionPrivateNetwork" runat="server"
+                                <td><fcp:CheckBoxOption id="optionPrivateNetwork" runat="server"
                                         Text="Private network enabled" meta:resourcekey="optionPrivateNetwork" Value="True" />
                                 </td>
                             </tr>
                             <tr>
-                                <td><scp:CheckBoxOption id="optionDmzNetwork" runat="server"
+                                <td><fcp:CheckBoxOption id="optionDmzNetwork" runat="server"
                                         Text="DMZ network enabled" meta:resourcekey="optionDmzNetwork" Value="True" />
                                 </td>
                             </tr>
@@ -259,8 +259,8 @@
 						<asp:Localize ID="locNewPassword" runat="server" Text="Enter new password:"
 											meta:resourcekey="locNewPassword"></asp:Localize>
 					
-						<scp:PasswordControl id="password" runat="server"
-											ValidationGroup="ChangePassword"></scp:PasswordControl>
+						<fcp:PasswordControl id="password" runat="server"
+											ValidationGroup="ChangePassword"></fcp:PasswordControl>
 					</div>
 				</div>
 			</div>  

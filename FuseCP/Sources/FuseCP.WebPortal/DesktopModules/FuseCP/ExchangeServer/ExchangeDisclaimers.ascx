@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDisclaimers.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDisclaimers" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -15,7 +15,7 @@
                             <CPCC:StyleButton id="btnCreateList" CssClass="btn btn-primary" runat="server" OnClick="btnCreateList_Click"> <i class="fa fa-file-text-o">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnCreateList"/> </CPCC:StyleButton>
                         </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    <asp:GridView ID="gvLists" runat="server" AutoGenerateColumns="False" EnableViewState="true"
 					    Width="100%" EmptyDataText="gvLists" CssSelectorClass="NormalGridView"
 					    OnRowCommand="gvLists_RowCommand" AllowPaging="True" AllowSorting="True"
@@ -40,7 +40,7 @@
 				    <br />
 				    <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Total Distribution Lists Created:"></asp:Localize>
 				    &nbsp;&nbsp;&nbsp;
-				    <scp:QuotaViewer ID="listsQuota" runat="server" QuotaTypeId="2" />
+				    <fcp:QuotaViewer ID="listsQuota" runat="server" QuotaTypeId="2" />
 				    
 				    
 				</div>

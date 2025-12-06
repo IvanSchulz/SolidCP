@@ -101,8 +101,8 @@ function FuseCP_TestConnection(array $params)
 	$serverPort = $params['serverport'];
 	$serverHost = (empty($params['serverhostname']) ? $params['serverip'] : $params['serverhostname']);
 	$serverSecure = $params['serversecure'];
-        $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
-        $result = $scp->getUserByUsername($serverUsername);
+        $fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+        $result = $fcp->getUserByUsername($serverUsername);
         if ($result){
             $success = true;
             $errorMsg = '';
@@ -174,7 +174,7 @@ function FuseCP_CreateAccount($params)
 	try
 	{
 	    // Create the FuseCP Enterprise Server Client object instance
-	    $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+	    $fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	    
 	    // Create the user's new account using the CreateUserWizard method
 	    $userParams = array('parentPackageId' => $parentPackageId,
@@ -200,7 +200,7 @@ function FuseCP_CreateAccount($params)
 	    					'createZoneRecord' => $createZoneRecord);
 	    
 	    // Execute the CreateUserWizard method
-	    $result = $scp->createUserWizard($userParams);
+	    $result = $fcp->createUserWizard($userParams);
 	    if ($result < 0)
 	    {
 	    	// Something went wrong
@@ -210,7 +210,7 @@ function FuseCP_CreateAccount($params)
 	    FuseCP_logModuleCall(__FUNCTION__, $params, $result);
 	    
 	    // Get the newly created user's details from FuseCP so we can update the account details completely
-	    $user = $scp->getUserByUsername($username);
+	    $user = $fcp->getUserByUsername($username);
 	    
 	    // Update the user's account details using the previous details + WHMCS's details (address, city, state etc.)
 	    $userParams = array('RoleId' => $roleId,
@@ -249,7 +249,7 @@ function FuseCP_CreateAccount($params)
 							'MfaMode' => $user['MfaMode']);
 	    
 	    // Execute the UpdateUserDetails method
-	    $scp->updateUserDetails($userParams);
+	    $fcp->updateUserDetails($userParams);
             
             // Create configurable options as addons.
             if($params['configoptions'] && $fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
@@ -260,11 +260,11 @@ function FuseCP_CreateAccount($params)
                 }
 
                 if(count($configurableoptions)>0){
-                    $package = $scp->getUserPackages($user['UserId']);
+                    $package = $fcp->getUserPackages($user['UserId']);
                     $packageId = $package['PackageId'];
                   
                     foreach ($configurableoptions as $addon){
-                        $addonPlanId = $addon->scp_id;
+                        $addonPlanId = $addon->fcp_id;
                         $addonIsIpAddress = $addon->is_ipaddress;
                         $addonqty = $addon->qty;
                         $addonOptType = $addon->optiontype;
@@ -272,7 +272,7 @@ function FuseCP_CreateAccount($params)
                         if($addonqty == 0 && ($addonOptType == 3 || $addonOptType == 4)) continue;
                         elseif($addonOptType != 3 && $addonOptType != 4) $addonqty = 1;
                         // Add the Addon Plan to the customer's FuseCP package / hosting space
-                        $results = $scp->addPackageAddonById($packageId, $addonPlanId, $addonqty);
+                        $results = $fcp->addPackageAddonById($packageId, $addonPlanId, $addonqty);
 
                         // Check the results to verify that the addon has been successfully allocated
                         if ($results['Result'] > 0)
@@ -280,7 +280,7 @@ function FuseCP_CreateAccount($params)
                             // If this addon is an IP address addon - attempt to randomly allocate an IP address to the customer's hosting space
                             if ($addonIsIpAddress == 1)
                             {
-                                $scp->allocatePackageIPAddresses($packageId);
+                                $fcp->allocatePackageIPAddresses($packageId);
                             }
 
                             // Add log entry to client log
@@ -343,17 +343,17 @@ function FuseCP_TerminateAccount($params)
 	try
 	{
 		// Create the FuseCP Enterprise Server Client object instance
-		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		$fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 		
 		// Get the user's details from FuseCP - We need the userid
-		$user = $scp->getUserByUsername($username);
+		$user = $fcp->getUserByUsername($username);
 		if (empty($user))
 		{
 			throw new Exception("User {$username} does not exist - Cannot terminate account for unknown user");
 		}
 		
 		// Attempt the delete the users account
-		$result = $scp->deleteUser($user['UserId']);
+		$result = $fcp->deleteUser($user['UserId']);
 		if ($result < 0)
 		{
 			// Something went wrong
@@ -410,17 +410,17 @@ function FuseCP_SuspendAccount($params)
 	try
 	{
 		// Create the FuseCP Enterprise Server Client object instance
-		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		$fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 		
 		// Get the user's details from FuseCP - We need the userid
-		$user = $scp->getUserByUsername($username);
+		$user = $fcp->getUserByUsername($username);
 		if (empty($user))
 		{
 			throw new Exception("User {$username} does not exist - Cannot suspend account for unknown user");
 		}
 		
 		// Change the user's account and package account status
-		$result = $scp->changeUserStatus($user['UserId'], FuseCP_EnterpriseServer::USERSTATUS_SUSPENDED);
+		$result = $fcp->changeUserStatus($user['UserId'], FuseCP_EnterpriseServer::USERSTATUS_SUSPENDED);
 		if ($result < 0)
 		{
 			// Something went wrong
@@ -477,17 +477,17 @@ function FuseCP_UnsuspendAccount($params)
 	try
 	{
 		// Create the FuseCP Enterprise Server Client object instance
-		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		$fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	
 		// Get the user's details from FuseCP - We need the userid
-		$user = $scp->getUserByUsername($username);
+		$user = $fcp->getUserByUsername($username);
 		if (empty($user))
 		{
 			throw new Exception("User {$username} does not exist - Cannot unsuspend account for unknown user");
 		}
 	
 		// Change the user's account and package account status
-		$result = $scp->changeUserStatus($user['UserId'], FuseCP_EnterpriseServer::USERSTATUS_ACTIVE);
+		$result = $fcp->changeUserStatus($user['UserId'], FuseCP_EnterpriseServer::USERSTATUS_ACTIVE);
 		if ($result < 0)
 		{
 			// Something went wrong
@@ -545,17 +545,17 @@ function FuseCP_ChangePassword($params)
 	try
 	{
 		// Create the FuseCP Enterprise Server Client object instance
-		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		$fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	
 		// Get the user's details from FuseCP - We need the userid
-		$user = $scp->getUserByUsername($username);
+		$user = $fcp->getUserByUsername($username);
 		if (empty($user))
 		{
 			throw new Exception("User {$username} does not exist - Cannot change account password for unknown user");
 		}
 	
 		// Change the user's account password
-		$result = $scp->changeUserPassword($user['UserId'], $password);
+		$result = $fcp->changeUserPassword($user['UserId'], $password);
 		if ($result < 0)
 		{
 			// Something went wrong
@@ -622,20 +622,20 @@ function FuseCP_ChangePackage($params)
 	try
 	{
 		// Create the FuseCP Enterprise Server Client object instance
-		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+		$fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 	
 		// Get the user's details from FuseCP - We need the userid
-		$user = $scp->getUserByUsername($username);
+		$user = $fcp->getUserByUsername($username);
 		if (empty($user))
 		{
 			throw new Exception("User {$username} does not exist - Cannot change package for unknown user");
 		}
 
                 // Get the user's package details from FuseCP - We need the PackageId
-		$package = $scp->getUserPackages($user['UserId']);
+		$package = $fcp->getUserPackages($user['UserId']);
                 
                 // Delete all existing Addons.
-                $addons_xml = $scp->getPackageAddons($package['PackageId']);
+                $addons_xml = $fcp->getPackageAddons($package['PackageId']);
                 $xml    = str_replace(array("diffgr:","msdata:"),'', $addons_xml["any"]);
                 $xml    = "<package>".$xml."</package>";
                 $data   = simplexml_load_string($xml);
@@ -646,7 +646,7 @@ function FuseCP_ChangePackage($params)
                     $i++;
                 }
                 foreach($addons as $value){
-                    $result = $scp->deletePackageAddon($value);
+                    $result = $fcp->deletePackageAddon($value);
                 }
 
                 // Create configurable options as addons.
@@ -658,7 +658,7 @@ function FuseCP_ChangePackage($params)
                     }
 
                     if(count($configurableoptions)>0){
-                        $package = $scp->getUserPackages($user['UserId']);
+                        $package = $fcp->getUserPackages($user['UserId']);
                         $packageId = $package['PackageId'];
                         foreach ($configurableoptions as $addon){
                             // WHMCS stores all (also previous) config options in the database, even
@@ -672,7 +672,7 @@ function FuseCP_ChangePackage($params)
                             }
                             // end of error handling on product change.
                             if($is_still_active){
-                                $addonPlanId = $addon->scp_id;
+                                $addonPlanId = $addon->fcp_id;
                                 $addonIsIpAddress = $addon->is_ipaddress;
                                 if($addon->qty < $addon->qtyminimum) $addonqty = $addon->qtyminimum; // if < minimum qty
                                 else $addonqty = $addon->qty; // from DB
@@ -681,7 +681,7 @@ function FuseCP_ChangePackage($params)
                                 if($addonqty == 0 && ($addonOptType == 3 || $addonOptType == 4)) continue;
                                 elseif($addonOptType != 3 && $addonOptType != 4) $addonqty = 1;
                                 // Add the Addon Plan to the customer's FuseCP package / hosting space
-                                $results = $scp->addPackageAddonById($packageId, $addonPlanId, $addonqty);
+                                $results = $fcp->addPackageAddonById($packageId, $addonPlanId, $addonqty);
 
                                 // Check the results to verify that the addon has been successfully allocated
                                 if ($results['Result'] > 0)
@@ -689,7 +689,7 @@ function FuseCP_ChangePackage($params)
                                     // If this addon is an IP address addon - attempt to randomly allocate an IP address to the customer's hosting space
                                     if ($addonIsIpAddress == 1)
                                     {
-                                        $scp->allocatePackageIPAddresses($packageId);
+                                        $fcp->allocatePackageIPAddresses($packageId);
                                     }
 
                                     // Add log entry to client log
@@ -712,12 +712,12 @@ function FuseCP_ChangePackage($params)
                         throw new Exception($addons['description']);
                     }
                     if(count($addons) > 0){
-                        $package = $scp->getUserPackages($user['UserId']);
+                        $package = $fcp->getUserPackages($user['UserId']);
                         $packageId = $package['PackageId'];
                         foreach ($addons as $addon){
-                            $addonPlanId = $addon->scp_id;
+                            $addonPlanId = $addon->fcp_id;
                             $addonIsIpAddress = $addon->is_ipaddress;
-                            $results = $scp->addPackageAddonById($packageId, $addonPlanId);
+                            $results = $fcp->addPackageAddonById($packageId, $addonPlanId);
 
                             // Check the results to verify that the addon has been successfully allocated
                             if ($results['Result'] > 0)
@@ -725,7 +725,7 @@ function FuseCP_ChangePackage($params)
                                 // If this addon is an IP address addon - attempt to randomly allocate an IP address to the customer's hosting space
                                 if ($addonIsIpAddress == 1)
                                 {
-                                    $scp->allocatePackageIPAddresses($packageId);
+                                    $fcp->allocatePackageIPAddresses($packageId);
                                 }
 
                                 // Add log entry to client log
@@ -742,7 +742,7 @@ function FuseCP_ChangePackage($params)
                 }
 
                 // Update the user's FuseCP package
-		$result = $scp->updatePackageLiteral($package['PackageId'], $package['StatusId'], $planId, $package['PurchaseDate'], $packageName, $package['PackageComments']);
+		$result = $fcp->updatePackageLiteral($package['PackageId'], $package['StatusId'], $planId, $package['PurchaseDate'], $packageName, $package['PackageComments']);
 		if ($result < 0)
 		{
 			// Something went wrong
@@ -815,28 +815,28 @@ function FuseCP_UsageUpdate($params)
                 $bwidthlimit = $service->configoption3;
 
                 // Create the FuseCP Enterprise Server Client object instance
-                $scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+                $fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
 
                 // Get the user's details from FuseCP - We need the userid
-                $user = $scp->getUserByUsername($username);
+                $user = $fcp->getUserByUsername($username);
                 if (empty($user))
                 {
                         throw new Exception("User {$username} does not exist - Cannot calculate usage for unknown user");
                 }
 
                 // Get the user's package details from FuseCP - We need the PackageId
-                $package = $scp->getUserPackages($user['UserId']);
+                $package = $fcp->getUserPackages($user['UserId']);
 
                 // Gather the bandwidth / diskspace usage stats
 				// WHMCS bills for overages on calendar month so date range should reflect calendar month
                 $bwidthusage = FuseCP_CalculateUsage(
-					$scp->getPackageBandwidthUsage(
+					$fcp->getPackageBandwidthUsage(
 						$package['PackageId'], 
 						date('Y-m-01'), 
 						date('Y-m-t')), 
 					FuseCP_EnterpriseServer::USAGE_BANDWIDTH);
                 
-				$diskusage = FuseCP_CalculateUsage($scp->getPackageDiskspaceUsage($package['PackageId']), FuseCP_EnterpriseServer::USAGE_DISKSPACE);
+				$diskusage = FuseCP_CalculateUsage($fcp->getPackageDiskspaceUsage($package['PackageId']), FuseCP_EnterpriseServer::USAGE_DISKSPACE);
 
                 // Update WHMCS's service details
                 fusecp_database::setUsage($serviceid, $diskusage, $disklimit, $bwidthusage, $bwidthlimit);
@@ -893,10 +893,10 @@ function FuseCP_LoginLink($params)
     	try
     	{
     		// Create the FuseCP Enterprise Server Client object instance
-    		$scp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
+    		$fcp = new FuseCP_EnterpriseServer($serverUsername, $serverPassword, $serverHost, $serverPort, $serverSecure);
     	
     		// Get the user's details from FuseCP - We need the userid
-    		$user = $scp->getUserByUsername($username);
+    		$user = $fcp->getUserByUsername($username);
     		if (empty($user))
     		{
     			throw new Exception("User {$username} does not exist - Cannot display account link for unknown user");

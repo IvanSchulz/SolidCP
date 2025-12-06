@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSettingsPasswordSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationSettingsPasswordSettings" %>
 
-<%@ Register Src="UserControls/OrganizationSettingsTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/OrganizationSettingsTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -19,13 +19,13 @@
                 </div>
                 <div class="panel-body form-horizontal">
                     <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-                    <scp:CollectionTabs ID="tabs" runat="server" SelectedTab="organization_settings_password_settings" />
+                    <fcp:CollectionTabs ID="tabs" runat="server" SelectedTab="organization_settings_password_settings" />
                     </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox ID="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox ID="messageBox" runat="server" />
                     <asp:UpdatePanel runat="server" ID="PasswordPolicyPanel" UpdateMode="Conditional" ChildrenAsTriggers="true">
                         <ContentTemplate>
-                            <scp:CollapsiblePanel ID="colPasswordSettings" runat="server" TargetControlID="panelPasswordSettings" meta:ResourceKey="colPasswordSettings" Text="Password settings"></scp:CollapsiblePanel>
+                            <fcp:CollapsiblePanel ID="colPasswordSettings" runat="server" TargetControlID="panelPasswordSettings" meta:ResourceKey="colPasswordSettings" Text="Password settings"></fcp:CollapsiblePanel>
 
                             <asp:Panel runat="server" ID="panelPasswordSettings">
                                 <table id="PolicyTable" runat="server" cellpadding="2">
@@ -177,6 +177,6 @@
                 </div>
                 </div>
                     <div class="panel-footer text-right">
-                        <scp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="SettingsEditor"
+                        <fcp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="SettingsEditor"
                             OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
                     </div>

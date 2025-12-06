@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeStorageUsageBreakdown.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeStorageUsageBreakdown" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 				<div class="panel-heading">
                     <h3 class="panel-title">
@@ -10,11 +10,11 @@
 				</div>
 				
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
-				    <scp:CollapsiblePanel id="secMailboxesReport" runat="server"
+				    <fcp:CollapsiblePanel id="secMailboxesReport" runat="server"
                         TargetControlID="MailboxesReport" meta:resourcekey="secMailboxesReport" Text="Mailboxes">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="MailboxesReport" runat="server" Height="0" style="overflow:hidden;">
 				        <asp:GridView ID="gvMailboxes" runat="server" AutoGenerateColumns="False"
 					        Width="100%" EmptyDataText="gvMailboxes" CssSelectorClass="NormalGridView">

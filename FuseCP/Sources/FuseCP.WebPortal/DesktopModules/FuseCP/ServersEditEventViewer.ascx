@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServersEditEventViewer.ascx.cs" Inherits="FuseCP.Portal.ServersEditEventViewer" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 <%@ Register Src="ServerHeaderControl.ascx" TagName="ServerHeaderControl" TagPrefix="uc1" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <uc1:ServerHeaderControl id="ServerHeaderControl1" runat="server">
 </uc1:ServerHeaderControl>
@@ -21,7 +21,7 @@
                 </CPCC:StyleButton>
             </div>
         </div>
-   	    <scp:SimpleMessageBox id="messageBox" runat="server" />
+   	    <fcp:SimpleMessageBox id="messageBox" runat="server" />
         <asp:GridView ID="gvEntries" runat="server" AutoGenerateColumns="False"
             EmptyDataText="gvEntries" AllowPaging="true" DataSourceID="odsLogEntries"
             CssSelectorClass="NormalGridView" EnableViewState="false" ondatabound="gvEntries_DataBound">

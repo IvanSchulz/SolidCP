@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Suite.master.cs" Inherits="AjaxControlToolkit.Jasmine.Suites.Suite" %>
+
+<!doctype html>
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder runat="server" ID="TestSuiteName" />
+    </title>
+
+    <base href="<%# GetCurrentPage() %>" target="_blank">
+
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/jasmine-style") %>
+    </asp:PlaceHolder>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/jquery") %>
+        <%: Scripts.Render("~/bundles/jasmine") %>
+        <%: Scripts.Render("~/bundles/testUtils") %>
+
+        <%: Scripts.Render("~/Infrastructure/Scripts/Libs/detect.js") %>
+    </asp:PlaceHolder>
+
+    <script>
+        if(parent && parent.TestRunner) {
+            var queryString = new jasmine.QueryString({
+                getWindowLocation: function() { return window.location; }
+            });
+            var specIndex = queryString.getParam("specIndex");
+
+            var env = jasmine.getEnv();
+            env.specFilter = function(spec) {
+                return spec.id === "spec" + specIndex;
+            };
+
+            env.addReporter(parent.TestRunner.Reporter);
+
+            funcNames = ["it", "xit", "fit", "describe", "xdescribe", "fdescribe"];
+            for(var index in funcNames) {
+                (function(funcName, jasmineNativeFunc) {
+                    window[funcName] = function(name, callback) {
+                        jasmineNativeFunc(name.replace(/ /g, "-"), callback);
+                    }
+                })(funcNames[index], window[funcNames[index]]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" EnablePartialRendering="true" ScriptMode="Release" />
+        <asp:ContentPlaceHolder runat="server" ID="TestSuite" />
+    </form>
+</body>
+</html>

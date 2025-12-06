@@ -1,19 +1,19 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DomainsAddDomain.ascx.cs" Inherits="FuseCP.Portal.DomainsAddDomain" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/DomainControl.ascx" TagName="DomainControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagPrefix="scp" TagName="CollapsiblePanel" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/DomainControl.ascx" TagName="DomainControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagPrefix="fcp" TagName="CollapsiblePanel" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <asp:ValidationSummary ID="summary" runat="server" ShowMessageBox="true" ShowSummary="true" ValidationGroup="Domain" />
 
 <div id="DomainPanel" runat="server" style="padding: 15px 0 15px 5px;">
-        <scp:DomainControl ID="DomainName" runat="server" RequiredEnabled="True" ValidationGroup="Domain"></scp:DomainControl>
+        <fcp:DomainControl ID="DomainName" runat="server" RequiredEnabled="True" ValidationGroup="Domain"></fcp:DomainControl>
 </div>
 <div class="panel-body">
-    <scp:CollapsiblePanel id="OptionsPanelHeader" runat="server"
+    <fcp:CollapsiblePanel id="OptionsPanelHeader" runat="server"
         TargetControlID="OptionsPanel" resourcekey="OptionsPanelHeader" Text="Provisioning options">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="OptionsPanel" runat="server">
         
         <br />

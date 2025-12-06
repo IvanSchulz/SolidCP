@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcPrivateNetwork.ascx.cs" Inherits="FuseCP.Portal.VPS.VdcPrivateNetwork" %>
 <%@ Import Namespace="FuseCP.Portal" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
 
 	    <div class="panel panel-default">
 			    <div class="panel-heading">
@@ -13,16 +13,16 @@
 				    <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Private Network"></asp:Localize>
 			    </div>
 			    <div class="panel-body form-horizontal">
-                    <scp:Menu id="menu" runat="server" SelectedItem="vdc_private_network" />
+                    <fcp:Menu id="menu" runat="server" SelectedItem="vdc_private_network" />
                 <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                     <div class="FormButtonsBarClean">
                         <div class="FormButtonsBarCleanLeft">
                         </div>
                         <div class="FormButtonsBarCleanRight">
-                            <scp:SearchBox ID="searchBox" runat="server" />
+                            <fcp:SearchBox ID="searchBox" runat="server" />
                         </div>
                     </div>
 			        <asp:GridView ID="gvAddresses" runat="server" AutoGenerateColumns="False" EnableViewState="false"
@@ -62,15 +62,15 @@
 				    </asp:ObjectDataSource>
 				    <br />
     				
-				    <scp:CollapsiblePanel id="secQuotas" runat="server"
+				    <fcp:CollapsiblePanel id="secQuotas" runat="server"
                         TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
                     
                         <table cellspacing="6">
                             <tr>
                                 <td><asp:Localize ID="locVpsAddressesQuota" runat="server" meta:resourcekey="locVpsAddressesQuota" Text="IP addresses per VPS:"></asp:Localize></td>
-                                <td><scp:Quota ID="addressesPerVps" runat="server" QuotaName="VPS.PrivateIPAddressesNumber" /></td>
+                                <td><fcp:Quota ID="addressesPerVps" runat="server" QuotaName="VPS.PrivateIPAddressesNumber" /></td>
                             </tr>
                         </table>
                     </asp:Panel>

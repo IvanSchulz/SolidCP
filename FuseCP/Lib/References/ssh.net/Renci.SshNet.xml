@@ -2438,7 +2438,7 @@
         </member>
         <member name="T:Renci.SshNet.Common.ProxyException">
             <summary>
-            The exception that is thrown when SCP error occurred.
+            The exception that is thrown when FCP error occurred.
             </summary>
         </member>
         <member name="T:Renci.SshNet.Common.SshException">
@@ -2949,7 +2949,7 @@
         </member>
         <member name="T:Renci.SshNet.Common.ScpException">
             <summary>
-            The exception that is thrown when SCP error occurred.
+            The exception that is thrown when FCP error occurred.
             </summary>
         </member>
         <member name="M:Renci.SshNet.Common.ScpException.#ctor">
@@ -6988,10 +6988,10 @@
         </member>
         <member name="T:Renci.SshNet.ScpClient">
             <summary>
-            Provides SCP client functionality.
+            Provides FCP client functionality.
             </summary>
             <summary>
-            Provides SCP client functionality.
+            Provides FCP client functionality.
             </summary>
         </member>
         <member name="M:Renci.SshNet.ScpClient.#ctor(Renci.SshNet.ConnectionInfo)">

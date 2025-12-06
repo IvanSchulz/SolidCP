@@ -19,16 +19,16 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<Reference Include="Microsoft.Web.Administration">
-		  <HintPath>..\..\..\..\FuseCP\FuseCP\Lib\References\Microsoft\Microsoft.Web.Administration.dll</HintPath>
+		  <HintPath>..\..\Lib\References\Microsoft\Microsoft.Web.Administration.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.Web.Management">
-		  <HintPath>..\..\..\..\FuseCP\FuseCP\Lib\References\Microsoft\Microsoft.Web.Management.dll</HintPath>
+		  <HintPath>..\..\Lib\References\Microsoft\Microsoft.Web.Management.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.Web.Management.Ftp">
-		  <HintPath>..\..\..\..\FuseCP\FuseCP\Lib\References\Microsoft\Microsoft.Web.Management.Ftp.dll</HintPath>
+		  <HintPath>..\..\Lib\References\Microsoft\Microsoft.Web.Management.Ftp.dll</HintPath>
 		</Reference>
 		<Reference Include="Microsoft.Web.Management.FtpClient">
-		  <HintPath>..\..\..\..\FuseCP\FuseCP\Lib\References\Microsoft\Microsoft.Web.Management.FtpClient.dll</HintPath>
+		  <HintPath>..\..\Lib\References\Microsoft\Microsoft.Web.Management.FtpClient.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Data.DataSetExtensions" />
 		<Reference Include="System.Web" />

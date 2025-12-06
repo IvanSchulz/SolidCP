@@ -1,23 +1,23 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsToolsDeleteServer.ascx.cs" Inherits="FuseCP.Portal.VPSForPC.VpsToolsDeleteServer" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 	    <div class="panel panel-default">
 			    <div class="panel-heading">
 				    <asp:Image ID="imgIcon" SkinID="DeleteServer48" runat="server" />
-				    <scp:FormTitle ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Delete Server" />
+				    <fcp:FormTitle ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Delete Server" />
 			    </div>
 			    <div class="panel-body form-horizontal">
-                    <scp:Menu id="menu" runat="server" SelectedItem="" />
+                    <fcp:Menu id="menu" runat="server" SelectedItem="" />
                 <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
-			        <scp:ServerTabs id="tabs" runat="server" />	
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:ServerTabs id="tabs" runat="server" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                     <asp:ValidationSummary ID="validatorsSummary" runat="server" 
                         ValidationGroup="Tools" ShowMessageBox="True" ShowSummary="False" />

@@ -262,36 +262,36 @@ function needTableMigration(){
     $migrate_old_tables = array();
     try{
         // Before version 1.0.1 probably Websitepanel? Will be changed in upcoming version!
-        if(Capsule::schema()->hasTable('tblscpaddons')){
-            $old_tbl_addons = Capsule::table('tblscpaddons')
+        if(Capsule::schema()->hasTable('tblfcpaddons')){
+            $old_tbl_addons = Capsule::table('tblfcpaddons')
                     ->select('*')
                     ->get();
             $new_tbl_addons = Capsule::table(SOLIDCP_ADDONS_TABLE)
                     ->select('*')
                     ->get();
-            if(count($old_tbl_addons) > 0 && count($new_tbl_addons) <= 0) $migrate_old_tables[] = ['old_tbl' => 'tblscpaddons', 'new_tbl' => SOLIDCP_ADDONS_TABLE];
+            if(count($old_tbl_addons) > 0 && count($new_tbl_addons) <= 0) $migrate_old_tables[] = ['old_tbl' => 'tblfcpaddons', 'new_tbl' => SOLIDCP_ADDONS_TABLE];
         }
         
         // Before version 1.1.0
-        if(Capsule::schema()->hasTable('mod_scpaddons')){
-            $old_tbl_addons = Capsule::table('mod_scpaddons')
+        if(Capsule::schema()->hasTable('mod_fcpaddons')){
+            $old_tbl_addons = Capsule::table('mod_fcpaddons')
                     ->select('*')
                     ->get();
             $new_tbl_addons = Capsule::table(SOLIDCP_ADDONS_TABLE)
                     ->select('*')
                     ->get();
-            if(count($old_tbl_addons) > 0 && count($new_tbl_addons) <= 0) $migrate_old_tables[] = ['old_tbl' => 'mod_scpaddons', 'new_tbl' => SOLIDCP_ADDONS_TABLE];
+            if(count($old_tbl_addons) > 0 && count($new_tbl_addons) <= 0) $migrate_old_tables[] = ['old_tbl' => 'mod_fcpaddons', 'new_tbl' => SOLIDCP_ADDONS_TABLE];
         }
         
         // Before version 1.1.0
-        if(Capsule::schema()->hasTable('mod_scpconfigurable')){
-            $old_tbl_addons = Capsule::table('mod_scpconfigurable')
+        if(Capsule::schema()->hasTable('mod_fcpconfigurable')){
+            $old_tbl_addons = Capsule::table('mod_fcpconfigurable')
                     ->select('*')
                     ->get();
             $new_tbl_addons = Capsule::table(SOLIDCP_CONFIGURABLE_OPTIONS_TABLE)
                     ->select('*')
                     ->get();
-            if(count($old_tbl_addons) > 0 && count($new_tbl_addons) <= 0) $migrate_old_tables[] = ['old_tbl' => 'mod_scpconfigurable', 'new_tbl' => SOLIDCP_CONFIGURABLE_OPTIONS_TABLE];
+            if(count($old_tbl_addons) > 0 && count($new_tbl_addons) <= 0) $migrate_old_tables[] = ['old_tbl' => 'mod_fcpconfigurable', 'new_tbl' => SOLIDCP_CONFIGURABLE_OPTIONS_TABLE];
         }
     }
     catch (Exception $e){

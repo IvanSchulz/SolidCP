@@ -2,8 +2,8 @@
 	Inherits="FuseCP.Portal.MailForwardingsEditForwarding" %>
 <%@ Register TagPrefix="dnc" TagName="EmailAddress" Src="MailEditAddress.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+	TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <script type="text/javascript">
 
 	function confirmation() {

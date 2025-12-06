@@ -1,16 +1,16 @@
 <%@ Control Language="C#" AutoEventWireup="true" Codebehind="HostedSharePointSiteCollections.ascx.cs"
 	Inherits="FuseCP.Portal.HostedSharePointSiteCollections" %>
 <%@ Register Src="../UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems"
-	TagPrefix="scp" %>
+	TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-	TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
+	TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
 	
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
+	TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <script type="text/javascript">
 
@@ -31,7 +31,7 @@ function confirmation()
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="SharePoint Site Collections"></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-					<scp:SimpleMessageBox id="messageBox" runat="server" />
+					<fcp:SimpleMessageBox id="messageBox" runat="server" />
 					<div class="FormButtonsBarClean">
 						<div class="FormButtonsBarCleanLeft">
 							<CPCC:StyleButton id="btnCreateSiteCollection" CssClass="btn btn-primary" runat="server" OnClick="btnCreateSiteCollection_Click"> <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnCreateSiteCollectionText"/> </CPCC:StyleButton>
@@ -86,8 +86,8 @@ function confirmation()
 					<br />
 					<asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Total Site Collections Created:"></asp:Localize>
 					&nbsp;&nbsp;&nbsp;
-					<%--<scp:Quota ID="siteCollectionsQuota1" runat="server" QuotaName="HostedSharePoint.Sites" />--%>
-					<scp:QuotaViewer ID="siteCollectionsQuota" runat="server" QuotaTypeId="2" />
+					<%--<fcp:Quota ID="siteCollectionsQuota1" runat="server" QuotaName="HostedSharePoint.Sites" />--%>
+					<fcp:QuotaViewer ID="siteCollectionsQuota" runat="server" QuotaTypeId="2" />
 				</div>
 			</div>
 		</div>

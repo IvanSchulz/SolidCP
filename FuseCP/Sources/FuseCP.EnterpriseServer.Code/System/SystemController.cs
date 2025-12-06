@@ -137,9 +137,9 @@ namespace FuseCP.EnterpriseServer
 
 		public bool GetSystemSetupMode()
 		{
-			var scpaSystemSettings = GetSystemSettings(SystemSettings.SETUP_SETTINGS);
+			var fcpaSystemSettings = GetSystemSettings(SystemSettings.SETUP_SETTINGS);
 			// Flag either not found or empty
-			if (String.IsNullOrEmpty(scpaSystemSettings["EnabledSCPA"]))
+			if (String.IsNullOrEmpty(fcpaSystemSettings["EnabledFCPA"]))
 			{
 				return false;
 			}
@@ -151,7 +151,7 @@ namespace FuseCP.EnterpriseServer
 		{
 			try
 			{
-				TaskManager.StartTask("SYSTEM", "COMPLETE_SCPA");
+				TaskManager.StartTask("SYSTEM", "COMPLETE_FCPA");
 				//
 				TaskManager.WriteParameter("Password A", passwordA);
 				TaskManager.WriteParameter("Password B", passwordB);
@@ -162,7 +162,7 @@ namespace FuseCP.EnterpriseServer
 				if (enabledScpaMode == false)
 				{
 					//
-					TaskManager.WriteWarning("Attempt to execute SCPA procedure for an uknown reason");
+					TaskManager.WriteWarning("Attempt to execute FCPA procedure for an uknown reason");
 					//
 					return BusinessErrorCodes.FAILED_EXECUTE_SERVICE_OPERATION;
 				}
@@ -190,7 +190,7 @@ namespace FuseCP.EnterpriseServer
 					//
 					return resultCodeB;
 				}
-				// Disable SCPA mode
+				// Disable FCPA mode
 				SetSystemSettings(SystemSettings.SETUP_SETTINGS, SystemSettings.Empty);
 				// Operation has succeeded
 				return 0;

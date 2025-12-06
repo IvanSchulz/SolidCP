@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BackupWizard.ascx.cs" Inherits="FuseCP.Portal.BackupWizard" %>
-<%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<%@ Register Src="UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-body form-horizontal">
     <table cellpadding="3" cellspacing="0">
@@ -53,8 +53,8 @@
                     <asp:Label ID="lblSpaceFolder" runat="server" meta:resourcekey="lblSpaceFolder" Text="Folder:"></asp:Label>
                 </td>
                 <td>
-                    <scp:FileLookup id="spaceFolder" runat="server" ValidationGroup="Backup">
-                    </scp:FileLookup>
+                    <fcp:FileLookup id="spaceFolder" runat="server" ValidationGroup="Backup">
+                    </fcp:FileLookup>
                 </td>
             </tr>
         </table>

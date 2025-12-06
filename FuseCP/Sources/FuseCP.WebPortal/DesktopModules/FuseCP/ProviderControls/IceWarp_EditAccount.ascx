@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IceWarp_EditAccount" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register TagPrefix="scp" TagName="Calendar" Src="../UserControls/CalendarControl.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="Calendar" Src="../UserControls/CalendarControl.ascx" %>
 
 <table width="100%">
     <tr>
@@ -44,9 +44,9 @@
 </table>
 
 
-<scp:CollapsiblePanel id="secAutoresponder" runat="server" TargetControlID="AutoresponderPanel"
+<fcp:CollapsiblePanel id="secAutoresponder" runat="server" TargetControlID="AutoresponderPanel"
     meta:resourcekey="Autoresponder" Text="Autoresponder">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 
 <asp:Panel ID="AutoresponderPanel" runat="server">
     <asp:UpdatePanel ID="AutoresponderUpdatePanel" runat="server" UpdateMode="Conditional">
@@ -87,14 +87,14 @@
                 <td class="SubHead">
                     <asp:Label ID="lblRespondFrom" runat="server" meta:resourcekey="lblRespondFrom" Text="Respond from:"></asp:Label></td>
                 <td class="Normal">
-                    <scp:Calendar ID="calRespondFrom" runat="server"></scp:Calendar>
+                    <fcp:Calendar ID="calRespondFrom" runat="server"></fcp:Calendar>
                 </td>
             </tr>
             <tr runat="server" ID="RespondTo">
                 <td class="SubHead">
                     <asp:Label ID="lblRespondTo" runat="server" meta:resourcekey="lblRespondTo" Text="Respond to:"></asp:Label></td>
                 <td class="Normal">
-                    <scp:Calendar ID="calRespondTo" runat="server"></scp:Calendar>
+                    <fcp:Calendar ID="calRespondTo" runat="server"></fcp:Calendar>
                 </td>
             </tr>
             <tr>
@@ -125,8 +125,8 @@
     </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Panel>
-<scp:CollapsiblePanel id="secForwarding" runat="server" TargetControlID="ForwardingPanel" meta:resourcekey="Forwarding" Text="Mail Forwarding">
-</scp:CollapsiblePanel>
+<fcp:CollapsiblePanel id="secForwarding" runat="server" TargetControlID="ForwardingPanel" meta:resourcekey="Forwarding" Text="Mail Forwarding">
+</fcp:CollapsiblePanel>
 <asp:Panel ID="ForwardingPanel" runat="server">
     <table width="100%">
         <tr>
@@ -144,9 +144,9 @@
         </tr>
     </table>
 </asp:Panel>
-<scp:CollapsiblePanel id="secOlderMails" runat="server" TargetControlID="OlderMailsPanel"
+<fcp:CollapsiblePanel id="secOlderMails" runat="server" TargetControlID="OlderMailsPanel"
     meta:resourcekey="OlderMails" Text="Handle older mails">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="OlderMailsPanel" runat="server">
     <asp:UpdatePanel ID="DeleteOlderUpdatePanel" runat="server" UpdateMode="Conditional">
     <ContentTemplate>

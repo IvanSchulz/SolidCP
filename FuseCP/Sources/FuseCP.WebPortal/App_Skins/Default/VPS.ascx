@@ -1,10 +1,10 @@
 <%@ Control AutoEventWireup="true" %>
-<%@ Register TagPrefix="scp" TagName="SiteFooter" Src="~/DesktopModules/FuseCP/SkinControls/SiteFooter.ascx" %>
-<%@ Register TagPrefix="scp" TagName="TopMenu" Src="~/DesktopModules/FuseCP/SkinControls/TopMenu.ascx" %>
-<%@ Register TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
-<%@ Register TagPrefix="scp" TagName="SignedInUser" Src="~/DesktopModules/FuseCP/SkinControls/SignedInUser.ascx" %>
-<%@ Register TagPrefix="scp" TagName="GlobalSearch" Src="~/DesktopModules/FuseCP/SkinControls/GlobalSearch.ascx" %>
-<%@ Register TagPrefix="scp" TagName="UserSpaceBreadcrumb" Src="~/DesktopModules/FuseCP/SkinControls/UserSpaceBreadcrumb.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="SiteFooter" Src="~/DesktopModules/FuseCP/SkinControls/SiteFooter.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="TopMenu" Src="~/DesktopModules/FuseCP/SkinControls/TopMenu.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="SignedInUser" Src="~/DesktopModules/FuseCP/SkinControls/SignedInUser.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="GlobalSearch" Src="~/DesktopModules/FuseCP/SkinControls/GlobalSearch.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="UserSpaceBreadcrumb" Src="~/DesktopModules/FuseCP/SkinControls/UserSpaceBreadcrumb.ascx" %>
 
 <asp:ScriptManager ID="scriptManager" runat="server" EnablePartialRendering="true" EnableScriptGlobalization="true" EnableScriptLocalization="true">
 	<Services>
@@ -18,11 +18,11 @@
 			<a href="#" id="btn-nav-sidebar-minified" class="btn btn-link btn-nav-sidebar-minified pull-left"><i class="icon ion-arrow-swap"></i></a>
 			<a class="btn btn-link btn-off-canvas pull-left"><i class="icon ion-navicon"></i></a>
 			<div class="logo pull-left">
-				<scp:Logo ID="logo" runat="server" />
+				<fcp:Logo ID="logo" runat="server" />
 			</div>
 		</div>
-		<scp:SignedInUser ID="signedInUser1" runat="server" />
-		<scp:GlobalSearch ID="globalSearch" runat="server" />
+		<fcp:SignedInUser ID="signedInUser1" runat="server" />
+		<fcp:GlobalSearch ID="globalSearch" runat="server" />
 	</nav>
 	<!-- END TOP NAV BAR -->
 	<!-- COLUMN LEFT -->
@@ -30,9 +30,9 @@
 		<div class="main-nav-wrapper">
 			<nav id="main-nav" class="main-nav">
 				<h3>MAIN</h3>
-				<scp:TopMenu ID="leftMenu" runat="server" Align="left" />
+				<fcp:TopMenu ID="leftMenu" runat="server" Align="left" />
 				<asp:PlaceHolder ID="LeftPane" runat="server"></asp:PlaceHolder>
-				<scp:TopMenu ID="rightMenu" runat="server" Align="right" />
+				<fcp:TopMenu ID="rightMenu" runat="server" Align="right" />
 			</nav>
 		</div>
 	</div>
@@ -42,7 +42,7 @@
 		<div class="container-fluid primary-content" id="SkinContent">
 			<!-- PRIMARY CONTENT HEADING -->
 			<div class="primary-content-heading clearfix">
-				<scp:UserSpaceBreadcrumb ID="breadcrumb" runat="server" CurrentNodeVisible="false" />
+				<fcp:UserSpaceBreadcrumb ID="breadcrumb" runat="server" CurrentNodeVisible="false" />
 				<div id="ContentOneColumn">
 					<div id="Center" class="col-md-12">
 						<asp:PlaceHolder ID="ContentPane" runat="server"></asp:PlaceHolder>
@@ -54,16 +54,16 @@
 			</div>
 		</div>
 		<div id="Footer" class="content-footer">
-			<scp:SiteFooter ID="footer" runat="server" />
+			<fcp:SiteFooter ID="footer" runat="server" />
 		</div>
 	</div>
 </div>
 <!-- Javascript -->
 <script src="/JavaScript/jquery-2.1.0.min.js"></script>
 <script src="/JavaScript/bootstrap/bootstrap.js"></script>
-<script src="/JavaScript/scp-common.js"></script>
-<script src="/JavaScript/scp-charts.js"></script>
-<script src="/JavaScript/scp-elements.js"></script>
+<script src="/JavaScript/fcp-common.js"></script>
+<script src="/JavaScript/fcp-charts.js"></script>
+<script src="/JavaScript/fcp-elements.js"></script>
 <script src="/JavaScript/plugins/plugins.js"></script>
 <script src="/JavaScript/jquery-ui/jquery-ui-1.10.4.custom.min.js"></script>
 <script src="/JavaScript/jquery.matchHeight.js"></script>

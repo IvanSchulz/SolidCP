@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VirtualServersEditServer.ascx.cs" Inherits="FuseCP.Portal.VirtualServersEditServer" %>
 <%@ Register Src="GlobalDnsRecordsControl.ascx" TagName="GlobalDnsRecordsControl" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <div class="panel-body form-horizontal">
     <asp:ValidationSummary ID="summary" runat="server" ShowMessageBox="true" ShowSummary="false" ValidationGroup="VirtualServer" />
@@ -20,8 +20,8 @@
             <asp:TextBox ID="txtComments" runat="server" CssClass="form-control" Rows="2" TextMode="MultiLine"></asp:TextBox>
         </div>
     </div>
-    <scp:CollapsiblePanel ID="secServices" runat="server"
-        TargetControlID="ServicesPanel" ResourceKey="secServices" Text="Services"></scp:CollapsiblePanel>
+    <fcp:CollapsiblePanel ID="secServices" runat="server"
+        TargetControlID="ServicesPanel" ResourceKey="secServices" Text="Services"></fcp:CollapsiblePanel>
     <asp:Panel ID="ServicesPanel" runat="server">
         <div class="form-group" id="rowPrimaryGroup" runat="server">
             <label class="col-sm-2">
@@ -96,9 +96,9 @@
         </asp:DataList>
     </asp:Panel>
 
-    <scp:CollapsiblePanel ID="secDnsRecords" runat="server" IsCollapsed="true"
+    <fcp:CollapsiblePanel ID="secDnsRecords" runat="server" IsCollapsed="true"
         TargetControlID="DnsRecordsPanel" ResourceKey="secDnsRecords" Text="DNS Records Template">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 
     <asp:Panel ID="DnsRecordsPanel" runat="server">
  
@@ -107,9 +107,9 @@
     </asp:Panel>
 
 
-    <scp:CollapsiblePanel ID="secPreviewDomain" runat="server" IsCollapsed="true"
+    <fcp:CollapsiblePanel ID="secPreviewDomain" runat="server" IsCollapsed="true"
         TargetControlID="PreviewDomainPanel" ResourceKey="secPreviewDomain" Text="Preview Domain">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
     <asp:Panel ID="PreviewDomainPanel" runat="server">
          <div class="form-inline">
       customerdomain.com.&nbsp;

@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsNameServers.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsNameServers" %>
 <%@ Register Src="UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="secNameServers" runat="server"
+<fcp:CollapsiblePanel id="secNameServers" runat="server"
     TargetControlID="NameServersPanel" meta:resourcekey="secNameServers" Text="Name Servers"/>
 <asp:Panel ID="NameServersPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>

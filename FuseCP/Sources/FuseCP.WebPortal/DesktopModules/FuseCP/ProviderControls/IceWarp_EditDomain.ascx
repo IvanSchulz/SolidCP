@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="IceWarp_EditDomain.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.IceWarp_EditDomain" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <table width="100%">
     <tr>
@@ -23,8 +23,8 @@
 
 <asp:Panel runat="server" ID="AdvancedSettingsPanel">
 
-<scp:CollapsiblePanel id="secLimits" runat="server" targetcontrolid="LimitsPanel"
-    meta:resourcekey="Limits" text="Limits"></scp:CollapsiblePanel>
+<fcp:CollapsiblePanel id="secLimits" runat="server" targetcontrolid="LimitsPanel"
+    meta:resourcekey="Limits" text="Limits"></fcp:CollapsiblePanel>
 
 <asp:Panel runat="server" ID="LimitsPanel">
     <table width="100%">

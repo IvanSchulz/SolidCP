@@ -87,7 +87,7 @@ namespace FuseCP.LinuxVmConfig
             builder.AppendFormat("ActivityDefinition={0}|", ActivityDefinition);
             builder.AppendFormat("ActivityDescription={0}|", ActivityDescription);
             builder.AppendFormat("Progress={0}", Progress);
-            //SetKvpStringValue(OutputKVP, "SCP-CurrentTask", builder.ToString());
+            //SetKvpStringValue(OutputKVP, "FCP-CurrentTask", builder.ToString());
         }
     }
 }

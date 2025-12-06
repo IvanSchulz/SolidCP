@@ -36,7 +36,7 @@ using System.Text;
 
 namespace FuseCP.UniversalInstaller
 {
-	internal class SCPAppContext
+	internal class FCPAppContext
 	{
 		private ApplicationForm appForm;
 		private ScopeNode scopeNode;

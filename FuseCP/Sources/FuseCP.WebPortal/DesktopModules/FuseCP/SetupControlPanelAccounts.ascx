@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SetupControlPanelAccounts.ascx.cs" Inherits="FuseCP.Portal.SetupControlPanelAccounts" %>
-<%@ Register src="UserControls/PasswordControl.ascx" tagname="PasswordControl" TagPrefix="scp" %>
+<%@ Register src="UserControls/PasswordControl.ascx" tagname="PasswordControl" TagPrefix="fcp" %>
 <div class="panel-body form-horizontal">
 	<p class="SubHead" style="text-align: justify;"><asp:Localize runat="server" meta:resourcekey="ScpaProcedureDescription" /></p>
 	<table cellpadding="3" cellspacing="0">
@@ -10,7 +10,7 @@
 		<tr>
 			<td class="SubHead" align="right" valign="top" nowrap><asp:Localize runat="server" meta:resourcekey="lblPassword" Text="Password:" /></td>
 			<td class="Normal" align="left" valign="middle">
-				<scp:PasswordControl ID="PasswordControlA" runat="server" />
+				<fcp:PasswordControl ID="PasswordControlA" runat="server" />
 			</td>	
 		</tr>
 		<tr>
@@ -20,7 +20,7 @@
 		<tr>
 			<td class="SubHead" align="right" valign="top" nowrap><asp:Localize runat="server" meta:resourcekey="lblPassword" Text="Password:" /></td>
 			<td class="Normal" align="left" valign="middle">
-				<scp:PasswordControl ID="PasswordControlB" runat="server" />
+				<fcp:PasswordControl ID="PasswordControlB" runat="server" />
 			</td>	
 		</tr>
 		<tr>

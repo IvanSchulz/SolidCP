@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceEditDetails.ascx.cs" Inherits="FuseCP.Portal.SpaceEditDetails" %>
 <%@ Import Namespace="FuseCP.Portal" %>
-<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
-<%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="HostingPlansQuotas.ascx" TagName="HostingPlansQuotas" TagPrefix="scp" %>
-<%@ Register Src="SpaceQuotasControl.ascx" TagName="SpaceQuotasControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CalendarControl.ascx" TagName="CalendarControl" TagPrefix="scp" %>
+<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="HostingPlansQuotas.ascx" TagName="HostingPlansQuotas" TagPrefix="fcp" %>
+<%@ Register Src="SpaceQuotasControl.ascx" TagName="SpaceQuotasControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CalendarControl.ascx" TagName="CalendarControl" TagPrefix="fcp" %>
 
 <div class="panel-body form-horizontal">
 <asp:Label ID="lblMessage" runat="server" CssClass="NormalBold" ForeColor="red"></asp:Label>
@@ -29,7 +29,7 @@
 		<td class="SubHead">
             <asp:Label ID="lblCreationDate" runat="server" meta:resourcekey="lblCreationDate" Text="Creation Date:"></asp:Label></td>
 		<td class="Normal">
-		    <scp:CalendarControl id="PurchaseDate" runat="server" ValidationEnabled="true" ValidationGroup="EditSpace" />
+		    <fcp:CalendarControl id="PurchaseDate" runat="server" ValidationEnabled="true" ValidationGroup="EditSpace" />
 
 		</td>
 	</tr>
@@ -56,14 +56,14 @@
 	<tr>
 		<td class="SubHead" height="26px"><asp:Label ID="lblTargetServer" runat="server" meta:resourcekey="lblTargetServer" Text="Target Server:"></asp:Label></td>
 		<td class="Normal">
-            <scp:ServerDetails ID="serverDetails" runat="server" />
+            <fcp:ServerDetails ID="serverDetails" runat="server" />
 		</td>
 	</tr>
 </table>
 
-<scp:CollapsiblePanel id="secAddons" runat="server"
+<fcp:CollapsiblePanel id="secAddons" runat="server"
     TargetControlID="AddonsPanel" meta:resourcekey="secAddons" Text="Space Add-Ons">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="AddonsPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="FormButtonsBar">
         <asp:Button ID="btnAddAddon" runat="server" meta:resourcekey="btnAddAddon" Text="Add Add-on" CssClass="Button2" OnClick="btnAddAddon_Click" />
@@ -97,9 +97,9 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secQuotas" runat="server"
+<fcp:CollapsiblePanel id="secQuotas" runat="server"
     TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Space Quotas">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
     <table id="tblQuotas" runat="server" width="100%" cellpadding="0" cellspacing="0">
         <tr>
@@ -120,10 +120,10 @@
                         </td>
                     </tr>
                 </table>
-                <scp:SpaceQuotasControl id="packageQuotas" runat="server">
-                </scp:SpaceQuotasControl>
-                <scp:HostingPlansQuotas id="editPackageQuotas" runat="server">
-                </scp:HostingPlansQuotas>
+                <fcp:SpaceQuotasControl id="packageQuotas" runat="server">
+                </fcp:SpaceQuotasControl>
+                <fcp:HostingPlansQuotas id="editPackageQuotas" runat="server">
+                </fcp:HostingPlansQuotas>
                 <br />
             </td>
         </tr>

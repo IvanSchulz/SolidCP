@@ -67,7 +67,7 @@ namespace FuseCP.Installer.Controls
         /// Shows control
         /// </summary>
         /// <param name="context"></param>
-        public override void ShowControl(SCPAppContext context)
+        public override void ShowControl(FCPAppContext context)
         {
             base.ShowControl(context);
             if (!IsInitialized)

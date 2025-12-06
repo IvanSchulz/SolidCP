@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Domains.ascx.cs" Inherits="FuseCP.Portal.Domains" %>
- <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
- <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
- <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="scp" %>
- <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
- <%@ Register Src="UserControls/DomainActions.ascx" TagName="DomainActions" TagPrefix="scp" %>
- <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
- <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+ <%@ Register Src="UserControls/Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
+ <%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="fcp" %>
+ <%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="fcp" %>
+ <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
+ <%@ Register Src="UserControls/DomainActions.ascx" TagName="DomainActions" TagPrefix="fcp" %>
+ <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+ <fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 <script type="text/javascript">
                 var gridViewId = '<%# gvDomains.ClientID %>';
                 function checkAll(selectAllCheckbox) {
@@ -30,13 +30,13 @@
      <div class="panel-body ">
          <div class="row">
          <div class="col-md-3">
-             <scp:DomainActions ID="websiteActions" runat="server" GridViewID="gvDomains" CheckboxesName="chkSelectedIds" />
+             <fcp:DomainActions ID="websiteActions" runat="server" GridViewID="gvDomains" CheckboxesName="chkSelectedIds" />
          </div>
               <div class="col-md-6">
  
               </div>
             <div class="col-md-3 text-right">
-                <scp:SearchBox ID="searchBox" runat="server" />
+                <fcp:SearchBox ID="searchBox" runat="server" />
              </div>
          </div>
      </div>
@@ -168,17 +168,17 @@
      <table>
          <tr>
              <td><asp:Label ID="lblDomains" runat="server" meta:resourcekey="lblDomains" Text="Domains:" CssClass="NormalBold"></asp:Label></td>
-             <td><scp:Quota ID="quotaDomains" runat="server" QuotaName="OS.Domains" /></td>
+             <td><fcp:Quota ID="quotaDomains" runat="server" QuotaName="OS.Domains" /></td>
          </tr>
          <tr>
              <td><asp:Label ID="lblSubDomains" runat="server" meta:resourcekey="lblSubDomains" Text="Sub-Domains:" CssClass="NormalBold"></asp:Label></td>
-             <td><scp:Quota ID="quotaSubDomains" runat="server" QuotaName="OS.SubDomains" /></td>
+             <td><fcp:Quota ID="quotaSubDomains" runat="server" QuotaName="OS.SubDomains" /></td>
          </tr>
  <!--
          <tr>
 	
              <td><asp:Label ID="lblDomainPointers" runat="server" meta:resourcekey="lblDomainPointers" Text="Domain Aliases:" CssClass="NormalBold"></asp:Label></td>
-             <td><scp:Quota ID="quotaDomainPointers" runat="server" QuotaName="OS.DomainPointers" /></td>
+             <td><fcp:Quota ID="quotaDomainPointers" runat="server" QuotaName="OS.DomainPointers" /></td>
          </tr>
  -->
      </table>

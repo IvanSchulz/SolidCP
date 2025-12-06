@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MonitoringService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <scp:Policy>
+          <fcp:Policy>
             <sp:ProtectionToken>
-              <scp:Policy>
+              <fcp:Policy>
                 <sp:SecureConversationToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
-                  <scp:Policy>
+                  <fcp:Policy>
                     <sp:RequireDerivedKeys />
                     <sp:BootstrapPolicy>
-                      <scp:Policy>
+                      <fcp:Policy>
                         <sp:SignedParts>
                           <sp:Body />
                           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -26,79 +26,79 @@
                           <sp:Body />
                         </sp:EncryptedParts>
                         <sp:SymmetricBinding>
-                          <scp:Policy>
+                          <fcp:Policy>
                             <sp:ProtectionToken>
-                              <scp:Policy>
+                              <fcp:Policy>
                                 <sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
-                                  <scp:Policy>
+                                  <fcp:Policy>
                                     <sp:RequireDerivedKeys />
-                                  </scp:Policy>
+                                  </fcp:Policy>
                                 </sp:SpnegoContextToken>
-                              </scp:Policy>
+                              </fcp:Policy>
                             </sp:ProtectionToken>
                             <sp:AlgorithmSuite>
-                              <scp:Policy>
+                              <fcp:Policy>
                                 <sp:Basic256 />
-                              </scp:Policy>
+                              </fcp:Policy>
                             </sp:AlgorithmSuite>
                             <sp:Layout>
-                              <scp:Policy>
+                              <fcp:Policy>
                                 <sp:Strict />
-                              </scp:Policy>
+                              </fcp:Policy>
                             </sp:Layout>
                             <sp:IncludeTimestamp />
                             <sp:EncryptSignature />
                             <sp:OnlySignEntireHeadersAndBody />
-                          </scp:Policy>
+                          </fcp:Policy>
                         </sp:SymmetricBinding>
                         <sp:Wss11>
-                          <scp:Policy />
+                          <fcp:Policy />
                         </sp:Wss11>
                         <sp:Trust10>
-                          <scp:Policy>
+                          <fcp:Policy>
                             <sp:MustSupportIssuedTokens />
                             <sp:RequireClientEntropy />
                             <sp:RequireServerEntropy />
-                          </scp:Policy>
+                          </fcp:Policy>
                         </sp:Trust10>
-                      </scp:Policy>
+                      </fcp:Policy>
                     </sp:BootstrapPolicy>
-                  </scp:Policy>
+                  </fcp:Policy>
                 </sp:SecureConversationToken>
-              </scp:Policy>
+              </fcp:Policy>
             </sp:ProtectionToken>
             <sp:AlgorithmSuite>
-              <scp:Policy>
+              <fcp:Policy>
                 <sp:Basic256 />
-              </scp:Policy>
+              </fcp:Policy>
             </sp:AlgorithmSuite>
             <sp:Layout>
-              <scp:Policy>
+              <fcp:Policy>
                 <sp:Strict />
-              </scp:Policy>
+              </fcp:Policy>
             </sp:Layout>
             <sp:IncludeTimestamp />
             <sp:EncryptSignature />
             <sp:OnlySignEntireHeadersAndBody />
-          </scp:Policy>
+          </fcp:Policy>
         </sp:SymmetricBinding>
         <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <scp:Policy />
+          <fcp:Policy />
         </sp:Wss11>
         <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
-          <scp:Policy>
+          <fcp:Policy>
             <sp:MustSupportIssuedTokens />
             <sp:RequireClientEntropy />
             <sp:RequireServerEntropy />
-          </scp:Policy>
+          </fcp:Policy>
         </sp:Trust10>
         <wsaw:UsingAddressing />
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -112,12 +112,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -131,12 +131,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetServices_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetServices_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -150,12 +150,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetServices_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetServices_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -169,12 +169,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSCOMHost_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSCOMHost_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -188,12 +188,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSCOMHost_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSCOMHost_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -207,12 +207,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -226,12 +226,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -245,12 +245,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringState_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringState_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -264,12 +264,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringState_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringState_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -283,12 +283,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringDevice_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringDevice_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -302,12 +302,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringDevice_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringDevice_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -321,12 +321,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -340,12 +340,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -359,12 +359,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -378,12 +378,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -397,12 +397,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -416,12 +416,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -435,12 +435,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -454,12 +454,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -473,12 +473,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -492,12 +492,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -511,12 +511,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -530,12 +530,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -549,12 +549,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -568,12 +568,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -587,12 +587,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -606,12 +606,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -625,12 +625,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -644,12 +644,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -663,12 +663,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -682,12 +682,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -701,12 +701,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteTask_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteTask_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -720,12 +720,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteTask_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_ExecuteTask_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -739,12 +739,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -758,12 +758,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -777,12 +777,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -796,12 +796,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -815,12 +815,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjects_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjects_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -834,12 +834,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjects_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjects_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -853,12 +853,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -872,12 +872,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -891,12 +891,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -910,12 +910,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -929,12 +929,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -948,12 +948,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -967,12 +967,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringTemplates_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringTemplates_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -986,12 +986,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringTemplates_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringTemplates_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1005,12 +1005,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPacks_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPacks_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1024,12 +1024,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPacks_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPacks_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1043,12 +1043,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPack_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPack_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1062,12 +1062,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPack_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPack_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1081,12 +1081,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_DeleteManagementPack_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_DeleteManagementPack_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1100,12 +1100,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_DeleteManagementPack_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_DeleteManagementPack_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1119,12 +1119,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPackStringResource_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPackStringResource_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1138,12 +1138,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPackStringResource_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetManagementPackStringResource_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1157,12 +1157,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1176,12 +1176,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1195,12 +1195,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1214,12 +1214,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1233,12 +1233,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1252,12 +1252,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1271,12 +1271,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitors_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitors_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1290,12 +1290,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitors_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitors_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1309,12 +1309,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorInfo_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorInfo_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1328,12 +1328,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorInfo_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorInfo_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1347,12 +1347,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorHealthState_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorHealthState_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1366,12 +1366,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorHealthState_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitorHealthState_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1385,12 +1385,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationHealthState_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationHealthState_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1404,12 +1404,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationHealthState_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationHealthState_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1423,12 +1423,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1442,12 +1442,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1461,12 +1461,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1480,12 +1480,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1499,12 +1499,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateManagementPack_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateManagementPack_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1518,12 +1518,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateManagementPack_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateManagementPack_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1537,12 +1537,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPack_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPack_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1556,12 +1556,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPack_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_UpdateManagementPack_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1575,12 +1575,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1594,12 +1594,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1613,12 +1613,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1632,12 +1632,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1651,12 +1651,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateMonitorOverride_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateMonitorOverride_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1670,12 +1670,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateMonitorOverride_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateMonitorOverride_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1689,12 +1689,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1708,12 +1708,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1727,12 +1727,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_Input_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_Input_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1746,12 +1746,12 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
-  <scp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_output_policy">
-    <scp:ExactlyOne>
-      <scp:All>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
+  <fcp:Policy wsu:Id="WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_output_policy">
+    <fcp:ExactlyOne>
+      <fcp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
           <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
@@ -1765,9 +1765,9 @@
         <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
           <sp:Body />
         </sp:EncryptedParts>
-      </scp:All>
-    </scp:ExactlyOne>
-  </scp:Policy>
+      </fcp:All>
+    </fcp:ExactlyOne>
+  </fcp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://vmserver3.sweetsoft.com.ua/MonitoringWebService/MonitoringService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -2226,489 +2226,489 @@
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_IMonitoringService" type="tns:IMonitoringService">
-    <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_policy" />
+    <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_policy" />
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetPerformanceCounterCategories">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetPerformanceCounterCategories" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetPerformanceCounterCategories_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetServices">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetServices" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetServices_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetServices_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetServices_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetServices_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSCOMHost">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetSCOMHost" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSCOMHost_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSCOMHost_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSCOMHost_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSCOMHost_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSystemAlertsByDeviceName">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetSystemAlertsByDeviceName" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSystemAlertsByDeviceName_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringState">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringState" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringState_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringState_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringState_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringState_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringDevice">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringDevice" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringDevice_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringDevice_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringDevice_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringDevice_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllHyperVCollectedCounters">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetAllHyperVCollectedCounters" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVCollectedCounters_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllHyperVGuestCPUUtilization">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetAllHyperVGuestCPUUtilization" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestCPUUtilization_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllHyperVGuestLegacyNetworkAdapter">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetAllHyperVGuestLegacyNetworkAdapter" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestLegacyNetworkAdapter_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllHyperVGuestMemoryPagesAllocated">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetAllHyperVGuestMemoryPagesAllocated" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestMemoryPagesAllocated_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllHyperVGuestStorageUsage">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetAllHyperVGuestStorageUsage" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVGuestStorageUsage_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetAllHyperVVirtualNetwork">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetAllHyperVVirtualNetwork" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetAllHyperVVirtualNetwork_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSingleVMHyperVCPUCounters">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetSingleVMHyperVCPUCounters" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVCPUCounters_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSingleVMHyperVVirtualNetwork">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetSingleVMHyperVVirtualNetwork" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVVirtualNetwork_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSingleVMHyperVGuestMemoryPagesAllocated">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetSingleVMHyperVGuestMemoryPagesAllocated" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetSingleVMHyperVGuestMemoryPagesAllocated_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ExecuteMonitoringTask">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/ExecuteMonitoringTask" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteMonitoringTask_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ExecuteTask">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/ExecuteTask" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteTask_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteTask_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteTask_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_ExecuteTask_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringPerformanceValues">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringPerformanceValues" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValues_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringPerformanceValuesById">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringPerformanceValuesById" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringPerformanceValuesById_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoredObjects">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoredObjects" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjects_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjects_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjects_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjects_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringAlertsByObjectDisplayName">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringAlertsByObjectDisplayName" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringAlertsByObjectDisplayName_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoredObjectByDisplayName">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoredObjectByDisplayName" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredObjectByDisplayName_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoredApplicationComponents">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoredApplicationComponents" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoredApplicationComponents_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringTemplates">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringTemplates" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringTemplates_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringTemplates_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringTemplates_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringTemplates_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetManagementPacks">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetManagementPacks" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPacks_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPacks_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPacks_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPacks_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetManagementPack">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetManagementPack" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPack_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPack_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPack_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPack_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteManagementPack">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/DeleteManagementPack" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_DeleteManagementPack_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_DeleteManagementPack_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_DeleteManagementPack_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_DeleteManagementPack_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetManagementPackStringResource">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetManagementPackStringResource" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPackStringResource_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPackStringResource_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPackStringResource_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetManagementPackStringResource_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateManagementPackStringResource">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/UpdateManagementPackStringResource" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPackStringResource_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateWebUrlMonitor">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateWebUrlMonitor" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateWebUrlMonitor_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateTcpPortMonitor">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateTcpPortMonitor" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateTcpPortMonitor_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitors">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitors" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitors_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitors_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitors_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitors_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitorInfo">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitorInfo" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorInfo_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorInfo_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorInfo_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorInfo_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitorHealthState">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitorHealthState" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorHealthState_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorHealthState_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorHealthState_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitorHealthState_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetApplicationHealthState">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetApplicationHealthState" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationHealthState_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationHealthState_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationHealthState_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationHealthState_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetApplicationComponentHealthState">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetApplicationComponentHealthState" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetApplicationComponentHealthState_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMonitoringStateHierarchy">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/GetMonitoringStateHierarchy" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_GetMonitoringStateHierarchy_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateManagementPack">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateManagementPack" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateManagementPack_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateManagementPack_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateManagementPack_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateManagementPack_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="UpdateManagementPack">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/UpdateManagementPack" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPack_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPack_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPack_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_UpdateManagementPack_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateAverageThresholdPerformanceCounterMonitor">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateAverageThresholdPerformanceCounterMonitor" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateAverageThresholdPerformanceCounterMonitor_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateDoubleThresholdPerformanceCounterMonitor">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateDoubleThresholdPerformanceCounterMonitor" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateDoubleThresholdPerformanceCounterMonitor_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateMonitorOverride">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateMonitorOverride" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateMonitorOverride_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateMonitorOverride_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateMonitorOverride_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateMonitorOverride_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreateNTServiceUnitMonitor">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreateNTServiceUnitMonitor" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreateNTServiceUnitMonitor_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="CreatePerformanceCollectionRule">
       <soap12:operation soapAction="http://tempuri.org/IMonitoringService/CreatePerformanceCollectionRule" style="document" />
       <wsdl:input>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_Input_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_Input_policy" />
         <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <scp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_output_policy" />
+        <fcp:PolicyReference URI="#WSHttpBinding_IMonitoringService_CreatePerformanceCollectionRule_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

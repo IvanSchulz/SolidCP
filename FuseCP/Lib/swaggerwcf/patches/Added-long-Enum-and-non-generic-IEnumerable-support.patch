@@ -1,0 +1,194 @@
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..2125666
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1 @@
++* text=auto
+\ No newline at end of file
+diff --git a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
+index 1645fc3..1a266c5 100644
+--- a/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
++++ b/src/SwaggerWcf.Test.Service/SwaggerWcf.Test.Service.csproj
+@@ -35,7 +35,7 @@
+     <WarningLevel>4</WarningLevel>
+   </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+-    <DebugType>pdbonly</DebugType>
++    <DebugType>portable</DebugType>
+     <Optimize>true</Optimize>
+     <OutputPath>bin\</OutputPath>
+     <DefineConstants>TRACE</DefineConstants>
+@@ -126,11 +126,11 @@
+       </FlavorProperties>
+     </VisualStudio>
+   </ProjectExtensions>
+-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+-       Other similar extension points exist, see Microsoft.Common.targets.
+-  <Target Name="BeforeBuild">
+-  </Target>
+-  <Target Name="AfterBuild">
+-  </Target>
++  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
++       Other similar extension points exist, see Microsoft.Common.targets.
++  <Target Name="BeforeBuild">
++  </Target>
++  <Target Name="AfterBuild">
++  </Target>
+   -->
+ </Project>
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/Models/DefinitionProperty.cs b/src/SwaggerWcf/Models/DefinitionProperty.cs
+index b708ca8..821c588 100644
+--- a/src/SwaggerWcf/Models/DefinitionProperty.cs
++++ b/src/SwaggerWcf/Models/DefinitionProperty.cs
+@@ -53,7 +53,7 @@ namespace SwaggerWcf.Models
+ 
+         public bool UniqueItems { get; set; }
+ 
+-        public List<int> Enum { get; set; }
++        public List<long> Enum { get; set; }
+ 
+         public decimal MultipleOf { get; set; }
+ 
+diff --git a/src/SwaggerWcf/Models/DefinitionSchema.cs b/src/SwaggerWcf/Models/DefinitionSchema.cs
+index a1e9d15..dbf0e9e 100644
+--- a/src/SwaggerWcf/Models/DefinitionSchema.cs
++++ b/src/SwaggerWcf/Models/DefinitionSchema.cs
+@@ -22,7 +22,7 @@ namespace SwaggerWcf.Models
+ 
+         public List<DefinitionProperty> Properties { get; set; }
+ 
+-        public List<int> Enum { get; set; }
++        public List<long> Enum { get; set; }
+ 
+         public void Serialize(JsonWriter writer)
+         {
+diff --git a/src/SwaggerWcf/Properties/AssemblyInfo.cs b/src/SwaggerWcf/Properties/AssemblyInfo.cs
+index 784b59e..7e78ca5 100644
+--- a/src/SwaggerWcf/Properties/AssemblyInfo.cs
++++ b/src/SwaggerWcf/Properties/AssemblyInfo.cs
+@@ -1,4 +1,4 @@
+-﻿using System;
++﻿using System;
+ using System.Reflection;
+ using System.Runtime.InteropServices;
+ 
+@@ -20,6 +20,6 @@ using System.Runtime.InteropServices;
+ [assembly: ComVisible(false)]
+ [assembly: Guid("d2eeaa63-60e5-4fda-8b62-e05dc8be8b5f")]
+ 
+-[assembly: AssemblyVersion("1.3.0.*")]
+-[assembly: AssemblyInformationalVersion("1.3.0-localbuild")]
++[assembly: AssemblyVersion("1.3.1.*")]
++[assembly: AssemblyInformationalVersion("1.3.1-localbuild")]
+ //DONT ADD: [assembly: AssemblyFileVersion] !!!
+\ No newline at end of file
+diff --git a/src/SwaggerWcf/Support/DefinitionsBuilder.cs b/src/SwaggerWcf/Support/DefinitionsBuilder.cs
+index 7988c42..1ae12b6 100644
+--- a/src/SwaggerWcf/Support/DefinitionsBuilder.cs
++++ b/src/SwaggerWcf/Support/DefinitionsBuilder.cs
+@@ -1,4 +1,5 @@
+ ﻿using System;
++using System.Collections;
+ using System.Collections.Generic;
+ using System.ComponentModel;
+ using System.Linq;
+@@ -67,7 +68,7 @@ namespace SwaggerWcf.Support
+ 
+             if (schema.TypeFormat.Type == ParameterType.Integer && schema.TypeFormat.Format == "enum")
+             {
+-                schema.Enum = new List<int>();
++                schema.Enum = new List<long>();
+ 
+                 Type propType = definitionType;
+ 
+@@ -139,6 +140,14 @@ namespace SwaggerWcf.Support
+             Type iface = (from i in type.GetInterfaces()
+                           where i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IEnumerable<>)
+                           select i).FirstOrDefault();
++            
++            if (iface == null)
++            {
++                if (type == typeof(IEnumerable) || type.GetInterfaces().Any(i => i == typeof(IEnumerable)))
++                {
++                    return typeof(object);
++                }
++            }
+ 
+             return iface == null ? null : GetEnumerableType(iface);
+         }
+@@ -215,14 +224,14 @@ namespace SwaggerWcf.Support
+             ApplyIfValid(LastValidValue(attrs, a => a._MultipleOf), x => prop.MultipleOf = x.Value);
+         }
+         
+-        public static int GetEnumMemberValue(Type enumType, string enumName)
++        public static long GetEnumMemberValue(Type enumType, string enumName)
+         {
+             if (string.IsNullOrWhiteSpace(enumName))
+                 return 0;
+             var enumVal = Enum.Parse(enumType, enumName, true);
+             var underlyingType = Enum.GetUnderlyingType(enumType);
+             var val = Convert.ChangeType(enumVal, underlyingType);
+-            return Convert.ToInt32(val);
++            return Convert.ToInt64(val);
+         }
+ 
+         public static string GetEnumDescription(Enum value)
+diff --git a/src/SwaggerWcf/Support/TypeFieldsProcessor.cs b/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
+index 7c6d9d0..9869c1e 100644
+--- a/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
++++ b/src/SwaggerWcf/Support/TypeFieldsProcessor.cs
+@@ -130,7 +130,7 @@ namespace SwaggerWcf.Support
+ 
+             if ((prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum") || (prop.TypeFormat.Type == ParameterType.Array && prop.Items.TypeFormat.Format == "enum"))
+             {
+-                prop.Enum = new List<int>();
++                prop.Enum = new List<long>();
+ 
+                 Type propType = propertyInfo.FieldType;
+ 
+@@ -144,7 +144,7 @@ namespace SwaggerWcf.Support
+                     var enumMemberItem = Enum.Parse(propType, enumName, true);
+                     string enumMemberDescription = DefinitionsBuilder.GetEnumDescription((Enum)enumMemberItem);
+                     enumMemberDescription = (string.IsNullOrWhiteSpace(enumMemberDescription)) ? "" : $"({enumMemberDescription})";
+-                    int enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
++                    long enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
+                     if (prop.Description != null) prop.Enum.Add(enumMemberValue);
+                     enumDescription += $"    {enumName}{System.Web.HttpUtility.HtmlEncode(" = ")}{enumMemberValue} {enumMemberDescription}\r\n";
+                 }
+diff --git a/src/SwaggerWcf/Support/TypePropertiesProcessor.cs b/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
+index eb8f18f..54e4772 100644
+--- a/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
++++ b/src/SwaggerWcf/Support/TypePropertiesProcessor.cs
+@@ -130,7 +130,7 @@ namespace SwaggerWcf.Support
+ 
+             if ((prop.TypeFormat.Type == ParameterType.Integer && prop.TypeFormat.Format == "enum") || (prop.TypeFormat.Type == ParameterType.Array && prop.Items.TypeFormat.Format == "enum"))
+             {
+-                prop.Enum = new List<int>();
++                prop.Enum = new List<long>();
+ 
+                 Type propType = propertyInfo.PropertyType;
+ 
+@@ -144,7 +144,7 @@ namespace SwaggerWcf.Support
+                     var enumMemberItem = Enum.Parse(propType, enumName, true);
+                     string enumMemberDescription = DefinitionsBuilder.GetEnumDescription((Enum)enumMemberItem);
+                     enumMemberDescription = (string.IsNullOrWhiteSpace(enumMemberDescription)) ? "" : $"({enumMemberDescription})";
+-                    int enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
++                    long enumMemberValue = DefinitionsBuilder.GetEnumMemberValue(propType, enumName);
+                     if (prop.Description != null) prop.Enum.Add(enumMemberValue);
+                     enumDescription += $"    {enumName}{System.Web.HttpUtility.HtmlEncode(" = ")}{enumMemberValue} {enumMemberDescription}\r\n";
+                 }
+diff --git a/src/SwaggerWcf/packages.config b/src/SwaggerWcf/packages.config
+index 6033a9c..64c7b75 100644
+--- a/src/SwaggerWcf/packages.config
++++ b/src/SwaggerWcf/packages.config
+@@ -1,4 +1,4 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<packages>
+-  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net461" />
++﻿<?xml version="1.0" encoding="utf-8"?>
++<packages>
++  <package id="Newtonsoft.Json" version="13.0.3" targetFramework="net461" />
+ </packages>
+\ No newline at end of file

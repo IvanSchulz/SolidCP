@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcAccountVLanAdd.ascx.cs"
     Inherits="FuseCP.Portal.VdcAccountVLanAdd" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
  
         <div class="panel panel-default">
                 <div class="panel-heading">
@@ -9,7 +9,7 @@
                     <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Add VLan to user"></asp:Localize>
                 </div>
             <div class="panel-body form-horizontal">
-            <scp:menu id="menu" runat="server" selecteditem="vdc_account_vlan_network" />
+            <fcp:menu id="menu" runat="server" selecteditem="vdc_account_vlan_network" />
             <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
                     <table cellspacing="0" cellpadding="2" width="100%">

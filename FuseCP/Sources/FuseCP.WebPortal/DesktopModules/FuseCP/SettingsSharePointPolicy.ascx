@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsSharePointPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsSharePointPolicy" %>
 <%@ Register Src="UserControls/UsernamePolicyEditor.ascx" TagName="UsernamePolicyEditor" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/PasswordPolicyEditor.ascx" TagName="PasswordPolicyEditor" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 
-<scp:CollapsiblePanel id="secUsername" runat="server"
+<fcp:CollapsiblePanel id="secUsername" runat="server"
     TargetControlID="UsernamePanel" meta:resourcekey="secUsername" Text="SharePoint Users Policy"/>
 <asp:Panel ID="UsernamePanel" runat="server" Height="0" style="overflow:hidden;">
     <table>
@@ -28,7 +28,7 @@
 </asp:Panel>
 
 
-<scp:CollapsiblePanel id="secGroup" runat="server"
+<fcp:CollapsiblePanel id="secGroup" runat="server"
     TargetControlID="GroupPanel" meta:resourcekey="secGroup" Text="SharePoint Groups Policy"/>
 <asp:Panel ID="GroupPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>

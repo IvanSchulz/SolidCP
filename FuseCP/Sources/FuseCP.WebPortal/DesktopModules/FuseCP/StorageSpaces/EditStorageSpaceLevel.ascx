@@ -1,21 +1,21 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EditStorageSpaceLevel.ascx.cs" Inherits="FuseCP.Portal.StorageSpaces.EditStorageSpaceLevel" %>
 
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
-<%@ Register Src="UserControls/StorageSpaceLevelResourceGroups.ascx" TagName="ResourceGroups" TagPrefix="scp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/StorageSpaceLevelResourceGroups.ascx" TagName="ResourceGroups" TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 
         <div class="panel-body form-horizontal">
-            <scp:SimpleMessageBox ID="messageBox" runat="server" />
+            <fcp:SimpleMessageBox ID="messageBox" runat="server" />
 
-            <scp:CollapsiblePanel ID="colSsLevelGeneralSettings" runat="server"
-                TargetControlID="panelSsLevelGeneralSettings" meta:ResourceKey="colSsLevelGeneralSettings"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="colSsLevelGeneralSettings" runat="server"
+                TargetControlID="panelSsLevelGeneralSettings" meta:ResourceKey="colSsLevelGeneralSettings"></fcp:CollapsiblePanel>
 
             <asp:Panel runat="server" ID="panelSsLevelGeneralSettings">
                 <div style="padding: 10px;">
@@ -43,8 +43,8 @@
                 </div>
             </asp:Panel>
 
-            <scp:CollapsiblePanel ID="colSsLevelServices" runat="server"
-                TargetControlID="panelSsLevelServices" meta:ResourceKey="colSsLevelServices"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="colSsLevelServices" runat="server"
+                TargetControlID="panelSsLevelServices" meta:ResourceKey="colSsLevelServices"></fcp:CollapsiblePanel>
 
             <asp:Panel runat="server" ID="panelSsLevelServices">
                 <table>
@@ -53,7 +53,7 @@
                             <fieldset id="Fieldset1" runat="server">
                                 <legend>
                                     <asp:Localize ID="locResourceGroups" runat="server" meta:resourcekey="locResourceGroups" Text="Allowed Resource Groups"></asp:Localize></legend>
-                                <scp:ResourceGroups ID="resourceGroups" runat="server" />
+                                <fcp:ResourceGroups ID="resourceGroups" runat="server" />
                             </fieldset>
                     </tr>
                     <tr>
@@ -65,6 +65,6 @@
 
         </div>
             <div class="panel-footer text-right">
-                <scp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="SaveSsLevel"
+                <fcp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="SaveSsLevel"
                     OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
             </div>

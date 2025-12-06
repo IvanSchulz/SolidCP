@@ -61,7 +61,7 @@ namespace FuseCP.VmConfig
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
-			this.ServiceName = "SCPVmConfig";
+			this.ServiceName = "FCPVmConfig";
 		}
 
 		#endregion

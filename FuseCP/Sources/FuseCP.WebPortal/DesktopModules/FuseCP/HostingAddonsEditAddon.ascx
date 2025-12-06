@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingAddonsEditAddon.ascx.cs" Inherits="FuseCP.Portal.HostingAddonsEditAddon" %>
 <%@ Register Src="HostingPlansQuotas.ascx" TagName="HostingPlansQuotas" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <asp:Panel ID="HostingAddonsEditPanel" runat="server" DefaultButton="btnSave" >
     <div class="panel-body form-horizontal">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-                <scp:CollapsiblePanel id="secQuotas" runat="server" TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel id="secQuotas" runat="server" TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas"></fcp:CollapsiblePanel>
                 <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
                     <uc1:HostingPlansQuotas id="hostingPlansQuotas" runat="server" IsPlan="false"></uc1:HostingPlansQuotas>
                 </asp:Panel>

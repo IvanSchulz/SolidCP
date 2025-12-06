@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SqlEditUser.ascx.cs" Inherits="FuseCP.Portal.SqlEditUser" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc2" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
+	TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <script type="text/javascript">
 
@@ -34,9 +34,9 @@ function confirmation()
     <asp:PlaceHolder ID="providerControl" runat="server"></asp:PlaceHolder>
     <br />
     
-    <scp:CollapsiblePanel id="secUsers" runat="server"
+    <fcp:CollapsiblePanel id="secUsers" runat="server"
         TargetControlID="UsersPanel" meta:resourcekey="secUsers" Text="Databases">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="UsersPanel" runat="server" Height="0" style="overflow:hidden;">
         <table id="tblDatabases" runat="server" cellSpacing="0" cellPadding="3" width="100%">
             <tr>

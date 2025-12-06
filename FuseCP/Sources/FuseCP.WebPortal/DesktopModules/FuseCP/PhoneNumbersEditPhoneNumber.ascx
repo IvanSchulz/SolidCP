@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhoneNumbersEditPhoneNumber.ascx.cs" Inherits="FuseCP.Portal.PhoneNumbersEditPhoneNumber" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 <div class="panel-body form-horizontal">
 
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
     <asp:ValidationSummary ID="validatorsSummary" runat="server" 
             ValidationGroup="EditAddress" ShowMessageBox="True" ShowSummary="False" />

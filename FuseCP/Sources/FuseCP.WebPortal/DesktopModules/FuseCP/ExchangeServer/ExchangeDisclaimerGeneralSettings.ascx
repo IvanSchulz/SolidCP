@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeDisclaimerGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeDisclaimerGeneralSettings" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/AccountsList.ascx" TagName="AccountsList" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxSelector.ascx" TagName="MailboxSelector" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <script src='/tinymce/tinymce.min.js'></script>
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 <script type="text/javascript">
     tinymce.init({
@@ -38,7 +38,7 @@
                     </h3>
                 </div>
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox ID="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox ID="messageBox" runat="server" />
                     <div class="form-group">
                         <asp:Label ID="locDisplayName" meta:resourcekey="locDisplayName" runat="server" Text="Display Name:" CssClass="col-sm-2" AssociatedControlID="txtDisplayName"></asp:Label>
                         <div class="col-sm-10 form-inline">

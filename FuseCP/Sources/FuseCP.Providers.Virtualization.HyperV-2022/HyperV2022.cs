@@ -55,7 +55,7 @@ using FuseCP.Server.Utils;
 
 using Vds = Microsoft.Storage.Vds;
 using System.Configuration;
-?using System.Linq;
+using System.Linq;
 using FuseCP.Providers.Virtualization;
 using FuseCP.Providers.Virtualization.Extensions;
 

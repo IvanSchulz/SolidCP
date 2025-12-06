@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointUsers.ascx.cs" Inherits="FuseCP.Portal.SharePointUsers" %>
-<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SpaceServiceItems.ascx" TagName="SpaceServiceItems" TagPrefix="fcp" %>
 
-<scp:SpaceServiceItems ID="itemsList" runat="server"
+<fcp:SpaceServiceItems ID="itemsList" runat="server"
     CreateButtonText="btnAddItem"
     CreateControlID="edit_item"
     GroupName="SharePoint"

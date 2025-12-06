@@ -746,7 +746,7 @@ namespace FuseCP.Providers.Utils
  * zipFile: Destination file of zipped backup
  * rootpath: Path of Folder to Backup Example: C:\HostingSpace\243423
  * 
- * Creates a zipped backup of Folder rootPath, excluding .wspak or .scpak Backup Files
+ * Creates a zipped backup of Folder rootPath, excluding .wspak or .fcpak Backup Files
  * */
         public static void CreateBackupZip(string zipFile, string rootpath)
         {
@@ -776,7 +776,7 @@ namespace FuseCP.Providers.Utils
          * rootpath: Directory to get files and folders recursively
          * folder: "" Empty String (for recursively function)
          * 
-         * get all files and folders in rootpath excluded the backup files ending with .scpak or .wspak
+         * get all files and folders in rootpath excluded the backup files ending with .fcpak or .wspak
          */
         public static List<string> BackupFileNames(string rootpath, string folder)
         {
@@ -797,8 +797,8 @@ namespace FuseCP.Providers.Utils
                     else
                     {
                         string filename = Path.Combine(folder, file_i.Name);
-                        // Ignore scpak and old wspak Backup Files in Backup Folder
-                        if (!(filename.EndsWith(".scpak")) && !(filename.EndsWith(".wspak")))
+                        // Ignore fcpak and old wspak Backup Files in Backup Folder
+                        if (!(filename.EndsWith(".fcpak")) && !(filename.EndsWith(".wspak")))
                         {
                             list_files.Add(filename);
                         }

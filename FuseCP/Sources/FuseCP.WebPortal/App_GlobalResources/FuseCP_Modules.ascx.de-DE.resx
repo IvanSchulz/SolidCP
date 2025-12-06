@@ -142,40 +142,40 @@
     <value>Konto-Zusammenfassung</value>
   </data>
   <data name="ModuleTitle.AddDomain" xml:space="preserve">
-    <value>Domäne hinzufügen</value>
+    <value>Domï¿½ne hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddVLAN" xml:space="preserve">
-    <value>VLAN hinzufügen</value>
+    <value>VLAN hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddIPAddress" xml:space="preserve">
-    <value>IP-Adresse hinzufügen</value>
+    <value>IP-Adresse hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddMailDomainPointer" xml:space="preserve">
-    <value>E-Mail-Domänen-Zeiger hinzufügen</value>
+    <value>E-Mail-Domï¿½nen-Zeiger hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddNewDomain" xml:space="preserve">
-    <value>Neue Domäne hinzufügen</value>
+    <value>Neue Domï¿½ne hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddNewService" xml:space="preserve">
-    <value>Neuen Dienst hinzufügen</value>
+    <value>Neuen Dienst hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddNewVirtualServer" xml:space="preserve">
-    <value>Neuen virtuellen Server hinzufügen</value>
+    <value>Neuen virtuellen Server hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddServer" xml:space="preserve">
-    <value>Server hinzufügen</value>
+    <value>Server hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddSharedSSLFolder" xml:space="preserve">
-    <value>Geteilten SSL-Ordner hinzufügen</value>
+    <value>Geteilten SSL-Ordner hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddVirtualServerServices" xml:space="preserve">
-    <value>Virtuelle Serverdienste hinzufügen</value>
+    <value>Virtuelle Serverdienste hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddWebSite" xml:space="preserve">
-    <value>Webseite hinzufügen</value>
+    <value>Webseite hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AddWebSiteDomainPointer" xml:space="preserve">
-    <value>Webseite-Domänen-Zeiger hinzufügen</value>
+    <value>Webseite-Domï¿½nen-Zeiger hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.AdvancedStatistics" xml:space="preserve">
     <value>Erweiterte Web-Statistiken</value>
@@ -205,34 +205,34 @@
     <value>Kundenbereiche</value>
   </data>
   <data name="ModuleTitle.CustomizeSpaceGlobalDNSRecords" xml:space="preserve">
-    <value>Globale DNS-Einträge des Bereichs anpassen</value>
+    <value>Globale DNS-Eintrï¿½ge des Bereichs anpassen</value>
   </data>
   <data name="ModuleTitle.DeleteHostingSpace" xml:space="preserve">
-    <value>Hosting-Bereich löschen</value>
+    <value>Hosting-Bereich lï¿½schen</value>
   </data>
   <data name="ModuleTitle.DeleteUserAccount" xml:space="preserve">
-    <value>Benutzerkonto löschen</value>
+    <value>Benutzerkonto lï¿½schen</value>
   </data>
   <data name="ModuleTitle.DiskspaceReport" xml:space="preserve">
     <value>Festplattenspeicher-Bericht</value>
   </data>
   <data name="ModuleTitle.OverusageReport" xml:space="preserve">
-    <value>Überschreitungsbericht</value>
+    <value>ï¿½berschreitungsbericht</value>
   </data>
   <data name="ModuleTitle.DiskSpaceSummary" xml:space="preserve">
     <value>Festplattenspeicher-Zusammenfassung</value>
   </data>
-  <data name="ModuleTitle.SCPSQLDatabasesSettings" xml:space="preserve">
+  <data name="ModuleTitle.FCPSQLDatabasesSettings" xml:space="preserve">
     <value>FuseCP-SQL-Datenbankeinstellungen</value>
   </data>
-  <data name="ModuleTitle.SCPSQLUserSettings" xml:space="preserve">
+  <data name="ModuleTitle.FCPSQLUserSettings" xml:space="preserve">
     <value>FuseCP-SQL-Benutzereinstellungen</value>
   </data>
   <data name="ModuleTitle.DNSZoneRecords" xml:space="preserve">
-    <value>DNS-Zoneneinträge</value>
+    <value>DNS-Zoneneintrï¿½ge</value>
   </data>
   <data name="ModuleTitle.Domains" xml:space="preserve">
-    <value>Domänen</value>
+    <value>Domï¿½nen</value>
   </data>
   <data name="ModuleTitle.FuseCPEnterpriseServerSettings" xml:space="preserve">
     <value>FuseCP Enterprise Server-Einstellungen</value>
@@ -241,7 +241,7 @@
     <value>Kontoeinstellungen bearbeiten</value>
   </data>
   <data name="ModuleTitle.EditDomain" xml:space="preserve">
-    <value>Domäne bearbeiten</value>
+    <value>Domï¿½ne bearbeiten</value>
   </data>
   <data name="ModuleTitle.EditHostingAddOn" xml:space="preserve">
     <value>Hosting-Addon bearbeiten</value>
@@ -289,7 +289,7 @@
     <value>Hosting-Addons</value>
   </data>
   <data name="ModuleTitle.HostingPlans" xml:space="preserve">
-    <value>Hosting-Pläne</value>
+    <value>Hosting-Plï¿½ne</value>
   </data>
   <data name="ModuleTitle.HostingSpaceAddOn" xml:space="preserve">
     <value>Hosting-Bereich-Addon</value>
@@ -352,10 +352,10 @@
     <value>E-Mail-Konten</value>
   </data>
   <data name="ModuleTitle.MailDomainProperties" xml:space="preserve">
-    <value>E-Mail-Domänen-Einstellungen</value>
+    <value>E-Mail-Domï¿½nen-Einstellungen</value>
   </data>
   <data name="ModuleTitle.MailDomains" xml:space="preserve">
-    <value>E-Mail-Domänen</value>
+    <value>E-Mail-Domï¿½nen</value>
   </data>
   <data name="ModuleTitle.MailForwardingProperties" xml:space="preserve">
     <value>E-Mail-Alias-Einstellungen</value>
@@ -490,7 +490,7 @@
     <value>Helicon Ape Benutzereinstellungen</value>
   </data>
   <data name="ModuleTitle.SelectUsertoWorkFor" xml:space="preserve">
-    <value>Benutzer wählen</value>
+    <value>Benutzer wï¿½hlen</value>
   </data>
   <data name="ModuleTitle.ServerEventViewer" xml:space="preserve">
     <value>Server-Ereignisse ansehen</value>
@@ -607,7 +607,7 @@
     <value>Webseiten</value>
   </data>
   <data name="ModuleTitle.WorkFor" xml:space="preserve">
-    <value>Arbeitet für</value>
+    <value>Arbeitet fï¿½r</value>
   </data>
   <data name="ModuleTitle.InstallationComplete" xml:space="preserve">
     <value>Installation beendet</value>
@@ -622,7 +622,7 @@
     <value>Kunden</value>
   </data>
   <data name="ModuleTitle.UserDeleteUserAccount" xml:space="preserve">
-    <value>Benutzerkonto löschen</value>
+    <value>Benutzerkonto lï¿½schen</value>
   </data>
   <data name="ModuleTitle.UserDetails" xml:space="preserve">
     <value>Benutzerdetails</value>
@@ -631,7 +631,7 @@
     <value>Benutzer</value>
   </data>
   <data name="ModuleTitle.UserResellerSettings" xml:space="preserve">
-    <value>Wiederverkäufer-Einstellungen</value>
+    <value>Wiederverkï¿½ufer-Einstellungen</value>
   </data>
   <data name="ModuleTitle.UserTools" xml:space="preserve">
     <value>Benutzer-Werkzeuge</value>
@@ -658,7 +658,7 @@
     <value>Neue Organisation erstellen</value>
   </data>
   <data name="ModuleTitle.SpaceSettings" xml:space="preserve">
-    <value>Wiederverkäufer-Einstellungen</value>
+    <value>Wiederverkï¿½ufer-Einstellungen</value>
   </data>
   <data name="ModuleTitle.SpaceTools" xml:space="preserve">
     <value>Bereich-Tools</value>
@@ -667,7 +667,7 @@
     <value>Mein Konto-Details</value>
   </data>
   <data name="ModuleTitle.UserAccountChangePassword" xml:space="preserve">
-    <value>Passwort ändern</value>
+    <value>Passwort ï¿½ndern</value>
   </data>
   <data name="ModuleTitle.UserAccountEditDetails" xml:space="preserve">
     <value>Benutzerkonto-Details</value>
@@ -703,16 +703,16 @@
     <value>Verschachtelte Hosting-Bereiche</value>
   </data>
   <data name="ModuleTitle.SpaceDeleteSpace" xml:space="preserve">
-    <value>Bereich löschen</value>
+    <value>Bereich lï¿½schen</value>
   </data>
   <data name="ModuleTitle.SpaceEditAddon" xml:space="preserve">
-    <value>Bereich-Addon hinzufügen/ändern </value>
+    <value>Bereich-Addon hinzufï¿½gen/ï¿½ndern </value>
   </data>
   <data name="ModuleTitle.SpaceEditDetails" xml:space="preserve">
     <value>Bereich-Details</value>
   </data>
   <data name="ModuleTitle.SpaceEditDnsRecords" xml:space="preserve">
-    <value>Bereich-DNS-Einträge</value>
+    <value>Bereich-DNS-Eintrï¿½ge</value>
   </data>
   <data name="ModuleTitle.SpaceSettingsEditor" xml:space="preserve">
     <value>Bereich-Einstellungen bearbeiten</value>
@@ -790,13 +790,13 @@
     <value>Webseiten-IP-Adressen zuweisen</value>
   </data>
   <data name="ModuleTitle.HostedExchangeAddOrganizationDomain" xml:space="preserve">
-    <value>Organisations-Domäne hinzufügen</value>
+    <value>Organisations-Domï¿½ne hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.HostedExchangeCreateOrganization" xml:space="preserve">
     <value>Neue Exchange 2010 Organisation erstellen</value>
   </data>
   <data name="ModuleTitle.HostedExchangeDeleteOrganization" xml:space="preserve">
-    <value>Organisation löschen</value>
+    <value>Organisation lï¿½schen</value>
   </data>
   <data name="ModuleTitle.HostedExchangeOrganizationDetails" xml:space="preserve">
     <value>Organisationsdetails</value>
@@ -814,7 +814,7 @@
     <value>System Center Server Adressen</value>
   </data>
   <data name="ModuleTitle.UserAccountVLanCreate" xml:space="preserve">
-    <value>VLAN zum Benutzer hinzufügen</value>
+    <value>VLAN zum Benutzer hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.SetupControlPanelAccounts" xml:space="preserve">
     <value>FuseCP-Konten einrichten</value>
@@ -832,7 +832,7 @@
     <value>Telefonnummern</value>
   </data>
   <data name="ModuleTitle.AddPhoneNumber" xml:space="preserve">
-    <value>Telefonnummern hinzufügen</value>
+    <value>Telefonnummern hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.EditPhoneNumber" xml:space="preserve">
     <value>Telefonnummern bearbeiten</value>
@@ -847,7 +847,7 @@
     <value>RDS-Server</value>
   </data>
   <data name="ModuleTitle.RDSServersAddserver" xml:space="preserve">
-    <value>Neuen RDS-Server hinzufügen</value>
+    <value>Neuen RDS-Server hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.RDSServersEditServer" xml:space="preserve">
     <value>RDS-Server bearbeiten</value>
@@ -934,7 +934,7 @@
     <value>Hilfe</value>
   </data>
   <data name="ModuleTitle.VpsToolsDeleteServer" xml:space="preserve">
-    <value>Server löschen</value>
+    <value>Server lï¿½schen</value>
   </data>
   <data name="ModuleTitle.VpsMoveServer" xml:space="preserve">
     <value>VPS verschieben</value>
@@ -946,7 +946,7 @@
     <value>Storage Spaces</value>
   </data>
   <data name="ModuleTitle.AddSpaceStorageLevel" xml:space="preserve">
-    <value>Storage Space-Level hinzufügen</value>
+    <value>Storage Space-Level hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.EditSpaceStorageLevel" xml:space="preserve">
     <value>Storage Space-Level bearbeiten</value>
@@ -955,7 +955,7 @@
     <value>Storage Space-Level</value>
   </data>
   <data name="ModuleTitle.AddStorageSpace" xml:space="preserve">
-    <value>Storage Space hinzufügen</value>
+    <value>Storage Space hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.EditStorageSpace" xml:space="preserve">
     <value>Storage Space bearbeiten</value>
@@ -967,7 +967,7 @@
     <value>Privates Netzwerk VLANs</value>
   </data>
   <data name="ModuleTitle.AddVirtualDirectory" xml:space="preserve">
-    <value>Virtuelles Verzeichnis hinzufügen</value>
+    <value>Virtuelles Verzeichnis hinzufï¿½gen</value>
   </data>
   <data name="ModuleTitle.VirtualDirectoryProperties" xml:space="preserve">
     <value>Einstellungen des virtuelle Verzeichnisses</value>

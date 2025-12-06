@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceServiceItems.ascx.cs" Inherits="FuseCP.Portal.UserControls.SpaceServiceItems" %>
-<%@ Register Src="Quota.ascx" TagName="Quota" TagPrefix="scp" %>
-<%@ Register Src="ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
-<%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
-<%@ Register Src="WebsiteActions.ascx" TagName="WebsiteActions" TagPrefix="scp" %>
-<%@ Register Src="MailAccountActions.ascx" TagName="MailAccountActions" TagPrefix="scp" %>
+<%@ Register Src="Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
+<%@ Register Src="ServerDetails.ascx" TagName="ServerDetails" TagPrefix="fcp" %>
+<%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
+<%@ Register Src="WebsiteActions.ascx" TagName="WebsiteActions" TagPrefix="fcp" %>
+<%@ Register Src="MailAccountActions.ascx" TagName="MailAccountActions" TagPrefix="fcp" %>
 
 <script type="text/javascript">
                 function checkAll(selectAllCheckbox) {
@@ -28,12 +28,12 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-4">
-                    <scp:WebsiteActions ID="websiteActions" runat="server" GridViewID="gvItems" CheckboxesName="chkSelectedIds" Visible="False" />
+                    <fcp:WebsiteActions ID="websiteActions" runat="server" GridViewID="gvItems" CheckboxesName="chkSelectedIds" Visible="False" />
                     <%-- Mail Accounts --%>
-                    <scp:MailAccountActions ID="mailActions" runat="server" GridViewID="gvItems" CheckboxesName="chkSelectedIds" Visible="False" />
+                    <fcp:MailAccountActions ID="mailActions" runat="server" GridViewID="gvItems" CheckboxesName="chkSelectedIds" Visible="False" />
             </div>
             <div class="col-md-8 text-right form-inline">
-                    <scp:SearchBox ID="searchBox" runat="server" />
+                    <fcp:SearchBox ID="searchBox" runat="server" />
             </div>
     </div>
     </div>
@@ -131,5 +131,5 @@
 
 <asp:Panel id="QuotasPanel" runat="server" CssClass="GridFooter">
 	<asp:Label ID="lblQuotaName" runat="server" Text="Items" CssClass="NormalBold"></asp:Label>&nbsp;
-	<scp:Quota ID="itemsQuota" runat="server" QuotaName="Group.Items" />
+	<fcp:Quota ID="itemsQuota" runat="server" QuotaName="Group.Items" />
 </asp:Panel>

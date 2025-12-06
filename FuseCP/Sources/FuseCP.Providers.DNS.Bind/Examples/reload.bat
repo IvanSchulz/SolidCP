@@ -33,9 +33,9 @@ powershell.exe -file "C:\Program Files\dns\etc\gen_named.forward.ps1" >> %logpat
 powershell.exe -file "C:\Program Files\dns\etc\gen_named.reverse.ps1" >> %logpath%%Logfile% 2>&1
 ECHO Transfer primary configs
 ECHO Transfer primary configs >> %logpath%%Logfile%
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\named.conf.forward_out.txt" named@primary:/etc/bind/named.conf.forward >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\named.conf.forward.signed_out.txt" named@primary:/etc/bind/named.conf.forward.signed >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\named.conf.reverse_out.txt" named@primary:/etc/bind/named.conf.reverse >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\named.conf.forward_out.txt" named@primary:/etc/bind/named.conf.forward >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\named.conf.forward.signed_out.txt" named@primary:/etc/bind/named.conf.forward.signed >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\named.conf.reverse_out.txt" named@primary:/etc/bind/named.conf.reverse >> %logpath%%Logfile% 2>&1
 
 ECHO Generate secondary configs
 ECHO Generate secondary configs >> %logpath%%Logfile%
@@ -43,12 +43,12 @@ powershell.exe -file "C:\Program Files\dns\etc\secondary_gen_named.forward.ps1" 
 powershell.exe -file "C:\Program Files\dns\etc\secondary_gen_named.reverse.ps1" >> %logpath%%Logfile% 2>&1
 ECHO Transfer secondary configs
 ECHO Transfer secondary configs >> %logpath%%Logfile%
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward_out.txt" named@secondary1:/etc/bind/named.conf.forward  >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward.signed_out.txt" named@secondary1:/etc/bind/named.conf.forward.signed  >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.reverse_out.txt" named@secondary1:/etc/bind/named.conf.reverse >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward_out.txt" named@secondary2:/etc/bind/named.conf.forward  >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward.signed_out.txt" named@secondary2:/etc/bind/named.conf.forward.signed  >> %logpath%%Logfile% 2>&1
-"C:\Program Files (x86)\Putty\PSCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.reverse_out.txt" named@secondary2:/etc/bind/named.conf.reverse >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward_out.txt" named@secondary1:/etc/bind/named.conf.forward  >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward.signed_out.txt" named@secondary1:/etc/bind/named.conf.forward.signed  >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.reverse_out.txt" named@secondary1:/etc/bind/named.conf.reverse >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward_out.txt" named@secondary2:/etc/bind/named.conf.forward  >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.forward.signed_out.txt" named@secondary2:/etc/bind/named.conf.forward.signed  >> %logpath%%Logfile% 2>&1
+"C:\Program Files (x86)\Putty\PFCP.EXE" -i "C:\Program Files\dns\myprivatekey.ppk" "C:\Program Files\dns\etc\secondary_named.conf.reverse_out.txt" named@secondary2:/etc/bind/named.conf.reverse >> %logpath%%Logfile% 2>&1
 
 REM first reconfig local server, then remote servers (only picks up new/deleted zones)
 ECHO Issue rndc reconfig locally

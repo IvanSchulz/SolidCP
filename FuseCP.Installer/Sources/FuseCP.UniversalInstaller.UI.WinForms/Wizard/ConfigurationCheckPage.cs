@@ -164,17 +164,17 @@ namespace FuseCP.UniversalInstaller.WinForms
 						case CheckTypes.ASPNET:
 							status = CheckASPNET(out details);
 							break;
-						case CheckTypes.SCPServer:
-							status = CheckSCPServer(out details);
+						case CheckTypes.FCPServer:
+							status = CheckFCPServer(out details);
 							break;
-						case CheckTypes.SCPEnterpriseServer:
-							status = CheckSCPEnterpriseServer(out details);
+						case CheckTypes.FCPEnterpriseServer:
+							status = CheckFCPEnterpriseServer(out details);
 							break;
-						case CheckTypes.SCPPortal:
-							status = CheckSCPPortal(out details);
+						case CheckTypes.FCPPortal:
+							status = CheckFCPPortal(out details);
 							break;
-                        case CheckTypes.SCPWebDavPortal:
-                            status = CheckSCPWebDavPortal(out details);
+                        case CheckTypes.FCPWebDavPortal:
+                            status = CheckFCPWebDavPortal(out details);
                             break;
 						case CheckTypes.Net10Runtime:
 							status = CheckNet10Runtime(out details);
@@ -584,7 +584,7 @@ namespace FuseCP.UniversalInstaller.WinForms
 			return SecurityUtils.UserExists(domain, username);
 		}
 
-		private CheckStatuses CheckSCPServer(out string details)
+		private CheckStatuses CheckFCPServer(out string details)
 		{
 			details = "";
 			string ip, port, domain;
@@ -673,7 +673,7 @@ namespace FuseCP.UniversalInstaller.WinForms
 			return true;
 		}
 
-		private CheckStatuses CheckSCPEnterpriseServer(out string details)
+		private CheckStatuses CheckFCPEnterpriseServer(out string details)
 		{
 			var settings = Installer.Current.Settings.EnterpriseServer;
 
@@ -712,7 +712,7 @@ namespace FuseCP.UniversalInstaller.WinForms
 			}
 		}
 
-		private CheckStatuses CheckSCPPortal(out string details)
+		private CheckStatuses CheckFCPPortal(out string details)
 		{
 			var settings = Installer.Current.Settings.WebPortal;
 
@@ -746,7 +746,7 @@ namespace FuseCP.UniversalInstaller.WinForms
 		}
 
 
-        private CheckStatuses CheckSCPWebDavPortal(out string details)
+        private CheckStatuses CheckFCPWebDavPortal(out string details)
         {
 			if (!OSInfo.IsWindows)
 			{

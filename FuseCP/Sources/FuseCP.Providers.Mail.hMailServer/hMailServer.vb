@@ -627,7 +627,7 @@ Public Class hMailServer
 					Dim objAccount As Object = objDomain.ComObject.Aliases.Item(i)
 
 					If String.Compare(objAccount.Name, mailAlias.Name, True) = 0 Then
-						'Fix mail alias is disabled in hMail Server when update it in SCP
+						'Fix mail alias is disabled in hMail Server when update it in FCP
 						objAccount.Active = True
 						objAccount.Value = mailAlias.ForwardTo
 						objAccount.Save()

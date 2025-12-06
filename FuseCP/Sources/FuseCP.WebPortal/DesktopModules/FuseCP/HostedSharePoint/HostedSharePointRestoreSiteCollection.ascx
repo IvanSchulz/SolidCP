@@ -2,15 +2,15 @@
 	Inherits="FuseCP.Portal.HostedSharePointRestoreSiteCollection" %>
 <%@ Register Src="../UserControls/FileLookup.ascx" TagName="FileLookup" TagPrefix="uc1" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-	TagPrefix="scp" %>	
+	TagPrefix="fcp" %>	
 6  
-<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %> 
+<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %> 
  
 
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-	TagPrefix="scp" %>
+	TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 		
 	
@@ -25,7 +25,7 @@
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="SharePoint Site Collections"></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-					<scp:SimpleMessageBox id="messageBox" runat="server" />
+					<fcp:SimpleMessageBox id="messageBox" runat="server" />
 						<table cellspacing="0" cellpadding="5" width="100%">
 							<tr>
 								<td class="Huge" colspan="2">

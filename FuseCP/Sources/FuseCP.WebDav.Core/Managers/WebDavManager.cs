@@ -291,7 +291,7 @@ namespace FuseCP.WebDav.Core.Managers
             var rootFolders = new List<SystemFile>();
             var user = ScpContext.User;
 
-            var folders = SCP.Services.EnterpriseStorage.GetEnterpriseFoldersPaged(user.ItemId, true, false, false, "", "", 0, int.MaxValue).PageItems;
+            var folders = FCP.Services.EnterpriseStorage.GetEnterpriseFoldersPaged(user.ItemId, true, false, false, "", "", 0, int.MaxValue).PageItems;
 
             foreach (var folder in folders)
             {

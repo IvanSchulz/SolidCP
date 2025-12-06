@@ -10,7 +10,7 @@ namespace FuseCP.WIXInstaller.Common
     public class WiXLogFileListener : TraceListener
     {
         public const uint FileFlushSize = 4096;
-        public const string DefaultLogFile = "SCPInstallation.log.txt";
+        public const string DefaultLogFile = "FCPInstallation.log.txt";
         public static string LogFile { get; private set; }
         private StringBuilder m_Ctx;
         static WiXLogFileListener()

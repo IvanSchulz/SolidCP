@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostingPlansEditPlan.ascx.cs" Inherits="FuseCP.Portal.HostingPlansEditPlan" %>
 <%@ Register Src="HostingPlansQuotas.ascx" TagName="HostingPlansQuotas" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
 <asp:Panel ID="HostingPlansEditPanel" runat="server" DefaultButton="btnSave" >
     <asp:UpdatePanel runat="server" ID="updatePanelUsers" UpdateMode="Conditional" ChildrenAsTriggers="true">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-                <scp:CollapsiblePanel id="secTarget" runat="server" TargetControlID="TargetPanel" meta:resourcekey="secTarget" Text="Plan Target"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel id="secTarget" runat="server" TargetControlID="TargetPanel" meta:resourcekey="secTarget" Text="Plan Target"></fcp:CollapsiblePanel>
                 <asp:Panel ID="TargetPanel" runat="server" Height="0" style="overflow:hidden;">
                     <div class="form-group" id="rowTargetServer" runat="server">
                         <asp:Label runat="server" CssClass="control-label col-sm-2" AssociatedControlID="ddlServer">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </asp:Panel>
-                <scp:CollapsiblePanel id="secQuotas" runat="server" TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas"></scp:CollapsiblePanel>
+                <fcp:CollapsiblePanel id="secQuotas" runat="server" TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas"></fcp:CollapsiblePanel>
                 <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
                     <uc1:HostingPlansQuotas id="hostingPlansQuotas" runat="server">
                     </uc1:HostingPlansQuotas>

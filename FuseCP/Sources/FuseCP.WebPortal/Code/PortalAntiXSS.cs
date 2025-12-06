@@ -58,12 +58,12 @@ namespace FuseCP.Portal
 
         public static string EncodeOld(string input)
         {
-            return Encoder.HtmlEncode(HttpUtility.HtmlDecode(input)); // HtmlDecode is used for compatability reasons with SCP pre-1.2.2 versions
+            return Encoder.HtmlEncode(HttpUtility.HtmlDecode(input)); // HtmlDecode is used for compatability reasons with FCP pre-1.2.2 versions
         }
 
         public static string DecodeOld(string input)
         {
-            return HttpUtility.HtmlDecode(input); // HtmlDecode is used for compatability reasons with SCP pre-1.2.2 versions
+            return HttpUtility.HtmlDecode(input); // HtmlDecode is used for compatability reasons with FCP pre-1.2.2 versions
         }
         
     }

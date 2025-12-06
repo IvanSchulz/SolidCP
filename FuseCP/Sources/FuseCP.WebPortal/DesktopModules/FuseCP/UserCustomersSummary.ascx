@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCustomersSummary.ascx.cs" Inherits="FuseCP.Portal.UserCustomersSummary" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc1" %>
 
 <%@ Import Namespace="FuseCP.Portal" %>
@@ -15,15 +15,15 @@
 </div>
 <div class="panel-body form-horizontal">
 
-	<scp:CollapsiblePanel id="allCustomers" runat="server"
+	<fcp:CollapsiblePanel id="allCustomers" runat="server"
 		TargetControlID="AllCustomersPanel" resourcekey="AllCustomersPanel" Text="All Customers">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="AllCustomersPanel" runat="server" CssClass="FormRow">
 		<asp:HyperLink ID="lnkAllCustomers" runat="server" Text="All Customers" meta:resourcekey="lnkAllCustomers"></asp:HyperLink>
 	</asp:Panel>
-	<scp:CollapsiblePanel id="byStatus" runat="server"
+	<fcp:CollapsiblePanel id="byStatus" runat="server"
 		TargetControlID="ByStatusPanel" resourcekey="ByStatusPanel" Text="By Status">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="ByStatusPanel" runat="server" CssClass="FormRow">
 		<asp:Repeater ID="repUserStatuses" runat="server" EnableViewState="false">
 			<ItemTemplate>
@@ -34,9 +34,9 @@
 			<SeparatorTemplate>&nbsp;&nbsp;</SeparatorTemplate>
 		</asp:Repeater>
 	</asp:Panel>
-	<scp:CollapsiblePanel id="byRole" runat="server"
+	<fcp:CollapsiblePanel id="byRole" runat="server"
 		TargetControlID="ByRolePanel" resourcekey="ByRolePanel" Text="By Role">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="ByRolePanel" runat="server" CssClass="FormRow">
 		<asp:Repeater ID="repUserRoles" runat="server" EnableViewState="false">
 			<ItemTemplate>

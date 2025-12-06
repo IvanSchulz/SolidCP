@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxPlans.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeMailboxPlans" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxPlanSelector.ascx" TagName="MailboxPlanSelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxPlanSelector.ascx" TagName="MailboxPlanSelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -18,7 +18,7 @@
                         <CPCC:StyleButton id="btnAddMailboxPlan" CssClass="btn btn-primary" runat="server" OnClick="btnAddMailboxPlan_Click"> <i class="fa fa-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAddMailboxPlan"/> </CPCC:StyleButton>
                     </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
              </div>
 
@@ -59,21 +59,21 @@
 				        <CPCC:StyleButton id="btnSetDefaultMailboxPlan" CssClass="btn btn-success" runat="server"  CausesValidation="false" OnClick="btnSetDefaultMailboxPlan_Click"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnSetDefaultMailboxPlan"/> </CPCC:StyleButton>
                     </div>
 <div class="panel-body">
-					<scp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true" TargetControlID="ToolsPanel" meta:resourcekey="secMainTools" Text="Mailbox plan maintenance">
-					</scp:CollapsiblePanel>
+					<fcp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true" TargetControlID="ToolsPanel" meta:resourcekey="secMainTools" Text="Mailbox plan maintenance">
+					</fcp:CollapsiblePanel>
 					<asp:Panel ID="ToolsPanel" runat="server" Height="0" Style="overflow: hidden;" CssClass="panel panel-default">
                         <div class="panel-body">
 						<table id="tblMaintenance" runat="server" cellpadding="10">
 					        <tr>
 					            <td class="FormLabel150"><asp:Localize ID="lblSourcePlan" runat="server" meta:resourcekey="locSourcePlan" Text="Replace"></asp:Localize></td>
 					            <td>                                
-                                    <scp:MailboxPlanSelector ID="mailboxPlanSelectorSource" runat="server" AddNone="true"/>
+                                    <fcp:MailboxPlanSelector ID="mailboxPlanSelectorSource" runat="server" AddNone="true"/>
                                 </td>
 					        </tr>
 					        <tr>
 					            <td class="FormLabel150"><asp:Localize ID="lblTargetPlan" runat="server" meta:resourcekey="locTargetPlan" Text="With"></asp:Localize></td>
 					            <td>                                
-                                    <scp:MailboxPlanSelector ID="mailboxPlanSelectorTarget" runat="server" AddNone="false"/>
+                                    <fcp:MailboxPlanSelector ID="mailboxPlanSelectorTarget" runat="server" AddNone="false"/>
                                 </td>
 					        </tr>
                             <tr>

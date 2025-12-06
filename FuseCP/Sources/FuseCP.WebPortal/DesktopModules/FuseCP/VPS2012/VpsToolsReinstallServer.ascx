@@ -1,21 +1,21 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsToolsReinstallServer.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VpsToolsReinstallServer" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CheckBoxOption.ascx" TagName="CheckBoxOption" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CheckBoxOption.ascx" TagName="CheckBoxOption" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
     	
 	    <div class="Content">
 		    <div class="Center">
 			    <div class="panel-body form-horizontal">
-			        <scp:ServerTabs id="tabs" runat="server" SelectedTab="vps_tools" />	
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:ServerTabs id="tabs" runat="server" SelectedTab="vps_tools" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                     <asp:ValidationSummary ID="validatorsSummary" runat="server" 
                         ValidationGroup="Reinstall" ShowMessageBox="True" ShowSummary="False" />
@@ -30,9 +30,9 @@
 		                        meta:resourcekey="locDescription" Text="This wizard will re-create VPS with the same configuration settings from scratch and then apply current OS template." />
                         </p>
 
-                        <scp:CollapsiblePanel id="secVirtualMachineSetttings" runat="server"
+                        <fcp:CollapsiblePanel id="secVirtualMachineSetttings" runat="server"
                                 TargetControlID="VirtualMachineSettingsPanel" meta:resourcekey="secVirtualMachineSetttings" Text="Virtual Machine Settings">
-                            </scp:CollapsiblePanel>
+                            </fcp:CollapsiblePanel>
                         <asp:Panel ID="VirtualMachineSettingsPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <div class="form-group" id="hostnameSetting" runat="server">
                             <asp:Label ID="locHostname" meta:resourcekey="locHostname" runat="server" Text="Host name:" CssClass="col-sm-2"  AssociatedControlID="txtHostname"></asp:Label>
@@ -75,8 +75,8 @@
                                         meta:resourcekey="locAdminPassword" Text="Administrator password:"></asp:Localize>
                             </div>
                         </div>
-                            <scp:PasswordControl id="password" runat="server" ValidationGroup="Vps" AllowGeneratePassword="true">
-                            </scp:PasswordControl>
+                            <fcp:PasswordControl id="password" runat="server" ValidationGroup="Vps" AllowGeneratePassword="true">
+                            </fcp:PasswordControl>
                         </asp:Panel> 
 				        <%--<table cellspacing="5"> Too demanding resources!!!				        
 				            <tr> 
@@ -90,9 +90,9 @@
 				            </tr>
 				        </table>--%>
 
-                        <scp:CollapsiblePanel id="secVirtualMachineSummary" runat="server"
+                        <fcp:CollapsiblePanel id="secVirtualMachineSummary" runat="server"
                                 TargetControlID="VirtualMachineSummaryPanel" meta:resourcekey="secVirtualMachineSummary" Text="Virtual Machine Summary">
-                            </scp:CollapsiblePanel>
+                            </fcp:CollapsiblePanel>
                             <asp:Panel ID="VirtualMachineSummaryPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                                 <table style="border-collapse: separate; border-spacing: 6px 1px;">                                
                                     <tr>
@@ -134,9 +134,9 @@
                                 </table>
                             </asp:Panel> 
 
-                        <scp:CollapsiblePanel id="secVirtualMachineNetwork" runat="server"
+                        <fcp:CollapsiblePanel id="secVirtualMachineNetwork" runat="server"
                                 TargetControlID="VirtualMachineNetworkPanel" meta:resourcekey="secVirtualMachineNetwork" Text="Virtual Machine Networks">
-                            </scp:CollapsiblePanel>
+                            </fcp:CollapsiblePanel>
                             <asp:Panel ID="VirtualMachineNetworkPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                                 <table style="border-collapse: separate; border-spacing: 6px;">                                
                                     <tr id="ExternalAddressesRow" runat="server">

@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CRMUsers.ascx.cs" Inherits="FuseCP.Portal.CRM.CRMUsers" %>
 <%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+    TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 			<div class="panel-heading">
                     <h3 class="panel-title">
                     <asp:Image ID="Image1" SkinID="CRMLogo" runat="server" />
@@ -14,7 +14,7 @@
                 </h3>
                         </div>
                 <div class="panel-body form-horizontal">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     <div class="FormButtonsBarClean">
                         <div class="FormButtonsBarCleanLeft">
                             <CPCC:StyleButton id="btnCreateUser" CssClass="btn btn-primary" runat="server" OnClick="btnCreateUser_Click"> <i class="fa fa-user-plus">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnCreateUser"/> </CPCC:StyleButton>
@@ -82,7 +82,7 @@
 				                    <asp:Localize ID="locQuota" runat="server" meta:resourcekey="locQuota" Text="Full licenses :"></asp:Localize>
                                 </td>
                                 <td>
-            				        <scp:QuotaViewer ID="usersQuota" runat="server" QuotaTypeId="2"   />
+            				        <fcp:QuotaViewer ID="usersQuota" runat="server" QuotaTypeId="2"   />
                                 </td>
                         </tr>
                         <tr>
@@ -90,7 +90,7 @@
             				        <asp:Localize ID="locLimitedQuota" runat="server" meta:resourcekey="locLimitedQuota" Text="Limited licenses :"></asp:Localize>
                                 </td>
                                 <td>
-				                    <scp:QuotaViewer ID="limitedusersQuota" runat="server" QuotaTypeId="2"   />
+				                    <fcp:QuotaViewer ID="limitedusersQuota" runat="server" QuotaTypeId="2"   />
                                 </td>
                         </tr>
                         <tr>
@@ -98,7 +98,7 @@
             				        <asp:Localize ID="locESSQuota" runat="server" meta:resourcekey="locESSQuota" Text="ESS licenses :"></asp:Localize>
                                 </td>
                                 <td>
-				                    <scp:QuotaViewer ID="essusersQuota" runat="server" QuotaTypeId="2"   />
+				                    <fcp:QuotaViewer ID="essusersQuota" runat="server" QuotaTypeId="2"   />
                                 </td>
                         </tr>
                         </table>
@@ -111,7 +111,7 @@
 				                    <asp:Localize ID="Localize1" runat="server" meta:resourcekey="locQuota" Text="Professional licenses :"></asp:Localize>
                                 </td>
                                 <td>
-            				        <scp:QuotaViewer ID="professionalusersQuota" runat="server" QuotaTypeId="2"   />
+            				        <fcp:QuotaViewer ID="professionalusersQuota" runat="server" QuotaTypeId="2"   />
                                 </td>
                         </tr>
                         <tr>
@@ -119,7 +119,7 @@
             				        <asp:Localize ID="locBasicQuota" runat="server" meta:resourcekey="locBasicQuota" Text="Basic licenses :"></asp:Localize>
                                 </td>
                                 <td>
-				                    <scp:QuotaViewer ID="basicusersQuota" runat="server" QuotaTypeId="2"   />
+				                    <fcp:QuotaViewer ID="basicusersQuota" runat="server" QuotaTypeId="2"   />
                                 </td>
                         </tr>
                         <tr>
@@ -127,7 +127,7 @@
             				        <asp:Localize ID="locEssentialQuota" runat="server" meta:resourcekey="locEssentialQuota" Text="Essential licenses :"></asp:Localize>
                                 </td>
                                 <td>
-				                    <scp:QuotaViewer ID="essentialusersQuota" runat="server" QuotaTypeId="2"   />
+				                    <fcp:QuotaViewer ID="essentialusersQuota" runat="server" QuotaTypeId="2"   />
                                 </td>
                         </tr>
                         </table>

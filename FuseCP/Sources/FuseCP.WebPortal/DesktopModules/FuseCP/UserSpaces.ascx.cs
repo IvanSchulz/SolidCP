@@ -40,7 +40,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
-using SCP = FuseCP.EnterpriseServer;
+using FCP = FuseCP.EnterpriseServer;
 
 using FuseCP.EnterpriseServer;
 using System.Xml;

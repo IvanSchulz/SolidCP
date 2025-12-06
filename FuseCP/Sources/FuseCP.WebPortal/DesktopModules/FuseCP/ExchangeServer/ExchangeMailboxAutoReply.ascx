@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeMailboxAutoReply.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeMailboxAutoReply" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/MailboxTabs.ascx" TagName="MailboxTabs" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 <script src='/tinymce/tinymce.min.js'></script>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -44,10 +44,10 @@
 </div>
 <div class="panel-body form-horizontal">
     <div class="nav nav-tabs" style="padding-bottom: 7px !important;">
-        <scp:MailboxTabs ID="MailboxTabs" runat="server" SelectedTab="mailbox_autoreply" />
+        <fcp:MailboxTabs ID="MailboxTabs" runat="server" SelectedTab="mailbox_autoreply" />
     </div>
     <div class="panel panel-default tab-content">
-        <scp:SimpleMessageBox ID="messageBox" runat="server" />
+        <fcp:SimpleMessageBox ID="messageBox" runat="server" />
         <div class="form-group">
             <div class="col-sm-10 form-inline">
                 <table style="width: 950px;">
@@ -117,7 +117,7 @@
     </div>
 </div>
 <div class="panel-footer text-right">
-    <scp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="EditMailbox"
+    <fcp:ItemButtonPanel ID="buttonPanel" runat="server" ValidationGroup="EditMailbox"
         OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" ValidationGroup="EditMailbox" />
 </div>

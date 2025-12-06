@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageFolders.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageFolders" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <script type="text/javascript">
     //<![CDATA[
@@ -26,7 +26,7 @@
     </CPCC:StyleButton>
 </div>
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
     <div class="row">
         <asp:Panel ID="SearchPanel" runat="server" DefaultButton="cmdSearch" CssClass="col-md-6 col-md-offset-6 text-right form-inline">
             <asp:Localize ID="locSearch" runat="server" meta:resourcekey="locSearch" Visible="false"></asp:Localize>
@@ -118,13 +118,13 @@
 <div class="panel-footer">
     <asp:Localize ID="locQuotaFolders" runat="server" meta:resourcekey="locQuotaFolders" Text="Total Folders Allocated:"></asp:Localize>
     &nbsp;&nbsp;&nbsp;
-    <scp:QuotaViewer ID="foldersQuota" runat="server" QuotaTypeId="2" />
+    <fcp:QuotaViewer ID="foldersQuota" runat="server" QuotaTypeId="2" />
     <br />
     <asp:Localize ID="locQuotaSpace" runat="server" meta:resourcekey="locQuotaSpace" Text="Total Space Allocated (Gb):"></asp:Localize>
     &nbsp;&nbsp;&nbsp;
-    <scp:QuotaViewer ID="spaceQuota" runat="server" QuotaTypeId="3" />
+    <fcp:QuotaViewer ID="spaceQuota" runat="server" QuotaTypeId="3" />
     <br />
     <asp:Localize ID="locQuotaAvailableSpace" runat="server" meta:resourcekey="locQuotaAvailableSpace" Text="Used Diskspace (Mb):"></asp:Localize>
     &nbsp;&nbsp;&nbsp;
-    <scp:QuotaViewer ID="spaceAvailableQuota" runat="server" QuotaTypeId="2" />
+    <fcp:QuotaViewer ID="spaceAvailableQuota" runat="server" QuotaTypeId="2" />
 </div>

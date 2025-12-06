@@ -44,10 +44,10 @@
     </div>
     <div class="col-sm-8">
         <asp:CompareValidator ID="valRequireEqualPassword" CssClass="alert alet-warning" runat="server" ControlToCompare="txtPassword" ErrorMessage="*" Display="Dynamic" ControlToValidate="txtConfirmPassword" meta:resourcekey="valRequireEqualPassword"></asp:CompareValidator>
-        <asp:CustomValidator ID="valCorrectLength" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="len" Display="Dynamic" Enabled="false" ClientValidationFunction="scpValidatePasswordLength" OnServerValidate="valCorrectLength_ServerValidate"></asp:CustomValidator>
-        <asp:CustomValidator ID="valRequireNumbers" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="num" Display="Dynamic" Enabled="false" ClientValidationFunction="scpValidatePasswordNumbers" OnServerValidate="valRequireNumbers_ServerValidate"></asp:CustomValidator>
-        <asp:CustomValidator ID="valRequireUppercase" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="upp" Display="Dynamic" Enabled="false" ClientValidationFunction="scpValidatePasswordUppercase" OnServerValidate="valRequireUppercase_ServerValidate"></asp:CustomValidator>
-        <asp:CustomValidator ID="valRequireSymbols" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="sym" Display="Dynamic" Enabled="false" ClientValidationFunction="scpValidatePasswordSymbols" OnServerValidate="valRequireSymbols_ServerValidate"></asp:CustomValidator>
+        <asp:CustomValidator ID="valCorrectLength" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="len" Display="Dynamic" Enabled="false" ClientValidationFunction="fcpValidatePasswordLength" OnServerValidate="valCorrectLength_ServerValidate"></asp:CustomValidator>
+        <asp:CustomValidator ID="valRequireNumbers" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="num" Display="Dynamic" Enabled="false" ClientValidationFunction="fcpValidatePasswordNumbers" OnServerValidate="valRequireNumbers_ServerValidate"></asp:CustomValidator>
+        <asp:CustomValidator ID="valRequireUppercase" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="upp" Display="Dynamic" Enabled="false" ClientValidationFunction="fcpValidatePasswordUppercase" OnServerValidate="valRequireUppercase_ServerValidate"></asp:CustomValidator>
+        <asp:CustomValidator ID="valRequireSymbols" CssClass="alert alet-warning" runat="server" ControlToValidate="txtPassword" ErrorMessage="sym" Display="Dynamic" Enabled="false" ClientValidationFunction="fcpValidatePasswordSymbols" OnServerValidate="valRequireSymbols_ServerValidate"></asp:CustomValidator>
     </div>
 </div>
 

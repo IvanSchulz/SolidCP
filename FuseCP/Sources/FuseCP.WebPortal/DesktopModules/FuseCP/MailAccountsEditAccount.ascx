@@ -3,8 +3,8 @@
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc1" %>
 <%@ Register TagPrefix="dnc" TagName="MailEditAddress" Src="MailEditAddress.ascx" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+    TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 <script type="text/javascript">
 
     function confirmation() {

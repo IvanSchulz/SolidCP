@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNestedSpaces.ascx.cs" Inherits="FuseCP.Portal.SpaceNestedSpaces" %>
 <%@ Import Namespace="FuseCP.Portal" %>
-<%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
+<%@ Register Src="UserControls/Comments.ascx" TagName="Comments" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="fcp" %>
 
 
 
 <div class="FormButtonsBar">
     <div class="Left">
-        <scp:SearchBox ID="searchBox" runat="server" />
+        <fcp:SearchBox ID="searchBox" runat="server" />
     </div>
     <div class="Right">
         <asp:Label ID="lblStatus" runat="server" meta:resourcekey="lblStatus" Text="Status:" CssClass="Normal"></asp:Label>
@@ -68,9 +68,9 @@
             <HeaderStyle Wrap="False" />
         </asp:BoundField>
 		<asp:TemplateField>
-			<ItemTemplate><scp:Comments id="Comments1" runat="server"
+			<ItemTemplate><fcp:Comments id="Comments1" runat="server"
 				    Comments='<%# Eval("Comments") %>'>
-                </scp:Comments></ItemTemplate>
+                </fcp:Comments></ItemTemplate>
             <ItemStyle Width="20px" Wrap="False" />
 		</asp:TemplateField>
     </Columns>

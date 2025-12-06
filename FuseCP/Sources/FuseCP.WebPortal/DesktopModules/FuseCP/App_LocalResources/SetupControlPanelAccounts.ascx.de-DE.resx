@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -126,7 +126,7 @@
   <data name="lblUserNameA.Text" xml:space="preserve">
     <value>Benutzername:</value>
   </data>
-  <data name="ScpaProcedureDescription.Text" xml:space="preserve">
-    <value>Bitte Passwörter für FuseCP "serveradmin" und "admin" Benutzer vergeben.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; ist das FuseCP Administrator-Konto. Mit diesem Konto können Sie alle Ihre Server und Dienste verwalten, neue Hosting-Pläne und Kundenkonten anlegen - sowohl Wiederverkäufer als auch Endkunden.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; ist ein vorkonfiguriertes Wiederverkäuferkonto mit einem unbegrenzten Hosting-Plan, um den lokalen Sever zu verwalten, auf dem FuseCP installiert ist.</value>
+  <data name="FcpaProcedureDescription.Text" xml:space="preserve">
+    <value>Bitte PasswÃ¶rter fÃ¼r FuseCP "serveradmin" und "admin" Benutzer vergeben.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; ist das FuseCP Administrator-Konto. Mit diesem Konto kÃ¶nnen Sie alle Ihre Server und Dienste verwalten, neue Hosting-PlÃ¤ne und Kundenkonten anlegen - sowohl WiederverkÃ¤ufer als auch Endkunden.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; ist ein vorkonfiguriertes WiederverkÃ¤uferkonto mit einem unbegrenzten Hosting-Plan, um den lokalen Sever zu verwalten, auf dem FuseCP installiert ist.</value>
   </data>
 </root>

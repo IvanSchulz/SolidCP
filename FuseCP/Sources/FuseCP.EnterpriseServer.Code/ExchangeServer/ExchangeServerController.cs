@@ -3934,7 +3934,7 @@ namespace FuseCP.EnterpriseServer
                 if (retentionPolicy != null)
                 {
                     UpdateExchangeRetentionPolicy(itemId, retentionPolicyId, result);
-                    RetentionPolicy = retentionPolicy.SCPUniqueName;
+                    RetentionPolicy = retentionPolicy.FCPUniqueName;
                 }
 
             }
@@ -4087,7 +4087,7 @@ namespace FuseCP.EnterpriseServer
                 {
                     ExchangeServer exchange = GetExchangeServer(exchangeServiceId, org.ServiceId);
 
-                    ResultObject resTag = exchange.SetRetentionPolicyTag(tag.SCPUniqueName, (ExchangeRetentionPolicyTagType)tag.TagType, tag.AgeLimitForRetention, (ExchangeRetentionPolicyTagAction)tag.RetentionAction);
+                    ResultObject resTag = exchange.SetRetentionPolicyTag(tag.FCPUniqueName, (ExchangeRetentionPolicyTagType)tag.TagType, tag.AgeLimitForRetention, (ExchangeRetentionPolicyTagAction)tag.RetentionAction);
                     res.ErrorCodes.AddRange(resTag.ErrorCodes);
                     res.IsSuccess = res.IsSuccess && resTag.IsSuccess;
                 }
@@ -4148,7 +4148,7 @@ namespace FuseCP.EnterpriseServer
                 {
                     ExchangeServer exchange = GetExchangeServer(exchangeServiceId, org.ServiceId);
 
-                    ResultObject resTag = exchange.SetRetentionPolicyTag(tag.SCPUniqueName, (ExchangeRetentionPolicyTagType)tag.TagType, tag.AgeLimitForRetention, (ExchangeRetentionPolicyTagAction)tag.RetentionAction);
+                    ResultObject resTag = exchange.SetRetentionPolicyTag(tag.FCPUniqueName, (ExchangeRetentionPolicyTagType)tag.TagType, tag.AgeLimitForRetention, (ExchangeRetentionPolicyTagAction)tag.RetentionAction);
                     res.ErrorCodes.AddRange(resTag.ErrorCodes);
                     res.IsSuccess = res.IsSuccess && resTag.IsSuccess;
                 }
@@ -4206,7 +4206,7 @@ namespace FuseCP.EnterpriseServer
                     LogExtension.SetItemName(tag.TagName);
                     LogExtension.WriteObject(tag);
 
-                    ResultObject resTag = exchange.RemoveRetentionPolicyTag(tag.SCPUniqueName);
+                    ResultObject resTag = exchange.RemoveRetentionPolicyTag(tag.FCPUniqueName);
                     res.ErrorCodes.AddRange(resTag.ErrorCodes);
                     res.IsSuccess = res.IsSuccess && resTag.IsSuccess;
 
@@ -4274,16 +4274,16 @@ namespace FuseCP.EnterpriseServer
                     foreach (ExchangeMailboxPlanRetentionPolicyTag policytag in policytaglist)
                     {
                         ExchangeRetentionPolicyTag tag = GetExchangeRetentionPolicyTag(itemID, policytag.TagID);
-                        tagLinks.Add(tag.SCPUniqueName);
+                        tagLinks.Add(tag.FCPUniqueName);
 
                         // update PlanRetentionPolicyTags
 
-                        ResultObject resItem = exchange.SetRetentionPolicyTag(tag.SCPUniqueName, (ExchangeRetentionPolicyTagType)tag.TagType, tag.AgeLimitForRetention, (ExchangeRetentionPolicyTagAction)tag.RetentionAction);
+                        ResultObject resItem = exchange.SetRetentionPolicyTag(tag.FCPUniqueName, (ExchangeRetentionPolicyTagType)tag.TagType, tag.AgeLimitForRetention, (ExchangeRetentionPolicyTagAction)tag.RetentionAction);
                         result.ErrorCodes.AddRange(resItem.ErrorCodes);
                         result.IsSuccess = result.IsSuccess && resItem.IsSuccess;
                     }
 
-                    ResultObject res = exchange.SetRetentionPolicy(policy.SCPUniqueName, tagLinks.ToArray());
+                    ResultObject res = exchange.SetRetentionPolicy(policy.FCPUniqueName, tagLinks.ToArray());
                     result.ErrorCodes.AddRange(res.ErrorCodes);
                     result.IsSuccess = result.IsSuccess && res.IsSuccess;
                 }
@@ -4514,7 +4514,7 @@ namespace FuseCP.EnterpriseServer
         {
             ExchangeContact c = new ExchangeContact();
             c.DisplayName = "FuseCP Support";
-            c.AccountName = "scp_fabrikam";
+            c.AccountName = "fcp_fabrikam";
             c.FirstName = "FuseCP";
             c.LastName = "Support";
             c.EmailAddress = "support@fusecp.com";
@@ -6721,7 +6721,7 @@ namespace FuseCP.EnterpriseServer
 
                 res = Database.AddExchangeDisclaimer(itemId, disclaimer);
                 disclaimer.ExchangeDisclaimerId = res;
-                exchange.SetDisclaimer(disclaimer.SCPUniqueName, disclaimer.DisclaimerText);
+                exchange.SetDisclaimer(disclaimer.FCPUniqueName, disclaimer.DisclaimerText);
             }
             catch (Exception ex)
             {
@@ -6755,7 +6755,7 @@ namespace FuseCP.EnterpriseServer
 
                 var oldObj = GetExchangeDisclaimer(itemId, disclaimer.ExchangeDisclaimerId);
 
-                exchange.SetDisclaimer(disclaimer.SCPUniqueName, disclaimer.DisclaimerText);
+                exchange.SetDisclaimer(disclaimer.FCPUniqueName, disclaimer.DisclaimerText);
                 Database.UpdateExchangeDisclaimer(itemId, disclaimer);
 
                 // Log Extension
@@ -6797,7 +6797,7 @@ namespace FuseCP.EnterpriseServer
                 int exchangeServiceId = GetExchangeServiceID(org.PackageId);
                 ExchangeServer exchange = GetExchangeServer(exchangeServiceId, org.ServiceId);
 
-                if (exchange.RemoveDisclaimer(disclaimer.SCPUniqueName) != -1)
+                if (exchange.RemoveDisclaimer(disclaimer.FCPUniqueName) != -1)
                     Database.DeleteExchangeDisclaimer(exchangeDisclaimerId);
             }
             catch (Exception ex)
@@ -6887,15 +6887,15 @@ namespace FuseCP.EnterpriseServer
 
                 // update disclaimer
                 if (newDisclaimer != null)
-                    exchange.SetDisclaimer(newDisclaimer.SCPUniqueName, newDisclaimer.DisclaimerText);
+                    exchange.SetDisclaimer(newDisclaimer.FCPUniqueName, newDisclaimer.DisclaimerText);
 
                 if (newExchangeDisclaimerId != oldExchangeDisclaimerId)
                 {
                     if (oldDisclaimer != null)
-                        exchange.RemoveDisclamerMember(oldDisclaimer.SCPUniqueName, account.PrimaryEmailAddress);
+                        exchange.RemoveDisclamerMember(oldDisclaimer.FCPUniqueName, account.PrimaryEmailAddress);
 
                     if (newDisclaimer != null)
-                        res = exchange.AddDisclamerMember(newDisclaimer.SCPUniqueName, account.PrimaryEmailAddress);
+                        res = exchange.AddDisclamerMember(newDisclaimer.FCPUniqueName, account.PrimaryEmailAddress);
 
                     if (res == 0)
                         Database.SetExchangeAccountDisclaimerId(accountID, newExchangeDisclaimerId);

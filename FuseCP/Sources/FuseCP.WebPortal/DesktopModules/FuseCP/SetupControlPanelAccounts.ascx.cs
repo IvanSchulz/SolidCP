@@ -45,7 +45,7 @@ namespace FuseCP.Portal
 		{
 			if (!IsPostBack)
 			{
-				EnsureSCPAEnabled();
+				EnsureFCPAEnabled();
 			}
 		}
 
@@ -59,7 +59,7 @@ namespace FuseCP.Portal
 			CompleteSetupControlPanelAccounts();
 		}
 
-		private void EnsureSCPAEnabled()
+		private void EnsureFCPAEnabled()
 		{
 			var enabledScpa = ES.Services.Authentication.GetSystemSetupMode();
 			//

@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MailEnable_EditList.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.MailEnable_EditList" %>
 <%@ Register TagPrefix="dnc" TagName="EditItemsList" Src="../MailEditItems.ascx" %>
 <%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 <table cellSpacing="0" cellPadding="3" width="100%">
     <tr>
@@ -103,8 +103,8 @@
 	</tr>
 </table>
 
-<scp:collapsiblepanel id="HeaderFooterSection" runat="server" targetcontrolid="pHeaderFooter"
-    meta:resourcekey="HeaderFooterSection" ></scp:collapsiblepanel>
+<fcp:collapsiblepanel id="HeaderFooterSection" runat="server" targetcontrolid="pHeaderFooter"
+    meta:resourcekey="HeaderFooterSection" ></fcp:collapsiblepanel>
 <asp:Panel runat="server" ID="pHeaderFooter">
    <table width="100%">
     <tr>

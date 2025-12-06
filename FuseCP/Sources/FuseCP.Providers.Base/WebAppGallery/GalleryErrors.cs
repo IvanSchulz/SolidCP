@@ -38,7 +38,7 @@ namespace FuseCP.Providers.WebAppGallery
 {
 	public static class GalleryErrors
 	{
-        // SCP Server
+        // FCP Server
         public const string ProcessingFeedXMLError = "ProcessingFeedXMLError"; // + exception
         public const string PackageFileNotFound = "PackageFileNotFound"; // + exception
         public const string ProcessingPackageError = "ProcessingPackageError"; // + exception

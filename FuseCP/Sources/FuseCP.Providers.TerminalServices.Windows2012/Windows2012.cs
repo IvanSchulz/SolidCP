@@ -75,14 +75,14 @@ namespace FuseCP.Providers.RemoteDesktopServices
         private const string RdsGroupFormat = "rds-{0}-{1}";
         private const string RdsModuleName = "RemoteDesktopServices";
         private const string AddNpsString = "netsh nps add np name=\"\"{0}\"\" policysource=\"1\" processingorder=\"{1}\" conditionid=\"0x3d\" conditiondata=\"^5$\" conditionid=\"0x1fb5\" conditiondata=\"{2}\" conditionid=\"0x1e\" conditiondata=\"UserAuthType:(PW|CA)\" profileid=\"0x1005\" profiledata=\"TRUE\" profileid=\"0x100f\" profiledata=\"TRUE\" profileid=\"0x1009\" profiledata=\"0x7\" profileid=\"0x1fe6\" profiledata=\"0x40000000\"";
-        private const string SCPAdministratorsGroupDescription = "SCP RDS Collection Adminstrators";
-        private const string RdsCollectionUsersGroupDescription = "SCP RDS Collection Users";
-        private const string RdsCollectionComputersGroupDescription = "SCP RDS Collection Computers";
+        private const string FCPAdministratorsGroupDescription = "FCP RDS Collection Adminstrators";
+        private const string RdsCollectionUsersGroupDescription = "FCP RDS Collection Users";
+        private const string RdsCollectionComputersGroupDescription = "FCP RDS Collection Computers";
         private const string RdsServersOU = "RDSServersOU";
         private const string RdsServersRootOU = "RDSRootServersOU";
         private const string RDSHelpDeskComputerGroup = "FuseCP-RDSHelpDesk-Computer";        
-        private const string RDSHelpDeskGroup = "SCP-HelpDeskAdministrators";
-        private const string RDSHelpDeskGroupDescription = "SCP Help Desk Administrators";
+        private const string RDSHelpDeskGroup = "FCP-HelpDeskAdministrators";
+        private const string RDSHelpDeskGroupDescription = "FCP Help Desk Administrators";
         private const string LocalAdministratorsGroupName = "Administrators";
         private const string RDSHelpDeskRdRapPolicyName = "RDS-HelpDesk-RDRAP";
         private const string RDSHelpDeskRdCapPolicyName = "RDS-HelpDesk-RDCAP";
@@ -356,7 +356,7 @@ namespace FuseCP.Providers.RemoteDesktopServices
                 string helpDeskGroupSamAccountName = CheckOrCreateAdGroup(GetHelpDeskGroupPath(RDSHelpDeskGroup), GetRootOUPath(), RDSHelpDeskGroup, RDSHelpDeskGroupDescription);
                 string groupName = GetLocalAdminsGroupName(collection.Name);
                 string groupPath = GetGroupPath(organizationId, collection.Name, groupName);
-                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, SCPAdministratorsGroupDescription);
+                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, FCPAdministratorsGroupDescription);
                 CheckOrCreateAdGroup(GetUsersGroupPath(organizationId, collection.Name), orgPath, GetUsersGroupName(collection.Name), RdsCollectionUsersGroupDescription);                
 
                 var capPolicyName = GetPolicyName(organizationId, collection.Name, RdsPolicyTypes.RdCap);
@@ -662,7 +662,7 @@ namespace FuseCP.Providers.RemoteDesktopServices
                 string helpDeskGroupSamAccountName = CheckOrCreateAdGroup(GetHelpDeskGroupPath(RDSHelpDeskGroup), GetRootOUPath(), RDSHelpDeskGroup, RDSHelpDeskGroupDescription);
                 string groupName = GetLocalAdminsGroupName(collectionName);
                 string groupPath = GetGroupPath(organizationId, collectionName, groupName);
-                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, SCPAdministratorsGroupDescription);
+                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, FCPAdministratorsGroupDescription);
 
                 AddAdGroupToLocalAdmins(runSpace, server.FqdName, LocalAdministratorsGroupName);
                 AddAdGroupToLocalAdmins(runSpace, server.FqdName, helpDeskGroupSamAccountName);
@@ -1156,7 +1156,7 @@ namespace FuseCP.Providers.RemoteDesktopServices
                 string groupName = GetLocalAdminsGroupName(collectionName);
                 string groupPath = GetGroupPath(organizationId, collectionName, groupName);
                 string helpDeskGroupSamAccountName = CheckOrCreateAdGroup(GetHelpDeskGroupPath(RDSHelpDeskGroup), GetRootOUPath(), RDSHelpDeskGroup, RDSHelpDeskGroupDescription);
-                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, SCPAdministratorsGroupDescription);
+                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, FCPAdministratorsGroupDescription);
 
                 if (index > 0)
                 {
@@ -1824,7 +1824,7 @@ namespace FuseCP.Providers.RemoteDesktopServices
                 string helpDeskGroupSamAccountName = CheckOrCreateAdGroup(GetHelpDeskGroupPath(RDSHelpDeskGroup), GetRootOUPath(), RDSHelpDeskGroup, RDSHelpDeskGroupDescription);
                 string groupName = GetLocalAdminsGroupName(collection.Name);
                 string groupPath = GetGroupPath(organizationId, collection.Name, groupName);
-                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, SCPAdministratorsGroupDescription);
+                string localAdminsGroupSamAccountName = CheckOrCreateAdGroup(groupPath, GetOrganizationPath(organizationId), groupName, FCPAdministratorsGroupDescription);
                 CheckOrCreateAdGroup(GetUsersGroupPath(organizationId, collection.Name), orgPath, GetUsersGroupName(collection.Name), RdsCollectionUsersGroupDescription);
 
                 var capPolicyName = GetPolicyName(organizationId, collection.Name, RdsPolicyTypes.RdCap);

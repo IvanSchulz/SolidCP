@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WebsitesSSL.ascx.cs" Inherits="FuseCP.Portal.WebsitesSSL" %>
 <%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 <%@ Register Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI" TagPrefix="cc1" %>
 <%@ Register Src="SkinControls/BootstrapDropDownList.ascx" TagName="BootstrapDropDownList" TagPrefix="bsddl" %>
 
 <asp:UpdatePanel ID="MessageBoxUpdatePanel" runat="server" UpdateMode="Always">
 	<contenttemplate>
-		<scp:SimpleMessageBox id="messageBox" runat="server"></scp:SimpleMessageBox>
+		<fcp:SimpleMessageBox id="messageBox" runat="server"></fcp:SimpleMessageBox>
 	</contenttemplate>
 </asp:UpdatePanel>
 <ajaxToolkit:TabContainer ID="TabContainer1" runat="server">

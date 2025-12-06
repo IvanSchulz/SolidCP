@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackageVLANs.ascx.cs" Inherits="FuseCP.Portal.UserControls.PackageVLANs" %>
-<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 
 <script type="text/javascript">
@@ -14,7 +14,7 @@
                 }
 </script>
 
-<scp:SimpleMessageBox id="messageBox" runat="server" />
+<fcp:SimpleMessageBox id="messageBox" runat="server" />
 
 <div class="FormButtonsBarClean">
     <div class="FormButtonsBarCleanLeft">

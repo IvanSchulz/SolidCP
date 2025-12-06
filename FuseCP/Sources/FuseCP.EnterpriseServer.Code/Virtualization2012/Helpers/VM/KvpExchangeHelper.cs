@@ -180,7 +180,7 @@ namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers.VM
 
         public JobResult SendKvpItemsInternal(int itemId, string taskName, Dictionary<string, string> taskProps, bool cleanResult)
         {
-            string TASK_PREFIX = "SCP-";
+            string TASK_PREFIX = "FCP-";
             string TASK_PREFIX_OLD = "WSP-"; //backward compatibility for the WSPanel and the MSPControl version 0000 < 3000 <= ????
 
             // load item

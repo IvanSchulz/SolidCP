@@ -333,7 +333,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C1F24BBA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeCopyrightInfo", "FuseCP\Sources\Tools\ChangeCopyrightInfo\ChangeCopyrightInfo.csproj", "{51F2D762-CB17-4F0D-9F57-B168666ADB34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCPTransportAgent", "FuseCP\Sources\Tools\SCPTransportAgent\SCPTransportAgent.csproj", "{CC650EC7-0584-4FBC-B35D-9171028475DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FCPTransportAgent", "FuseCP\Sources\Tools\FCPTransportAgent\FCPTransportAgent.csproj", "{CC650EC7-0584-4FBC-B35D-9171028475DC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseCP.AWStats.Viewer", "FuseCP\Sources\Tools\FuseCP.AWStats.Viewer\FuseCP.AWStats.Viewer.csproj", "{2EAD5E79-489E-4280-9470-85F5BD1F1F76}"
 EndProject

@@ -91,7 +91,7 @@ namespace FuseCP.Setup
 		UpdateServerAdminPassword,
 		UpdateLicenseInformation,
 		ConfigureStandaloneServerData,
-		CreateSCPServerLogin,
+		CreateFCPServerLogin,
 		FolderPermissions,
 		AddCustomErrorsPage,
 		SwitchServer2AspNet40,

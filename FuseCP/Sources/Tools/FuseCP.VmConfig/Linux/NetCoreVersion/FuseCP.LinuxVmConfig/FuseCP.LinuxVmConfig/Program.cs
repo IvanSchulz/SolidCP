@@ -43,8 +43,8 @@ namespace FuseCP.LinuxVmConfig
     {
         private static System.Threading.Thread mainThread;
 
-        internal const string TaskPrefix = "SCP-";
-        internal const string CurrentTaskName = "SCP-CurrentTask";
+        internal const string TaskPrefix = "FCP-";
+        internal const string CurrentTaskName = "FCP-CurrentTask";
 
         internal const string DEFAULT_KVP_DIRECTORY = "/var/lib/hyperv/";
         internal const string DEFAULT_KVP_DIRECTORY_FREEBSD = "/var/db/hyperv/pool/";

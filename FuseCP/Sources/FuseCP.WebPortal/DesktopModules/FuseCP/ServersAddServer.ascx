@@ -2,8 +2,8 @@
     Inherits="FuseCP.Portal.ServersAddServer" %>
 <%@ Register Src="UserControls/ServerPasswordControl.ascx" TagName="ServerPasswordControl" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+    TagPrefix="fcp" %>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <asp:Panel ID="ServersAddServerPanel" runat="server" DefaultButton="btnAdd">
     <div class="panel-body form-horizontal">
         <div class="form-group">

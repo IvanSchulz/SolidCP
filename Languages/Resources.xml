@@ -182,12 +182,12 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLDatabasesSettings</Key>
+    <Key>ModuleTitle.FCPSQLDatabasesSettings</Key>
     <DefaultValue>FuseCP SQL Databases Settings</DefaultValue>
   </Resource>
   <Resource>
     <File>App_GlobalResources\FuseCP_Modules.ascx.resx</File>
-    <Key>ModuleTitle.SCPSQLUserSettings</Key>
+    <Key>ModuleTitle.FCPSQLUserSettings</Key>
     <DefaultValue>FuseCP SQL User Settings</DefaultValue>
   </Resource>
   <Resource>
@@ -7913,7 +7913,7 @@
   <Resource>
     <File>App_GlobalResources\FuseCP_SharedResources.ascx.resx</File>
     <Key>Error.EXCHANGE_SET_ORG_LIMITS_VALIDATION</Key>
-    <DefaultValue>"Issue warning at" should be less or equal to  "Prohibit send at" and "Prohibit Send at” should be less or equal than “Prohibit Send and Receive at”.
+    <DefaultValue>"Issue warning at" should be less or equal to  "Prohibit send at" and "Prohibit Send at� should be less or equal than �Prohibit Send and Receive at�.
 </DefaultValue>
   </Resource>
   <Resource>
@@ -20356,6 +20356,26 @@
     <DefaultValue>FTP Accounts Policy</DefaultValue>
   </Resource>
   <Resource>
+    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
+    <Key>lblDemoMessage.Text</Key>
+    <DefaultValue>Demo Message:</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
+    <Key>lblLogoImage.Text</Key>
+    <DefaultValue>Logo Image URL:</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
+    <Key>lblPassword.Text</Key>
+    <DefaultValue>Account Password:</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
+    <Key>secPanelSettings.Text</Key>
+    <DefaultValue>Control Panel Settings</DefaultValue>
+  </Resource>
+  <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\SettingsLyncUserPlansPolicy.ascx.resx</File>
     <Key>btnAddPlan.Text</Key>
     <DefaultValue>Add New Plan</DefaultValue>
@@ -21064,26 +21084,6 @@
     <File>DesktopModules\FuseCP\App_LocalResources\SettingsSharePointPolicy.ascx.resx</File>
     <Key>secUsername.Text</Key>
     <DefaultValue>SharePoint Users Policy</DefaultValue>
-  </Resource>
-  <Resource>
-    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
-    <Key>lblDemoMessage.Text</Key>
-    <DefaultValue>Demo Message:</DefaultValue>
-  </Resource>
-  <Resource>
-    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
-    <Key>lblLogoImage.Text</Key>
-    <DefaultValue>Logo Image URL:</DefaultValue>
-  </Resource>
-  <Resource>
-    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
-    <Key>lblPassword.Text</Key>
-    <DefaultValue>Account Password:</DefaultValue>
-  </Resource>
-  <Resource>
-    <File>DesktopModules\FuseCP\App_LocalResources\SettingsFuseCPPolicy.ascx.resx</File>
-    <Key>secPanelSettings.Text</Key>
-    <DefaultValue>Control Panel Settings</DefaultValue>
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\SettingsUserPasswordExpirationLetter.ascx.resx</File>
@@ -28094,7 +28094,7 @@ After creating your virtual directory go to FP administrator and create a subweb
   <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\WebsitesSSL.ascx.resx</File>
     <Key>SSLImportDescription.Text</Key>
-    <DefaultValue>A SSL certificate has been detected on the website that is not managed by FuseCP. Click the button below
+    <DefaultValue>A SSL certificate has been detected on the website that is not managed by SolidCP. Click the button below
         to import the certificate settings</DefaultValue>
   </Resource>
   <Resource>
@@ -38820,7 +38820,7 @@ After creating your virtual directory go to FP administrator and create a subweb
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV2012R2_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
   </Resource>
   <Resource>
@@ -39671,7 +39671,7 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/abo
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperVForPrivateCloud_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
   </Resource>
   <Resource>
@@ -40238,7 +40238,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperVvmm_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
   </Resource>
   <Resource>
@@ -40740,7 +40740,7 @@ The following substitution variables can be used in the pattern:&lt;br/&gt;
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\ProviderControls\App_LocalResources\HyperV_Settings.ascx.resx</File>
-    <Key>locSCPResellerAccount.Text</Key>
+    <Key>locFCPResellerAccount.Text</Key>
     <DefaultValue>FuseCP Reseller Account</DefaultValue>
   </Resource>
   <Resource>

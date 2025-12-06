@@ -324,7 +324,7 @@ namespace FuseCP.WebDavPortal.Controllers
                 };
                 return Json(model);
             }
-            SCP.Services.EnterpriseStorage.CreateEnterpriseSubFolder(ScpContext.User.ItemId, folderPath);
+            FCP.Services.EnterpriseStorage.CreateEnterpriseSubFolder(ScpContext.User.ItemId, folderPath);
             return new RedirectToRouteResult(FileSystemRouteNames.ShowContentPath, null);
         }
 

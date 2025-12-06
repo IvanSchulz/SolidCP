@@ -283,9 +283,9 @@ namespace FuseCP.WIXInstaller
                 TryApplyNewPassword(Ctx, "PI_ESERVER_PASSWORD");
                 TryApplyNewPassword(Ctx, "PI_PORTAL_PASSWORD");
 
-                var SCP = Ctx["SCP_INSTALL_DIR"];
+                var FCP = Ctx["FCP_INSTALL_DIR"];
                 var DirList = new List<string>();
-                DirList.Add(SCP);
+                DirList.Add(FCP);
                 DirList.AddRange(from Drive in DriveInfo.GetDrives()
                                  where Drive.DriveType == DriveType.Fixed
                                  select Path.Combine(Drive.RootDirectory.FullName, Global.DefaultProductName));
@@ -313,7 +313,7 @@ namespace FuseCP.WIXInstaller
                             SetProperty(Ctx, "PI_SERVER_DOMAIN", CtxVars.UserDomain);
 
                             SetProperty(Ctx, "PI_SERVER_INSTALL_DIR", CtxVars.InstallFolder);
-                            SetProperty(Ctx, "SCP_INSTALL_DIR", NormalizeDir(new DirectoryInfo(CtxVars.InstallFolder).Parent.FullName));
+                            SetProperty(Ctx, "FCP_INSTALL_DIR", NormalizeDir(new DirectoryInfo(CtxVars.InstallFolder).Parent.FullName));
 
                             Ctx["SERVER_ACCESS_PASSWORD"] = string.Empty;
                             Ctx["SERVER_ACCESS_PASSWORD_CONFIRM"] = string.Empty;
@@ -340,7 +340,7 @@ namespace FuseCP.WIXInstaller
                             EServerUrl = string.Format("http://{0}:{1}", CtxVars.WebSiteIP, CtxVars.WebSitePort);
 
                             SetProperty(Ctx, "PI_ESERVER_INSTALL_DIR", CtxVars.InstallFolder);
-                            SetProperty(Ctx, "SCP_INSTALL_DIR", NormalizeDir(new DirectoryInfo(CtxVars.InstallFolder).Parent.FullName));
+                            SetProperty(Ctx, "FCP_INSTALL_DIR", NormalizeDir(new DirectoryInfo(CtxVars.InstallFolder).Parent.FullName));
 
                             var ConnStr = new SqlConnectionStringBuilder(CtxVars.DbInstallConnectionString);
                             SetProperty(Ctx, "DB_CONN", ConnStr.ToString());
@@ -399,7 +399,7 @@ namespace FuseCP.WIXInstaller
                                     SetProperty(Ctx, "PI_ESERVER_URL", Global.WebPortal.DefaultEntServURL);
 
                             SetProperty(Ctx, "PI_PORTAL_INSTALL_DIR", CtxVars.InstallFolder);
-                            SetProperty(Ctx, "SCP_INSTALL_DIR", NormalizeDir(new DirectoryInfo(CtxVars.InstallFolder).Parent.FullName));
+                            SetProperty(Ctx, "FCP_INSTALL_DIR", NormalizeDir(new DirectoryInfo(CtxVars.InstallFolder).Parent.FullName));
 
                             var HaveAccount = SecurityUtils.UserExists(CtxVars.UserDomain, CtxVars.UserAccount);
                             bool HavePool = Tool.AppPoolExists(CtxVars.ApplicationPool);
@@ -636,7 +636,7 @@ namespace FuseCP.WIXInstaller
         [CustomAction]
         public static ActionResult RecapListUI(Session session)
         {
-            const string F_SCP = "FuseCP";
+            const string F_FCP = "FuseCP";
             const string F_Server = "ServerFeature";
             const string F_EServer = "EnterpriseServerFeature";
             const string F_Portal = "PortalFeature";
@@ -660,7 +660,7 @@ namespace FuseCP.WIXInstaller
             {
                 switch (Feature.Name)
                 {
-                    case F_SCP:
+                    case F_FCP:
                         break;
                     case F_Server:
                         RecapList.AddRange(Feature.RequestState == InstallState.Local ? S_Install : /*S_Uninstall*/ EmptyList);

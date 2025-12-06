@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,48 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnCancel.Text" xml:space="preserve">
-    <value>?????</value>
+    <value>إلغاء</value>
   </data>
   <data name="btnCancelText.Text" xml:space="preserve">
-    <value>?????</value>
+    <value>إلغاء</value>
   </data>
   <data name="lnkFuseCPPolicy.Text" xml:space="preserve">
-    <value>????? FuseCP</value>
+    <value>سياسة FuseCP</value>
   </data>
   <data name="lnkExchangePolicy.Text" xml:space="preserve">
-    <value>????? ????? ?????????</value>
+    <value>سياسة تنظيم الاستضافة</value>
   </data>
   <data name="lnkFtpPolicy.Text" xml:space="preserve">
-    <value>????? FTP</value>
+    <value>سياسة FTP</value>
   </data>
   <data name="lnkMailPolicy.Text" xml:space="preserve">
-    <value>????? ??????</value>
+    <value>سياسة البريد</value>
   </data>
   <data name="lnkMsSqlPolicy.Text" xml:space="preserve">
-    <value>????? MS SQL</value>
+    <value>سياسة MS SQL</value>
   </data>
   <data name="lnkMySqlPolicy.Text" xml:space="preserve">
-    <value>????? MySQL</value>
+    <value>سياسة MySQL</value>
   </data>
   <data name="ddlDriverItem.MariaDB" xml:space="preserve">
     <value>MariaDB</value>
   </data>
   <data name="lnkOsPolicy.Text" xml:space="preserve">
-    <value>????? ???? ???????</value>
+    <value>سياسة نظام التشغيل</value>
   </data>
   <data name="lnkSharePointPolicy.Text" xml:space="preserve">
-    <value>????? ????????</value>
+    <value>سياسة شيربوينت</value>
   </data>
   <data name="lnkVpsPolicy.Text" xml:space="preserve">
-    <value>????? ??????? ?????????? ??????</value>
+    <value>سياسة الخوادم الافتراضية الخاصة</value>
   </data>
   <data name="lnkRdsPolicy.Text" xml:space="preserve">
-    <value>????? ????? ??? ?????? ??????</value>
+    <value>سياسة خوادم سطح المكتب البعيد</value>
   </data>
   <data name="lnkWebPolicy.Text" xml:space="preserve">
-    <value>????? ?????</value>
+    <value>سياسة الويب</value>
   </data>
   <data name="lnkServiceLevels.Text" xml:space="preserve">
-    <value>??????? ??????</value>
+    <value>مستويات الخدمة</value>
   </data>
 </root>

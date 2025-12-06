@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcAccountVLanNetwork.ascx.cs"
     Inherits="FuseCP.Portal.VPSForPC.VdcAccountVLanNetwork" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
 
         <div class="panel panel-default">
                 <div class="panel-heading">
@@ -14,7 +14,7 @@
                     </div>
                     </div>
             <div class="panel-body form-horizontal">
-                    <scp:Menu id="menu" runat="server" SelectedItem="vdc_account_vlan_network" />
+                    <fcp:Menu id="menu" runat="server" SelectedItem="vdc_account_vlan_network" />
             <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
                     <asp:GridView ID="gvVlans" runat="server" AutoGenerateColumns="false" CssSelectorClass="NormalGridView"

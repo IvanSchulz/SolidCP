@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcHome.ascx.cs" Inherits="FuseCP.Portal.VPS.VdcHome" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/Quota.ascx" TagName="Quota" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
    	
 	    <div class="panel panel-default">
 			    <div class="panel-heading">
@@ -16,10 +16,10 @@
                             <CPCC:StyleButton id="btnImport" CssClass="btn btn-warning" runat="server" OnClick="btnImport_Click" CausesValidation="False"> <i class="fa fa-download">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnImportText"/> </CPCC:StyleButton>
 </div>
 			    <div class="panel-body form-horizontal">
-                    <scp:Menu id="menu" runat="server" SelectedItem="" />
+                    <fcp:Menu id="menu" runat="server" SelectedItem="" />
                <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">  
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4">
 		                        <asp:Label runat="server" Text="Page size:" CssClass="Normal"></asp:Label>
@@ -32,7 +32,7 @@
 		                        </asp:DropDownList>
 	                        </div>
                         <div class="col-md-4">
-                            <scp:SearchBox ID="searchBox" runat="server" />
+                            <fcp:SearchBox ID="searchBox" runat="server" />
                         </div>
                     </div>
 
@@ -101,23 +101,23 @@
 				    </asp:ObjectDataSource>
 				    <br />
     				
-				    <scp:CollapsiblePanel id="secQuotas" runat="server"
+				    <fcp:CollapsiblePanel id="secQuotas" runat="server"
                         TargetControlID="QuotasPanel" meta:resourcekey="secQuotas" Text="Quotas">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="QuotasPanel" runat="server" Height="0" style="overflow:hidden;">
                     
                         <table cellspacing="6">
                             <tr>
                                 <td><asp:Localize ID="locVpsQuota" runat="server" meta:resourcekey="locVpsQuota" Text="Number of VPS:"></asp:Localize></td>
-                                <td><scp:Quota ID="vpsQuota" runat="server" QuotaName="VPS.ServersNumber" /></td>
+                                <td><fcp:Quota ID="vpsQuota" runat="server" QuotaName="VPS.ServersNumber" /></td>
                             </tr>
                             <tr>
                                 <td><asp:Localize ID="locRamQuota" runat="server" meta:resourcekey="locRamQuota" Text="RAM, MB:"></asp:Localize></td>
-                                <td><scp:Quota ID="ramQuota" runat="server" QuotaName="VPS.Ram" /></td>
+                                <td><fcp:Quota ID="ramQuota" runat="server" QuotaName="VPS.Ram" /></td>
                             </tr>
                             <tr>
                                 <td><asp:Localize ID="locHddQuota" runat="server" meta:resourcekey="locHddQuota" Text="HDD, GB:"></asp:Localize></td>
-                                <td><scp:Quota ID="hddQuota" runat="server" QuotaName="VPS.Hdd" /></td>
+                                <td><fcp:Quota ID="hddQuota" runat="server" QuotaName="VPS.Hdd" /></td>
                             </tr>
                         </table>
                     </asp:Panel>

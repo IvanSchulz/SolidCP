@@ -1446,7 +1446,7 @@ namespace FuseCP.EnterpriseServer
 
         private JobResult SendKvpItems(int itemId, string taskName, Dictionary<string, string> taskProps)
         {
-            string TASK_PREFIX = "SCP-";
+            string TASK_PREFIX = "FCP-";
 
             // load item
             VirtualMachine vm = GetVirtualMachineByItemId(itemId);

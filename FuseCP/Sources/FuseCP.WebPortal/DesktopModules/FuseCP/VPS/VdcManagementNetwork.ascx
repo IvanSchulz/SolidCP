@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VdcManagementNetwork.ascx.cs" Inherits="FuseCP.Portal.VPS.VdcManagementNetwork" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PackageIPAddresses.ascx" TagName="PackageIPAddresses" TagPrefix="scp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PackageIPAddresses.ascx" TagName="PackageIPAddresses" TagPrefix="fcp" %>
 
 
 	    <div class="panel panel-default">
@@ -10,10 +10,10 @@
 				    <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Management Network"></asp:Localize>
 			    </div>
             <div class="panel-body form-horizontal">
-                    <scp:Menu id="menu" runat="server" SelectedItem="vdc_management_network" />
+                    <fcp:Menu id="menu" runat="server" SelectedItem="vdc_management_network" />
             <div class="panel panel-default tab-content">
             <div class="panel-body form-horizontal">  
-                    <scp:PackageIPAddresses id="packageAddresses" runat="server"
+                    <fcp:PackageIPAddresses id="packageAddresses" runat="server"
                             Pool="VpsManagementNetwork"
                             EditItemControl="vps_general"
                             SpaceHomeControl="vdc_management_network"

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FuseCP.Providers.HostedSolution;
-using SCP = FuseCP.EnterpriseServer;
+using FCP = FuseCP.EnterpriseServer;
 
 namespace FuseCP.Portal.ExchangeServer
 {
@@ -30,12 +30,12 @@ namespace FuseCP.Portal.ExchangeServer
 
             txtMobile.Text = user.MobilePhone;
 
-            var settings = ES.Services.System.GetSystemSettingsActive(SCP.SystemSettings.TWILIO_SETTINGS, false);
+            var settings = ES.Services.System.GetSystemSettingsActive(FCP.SystemSettings.TWILIO_SETTINGS, false);
 
             bool twilioEnabled = settings != null 
-                && !string.IsNullOrEmpty(settings.GetValueOrDefault(SCP.SystemSettings.TWILIO_ACCOUNTSID_KEY, string.Empty))
-                && !string.IsNullOrEmpty(settings.GetValueOrDefault(SCP.SystemSettings.TWILIO_AUTHTOKEN_KEY, string.Empty))
-                && !string.IsNullOrEmpty(settings.GetValueOrDefault(SCP.SystemSettings.TWILIO_PHONEFROM_KEY, string.Empty));
+                && !string.IsNullOrEmpty(settings.GetValueOrDefault(FCP.SystemSettings.TWILIO_ACCOUNTSID_KEY, string.Empty))
+                && !string.IsNullOrEmpty(settings.GetValueOrDefault(FCP.SystemSettings.TWILIO_AUTHTOKEN_KEY, string.Empty))
+                && !string.IsNullOrEmpty(settings.GetValueOrDefault(FCP.SystemSettings.TWILIO_PHONEFROM_KEY, string.Empty));
 
             rbtnMobile.Visible = twilioEnabled;
         }

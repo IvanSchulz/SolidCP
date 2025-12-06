@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE3C80EA-AF91-41CF-9CFB-33E2EC7CC50D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AjaxControlToolkit.Jasmine</RootNamespace>
+    <AssemblyName>AjaxControlToolkit.Jasmine</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\Images\loader.GIF" />
+    <Content Include="Infrastructure\Scripts\Libs\detect.js" />
+    <Content Include="Infrastructure\Scripts\Libs\jasmine-2.2.0\boot.js" />
+    <Content Include="Infrastructure\Scripts\Libs\jasmine-2.2.0\console.js" />
+    <Content Include="Infrastructure\Scripts\Libs\jasmine-2.2.0\jasmine-html.js" />
+    <Content Include="Infrastructure\Scripts\Libs\jasmine-2.2.0\jasmine.css" />
+    <Content Include="Infrastructure\Scripts\Libs\jasmine-2.2.0\jasmine.js" />
+    <Content Include="Infrastructure\Scripts\Libs\jasmine-2.2.0\jasmine_favicon.png" />
+    <Content Include="Infrastructure\Scripts\Libs\jquery-2.1.4.js" />
+    <Content Include="Infrastructure\Scripts\Libs\jquery.simulate.js" />
+    <Content Include="Infrastructure\Scripts\TestRunner.js" />
+    <Content Include="Infrastructure\Scripts\TestUtils\CustomMatchers.js" />
+    <Content Include="Infrastructure\Scripts\TestUtils\ExtensionMethods.js" />
+    <Content Include="Infrastructure\Scripts\TestUtils\HtmlEditorWrapper.js" />
+    <Content Include="Infrastructure\Scripts\TestUtils\NativeEvents.js" />
+    <Content Include="Infrastructure\Scripts\TestUtils\WaitFor.js" />
+    <Content Include="Infrastructure\Styles\TestRunner.css">
+      <DependentUpon>TestRunner.less</DependentUpon>
+    </Content>
+    <Content Include="Infrastructure\Styles\TestRunner.min.css">
+      <DependentUpon>TestRunner.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\AjaxControlToolkit\Debug\Accordion.debug.js" />
+    <Content Include="Scripts\AjaxControlToolkit\Debug\BaseScripts.debug.js" />
+    <Content Include="Scripts\AjaxControlToolkit\Release\Accordion.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\MicrosoftAjaxWebForms.debug.js" />
+    <Content Include="Suites\AutoComplete\AutoCompleteTests.aspx" />
+    <Content Include="Suites\AutoComplete\TestWebService.asmx" />
+    <Content Include="Suites\AsyncFileUpload\Issue466_Frame.aspx" />
+    <Content Include="Suites\AsyncFileUpload\AsyncFileUploadTests.aspx" />
+    <Content Include="Suites\PieChartTests.aspx" />
+    <Content Include="Suites\RatingTests.aspx" />
+    <Content Include="Suites\AccordionTests.aspx" />
+    <Content Include="Suites\AjaxFileUploadTests.aspx" />
+    <Content Include="Scripts\AjaxControlToolkit\Debug\Localization.Resources.debug.js" />
+    <Content Include="Scripts\AjaxControlToolkit\Release\Localization.Resources.js" />
+    <Content Include="Suites\BalloonPopupTests.aspx" />
+    <Content Include="Suites\BarChartTests.aspx" />
+    <Content Include="Suites\DropDownTests.aspx" />
+    <Content Include="Suites\HtmlEditorExtenderTests\superhero.png" />
+    <Content Include="Suites\ModalPopupTests.aspx" />
+    <Content Include="Suites\PagingBulletedListTests.aspx" />
+    <Content Include="Suites\UpdatePanelAnimationTests.aspx" />
+    <Content Include="Suites\TextBoxWatermarkTests.aspx" />
+    <Content Include="Suites\ReorderListTests\ReorderListTests.aspx" />
+    <Content Include="Suites\ComboBoxTests.aspx" />
+    <Content Include="Suites\CascadingDropDownTests\CascadingDropDownTests.aspx" />
+    <Content Include="Suites\CascadingDropDownTests\TestWebService.asmx" />
+    <Content Include="Suites\CalendarTests.aspx" />
+    <Content Include="Suites\HtmlEditorExtenderTests\HtmlEditorExtenderTests.aspx" />
+    <Content Include="Suites\MaskedEditTests.aspx" />
+    <Content Include="Suites\MaskedEditValidatorTests.aspx" />
+    <Content Include="Suites\ColorPickerTests.aspx" />
+    <Content Include="Suites\NumericUpDownTests.aspx" />
+    <Content Include="Suites\ValidatorCalloutUpdatePanelUnobtrusiveTests.aspx" />
+    <Content Include="Suites\ValidatorCalloutUnobtrusiveTests.aspx" />
+    <Content Include="Suites\ValidatorCalloutTests.aspx" />
+    <Content Include="Suites\PasswordStrengthTests.aspx" />
+    <Content Include="Suites\SlideShowTests\SlideShowTests.aspx" />
+    <Content Include="Suites\SliderTests.aspx" />
+    <Content Include="Suites\TabsTests.aspx" />
+    <Content Include="Scripts\AjaxControlToolkit\Release\BaseScripts.js" />
+    <Content Include="Scripts\AjaxControlToolkit\Release\TestExtender.js" />
+    <Content Include="Scripts\AjaxControlToolkit\Debug\TestExtender.debug.js" />
+    <Content Include="Suites\ToolkitResourceManagerTests\BundlingTests.aspx" />
+    <Content Include="Suites\ToolkitResourceManagerTests\DebugStaticTests.aspx" />
+    <Content Include="Suites\ToolkitResourceManagerTests\NamedBundlingTests.aspx" />
+    <Content Include="Suites\ToolkitResourceManagerTests\ReleaseStaticTests.aspx" />
+    <Content Include="Suites\ToolkitResourceManagerTests\DebugEmbeddedTests.aspx" />
+    <Content Include="Suites\ToolkitResourceManagerTests\ReleaseEmbeddedTests.aspx" />
+    <Content Include="TestRunner.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Suites\ToolkitResourceManagerTests\Scripts\TestExtender.js">
+      <LogicalName>TestExtender.js</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suites\ToolkitResourceManagerTests\Scripts\TestExtender.debug.js">
+      <LogicalName>TestExtender.debug.js</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Suites\AutoComplete\AutoCompleteTests.aspx.cs">
+      <DependentUpon>AutoCompleteTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\AutoComplete\AutoCompleteTests.aspx.designer.cs">
+      <DependentUpon>AutoCompleteTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\AutoComplete\TestWebService.asmx.cs">
+      <DependentUpon>TestWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Suites\PieChartTests.aspx.cs">
+      <DependentUpon>PieChartTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\PieChartTests.aspx.designer.cs">
+      <DependentUpon>PieChartTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\RatingTests.aspx.cs">
+      <DependentUpon>RatingTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\RatingTests.aspx.designer.cs">
+      <DependentUpon>RatingTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\BarChartMasterPage.master.cs">
+      <DependentUpon>BarChartMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\BarChartMasterPage.master.designer.cs">
+      <DependentUpon>BarChartMasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\AccordionTests.aspx.cs">
+      <DependentUpon>AccordionTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\AccordionTests.aspx.designer.cs">
+      <DependentUpon>AccordionTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\AjaxFileUploadTests.aspx.cs">
+      <DependentUpon>AjaxFileUploadTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\AjaxFileUploadTests.aspx.designer.cs">
+      <DependentUpon>AjaxFileUploadTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\BalloonPopupTests.aspx.cs">
+      <DependentUpon>BalloonPopupTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\BalloonPopupTests.aspx.designer.cs">
+      <DependentUpon>BalloonPopupTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\BarChartTests.aspx.cs">
+      <DependentUpon>BarChartTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\BarChartTests.aspx.designer.cs">
+      <DependentUpon>BarChartTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\DropDownTests.aspx.cs">
+      <DependentUpon>DropDownTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\DropDownTests.aspx.designer.cs">
+      <DependentUpon>DropDownTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ModalPopupTests.aspx.cs">
+      <DependentUpon>ModalPopupTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ModalPopupTests.aspx.designer.cs">
+      <DependentUpon>ModalPopupTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\PagingBulletedListTests.aspx.cs">
+      <DependentUpon>PagingBulletedListTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\PagingBulletedListTests.aspx.designer.cs">
+      <DependentUpon>PagingBulletedListTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\UpdatePanelAnimationTests.aspx.cs">
+      <DependentUpon>UpdatePanelAnimationTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\UpdatePanelAnimationTests.aspx.designer.cs">
+      <DependentUpon>UpdatePanelAnimationTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\TextBoxWatermarkTests.aspx.cs">
+      <DependentUpon>TextBoxWatermarkTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\TextBoxWatermarkTests.aspx.designer.cs">
+      <DependentUpon>TextBoxWatermarkTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ReorderListTests\ReorderListTests.aspx.cs">
+      <DependentUpon>ReorderListTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ReorderListTests\ReorderListTests.aspx.designer.cs">
+      <DependentUpon>ReorderListTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ComboBoxTests.aspx.cs">
+      <DependentUpon>ComboBoxTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ComboBoxTests.aspx.designer.cs">
+      <DependentUpon>ComboBoxTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\CascadingDropDownTests\CascadingDropDownTests.aspx.cs">
+      <DependentUpon>CascadingDropDownTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\CascadingDropDownTests\CascadingDropDownTests.aspx.designer.cs">
+      <DependentUpon>CascadingDropDownTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\CascadingDropDownTests\TestWebService.asmx.cs">
+      <DependentUpon>TestWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Suites\CalendarTests.aspx.cs">
+      <DependentUpon>CalendarTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\CalendarTests.aspx.designer.cs">
+      <DependentUpon>CalendarTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\HtmlEditorExtenderTests\HtmlEditorExtenderTests.aspx.cs">
+      <DependentUpon>HtmlEditorExtenderTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\HtmlEditorExtenderTests\HtmlEditorExtenderTests.aspx.designer.cs">
+      <DependentUpon>HtmlEditorExtenderTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\MaskedEditTests.aspx.cs">
+      <DependentUpon>MaskedEditTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\MaskedEditTests.aspx.designer.cs">
+      <DependentUpon>MaskedEditTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\MaskedEditValidatorTests.aspx.cs">
+      <DependentUpon>MaskedEditValidatorTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\MaskedEditValidatorTests.aspx.designer.cs">
+      <DependentUpon>MaskedEditValidatorTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ColorPickerTests.aspx.cs">
+      <DependentUpon>ColorPickerTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ColorPickerTests.aspx.designer.cs">
+      <DependentUpon>ColorPickerTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\NumericUpDownTests.aspx.cs">
+      <DependentUpon>NumericUpDownTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\NumericUpDownTests.aspx.designer.cs">
+      <DependentUpon>NumericUpDownTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ReorderListTests\ReorderListItems.cs" />
+    <Compile Include="Suites\ValidatorCalloutUpdatePanelUnobtrusiveTests.aspx.cs">
+      <DependentUpon>ValidatorCalloutUpdatePanelUnobtrusiveTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ValidatorCalloutUpdatePanelUnobtrusiveTests.aspx.designer.cs">
+      <DependentUpon>ValidatorCalloutUpdatePanelUnobtrusiveTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ValidatorCalloutUnobtrusiveTests.aspx.cs">
+      <DependentUpon>ValidatorCalloutUnobtrusiveTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ValidatorCalloutUnobtrusiveTests.aspx.designer.cs">
+      <DependentUpon>ValidatorCalloutUnobtrusiveTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ValidatorCalloutTests.aspx.cs">
+      <DependentUpon>ValidatorCalloutTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ValidatorCalloutTests.aspx.designer.cs">
+      <DependentUpon>ValidatorCalloutTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\PasswordStrengthTests.aspx.cs">
+      <DependentUpon>PasswordStrengthTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\PasswordStrengthTests.aspx.designer.cs">
+      <DependentUpon>PasswordStrengthTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\SlideShowTests\SlideShowTests.aspx.cs">
+      <DependentUpon>SlideShowTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\SlideShowTests\SlideShowTests.aspx.designer.cs">
+      <DependentUpon>SlideShowTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\SliderTests.aspx.cs">
+      <DependentUpon>SliderTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\SliderTests.aspx.designer.cs">
+      <DependentUpon>SliderTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\Suite.Master.cs">
+      <DependentUpon>Suite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\Suite.Master.designer.cs">
+      <DependentUpon>Suite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\TabsTests.aspx.cs">
+      <DependentUpon>TabsTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\TabsTests.aspx.designer.cs">
+      <DependentUpon>TabsTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\BundlingTests.aspx.cs">
+      <DependentUpon>BundlingTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\BundlingTests.aspx.designer.cs">
+      <DependentUpon>BundlingTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\DebugStaticTests.aspx.cs">
+      <DependentUpon>DebugStaticTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\DebugStaticTests.aspx.designer.cs">
+      <DependentUpon>DebugStaticTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\NamedBundlingTests.aspx.cs">
+      <DependentUpon>NamedBundlingTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\NamedBundlingTests.aspx.designer.cs">
+      <DependentUpon>NamedBundlingTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\ReleaseStaticTests.aspx.cs">
+      <DependentUpon>ReleaseStaticTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\ReleaseStaticTests.aspx.designer.cs">
+      <DependentUpon>ReleaseStaticTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\TestExtender.cs" />
+    <Compile Include="Suites\ToolkitResourceManagerTests\DebugEmbeddedTests.aspx.cs">
+      <DependentUpon>DebugEmbeddedTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\DebugEmbeddedTests.aspx.designer.cs">
+      <DependentUpon>DebugEmbeddedTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\ReleaseEmbeddedTests.aspx.cs">
+      <DependentUpon>ReleaseEmbeddedTests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suites\ToolkitResourceManagerTests\ReleaseEmbeddedTests.aspx.designer.cs">
+      <DependentUpon>ReleaseEmbeddedTests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestRunner.aspx.cs">
+      <DependentUpon>TestRunner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestRunner.aspx.designer.cs">
+      <DependentUpon>TestRunner.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Suites\Suite.Master" />
+    <Content Include="packages.config" />
+    <Content Include="AjaxControlToolkit.config" />
+    <Content Include="Infrastructure\Styles\TestRunner.less" />
+    <Content Include="Infrastructure\Styles\TestRunner.css.map">
+      <DependentUpon>TestRunner.css</DependentUpon>
+    </Content>
+    <Content Include="Suites\BarChartMasterPage.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AjaxControlToolkit.HtmlEditor.Sanitizer\AjaxControlToolkit.HtmlEditor.Sanitizer.csproj">
+      <Project>{4f19469b-3352-4d93-89e2-4b79fd7086a6}</Project>
+      <Name>AjaxControlToolkit.HtmlEditor.Sanitizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AjaxControlToolkit.StaticResources\AjaxControlToolkit.StaticResources.csproj">
+      <Project>{820694df-c225-46b6-ba38-c5fefbd79aeb}</Project>
+      <Name>AjaxControlToolkit.StaticResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AjaxControlToolkit\AjaxControlToolkit.csproj">
+      <Project>{676b3449-93f7-4102-8df0-fb51911675d6}</Project>
+      <Name>AjaxControlToolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Suites\SlideShowTests\Images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24482</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45017/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

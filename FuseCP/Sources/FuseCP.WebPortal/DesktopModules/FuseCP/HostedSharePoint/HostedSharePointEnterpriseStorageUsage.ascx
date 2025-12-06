@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HostedSharePointEnterpriseStorageUsage.ascx.cs" Inherits="FuseCP.Portal.HostedSharePointEnterpriseStorageUsage" %>
 <%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport"
-    TagPrefix="scp" %>
+    TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel"
-    TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
 <%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox"
-    TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
+    TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
 
 <div id="ExchangeContainer">
 	<div class="Module">
@@ -19,11 +19,11 @@
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Storage Usage"></asp:Localize>
 				</div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 				    
-					<scp:CollapsiblePanel id="secSiteCollectionsReport" runat="server"
+					<fcp:CollapsiblePanel id="secSiteCollectionsReport" runat="server"
                         TargetControlID="siteCollectionsReport" meta:resourcekey="secSiteCollectionsReport" Text="Site Collections">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="siteCollectionsReport" runat="server" Height="0" style="overflow:hidden;">
 				        <asp:GridView ID="gvStorageUsage" runat="server" AutoGenerateColumns="False" meta:resourcekey="gvStorageUsage"
 					        Width="100%" EmptyDataText="gvSiteCollections" CssSelectorClass="NormalGridView">

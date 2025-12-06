@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AcceptedSenders.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.UserControls.AcceptedSenders" %>
-<%@ Register Src="AccountsList.ascx" TagName="AccountsList" TagPrefix="scp" %>
+<%@ Register Src="AccountsList.ascx" TagName="AccountsList" TagPrefix="fcp" %>
 <asp:UpdatePanel ID="MainUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
     <ContentTemplate>
     
@@ -14,11 +14,11 @@
 		</tr>
 		<tr>
 			<td>
-				<scp:AccountsList id="acceptAccounts" runat="server"
+				<fcp:AccountsList id="acceptAccounts" runat="server"
 					MailboxesEnabled="true"
 					ContactsEnabled="true"
 					DistributionListsEnabled="false">
-				</scp:AccountsList>
+				</fcp:AccountsList>
 			</td>
 		</tr>
 	</table>

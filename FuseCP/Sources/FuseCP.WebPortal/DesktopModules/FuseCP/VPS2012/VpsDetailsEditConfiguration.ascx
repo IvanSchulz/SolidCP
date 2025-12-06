@@ -1,20 +1,20 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsEditConfiguration.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VpsDetailsEditConfiguration" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="DynamicMemoryControl" Src="UserControls/DynamicMemoryControl.ascx" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="DynamicMemoryControl" Src="UserControls/DynamicMemoryControl.ascx" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 	    <div class="Content">
 		    <div class="Center">
 			    <div class="panel-body form-horizontal">
-			        <scp:ServerTabs id="tabs" runat="server" SelectedTab="vps_config" />	
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+			        <fcp:ServerTabs id="tabs" runat="server" SelectedTab="vps_config" />	
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
 		            <p class="SubTitle">
 		                <asp:Localize ID="locSubTitle" runat="server" meta:resourcekey="locSubTitle" Text="Edit Configuration" />
@@ -23,9 +23,9 @@
                     <asp:ValidationSummary ID="validatorsSummary" runat="server" 
                         ValidationGroup="Vps" ShowMessageBox="True" ShowSummary="False" />
                     
-                    <scp:CollapsiblePanel id="secResources" runat="server"
+                    <fcp:CollapsiblePanel id="secResources" runat="server"
                         TargetControlID="ResourcesPanel" meta:resourcekey="secResources" Text="Resources">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ResourcesPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <div class="form-group">
 
@@ -91,9 +91,9 @@
                         </div>                           
                     </asp:Panel>
 
-                    <scp:CollapsiblePanel id="secHddQOS" runat="server" IsCollapsed="true"
+                    <fcp:CollapsiblePanel id="secHddQOS" runat="server" IsCollapsed="true"
                         TargetControlID="QOSManag" meta:resourcekey="secHddQOS" Text="Virtual Hard Disk Drive Quality of Service management">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="QOSManag" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <p>
 		                <asp:Localize ID="locHddIOPSTitle" runat="server" meta:resourcekey="locHddIOPSTitle" 
@@ -124,11 +124,11 @@
                     </asp:Panel>
 
                     
-                    <scp:DynamicMemoryControl runat="server" ID="DynamicMemorySetting" Mode="Edit"/>
+                    <fcp:DynamicMemoryControl runat="server" ID="DynamicMemorySetting" Mode="Edit"/>
                     
-                    <scp:CollapsiblePanel id="secSnapshots" runat="server"
+                    <fcp:CollapsiblePanel id="secSnapshots" runat="server"
                         TargetControlID="SnapshotsPanel" meta:resourcekey="secSnapshots" Text="Snapshots">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="SnapshotsPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <div class="form-group">
 
@@ -143,9 +143,9 @@
                         </div>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secDvd" runat="server"
+                    <fcp:CollapsiblePanel id="secDvd" runat="server"
                         TargetControlID="DvdPanel" meta:resourcekey="secDvd" Text="DVD">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="DvdPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <div class="form-group">
                             <div class="col-sm-12 form-inline">
@@ -155,9 +155,9 @@
                         </div>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secBios" runat="server"
+                    <fcp:CollapsiblePanel id="secBios" runat="server"
                         TargetControlID="BiosPanel" meta:resourcekey="secBios" Text="BIOS">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="BiosPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;width:700px;">
                         <div class="form-group">
                             <div class="col-sm-4">
@@ -172,9 +172,9 @@
                         </div>                        
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secActions" runat="server"
+                    <fcp:CollapsiblePanel id="secActions" runat="server"
                         TargetControlID="ActionsPanel" meta:resourcekey="secActions" Text="Allowed actions">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="ActionsPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;width:700px;">
                         <div class="form-group">
                             <div class="col-sm-4">
@@ -195,9 +195,9 @@
                         </div>
                     </asp:Panel>
                     
-                    <scp:CollapsiblePanel id="secNetwork" runat="server"
+                    <fcp:CollapsiblePanel id="secNetwork" runat="server"
                         TargetControlID="NetworkPanel" meta:resourcekey="secNetwork" Text="Network">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                     <asp:Panel ID="NetworkPanel" runat="server" Height="0" style="overflow:hidden;padding:5px;">
                         <div class="form-group">
                             <div runat="server" ID="EmptyExternalAddressesMessage" style="padding: 5px; padding-left: 15px;" visible="false">

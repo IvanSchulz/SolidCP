@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CreateCRMUser.ascx.cs" Inherits="FuseCP.Portal.CRM.CreateCRMUser" %>
-<%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="fcp" %>
 
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<%@ Register src="../ExchangeServer/UserControls/UserSelector.ascx" tagname="UserSelector" TagPrefix="scp" %>
+<%@ Register src="../ExchangeServer/UserControls/UserSelector.ascx" tagname="UserSelector" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 
@@ -21,12 +21,12 @@
 				
 				<div class="panel-body form-horizontal" width="100%">
 				    
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 										  					   					    							
 					<table id="ExistingUserTable"   runat="server"> 					    
 					    <tr>
 					        <td class="FormLabel150"><asp:Localize ID="Localize1" runat="server" meta:resourcekey="locDisplayName" Text="Display Name: *"></asp:Localize></td>
-					        <td><scp:UserSelector id="userSelector" runat="server" IncludeMailboxes="true"></scp:UserSelector></td>
+					        <td><fcp:UserSelector id="userSelector" runat="server" IncludeMailboxes="true"></fcp:UserSelector></td>
 					    </tr>
 
                         <tr>

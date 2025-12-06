@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceNestedSpacesSummary.ascx.cs" Inherits="FuseCP.Portal.SpaceNestedSpacesSummary" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
 <div class="panel-body form-horizontal">
@@ -20,16 +20,16 @@
                        </div></div></div>
         </asp:Panel>
     </div>
-	<scp:CollapsiblePanel id="allSpaces" runat="server"
+	<fcp:CollapsiblePanel id="allSpaces" runat="server"
 		TargetControlID="AllSpacesPanel" resourcekey="AllSpacesPanel" Text="All Spaces">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="AllSpacesPanel" runat="server" CssClass="FormRow">
 	    <asp:HyperLink ID="lnkAllSpaces" runat="server" meta:resourcekey="lnkAllSpaces" Text="All spaces"></asp:HyperLink>
 	</asp:Panel>
 	
-	<scp:CollapsiblePanel id="spacesbyStatus" runat="server"
+	<fcp:CollapsiblePanel id="spacesbyStatus" runat="server"
 		TargetControlID="SpacesByStatusPanel" resourcekey="SpacesByStatusPanel" Text="By Status">
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="SpacesByStatusPanel" runat="server" CssClass="FormRow">
         <asp:Repeater ID="repSpaceStatuses" runat="server" EnableViewState="false">
             <ItemTemplate>

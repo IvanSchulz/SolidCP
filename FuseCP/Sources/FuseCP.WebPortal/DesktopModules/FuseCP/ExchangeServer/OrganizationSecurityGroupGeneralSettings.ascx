@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationSecurityGroupGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.OrganizationSecurityGroupGeneralSettings" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/UsersList.ascx" TagName="UsersList" TagPrefix="scp"%>
-<%@ Register Src="UserControls/SecurityGroupTabs.ascx" TagName="SecurityGroupTabs" TagPrefix="scp"%>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/UsersList.ascx" TagName="UsersList" TagPrefix="fcp"%>
+<%@ Register Src="UserControls/SecurityGroupTabs.ascx" TagName="SecurityGroupTabs" TagPrefix="fcp"%>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
     <div class="panel-heading">
         <h3 class="panel-title">
             <asp:Image ID="Image1" SkinID="OrganizationUser48" runat="server" />
@@ -15,10 +15,10 @@
     </div>
     <div class="panel-body form-horizontal">
         <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-            <scp:SecurityGroupTabs id="tabs" runat="server" SelectedTab="secur_group_settings" />
+            <fcp:SecurityGroupTabs id="tabs" runat="server" SelectedTab="secur_group_settings" />
         </div>
         <div class="panel panel-default tab-content">
-        <scp:SimpleMessageBox id="messageBox" runat="server" />
+        <fcp:SimpleMessageBox id="messageBox" runat="server" />
             <div class="form-group">
                 <asp:Label runat="server" CssClass="control-label col-sm-3" AssociatedControlID="txtDisplayName">
                     <asp:Localize ID="locDisplayName" runat="server" meta:resourcekey="locDisplayName" Text="Display Name:"></asp:Localize>
@@ -41,7 +41,7 @@
                     <asp:Localize ID="locMembers" runat="server" meta:resourcekey="locMembers" Text="Members:"></asp:Localize>
                 </asp:Label>
                 <div class="col-sm-9">
-                    <scp:UsersList id="members" runat="server" />
+                    <fcp:UsersList id="members" runat="server" />
                 </div>
             </div>
             <div class="form-group">

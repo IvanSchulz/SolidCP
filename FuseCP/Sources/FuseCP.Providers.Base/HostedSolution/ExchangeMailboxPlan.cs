@@ -275,12 +275,12 @@ namespace FuseCP.Providers.HostedSolution
         }
 
         [LogProperty("Mailbox Plan Unique Name")]
-        public string SCPUniqueName
+        public string FCPUniqueName
         {
             get
             {
                 Regex r = new Regex(@"[^A-Za-z0-9]");
-                return "SCPPolicy" + MailboxPlanId.ToString() + "_" + r.Replace(MailboxPlan, "");
+                return "FCPPolicy" + MailboxPlanId.ToString() + "_" + r.Replace(MailboxPlan, "");
             }
         }
     }

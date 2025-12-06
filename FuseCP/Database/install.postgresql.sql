@@ -5691,9 +5691,9 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('SecuredFoldersFilterPath', 2, '%SYSTEMROOT%\System32\InetSrv\IISPasswordFilter.dll');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('WebGroupName', 2, 'SCPWebUsers');
+    VALUES ('WebGroupName', 2, 'FCPWebUsers');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('FtpGroupName', 3, 'SCPFtpUsers');
+    VALUES ('FtpGroupName', 3, 'FCPFtpUsers');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('SiteId', 3, 'MSFTPSVC/1');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -5876,7 +5876,7 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('MailboxDatabase', 27, 'Hosted Exchange Database');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('RootOU', 27, 'SCP Hosting');
+    VALUES ('RootOU', 27, 'FCP Hosting');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('StorageGroup', 27, 'Hosted Exchange Storage Group');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -5952,7 +5952,7 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('MailboxDatabase', 32, 'Hosted Exchange Database');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('RootOU', 32, 'SCP Hosting');
+    VALUES ('RootOU', 32, 'FCP Hosting');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('TempDomain', 32, 'my-temp-domain.com');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6110,13 +6110,13 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('SecureFoldersModuleAssembly', 101, 'FuseCP.IIsModules.SecureFolders, FuseCP.IIsModules, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=37f9c58a0aa32ff0');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('WebGroupName', 101, 'SCP_IUSRS');
+    VALUES ('WebGroupName', 101, 'FCP_IUSRS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WmSvc.CredentialsMode', 101, 'WINDOWS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WmSvc.Port', 101, '8172');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('FtpGroupName', 102, 'SCPFtpUsers');
+    VALUES ('FtpGroupName', 102, 'FCPFtpUsers');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('SiteId', 102, 'Default FTP Site');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6162,13 +6162,13 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('sslusesni', 105, 'True');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('WebGroupName', 105, 'SCP_IUSRS');
+    VALUES ('WebGroupName', 105, 'FCP_IUSRS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WmSvc.CredentialsMode', 105, 'WINDOWS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WmSvc.Port', 105, '8172');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('FtpGroupName', 106, 'SCPFtpUsers');
+    VALUES ('FtpGroupName', 106, 'FCPFtpUsers');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('SiteId', 106, 'Default FTP Site');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
@@ -6216,13 +6216,13 @@ BEGIN
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('sslusesni', 112, 'True');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('WebGroupName', 112, 'SCP_IUSRS');
+    VALUES ('WebGroupName', 112, 'FCP_IUSRS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WmSvc.CredentialsMode', 112, 'WINDOWS');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('WmSvc.Port', 112, '8172');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
-    VALUES ('FtpGroupName', 113, 'SCPFtpUsers');
+    VALUES ('FtpGroupName', 113, 'FCPFtpUsers');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")
     VALUES ('SiteId', 113, 'Default FTP Site');
     INSERT INTO public."ServiceDefaultProperties" ("PropertyName", "ProviderID", "PropertyValue")

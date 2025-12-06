@@ -6,11 +6,11 @@
 {else}
     <script type="text/javascript">
     function runConfigurableSaveCommand() {
-			var scp_id_input = document.getElementById("conf_scp_id");
-			var scp_id = parseInt(scp_id_input.value);
-			if (isNaN(scp_id) || scp_id <= 0 || scp_id > 2147483647){
+			var fcp_id_input = document.getElementById("conf_fcp_id");
+			var fcp_id = parseInt(fcp_id_input.value);
+			if (isNaN(fcp_id) || fcp_id <= 0 || fcp_id > 2147483647){
 				alert("Invalid FuseCP-ID.");
-				scp_id_input.focus();
+				fcp_id_input.focus();
 				return false;
 			}
             // Hide the modal that was activated.
@@ -58,12 +58,12 @@
             }
         }
 		
-		function openConfigurableEditDialog(whmcs_id, scp_id, is_ipaddress){
+		function openConfigurableEditDialog(whmcs_id, fcp_id, is_ipaddress){
 			document.getElementById("conf_whmcs_id").value = whmcs_id;
-			if (scp_id){
-				document.getElementById("conf_scp_id").value = scp_id;
+			if (fcp_id){
+				document.getElementById("conf_fcp_id").value = fcp_id;
 			}else{
-				document.getElementById("conf_scp_id").value = "";
+				document.getElementById("conf_fcp_id").value = "";
 			}
 			if (is_ipaddress == 1){
 				document.getElementById("conf_is_ipaddress").checked = true;
@@ -107,7 +107,7 @@
                         <input type="hidden" name="action" value="edit_configurable"/>
                         <input type="hidden" name="module" value="fusecp_module"/>
 						<input type="hidden" id="conf_whmcs_id" name="whmcs_id" value="" />
-                        <div class="form-group"><label>{$LANG.FuseCP_fusecp_id}:</label><input type="text" id="conf_scp_id" name="scp_id" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_fusecp_id_tooltip}" /></div>
+                        <div class="form-group"><label>{$LANG.FuseCP_fusecp_id}:</label><input type="text" id="conf_fcp_id" name="fcp_id" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_fusecp_id_tooltip}" /></div>
                         <div class="form-group"><label><input type="checkbox" id="conf_is_ipaddress" name="is_ipaddress" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{$LANG.FuseCP_is_ip_address_tooltip}" /> {$LANG.FuseCP_is_ip_address}</label></div>
                 </div>
                 <div class="modal-footer panel-footer">
@@ -152,11 +152,11 @@
                 <tr>
 					<td>{$option->name}</td>
 					<td>{$option->whmcs_id}</td>
-					<td>{$option->scp_id}</td>
+					<td>{$option->fcp_id}</td>
 					<td>{$option->hidden}</td>
-					<td><a href="#" onclick="openConfigurableEditDialog('{$option->whmcs_id}', '{$option->scp_id}', '{$option->is_ipaddress}'); return false;" title="{$LANG.FuseCP_edit}"><i class="fas fa-pencil-alt"></i></a></td>
+					<td><a href="#" onclick="openConfigurableEditDialog('{$option->whmcs_id}', '{$option->fcp_id}', '{$option->is_ipaddress}'); return false;" title="{$LANG.FuseCP_edit}"><i class="fas fa-pencil-alt"></i></a></td>
 					<td>
-						{if $option->scp_id}
+						{if $option->fcp_id}
 						<a href="{$params['modulelink']}&action=configurable_delete&id={$option->whmcs_id}" onclick="runConfigurableDeleteCommand('{$option->whmcs_id}'); return false;" title="{$LANG.FuseCP_delete}"><i class="fa fa-times textred"></i></a>
 						{/if}
 					</td>

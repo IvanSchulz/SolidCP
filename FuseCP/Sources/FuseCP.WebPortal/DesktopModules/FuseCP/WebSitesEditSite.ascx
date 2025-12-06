@@ -6,23 +6,23 @@
 <%@ Register Src="WebSitesMimeTypesControl.ascx" TagName="WebSitesMimeTypesControl" TagPrefix="uc5" %>
 <%@ Register Src="WebSitesHomeFolderControl.ascx" TagName="WebSitesHomeFolderControl" TagPrefix="uc1" %>
 <%@ Register Src="WebSitesCustomHeadersControl.ascx" TagName="WebSitesCustomHeadersControl" TagPrefix="uc6" %>
-<%@ Register Src="WebSitesSecuredFoldersControl.ascx" TagName="WebSitesSecuredFoldersControl" TagPrefix="scp" %>
-<%@ Register Src="WebSitesHeliconApeControl.ascx" TagName="WebSitesHeliconApeControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" Namespace="FuseCP.Portal" %>
+<%@ Register Src="WebSitesSecuredFoldersControl.ascx" TagName="WebSitesSecuredFoldersControl" TagPrefix="fcp" %>
+<%@ Register Src="WebSitesHeliconApeControl.ascx" TagName="WebSitesHeliconApeControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" Namespace="FuseCP.Portal" %>
 <%@ Register Src="WebsitesSSL.ascx" TagName="WebsitesSSL" TagPrefix="uc2" %>
-<%@ Register Src="UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 
 <style type="text/css">
     .style1 {
         width: 51px;
     }
 </style>
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 <script type="text/javascript">
 
     function confirmationSITE() {
@@ -45,7 +45,7 @@
     <div class="widget">
         <div class="widget-header clearfix">
             <h3><i class="fa fa-list"></i>
-                <scp:PopupHeader runat="server" meta:resourcekey="WDeployBuildPublishingProfileWizard" />
+                <fcp:PopupHeader runat="server" meta:resourcekey="WDeployBuildPublishingProfileWizard" />
             </h3>
         </div>
         <div class="widget-content Popup">
@@ -117,7 +117,7 @@
     TargetControlID="WDeployRebuildPubProfileLinkButton" PopupControlID="WDeployBuildPublishingProfileWizardPanel"
     BackgroundCssClass="modalBackground" DropShadow="false" CancelControlID="PubProfileWizardCancelButton" />
 <div class="panel-body form-horizontal">
-    <scp:SimpleMessageBox ID="messageBox" runat="server" EnableViewState="false" />
+    <fcp:SimpleMessageBox ID="messageBox" runat="server" EnableViewState="false" />
     <div class="row">
         <div class="col-md-8">
             <div class="panel panel-default">
@@ -364,10 +364,10 @@
                     </div>
                 </asp:View>
                 <asp:View ID="tabSecuredFolders" runat="server">
-                    <scp:WebSitesSecuredFoldersControl ID="webSitesSecuredFoldersControl" runat="server" />
+                    <fcp:WebSitesSecuredFoldersControl ID="webSitesSecuredFoldersControl" runat="server" />
                 </asp:View>
                 <asp:View ID="tabHeliconApe" runat="server">
-                    <scp:WebSitesHeliconApeControl ID="webSitesHeliconApeControl" runat="server" />
+                    <fcp:WebSitesHeliconApeControl ID="webSitesHeliconApeControl" runat="server" />
                 </asp:View>
                 <asp:View ID="tabFrontPage" runat="server">
                     <asp:Panel ID="pnlFrontPage" runat="server" Style="padding: 20;">
@@ -393,7 +393,7 @@
                                     <asp:Label ID="lblFPAccount" runat="server" meta:resourcekey="lblFPAccount" Text="FrontPage User Account:"></asp:Label>
                                 </td>
                                 <td class="Normal" style="margin-bottom:10px;">
-                                    <scp:UsernameControl ID="frontPageUsername" runat="server" ValidationGroup="FrontPage" />
+                                    <fcp:UsernameControl ID="frontPageUsername" runat="server" ValidationGroup="FrontPage" />
                                 </td>
                             </tr>
                             <tr>
@@ -401,7 +401,7 @@
                                     <asp:Label ID="lblFPPassword" runat="server" meta:resourcekey="lblFPPassword" Text="Password:"></asp:Label>
                                 </td>
                                 <td>
-                                    <scp:PasswordControl ID="frontPagePassword" runat="server" ValidationGroup="FrontPage" />
+                                    <fcp:PasswordControl ID="frontPagePassword" runat="server" ValidationGroup="FrontPage" />
                                 </td>
                             </tr>
                             <tr>
@@ -694,7 +694,7 @@
 
         </div>
         <div class="col-md-6 text-right">
-            <scp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="EditMailbox"
+            <fcp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="EditMailbox"
                 OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
         </div>
     </div>

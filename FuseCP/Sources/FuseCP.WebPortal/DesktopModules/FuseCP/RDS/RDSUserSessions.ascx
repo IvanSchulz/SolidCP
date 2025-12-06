@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSUserSessions.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSUserSessions" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 <div class="panel-heading">
     <asp:Image ID="imgEditRDSCollection" SkinID="EnterpriseRDSCollections48" runat="server" />
     <asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Edit RDS Collection"></asp:Localize>
@@ -14,10 +14,10 @@
     <asp:Literal ID="litCollectionName" runat="server" Text="" />
 </div>
 <div class="panel-body form-horizontal">
-    <scp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_collection_user_sessions" />
+    <fcp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_collection_user_sessions" />
     <div class="panel panel-default tab-content">
         <div class="panel-body form-horizontal">
-            <scp:SimpleMessageBox id="messageBox" runat="server" />  
+            <fcp:SimpleMessageBox id="messageBox" runat="server" />  
             <asp:UpdatePanel ID="RDAppsUpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="true">
                 <ContentTemplate>
                     <div class="FormButtonsBarCleanRight">
@@ -38,7 +38,7 @@
                             </CPCC:StyleButton>
                         </div>
                     </div>
-                    <scp:CollapsiblePanel id="secRdsUserSessions" runat="server" TargetControlID="panelRdsUserSessions" meta:resourcekey="secRdsUserSessions" Text=""></scp:CollapsiblePanel>
+                    <fcp:CollapsiblePanel id="secRdsUserSessions" runat="server" TargetControlID="panelRdsUserSessions" meta:resourcekey="secRdsUserSessions" Text=""></fcp:CollapsiblePanel>
                     <asp:Panel runat="server" ID="panelRdsUserSessions">
                         <div style="padding: 10px;">
                             <asp:GridView ID="gvRDSUserSessions" runat="server" AutoGenerateColumns="False" EnableViewState="true" Width="100%" EmptyDataText="No Sessions available" CssSelectorClass="NormalGridView" OnRowCommand="gvRDSCollections_RowCommand" AllowPaging="True" AllowSorting="True" meta:resourcekey="gvRDSUserSessions">
@@ -92,7 +92,7 @@
                         </div>
                     </asp:Panel>
                     <div class="text-right">
-                        <scp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="SaveRDSCollection" OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
+                        <fcp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="SaveRDSCollection" OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
                     </div>
                     <asp:Panel ID="MessagesHistoryPanel" runat="server" style="display:none">
                         <div class="widget">

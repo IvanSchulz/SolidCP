@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeCreatePublicFolder.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeCreatePublicFolder" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -13,7 +13,7 @@
 				</h3>
                         </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 					<table>
 						<tr>
 							<td class="FormLabel150"><asp:Localize ID="locParentFolder" runat="server" meta:resourcekey="locParentFolder" Text="Parent Folder:"></asp:Localize></td>
@@ -42,8 +42,8 @@
 						<tr id="EmailRow" runat="server">
 							<td class="FormLabel150"><asp:Localize ID="locEmail" runat="server" meta:resourcekey="locEmail" Text="E-mail Address: *"></asp:Localize></td>
 							<td>
-                                <scp:EmailAddress id="email" runat="server" ValidationGroup="CreateFolder">
-                                </scp:EmailAddress>
+                                <fcp:EmailAddress id="email" runat="server" ValidationGroup="CreateFolder">
+                                </fcp:EmailAddress>
                             </td>
 						</tr>
 					</table>

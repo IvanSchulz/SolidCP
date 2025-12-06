@@ -1,9 +1,9 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserCreateSpace.ascx.cs" Inherits="FuseCP.Portal.UserCreateSpace" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc4" %>
-<%@ Register Src="UserControls/DomainControl.ascx" TagName="DomainControl" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/DomainControl.ascx" TagName="DomainControl" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <asp:ValidationSummary ID="summary" runat="server" ShowMessageBox="true" ShowSummary="true" ValidationGroup="CreateSpace" />
 
@@ -123,7 +123,7 @@
         <table width="100%" cellpadding="4" style="margin-bottom:20px;" cellspacing="0">
             <tr>
                 <td class="Normal" width="100%">
-                    <scp:DomainControl ID="txtDomainName" runat="server" RequiredEnabled="True" ValidationGroup="CreateSpace" OnTextChanged="txtDomainName_OnTextChanged"></scp:DomainControl>
+                    <fcp:DomainControl ID="txtDomainName" runat="server" RequiredEnabled="True" ValidationGroup="CreateSpace" OnTextChanged="txtDomainName_OnTextChanged"></fcp:DomainControl>
                 </td>
             </tr>
         </table>

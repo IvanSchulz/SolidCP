@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SchedulesEditSchedule.ascx.cs" Inherits="FuseCP.Portal.SchedulesEditSchedule" %>
 <%@ Register Src="UserControls/ScheduleTime.ascx" TagName="ScheduleTime" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/ScheduleInterval.ascx" TagName="ScheduleInterval" TagPrefix="uc2" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/UserLookup.ascx" TagName="UserLookup" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/ParameterEditor.ascx" TagName="ParameterEditor" TagPrefix="uc1" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <div class="panel-body">
 	<table cellspacing="0" cellpadding="4" width="100%">
         <tr>
@@ -161,9 +161,9 @@
 		</tr>
     </table>
 	<%--
-    <scp:CollapsiblePanel id="secHistory" runat="server"
+    <fcp:CollapsiblePanel id="secHistory" runat="server"
         TargetControlID="HistoryPanel" meta:resourcekey="secHistory" Text="History Log">
-    </scp:CollapsiblePanel>
+    </fcp:CollapsiblePanel>
     <asp:Panel ID="HistoryPanel" runat="server" Height="0" style="overflow:hidden;">
 	    <table width="100%" cellspacing="0" cellpadding="0">
 		    <tr>

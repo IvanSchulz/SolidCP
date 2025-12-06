@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SfBEditUser.ascx.cs" Inherits="FuseCP.Portal.SfB.EditSfBUser" %>
-<%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="scp" %>
+<%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/QuotaViewer.ascx" TagName="QuotaViewer" TagPrefix="fcp" %>
 <%@ Register src="../ExchangeServer/UserControls/MailboxSelector.ascx" tagname="MailboxSelector" tagprefix="uc1" %>
-<%@ Register Src="UserControls/SfBUserPlanSelector.ascx" TagName="SfBUserPlanSelector" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SfBUserSettings.ascx" TagName="SfBUserSettings" TagPrefix="scp" %>
+<%@ Register Src="UserControls/SfBUserPlanSelector.ascx" TagName="SfBUserPlanSelector" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SfBUserSettings.ascx" TagName="SfBUserSettings" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 <div id="ExchangeContainer">
     <div class="Module">
         <div class="Left">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="panel-body form-horizontal">
                     
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
                     <table>
                         <tr>
@@ -32,7 +32,7 @@
                                 <asp:Localize ID="locPlanName" runat="server" meta:resourcekey="locPlanName" Text="Plan Name: *"></asp:Localize>
                             </td>
                             <td>                                
-                                <scp:SfBUserPlanSelector ID="planSelector" runat="server" />
+                                <fcp:SfBUserPlanSelector ID="planSelector" runat="server" />
                             </td>
                         </tr>
                         <tr>
@@ -40,7 +40,7 @@
                                 <asp:Localize ID="locSipAddress" runat="server" meta:resourcekey="locSipAddress" Text="SIP Address: *"></asp:Localize>
                             </td>
                             <td>                                
-                                <scp:SfBUserSettings ID="sfbUserSettings" runat="server" />
+                                <fcp:SfBUserSettings ID="sfbUserSettings" runat="server" />
                             </td>
                         </tr>
                     </table>

@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="hMailServer_EditAccount.ascx.cs" Inherits="FuseCP.Portal.ProviderControls.hMailServer_EditAccount" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<scp:CollapsiblePanel id="secAutoresponder" runat="server"
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<fcp:CollapsiblePanel id="secAutoresponder" runat="server"
     TargetControlID="AutoresponderPanel" meta:resourcekey="secAutoresponder" Text="Autoresponder">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="AutoresponderPanel" runat="server" Height="0" style="overflow:hidden;">
     <table width="100%">
 	    <tr>
@@ -26,9 +26,9 @@
     </table>
 </asp:Panel>
 
-<scp:CollapsiblePanel id="secForwarding" runat="server"
+<fcp:CollapsiblePanel id="secForwarding" runat="server"
     TargetControlID="ForwardingPanel" meta:resourcekey="secForwarding" Text="Mail Forwarding">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="ForwardingPanel" runat="server" Height="0" style="overflow:hidden;">
     <table width="100%">
 	    <tr>

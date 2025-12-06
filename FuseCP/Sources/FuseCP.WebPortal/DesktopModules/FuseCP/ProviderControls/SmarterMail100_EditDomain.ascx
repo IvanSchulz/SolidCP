@@ -7,7 +7,7 @@
     TagPrefix="uc5" %>
 
 <%@ Register Src="../UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 
 <table width="100%">
@@ -23,31 +23,31 @@
 
 
 
-<scp:collapsiblepanel id="secFeatures" runat="server" targetcontrolid="FeaturesPanel"
-    meta:resourcekey="secFeatures" ></scp:collapsiblepanel>
+<fcp:collapsiblepanel id="secFeatures" runat="server" targetcontrolid="FeaturesPanel"
+    meta:resourcekey="secFeatures" ></fcp:collapsiblepanel>
 <asp:Panel runat="server" ID="FeaturesPanel">
     <uc4:SmarterMail60_EditDomain_Features id="featuresSection" runat="server"></uc4:SmarterMail60_EditDomain_Features>
 
 </asp:Panel>
 
 
-<scp:collapsiblepanel id="secSharing" runat="server" targetcontrolid="SharingPanel"
-    meta:resourcekey="secSharing" ></scp:collapsiblepanel>
+<fcp:collapsiblepanel id="secSharing" runat="server" targetcontrolid="SharingPanel"
+    meta:resourcekey="secSharing" ></fcp:collapsiblepanel>
 
 <asp:Panel runat="server" ID="SharingPanel">
     <uc3:SmarterMail60_EditDomain_Sharing id="sharingSection" runat="server"></uc3:SmarterMail60_EditDomain_Sharing>
 </asp:Panel>
 
-<scp:collapsiblepanel id="secThrottling" runat="server" targetcontrolid="ThrottlingPanel"
-    meta:resourcekey="secThrottling" ></scp:collapsiblepanel>
+<fcp:collapsiblepanel id="secThrottling" runat="server" targetcontrolid="ThrottlingPanel"
+    meta:resourcekey="secThrottling" ></fcp:collapsiblepanel>
 
 <asp:Panel runat="server" ID="ThrottlingPanel">
     <uc5:SmarterMail60_EditDomain_Throttling id="throttlingSection" runat="server"></uc5:SmarterMail60_EditDomain_Throttling>
 </asp:Panel>
 
 
-<scp:collapsiblepanel id="secLimits" runat="server" targetcontrolid="LimitsPanel"
-    meta:resourcekey="secLimits" text="Limits"></scp:collapsiblepanel>
+<fcp:collapsiblepanel id="secLimits" runat="server" targetcontrolid="LimitsPanel"
+    meta:resourcekey="secLimits" text="Limits"></fcp:collapsiblepanel>
 
 <asp:Panel runat="server" ID="LimitsPanel">
     <table width="100%">

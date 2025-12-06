@@ -224,7 +224,7 @@ namespace FuseCP.Installer
 				control.Dock = DockStyle.Fill;
 				try
 				{
-					SCPAppContext context = new SCPAppContext();
+					FCPAppContext context = new FCPAppContext();
 					context.AppForm = this;
 					context.ScopeNode = parentNode;
 					control.ShowControl(context);

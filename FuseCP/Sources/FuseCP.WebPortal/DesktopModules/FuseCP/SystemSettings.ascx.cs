@@ -41,7 +41,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using FuseCP.EnterpriseServer.Base.Common;
-using SCP = FuseCP.EnterpriseServer;
+using FCP = FuseCP.EnterpriseServer;
 using System.Text.RegularExpressions;
 
 namespace FuseCP.Portal
@@ -92,7 +92,7 @@ namespace FuseCP.Portal
         private void LoadSettings()
         {
             // SMTP
-            SCP.SystemSettings settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.SMTP_SETTINGS);
+            FCP.SystemSettings settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.SMTP_SETTINGS);
 
             if (settings != null)
             {
@@ -105,7 +105,7 @@ namespace FuseCP.Portal
             }
 
             // BACKUP
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.BACKUP_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.BACKUP_SETTINGS);
 
             if (settings != null)
             {
@@ -114,7 +114,7 @@ namespace FuseCP.Portal
 
 
             // FILE MANAGER
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.FILEMANAGER_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.FILEMANAGER_SETTINGS);
 
             if (settings != null && !String.IsNullOrEmpty(settings[FILE_MANAGER_EDITABLE_EXTENSIONS]))
             {
@@ -134,7 +134,7 @@ namespace FuseCP.Portal
                 ddlRdsController.Items.Add(new ListItem(service.ServiceName, service.ServiceId.ToString()));
             }
 
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.RDS_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.RDS_SETTINGS);
 
             if (settings != null && !string.IsNullOrEmpty(settings[RDS_MAIN_CONTROLLER]))
             {
@@ -146,43 +146,43 @@ namespace FuseCP.Portal
             }
 
             // Webdav portal
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.WEBDAV_PORTAL_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.WEBDAV_PORTAL_SETTINGS);
 
             if (settings != null)
             {
-                chkEnablePasswordReset.Checked = Utils.ParseBool(settings[SCP.SystemSettings.WEBDAV_PASSWORD_RESET_ENABLED_KEY], false);
+                chkEnablePasswordReset.Checked = Utils.ParseBool(settings[FCP.SystemSettings.WEBDAV_PASSWORD_RESET_ENABLED_KEY], false);
                 txtWebdavPortalUrl.Text = settings[WEBDAV_PORTAL_URL];
-                txtPasswordResetLinkLifeSpan.Text = settings[SCP.SystemSettings.WEBDAV_PASSWORD_RESET_LINK_LIFE_SPAN];
+                txtPasswordResetLinkLifeSpan.Text = settings[FCP.SystemSettings.WEBDAV_PASSWORD_RESET_LINK_LIFE_SPAN];
 
-                chkEnableOwa.Checked = Utils.ParseBool(settings[SCP.SystemSettings.WEBDAV_OWA_ENABLED_KEY], false);
-                txtOwaUrl.Text = settings[SCP.SystemSettings.WEBDAV_OWA_URL];
+                chkEnableOwa.Checked = Utils.ParseBool(settings[FCP.SystemSettings.WEBDAV_OWA_ENABLED_KEY], false);
+                txtOwaUrl.Text = settings[FCP.SystemSettings.WEBDAV_OWA_URL];
             }
 
             // Twilio portal
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.TWILIO_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.TWILIO_SETTINGS);
 
             if (settings != null)
             {
-                txtAccountSid.Text = settings.GetValueOrDefault(SCP.SystemSettings.TWILIO_ACCOUNTSID_KEY, string.Empty);
-                txtAuthToken.Text = settings.GetValueOrDefault(SCP.SystemSettings.TWILIO_AUTHTOKEN_KEY, string.Empty);
-                txtPhoneFrom.Text = settings.GetValueOrDefault(SCP.SystemSettings.TWILIO_PHONEFROM_KEY, string.Empty);
+                txtAccountSid.Text = settings.GetValueOrDefault(FCP.SystemSettings.TWILIO_ACCOUNTSID_KEY, string.Empty);
+                txtAuthToken.Text = settings.GetValueOrDefault(FCP.SystemSettings.TWILIO_AUTHTOKEN_KEY, string.Empty);
+                txtPhoneFrom.Text = settings.GetValueOrDefault(FCP.SystemSettings.TWILIO_PHONEFROM_KEY, string.Empty);
             }
 
             // Access IP Settings
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.ACCESS_IP_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.ACCESS_IP_SETTINGS);
 
             if (settings != null)
             {
-                txtIPAddress.Text = settings.GetValueOrDefault(SCP.SystemSettings.ACCESS_IPs, string.Empty);
+                txtIPAddress.Text = settings.GetValueOrDefault(FCP.SystemSettings.ACCESS_IPs, string.Empty);
             }
 
             // Authenitcation settings
-            settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.AUTHENTICATION_SETTINGS);
+            settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.AUTHENTICATION_SETTINGS);
 
             if (settings != null)
             {
-                txtMfaTokenAppDisplayName.Text = settings.GetValueOrDefault(SCP.SystemSettings.MFA_TOKEN_APP_DISPLAY_NAME, string.Empty);
-                chkCanPeerChangeMFa.Checked = settings.GetValueOrDefault(SCP.SystemSettings.MFA_CAN_PEER_CHANGE_MFA, true);
+                txtMfaTokenAppDisplayName.Text = settings.GetValueOrDefault(FCP.SystemSettings.MFA_TOKEN_APP_DISPLAY_NAME, string.Empty);
+                chkCanPeerChangeMFa.Checked = settings.GetValueOrDefault(FCP.SystemSettings.MFA_CAN_PEER_CHANGE_MFA, true);
             }
 
             var isSqlServer = DbHelper.DbType == EnterpriseServer.Data.DbType.SqlServer;
@@ -192,12 +192,12 @@ namespace FuseCP.Portal
             else
             {
                 // Debug settings
-                /*settings = ES.Services.System.GetSystemSettings(SCP.SystemSettings.DEBUG_SETTINGS);
+                /*settings = ES.Services.System.GetSystemSettings(FCP.SystemSettings.DEBUG_SETTINGS);
 
                 if (settings != null)
                 {
                     chkAlwaysUseEntityFramework.Checked = settings
-                        .GetValueOrDefault(SCP.SystemSettings.ALWAYS_USE_ENTITYFRAMEWORK, false);
+                        .GetValueOrDefault(FCP.SystemSettings.ALWAYS_USE_ENTITYFRAMEWORK, false);
                 }*/
                 chkAlwaysUseEntityFramework.Checked = DbHelper.UseEntityFramework;
             }
@@ -206,7 +206,7 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
 
                 // SMTP
                 settings[SMTP_SERVER] = txtSmtpServer.Text.Trim();
@@ -217,7 +217,7 @@ namespace FuseCP.Portal
                 settings[SMTP_ENABLE_LEGACYSSL] = chkEnableLegacySSL.Checked.ToString();
 
                 // SMTP
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.SMTP_SETTINGS, settings);
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.SMTP_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -237,14 +237,14 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
 
                 // BACKUP
-                settings = new SCP.SystemSettings();
+                settings = new FCP.SystemSettings();
                 settings[BACKUPS_PATH] = txtBackupsPath.Text.Trim();
 
                 int result = ES.Services.System.SetSystemSettings(
-                    SCP.SystemSettings.BACKUP_SETTINGS, settings);
+                    FCP.SystemSettings.BACKUP_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -264,14 +264,14 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
                 // FILE MANAGER
-                settings = new SCP.SystemSettings();
+                settings = new FCP.SystemSettings();
                 settings[FILE_MANAGER_EDITABLE_EXTENSIONS] = Regex.Replace(txtFileManagerEditableExtensions.Text, @"[\r\n]+", ",");
 
 
                 int result = ES.Services.System.SetSystemSettings(
-                    SCP.SystemSettings.FILEMANAGER_SETTINGS, settings);
+                    FCP.SystemSettings.FILEMANAGER_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -291,11 +291,11 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
                 // RDS Server
-                settings = new SCP.SystemSettings();
+                settings = new FCP.SystemSettings();
                 settings[RDS_MAIN_CONTROLLER] = ddlRdsController.SelectedValue;
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.RDS_SETTINGS, settings);
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.RDS_SETTINGS, settings);
             }
             catch (Exception ex)
             {
@@ -309,14 +309,14 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
                 // OWA Portal
-                settings = new SCP.SystemSettings();
+                settings = new FCP.SystemSettings();
 
-                settings[SCP.SystemSettings.WEBDAV_OWA_ENABLED_KEY] = chkEnableOwa.Checked.ToString();
-                settings[SCP.SystemSettings.WEBDAV_OWA_URL] = txtOwaUrl.Text;
+                settings[FCP.SystemSettings.WEBDAV_OWA_ENABLED_KEY] = chkEnableOwa.Checked.ToString();
+                settings[FCP.SystemSettings.WEBDAV_OWA_URL] = txtOwaUrl.Text;
 
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.WEBDAV_PORTAL_SETTINGS, settings);
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.WEBDAV_PORTAL_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -336,14 +336,14 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
                 // Cloud Portal
-                settings = new SCP.SystemSettings();
+                settings = new FCP.SystemSettings();
                 settings[WEBDAV_PORTAL_URL] = txtWebdavPortalUrl.Text;
-                settings[SCP.SystemSettings.WEBDAV_PASSWORD_RESET_ENABLED_KEY] = chkEnablePasswordReset.Checked.ToString();
-                settings[SCP.SystemSettings.WEBDAV_PASSWORD_RESET_LINK_LIFE_SPAN] = txtPasswordResetLinkLifeSpan.Text;
+                settings[FCP.SystemSettings.WEBDAV_PASSWORD_RESET_ENABLED_KEY] = chkEnablePasswordReset.Checked.ToString();
+                settings[FCP.SystemSettings.WEBDAV_PASSWORD_RESET_LINK_LIFE_SPAN] = txtPasswordResetLinkLifeSpan.Text;
 
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.WEBDAV_PORTAL_SETTINGS, settings);
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.WEBDAV_PORTAL_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -363,14 +363,14 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
 
                 // Twilio portal
-                settings = new SCP.SystemSettings();
-                settings[SCP.SystemSettings.TWILIO_ACCOUNTSID_KEY] = txtAccountSid.Text;
-                settings[SCP.SystemSettings.TWILIO_AUTHTOKEN_KEY] = txtAuthToken.Text;
-                settings[SCP.SystemSettings.TWILIO_PHONEFROM_KEY] = txtPhoneFrom.Text;
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.TWILIO_SETTINGS, settings);
+                settings = new FCP.SystemSettings();
+                settings[FCP.SystemSettings.TWILIO_ACCOUNTSID_KEY] = txtAccountSid.Text;
+                settings[FCP.SystemSettings.TWILIO_AUTHTOKEN_KEY] = txtAuthToken.Text;
+                settings[FCP.SystemSettings.TWILIO_PHONEFROM_KEY] = txtPhoneFrom.Text;
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.TWILIO_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -398,13 +398,13 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
 
                 //AccessIPs
-                settings = new SCP.SystemSettings();
-                settings[SCP.SystemSettings.ACCESS_IPs] = txtIPAddress.Text;
+                settings = new FCP.SystemSettings();
+                settings[FCP.SystemSettings.ACCESS_IPs] = txtIPAddress.Text;
 
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.ACCESS_IP_SETTINGS, settings);
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.ACCESS_IP_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -425,15 +425,15 @@ namespace FuseCP.Portal
         {
             try
             {
-                SCP.SystemSettings settings = new SCP.SystemSettings();
+                FCP.SystemSettings settings = new FCP.SystemSettings();
 
                 // authentication settings
-                settings = new SCP.SystemSettings();
-                settings[SCP.SystemSettings.MFA_TOKEN_APP_DISPLAY_NAME] = txtMfaTokenAppDisplayName.Text.Trim();
-                settings[SCP.SystemSettings.MFA_CAN_PEER_CHANGE_MFA] = chkCanPeerChangeMFa.Checked ? "True" : "False";
+                settings = new FCP.SystemSettings();
+                settings[FCP.SystemSettings.MFA_TOKEN_APP_DISPLAY_NAME] = txtMfaTokenAppDisplayName.Text.Trim();
+                settings[FCP.SystemSettings.MFA_CAN_PEER_CHANGE_MFA] = chkCanPeerChangeMFa.Checked ? "True" : "False";
 
 
-                int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.AUTHENTICATION_SETTINGS, settings);
+                int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.AUTHENTICATION_SETTINGS, settings);
 
                 if (result < 0)
                 {
@@ -458,13 +458,13 @@ namespace FuseCP.Portal
                 try
                 {
                     /*
-                    SCP.SystemSettings settings = new SCP.SystemSettings();
+                    FCP.SystemSettings settings = new FCP.SystemSettings();
 
                     // authentication settings
-                    settings = new SCP.SystemSettings();
-                    settings[SCP.SystemSettings.ALWAYS_USE_ENTITYFRAMEWORK] = chkAlwaysUseEntityFramework.Checked ? "True" : "False";
+                    settings = new FCP.SystemSettings();
+                    settings[FCP.SystemSettings.ALWAYS_USE_ENTITYFRAMEWORK] = chkAlwaysUseEntityFramework.Checked ? "True" : "False";
 
-                    int result = ES.Services.System.SetSystemSettings(SCP.SystemSettings.DEBUG_SETTINGS, settings);
+                    int result = ES.Services.System.SetSystemSettings(FCP.SystemSettings.DEBUG_SETTINGS, settings);
                     */
                     int result = DbHelper.SetUseEntityFramework(chkAlwaysUseEntityFramework.Checked);
 					if (result < 0)

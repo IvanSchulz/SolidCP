@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+
+@using AjaxControlToolkit.Reference.Core
+
+@{
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<ul>
+    @foreach(var typeName in Model) {
+        <li>@Html.ActionLink(typeName, "Markup", "Reference", new { id = typeName }, null) (<a href="@LinkHelper.GetSampleSiteLink(typeName)">demo</a>)</li>
+    }    
+</ul>

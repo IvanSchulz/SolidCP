@@ -1,12 +1,12 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SharePointEditSite.ascx.cs" Inherits="FuseCP.Portal.SharePointEditSite" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/UsernameControl.ascx" TagName="UsernameControl" TagPrefix="uc3" %>
 <%@ Register Src="UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="uc2" %>
 <%@ Register Src="UserControls/EmailControl.ascx" TagName="EmailControl" TagPrefix="uc2" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-body form-horizontal">
 <table id="tblEditItem" runat="server" cellSpacing="0" cellPadding="5" width="100%">
@@ -136,9 +136,9 @@
 <table width="100%">
     <tr>
         <td>
-            <scp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true"
+            <fcp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true"
                 TargetControlID="ToolsPanel" meta:resourcekey="secMainTools" Text="SharePoint Site Tools">
-            </scp:CollapsiblePanel>
+            </fcp:CollapsiblePanel>
             <asp:Panel ID="ToolsPanel" runat="server" Height="0" style="overflow:hidden;">
                 <table id="tblMaintenance" runat="server" cellpadding="10">
                     <tr>

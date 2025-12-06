@@ -1,10 +1,10 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NotifyOverusedDatabases.ascx.cs" Inherits="FuseCP.Portal.ScheduleTaskControls.NotifyOverusedDatabases" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 
 
-<scp:CollapsiblePanel id="clpOverusageDefinitionHeader" runat="server"
+<fcp:CollapsiblePanel id="clpOverusageDefinitionHeader" runat="server"
     TargetControlID="pnlOverusageDefinition" resourcekey="clpOverusageDefinitionHeader" Text="Notify for">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlOverusageDefinition" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>
@@ -33,9 +33,9 @@
 	<br />
 
 
-<scp:CollapsiblePanel id="clpWarningSettingsHeader" runat="server"
+<fcp:CollapsiblePanel id="clpWarningSettingsHeader" runat="server"
     TargetControlID="pnlWarningSettings" resourcekey="clpWarningSettingsHeader" Text="Issue warning">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlWarningSettings" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>
@@ -96,9 +96,9 @@
 
 	<br />
 
-<scp:CollapsiblePanel id="clpOverusedSettingsHeader" runat="server"
+<fcp:CollapsiblePanel id="clpOverusedSettingsHeader" runat="server"
     TargetControlID="pnlOverusedSettings" resourcekey="clpOverusedSettingsHeader" Text="Issue Overused">
-</scp:CollapsiblePanel>
+</fcp:CollapsiblePanel>
 <asp:Panel ID="pnlOverusedSettings" runat="server" CssClass="Normal">
 		<table cellspacing="0" cellpadding="4" width="100%">
 			<tr>

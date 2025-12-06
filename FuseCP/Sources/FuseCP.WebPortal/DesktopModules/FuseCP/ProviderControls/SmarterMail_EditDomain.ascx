@@ -4,7 +4,7 @@
 <%@ Register Src="SmarterMail_EditDomain_Sharing.ascx" TagName="SmarterMail_EditDomain_Sharing" TagPrefix="uc3" %>
 
 <%@ Register Src="../UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
 <table width="100%">
     <tr>
         <td class="SubHead" style="width:150px;">
@@ -19,9 +19,9 @@
 
 
 
-<scp:collapsiblepanel id="secFeatures" runat="server" targetcontrolid="FeaturesPanel"
+<fcp:collapsiblepanel id="secFeatures" runat="server" targetcontrolid="FeaturesPanel"
     meta:resourcekey="secFeatures" >
-</scp:collapsiblepanel>
+</fcp:collapsiblepanel>
 <asp:Panel runat="server" ID="FeaturesPanel">
     <uc4:SmarterMail_EditDomain_Features id="featuresSection" runat="server">
     </uc4:SmarterMail_EditDomain_Features>
@@ -29,17 +29,17 @@
 </asp:Panel>
 
 
-<scp:collapsiblepanel id="secSharing" runat="server" targetcontrolid="SharingPanel"
+<fcp:collapsiblepanel id="secSharing" runat="server" targetcontrolid="SharingPanel"
     meta:resourcekey="secSharing" >
-</scp:collapsiblepanel>
+</fcp:collapsiblepanel>
 
 <asp:Panel runat="server" ID="SharingPanel">
     <uc3:SmarterMail_EditDomain_Sharing id="sharingSection" runat="server"></uc3:SmarterMail_EditDomain_Sharing>
 </asp:Panel>
 
-<scp:collapsiblepanel id="secLimits" runat="server" targetcontrolid="LimitsPanel"
+<fcp:collapsiblepanel id="secLimits" runat="server" targetcontrolid="LimitsPanel"
     meta:resourcekey="secLimits" text="Limits">
-</scp:collapsiblepanel>
+</fcp:collapsiblepanel>
 
 <asp:Panel runat="server" ID="LimitsPanel">
     <table width="100%">

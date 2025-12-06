@@ -1,20 +1,20 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OverusageReport.ascx.cs" Inherits="FuseCP.Portal.OverusageReport" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
 	Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
-<%@ Register TagPrefix="scp" TagName="CalendarControl" Src="UserControls/CalendarControl.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CalendarControl" Src="UserControls/CalendarControl.ascx" %>
 
 <!-- Our Toolbar -->
 <div class="panel-body form-horizontal">
 
 	<!-- Bandwidth search criteria -->
-	<scp:CollapsiblePanel 
+	<fcp:CollapsiblePanel 
 		ID="bandwidthCollapsiblePanel" runat="server"
 		TargetControlID="bandwidthSearchCriteria"
 		Text="Bandwidth Search Criteria" resourceKey="bandwidthCollapsiblePanel"
 		IsCollapsed="true"
 		>
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="bandwidthSearchCriteria" runat="server" Height="0" style="overflow:hidden;">
 		<div style="margin-left: 5pt">
 			<p>
@@ -36,7 +36,7 @@
 										/>
 								</td>
 								<td class="Normal">
-									<scp:CalendarControl ID="startDateCalendar" runat="server" />
+									<fcp:CalendarControl ID="startDateCalendar" runat="server" />
 								</td>
 							</tr>
 							
@@ -48,7 +48,7 @@
 										/>
 								</td>
 								<td class="Normal">
-									<scp:CalendarControl ID="endDateCalendar" runat="server" />
+									<fcp:CalendarControl ID="endDateCalendar" runat="server" />
 								</td>
 							</tr>
 						</table>
@@ -92,13 +92,13 @@
 	
 	
 	<!-- Export functionality -->
-	<scp:CollapsiblePanel
+	<fcp:CollapsiblePanel
 		ID="exportCollapsiblePanel" runat="server"
 		TargetControlID="exportPanel"
 		Text="Export" resourceKey="exportCollapsiblePanel"
 		IsCollapsed="true"
 		>
-	</scp:CollapsiblePanel>
+	</fcp:CollapsiblePanel>
 	<asp:Panel ID="exportPanel" runat="server" Height="0" style="overflow:hidden;">
 		<div style="margin-left: 5pt">
 			<asp:HyperLink 

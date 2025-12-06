@@ -3535,7 +3535,7 @@
     <value>Error updating organization storage settings. See audit log for more details.</value>
   </data>
   <data name="Error.EXCHANGE_SET_ORG_LIMITS_VALIDATION" xml:space="preserve">
-    <value>"Issue warning at" should be less or equal to  "Prohibit send at" and "Prohibit Send at” should be less or equal than “Prohibit Send and Receive at”.
+    <value>"Issue warning at" should be less or equal to  "Prohibit send at" and "Prohibit Send atï¿½ should be less or equal than ï¿½Prohibit Send and Receive atï¿½.
 </value>
   </data>
   <data name="Error.EXCHANGE_ADD_DOMAIN" xml:space="preserve">

@@ -1,16 +1,16 @@
 <%@ Control Language="C#" AutoEventWireup="true" Codebehind="HostedSharePointEnterpriseEditSiteCollection.ascx.cs" Inherits="FuseCP.Portal.HostedSharePointEnterpriseEditSiteCollection" %>
-<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="scp" %>
-<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/AllocatePackageIPAddresses.ascx" TagName="SiteUrlBuilder" TagPrefix="scp" %>	
-<%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>	
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/PopupHeader.ascx" TagName="PopupHeader" TagPrefix="fcp" %>
+<%@ Register Src="../ExchangeServer/UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/AllocatePackageIPAddresses.ascx" TagName="SiteUrlBuilder" TagPrefix="fcp" %>	
+<%@ Register Src="../ExchangeServer/UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="fcp" %>	
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <%@ Register src="../UserControls/QuotaEditor.ascx" tagname="QuotaEditor" tagprefix="uc1" %>
 <%@ Register Src="../DomainsSelectDomainControl.ascx" TagName="DomainsSelectDomainControl" TagPrefix="uc1" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server" />
 
 <div id="ExchangeContainer">
 	<div class="Module">
@@ -23,8 +23,8 @@
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="SharePoint Site Collection"></asp:Localize>
                     </div>
 				<div class="panel-body form-horizontal">
-					<scp:SimpleMessageBox id="localMessageBox" runat="server">
-                    </scp:SimpleMessageBox>					
+					<fcp:SimpleMessageBox id="localMessageBox" runat="server">
+                    </fcp:SimpleMessageBox>					
 					<table id="tblEditItem" runat="server" cellspacing="0" cellpadding="5" width="100%">
 						<tr id="rowUrl">
 							<td class="SubHead" nowrap width="200">
@@ -48,7 +48,7 @@
 									Text="Owner:"></asp:Label>
 							</td>
 							<td class="Normal">
-								<scp:UserSelector id="userSelector" IncludeMailboxes="true" runat="server"/>
+								<fcp:UserSelector id="userSelector" IncludeMailboxes="true" runat="server"/>
 							</td>
 						</tr>
 						<tr>
@@ -173,9 +173,9 @@
 					<table width="100%">
 						<tr>
 							<td>
-								<scp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true" TargetControlID="ToolsPanel"
+								<fcp:CollapsiblePanel id="secMainTools" runat="server" IsCollapsed="true" TargetControlID="ToolsPanel"
 									meta:resourcekey="secMainTools" Text="SharePoint Site Collection Tools">
-								</scp:CollapsiblePanel>
+								</fcp:CollapsiblePanel>
 								<asp:Panel ID="ToolsPanel" runat="server" Height="0" Style="overflow: hidden;">
 									<table id="tblMaintenance" runat="server" cellpadding="10">
 										<tr>

@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServerTabs.ascx.cs"
     Inherits="FuseCP.Portal.VPS.UserControls.ServerTabs" %>
-<%@ Register Src="../../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="scp" %>
-<%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="../../UserControls/Gauge.ascx" TagName="Gauge" TagPrefix="fcp" %>
+<%@ Register Src="../../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 <asp:Timer runat="server" Interval="3000" ID="refreshTimer" />
 <asp:UpdatePanel ID="TabsPanel" runat="server">
@@ -37,7 +37,7 @@
                         <ItemTemplate>
                             <div style="padding: 2px;">
                                 <asp:Literal ID="litRecord" runat="server"></asp:Literal>
-                                <scp:Gauge id="gauge" runat="server" OneColour="true" />
+                                <fcp:Gauge id="gauge" runat="server" OneColour="true" />
                             </div>
                         </ItemTemplate>
                     </asp:Repeater>
@@ -67,7 +67,7 @@
             </tr>
         </table>
         
-        <scp:SimpleMessageBox id="messageBox" runat="server" />
+        <fcp:SimpleMessageBox id="messageBox" runat="server" />
 
     </ContentTemplate>
 </asp:UpdatePanel>

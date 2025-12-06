@@ -650,8 +650,8 @@ namespace FuseCP.EnterpriseServer
                                     List<String> list_zipfiles = new List<String>();
                 foreach (SystemFile file_i in files)
                 {
-                    // Ignore scpak and old wspak Backup Files in Backup Folder
-                    if (!(file_i.Name.EndsWith(".scpak")) && !(file_i.Name.EndsWith(".wspak"))) {
+                    // Ignore fcpak and old wspak Backup Files in Backup Folder
+                    if (!(file_i.Name.EndsWith(".fcpak")) && !(file_i.Name.EndsWith(".wspak"))) {
                         list_zipfiles.Add(file_i.Name);
                     }
                 }

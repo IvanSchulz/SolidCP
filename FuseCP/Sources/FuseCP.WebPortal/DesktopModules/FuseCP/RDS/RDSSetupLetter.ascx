@@ -1,23 +1,23 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSSetupLetter.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSSeupLetter" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 <div class="panel-heading">
 					<asp:Image ID="imgEditRDSCollection" SkinID="EnterpriseRDSCollections48" runat="server" />
 					<asp:Localize ID="locTitle" runat="server" meta:resourcekey="locTitle" Text="Setup Instructions"></asp:Localize>                    
                 </div>
 				<div class="panel-body form-horizontal">     
-                    <scp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_collection_edit_users" />
+                    <fcp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_collection_edit_users" />
                 <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">  
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
-                    <scp:CollapsiblePanel id="secEmail" runat="server" IsCollapsed="true"
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:CollapsiblePanel id="secEmail" runat="server" IsCollapsed="true"
                         TargetControlID="EmailPanel" meta:resourcekey="secEmail" Text="Send via E-Mail">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
 	                <asp:Panel ID="EmailPanel" runat="server" Height="0" style="overflow:hidden;">
                         <table id="tblEmail" runat="server" cellpadding="2">
                             <tr>

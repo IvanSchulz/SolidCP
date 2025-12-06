@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="EnterpriseStorageFolderGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.EnterpriseStorageFolderGeneralSettings" %>
 
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnterpriseStoragePermissions.ascx" TagName="ESPermissions" TagPrefix="scp"%>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" Namespace="FuseCP.Portal.ExchangeServer.UserControls" Assembly="FuseCP.Portal.Modules" %>
-<%@ Register Src="UserControls/EnterpriseStorageEditFolderTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnterpriseStoragePermissions.ascx" TagName="ESPermissions" TagPrefix="fcp"%>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" Namespace="FuseCP.Portal.ExchangeServer.UserControls" Assembly="FuseCP.Portal.Modules" %>
+<%@ Register Src="UserControls/EnterpriseStorageEditFolderTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -20,14 +20,14 @@
                 </div>
 				<div class="panel-body form-horizontal">
                         <div class="nav nav-tabs" style="padding-bottom:7px !important;">
-				            <scp:CollectionTabs id="tabs" runat="server" SelectedTab="enterprisestorage_folder_settings" />
+				            <fcp:CollectionTabs id="tabs" runat="server" SelectedTab="enterprisestorage_folder_settings" />
                         </div>
                         <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
-                    <scp:CollapsiblePanel id="colFolderGeneralSettings" runat="server"
+                    <fcp:CollapsiblePanel id="colFolderGeneralSettings" runat="server"
                         TargetControlID="panelFolderGeneralSettings" meta:resourcekey="colFolderGeneralSettings" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                      <asp:Panel runat="server" ID="panelFolderGeneralSettings">    
 					    <table>

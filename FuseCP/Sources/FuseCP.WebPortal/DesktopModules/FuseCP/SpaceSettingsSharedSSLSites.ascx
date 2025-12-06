@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsSharedSSLSites.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsSharedSSLSites" %>
 <%@ Register Src="UserControls/EditDomainsList.ascx" TagName="EditDomainsList" TagPrefix="uc1" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="tblSharedSslSites" runat="server"
+<fcp:CollapsiblePanel id="tblSharedSslSites" runat="server"
     TargetControlID="SharedSslSitesPanel" meta:resourcekey="secSharedSslSites" Text="Shared SSL Web Sites"/>
 <asp:Panel ID="SharedSslSitesPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>

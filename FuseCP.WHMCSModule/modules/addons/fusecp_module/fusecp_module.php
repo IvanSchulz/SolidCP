@@ -142,17 +142,17 @@ function fusecp_module_output($params)
     
     global $aInt, $templates_compiledir;
     $template = NULL;
-    $scp_smarty = new Smarty;
-    $scp_smarty->caching = false;
-    $scp_smarty->compile_dir = $templates_compiledir; 
-    $scp_smarty->assign('LANG',$params['_lang']);
-    $scp_smarty->assign('params',$params);
+    $fcp_smarty = new Smarty;
+    $fcp_smarty->caching = false;
+    $fcp_smarty->compile_dir = $templates_compiledir; 
+    $fcp_smarty->assign('LANG',$params['_lang']);
+    $fcp_smarty->assign('params',$params);
 
     if($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="migration"){
         $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
         $result = startMigration($_POST['command'],$_POST['value1'],$_POST['value2'],$_POST['option']);
         $html_ids = getHTMLids($_POST['command'],$_POST['value1'],$_POST['value2']);
-        $scp_smarty->assign('html_ids',$html_ids);
+        $fcp_smarty->assign('html_ids',$html_ids);
         $template = "ajax".DS."migration.tpl";
     }
     elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="save_settings"){
@@ -166,8 +166,8 @@ function fusecp_module_output($params)
         checkMigration();
         $fusecp_settings = new fusecp_settings;
         $result = $fusecp_settings->getSettings();
-        $scp_smarty->assign('admins',$fusecp_settings->admins);
-        $scp_smarty->assign('settings',$fusecp_settings->settings);
+        $fcp_smarty->assign('admins',$fusecp_settings->admins);
+        $fcp_smarty->assign('settings',$fusecp_settings->settings);
         if($fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
             $fusecp_configurable = new fusecp_configurableoptions();
         }
@@ -175,7 +175,7 @@ function fusecp_module_output($params)
             $fusecp_addon = new fusecp_addonautomation();
         }
         if($fusecp_settings->settings['NeedMigration']){
-                $scp_smarty->assign('migrationsteps',migrationSteps());
+                $fcp_smarty->assign('migrationsteps',migrationSteps());
         }
         if($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="load") {
             $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
@@ -184,44 +184,44 @@ function fusecp_module_output($params)
         elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="edit_configurable") {
             $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
             $result = $fusecp_configurable->setConfigurableOption($_POST);
-			$scp_smarty->assign('searchConf', $_POST['searchConf']);
-			$scp_smarty->assign('showOnlyAssignedConf', $_POST['showOnlyAssignedConf']);
+			$fcp_smarty->assign('searchConf', $_POST['searchConf']);
+			$fcp_smarty->assign('showOnlyAssignedConf', $_POST['showOnlyAssignedConf']);
             $template = "admin_configurable.tpl";
         }
         elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="delete_configurable") {
             $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
             $result = $fusecp_configurable->deleteConfigurableOption($_POST['id']);
-			$scp_smarty->assign('searchConf', $_POST['searchConf']);
-			$scp_smarty->assign('showOnlyAssignedConf', $_POST['showOnlyAssignedConf']);
+			$fcp_smarty->assign('searchConf', $_POST['searchConf']);
+			$fcp_smarty->assign('showOnlyAssignedConf', $_POST['showOnlyAssignedConf']);
             $template = "admin_configurable.tpl";
         }
         elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="edit_addon") {
             $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
             $result = $fusecp_addon->setAddonAutomation($_POST);
-			$scp_smarty->assign('searchAddon', $_POST['searchAddon']);
-			$scp_smarty->assign('showOnlyAssignedAddon', $_POST['showOnlyAssignedAddon']);
+			$fcp_smarty->assign('searchAddon', $_POST['searchAddon']);
+			$fcp_smarty->assign('showOnlyAssignedAddon', $_POST['showOnlyAssignedAddon']);
             $template = "admin_addon.tpl";
         }
         elseif($_POST['ajax']==1 && $_POST['module']=="fusecp_module" && $_POST['action']=="delete_addon") {
             $aInt->adminTemplate = ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS."ajax";
             $result = $fusecp_addon->deleteAddonAutomation($_POST['id']);
-			$scp_smarty->assign('searchAddon', $_POST['searchAddon']);
-			$scp_smarty->assign('showOnlyAssignedAddon', $_POST['showOnlyAssignedAddon']);
+			$fcp_smarty->assign('searchAddon', $_POST['searchAddon']);
+			$fcp_smarty->assign('showOnlyAssignedAddon', $_POST['showOnlyAssignedAddon']);
             $template = "admin_addon.tpl";
         }
         else $template = "admin.tpl";
         if($fusecp_settings->settings['ConfigurableOptionsActive'] == 1){
             $res = $fusecp_configurable->getConfigurableOptions();
 			if ($res['status'] == 'error') $result = $res;
-            $scp_smarty->assign('configurableoptions',$fusecp_configurable->configurableoptions);
+            $fcp_smarty->assign('configurableoptions',$fusecp_configurable->configurableoptions);
         }
         if($fusecp_settings->settings['AddonsActive'] == 1){
             $res = $fusecp_addon->getAddonAutomation();
 			if ($res['status'] == 'error') $result = $res;
-            $scp_smarty->assign('addonautomation',$fusecp_addon->addonautomation);
+            $fcp_smarty->assign('addonautomation',$fusecp_addon->addonautomation);
         }
 
     }
-    $scp_smarty->assign('result',$result);
-    $scp_smarty->display(ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS.$template);
+    $fcp_smarty->assign('result',$result);
+    $fcp_smarty->display(ROOTDIR.DS."modules".DS."addons".DS."fusecp_module".DS."templates".DS.$template);
 }

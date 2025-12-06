@@ -1,8 +1,8 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AllocatePackageVLANs.ascx.cs" Inherits="FuseCP.Portal.UserControls.AllocatePackageVLANs" %>
-<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
 
-<scp:SimpleMessageBox id="messageBox" runat="server" />
+<fcp:SimpleMessageBox id="messageBox" runat="server" />
 
 <asp:ValidationSummary ID="validatorsSummary" runat="server" 
     ValidationGroup="AddVLAN" ShowMessageBox="True" ShowSummary="False" />

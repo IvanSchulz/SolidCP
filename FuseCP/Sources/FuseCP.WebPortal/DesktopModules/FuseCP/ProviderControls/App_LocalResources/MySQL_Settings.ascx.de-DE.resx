@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>Ja</value>
   </data>
   <data name="FirsttimeUserNote" xml:space="preserve">
-    <value>&lt;div class="Normal" style="text-align: justify;"&gt;Bevor Sie mit der MySQL-Dienstkonfiguration im Administrationsportal fortfahren, befolgen Sie die folgende Anleitung zur Installation der "ADO.NET Treiber für MySQL" (als MySQL Connector/Net bekannt) auf Servern &lt;strong&gt;{0}&lt;/strong&gt;. Bis dahin kann das Administrationsportal keine MySQL-Datenbanken und Benutzerkonten bereitstellen. Auch die Dienstintegrations-Bridge verbleibt in einem nicht funktionierenden Status.&lt;br /&gt;&lt;br /&gt;Stellen Sie bitte sicher, dass Sie die unten aufgeführten Schritten sorgfältig befolgt haben.&lt;/div&gt;&lt;ul class="Normal"&gt;&lt;li&gt;Klicken oder öffnen Sie den folgenden Link im Browser &lt;a href="http://dev.mysql.com/downloads/connector/net/" target="_blank"&gt;http://dev.mysql.com/downloads/connector/net/&lt;/a&gt;;&lt;/li&gt;	&lt;li&gt;Laden Sie die Windows-Binärdateien (gepacktes MSI-Installerpaket) herunter;&lt;/li&gt;	&lt;li&gt;Starten Sie den Installationsprozess der heruntergeladenen Dateien mit administrativen Rechten;&lt;/li&gt;&lt;li&gt;Wählen Sie "typisches Szenario" um mit den empfohlenen Einstellungen fortzufahren;&lt;/li&gt;	&lt;li&gt;Nach Abschluß der Installation fahren Sie mit der MySQL-Dienstkonfiguration fort;&lt;/li&gt;&lt;/ul&gt;&lt;div class="Normal" style="text-align: justify;"&gt;Wir stellen diese Information für Sie zum Zwecke einer einfachen Einrichtung bereit, können jedoch keinen Support für die Installation des "ADO.NET Driver for MySQL" (als MySQL Connector/Net bekannt) leisten.&lt;/div&gt;</value>
+    <value>&lt;div class="Normal" style="text-align: justify;"&gt;Bevor Sie mit der MySQL-Dienstkonfiguration im Administrationsportal fortfahren, befolgen Sie die folgende Anleitung zur Installation der "ADO.NET Treiber fÃ¼r MySQL" (als MySQL Connector/Net bekannt) auf Servern &lt;strong&gt;{0}&lt;/strong&gt;. Bis dahin kann das Administrationsportal keine MySQL-Datenbanken und Benutzerkonten bereitstellen. Auch die Dienstintegrations-Bridge verbleibt in einem nicht funktionierenden Status.&lt;br /&gt;&lt;br /&gt;Stellen Sie bitte sicher, dass Sie die unten aufgefÃ¼hrten Schritten sorgfÃ¤ltig befolgt haben.&lt;/div&gt;&lt;ul class="Normal"&gt;&lt;li&gt;Klicken oder Ã¶ffnen Sie den folgenden Link im Browser &lt;a href="http://dev.mysql.com/downloads/connector/net/" target="_blank"&gt;http://dev.mysql.com/downloads/connector/net/&lt;/a&gt;;&lt;/li&gt;	&lt;li&gt;Laden Sie die Windows-BinÃ¤rdateien (gepacktes MSI-Installerpaket) herunter;&lt;/li&gt;	&lt;li&gt;Starten Sie den Installationsprozess der heruntergeladenen Dateien mit administrativen Rechten;&lt;/li&gt;&lt;li&gt;WÃ¤hlen Sie "typisches Szenario" um mit den empfohlenen Einstellungen fortzufahren;&lt;/li&gt;	&lt;li&gt;Nach AbschluÃŸ der Installation fahren Sie mit der MySQL-Dienstkonfiguration fort;&lt;/li&gt;&lt;/ul&gt;&lt;div class="Normal" style="text-align: justify;"&gt;Wir stellen diese Information fÃ¼r Sie zum Zwecke einer einfachen Einrichtung bereit, kÃ¶nnen jedoch keinen Support fÃ¼r die Installation des "ADO.NET Driver for MySQL" (als MySQL Connector/Net bekannt) leisten.&lt;/div&gt;</value>
   </data>
   <data name="lblBrowseMethod.Text" xml:space="preserve">
     <value>Datenbankbrowser-Anmeldemethode:</value>
@@ -133,7 +133,7 @@
     <value>Datenbankbrowser-Anmelde-URL:</value>
   </data>
   <data name="lblConfirmPassword.Text" xml:space="preserve">
-    <value>Root Passwort bestätigen:</value>
+    <value>Root Passwort bestÃ¤tigen:</value>
   </data>
   <data name="lblCurrPassword.Text" xml:space="preserve">
     <value>Aktuelles Root-Passwort:</value>
@@ -145,7 +145,7 @@
     <value>MySQL-Installationsordner:</value>
   </data>
   <data name="lblFtuNote.Text" xml:space="preserve">
-    <value>Informationen für erstmalige Benutzer des FuseCP Control Panels</value>
+    <value>Informationen fÃ¼r erstmalige Benutzer des FuseCP Control Panels</value>
   </data>
   <data name="lblInternalAddress.Text" xml:space="preserve">
     <value>Interne Adresse:</value>
@@ -166,6 +166,6 @@
     <value>Dienstkonfiguration</value>
   </data>
   <data name="passwordIdentValidator.Text" xml:space="preserve">
-    <value>Beide Passwörter müssen identisch sein</value>
+    <value>Beide PasswÃ¶rter mÃ¼ssen identisch sein</value>
   </data>
 </root>

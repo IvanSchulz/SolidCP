@@ -86,11 +86,11 @@ namespace FuseCP.WebDav.Core.Security.Authorization
             {
                 dictionary = new Dictionary<string, IEnumerable<ESPermission>>();
 
-                var rootFolders = SCP.Services.EnterpriseStorage.GetEnterpriseFoldersPaged(principal.ItemId, false,false, false,"","",0, int.MaxValue).PageItems;
+                var rootFolders = FCP.Services.EnterpriseStorage.GetEnterpriseFoldersPaged(principal.ItemId, false,false, false,"","",0, int.MaxValue).PageItems;
 
                 foreach (var rootFolder in rootFolders)
                 {
-                    var permissions = SCP.Services.EnterpriseStorage.GetEnterpriseFolderPermissions(principal.ItemId, rootFolder.Name);
+                    var permissions = FCP.Services.EnterpriseStorage.GetEnterpriseFolderPermissions(principal.ItemId, rootFolder.Name);
 
                     dictionary.Add(rootFolder.Name, permissions);
                 }
@@ -110,7 +110,7 @@ namespace FuseCP.WebDav.Core.Security.Authorization
 
             if (groups == null)
             {
-                 groups = SCP.Services.Organizations.GetSecurityGroupsByMember(principal.ItemId, principal.AccountId);
+                 groups = FCP.Services.Organizations.GetSecurityGroupsByMember(principal.ItemId, principal.AccountId);
 
                 if (HttpContext.Current.Session != null)
                 {

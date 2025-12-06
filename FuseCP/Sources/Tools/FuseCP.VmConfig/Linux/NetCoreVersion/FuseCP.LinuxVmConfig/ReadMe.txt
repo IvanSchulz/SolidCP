@@ -9,15 +9,15 @@ FuseCP.LinuxVmConfig must be installed from root user, KVP-Exchange must be enab
 		apt-get update
 		apt-get install --install-recommends linux-virtual
 		apt-get install linux-tools-virtual linux-cloud-tools-virtual
-2 - Copy "Compiled\SCPLinux-x64" on your server.
-3 - cd /{Your path}/SCPLinux-x64
+2 - Copy "Compiled\FCPLinux-x64" on your server.
+3 - cd /{Your path}/FCPLinux-x64
 4 - chmod 774 FuseCP.LinuxVmConfig
 5 - ./FuseCP.LinuxVmConfig install
 6 - "FuseCP.service successfully installed." message - Done
 
 ***Installing - CentOS:
-1 - Copy "Compiled\SCPLinux-x64" on your server.
-2 - cd /{Your path}/SCPLinux-x64
+1 - Copy "Compiled\FCPLinux-x64" on your server.
+2 - cd /{Your path}/FCPLinux-x64
 3 - chmod 774 FuseCP.LinuxVmConfig
 4 - ./FuseCP.LinuxVmConfig install
 5 - "FuseCP.service successfully installed." message - Done
@@ -30,8 +30,8 @@ FuseCP.LinuxVmConfig must be installed from root user, KVP-Exchange must be enab
 4 - add following entries to "/etc/fstab"
 	linprocfs   /compat/linux/proc  linprocfs   rw  0   0
 5 - reboot
-6 - Copy "Compiled\SCPLinux-x64" on your server.
-7 - cd /{Your path}/SCPLinux-x64
+6 - Copy "Compiled\FCPLinux-x64" on your server.
+7 - cd /{Your path}/FCPLinux-x64
 8 - chmod 774 FuseCP.LinuxVmConfig
 9 - chmod 774 sh
 10 - ./FuseCP.LinuxVmConfig install

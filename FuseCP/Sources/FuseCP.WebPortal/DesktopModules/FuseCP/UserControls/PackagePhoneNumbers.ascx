@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PackagePhoneNumbers.ascx.cs" Inherits="FuseCP.Portal.UserControls.PackagePhoneNumbers" %>
-<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="scp" %>
+<%@ Register Src="SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="SearchBox.ascx" TagName="SearchBox" TagPrefix="fcp" %>
 
 
 <script type="text/javascript">
@@ -15,14 +15,14 @@
                 }
 </script>
 
-<scp:SimpleMessageBox id="messageBox" runat="server" />
+<fcp:SimpleMessageBox id="messageBox" runat="server" />
 
 <div class="FormButtonsBarClean">
     <div class="FormButtonsBarCleanLeft">
         <CPCC:StyleButton id="btnAllocateAddress" CssClass="btn btn-primary" runat="server" OnClick="btnAllocateAddress_Click" CausesValidation="False"> <i class="fa fa-check">&nbsp;</i>&nbsp;<asp:Localize runat="server" meta:resourcekey="btnAllocateAddressText"/> </CPCC:StyleButton>
     </div>
     <div class="FormButtonsBarCleanRight">
-        <scp:SearchBox ID="searchBox" runat="server" />
+        <fcp:SearchBox ID="searchBox" runat="server" />
     </div>
 </div>
 

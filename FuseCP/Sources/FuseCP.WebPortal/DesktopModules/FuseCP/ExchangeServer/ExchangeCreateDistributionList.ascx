@@ -1,11 +1,11 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExchangeCreateDistributionList.ascx.cs" Inherits="FuseCP.Portal.ExchangeServer.ExchangeCreateDistributionList" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<%@ Register src="UserControls/MailboxSelector.ascx" tagname="MailboxSelector" TagPrefix="scp" %>
+<%@ Register src="UserControls/MailboxSelector.ascx" tagname="MailboxSelector" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -15,7 +15,7 @@
 				</h3>
                         </div>
 				<div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 					
 					<div class="form-group">
                         <asp:Label runat="server" CssClass="control-label col-sm-2" AssociatedControlID="txtDisplayName">
@@ -35,7 +35,7 @@
                         </asp:Label>
                         <div class="col-sm-10">
                             <div class="input-group">
-                                <scp:EmailAddress id="email" runat="server" ValidationGroup="CreateList"></scp:EmailAddress>
+                                <fcp:EmailAddress id="email" runat="server" ValidationGroup="CreateList"></fcp:EmailAddress>
                             </div>
                         </div>
                         </div>
@@ -44,7 +44,7 @@
                         <asp:Localize ID="Localize1" runat="server" meta:resourcekey="locManagedBy" ></asp:Localize>
                         </asp:label>
                         <div class="col-sm-6">
-                                 <scp:mailboxselector id="manager" runat="server"
+                                 <fcp:mailboxselector id="manager" runat="server"
                                             ShowOnlyMailboxes="true" 
 											MailboxesEnabled="true"
 											DistributionListsEnabled="true" />											

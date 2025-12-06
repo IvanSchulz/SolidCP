@@ -1,6 +1,6 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceDetailsHeaderControl.ascx.cs" Inherits="FuseCP.Portal.SpaceDetailsHeaderControl" %>
-<%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="scp" %>
+<%@ Register Src="UserControls/UserDetails.ascx" TagName="UserDetails" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerDetails.ascx" TagName="ServerDetails" TagPrefix="fcp" %>
 <table cellSpacing="0" cellPadding="5" width="100%">
 	<tr>
 		<td class="Huge" colspan="2">
@@ -10,7 +10,7 @@
 	<tr>
 		<td class="SubHead"><asp:Label ID="lblUser" runat="server" meta:resourcekey="lblUser" Text="User:"></asp:Label></td>
 		<td class="Normal">
-			<scp:UserDetails id="spaceUser" runat="server"/>
+			<fcp:UserDetails id="spaceUser" runat="server"/>
 		</td>
 	</tr>
 	<tr>
@@ -22,7 +22,7 @@
 	<tr id="rowSpaceServer" runat="server">
 		<td class="SubHead"><asp:Label ID="lblTargetServer" runat="server" meta:resourcekey="lblTargetServer" Text="Target Server:"></asp:Label></td>
 		<td class="Normal">
-            <scp:ServerDetails ID="serverDetails" runat="server" />
+            <fcp:ServerDetails ID="serverDetails" runat="server" />
 		</td>
 	</tr>
 	<tr>

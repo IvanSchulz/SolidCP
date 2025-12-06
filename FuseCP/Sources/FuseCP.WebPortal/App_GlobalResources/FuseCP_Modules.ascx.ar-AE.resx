@@ -225,10 +225,10 @@
   <data name="ModuleTitle.DiskSpaceSummary" xml:space="preserve">
     <value>???? ????? ?????</value>
   </data>
-  <data name="ModuleTitle.SCPSQLDatabasesSettings" xml:space="preserve">
+  <data name="ModuleTitle.FCPSQLDatabasesSettings" xml:space="preserve">
     <value>??????? ????? ?????? FuseCP SQL</value>
   </data>
-  <data name="ModuleTitle.SCPSQLUserSettings" xml:space="preserve">
+  <data name="ModuleTitle.FCPSQLUserSettings" xml:space="preserve">
     <value>??????? ?????? FuseCP SQL</value>
   </data>
   <data name="ModuleTitle.DNSZoneRecords" xml:space="preserve">

@@ -170,28 +170,28 @@ namespace FuseCP.Providers.VirtualizationForPC
 		}
 	}
 
-	public class SCPVirtualMachineManagementServiceClient : VirtualMachineManagementServiceClient, IDisposable
+	public class FCPVirtualMachineManagementServiceClient : VirtualMachineManagementServiceClient, IDisposable
 	{
-		public SCPVirtualMachineManagementServiceClient()
+		public FCPVirtualMachineManagementServiceClient()
 		{
 		}
 
-		public SCPVirtualMachineManagementServiceClient(string endpointConfigurationName) :
+		public FCPVirtualMachineManagementServiceClient(string endpointConfigurationName) :
 			base(endpointConfigurationName)
 		{
 		}
 
-		public SCPVirtualMachineManagementServiceClient(string endpointConfigurationName, string remoteAddress) :
+		public FCPVirtualMachineManagementServiceClient(string endpointConfigurationName, string remoteAddress) :
 			base(endpointConfigurationName, remoteAddress)
 		{
 		}
 
-		public SCPVirtualMachineManagementServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+		public FCPVirtualMachineManagementServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
 			base(endpointConfigurationName, remoteAddress)
 		{
 		}
 
-		public SCPVirtualMachineManagementServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+		public FCPVirtualMachineManagementServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
 			base(binding, remoteAddress)
 		{
 		}
@@ -203,28 +203,28 @@ namespace FuseCP.Providers.VirtualizationForPC
 		}
 	}
 
-	public class SCPMonitoringServiceClient : MonitoringServiceClient, IDisposable
+	public class FCPMonitoringServiceClient : MonitoringServiceClient, IDisposable
 	{
-		public SCPMonitoringServiceClient()
+		public FCPMonitoringServiceClient()
 		{
 		}
 
-		public SCPMonitoringServiceClient(string endpointConfigurationName) :
+		public FCPMonitoringServiceClient(string endpointConfigurationName) :
 			base(endpointConfigurationName)
 		{
 		}
 
-		public SCPMonitoringServiceClient(string endpointConfigurationName, string remoteAddress) :
+		public FCPMonitoringServiceClient(string endpointConfigurationName, string remoteAddress) :
 			base(endpointConfigurationName, remoteAddress)
 		{
 		}
 
-		public SCPMonitoringServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+		public FCPMonitoringServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
 			base(endpointConfigurationName, remoteAddress)
 		{
 		}
 
-		public SCPMonitoringServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+		public FCPMonitoringServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
 			base(binding, remoteAddress)
 		{
 		}
@@ -459,7 +459,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			//
 			var vmInfo = default(VirtualMachineInfo);
 			
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				vmInfo = client.GetVirtualMachineByName(vmId);
 				//
@@ -545,7 +545,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			{
 				if (!HostinfoByVMName.ContainsKey(vmName))
 				{
-					using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+					using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 					{
 						VirtualMachineInfo vminfo = client.GetVirtualMachineByName(vmName);
 						if (vminfo != null)
@@ -566,7 +566,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 			if (hostInfo != null)
 			{
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					try
 					{
@@ -612,7 +612,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 				var hostInfo = default(HostInfo);
 				//
 				#region Find out placement options, e.q. either deploy VM via cluster or directly on a host
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					TemplateInfo selTemplate = client.GetTemplateById(vm.TemplateId);
 					//
@@ -776,7 +776,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			{
 				steps.AppendLine("Start Connect to ScVMM (new VirtualMachineManagementServiceClient)");
 				//
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					steps.AppendLine("Connected to ScVMM");
 					//
@@ -956,7 +956,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			try
 			{
 				steps.AppendLine("Start Connect to ScVNMM (new VirtualMachineManagementServiceClient)");
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					steps.AppendLine("Connected to ScVNMM");
 					//
@@ -1056,7 +1056,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 		public Virtualization.VirtualNetworkInfo[] GetVirtualNetworkByHostName(string hostName)
 		{
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				HostInfo host = client.GetHostByName(hostName);
 				return GetVirtualNetworkByHostInfo(host);
@@ -1068,7 +1068,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			List<Virtualization.VirtualNetworkInfo> result = new List<Virtualization.VirtualNetworkInfo>();
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				VirtualizationForPC.SVMMService.VirtualNetworkInfo[] networks = client.GetVirtualNetworkByHost(hostInfo);
 				foreach (var item in networks)
@@ -1108,7 +1108,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 			try
 			{
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 
 					VirtualMachineInfo vm = client.GetVirtualMachineByName(vmId);
@@ -1173,7 +1173,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			ReturnCode ret = ReturnCode.JobStarted;
 			try
 			{
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 
 					VirtualMachineInfo vm = client.GetVirtualMachineByName(vmId);
@@ -1225,7 +1225,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 						DeleteNetworkAdapters(vm.VmGuid);
 					}
 
-					using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+					using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 					{
 						client.DeleteVirtualMachine(vm.VmGuid);
 
@@ -1255,7 +1255,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			var adapters = default(VirtualNetworkAdapterInfo[]);
 			// Retrieve VM network adapters
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				adapters = client.GetVirtualNetworkAdaptersByVM(objVM);
 			}
@@ -1271,7 +1271,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 		private void DeleteNetworkAdapter(VirtualNetworkAdapterInfo objVM, bool runAsunc)
 		{
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				client.RemoveVirtualNetworkAdapter(objVM, runAsunc, null);
 			}
@@ -1285,7 +1285,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 			List<VirtualMachineSnapshot> ret = new List<VirtualMachineSnapshot>();
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				VMCheckpointInfo[] chkPtnList = client.GetVirtualMachineByName(vmId).VMCheckpoints;
 
@@ -1318,7 +1318,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 			try
 			{
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					ret.Job = new ConcreteJob();
 					ret.Job.Id = vmId;
@@ -1350,7 +1350,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			bool error = false;
 			try
 			{
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					ret.Job = new ConcreteJob();
 					ret.Job.Id = vmId;
@@ -1387,7 +1387,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 			try
 			{
-				using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 				{
 					ret.Job = new ConcreteJob();
 					ret.Job.Id = vmId;
@@ -1413,7 +1413,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			//            ManagementBaseObject objSummary = GetSnapshotSummaryInformation(snapshotId, (SummaryInformationRequest)size);
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 
 				VirtualMachineInfo vminfo = client.GetVirtualMachineByName(snapshotId);
@@ -1434,7 +1434,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			List<LibraryItem> items = new List<LibraryItem>();
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				TemplateInfo[] ti = client.GetTemplates();
 
@@ -1461,7 +1461,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			List<LibraryItem> items = new List<LibraryItem>();
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 
 				if (client.State != CommunicationState.Opened)
@@ -1506,7 +1506,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			List<LibraryItem> items = new List<LibraryItem>();
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				if (client.State != CommunicationState.Opened)
 				{
@@ -1556,7 +1556,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 		{
 			int ret = 0;
 
-			using (SCPVirtualMachineManagementServiceClient client = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient client = GetVMMSClient())
 			{
 				TemplateInfo selTemplate = client.GetTemplateById(new Guid(templateId));
 				ret = selTemplate.CPUMax;
@@ -1653,12 +1653,12 @@ namespace FuseCP.Providers.VirtualizationForPC
 		public List<MonitoredObjectEvent> GetDeviceEvents(string serviceName, string displayName)
 		{
 			List<MonitoredObjectEvent> monitoredObjectEventCollection = new List<MonitoredObjectEvent>();
-			using (SCPVirtualMachineManagementServiceClient context = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient context = GetVMMSClient())
 			{
 				VirtualMachineInfo vmi = context.GetVirtualMachineByName(displayName);
 				if (vmi != null)
 				{
-					using (SCPMonitoringServiceClient client = GetMonitoringServiceClient())
+					using (FCPMonitoringServiceClient client = GetMonitoringServiceClient())
 					{
 						MonitoredObject monitoringObject = client.GetMonitoredObjectByDisplayName(vmi.HostName, vmi.ComputerName);
 						foreach (var item in monitoringObject.Events)
@@ -1684,12 +1684,12 @@ namespace FuseCP.Providers.VirtualizationForPC
 		public List<MonitoredObjectAlert> GetMonitoringAlerts(string serviceName, string virtualMachineName)
 		{
 			List<MonitoredObjectAlert> result = new List<MonitoredObjectAlert>();
-			using (SCPVirtualMachineManagementServiceClient context = GetVMMSClient())
+			using (FCPVirtualMachineManagementServiceClient context = GetVMMSClient())
 			{
 				VirtualMachineInfo vmi = context.GetVirtualMachineByName(virtualMachineName);
 				if (vmi != null)
 				{
-					using (SCPMonitoringServiceClient client = GetMonitoringServiceClient())
+					using (FCPMonitoringServiceClient client = GetMonitoringServiceClient())
 					{
 						MonitoredObject mo = client.GetMonitoredObjectByDisplayName(vmi.HostName, vmi.ComputerName);
 
@@ -1731,7 +1731,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			//return ret;
 
 
-			using (SCPMonitoringServiceClient client = GetMonitoringServiceClient())
+			using (FCPMonitoringServiceClient client = GetMonitoringServiceClient())
 			{
 				client.Open();
 
@@ -1807,7 +1807,7 @@ namespace FuseCP.Providers.VirtualizationForPC
 			string result;
 			if (!computerNameByVMName.TryGetValue(virtualMachineName, out result))
 			{
-				using (SCPVirtualMachineManagementServiceClient context = GetVMMSClient())
+				using (FCPVirtualMachineManagementServiceClient context = GetVMMSClient())
 				{
 					VirtualMachineInfo vmInfo = context.GetVirtualMachineByName(virtualMachineName);
 					computerNameByVMName[virtualMachineName] = result = (vmInfo != null) ? vmInfo.ComputerName : string.Empty;
@@ -1845,16 +1845,16 @@ namespace FuseCP.Providers.VirtualizationForPC
 
 		#region Procxy
 
-		public SCPVirtualMachineManagementServiceClient GetVMMSClient()
+		public FCPVirtualMachineManagementServiceClient GetVMMSClient()
 		{
-			SCPVirtualMachineManagementServiceClient ret;
+			FCPVirtualMachineManagementServiceClient ret;
 
 			if (!IsNullOrWhiteSpaceString(SCVMMServer)
 				&& !IsNullOrWhiteSpaceString(SCVMMPrincipalName))
 			{
 				EndpointAddress endPointAddress = GetEndPointAddress(SCVMMServer, SCVMMPrincipalName);
 
-				ret = new SCPVirtualMachineManagementServiceClient(new WSHttpBinding("WSHttpBinding_IVirtualMachineManagementService"), endPointAddress);
+				ret = new FCPVirtualMachineManagementServiceClient(new WSHttpBinding("WSHttpBinding_IVirtualMachineManagementService"), endPointAddress);
 
 				VersionInfo ver = new VersionInfo();
 			}
@@ -1866,16 +1866,16 @@ namespace FuseCP.Providers.VirtualizationForPC
 			return ret;
 		}
 
-		public SCPMonitoringServiceClient GetMonitoringServiceClient()
+		public FCPMonitoringServiceClient GetMonitoringServiceClient()
 		{
-			SCPMonitoringServiceClient ret;
+			FCPMonitoringServiceClient ret;
 
 			if (!IsNullOrWhiteSpaceString(SCOMServer)
 				&& !IsNullOrWhiteSpaceString(SCOMPrincipalName))
 			{
 				EndpointAddress endPointAddress = GetEndPointAddress(SCOMServer, SCOMPrincipalName);
 
-				ret = new SCPMonitoringServiceClient(new WSHttpBinding("WSHttpBinding_IMonitoringService"), endPointAddress);
+				ret = new FCPMonitoringServiceClient(new WSHttpBinding("WSHttpBinding_IMonitoringService"), endPointAddress);
 			}
 			else
 			{

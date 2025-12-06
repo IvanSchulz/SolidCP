@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsExchangeRetentionPolicyTag.ascx.cs" Inherits="FuseCP.Portal.SettingsExchangeRetentionPolicyTag" %>
-<%@ Register Src="ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="scp" %>
-<%@ Register Src="ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="ExchangeServer/UserControls/SizeBox.ascx" TagName="SizeBox" TagPrefix="fcp" %>
+<%@ Register Src="ExchangeServer/UserControls/DaysBox.ascx" TagName="DaysBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 <%@ Register Src="UserControls/QuotaEditor.ascx" TagName="QuotaEditor" TagPrefix="uc1" %>
 <%@ Import Namespace="FuseCP.Portal" %>
 
-    <scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
-    <scp:SimpleMessageBox id="messageBox" runat="server" />
+    <fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+    <fcp:SimpleMessageBox id="messageBox" runat="server" />
 	<asp:GridView id="gvPolicy" runat="server"  EnableViewState="true" AutoGenerateColumns="false"
 		Width="100%" EmptyDataText="gvPolicy" CssSelectorClass="NormalGridView" OnRowCommand="gvPolicy_RowCommand" >
 		<Columns>
@@ -31,9 +31,9 @@
 		</Columns>
 	</asp:GridView>
 	<br />
-    	<scp:CollapsiblePanel id="secPolicy" runat="server"
+    	<fcp:CollapsiblePanel id="secPolicy" runat="server"
             TargetControlID="Policy" meta:resourcekey="secPolicy" Text="Policy">
-        </scp:CollapsiblePanel>
+        </fcp:CollapsiblePanel>
         <asp:Panel ID="Policy" runat="server" Height="0" style="overflow:hidden;">
 			<table>
 				<tr>
@@ -50,9 +50,9 @@
 			<br />
 		</asp:Panel>
 
-		<scp:CollapsiblePanel id="secPolicyFeatures" runat="server"
+		<fcp:CollapsiblePanel id="secPolicyFeatures" runat="server"
             TargetControlID="PolicyFeatures" meta:resourcekey="secPolicyFeatures" Text="Policy Tag Features">
-        </scp:CollapsiblePanel>
+        </fcp:CollapsiblePanel>
         <asp:Panel ID="PolicyFeatures" runat="server" Height="0" style="overflow:hidden;">
 			<table>
 				<tr>

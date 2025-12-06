@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBox.ascx.cs" EnableViewState="false" Inherits="FuseCP.Portal.MessageBox" %>
-<%@ Register Src="CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
+<%@ Register Src="CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
 <div style="height:3px;"></div>
 <div id="tblMessageBox" runat="server" class="MessageBox">
     <asp:Literal ID="litMessage" runat="server"></asp:Literal>
@@ -7,9 +7,9 @@
     
      <div id="rowTechnicalDetails" runat="server" class="TechnicalDetails">
     
-        <scp:CollapsiblePanel id="secTechnicalDetails" runat="server" IsCollapsed="true"
+        <fcp:CollapsiblePanel id="secTechnicalDetails" runat="server" IsCollapsed="true"
             TargetControlID="TechnicalDetailsPanel" resourcekey="secTechnicalDetails" Text="Technical Details">
-        </scp:CollapsiblePanel>
+        </fcp:CollapsiblePanel>
         <asp:Panel ID="TechnicalDetailsPanel" runat="server" Height="0" style="overflow:hidden;">
             <table id="tblTechnicalDetails" runat="server" class="TechnicalDetailsTable" cellpadding="0" cellspacing="0">
                 <tr>
@@ -61,9 +61,9 @@
             </table>
         </asp:Panel>
         
-        <scp:CollapsiblePanel id="secSendReport" runat="server" IsCollapsed="true"
+        <fcp:CollapsiblePanel id="secSendReport" runat="server" IsCollapsed="true"
             TargetControlID="SendReportPanel" resourcekey="secSendReport" Text="Send Report to Host">
-        </scp:CollapsiblePanel>
+        </fcp:CollapsiblePanel>
         <asp:Panel ID="SendReportPanel" runat="server" Height="0" style="overflow:hidden;">
             <table cellspacing="0" cellpadding="3">
                 <tr>

@@ -1,13 +1,13 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="VpsDetailsNetwork.ascx.cs" Inherits="FuseCP.Portal.VPS2012.VpsDetailsNetwork" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="scp" %>
-<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="scp" %>
-<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/ServerTabs.ascx" TagName="ServerTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Menu.ascx" TagName="Menu" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/Breadcrumb.ascx" TagName="Breadcrumb" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/FormTitle.ascx" TagName="FormTitle" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
 
-<scp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
+<fcp:EnableAsyncTasksSupport ID="asyncTasks" runat="server" />
 
 <script type="text/javascript">
     function SelectAllCheckboxes(box) {
@@ -23,11 +23,11 @@
 <div class="Content">
     <div class="Center">
         <div class="panel-body form-horizontal">
-            <scp:ServerTabs ID="tabs" runat="server" SelectedTab="vps_network" />
-            <scp:SimpleMessageBox ID="messageBox" runat="server" />
+            <fcp:ServerTabs ID="tabs" runat="server" SelectedTab="vps_network" />
+            <fcp:SimpleMessageBox ID="messageBox" runat="server" />
 
-            <scp:CollapsiblePanel ID="secRealNetwork" runat="server"
-                TargetControlID="RealNetworkPanel" meta:ResourceKey="secRealNetwork" Text="Virtual Machine Networks details"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="secRealNetwork" runat="server"
+                TargetControlID="RealNetworkPanel" meta:ResourceKey="secRealNetwork" Text="Virtual Machine Networks details"></fcp:CollapsiblePanel>
             <asp:Panel ID="RealNetworkPanel" runat="server" Height="0" Style="overflow: hidden; padding: 5px;">
                 <div style="margin-top: 4px; margin-bottom: 10px;">
                     <asp:Button ID="btnRestoreExternalAddress" runat="server" meta:resourcekey="btnRestoreExternalAddress"
@@ -87,8 +87,8 @@
                 <br />
             </asp:Panel>
 
-            <scp:CollapsiblePanel ID="secExternalNetwork" runat="server"
-                TargetControlID="ExternalNetworkPanel" meta:ResourceKey="secExternalNetwork" Text="External Network"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="secExternalNetwork" runat="server"
+                TargetControlID="ExternalNetworkPanel" meta:ResourceKey="secExternalNetwork" Text="External Network"></fcp:CollapsiblePanel>
             <asp:Panel ID="ExternalNetworkPanel" runat="server" Height="0" Style="overflow: hidden;">
 
                 <table style="border-collapse: separate; border-spacing: 3px 1px;">
@@ -175,8 +175,8 @@
             </asp:Panel>
 
 
-            <scp:CollapsiblePanel ID="secPrivateNetwork" runat="server"
-                TargetControlID="PrivateNetworkPanel" meta:ResourceKey="secPrivateNetwork" Text="Private Network"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="secPrivateNetwork" runat="server"
+                TargetControlID="PrivateNetworkPanel" meta:ResourceKey="secPrivateNetwork" Text="Private Network"></fcp:CollapsiblePanel>
             <asp:Panel ID="PrivateNetworkPanel" runat="server" Height="0" Style="overflow: hidden;">
 
                 <table style="border-collapse: separate; border-spacing: 3px 1px;">
@@ -269,8 +269,8 @@
             </asp:Panel>
 
 
-            <scp:CollapsiblePanel ID="secDmzNetwork" runat="server"
-                TargetControlID="DmzNetworkPanel" meta:ResourceKey="secDmzNetwork" Text="DMZ Network"></scp:CollapsiblePanel>
+            <fcp:CollapsiblePanel ID="secDmzNetwork" runat="server"
+                TargetControlID="DmzNetworkPanel" meta:ResourceKey="secDmzNetwork" Text="DMZ Network"></fcp:CollapsiblePanel>
             <asp:Panel ID="DmzNetworkPanel" runat="server" Height="0" Style="overflow: hidden;">
 
                 <table style="border-collapse: separate; border-spacing: 3px 1px;">

@@ -1,14 +1,14 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RDSEditCollectionSettings.ascx.cs" Inherits="FuseCP.Portal.RDS.RDSEditCollectionSettings" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/RDSCollectionApps.ascx" TagName="CollectionApps" TagPrefix="scp"%>
-<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="scp" %>
-<%@ Register Src="UserControls/RDSSessionLimit.ascx" TagName="SessionLimit" TagPrefix="scp" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/RDSCollectionApps.ascx" TagName="CollectionApps" TagPrefix="fcp"%>
+<%@ Register Src="UserControls/RDSCollectionTabs.ascx" TagName="CollectionTabs" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/RDSSessionLimit.ascx" TagName="SessionLimit" TagPrefix="fcp" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="../UserControls/CollapsiblePanel.ascx" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 <script type="text/javascript" src="/JavaScript/jquery.min.js?v=1.4.4"></script>
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -19,14 +19,14 @@
 					<asp:Literal ID="litCollectionName" runat="server" Text="" />
 				</div>
 				<div class="panel-body form-horizontal">
-                    <scp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_edit_collection_settings" />
+                    <fcp:CollectionTabs id="tabs" runat="server" SelectedTab="rds_edit_collection_settings" />
                  <div class="panel panel-default tab-content">
                 <div class="panel-body form-horizontal">
-				    <scp:SimpleMessageBox id="messageBox" runat="server" />                    
+				    <fcp:SimpleMessageBox id="messageBox" runat="server" />                    
 
-                    <scp:CollapsiblePanel id="secRdsSessionSettings" runat="server"
+                    <fcp:CollapsiblePanel id="secRdsSessionSettings" runat="server"
                         TargetControlID="panelRdsSessionSettings" meta:resourcekey="secRdsSessionSettings" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                     <asp:Panel runat="server" ID="panelRdsSessionSettings">                                                
                         <div style="padding: 10px;">
@@ -37,19 +37,19 @@
                                 <tr>
                                     <td class="Label" style="width:260px;" colspan="2"><asp:Localize ID="locDisconnectedSessionLimit" runat="server" meta:resourcekey="locDisconnectedSessionLimit" Text=""></asp:Localize></td>
                                     <td style="width:250px;">
-                                        <scp:SessionLimit ID="slDisconnectedSessionLimit" runat="server" />
+                                        <fcp:SessionLimit ID="slDisconnectedSessionLimit" runat="server" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="Label" style="width:260px;" colspan="2"><asp:Localize ID="locActiveSessionLimit" runat="server" meta:resourcekey="locActiveSessionLimit" Text=""></asp:Localize></td>
                                     <td>
-                                        <scp:SessionLimit ID="slActiveSessionLimit" runat="server"/>
+                                        <fcp:SessionLimit ID="slActiveSessionLimit" runat="server"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="Label" style="width:260px;" colspan="2"><asp:Localize ID="locIdleSessionLimit" runat="server" meta:resourcekey="locIdleSessionLimit" Text=""></asp:Localize></td>
                                     <td>
-                                        <scp:SessionLimit ID="slIdleSessionLimit" runat="server"/>
+                                        <fcp:SessionLimit ID="slIdleSessionLimit" runat="server"/>
                                     </td>
                                 </tr>
                             </table>
@@ -94,9 +94,9 @@
                         </div>                            
                     </asp:Panel>
 
-                    <scp:CollapsiblePanel id="secRdsClientSettings" runat="server"
+                    <fcp:CollapsiblePanel id="secRdsClientSettings" runat="server"
                         TargetControlID="panelRdsClientSettings" meta:resourcekey="secRdsClientSettings" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                     <asp:Panel runat="server" ID="panelRdsClientSettings">                                                
                         <div style="padding: 10px;">
@@ -173,9 +173,9 @@
                         </div>                            
                     </asp:Panel>
 
-                    <scp:CollapsiblePanel id="secRdsSecuritySettings" runat="server"
+                    <fcp:CollapsiblePanel id="secRdsSecuritySettings" runat="server"
                         TargetControlID="panelRdsSecuritySettings" meta:resourcekey="secRdsSecuritySettings" Text="">
-                    </scp:CollapsiblePanel>		
+                    </fcp:CollapsiblePanel>		
                     
                     <asp:Panel runat="server" ID="panelRdsSecuritySettings">                                                
                         <div style="padding: 10px;">                            
@@ -214,7 +214,7 @@
 				</div>
 	
                     <div class="text-right">
-                        <scp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="SaveRDSCollection" 
+                        <fcp:ItemButtonPanel id="buttonPanel" runat="server" ValidationGroup="SaveRDSCollection" 
                             OnSaveClick="btnSave_Click" OnSaveExitClick="btnSaveExit_Click" />
 			        </div>   		
                      </div>

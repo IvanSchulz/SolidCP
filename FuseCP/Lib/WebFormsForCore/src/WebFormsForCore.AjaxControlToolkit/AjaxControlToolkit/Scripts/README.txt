@@ -1,0 +1,1 @@
+﻿Bundler & Minifier extension is used for script minification on save

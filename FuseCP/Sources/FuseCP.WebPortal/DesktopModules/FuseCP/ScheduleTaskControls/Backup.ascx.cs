@@ -130,7 +130,7 @@ namespace FuseCP.Portal.ScheduleTaskControls
 			if (String.IsNullOrEmpty(this.txtBackupFileName.Text))
 			{
 				// backup file
-				txtBackupFileName.Text = String.Format("{0}-{1}-{2}.scpak", filePrefix,
+				txtBackupFileName.Text = String.Format("{0}-{1}-{2}.fcpak", filePrefix,
 					Regex.Replace(modeValue, "[^\\w]", "_"),
 					DateTime.Now.ToString("ddMMyyyy", System.Globalization.CultureInfo.InvariantCulture));
 			}

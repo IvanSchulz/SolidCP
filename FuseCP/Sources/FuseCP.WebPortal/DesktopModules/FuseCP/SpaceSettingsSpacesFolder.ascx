@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SpaceSettingsSpacesFolder.ascx.cs" Inherits="FuseCP.Portal.SpaceSettingsSpacesFolder" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="tblSpacesFolder" runat="server"
+<fcp:CollapsiblePanel id="tblSpacesFolder" runat="server"
     TargetControlID="SpacesFolderPanel" meta:resourcekey="tblSpacesFolder" Text="Child Spaces Location Folder"/>
 <asp:Panel ID="SpacesFolderPanel" runat="server" Height="0" style="overflow:hidden;">
     <table>

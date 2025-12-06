@@ -1,5 +1,5 @@
 <%@ Control Language="C#" AutoEventWireup="true" %>
-<%@ Register  TagPrefix="scp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
+<%@ Register  TagPrefix="fcp" TagName="Logo" Src="~/DesktopModules/FuseCP/SkinControls/Logo.ascx" %>
 <style> BODY { background-color: #FFFFFF!important; } </style>
 
 <div id="SimpleWhiteOutline">

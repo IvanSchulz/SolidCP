@@ -1,22 +1,22 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="OrganizationDeletedUserGeneralSettings.ascx.cs" Inherits="FuseCP.Portal.HostedSolution.DeletedUserGeneralSettings" %>
-<%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="scp" %>
-<%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="scp" %>
+<%@ Register Src="UserControls/UserSelector.ascx" TagName="UserSelector" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/CountrySelector.ascx" TagName="CountrySelector" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/SimpleMessageBox.ascx" TagName="SimpleMessageBox" TagPrefix="fcp" %>
 
-<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="scp" %>
-<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="scp" %>
-<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/PasswordControl.ascx" TagName="PasswordControl" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/CollapsiblePanel.ascx" TagName="CollapsiblePanel" TagPrefix="fcp" %>
+<%@ Register Src="../UserControls/EnableAsyncTasksSupport.ascx" TagName="EnableAsyncTasksSupport" TagPrefix="fcp" %>
+<%@ Register Src="UserControls/EmailAddress.ascx" TagName="EmailAddress" TagPrefix="fcp" %>
 
 
 
 <%@ Register src="UserControls/DeletedUserTabs.ascx" tagname="UserTabs" tagprefix="uc1" %>
 <%@ Register src="UserControls/MailboxTabs.ascx" tagname="MailboxTabs" tagprefix="uc1" %>
 
-<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="scp" %>
+<%@ Register Src="../UserControls/ItemButtonPanel.ascx" TagName="ItemButtonPanel" TagPrefix="fcp" %>
 
 
-<scp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
+<fcp:EnableAsyncTasksSupport id="asyncTasks" runat="server"/>
 
 
 				<div class="panel-heading">
@@ -36,7 +36,7 @@
                     <uc1:MailboxTabs ID="MailboxTabsId" runat="server" SelectedTab="view_deleted_user" />
                      </div>
                     <div class="panel panel-default tab-content">
-                    <scp:SimpleMessageBox id="messageBox" runat="server" />
+                    <fcp:SimpleMessageBox id="messageBox" runat="server" />
                     
 					<table>
 						<tr>
@@ -116,9 +116,9 @@
 					    </tr>
 					</table>
                     
-                    <scp:CollapsiblePanel id="secServiceLevels" runat="server" IsCollapsed="true"
+                    <fcp:CollapsiblePanel id="secServiceLevels" runat="server" IsCollapsed="true"
                         TargetControlID="ServiceLevels" meta:resourcekey="secServiceLevels" Text="Service Level Information">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
 
                     <asp:Panel ID="ServiceLevels" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
@@ -141,9 +141,9 @@
 					    </table>
 					</asp:Panel>
 									
-					<scp:CollapsiblePanel id="secCompanyInfo" runat="server" IsCollapsed="true"
+					<fcp:CollapsiblePanel id="secCompanyInfo" runat="server" IsCollapsed="true"
                         TargetControlID="CompanyInfo" meta:resourcekey="secCompanyInfo" Text="Company Information">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
 
                     <asp:Panel ID="CompanyInfo" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
@@ -190,9 +190,9 @@
 					    </table>
 					</asp:Panel>
 					
-					<scp:CollapsiblePanel id="secContactInfo" runat="server" IsCollapsed="true"
+					<fcp:CollapsiblePanel id="secContactInfo" runat="server" IsCollapsed="true"
                         TargetControlID="ContactInfo" meta:resourcekey="secContactInfo" Text="Contact Information">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
                                       
                     <asp:Panel ID="ContactInfo" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
@@ -245,9 +245,9 @@
 					    </table>
 					</asp:Panel>
 					
-					<scp:CollapsiblePanel id="secAddressInfo" runat="server" IsCollapsed="true"
+					<fcp:CollapsiblePanel id="secAddressInfo" runat="server" IsCollapsed="true"
                         TargetControlID="AddressInfo" meta:resourcekey="secAddressInfo" Text="Address">
-                    </scp:CollapsiblePanel>
+                    </fcp:CollapsiblePanel>
 
                     <asp:Panel ID="AddressInfo" runat="server" Height="0" style="overflow:hidden;">
 					    <table>
@@ -294,9 +294,9 @@
 					    </table>
 					</asp:Panel>
 					
-					<scp:CollapsiblePanel id="secAdvanced" runat="server" IsCollapsed="true"
+					<fcp:CollapsiblePanel id="secAdvanced" runat="server" IsCollapsed="true"
                         TargetControlID="AdvancedInfo" meta:resourcekey="secAdvanced" Text="Advanced">
-                    </scp:CollapsiblePanel>	
+                    </fcp:CollapsiblePanel>	
                     
                     <asp:Panel ID="AdvancedInfo" runat="server" Height="0" style="overflow:hidden;">
 					    <table>

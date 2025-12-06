@@ -1,7 +1,7 @@
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SettingsRdsPolicy.ascx.cs" Inherits="FuseCP.Portal.SettingsRdsPolicy" %>
-<%@ Register TagPrefix="scp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
+<%@ Register TagPrefix="fcp" TagName="CollapsiblePanel" Src="UserControls/CollapsiblePanel.ascx" %>
 
-<scp:CollapsiblePanel id="secTimeout" runat="server" TargetControlID="timeoutPanel" meta:resourcekey="secTimeout" Text="Lock Screen Timeout"/>
+<fcp:CollapsiblePanel id="secTimeout" runat="server" TargetControlID="timeoutPanel" meta:resourcekey="secTimeout" Text="Lock Screen Timeout"/>
 <asp:Panel ID="timeoutPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="col">
         <asp:DropDownList ID="ddTimeout" runat="server" CssClass="form-control"/>
@@ -17,7 +17,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secRunCommand" runat="server" TargetControlID="runCommandPanel" meta:resourcekey="secRunCommand" Text="Remove Run Command"/>
+<fcp:CollapsiblePanel id="secRunCommand" runat="server" TargetControlID="runCommandPanel" meta:resourcekey="secRunCommand" Text="Remove Run Command"/>
 <asp:Panel ID="runCommandPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -30,7 +30,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secPowershellCommand" runat="server" TargetControlID="powershellCommandPanel" meta:resourcekey="secPowershellCommand" Text="Remove Powershell Command"/>
+<fcp:CollapsiblePanel id="secPowershellCommand" runat="server" TargetControlID="powershellCommandPanel" meta:resourcekey="secPowershellCommand" Text="Remove Powershell Command"/>
 <asp:Panel ID="powershellCommandPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -43,7 +43,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secHideCDrive" runat="server" TargetControlID="hideCDrivePanel" meta:resourcekey="secHideCDrive" Text="Hide C: Drive"/>
+<fcp:CollapsiblePanel id="secHideCDrive" runat="server" TargetControlID="hideCDrivePanel" meta:resourcekey="secHideCDrive" Text="Hide C: Drive"/>
 <asp:Panel ID="hideCDrivePanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="col">
         <asp:DropDownList ID="ddHideCDrive" runat="server" CssClass="form-control">
@@ -67,7 +67,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secShutdown" runat="server" TargetControlID="shutdownPanel" meta:resourcekey="secShutdown" Text="Remove Shutdown and Restart"/>
+<fcp:CollapsiblePanel id="secShutdown" runat="server" TargetControlID="shutdownPanel" meta:resourcekey="secShutdown" Text="Remove Shutdown and Restart"/>
 <asp:Panel ID="shutdownPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -80,7 +80,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secTaskManager" runat="server" TargetControlID="taskManagerPanel" meta:resourcekey="secTaskManager" Text="Disable Task Manager"/>
+<fcp:CollapsiblePanel id="secTaskManager" runat="server" TargetControlID="taskManagerPanel" meta:resourcekey="secTaskManager" Text="Disable Task Manager"/>
 <asp:Panel ID="taskManagerPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -93,7 +93,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secChangeDesktop" runat="server" TargetControlID="desktopPanel" meta:resourcekey="secChangeDesktop" Text="Changing Desktop Disabled"/>
+<fcp:CollapsiblePanel id="secChangeDesktop" runat="server" TargetControlID="desktopPanel" meta:resourcekey="secChangeDesktop" Text="Changing Desktop Disabled"/>
 <asp:Panel ID="desktopPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -106,7 +106,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secScreenSaver" runat="server" TargetControlID="screenSaverPanel" meta:resourcekey="secScreenSaver" Text="Disable Screen Saver"/>
+<fcp:CollapsiblePanel id="secScreenSaver" runat="server" TargetControlID="screenSaverPanel" meta:resourcekey="secScreenSaver" Text="Disable Screen Saver"/>
 <asp:Panel ID="screenSaverPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -119,7 +119,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secDriveSpace" runat="server" TargetControlID="driveSpacePanel" meta:resourcekey="secDriveSpace" Text="Drive Space Threshold"/>
+<fcp:CollapsiblePanel id="secDriveSpace" runat="server" TargetControlID="driveSpacePanel" meta:resourcekey="secDriveSpace" Text="Drive Space Threshold"/>
 <asp:Panel ID="driveSpacePanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="col">
         <asp:DropDownList ID="ddTreshold" runat="server" CssClass="form-control">
@@ -135,7 +135,7 @@
         </asp:DropDownList>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secViewSession" runat="server" TargetControlID="viewSessionPanel" meta:resourcekey="secViewSession" Text="View RDS Session without Users's Permission"/>
+<fcp:CollapsiblePanel id="secViewSession" runat="server" TargetControlID="viewSessionPanel" meta:resourcekey="secViewSession" Text="View RDS Session without Users's Permission"/>
 <asp:Panel ID="viewSessionPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -148,7 +148,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secControlSession" runat="server" TargetControlID="controlSessionPanel" meta:resourcekey="secControlSession" Text="Control RDS Session without Users's Permission"/>
+<fcp:CollapsiblePanel id="secControlSession" runat="server" TargetControlID="controlSessionPanel" meta:resourcekey="secControlSession" Text="Control RDS Session without Users's Permission"/>
 <asp:Panel ID="controlSessionPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">
@@ -161,7 +161,7 @@
         </div>
     </div>
 </asp:Panel>
-<scp:CollapsiblePanel id="secDisableCmd" runat="server" TargetControlID="disableCmdPanel" meta:resourcekey="secDisableCmd" Text="Disable Command Prompt"/>
+<fcp:CollapsiblePanel id="secDisableCmd" runat="server" TargetControlID="disableCmdPanel" meta:resourcekey="secDisableCmd" Text="Disable Command Prompt"/>
 <asp:Panel ID="disableCmdPanel" runat="server" Height="0" style="overflow:hidden;">
     <div class="form-group">
         <div class="col-sm-9">

@@ -1,6 +1,6 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestVirtualMachineTemplate.aspx.cs" Inherits="FuseCP.Portal.VPS.TestVirtualMachineTemplate" %>
 
-<%@ Register src="../UserControls/MessageBox.ascx" tagname="MessageBox" TagPrefix="scp" %>
+<%@ Register src="../UserControls/MessageBox.ascx" tagname="MessageBox" TagPrefix="fcp" %>
 
 <%@ Register src="../UserControls/SimpleMessageBox.ascx" tagname="SimpleMessageBox" tagprefix="uc1" %>
 
