@@ -21772,7 +21772,7 @@
   </Resource>
   <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\SetupControlPanelAccounts.ascx.resx</File>
-    <Key>ScpaProcedureDescription.Text</Key>
+    <Key>FcpaProcedureDescription.Text</Key>
     <DefaultValue>Please setup passwords for FuseCP "serveradmin" and "admin" accounts.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Serveradmin&lt;/b&gt; is control panel administrator account. Using this account you can manage all your servers and services, create new hosting plans and customer accounts, both resellers and users.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Admin&lt;/b&gt; is a pre-configured reseller account with unlimited hosting plan to manage local server where control panel is installed.</DefaultValue>
   </Resource>
   <Resource>
@@ -28094,7 +28094,7 @@ After creating your virtual directory go to FP administrator and create a subweb
   <Resource>
     <File>DesktopModules\FuseCP\App_LocalResources\WebsitesSSL.ascx.resx</File>
     <Key>SSLImportDescription.Text</Key>
-    <DefaultValue>A SSL certificate has been detected on the website that is not managed by SolidCP. Click the button below
+    <DefaultValue>A SSL certificate has been detected on the website that is not managed by FuseCP. Click the button below
         to import the certificate settings</DefaultValue>
   </Resource>
   <Resource>
