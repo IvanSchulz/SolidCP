@@ -41,7 +41,7 @@ run-name: ${{ github.event.head_commit.message }} by @${{ github.actor }}
 
 on:
   push:
-    branches: [ "release", "CoreWCF" ]
+    branches: [ "release", "main" ]
   pull_request:
     branches: [ "release" ]
 
