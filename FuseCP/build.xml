@@ -685,7 +685,7 @@
 		<RemoveDir Directories="$(ImportCsvInstall)"/>
 		<MakeDir Directories="$(ImportCsvInstall)"/>
 		<Copy SourceFiles="@(ImportCsvDeployFiles)" DestinationFolder="$(ImportCsvInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(ImportCsvInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(ImportCsvInstall)" />
 	</Target>
 
   <Target Name="CreateHyperVUtilsCsvInstall" DependsOnTargets="CreateImportCsvInstall">
@@ -695,7 +695,7 @@
 		<RemoveDir Directories="$(HyperVUtilsInstall)"/>
 		<MakeDir Directories="$(HyperVUtilsInstall)"/>
 		<Copy SourceFiles="@(HyperVUtilsDeployFiles)" DestinationFolder="$(HyperVUtilsInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(HyperVUtilsInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(HyperVUtilsInstall)" />
 	</Target>
 
   <Target Name="CreateVMConfigInstall" DependsOnTargets="CreateHyperVUtilsCsvInstall">
@@ -705,7 +705,7 @@
 		<RemoveDir Directories="$(VMConfigInstall)"/>
 		<MakeDir Directories="$(VMConfigInstall)"/>
 		<Copy SourceFiles="@(VMConfigDeployFiles)" DestinationFolder="$(VMConfigInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(VMConfigInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(VMConfigInstall)" />
 	</Target>
 
 	<Target Name="CreateImportEnterpriseInstall" DependsOnTargets="CreateVMConfigInstall">
@@ -715,7 +715,7 @@
 		<RemoveDir Directories="$(ImportEnterpriseInstall)"/>
 		<MakeDir Directories="$(ImportEnterpriseInstall)"/>
 		<Copy SourceFiles="@(ImportEnterpriseDeployFiles)" DestinationFolder="$(ImportEnterpriseInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(ImportEnterpriseInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(ImportEnterpriseInstall)" />
 	</Target>
 
 	<Target Name="CreateCertMakerInstall" DependsOnTargets="CreateImportEnterpriseInstall">
@@ -725,7 +725,7 @@
 		<RemoveDir Directories="$(CertMakerInstall)"/>
 		<MakeDir Directories="$(CertMakerInstall)"/>
 		<Copy SourceFiles="@(CertMakerDeployFiles)" DestinationFolder="$(CertMakerInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(CertMakerInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(CertMakerInstall)" />
 	</Target>
 	
 	<Target Name="CreateFCPTransportAgentInstall" DependsOnTargets="CreateCertMakerInstall">
@@ -735,7 +735,7 @@
 		<RemoveDir Directories="$(FCPTransportAgentInstall)"/>
 		<MakeDir Directories="$(FCPTransportAgentInstall)"/>
 		<Copy SourceFiles="@(FCPTransportAgentDeployFiles)" DestinationFolder="$(FCPTransportAgentInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FCPTransportAgentInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(FCPTransportAgentInstall)" />
 	</Target>
 
 	<Target Name="CreateAWStatsViewerInstall" DependsOnTargets="CreateFCPTransportAgentInstall">
@@ -745,7 +745,7 @@
 		<RemoveDir Directories="$(AWStatsViewerInstall)"/>
 		<MakeDir Directories="$(AWStatsViewerInstall)"/>
 		<Copy SourceFiles="@(AWStatsViewerDeployFiles)" DestinationFolder="$(AWStatsViewerInstall)\%(RecursiveDir)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(AWStatsViewerInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(AWStatsViewerInstall)" />
 	</Target>
 
 	<Target Name="CreateLocalizationToolkitInstall" DependsOnTargets="CreateAWStatsViewerInstall">
@@ -762,7 +762,7 @@
     <RemoveDir Directories="$(FixDefaultPublicFolderMailboxInstall)"/>
     <MakeDir Directories="$(FixDefaultPublicFolderMailboxInstall)"/>
     <Copy SourceFiles="@(FixDefaultPublicFolderMailboxDeployFiles)" DestinationFolder="$(FixDefaultPublicFolderMailboxInstall)\%(RecursiveDir)" />
-    <Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FixDefaultPublicFolderMailboxInstall)" />
+    <Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(FixDefaultPublicFolderMailboxInstall)" />
   </Target>
 
   	<Target Name="CreateFuseCP-Configuration-ToolInstall" DependsOnTargets="CreateFixDefaultPublicFolderMailboxInstall">
@@ -772,7 +772,7 @@
 		<RemoveDir Directories="$(FuseCP-Configuration-ToolInstall)"/>
 		<MakeDir Directories="$(FuseCP-Configuration-ToolInstall)"/>
 		<Copy SourceFiles="@(FuseCP-Configuration-ToolFiles)" DestinationFolder="$(FuseCP-Configuration-ToolInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-Configuration-ToolInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(FuseCP-Configuration-ToolInstall)" />
 	</Target>
 	
   	<Target Name="MSPtoFCPInstall" DependsOnTargets="CreateFuseCP-Configuration-ToolInstall">
@@ -782,7 +782,7 @@
 		<RemoveDir Directories="$(MSPtoFCPInstall)"/>
 		<MakeDir Directories="$(MSPtoFCPInstall)"/>
 		<Copy SourceFiles="@(MSPtoFCPFiles)" DestinationFolder="$(MSPtoFCPInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(MSPtoFCPInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(MSPtoFCPInstall)" />
 	</Target>
 	
 	<Target Name="MailTemplatesInstall" DependsOnTargets="MSPtoFCPInstall">
@@ -792,7 +792,7 @@
 	<RemoveDir Directories="$(MailTemplatesInstall)"/>
 	<MakeDir Directories="$(MailTemplatesInstall)"/>
 	<Copy SourceFiles="@(MailTemplatesFiles)" DestinationFolder="$(MailTemplatesInstall)\%(RecursiveDir)" />
-	<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(MailTemplatesInstall)" />
+	<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(MailTemplatesInstall)" />
 	</Target>
 	
   	<Target Name="FuseCP-Auto-Upgrade-ToolInstall" DependsOnTargets="MailTemplatesInstall">
@@ -802,7 +802,7 @@
 		<RemoveDir Directories="$(FuseCP-Auto-Upgrade-ToolInstall)"/>
 		<MakeDir Directories="$(FuseCP-Auto-Upgrade-ToolInstall)"/>
 		<Copy SourceFiles="@(FuseCP-Auto-Upgrade-ToolFiles)" DestinationFolder="$(FuseCP-Auto-Upgrade-ToolInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-Auto-Upgrade-ToolInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(FuseCP-Auto-Upgrade-ToolInstall)" />
 	</Target>
 	
   	<Target Name="FuseCP-dSHeuristics" DependsOnTargets="FuseCP-Auto-Upgrade-ToolInstall">
@@ -812,7 +812,7 @@
 		<RemoveDir Directories="$(FuseCP-dSHeuristicsInstall)"/>
 		<MakeDir Directories="$(FuseCP-dSHeuristicsInstall)"/>
 		<Copy SourceFiles="@(FuseCP-dSHeuristicsFiles)" DestinationFolder="$(FuseCP-dSHeuristicsInstall)" />
-		<Copy SourceFiles="$(RootFolder)\LICENSE.txt" DestinationFolder="$(FuseCP-dSHeuristicsInstall)" />
+		<Copy SourceFiles="$(RootFolder)\LICENSE" DestinationFolder="$(FuseCP-dSHeuristicsInstall)" />
 	</Target>
 
 

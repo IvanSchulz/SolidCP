@@ -1,3 +1,18 @@
+// Copyright (C) 2025 FuseCP
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 using FuseCP.EnterpriseServer.Data;
 using FuseCP.Providers;
 using FuseCP.Providers.Common;
@@ -114,7 +129,7 @@ public abstract partial class Installer
 			<setting name=""InfoContactName"" value=""FuseCP"" />
 			<setting name=""InfoContactUrl"" value=""http://fusecp.com/forum"" />
 			<setting name=""InfoContactEmail"" value=""support@fusecp.com"" />
-			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/master/LICENSE.txt"" />
+			<setting name=""InfoLicenseUrl"" value=""https://github.com/FuseCP/FuseCP/blob/main/LICENSE"" />
 			<setting name=""InfoLicenseName"" value=""Creative Commons Share-alike"" />
 		</settings>
 	</swaggerwcf>");
