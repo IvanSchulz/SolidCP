@@ -1,1 +1,0 @@
-﻿Bundler & Minifier extension is used for style minification on save

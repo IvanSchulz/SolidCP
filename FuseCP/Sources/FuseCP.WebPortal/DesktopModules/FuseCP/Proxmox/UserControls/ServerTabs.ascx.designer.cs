@@ -1,8 +1,23 @@
+// Copyright (C) 2025 FuseCP
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 //------------------------------------------------------------------------------
 // <automatisch generiert>
 //     Dieser Code wurde von einem Tool generiert.
 //
-//     Änderungen an dieser Datei können fehlerhaftes Verhalten verursachen und gehen verloren, wenn
+//     ï¿½nderungen an dieser Datei kï¿½nnen fehlerhaftes Verhalten verursachen und gehen verloren, wenn
 //     der Code neu generiert wird.
 // </automatisch generiert>
 //------------------------------------------------------------------------------
@@ -17,7 +32,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.Timer refreshTimer;
         
@@ -26,7 +41,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel TabsPanel;
         
@@ -35,7 +50,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable TaskTable;
         
@@ -44,7 +59,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litTaskName;
         
@@ -53,7 +68,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStarted;
         
@@ -62,7 +77,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litStarted;
         
@@ -71,7 +86,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locElapsed;
         
@@ -80,7 +95,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litElapsed;
         
@@ -89,7 +104,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater repRecords;
         
@@ -98,7 +113,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable TabsTable;
         
@@ -107,7 +122,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlTabs;
         
@@ -116,7 +131,7 @@ namespace FuseCP.Portal.Proxmox.UserControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
     }

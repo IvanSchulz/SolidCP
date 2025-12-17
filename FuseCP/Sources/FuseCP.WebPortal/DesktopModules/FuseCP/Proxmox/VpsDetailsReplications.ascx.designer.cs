@@ -1,8 +1,23 @@
+// Copyright (C) 2025 FuseCP
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 //------------------------------------------------------------------------------
 // <automatisch generiert>
 //     Dieser Code wurde von einem Tool generiert.
 //
-//     Änderungen an dieser Datei können fehlerhaftes Verhalten verursachen und gehen verloren, wenn
+//     ï¿½nderungen an dieser Datei kï¿½nnen fehlerhaftes Verhalten verursachen und gehen verloren, wenn
 //     der Code neu generiert wird.
 // </automatisch generiert>
 //------------------------------------------------------------------------------
@@ -17,7 +32,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.EnableAsyncTasksSupport asyncTasks;
         
@@ -26,7 +41,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.Proxmox.UserControls.ServerTabs tabs;
         
@@ -35,7 +50,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.SimpleMessageBox messageBox;
         
@@ -44,7 +59,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary validatorsSummary;
         
@@ -53,7 +68,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel ReplicationDetailsPanel;
         
@@ -62,7 +77,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locHealth;
         
@@ -71,7 +86,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labHealth;
         
@@ -80,7 +95,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDetailInfo;
         
@@ -89,7 +104,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPause;
         
@@ -98,7 +113,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnResume;
         
@@ -107,7 +122,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.CollapsiblePanel secReplication;
         
@@ -116,7 +131,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel ReplicationPanel;
         
@@ -125,7 +140,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbEnable;
         
@@ -134,7 +149,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable ReplicaTable;
         
@@ -143,7 +158,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPrimaryServer;
         
@@ -152,7 +167,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labPrimaryServer;
         
@@ -161,7 +176,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locReplicaServer;
         
@@ -170,7 +185,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labReplicaServer;
         
@@ -179,7 +194,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locLastSynchronized;
         
@@ -188,7 +203,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labLastSynchronized;
         
@@ -197,7 +212,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow trVHDEditable;
         
@@ -206,7 +221,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locVHDs;
         
@@ -215,7 +230,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList chlVHDs;
         
@@ -224,7 +239,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator valVHDs;
         
@@ -233,7 +248,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow trVHDReadOnly;
         
@@ -242,7 +257,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locVHDsReadOnly;
         
@@ -251,7 +266,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labVHDs;
         
@@ -260,7 +275,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locCeritficate;
         
@@ -269,7 +284,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ddlCeritficateDiv;
         
@@ -278,7 +293,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCeritficate;
         
@@ -287,7 +302,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtCeritficateDiv;
         
@@ -296,7 +311,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCeritficate;
         
@@ -305,7 +320,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locFrequency;
         
@@ -314,7 +329,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlFrequency;
         
@@ -323,7 +338,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label locRecoveryPoints;
         
@@ -332,7 +347,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radRecoveryPoints;
         
@@ -341,7 +356,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTable tabAdditionalRecoveryPoints;
         
@@ -350,7 +365,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locRecoveryPointsAdditional;
         
@@ -359,7 +374,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRecoveryPointsAdditional;
         
@@ -368,7 +383,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbVSS;
         
@@ -377,7 +392,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl VSSdiv;
         
@@ -386,7 +401,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRecoveryPointsVSS;
         
@@ -395,7 +410,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
         
@@ -404,7 +419,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel DetailsPanel;
         
@@ -413,7 +428,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDetails;
         
@@ -422,7 +437,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDetailsState;
         
@@ -431,7 +446,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labDetailsState;
         
@@ -440,7 +455,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDetailsMode;
         
@@ -449,7 +464,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labDetailsMode;
         
@@ -458,7 +473,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDetailsPrimary;
         
@@ -467,7 +482,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labDetailsPrimary;
         
@@ -476,7 +491,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDetailsReplica;
         
@@ -485,7 +500,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labDetailsReplica;
         
@@ -494,7 +509,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDetailsHealth;
         
@@ -503,7 +518,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labDetailsHealth;
         
@@ -512,7 +527,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labDetailsHealthDetails;
         
@@ -521,7 +536,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.CollapsiblePanel StatisticCollapsiblePanel;
         
@@ -530,7 +545,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel StatisticPanel;
         
@@ -539,7 +554,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locFromTime;
         
@@ -548,7 +563,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labFromTime;
         
@@ -557,7 +572,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locToTime;
         
@@ -566,7 +581,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labToTime;
         
@@ -575,7 +590,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locAverageSize;
         
@@ -584,7 +599,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labAverageSize;
         
@@ -593,7 +608,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locMaximumSize;
         
@@ -602,7 +617,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labMaximumSize;
         
@@ -611,7 +626,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locAverageLatency;
         
@@ -620,7 +635,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labAverageLatency;
         
@@ -629,7 +644,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locErrorsEncountered;
         
@@ -638,7 +653,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labErrorsEncountered;
         
@@ -647,7 +662,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locSuccessfulReplicationCycles;
         
@@ -656,7 +671,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labSuccessfulReplicationCycles;
         
@@ -665,7 +680,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.CollapsiblePanel PendingReplicationCollapsiblePanel;
         
@@ -674,7 +689,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel PendingReplicationPanel;
         
@@ -683,7 +698,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locSizeData;
         
@@ -692,7 +707,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labSizeData;
         
@@ -701,7 +716,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locLastSyncro;
         
@@ -710,7 +725,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label labLastSyncro;
         
@@ -719,7 +734,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
         
@@ -728,7 +743,7 @@ namespace FuseCP.Portal.Proxmox {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::AjaxControlToolkit.ModalPopupExtender DetailModal;
     }
