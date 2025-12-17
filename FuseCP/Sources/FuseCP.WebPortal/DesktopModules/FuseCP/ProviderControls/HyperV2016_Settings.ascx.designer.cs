@@ -1,8 +1,23 @@
+// Copyright (C) 2025 FuseCP
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 //------------------------------------------------------------------------------
 // <automatisch generiert>
 //     Dieser Code wurde von einem Tool generiert.
 //
-//     Änderungen an dieser Datei können fehlerhaftes Verhalten verursachen und gehen verloren, wenn
+//     ï¿½nderungen an dieser Datei kï¿½nnen fehlerhaftes Verhalten verursachen und gehen verloren, wenn
 //     der Code neu generiert wird.
 // </automatisch generiert>
 //------------------------------------------------------------------------------
@@ -17,7 +32,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary;
         
@@ -26,7 +41,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locHyperVServer;
         
@@ -35,7 +50,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioServer;
         
@@ -44,7 +59,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ServerNameRow;
         
@@ -53,7 +68,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locServerName;
         
@@ -62,7 +77,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtServerName;
         
@@ -71,7 +86,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::CPCC.StyleButton btnConnect;
         
@@ -80,7 +95,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ServerNameValidator;
         
@@ -89,7 +104,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ServerErrorRow;
         
@@ -98,7 +113,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label locErrorReadingNetworksList;
         
@@ -107,7 +122,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGuacamole;
         
@@ -116,7 +131,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGuacamoleConnectScript;
         
@@ -125,7 +140,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGuacamoleConnectScript;
         
@@ -134,7 +149,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGuacamoleConnectPassword;
         
@@ -143,7 +158,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGuacamoleConnectPassword;
         
@@ -152,7 +167,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnguacamolepassword;
         
@@ -161,7 +176,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGuacamoleHyperVIP;
         
@@ -170,7 +185,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGuacamoleHyperVIP;
         
@@ -179,7 +194,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGuacamoleHyperVDomain;
         
@@ -188,7 +203,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGuacamoleHyperVDomain;
         
@@ -197,7 +212,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow rowPassword;
         
@@ -206,7 +221,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCurrPassword;
         
@@ -215,7 +230,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGuacamoleHyperVAdministratorPassword;
         
@@ -224,7 +239,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGuacamoleHyperVAdministratorPassword;
         
@@ -233,7 +248,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locGeneralSettings;
         
@@ -242,7 +257,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locVpsRootFolder;
         
@@ -251,7 +266,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtVpsRootFolder;
         
@@ -260,7 +275,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RootFolderValidator;
         
@@ -269,7 +284,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locFolderVariables;
         
@@ -278,7 +293,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locExportedVpsPath;
         
@@ -287,7 +302,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtExportedVpsPath;
         
@@ -296,7 +311,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ExportedVpsPathValidator;
         
@@ -305,7 +320,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locProcessorSettings;
         
@@ -314,7 +329,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locCpuReserve;
         
@@ -323,7 +338,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCpuReserve;
         
@@ -332,7 +347,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CpuReserveValidator;
         
@@ -341,7 +356,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locCpuLimit;
         
@@ -350,7 +365,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCpuLimit;
         
@@ -359,7 +374,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CpuLimitValidator;
         
@@ -368,7 +383,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locCpuWeight;
         
@@ -377,7 +392,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCpuWeight;
         
@@ -386,7 +401,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CpuWeightValidator;
         
@@ -395,7 +410,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locTemplates;
         
@@ -404,7 +419,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locOSTemplatesPath;
         
@@ -413,7 +428,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtOSTemplatesPath;
         
@@ -422,7 +437,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator TemplatesPathValidator;
         
@@ -431,7 +446,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::CPCC.StyleButton btnAddOsTemplate;
         
@@ -440,7 +455,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater repOsTemplates;
         
@@ -449,7 +464,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDvdLibrary;
         
@@ -458,7 +473,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDvdIsoPath;
         
@@ -467,7 +482,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDvdLibraryPath;
         
@@ -476,7 +491,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator DvdLibraryPathValidator;
         
@@ -485,7 +500,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::CPCC.StyleButton btnAddDvd;
         
@@ -494,7 +509,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater repDvdLibrary;
         
@@ -503,7 +518,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locReplication;
         
@@ -512,7 +527,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList ReplicationModeList;
         
@@ -521,7 +536,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow EnableReplicaRow;
         
@@ -530,7 +545,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locReplicaServer;
         
@@ -539,7 +554,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlReplicaServer;
         
@@ -548,7 +563,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ReplicaServerValidator;
         
@@ -557,7 +572,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow EnableReplicaErrorTr;
         
@@ -566,7 +581,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label locEnableReplicaError;
         
@@ -575,7 +590,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow IsReplicaServerRow;
         
@@ -584,7 +599,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locReplicaPath;
         
@@ -593,7 +608,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtReplicaPath;
         
@@ -602,7 +617,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ReplicaPathValidator;
         
@@ -611,7 +626,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locCertThumbnail;
         
@@ -620,7 +635,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCertThumbnail;
         
@@ -629,7 +644,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCertThumbnail;
         
@@ -638,7 +653,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::CPCC.StyleButton btnSetReplicaServer;
         
@@ -647,7 +662,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CertificateThumbnailValidator;
         
@@ -656,7 +671,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CertificateDdlThumbnailValidator;
         
@@ -665,7 +680,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ReplicaPathErrorTr;
         
@@ -674,7 +689,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label locErrorPathReplica;
         
@@ -683,7 +698,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ReplicaErrorTr;
         
@@ -692,7 +707,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label locErrorSetReplica;
         
@@ -701,7 +716,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locVhd;
         
@@ -710,7 +725,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locDiskType;
         
@@ -719,7 +734,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioVirtualDiskType;
         
@@ -728,7 +743,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locExternalNetwork;
         
@@ -737,7 +752,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locExternalNetworkName;
         
@@ -746,7 +761,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlExternalNetworks;
         
@@ -755,7 +770,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPreferredNameServer;
         
@@ -764,7 +779,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl externalPreferredNameServer;
         
@@ -773,7 +788,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locAlternateNameServer;
         
@@ -782,7 +797,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl externalAlternateNameServer;
         
@@ -791,7 +806,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkAssignIPAutomatically;
         
@@ -800,7 +815,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel ManageUpdatePanel;
         
@@ -809,7 +824,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locManagementNetwork;
         
@@ -818,7 +833,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locManagementNetworkName;
         
@@ -827,7 +842,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlManagementNetworks;
         
@@ -836,7 +851,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ManageNicConfigRow;
         
@@ -845,7 +860,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locManageNicConfig;
         
@@ -854,7 +869,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlManageNicConfig;
         
@@ -863,7 +878,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ManagePreferredNameServerRow;
         
@@ -872,7 +887,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locManagePreferredNameServer;
         
@@ -881,7 +896,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl managePreferredNameServer;
         
@@ -890,7 +905,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow ManageAlternateNameServerRow;
         
@@ -899,7 +914,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locManageAlternateNameServer;
         
@@ -908,7 +923,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl manageAlternateNameServer;
         
@@ -917,7 +932,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel PrivUpdatePanel;
         
@@ -926,7 +941,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPrivateNetwork;
         
@@ -935,7 +950,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locIPFormat;
         
@@ -944,7 +959,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPrivateNetworkFormat;
         
@@ -953,7 +968,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow PrivCustomFormatRow;
         
@@ -962,7 +977,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPrivCustomFormat;
         
@@ -971,7 +986,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateIPAddress;
         
@@ -980,7 +995,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox privateSubnetMask;
         
@@ -989,7 +1004,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator privateSubnetMaskValidator;
         
@@ -998,7 +1013,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPrivDefaultGateway;
         
@@ -1007,7 +1022,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateDefaultGateway;
         
@@ -1016,7 +1031,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPrivPreferredNameServer;
         
@@ -1025,7 +1040,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl privatePreferredNameServer;
         
@@ -1034,7 +1049,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPrivAlternateNameServer;
         
@@ -1043,7 +1058,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::FuseCP.Portal.UserControls.EditIPAddressControl privateAlternateNameServer;
         
@@ -1052,7 +1067,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locHostname;
         
@@ -1061,7 +1076,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locHostnamePattern;
         
@@ -1070,7 +1085,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtHostnamePattern;
         
@@ -1079,7 +1094,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator HostnamePatternValidator;
         
@@ -1088,7 +1103,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locPatternText;
         
@@ -1097,7 +1112,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStartAction;
         
@@ -1106,7 +1121,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStartOptionsText;
         
@@ -1115,7 +1130,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioStartAction;
         
@@ -1124,7 +1139,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStartupDelayText;
         
@@ -1133,7 +1148,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStartupDelay;
         
@@ -1142,7 +1157,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStartupDelay;
         
@@ -1151,7 +1166,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locSeconds;
         
@@ -1160,7 +1175,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator StartupDelayValidator;
         
@@ -1169,7 +1184,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStopAction;
         
@@ -1178,7 +1193,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Localize locStopActionText;
         
@@ -1187,7 +1202,7 @@ namespace FuseCP.Portal.ProviderControls {
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// Zum ï¿½ndern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioStopAction;
     }

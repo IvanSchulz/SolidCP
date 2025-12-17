@@ -1,3 +1,18 @@
+// Copyright (C) 2025 FuseCP
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,7 +85,7 @@ namespace FuseCP.EnterpriseServer.Code.Virtualization2012.Helpers
             {
                 //Encryption.GenerateIV(out iv); // Random IV
                 string cryptedcookie = Encryption.Encrypt(cookie, key[0], key[1]);
-                //string urlstring = UrlEncodeBase64(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}|{1}", cryptedcookie, key[1])))); // Random IV mit übergeben
+                //string urlstring = UrlEncodeBase64(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}|{1}", cryptedcookie, key[1])))); // Random IV mit ï¿½bergeben
                 string urlstring = UrlEncodeBase64(Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}", cryptedcookie))));
                 return String.Format("{0}?e={1}&Resolution=", guacaserverurl, urlstring);
             }
