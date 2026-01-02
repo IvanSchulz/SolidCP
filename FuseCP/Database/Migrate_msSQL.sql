@@ -119,3 +119,33 @@ DELETE FROM [dbo].[ServiceDefaultProperties] WHERE [ProviderID] = 106
 DELETE FROM [dbo].[Providers] WHERE [ProviderID] = 106 AND [DisplayName] = 'Microsoft FTP Server 8.0'
 END
 GO
+
+-- Rename of Providers
+
+UPDATE [dbo].[Providers]
+SET ProviderType = REPLACE(ProviderType, 'SolidCP', 'FuseCP')
+WHERE ProviderType LIKE '%SolidCP%';
+
+UPDATE [dbo].[ServiceItemTypes]
+SET TypeName = REPLACE(TypeName, 'SolidCP', 'FuseCP')
+WHERE TypeName LIKE '%SolidCP%';
+
+UPDATE [dbo].[ResourceGroups]
+SET GroupController = REPLACE(GroupController, 'SolidCP', 'FuseCP')
+WHERE GroupController LIKE '%SolidCP%';
+
+UPDATE [dbo].[ScheduleTasks]
+SET TaskType = REPLACE(TaskType, 'SolidCP', 'FuseCP')
+WHERE TaskType LIKE '%SolidCP%';
+
+UPDATE [dbo].[ScheduleTaskViewConfiguration]
+SET Description = REPLACE(Description, 'SolidCP', 'FuseCP')
+WHERE Description LIKE '%SolidCP%';
+
+UPDATE [dbo].[ServiceDefaultProperties]
+SET PropertyValue = REPLACE(PropertyValue, 'SolidCP', 'FuseCP')
+WHERE PropertyValue LIKE '%SolidCP%';
+
+UPDATE [dbo].[Themes]
+SET DisplayName = REPLACE(DisplayName, 'SolidCP', 'FuseCP')
+WHERE DisplayName LIKE '%SolidCP%';
