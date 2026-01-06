@@ -217,7 +217,7 @@ public class EnterpriseServer : IDisposable
 		File.WriteAllText(webConfigPath, webConfig.ToString());
 		*/
 		CurrentConnectionString = connectionString;
-		Environment.SetEnvironmentVariable("SOLIDCP_CONNECTIONSTRING", connectionString);
+		Environment.SetEnvironmentVariable("FUSECP_CONNECTIONSTRING", connectionString);
 	}
 
 	public static string sqlServerConnectionString = null;

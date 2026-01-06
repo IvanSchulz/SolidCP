@@ -141,7 +141,7 @@ namespace FuseCP.EnterpriseServer.Data
 		}
 	
 		public static string ConnectionString =>
-			Environment.GetEnvironmentVariable("SOLIDCP_CONNECTIONSTRING") ??
+			Environment.GetEnvironmentVariable("FUSECP_CONNECTIONSTRING") ??
 			(OSInfo.IsNetFX ? ConnectionStringNetFX : ConnectionStringNetCore);
 		public static string NativeConnectionString => GetNativeConnectionString(ConnectionString);
 
@@ -161,7 +161,7 @@ namespace FuseCP.EnterpriseServer.Data
         public static DbType DbType => dbType != DbType.Unknown ? dbType : (dbType = GetDbType(ConnectionString));
 
 		public static bool AlwaysUseEntityFrameworkNetFX =>
-			Environment.GetEnvironmentVariable("SOLIDCP_ALWAYS_USE_ENTITY_FRAMEWORK") == "true" ||
+			Environment.GetEnvironmentVariable("FUSECP_ALWAYS_USE_ENTITY_FRAMEWORK") == "true" ||
 			string.Equals(ConfigurationManager.AppSettings["FuseCP.AlwaysUseEntityFramework"], "true", StringComparison.OrdinalIgnoreCase);
 	}
 }
