@@ -1127,13 +1127,13 @@ Function dSQLPScheckInstalled()                             # Function to check 
 				(New-Object System.Net.WebClient).DownloadFile("https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x64.exe", "C:\_Install Files\SQLPS\vcredist_x64.exe") | Out-Null
 				(Start-Process -FilePath 'C:\_Install Files\SQLPS\vcredist_x64.exe' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
 			}
-			# Microsoft® System CLR Types for Microsoft® SQL Server® 2012
+			# Microsoftï¿½ System CLR Types for Microsoftï¿½ SQL Serverï¿½ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/SQLSysClrTypes.msi", "C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi") | Out-Null
-			# Microsoft® SQL Server® 2012 Shared Management Objects
+			# Microsoftï¿½ SQL Serverï¿½ 2012 Shared Management Objects
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/SharedManagementObjects.msi", "C:\_Install Files\SQLPS\2 - SharedManagementObjects.msi") | Out-Null
-			# Microsoft® Windows PowerShell Extensions for Microsoft® SQL Server® 2012
+			# Microsoftï¿½ Windows PowerShell Extensions for Microsoftï¿½ SQL Serverï¿½ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/PowerShellTools.MSI", "C:\_Install Files\SQLPS\3 - PowerShellTools.msi") | Out-Null
-			# Microsoft® OLEDB Provider for DB2 v4.0 for Microsoft® SQL Server® 2012
+			# Microsoftï¿½ OLEDB Provider for DB2 v4.0 for Microsoftï¿½ SQL Serverï¿½ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x64/DB2OLEDBV4.msi", "C:\_Install Files\SQLPS\4 - DB2OLEDBV4.msi") | Out-Null
 			Write-Host "`t Installing the 64bit version of SQL Server PowerShell Tools" -ForegroundColor Green
 			(Start-Process -FilePath 'C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
@@ -1147,13 +1147,13 @@ Function dSQLPScheckInstalled()                             # Function to check 
 				(New-Object System.Net.WebClient).DownloadFile("https://download.microsoft.com/download/2/E/6/2E61CFA4-993B-4DD4-91DA-3737CD5CD6E3/vcredist_x86.exe", "C:\_Install Files\SQLPS\vcredist_x86.exe") | Out-Null
 				(Start-Process -FilePath 'C:\_Install Files\SQLPS\vcredist_x86.exe' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
 			}
-			# Microsoft® System CLR Types for Microsoft® SQL Server® 2012
+			# Microsoftï¿½ System CLR Types for Microsoftï¿½ SQL Serverï¿½ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/SQLSysClrTypes.msi", "C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi") | Out-Null
-			# Microsoft® SQL Server® 2012 Shared Management Objects
+			# Microsoftï¿½ SQL Serverï¿½ 2012 Shared Management Objects
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/SharedManagementObjects.msi", "C:\_Install Files\SQLPS\2 - SharedManagementObjects.msi") | Out-Null
-			# Microsoft® Windows PowerShell Extensions for Microsoft® SQL Server® 2012
+			# Microsoftï¿½ Windows PowerShell Extensions for Microsoftï¿½ SQL Serverï¿½ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/PowerShellTools.msi", "C:\_Install Files\SQLPS\3 - PowerShellTools.msi") | Out-Null
-			# Microsoft® OLEDB Provider for DB2 v4.0 for Microsoft® SQL Server® 2012
+			# Microsoftï¿½ OLEDB Provider for DB2 v4.0 for Microsoftï¿½ SQL Serverï¿½ 2012
 			(New-Object System.Net.WebClient).DownloadFile("http://download.microsoft.com/download/F/E/D/FEDB200F-DE2A-46D8-B661-D019DFE9D470/ENU/x86/DB2OLEDBV4.msi", "C:\_Install Files\SQLPS\4 - DB2OLEDBV4.msi") | Out-Null
 			Write-Host "`t Installing the 32bit version of SQL Server PowerShell Tools" -ForegroundColor Green
 			(Start-Process -FilePath 'C:\_Install Files\SQLPS\1 - SQLSysClrTypes.msi' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
@@ -1162,8 +1162,8 @@ Function dSQLPScheckInstalled()                             # Function to check 
 			(Start-Process -FilePath 'C:\_Install Files\SQLPS\4 - DB2OLEDBV4.msi' -Argumentlist "/passive" -Wait -Passthru).ExitCode | Out-Null
 		}
 		#(set-alias installutil $env:windir\microsoft.net\framework\v2.0.50727\installutil) | Out-Null
-		#(installutil -i “C:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSProvider.dll”) | Out-Null
-		#(installutil -i “C:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSSnapins.dll”) | Out-Null
+		#(installutil -i ï¿½C:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSProvider.dllï¿½) | Out-Null
+		#(installutil -i ï¿½C:\Program Files\Microsoft SQL Server\110\Tools\PowerShell\Modules\SQLPS\Microsoft.SqlServer.Management.PSSnapins.dllï¿½) | Out-Null
 		# Test to make sure the SQLPS module is now loaded, if not then load it
 		Write-Host "`n`t *************************************************" -ForegroundColor Yellow
 		Write-Host "`t *                                               *" -ForegroundColor Yellow
@@ -1231,7 +1231,7 @@ if (($Host.Version).Major -le 2) {
 	# Run the FuseCP Installation Menu as long as the logged in user is member of the Local "Administrators" group of the "Domain Admins" group
 	if (Test-Path "$FCP_EntSvr_Dir") { # Check to make sure the script is being run on the Enterprise Server
 		if (!($dDomainMember)) { # Check to see if the machine is NOT joined to a domain
-			if (CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local") { # Run the SOlidCP Menu if the logged in user is a Local Administrator
+			if (CheckGroupMembers "$dLangAdministratorGroup" "$dLoggedInUserName" "Local") { # Run the FuseCP Menu if the logged in user is a Local Administrator
 				Write-Host "`n`t This machine is NOT Joined to domain and you are logged in as Local Administrator Account" -ForegroundColor Green
 				Write-Host "`t The FuseCP Upgrade menu is being loaded" -ForegroundColor Green
 				FCPupgradeMenu
@@ -1263,7 +1263,7 @@ if (($Host.Version).Major -le 2) {
 			Write-Host "`t *************************************************" -ForegroundColor Yellow
 			dPressAnyKeyToExit
 		}elseif ( ($dDomainMember) -and (!($dLoggedInLocally)) ) {
-			if (CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain") { # Run the SOlidCP Menu if the logged in user is a Domain Administrator
+			if (CheckGroupMembers "$dLangDomainAdminsGroup" "$dLoggedInUserName" "Domain") { # Run the FuseCP Menu if the logged in user is a Domain Administrator
 				Write-Host "`n`t This machine is Joined to domain and you are logged in as Domain Administrator Account" -ForegroundColor Green
 				Write-Host "`t The FuseCP Upgrade menu is being loaded" -ForegroundColor Green
 				FCPupgradeMenu
