@@ -1,8 +1,8 @@
 <?php if (!defined('WHMCS')) exit('ACCESS DENIED');
 // Copyright (c) 2023, FuseCP
-// SolidCP is distributed under the Creative Commons Share-alike license
+// FuseCP is distributed under the Creative Commons Share-alike license
 // 
-// SolidCP is a fork of WebsitePanel:
+// FuseCP is a fork of WebsitePanel:
 // Copyright (c) 2015, Outercurve Foundation.
 // All rights reserved.
 //
