@@ -14,10 +14,10 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 #if Client
-// Copyright (c) 2016, SolidCP
-// SolidCP is distributed under the Creative Commons Share-alike license
+// Copyright (c) 2016, FuseCP
+// FuseCP is distributed under the Creative Commons Share-alike license
 // 
-// SolidCP is a fork of WebsitePanel:
+// FuseCP is a fork of WebsitePanel:
 // Copyright (c) 2015, Outercurve Foundation.
 // All rights reserved.
 //
