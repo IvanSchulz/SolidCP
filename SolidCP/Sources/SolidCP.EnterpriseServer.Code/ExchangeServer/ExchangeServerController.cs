@@ -3856,11 +3856,26 @@ namespace SolidCP.EnterpriseServer
                     return -1;
 
                 var mailboxPlan = GetExchangeMailboxPlan(itemID, mailboxPlanId);
-                if (mailboxPlan != null)
+                if (mailboxPlan == null) return -1;
+
+                // Log Extension
+                LogExtension.SetItemName(mailboxPlan.MailboxPlan);
+                LogExtension.WriteObject(mailboxPlan);
+
+                if (mailboxPlan.Archiving)
                 {
-                    // Log Extension
-                    LogExtension.SetItemName(mailboxPlan.MailboxPlan);
-                    LogExtension.WriteObject(mailboxPlan);
+                    int exchangeServiceId = GetExchangeServiceID(org.PackageId);
+
+                    if (exchangeServiceId <= 0) return -1;
+                    ExchangeServer exchange = GetExchangeServer(exchangeServiceId, org.ServiceId);
+
+                    List<ExchangeMailboxPlanRetentionPolicyTag> tags = GetExchangeMailboxPlanRetentionPolicyTags(mailboxPlan.MailboxPlanId);
+
+                    if (tags != null && tags.Count > 0)
+                    {
+                        ResultObject res = exchange.RemoveRetentionPolicy(mailboxPlan.SCPUniqueName);
+                        if (!res.IsSuccess) return -1;
+                    }
                 }
 
                 DataProvider.DeleteExchangeMailboxPlan(mailboxPlanId);
