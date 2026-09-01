@@ -1042,6 +1042,32 @@ namespace SolidCP.EnterpriseServer
         }
         #endregion
 
+        #region Licensing Quotas
+        [WebMethod]
+        public List<LicensingQuota> GetLicensingQuotas(int groupId, string sortColumn)
+        {
+            return ServerController.GetLicensingQuotas(groupId, sortColumn);
+        }
+
+        [WebMethod]
+        public LicensingQuota GetLicensingQuotaById(int quotaId)
+        {
+            return ServerController.GetLicensingQuotaById(quotaId);
+        }
+
+        [WebMethod]
+        public List<LicensingQuota> GetLicensingQuotasByTemplateName(string vmTemplateName, int groupId)
+        {
+            return ServerController.GetLicensingQuotasByTemplateName(vmTemplateName, groupId);
+        }
+
+        [WebMethod]
+        public ResultObject UpdateLicensingQuota(LicensingQuota licensingQuota)
+        {
+            return ServerController.UpdateLicensingQuota(licensingQuota);
+        }
+        #endregion
+
         #region Helper methods
         private string[] ConvertDictionaryToArray(StringDictionary settings)
         {

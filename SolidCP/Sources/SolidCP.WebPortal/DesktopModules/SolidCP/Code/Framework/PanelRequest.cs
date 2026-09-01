@@ -237,5 +237,10 @@ namespace SolidCP.Portal
         {
             get { return GetInt("StorageSpaceId"); }
         }
+
+        public static int QuotaID
+        {
+            get { return GetInt("QuotaID"); }
+        }
     }
 }

@@ -6523,5 +6523,44 @@ namespace SolidCP.EnterpriseServer
 
         #endregion
 
+        #region Licensing Quotas
+        public static DataSet GetLicensingQuotas(int actorId, int groupId, string sortColumn)
+        {
+            return SqlHelper.ExecuteDataset(ConnectionString, CommandType.StoredProcedure,
+                 ObjectQualifier + "GetLicensingQuotas",
+                 new SqlParameter("@ActorID", actorId),
+                 new SqlParameter("@GroupID", groupId),
+                 new SqlParameter("@SortColumn", sortColumn));
+        }
+
+        public static DataSet GetLicensingQuotaById(int actorId, int quotaId)
+        {
+            return SqlHelper.ExecuteDataset(ConnectionString, CommandType.StoredProcedure,
+                 ObjectQualifier + "GetLicensingQuotaById",
+                new SqlParameter("@ActorID", actorId),
+                new SqlParameter("@QuotaID", quotaId)
+            );
+        }
+
+        public static DataSet GetLicensingQuotasByTemplateName(string vmTemplateName, int groupId)
+        {
+            return SqlHelper.ExecuteDataset(ConnectionString, CommandType.StoredProcedure,
+                 ObjectQualifier + "GetLicensingQuotasByTemplateName",
+                new SqlParameter("@VmTemplateName", vmTemplateName),
+                new SqlParameter("@GroupID", groupId)
+            );
+        }
+
+        public static void UpdateLicensingQuota(int actorId, int quotaId, string licenseDescription, string vmTemplateNamesXml)
+        {
+            SqlHelper.ExecuteNonQuery(ConnectionString, CommandType.StoredProcedure,
+                ObjectQualifier + "UpdateLicensingQuota",
+                new SqlParameter("@ActorID", actorId),
+                new SqlParameter("@QuotaID", quotaId),
+                new SqlParameter("@LicenseDescription", licenseDescription),
+                new SqlParameter("@VmTemplateNamesXml", vmTemplateNamesXml));
+        }
+        #endregion
+
     }
 }

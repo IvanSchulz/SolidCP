@@ -62,6 +62,14 @@ namespace SolidCP.EnterpriseServer
 
         private System.Threading.SendOrPostCallback GetSystemMemoryInfoOperationCompleted;
 
+        private System.Threading.SendOrPostCallback GetLicensingQuotasOperationCompleted;
+
+        private System.Threading.SendOrPostCallback GetLicensingQuotaByIdOperationCompleted;
+
+        private System.Threading.SendOrPostCallback GetLicensingQuotasByTemplateNameOperationCompleted;
+
+        private System.Threading.SendOrPostCallback UpdateLicensingQuotaOperationCompleted;
+
         private System.Threading.SendOrPostCallback GetAllServersOperationCompleted;
 
         private System.Threading.SendOrPostCallback GetRawAllServersOperationCompleted;
@@ -362,6 +370,18 @@ namespace SolidCP.EnterpriseServer
 
         /// <remarks/>
         public event GetSystemMemoryInfoCompletedEventHandler GetSystemMemoryInfoCompleted;
+
+        /// <remarks/>
+        public event GetLicensingQuotasCompletedEventHandler GetLicensingQuotasCompleted;
+
+        /// <remarks/>
+        public event GetLicensingQuotaByIdCompletedEventHandler GetLicensingQuotaByIdCompleted;
+
+        /// <remarks/>
+        public event GetLicensingQuotasByTemplateNameCompletedEventHandler GetLicensingQuotasByTemplateNameCompleted;
+
+        /// <remarks/>
+        public event UpdateLicensingQuotaCompletedEventHandler UpdateLicensingQuotaCompleted;
 
         /// <remarks/>
         public event GetAllServersCompletedEventHandler GetAllServersCompleted;
@@ -1405,6 +1425,208 @@ namespace SolidCP.EnterpriseServer
             {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetSystemMemoryInfoCompleted(this, new GetSystemMemoryInfoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://smbsaas/solidcp/enterpriseserver/GetLicensingQuotas", RequestNamespace = "http://smbsaas/solidcp/enterpriseserver", ResponseNamespace = "http://smbsaas/solidcp/enterpriseserver", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public LicensingQuota[] GetLicensingQuotas(int groupId, string sortColumn)
+        {
+            object[] results = this.Invoke("GetLicensingQuotas", new object[] {
+                        groupId,
+                        sortColumn});
+            return ((LicensingQuota[])(results[0]));
+        }
+
+        /// <remarks/>
+        public System.IAsyncResult BeginGetLicensingQuotas(int groupId, string sortColumn, System.AsyncCallback callback, object asyncState)
+        {
+            return this.BeginInvoke("GetLicensingQuotas", new object[] {
+                        groupId,
+                        sortColumn}, callback, asyncState);
+        }
+
+        /// <remarks/>
+        public LicensingQuota[] EndGetLicensingQuotas(System.IAsyncResult asyncResult)
+        {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((LicensingQuota[])(results[0]));
+        }
+
+        /// <remarks/>
+        public void GetLicensingQuotasAsync(int groupId, string sortColumn)
+        {
+            this.GetLicensingQuotasAsync(groupId, sortColumn, null);
+        }
+
+        /// <remarks/>
+        public void GetLicensingQuotasAsync(int groupId, string sortColumn, object userState)
+        {
+            if ((this.GetLicensingQuotasOperationCompleted == null))
+            {
+                this.GetLicensingQuotasOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetLicensingQuotasOperationCompleted);
+            }
+            this.InvokeAsync("GetLicensingQuotas", new object[] {
+                        groupId,
+                        sortColumn}, this.GetLicensingQuotasOperationCompleted, userState);
+        }
+
+        private void OnGetLicensingQuotasOperationCompleted(object arg)
+        {
+            if ((this.GetLicensingQuotasCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetLicensingQuotasCompleted(this, new GetLicensingQuotasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://smbsaas/solidcp/enterpriseserver/GetLicensingQuotaById", RequestNamespace = "http://smbsaas/solidcp/enterpriseserver", ResponseNamespace = "http://smbsaas/solidcp/enterpriseserver", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public LicensingQuota GetLicensingQuotaById(int quotaId)
+        {
+            object[] results = this.Invoke("GetLicensingQuotaById", new object[] {
+                        quotaId});
+            return ((LicensingQuota)(results[0]));
+        }
+
+        /// <remarks/>
+        public System.IAsyncResult BeginGetLicensingQuotaById(int quotaId, System.AsyncCallback callback, object asyncState)
+        {
+            return this.BeginInvoke("GetLicensingQuotaById", new object[] {
+                        quotaId}, callback, asyncState);
+        }
+
+        /// <remarks/>
+        public LicensingQuota EndGetLicensingQuotaById(System.IAsyncResult asyncResult)
+        {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((LicensingQuota)(results[0]));
+        }
+
+        /// <remarks/>
+        public void GetLicensingQuotaByIdAsync(int quotaId)
+        {
+            this.GetLicensingQuotaByIdAsync(quotaId, null);
+        }
+
+        /// <remarks/>
+        public void GetLicensingQuotaByIdAsync(int quotaId, object userState)
+        {
+            if ((this.GetLicensingQuotaByIdOperationCompleted == null))
+            {
+                this.GetLicensingQuotaByIdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetLicensingQuotaByIdOperationCompleted);
+            }
+            this.InvokeAsync("GetLicensingQuotaById", new object[] {
+                        quotaId}, this.GetLicensingQuotaByIdOperationCompleted, userState);
+        }
+
+        private void OnGetLicensingQuotaByIdOperationCompleted(object arg)
+        {
+            if ((this.GetLicensingQuotaByIdCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetLicensingQuotaByIdCompleted(this, new GetLicensingQuotaByIdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://smbsaas/solidcp/enterpriseserver/GetLicensingQuotasByTemplateName", RequestNamespace = "http://smbsaas/solidcp/enterpriseserver", ResponseNamespace = "http://smbsaas/solidcp/enterpriseserver", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public LicensingQuota[] GetLicensingQuotasByTemplateName(string vmTemplateName, int groupId)
+        {
+            object[] results = this.Invoke("GetLicensingQuotasByTemplateName", new object[] {
+                        vmTemplateName,
+                        groupId});
+            return ((LicensingQuota[])(results[0]));
+        }
+
+        /// <remarks/>
+        public System.IAsyncResult BeginGetLicensingQuotasByTemplateName(string vmTemplateName, int groupId, System.AsyncCallback callback, object asyncState)
+        {
+            return this.BeginInvoke("GetLicensingQuotasByTemplateName", new object[] {
+                        vmTemplateName,
+                        groupId}, callback, asyncState);
+        }
+
+        /// <remarks/>
+        public LicensingQuota[] EndGetLicensingQuotasByTemplateName(System.IAsyncResult asyncResult)
+        {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((LicensingQuota[])(results[0]));
+        }
+
+        /// <remarks/>
+        public void GetLicensingQuotasByTemplateNameAsync(string vmTemplateName, int groupId)
+        {
+            this.GetLicensingQuotasByTemplateNameAsync(vmTemplateName, groupId, null);
+        }
+
+        /// <remarks/>
+        public void GetLicensingQuotasByTemplateNameAsync(string vmTemplateName, int groupId, object userState)
+        {
+            if ((this.GetLicensingQuotasByTemplateNameOperationCompleted == null))
+            {
+                this.GetLicensingQuotasByTemplateNameOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetLicensingQuotasByTemplateNameOperationCompleted);
+            }
+            this.InvokeAsync("GetLicensingQuotasByTemplateName", new object[] {
+                        vmTemplateName,
+                        groupId}, this.GetLicensingQuotasByTemplateNameOperationCompleted, userState);
+        }
+
+        private void OnGetLicensingQuotasByTemplateNameOperationCompleted(object arg)
+        {
+            if ((this.GetLicensingQuotasByTemplateNameCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetLicensingQuotasByTemplateNameCompleted(this, new GetLicensingQuotasByTemplateNameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://smbsaas/solidcp/enterpriseserver/UpdateLicensingQuota", RequestNamespace = "http://smbsaas/solidcp/enterpriseserver", ResponseNamespace = "http://smbsaas/solidcp/enterpriseserver", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public ResultObject UpdateLicensingQuota(LicensingQuota licensingQuota)
+        {
+            object[] results = this.Invoke("UpdateLicensingQuota", new object[] {
+                        licensingQuota});
+            return ((ResultObject)(results[0]));
+        }
+
+        /// <remarks/>
+        public System.IAsyncResult BeginUpdateLicensingQuota(LicensingQuota licensingQuota, System.AsyncCallback callback, object asyncState)
+        {
+            return this.BeginInvoke("UpdateLicensingQuota", new object[] {
+                        licensingQuota}, callback, asyncState);
+        }
+
+        /// <remarks/>
+        public ResultObject EndUpdateLicensingQuota(System.IAsyncResult asyncResult)
+        {
+            object[] results = this.EndInvoke(asyncResult);
+            return ((ResultObject)(results[0]));
+        }
+
+        /// <remarks/>
+        public void UpdateLicensingQuotaAsync(LicensingQuota licensingQuota)
+        {
+            this.UpdateLicensingQuotaAsync(licensingQuota, null);
+        }
+
+        /// <remarks/>
+        public void UpdateLicensingQuotaAsync(LicensingQuota licensingQuota, object userState)
+        {
+            if ((this.UpdateLicensingQuotaOperationCompleted == null))
+            {
+                this.UpdateLicensingQuotaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateLicensingQuotaOperationCompleted);
+            }
+            this.InvokeAsync("UpdateLicensingQuota", new object[] {
+                        licensingQuota}, this.UpdateLicensingQuotaOperationCompleted, userState);
+        }
+
+        private void OnUpdateLicensingQuotaOperationCompleted(object arg)
+        {
+            if ((this.UpdateLicensingQuotaCompleted != null))
+            {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateLicensingQuotaCompleted(this, new UpdateLicensingQuotaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
 
@@ -8488,6 +8710,126 @@ namespace SolidCP.EnterpriseServer
             {
                 this.RaiseExceptionIfNecessary();
                 return ((SystemMemoryInfo)(this.results[0]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    public delegate void GetLicensingQuotasCompletedEventHandler(object sender, GetLicensingQuotasCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetLicensingQuotasCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal GetLicensingQuotasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public LicensingQuota[] Result
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((LicensingQuota[])(this.results[0]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    public delegate void GetLicensingQuotaByIdCompletedEventHandler(object sender, GetLicensingQuotaByIdCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetLicensingQuotaByIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal GetLicensingQuotaByIdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public LicensingQuota Result
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((LicensingQuota)(this.results[0]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    public delegate void GetLicensingQuotasByTemplateNameCompletedEventHandler(object sender, GetLicensingQuotasByTemplateNameCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetLicensingQuotasByTemplateNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal GetLicensingQuotasByTemplateNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public LicensingQuota[] Result
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((LicensingQuota[])(this.results[0]));
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    public delegate void UpdateLicensingQuotaCompletedEventHandler(object sender, UpdateLicensingQuotaCompletedEventArgs e);
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "4.8.3928.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateLicensingQuotaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+
+        private object[] results;
+
+        internal UpdateLicensingQuotaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+
+        /// <remarks/>
+        public ResultObject Result
+        {
+            get
+            {
+                this.RaiseExceptionIfNecessary();
+                return ((ResultObject)(this.results[0]));
             }
         }
     }

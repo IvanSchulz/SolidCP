@@ -41,7 +41,35 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
                 if (!SecurityContext.CheckPackage(res, packageId, DemandPackage.IsActive))
                     return res;
 
-                #endregion                
+                #endregion
+
+                #region load OS templates
+                LibraryItem osTemplate = null;
+
+                try
+                {
+                    bool isTemplateExist = false;
+                    LibraryItem[] osTemplates = VirtualizationHelper.GetOperatingSystemTemplates(packageId);
+                    foreach (LibraryItem item in osTemplates)
+                    {
+                        if (String.Compare(item.Path, osTemplateFile, true) == 0)
+                        {
+                            osTemplate = item;
+                            isTemplateExist = true;
+                            break;
+                        }
+                    }
+                    if (!isTemplateExist)
+                    { //give a description of the error for Third party services if they use SOAP
+                        throw new Exception("The template " + osTemplateFile + " was not found in the HyperV Service Template Library.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    res.AddError(VirtualizationErrorCodes.GET_OS_TEMPLATES_ERROR, ex);
+                    return res;
+                }
+                #endregion
 
                 //TODO: move to separate method
                 #region Check Quotas
@@ -80,6 +108,14 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
                         QuotaHelper.CheckNumericQuota(cntx, quotaResults, Quotas.VPS2012_HDD, totalHddSize, VirtualizationErrorCodes.QUOTA_EXCEEDED_HDD);
                     }
                     QuotaHelper.CheckNumericQuota(cntx, quotaResults, Quotas.VPS2012_SNAPSHOTS_NUMBER, VMSettings.SnapshotsNumber, VirtualizationErrorCodes.QUOTA_EXCEEDED_SNAPSHOTS);
+
+                    // check licensing quotas
+                    ResourceGroupInfo group = ServerController.GetResourceGroupByName(ResourceGroups.VPS2012);
+                    List<LicensingQuota> licensingQuotas = ServerController.GetLicensingQuotasByTemplateName(osTemplate.Name, group.GroupId);
+                    foreach (LicensingQuota licensingQuota in licensingQuotas)
+                    {
+                        QuotaHelper.CheckListsQuota(cntx, quotaResults, licensingQuota.QuotaName, VirtualizationErrorCodes.QUOTA_EXCEEDED_LICENSES_NUMBER);
+                    }
                 }
                 QuotaHelper.CheckBooleanQuota(cntx, quotaResults, Quotas.VPS2012_DVD_ENABLED, VMSettings.DvdDriveInstalled, VirtualizationErrorCodes.QUOTA_EXCEEDED_DVD_ENABLED);
                 QuotaHelper.CheckBooleanQuota(cntx, quotaResults, Quotas.VPS2012_BOOT_CD_ALLOWED, VMSettings.BootFromCD, VirtualizationErrorCodes.QUOTA_EXCEEDED_CD_ALLOWED);
@@ -276,42 +312,23 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.UseCase
                 //vm.PrivateNetworkEnabled = privateNetworkEnabled;
                 vm.ManagementNetworkEnabled = !String.IsNullOrEmpty(manageNic.NetworkId);
 
-                #region load OS templates
-                // load OS templates
-                LibraryItem osTemplate = null;
-
+                #region set OS template data
                 try
                 {
-                    bool isTemplateExist = false;
-                    LibraryItem[] osTemplates = VirtualizationHelper.GetOperatingSystemTemplates(vm.PackageId);
-                    foreach (LibraryItem item in osTemplates)
+                    // check minimal disk size
+                    if (osTemplate.DiskSize > 0 && vm.HddSize[0] < osTemplate.DiskSize)
                     {
-                        if (String.Compare(item.Path, osTemplateFile, true) == 0)
-                        {
-                            osTemplate = item;
-                            isTemplateExist = true;
-
-                            // check minimal disk size
-                            if (osTemplate.DiskSize > 0 && vm.HddSize[0] < osTemplate.DiskSize)
-                            {
-                                TaskManager.CompleteResultTask(res, VirtualizationErrorCodes.QUOTA_TEMPLATE_DISK_MINIMAL_SIZE + ":" + osTemplate.DiskSize);
-                                return res;
-                            }
-                            if (osTemplate.Generation < 1)
-                                throw new Exception("The generation of VM was not configured in the template");
-                            vm.Generation = osTemplate.Generation;
-                            vm.SecureBootTemplate = osTemplate.SecureBootTemplate;
-                            vm.EnableSecureBoot = osTemplate.Generation == 1 ? false : osTemplate.EnableSecureBoot;
-                            vm.OperatingSystemTemplate = osTemplate.Name;
-                            vm.LegacyNetworkAdapter = osTemplate.LegacyNetworkAdapter;
-                            vm.RemoteDesktopEnabled = osTemplate.RemoteDesktop;
-                            break;
-                        }
+                        TaskManager.CompleteResultTask(res, VirtualizationErrorCodes.QUOTA_TEMPLATE_DISK_MINIMAL_SIZE + ":" + osTemplate.DiskSize);
+                        return res;
                     }
-                    if (!isTemplateExist)
-                    { //give a description of the error for Third party services if they use SOAP
-                        throw new Exception("The template " + osTemplateFile + " was not found in the HyperV Service Template Library.");
-                    }
+                    if (osTemplate.Generation < 1)
+                        throw new Exception("The generation of VM was not configured in the template");
+                    vm.Generation = osTemplate.Generation;
+                    vm.SecureBootTemplate = osTemplate.SecureBootTemplate;
+                    vm.EnableSecureBoot = osTemplate.Generation == 1 ? false : osTemplate.EnableSecureBoot;
+                    vm.OperatingSystemTemplate = osTemplate.Name;
+                    vm.LegacyNetworkAdapter = osTemplate.LegacyNetworkAdapter;
+                    vm.RemoteDesktopEnabled = osTemplate.RemoteDesktop;
                 }
                 catch (Exception ex)
                 {

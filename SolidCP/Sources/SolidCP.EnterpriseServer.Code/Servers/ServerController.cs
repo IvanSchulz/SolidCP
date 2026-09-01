@@ -3655,6 +3655,78 @@ namespace SolidCP.EnterpriseServer
 		}
 		#endregion
 
+		#region Licensing Quotas
+		public static List<LicensingQuota> GetLicensingQuotas(int groupId, string sortColumn)
+		{
+			var quotas = new List<LicensingQuota>();
+
+			ObjectUtils.FillCollectionFromDataSet(quotas, DataProvider.GetLicensingQuotas(SecurityContext.User.UserId, groupId, sortColumn));
+
+			return quotas;
+		}
+
+		public static LicensingQuota GetLicensingQuotaById(int quotaId)
+		{
+			List<LicensingQuota> quotas = new List<LicensingQuota>();
+			DataSet ds = DataProvider.GetLicensingQuotaById(SecurityContext.User.UserId, quotaId);
+
+			ObjectUtils.FillCollectionFromDataView(quotas, ds.Tables[0].DefaultView);
+
+			if (quotas.Count == 0) return null;
+			LicensingQuota quota = quotas[0];
+
+			List<string> templates = new List<string>();
+			DataView dv = ds.Tables[1].DefaultView;
+			foreach (DataRowView dr in dv)
+            {
+				var template = dr["VmTemplateName"];
+				if (template == DBNull.Value) continue;
+				templates.Add((string)template);
+			}
+			quota.VmTemplateNames = templates.ToArray();
+
+			return quota;
+		}
+
+		public static List<LicensingQuota> GetLicensingQuotasByTemplateName(string vmTemplateName, int groupId)
+		{
+			var quotas = new List<LicensingQuota>();
+
+			ObjectUtils.FillCollectionFromDataSet(quotas, DataProvider.GetLicensingQuotasByTemplateName(vmTemplateName, groupId));
+
+			return quotas;
+		}
+
+		public static ResultObject UpdateLicensingQuota(LicensingQuota licensingQuota)
+		{
+			ResultObject res = new ResultObject();
+
+			if (!SecurityContext.CheckAccount(res, DemandAccount.NotDemo | DemandAccount.IsAdmin | DemandAccount.IsActive)) return res;
+			
+			try
+			{
+				// check duplicate template names
+				if (licensingQuota.VmTemplateNames.Length != licensingQuota.VmTemplateNames.Distinct().Count())
+                {
+					throw new Exception("Duplicate template names!");
+                }
+
+				string vmTemplateNamesXml = ObjectUtils.Serialize(licensingQuota.VmTemplateNames);
+
+				DataProvider.UpdateLicensingQuota(SecurityContext.User.UserId, licensingQuota.QuotaID, licensingQuota.LicenseDescription, vmTemplateNamesXml);
+				DataProvider.UpdateQuotaHidden(licensingQuota.QuotaName, licensingQuota.GroupID, licensingQuota.IsHidden);
+			}
+			catch (Exception ex)
+			{
+				res.AddError("UPDATE_LICENSING_QUOTA_ERROR", ex);
+				return res;
+			}
+
+			res.IsSuccess = true;
+			return res;
+		}
+		#endregion
+
 		#region Private methods
 
 		/*

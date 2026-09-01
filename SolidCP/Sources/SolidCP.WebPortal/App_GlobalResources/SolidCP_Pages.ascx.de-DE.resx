@@ -564,4 +564,10 @@
   <data name="PageTitle.PrivateNetworkVLANs" xml:space="preserve">
     <value>Privates Netzwerk VLANs</value>
   </data>
+  <data name="PageName.LicensingQuotas" xml:space="preserve">
+    <value>Lizenzen-Quoten</value>
+  </data>
+  <data name="PageTitle.LicensingQuotas" xml:space="preserve">
+    <value>Lizenzen-Quoten</value>
+  </data>
 </root>

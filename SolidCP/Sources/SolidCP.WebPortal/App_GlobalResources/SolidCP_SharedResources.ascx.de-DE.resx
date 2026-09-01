@@ -4719,6 +4719,21 @@
   <data name="Error.NO_CPU_CORES" xml:space="preserve">
     <value>Keine CPU-Kerne mehr verfügbar</value>
   </data>
+  <data name="Error.VPS_NOT_ENOUGH_LICENSES" xml:space="preserve">
+    <value>Für die VPS-Vorlage sind nicht genügend Lizenzen verfügbar</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA" xml:space="preserve">
+    <value>Lizenzen-Quote kann nicht aktualisiert werden</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA_NOT_FOUND" xml:space="preserve">
+    <value>Lizenzen-Quote nicht gefunden</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA_DESCRIPTION" xml:space="preserve">
+    <value>Lizenzen-Quote kann nicht aktualisiert werden: Beschreibung kann nicht leer sein</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA_TEMPLATES" xml:space="preserve">
+    <value>Lizenzen-Quote kann nicht aktualisiert werden: Fügen Sie mindestens eine Vorlage hinzu</value>
+  </data>
   <data name="Error.VPS_ERROR_DELETE" xml:space="preserve">
     <value>Fehler beim Löschen des virtuellen Servers</value>
   </data>
@@ -4889,6 +4904,12 @@
   </data>
   <data name="VPS.VPS_QUOTA_EXCEEDED_SERVERS_NUMBER" xml:space="preserve">
     <value>Die maximale Anzahl erlaubter VPS im Plan: {1}</value>
+  </data>
+  <data name="VPS.VPS_QUOTA_EXCEEDED_LICENSES_NUMBER" xml:space="preserve">
+    <value>Die maximale Anzahl erlaubter Lizenzen für den VPS im Plan: {1}</value>
+  </data>
+  <data name="VPS.VPS_LICENSE_NOT_AVAILABLE_DESCRIPTION" xml:space="preserve">
+    <value>{1}</value>
   </data>
   <data name="VPS.VPS_QUOTA_EXCEEDED_SNAPSHOTS" xml:space="preserve">
     <value>Die maximale Anzahl erlaubter Snapshots: {1}</value>

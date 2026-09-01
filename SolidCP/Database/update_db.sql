@@ -4389,7 +4389,11 @@ SELECT
 	Q.QuotaID,
 	Q.GroupID,
 	Q.QuotaName,
-	Q.QuotaDescription,
+	QuotaDescription = CASE WHEN LQ.LicenseDescription IS NULL OR LQ.LicenseDescription = '' THEN
+						Q.QuotaDescription
+					ELSE
+						LQ.LicenseDescription
+					END,
 	Q.QuotaTypeID,
 	CASE
 		WHEN PQ.QuotaValue IS NULL THEN dbo.GetPackageAllocatedQuota(@PackageID, Q.QuotaID)
@@ -4398,6 +4402,7 @@ SELECT
 	dbo.GetPackageAllocatedQuota(@ParentPackageID, Q.QuotaID) AS ParentQuotaValue
 FROM Quotas AS Q
 LEFT OUTER JOIN PackageQuotas AS PQ ON PQ.QuotaID = Q.QuotaID AND PQ.PackageID = @PackageID
+LEFT OUTER JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
 ORDER BY Q.QuotaOrder
 
 RETURN
@@ -4447,12 +4452,17 @@ SELECT
 	Q.QuotaID,
 	Q.GroupID,
 	Q.QuotaName,
-	Q.QuotaDescription,
+	QuotaDescription = CASE WHEN LQ.LicenseDescription IS NULL OR LQ.LicenseDescription = '' THEN
+						Q.QuotaDescription
+					ELSE
+						LQ.LicenseDescription
+					END,
 	Q.QuotaTypeID,
 	ISNULL(HPQ.QuotaValue, 0) AS QuotaValue,
 	dbo.GetPackageAllocatedQuota(@PackageID, Q.QuotaID) AS ParentQuotaValue
 FROM Quotas AS Q
 LEFT OUTER JOIN HostingPlanQuotas AS HPQ ON Q.QuotaID = HPQ.QuotaID AND HPQ.PlanID = @PlanID
+LEFT OUTER JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
 WHERE Q.HideQuota IS NULL OR Q.HideQuota = 0
 ORDER BY Q.QuotaOrder
 RETURN
@@ -12295,7 +12305,11 @@ SELECT
 	Q.QuotaID,
 	Q.GroupID,
 	Q.QuotaName,
-	Q.QuotaDescription,
+	QuotaDescription = CASE WHEN LQ.LicenseDescription IS NULL OR LQ.LicenseDescription = '' THEN
+						Q.QuotaDescription
+					ELSE
+						LQ.LicenseDescription
+					END,
 	Q.QuotaTypeID,
 	QuotaValue = CASE WHEN Q.PerOrganization = 1 AND dbo.GetPackageAllocatedQuota(@PackageID, Q.QuotaID) <> -1 THEN 
 					dbo.GetPackageAllocatedQuota(@PackageID, Q.QuotaID) * @OrgsCount 
@@ -12307,6 +12321,7 @@ SELECT
 	ISNULL(dbo.CalculateQuotaUsage(@PackageID, Q.QuotaID), 0) AS QuotaUsedValue,
 	Q.PerOrganization
 FROM Quotas AS Q
+LEFT JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
 WHERE Q.HideQuota IS NULL OR Q.HideQuota = 0
 ORDER BY Q.QuotaOrder
 
@@ -17108,6 +17123,16 @@ AS
 				WHERE EA.LevelID = @LevelID AND PT.ParentPackageID = @PackageID)
 			ELSE SET @Result = 0
 		END
+		ELSE IF @QuotaName like '%.VM_License_%' -- VM Licenses
+		BEGIN
+			SET @Result = (SELECT COUNT(SI.ItemID) FROM Quotas AS Q
+				INNER JOIN ServiceItems AS SI ON SI.ItemTypeID = Q.ItemTypeID
+				INNER JOIN PackagesTreeCache AS PT ON SI.PackageID = PT.PackageID AND PT.ParentPackageID = @PackageID
+				INNER JOIN ServiceItemProperties AS SIP ON SIP.ItemID = SI.ItemID
+				INNER JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
+				WHERE Q.QuotaID = @QuotaID AND SIP.PropertyName = 'OperatingSystemTemplate' AND Q.HideQuota != 1
+				AND SIP.PropertyValue IN (SELECT LQT.VmTemplateName FROM LicensingQuotaTemplates AS LQT WHERE LQT.QuotaID = @QuotaID))
+		END
 		ELSE
 			SET @Result = (SELECT COUNT(SI.ItemID) FROM Quotas AS Q
 			INNER JOIN ServiceItems AS SI ON SI.ItemTypeID = Q.ItemTypeID
@@ -20529,5 +20554,236 @@ UPDATE Quotas
 SET
 	HideQuota = @HideQuota
 WHERE QuotaName = @QuotaName AND GroupID = @GroupID
+RETURN
+GO
+
+-- VM licensing quotas
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_1')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (755, 33, 30, N'VPS2012.VM_License_1', N'License 1', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_2')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (756, 33, 31, N'VPS2012.VM_License_2', N'License 2', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_3')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (757, 33, 32, N'VPS2012.VM_License_3', N'License 3', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_4')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (758, 33, 33, N'VPS2012.VM_License_4', N'License 4', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_5')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (759, 33, 34, N'VPS2012.VM_License_5', N'License 5', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_6')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (760, 33, 35, N'VPS2012.VM_License_6', N'License 6', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_7')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (761, 33, 36, N'VPS2012.VM_License_7', N'License 7', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_8')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (762, 33, 37, N'VPS2012.VM_License_8', N'License 8', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_9')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (763, 33, 38, N'VPS2012.VM_License_9', N'License 9', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM [dbo].[Quotas] WHERE [QuotaName] = 'VPS2012.VM_License_10')
+BEGIN
+	INSERT [dbo].[Quotas] ([QuotaID], [GroupID], [QuotaOrder], [QuotaName], [QuotaDescription], [QuotaTypeID], [ServiceQuota], [ItemTypeID], [HideQuota], [PerOrganization]) VALUES (764, 33, 39, N'VPS2012.VM_License_10', N'License 10', 2, 0, 41, 1, NULL)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.TABLES WHERE name = 'LicensingQuotas')
+CREATE TABLE LicensingQuotas
+(
+	QuotaID [int] NOT NULL PRIMARY KEY,
+	LicenseDescription NVARCHAR(255) NOT NULL,
+)
+GO
+
+IF NOT EXISTS (SELECT * FROM SYS.TABLES WHERE name = 'LicensingQuotaTemplates')
+BEGIN
+CREATE TABLE LicensingQuotaTemplates
+(
+	QuotaID [int] NOT NULL,
+	VmTemplateName NVARCHAR(255) NOT NULL,
+	CONSTRAINT [PK_LicensingQuotaTemplates] PRIMARY KEY CLUSTERED 
+	(
+		[QuotaID] ASC,
+		[VmTemplateName] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+CREATE INDEX LicensingQuotaTemplatesIdx_QuotaID ON [dbo].[LicensingQuotaTemplates] ([QuotaID]);
+END
+GO
+
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE type = 'P' AND name = 'GetLicensingQuotas')
+DROP PROCEDURE GetLicensingQuotas
+GO
+
+CREATE PROCEDURE [dbo].[GetLicensingQuotas]
+(
+	@ActorID int,
+	@GroupID int,
+	@SortColumn NVARCHAR(50)
+)
+AS
+-- check rights
+DECLARE @IsAdmin bit
+SET @IsAdmin = dbo.CheckIsUserAdmin(@ActorID)
+
+DECLARE @condition nvarchar(700)
+SET @condition = '
+@IsAdmin = 1 AND Q.GroupID = @GroupID AND Q.QuotaName LIKE ''%.VM_License_%''
+'
+
+IF @SortColumn IS NULL OR @SortColumn = ''
+SET @SortColumn = 'Q.QuotaID ASC'
+
+DECLARE @sql nvarchar(3000)
+SET @sql = '
+SELECT
+	Q.QuotaID,
+	Q.QuotaName,
+	Q.GroupID,
+	Q.QuotaDescription,
+	LQ.LicenseDescription,
+	Q.HideQuota AS IsHidden
+FROM Quotas AS Q
+LEFT JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
+	WHERE ' + @condition
+	+ ' ORDER BY ' + @SortColumn
+
+EXEC sp_executesql @sql, N'@IsAdmin bit, @GroupID int', 
+@IsAdmin, @GroupID
+
+RETURN
+GO
+
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE type = 'P' AND name = 'GetLicensingQuotaById')
+DROP PROCEDURE GetLicensingQuotaById
+GO
+
+CREATE PROCEDURE [dbo].[GetLicensingQuotaById]
+(
+	@ActorID int,
+	@QuotaID int
+)
+AS
+-- check rights
+DECLARE @IsAdmin bit
+SET @IsAdmin = dbo.CheckIsUserAdmin(@ActorID)
+
+SELECT
+	Q.QuotaID,
+	Q.QuotaName,
+	Q.GroupID,
+	Q.QuotaDescription,
+	LQ.LicenseDescription,
+	Q.HideQuota AS IsHidden
+FROM Quotas AS Q
+LEFT JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
+WHERE @IsAdmin = 1 AND Q.QuotaID = @QuotaID
+
+SELECT
+	LQT.QuotaID,
+	LQT.VmTemplateName
+FROM LicensingQuotaTemplates AS LQT
+WHERE @IsAdmin = 1 AND LQT.QuotaID = @QuotaID
+
+RETURN
+GO
+
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE type = 'P' AND name = 'GetLicensingQuotasByTemplateName')
+DROP PROCEDURE GetLicensingQuotasByTemplateName
+GO
+
+CREATE PROCEDURE [dbo].[GetLicensingQuotasByTemplateName]
+(
+	@VmTemplateName nvarchar(255),
+	@GroupID int
+)
+AS
+
+SELECT
+	Q.QuotaID,
+	Q.QuotaName,
+	Q.GroupID,
+	Q.QuotaDescription,
+	LQ.LicenseDescription,
+	Q.HideQuota AS IsHidden
+FROM LicensingQuotaTemplates AS LQT
+INNER JOIN Quotas AS Q ON Q.QuotaID = LQT.QuotaID
+LEFT JOIN LicensingQuotas AS LQ ON LQ.QuotaID = Q.QuotaID
+WHERE LQT.VmTemplateName = @VmTemplateName AND Q.GroupID = @GroupID AND Q.HideQuota != 1
+
+RETURN
+GO
+
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE type = 'P' AND name = 'UpdateLicensingQuota')
+DROP PROCEDURE UpdateLicensingQuota
+GO
+
+CREATE PROCEDURE [dbo].[UpdateLicensingQuota]
+(
+	@ActorID int,
+	@QuotaID int,
+	@LicenseDescription nvarchar(255),
+	@VmTemplateNamesXml ntext
+)
+AS
+
+-- check rights
+IF dbo.CheckIsUserAdmin(@ActorID) != 1
+RAISERROR('You are not allowed to modify this data', 16, 1)
+
+DELETE FROM [dbo].[LicensingQuotas] WHERE [QuotaID] = @QuotaID
+INSERT [dbo].[LicensingQuotas] ([QuotaID], [LicenseDescription]) VALUES (@QuotaID, @LicenseDescription)
+
+DELETE FROM [dbo].[LicensingQuotaTemplates] WHERE [QuotaID] = @QuotaID
+
+DECLARE @idoc int
+EXEC sp_xml_preparedocument @idoc OUTPUT, @VmTemplateNamesXml
+
+INSERT INTO LicensingQuotaTemplates
+(
+	QuotaID,
+	VmTemplateName
+)
+SELECT @QuotaID, VmTemplateName
+FROM openxml(@idoc, '/ArrayOfString/*', 1) 
+WITH
+(
+	VmTemplateName  varchar(255) '.'
+)
+
+EXEC sp_xml_removedocument @idoc
+
 RETURN
 GO

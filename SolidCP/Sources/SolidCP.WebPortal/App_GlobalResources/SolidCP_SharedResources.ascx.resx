@@ -4729,6 +4729,21 @@
   <data name="Error.NO_CPU_CORES" xml:space="preserve">
     <value>No CPU cores available</value>
   </data>
+  <data name="Error.VPS_NOT_ENOUGH_LICENSES" xml:space="preserve">
+    <value>Not enough licenses for the VPS template available</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA" xml:space="preserve">
+    <value>License quota cannot be updated</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA_NOT_FOUND" xml:space="preserve">
+    <value>License quota not found</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA_DESCRIPTION" xml:space="preserve">
+    <value>License quota cannot be updated: Description cannot be empty</value>
+  </data>
+  <data name="Error.UPDATE_LICENSING_QUOTA_TEMPLATES" xml:space="preserve">
+    <value>License quota cannot be updated: Add at least one template</value>
+  </data>
   <data name="Error.VPS_ERROR_DELETE" xml:space="preserve">
     <value>Error deleting virtual server</value>
   </data>
@@ -4899,6 +4914,12 @@
   </data>
   <data name="VPS.VPS_QUOTA_EXCEEDED_SERVERS_NUMBER" xml:space="preserve">
     <value>The maximum number of VPS allowed in the plan: {1}</value>
+  </data>
+  <data name="VPS.VPS_QUOTA_EXCEEDED_LICENSES_NUMBER" xml:space="preserve">
+    <value>The maximum number of licenses for the VPS allowed in the plan: {1}</value>
+  </data>
+  <data name="VPS.VPS_LICENSE_NOT_AVAILABLE_DESCRIPTION" xml:space="preserve">
+    <value>{1}</value>
   </data>
   <data name="VPS.VPS_QUOTA_EXCEEDED_SNAPSHOTS" xml:space="preserve">
     <value>The maximum number of Snapshots allowed: {1}</value>

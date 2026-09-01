@@ -966,4 +966,10 @@
   <data name="ModuleTitle.VirtualDirectoryProperties" xml:space="preserve">
     <value>Einstellungen des virtuelle Verzeichnisses</value>
   </data>
+  <data name="ModuleTitle.LicensingQuotas" xml:space="preserve">
+    <value>Lizenzen-Quoten</value>
+  </data>
+  <data name="ModuleTitle.EditLicensingQuota" xml:space="preserve">
+    <value>Lizenzen-Quote bearbeiten</value>
+  </data>
 </root>

@@ -38,7 +38,7 @@ using SolidCP.Providers.Common;
 namespace SolidCP.Portal.UserControls
 {
     public partial class SimpleMessageBox : SolidCPControlBase
-    {        
+    {
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -94,25 +94,29 @@ namespace SolidCP.Portal.UserControls
 
         public void ShowErrorMessage(string messageKey)
         {
-			ShowErrorMessage(messageKey, null);
+            SetLastMessageKey(messageKey);
+            ShowErrorMessage(messageKey, null);
         }
 
         public void ShowErrorMessage(string messageKey, Exception ex)
         {
-			RenderMessage(MessageBoxType.Error,
+            SetLastMessageKey(messageKey);
+            RenderMessage(MessageBoxType.Error,
 				GetLocalizedMessage("Error.", messageKey),
 				GetLocalizedMessage("ErrorDescription.", messageKey), ex);
         }
 
         public void ShowWarningMessage(string messageKey)
         {
-			RenderMessage(MessageBoxType.Warning,
+            SetLastMessageKey(messageKey);
+            RenderMessage(MessageBoxType.Warning,
 				GetLocalizedMessage("Warning.", messageKey),
 				GetLocalizedMessage("WarningDescription.", messageKey), null);
         }
 
         public void ShowWarningMessage(string messageKey, string description)
         {
+            SetLastMessageKey(messageKey);
             RenderMessage(MessageBoxType.Warning,
                 GetLocalizedMessage("Warning.", messageKey),
                                                 description, null);
@@ -120,7 +124,8 @@ namespace SolidCP.Portal.UserControls
 
         public void ShowSuccessMessage(string messageKey)
         {
-			RenderMessage(MessageBoxType.Information,
+            SetLastMessageKey(messageKey);
+            RenderMessage(MessageBoxType.Information,
 				GetLocalizedMessage("Success.", messageKey),
 				GetLocalizedMessage("SuccessDescription.", messageKey), null);
         }
@@ -152,8 +157,8 @@ namespace SolidCP.Portal.UserControls
 		{
             divMessageBox.Visible = true;
             ViewState["JustRendered"] = true;
+            SetLastMessageKey(messageKey);
 
-            
             string prefix = "Success.";
             // set icon and styles
             string boxStyle = "MessageBox Green";
@@ -215,6 +220,21 @@ namespace SolidCP.Portal.UserControls
             litDescription.Text = !String.IsNullOrEmpty(description)
                 ? String.Format("<br/><span class=\"description\">{0}</span>", description) : "";
 		}
+
+        public void HideMessage()
+        {
+            divMessageBox.Visible = false;
+        }
+
+        private void SetLastMessageKey(string messageKey)
+        {
+            ViewState["MessageKey"] = messageKey;
+        }
+
+        public string GetLastMessageKey()
+        {
+            return (string)ViewState["MessageKey"];
+        }
         
         public void RenderMessage(MessageBoxType messageType, string message, string description, Exception ex)
 		{

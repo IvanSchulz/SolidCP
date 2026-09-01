@@ -975,4 +975,10 @@
   <data name="ModuleTitle.PrivateNetworkVLANs" xml:space="preserve">
     <value>Private Network VLANs</value>
   </data>
+  <data name="ModuleTitle.LicensingQuotas" xml:space="preserve">
+    <value>Licensing Quotas</value>
+  </data>
+  <data name="ModuleTitle.EditLicensingQuota" xml:space="preserve">
+    <value>Edit Licensing Quota</value>
+  </data>
 </root>

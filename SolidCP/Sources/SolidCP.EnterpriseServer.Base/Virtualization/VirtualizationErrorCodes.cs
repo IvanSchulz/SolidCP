@@ -72,6 +72,8 @@
 
         public const string QUOTA_TEMPLATE_DISK_MINIMAL_SIZE = "VPS_QUOTA_TEMPLATE_DISK_MINIMAL_SIZE";
 
+        public const string QUOTA_EXCEEDED_LICENSES_NUMBER = "VPS_QUOTA_EXCEEDED_LICENSES_NUMBER";
+
         // general
         public const string CREATE_ERROR = "VPS_CREATE_ERROR";
         public const string IMPORT_ERROR = "VPS_IMPORT_ERROR";

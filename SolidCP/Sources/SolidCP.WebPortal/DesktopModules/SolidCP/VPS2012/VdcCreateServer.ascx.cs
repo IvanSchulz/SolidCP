@@ -602,6 +602,34 @@ namespace SolidCP.Portal.VPS2012
             string[] dmzIps = Utils.ParseDelimitedString(txtDmzAddressesList.Text, '\n', '\r', ' ', '\t');
 
             litDmzAddressesList.Text = PortalAntiXSS.Encode(String.Join(", ", dmzIps));
+
+            // check template licenses
+            if ("VPS_NOT_ENOUGH_LICENSES".Equals(messageBox.GetLastMessageKey())) messageBox.HideMessage();
+            string templateName = listOperatingSystems.SelectedItem.Text;
+            if (!String.IsNullOrEmpty(templateName))
+            {
+                LicensingQuota[] licensingQuotas = ES.Services.Servers.GetLicensingQuotasByTemplateName(templateName, 33);
+                if (licensingQuotas != null && licensingQuotas.Length > 0)
+                {
+                    PackageContext cntx = PackagesHelper.GetCachedPackageContext(PanelSecurity.PackageId);
+                    IntResult res = new IntResult();
+                    res.IsSuccess = true;
+                    foreach (LicensingQuota licensingQuota in licensingQuotas)
+                    {
+                        QuotaValueInfo quota = cntx.Quotas[licensingQuota.QuotaName];
+                        if (quota.QuotaExhausted)
+                        {
+                            res.ErrorCodes.Add("VPS_LICENSE_NOT_AVAILABLE_DESCRIPTION" + ":" + licensingQuota.LicenseDescription);
+                            res.IsSuccess = false;
+                        }
+                    }
+                    if (!res.IsSuccess)
+                    {
+                        messageBox.ShowMessage(res, "VPS_NOT_ENOUGH_LICENSES", "VPS");
+                        wizard.ActiveStepIndex = 0;
+                    }
+                }
+            }
         }
 
         protected void wizard_FinishButtonClick(object sender, WizardNavigationEventArgs e)

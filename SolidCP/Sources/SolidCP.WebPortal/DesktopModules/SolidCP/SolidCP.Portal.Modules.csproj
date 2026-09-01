@@ -271,6 +271,20 @@
     <Compile Include="ExchangeServer\ExchangeJournalingMailboxGeneralSettings.ascx.designer.cs">
       <DependentUpon>ExchangeJournalingMailboxGeneralSettings.ascx</DependentUpon>
     </Compile>
+    <Compile Include="LicensingQuotaEdit.ascx.cs">
+      <DependentUpon>LicensingQuotaEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LicensingQuotaEdit.ascx.designer.cs">
+      <DependentUpon>LicensingQuotaEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LicensingQuotas.ascx.cs">
+      <DependentUpon>LicensingQuotas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LicensingQuotas.ascx.designer.cs">
+      <DependentUpon>LicensingQuotas.ascx</DependentUpon>
+    </Compile>
     <Compile Include="MailAccess.ascx.cs">
       <DependentUpon>MailAccess.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5670,6 +5684,8 @@
     <Content Include="ExchangeServer\ExchangeMailboxAutoReply.ascx" />
     <Content Include="ExchangeServer\ExchangeJournalingMailboxes.ascx" />
     <Content Include="ExchangeServer\ExchangeJournalingMailboxGeneralSettings.ascx" />
+    <Content Include="LicensingQuotaEdit.ascx" />
+    <Content Include="LicensingQuotas.ascx" />
     <Content Include="MailAccess.ascx" />
     <Content Include="MailAccessEditAccess.ascx" />
     <Content Include="ProviderControls\CerberusFTP6_EditAccount.ascx" />
@@ -6705,6 +6721,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_LocalResources\SpaceServerUsage.ascx.resx" />
+    <Content Include="App_LocalResources\LicensingQuotas.ascx.resx" />
+    <Content Include="App_LocalResources\LicensingQuotaEdit.ascx.resx" />
+    <Content Include="App_LocalResources\LicensingQuotas.ascx.de-DE.resx" />
+    <Content Include="App_LocalResources\LicensingQuotaEdit.ascx.de-DE.resx" />
     <EmbeddedResource Include="RDS\App_LocalResources\RDSEditCollectionSettings.ascx.resx" />
     <Content Include="RDSServersEditServer.ascx" />
     <Content Include="RDS\AssignedRDSServers.ascx" />

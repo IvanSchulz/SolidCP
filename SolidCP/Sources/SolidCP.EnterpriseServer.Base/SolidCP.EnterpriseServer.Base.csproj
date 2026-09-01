@@ -132,6 +132,7 @@
     <Compile Include="Servers\DomainType.cs" />
     <Compile Include="Servers\IPAddressesPaged.cs" />
     <Compile Include="Servers\IPAddressPool.cs" />
+    <Compile Include="Servers\LicensingQuota.cs" />
     <Compile Include="Servers\ServiceGroupIds.cs" />
     <Compile Include="Servers\VLANInfo.cs" />
     <Compile Include="Servers\VLANsPaged.cs" />

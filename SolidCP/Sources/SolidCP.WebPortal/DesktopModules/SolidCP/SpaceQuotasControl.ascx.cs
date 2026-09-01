@@ -84,7 +84,7 @@ namespace SolidCP.Portal
         {
             string description = (quotaDescription.GetType() == typeof(System.DBNull)) ? string.Empty : (string)quotaDescription;
 
-            return quotaName.Contains("ServiceLevel") ? description
+            return quotaName.Contains("ServiceLevel") || quotaName.Contains(".VM_License_") ? description
                                                       : GetSharedLocalizedString("Quota." + quotaName);
         }
     }

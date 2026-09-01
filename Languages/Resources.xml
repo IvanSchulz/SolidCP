@@ -1431,6 +1431,16 @@
     <DefaultValue>Private Network VLANs</DefaultValue>
   </Resource>
   <Resource>
+    <File>App_GlobalResources\SolidCP_Modules.ascx.resx</File>
+    <Key>ModuleTitle.LicensingQuotas</Key>
+    <DefaultValue>Licensing Quotas</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_Modules.ascx.resx</File>
+    <Key>ModuleTitle.EditLicensingQuota</Key>
+    <DefaultValue>Edit Licensing Quota</DefaultValue>
+  </Resource>
+  <Resource>
     <File>App_GlobalResources\SolidCP_Pages.ascx.resx</File>
     <Key>PageName.Login</Key>
     <DefaultValue>Sign In</DefaultValue>
@@ -2184,6 +2194,16 @@
     <File>App_GlobalResources\SolidCP_Pages.ascx.resx</File>
     <Key>PageTitle.PrivateNetworkVLANs</Key>
     <DefaultValue>Private Network VLANs</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_Pages.ascx.resx</File>
+    <Key>PageName.LicensingQuotas</Key>
+    <DefaultValue>Licensing Quotas</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_Pages.ascx.resx</File>
+    <Key>PageTitle.LicensingQuotas</Key>
+    <DefaultValue>Licensing Quotas</DefaultValue>
   </Resource>
   <Resource>
     <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
@@ -9873,6 +9893,31 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>Error.VPS_NOT_ENOUGH_LICENSES</Key>
+    <DefaultValue>Not enough licenses for the VPS template available</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>Error.UPDATE_LICENSING_QUOTA</Key>
+    <DefaultValue>License quota cannot be updated</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>Error.UPDATE_LICENSING_QUOTA_NOT_FOUND</Key>
+    <DefaultValue>License quota not found</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>Error.UPDATE_LICENSING_QUOTA_DESCRIPTION</Key>
+    <DefaultValue>License quota cannot be updated: Description cannot be empty</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>Error.UPDATE_LICENSING_QUOTA_TEMPLATES</Key>
+    <DefaultValue>License quota cannot be updated: Add at least one template</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
     <Key>Error.VPS_ERROR_DELETE</Key>
     <DefaultValue>Error deleting virtual server</DefaultValue>
   </Resource>
@@ -10155,6 +10200,16 @@
     <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
     <Key>VPS.VPS_QUOTA_EXCEEDED_SERVERS_NUMBER</Key>
     <DefaultValue>The maximum number of VPS allowed in the plan: {1}</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>VPS.VPS_QUOTA_EXCEEDED_LICENSES_NUMBER</Key>
+    <DefaultValue>The maximum number of licenses for the VPS allowed in the plan: {1}</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>VPS.VPS_LICENSE_NOT_AVAILABLE_DESCRIPTION</Key>
+    <DefaultValue>{1}</DefaultValue>
   </Resource>
   <Resource>
     <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
@@ -16264,6 +16319,81 @@
     <File>DesktopModules\SolidCP\App_LocalResources\IPAddressesEditIPAddress.ascx.resx</File>
     <Key>lblInternalIP.Text</Key>
     <DefaultValue>NAT Address:</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>locTitle.Text</Key>
+    <DefaultValue>Edit Licensing Quota</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>locDescription.Text</Key>
+    <DefaultValue>License description:</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>chkActive.Text</Key>
+    <DefaultValue>Active</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>locVmTemplates.Text</Key>
+    <DefaultValue>VM templates:</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>btnAddVmTemplateName.Text</Key>
+    <DefaultValue>Add Template</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>lblVmTemplateName.Text</Key>
+    <DefaultValue>VM Template Name: *</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>requireVmTemplateValidator.ErrorMessage</Key>
+    <DefaultValue>Enter VM template name</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>locRemoveVmTemplateName.Text</Key>
+    <DefaultValue>Remove Template</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>btnCancel.Text</Key>
+    <DefaultValue>Cancel</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotaEdit.ascx.resx</File>
+    <Key>btnUpdate.Text</Key>
+    <DefaultValue>Save</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotas.ascx.resx</File>
+    <Key>gvIsActive.Header</Key>
+    <DefaultValue>Active</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotas.ascx.resx</File>
+    <Key>gvLicensingQuotas.Empty</Key>
+    <DefaultValue>No licensing quotas found.</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotas.ascx.resx</File>
+    <Key>gvLicenseDescription.Header</Key>
+    <DefaultValue>License Description</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotas.ascx.resx</File>
+    <Key>gvQuotaName.Header</Key>
+    <DefaultValue>Quota Name</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>DesktopModules\SolidCP\App_LocalResources\LicensingQuotas.ascx.resx</File>
+    <Key>lblGroup.Text</Key>
+    <DefaultValue>Resource Group:</DefaultValue>
   </Resource>
   <Resource>
     <File>DesktopModules\SolidCP\App_LocalResources\LoggedUser.ascx.resx</File>
