@@ -18,7 +18,10 @@ namespace SolidCP.Providers.Virtualization
 {
     public class VdsHelper
     {
+        private const string GPT_BASIC_DATA_PARTITION = "{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}";
+
         private MiManager _miCim;
+        private MiManager _miStorage;
         private FileSystemHelper _fileSystemHelper;
         private string _serverName;
 
@@ -26,6 +29,7 @@ namespace SolidCP.Providers.Virtualization
         {
             _serverName = mi.TargetComputer;
             _miCim = new MiManager(mi, Constants.WMI_CIMV2_NAMESPACE);
+            _miStorage = new MiManager(mi, Constants.WMI_STORAGE_NAMESPACE);
             _fileSystemHelper = fileSystemHelper;
         }
 
@@ -200,10 +204,14 @@ namespace SolidCP.Providers.Virtualization
                 HostedSolutionLog.LogInfo("Querying disk volumes with VDS");
                 foreach (Volume volume in diskPack.Volumes)
                 {
-                    string letter = volume.DriveLetter.ToString();
-                    if (letter != "")
-                        volumes.Add(letter);
+                    // VDS returns '\0' or ' ' when the volume has no drive letter, so never compare the string against ""
+                    if (Char.IsLetter(volume.DriveLetter))
+                        volumes.Add(volume.DriveLetter.ToString());
                 }
+
+                // assign drive letters if the volumes have none
+                if (volumes.Count == 0)
+                    volumes.AddRange(AssignMissingDriveLetters(diskInfo.DiskNumber));
 
                 // find volumes using WMI
                 if (volumes.Count == 0 && objDisk != null)
@@ -223,7 +231,7 @@ namespace SolidCP.Providers.Virtualization
                     }
                 }
 
-                HostedSolutionLog.LogInfo("Volumes found: " + volumes.Count);
+                HostedSolutionLog.LogInfo(String.Format("Volumes found: {0} ({1})", volumes.Count, String.Join(", ", volumes)));
 
                 // Set volumes
                 diskInfo.DiskVolumes = volumes.ToArray();
@@ -236,15 +244,103 @@ namespace SolidCP.Providers.Virtualization
             return diskInfo;
         }
 
+        /// <summary>
+        /// Assigns drive letters to the data partitions of a mounted disk that have none.
+        /// Template VHDs frequently carry the GPT attribute "NoDefaultDriveLetter", which suppresses automount.
+        /// </summary>
+        private List<string> AssignMissingDriveLetters(int diskNumber)
+        {
+            List<string> assigned = new List<string>();
+
+            HostedSolutionLog.LogInfo("No drive letters assigned - assigning them for disk " + diskNumber);
+
+            foreach (CimInstance partition in _miStorage.QueryCimInstances(
+                String.Format("SELECT * FROM MSFT_Partition WHERE DiskNumber = {0}", diskNumber)))
+            {
+                using (partition)
+                {
+                    if (!IsDataPartition(partition))
+                        continue;
+
+                    int partitionNumber = Convert.ToInt32(partition.CimInstanceProperties["PartitionNumber"].Value);
+
+                    using (var inParams = new CimMethodParametersCollection
+                        {
+                            CimMethodParameter.Create("AssignDriveLetter", true, CimType.Boolean, CimFlags.In)
+                        })
+                    using (CimMethodResult result = _miStorage.InvokeMethod(partition, "AddAccessPath", inParams))
+                    {
+                        UInt32 returnValue = Convert.ToUInt32(result.ReturnValue.Value);
+                        if (returnValue != 0)
+                        {
+                            HostedSolutionLog.LogWarning(String.Format(
+                                "Could not assign a drive letter to partition {0}: error {1}", partitionNumber, returnValue));
+                            continue;
+                        }
+                    }
+
+                    Thread.Sleep(3000);
+
+                    using (CimInstance assignedPartition = _miStorage.GetCimInstanceWithSelect(
+                        "MSFT_Partition", "DriveLetter", "DiskNumber = {0} AND PartitionNumber = {1}", diskNumber, partitionNumber))
+                    {
+                        char letter = GetDriveLetter(assignedPartition);
+
+                        if (Char.IsLetter(letter))
+                        {
+                            HostedSolutionLog.LogInfo(String.Format("Assigned drive letter {0} to partition {1}", letter, partitionNumber));
+                            assigned.Add(letter.ToString());
+                        }
+                        else
+                        {
+                            HostedSolutionLog.LogWarning("No drive letter reported for partition " + partitionNumber);
+                        }
+                    }
+                }
+            }
+
+            return assigned;
+        }
+
+        private static bool IsDataPartition(CimInstance partition)
+        {
+            object isHidden = partition.CimInstanceProperties["IsHidden"]?.Value;
+            if (isHidden != null && Convert.ToBoolean(isHidden))
+                return false;
+
+            // GptType is empty on MBR disks
+            string gptType = partition.CimInstanceProperties["GptType"]?.Value as string;
+            if (!String.IsNullOrEmpty(gptType) && !GPT_BASIC_DATA_PARTITION.Equals(gptType, StringComparison.OrdinalIgnoreCase))
+                return false;
+
+            // filter out system/recovery partitions
+            object size = partition.CimInstanceProperties["Size"]?.Value;
+            if (size != null && Convert.ToUInt64(size) < (ulong)Constants.Size1G)
+                return false;
+
+            return true;
+        }
+
+        private static char GetDriveLetter(CimInstance partition)
+        {
+            object value = partition?.CimInstanceProperties["DriveLetter"]?.Value;
+
+            if (value is char)
+                return (char)value;
+
+            string letter = value as string;
+            return String.IsNullOrEmpty(letter) ? '\0' : letter[0];
+        }
+
         public void FindVdsDisk(int driveNumber, out AdvancedDisk advancedDisk, out Pack diskPack)
         {
-            Func<Disk, bool> compareFunc =  disk => disk.Name.EndsWith("PhysicalDrive" + driveNumber);
+            Func<Disk, bool> compareFunc = disk => disk.Name.EndsWith("PhysicalDrive" + driveNumber);
             FindVdsDisk(compareFunc, out advancedDisk, out diskPack);
         }
 
         public void FindVdsDisk(string diskAddress, out AdvancedDisk advancedDisk, out Pack diskPack)
         {
-            Func<Disk, bool> compareFunc =  disk => disk.DiskAddress == diskAddress;
+            Func<Disk, bool> compareFunc = disk => disk.DiskAddress == diskAddress;
             FindVdsDisk(compareFunc, out advancedDisk, out diskPack);
         }
 
@@ -254,7 +350,7 @@ namespace SolidCP.Providers.Virtualization
             diskPack = null;
 
             using (ServiceLoader serviceLoader = new ServiceLoader())
-            using (Service vds = serviceLoader.LoadService(_serverName)) 
+            using (Service vds = serviceLoader.LoadService(_serverName))
             {
                 vds.WaitForServiceReady();
 
@@ -275,7 +371,7 @@ namespace SolidCP.Providers.Virtualization
 
                     foreach (SoftwareProvider provider in vds.Providers)
                     {
-                        using (provider) 
+                        using (provider)
                         {
                             foreach (Pack pack in provider.Packs)
                             {
@@ -292,10 +388,10 @@ namespace SolidCP.Providers.Virtualization
                                 }
                                 pack?.Dispose(); // manually dispose, without using block (cause out parameter)
                             }
-                        }                            
+                        }
                     }
                 }
-            }            
+            }
         }
 
         // obsolete and currently is not used

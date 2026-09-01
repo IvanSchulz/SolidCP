@@ -11,6 +11,7 @@ namespace SolidCP.Providers.Virtualization
         public const string CONFIG_USE_DISKPART_TO_CLEAR_READONLY_FLAG = "SolidCP.HyperV.UseDiskPartClearReadOnlyFlag";
         public const string WMI_VIRTUALIZATION_NAMESPACE = @"root\virtualization\v2";
         public const string WMI_CIMV2_NAMESPACE = @"root\cimv2";
+        public const string WMI_STORAGE_NAMESPACE = @"root\Microsoft\Windows\Storage";
 
         public const string LIBRARY_INDEX_FILE_NAME = "index.xml";
 
