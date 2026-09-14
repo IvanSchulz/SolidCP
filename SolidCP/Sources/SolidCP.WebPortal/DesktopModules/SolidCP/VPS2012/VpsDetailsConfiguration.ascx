@@ -248,14 +248,14 @@
 	    </div>
     	
 <asp:Panel ID="ChangePasswordPanel" runat="server" style="display:none;">
-	<div class="widget" style="max-width: 40%;">
+	<div class="widget" style="width: 500px; max-width: 95vw;">
 		<div class="widget-header clearfix">
 					   <h3><i class="fa fa-i-cursor"></i>  <asp:Localize ID="locChangePassword" runat="server" Text="Change Administrator Password" meta:resourcekey="locChangePassword"></asp:Localize></h3>
 		</div>
 		<div class="widget-content Popup">
 			<div class="panel-body form-horizontal">
 				<div class="form-group">
-					<div class="col-sm-20">
+					<div class="col-sm-12">
 						<asp:Localize ID="locNewPassword" runat="server" Text="Enter new password:"
 											meta:resourcekey="locNewPassword"></asp:Localize>
 					
