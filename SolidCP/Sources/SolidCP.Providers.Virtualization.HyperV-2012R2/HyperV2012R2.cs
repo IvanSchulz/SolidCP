@@ -340,6 +340,9 @@ namespace SolidCP.Providers.Virtualization
 
                     if (adapter.Name == Constants.PRIVATE_NETWORK_ADAPTER_NAME)
                         vmData.VM.PrivateNetworkEnabled = true;
+
+                    if (adapter.Name == Constants.DMZ_NETWORK_ADAPTER_NAME)
+                        vmData.VM.DmzNetworkEnabled = true;
                 }
             }
             catch (Exception ex)
@@ -707,6 +710,7 @@ namespace SolidCP.Providers.Virtualization
                     bool canNotUpdateForGeneration1 = realVm.DvdDriveInstalled != vm.DvdDriveInstalled //Generation 1 doesnt support those things without reboot
                         || realVm.ExternalNetworkEnabled != vm.ExternalNetworkEnabled
                         || realVm.PrivateNetworkEnabled != vm.PrivateNetworkEnabled
+                        || realVm.DmzNetworkEnabled != vm.DmzNetworkEnabled
                         || realVm.RamSize != vm.RamSize;
 
                     if (realVm.Generation != 1)
