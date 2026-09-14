@@ -115,6 +115,7 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012
                 VirtualMachine vm = VirtualMachineHelper.GetVirtualMachineByItemId(itemId);
                 if (vm == null || String.IsNullOrEmpty(vm.VirtualMachineId)) return -1;
                 int oldServiceId = vm.ServiceId;
+                string clusterName = vm.ClusterName;
 
                 // check virtual server services first
                 PackageInfo package = PackageController.GetPackage(vm.PackageId);
@@ -141,7 +142,14 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012
                             {
                                 if ((int)dr["GroupID"] != vpsGroupId) continue;
                                 int serviceId = (int)dr["ServiceID"];
-                                if (serviceId != oldServiceId && CheckVmService(serviceId, itemId, vm.VirtualMachineId)) return serviceId;
+                                if (serviceId == oldServiceId) continue;
+                                if (!String.IsNullOrEmpty(clusterName))
+                                {
+                                    StringDictionary settings = ServerController.GetServiceSettings(serviceId);
+                                    string serviceClusterName = Utils.ParseBool(settings["UseFailoverCluster"], false) ? settings["ClusterName"] : null;
+                                    if (!clusterName.Equals(serviceClusterName)) continue;
+                                }
+                                if (CheckVmService(serviceId, itemId, vm.VirtualMachineId)) return serviceId;
                             }
                         }
                     }
