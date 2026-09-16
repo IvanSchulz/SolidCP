@@ -4963,6 +4963,9 @@
   <data name="VPS.VPS_TAKE_SNAPSHOT_ERROR" xml:space="preserve">
     <value>Error taking snapshot. Check Audit Log and "SolidCP" Windows event log for more details.</value>
   </data>
+  <data name="VPS.VPS_TAKE_SNAPSHOT_ERROR_DVD_MUST_BE_EMPTY" xml:space="preserve">
+    <value>Error taking snapshot. The DVD must be ejected first.</value>
+  </data>
   <data name="Error.VPS_CREATE_META_ITEM_ERROR" xml:space="preserve">
     <value>Error creating VPS meta-item: {1}. VPS create opearion aborted.</value>
   </data>

@@ -801,6 +801,14 @@ namespace SolidCP.EnterpriseServer
                 }
                 #endregion
 
+                // check DVD
+                string isoPath = vs.GetInsertedDVD(vm.VirtualMachineId);
+                if (!String.IsNullOrEmpty(isoPath))
+                {
+                    TaskManager.CompleteResultTask(res, VirtualizationErrorCodes.TAKE_SNAPSHOT_ERROR_DVD_MUST_BE_EMPTY);
+                    return res;
+                }
+
                 // take snapshot
                 JobResult result = vs.CreateSnapshot(vm.VirtualMachineId);
                 if (result.ReturnValue != ReturnCode.JobStarted)

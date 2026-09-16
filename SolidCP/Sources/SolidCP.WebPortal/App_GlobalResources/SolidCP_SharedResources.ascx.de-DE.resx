@@ -4953,6 +4953,9 @@
   <data name="VPS.VPS_TAKE_SNAPSHOT_ERROR" xml:space="preserve">
     <value>Fehler bei der Snapshot-Erstellung. Überprüfen Sie das Auditprotokoll und das "SolidCP"-Windowsprotokoll für weitere Details.</value>
   </data>
+  <data name="VPS.VPS_TAKE_SNAPSHOT_ERROR_DVD_MUST_BE_EMPTY" xml:space="preserve">
+    <value>Fehler bei der Snapshot-Erstellung. Die DVD muss zuerst ausgeworfen werden.</value>
+  </data>
   <data name="Error.VPS_CREATE_META_ITEM_ERROR" xml:space="preserve">
     <value>Fehler beim Erstellen des VPS-Metaeintrags: {1}. VPS-Anlageoperation abgebrochen.</value>
   </data>
