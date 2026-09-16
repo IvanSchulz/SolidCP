@@ -10283,6 +10283,11 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>VPS.VPS_TAKE_SNAPSHOT_ERROR_DVD_MUST_BE_EMPTY</Key>
+    <DefaultValue>Error taking snapshot. The DVD must be ejected first.</DefaultValue>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
     <Key>Error.VPS_CREATE_META_ITEM_ERROR</Key>
     <DefaultValue>Error creating VPS meta-item: {1}. VPS create opearion aborted.</DefaultValue>
   </Resource>

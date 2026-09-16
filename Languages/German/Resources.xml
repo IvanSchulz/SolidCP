@@ -11205,6 +11205,12 @@
   </Resource>
   <Resource>
     <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
+    <Key>VPS.VPS_TAKE_SNAPSHOT_ERROR_DVD_MUST_BE_EMPTY</Key>
+    <DefaultValue>Error taking snapshot. The DVD must be ejected first.</DefaultValue>
+    <Value>Fehler bei der Snapshot-Erstellung. Die DVD muss zuerst ausgeworfen werden.</Value>
+  </Resource>
+  <Resource>
+    <File>App_GlobalResources\SolidCP_SharedResources.ascx.resx</File>
     <Key>Error.VPS_CREATE_META_ITEM_ERROR</Key>
     <DefaultValue>Error creating VPS meta-item: {1}. VPS create opearion aborted.</DefaultValue>
     <Value>Fehler beim Erstellen des VPS-Metaeintrags: {1}. VPS-Anlageoperation abgebrochen.</Value>
