@@ -1253,8 +1253,10 @@ namespace SolidCP.Providers.Web
                 site = webObjectsSvc.GetWebSiteFromIIS(srvman, siteId);
                 //
                 site.Bindings = webObjectsSvc.GetSiteBindings(srvman, siteId);
-                //
-                FillAppVirtualDirectoryFromIISObject(srvman, site);
+				//
+				EnsureWebsiteDirectory(webObjectsSvc.GetPhysicalPath(srvman, site));
+				//
+				FillAppVirtualDirectoryFromIISObject(srvman, site);
                 //
                 FillAppVirtualDirectoryRestFromIISObject(srvman, site);
 
@@ -1342,6 +1344,26 @@ namespace SolidCP.Providers.Web
                 site.SniEnabled = false;
             }
 			return site;
+		}
+
+		private void EnsureWebsiteDirectory(string contentPath)
+		{
+			if (String.IsNullOrEmpty(contentPath))
+				return;
+
+			try
+			{
+				string physicalPath = FileUtils.EvaluateSystemVariables(contentPath);
+
+				if (!Directory.Exists(physicalPath))
+					Directory.CreateDirectory(physicalPath);
+
+				Log.WriteInfo(String.Format("Recreate missing website directory: {0}", physicalPath));
+			}
+			catch (Exception ex)
+			{
+				Log.WriteError(String.Format("Could not recreate website directory {0}", contentPath), ex);
+			}
 		}
 
 		public new string[] GetSitesAccounts(string[] siteIds)
