@@ -78,7 +78,21 @@ namespace SolidCP.EnterpriseServer.Code.Virtualization2012.Helpers
             VirtualizationServer2012 vps = VirtualizationHelper.GetVirtualizationProxy(machine.ServiceId);
 
             // load details
-            VirtualMachine vm = vps.GetVirtualMachine(machine.VirtualMachineId);
+            VirtualMachine vm;
+            try
+            {
+                vm = vps.GetVirtualMachine(machine.VirtualMachineId);
+            }
+            catch (Exception)
+            {
+                // original host unreachable (e.g. offline after cluster failover) - try to locate the VM on another service
+                if (VirtualizationHelper.DiscoverVirtualMachine(itemId) == -1)
+                    throw;
+
+                machine = GetVirtualMachineByItemId(itemId);
+                vps = VirtualizationHelper.GetVirtualizationProxy(machine.ServiceId);
+                vm = vps.GetVirtualMachine(machine.VirtualMachineId);
+            }
 
             // check if VM RootFolderPath and VirtualHardDrivePath is correct
             CheckVirtualMachinePath(machine, vm, vps);
