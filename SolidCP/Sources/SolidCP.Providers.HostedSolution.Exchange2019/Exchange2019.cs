@@ -2469,6 +2469,8 @@ namespace SolidCP.Providers.HostedSolution
 
                 string defaultPublicFolderMailbox = orgCanonicalName + "/" + GetPublicFolderMailboxName(organizationId);
 
+                ReleaseContactPlaceholderAddress(runSpace, organizationId, upn);
+
                 //update mailbox
                 cmd = new Command("Set-Mailbox");
                 cmd.Parameters.Add("Identity", id);
@@ -2499,7 +2501,10 @@ namespace SolidCP.Providers.HostedSolution
 
                 cmd.Parameters.Add("DefaultPublicFolderMailbox", defaultPublicFolderMailbox);
 
-                ExecuteShellCommand(runSpace, cmd);
+                object[] setMailboxErrors;
+                ExecuteShellCommand(runSpace, cmd, out setMailboxErrors);
+                if (setMailboxErrors.Length > 0)
+                    throw new Exception(string.Format("Set-Mailbox failed for '{0}': {1}", upn, string.Join("; ", setMailboxErrors)));
 
                 //Litigation Hold
                 if (enabledLitigationHold)
@@ -3933,6 +3938,60 @@ namespace SolidCP.Providers.HostedSolution
             cmd.Parameters.Add("Identity", email);
             Collection<PSObject> result = ExecuteShellCommand(runSpace, cmd);
             return result.Count > 0;
+        }
+
+        // Contacts hold a placeholder address in the org domain (see CreateContactInternal); move it if a mailbox needs it
+        private void ReleaseContactPlaceholderAddress(Runspace runSpace, string organizationId, string email)
+        {
+            string[] parts = email.Split('@');
+            if (parts.Length != 2)
+                return;
+
+            Command cmd = new Command("Get-Recipient");
+            cmd.Parameters.Add("Identity", email);
+            Collection<PSObject> result = ExecuteShellCommand(runSpace, cmd, true, false);
+            if (result == null || result.Count == 0)
+                return;
+
+            PSObject contact = result[0];
+            if (ObjToString(GetPSObjectProperty(contact, "RecipientType")) != "MailContact"
+                || ObjToString(GetPSObjectProperty(contact, "CustomAttribute1")) != organizationId)
+                return;
+
+            string id = ObjToString(GetPSObjectProperty(contact, "DistinguishedName"));
+            string externalEmail = GetContactEmail(id);
+            if (string.Equals(externalEmail, email, StringComparison.OrdinalIgnoreCase))
+                return;
+
+            string newPlaceholder = Guid.NewGuid().ToString("N") + "@" + parts[1];
+            for (int num = 1; num < 100; num++)
+            {
+                string testEmail = parts[0] + num.ToString() + "@" + parts[1];
+                if (!CheckEmailExist(runSpace, testEmail))
+                {
+                    newPlaceholder = testEmail;
+                    break;
+                }
+            }
+
+            ExchangeLog.DebugInfo("Moving contact {0} placeholder address {1} to {2}", id, email, newPlaceholder);
+
+            ProxyAddressCollection emails = new ProxyAddressCollection();
+            emails.Add(ProxyAddress.Parse("SMTP:" + newPlaceholder));
+            foreach (ProxyAddress proxy in (ProxyAddressCollection)GetPSObjectProperty(contact, "EmailAddresses"))
+            {
+                if (!string.Equals(proxy.AddressString, email, StringComparison.OrdinalIgnoreCase))
+                    emails.Add(proxy);
+            }
+
+            cmd = new Command("Set-MailContact");
+            cmd.Parameters.Add("Identity", id);
+            cmd.Parameters.Add("ExternalEmailAddress", newPlaceholder);
+            cmd.Parameters.Add("EmailAddresses", emails);
+            cmd.Parameters.Add("WindowsEmailAddress", newPlaceholder);
+            ExecuteShellCommand(runSpace, cmd);
+
+            SetContactEmail(id, externalEmail);
         }
 
         private void CreateContactInternal(
