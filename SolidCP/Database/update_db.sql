@@ -20787,3 +20787,22 @@ EXEC sp_xml_removedocument @idoc
 
 RETURN
 GO
+
+-- ExchangeAccountExists must also check AccountName (IX_ExchangeAccounts_UniqueAccountName)
+IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE type = 'P' AND name = 'ExchangeAccountExists')
+DROP PROCEDURE [dbo].[ExchangeAccountExists]
+GO
+CREATE PROCEDURE [dbo].[ExchangeAccountExists]
+(
+	@AccountName nvarchar(20),
+	@Exists bit OUTPUT
+)
+AS
+SET @Exists = 0
+IF EXISTS(SELECT * FROM ExchangeAccounts WHERE AccountName = @AccountName OR sAMAccountName LIKE '%\'+@AccountName)
+BEGIN
+	SET @Exists = 1
+END
+
+RETURN
+GO

@@ -5803,8 +5803,6 @@ namespace SolidCP.EnterpriseServer
                 if (EmailAddressExists(email, true))
                     return BusinessErrorCodes.ERROR_EXCHANGE_EMAIL_EXISTS;
 
-                string accountName = OrganizationController.BuildAccountNameEx(org, name);
-
                 int exchangeServiceId = GetExchangeServiceID(org.PackageId);
                 ExchangeServer exchange = GetExchangeServer(exchangeServiceId, org.ServiceId);
 
@@ -5816,11 +5814,10 @@ namespace SolidCP.EnterpriseServer
                     domain);
 
                 // Log Extension
-                account.LogPropertyIfChanged(a => a.MailEnabledPublicFolder, accountName);
+                account.LogPropertyIfChanged(a => a.MailEnabledPublicFolder, true);
                 account.LogPropertyIfChanged(a => a.PrimaryEmailAddress, email, false);
 
                 // update and save account
-                account.AccountName = accountName;
                 account.MailEnabledPublicFolder = true;
                 account.PrimaryEmailAddress = email;
                 UpdateAccount(account);
